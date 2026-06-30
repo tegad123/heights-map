@@ -1,0 +1,11 @@
+# Netlify build config. This is a static site (no build step) — Netlify
+# just serves the files in the repo root. index.html is the map.
+[build]
+  publish = "."
+  command = ""
+
+# Don't cache inspections.json at the CDN so data refreshes show up fast.
+[[headers]]
+  for = "/inspections.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
