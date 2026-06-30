@@ -387,7 +387,11 @@ function applyInspectionPromotions(){
     }
     // if nothing passed yet, leave it in the permit layer
   }
-  if(changed){Object.keys(mById).forEach(recolor);renderLegend();refresh();}
+  if(changed){Object.keys(mById).forEach(recolor);renderLegend();refresh();
+    // keep Overview and Timeline tabs in sync with inspection-driven phases
+    if(typeof buildOverview==='function')buildOverview();
+    if(typeof buildTimeline==='function')buildTimeline();
+  }
 }
 let INSP_LOADED=false, INSP_ERR=null;
 function loadInspections(){
@@ -716,6 +720,9 @@ renderLegend();refresh();
 // ---- dashboards (Overview + Timeline) ----
 const PHASE_ORDER=['foundation','framing','dried_in','finishing','market'];
 const PHASE_MONTHS={foundation:8,framing:6,dried_in:4,finishing:2,market:0};
+// A permit pin that inspections promoted carries a real phase tag; treat it like a tracked pin.
+function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['foundation','framing','dried_in','finishing','market'].includes(x));}
+function inPipeline(r){return r.kind!=='permit'||isPromotedPermit(r);}
 function primaryStage(pid){const t=(state.points[pid]||{}).tags||[];
   for(const k of PHASE_ORDER) if(t.includes(k)) return k;
   if(t.includes('active_single')) return 'active_single';
@@ -735,13 +742,13 @@ function txtOn(hex){const c=(hex||'#888').replace('#','');const r=parseInt(c.sub
 function buildOverview(){
   let deed=0,uc=0,ready=0,none=0;const phc={};
   let rsf=0,rsp=0,rxf=0,rxp=0,ucS=0,ucX=0;
-  DATA.filter(r=>r.kind!=='permit').forEach(r=>{const t=pt(r.id).tags||[];const s=primaryStage(r.id);
+  DATA.filter(inPipeline).forEach(r=>{const t=pt(r.id).tags||[];const s=primaryStage(r.id);
     if(s==='deed'){deed++;return;}
     if(s&&BUILD_PHASES.includes(s)){uc++;phc[s]=(phc[s]||0)+1;t.includes('active_split')?ucX++:ucS++;return;}
     if(s==='market'||s==='active_single'||s==='active_split'){ready++;const sp=t.includes('active_split'),pu=t.includes('punch');
       if(sp&&pu)rxp++;else if(sp)rxf++;else if(pu)rsp++;else rsf++;return;}
     none++;});
-  const permitN=DATA.filter(r=>r.kind==='permit').length;
+  const permitN=DATA.filter(r=>r.kind==='permit'&&!isPromotedPermit(r)).length;
   const pipeN=DATA.length-permitN;
   let h='<h2>Pipeline Overview</h2>';
   h+='<div class="stat"><div class="b"><div class="n" style="color:#1971c2">'+deed+'</div><div class="l">Deed transfer</div></div><div class="b"><div class="n" style="color:#e8590c">'+uc+'</div><div class="l">Under construction</div></div><div class="b"><div class="n r">'+ready+'</div><div class="l">Ready / on market</div></div><div class="b"><div class="n" style="color:#868e96">'+permitN+'</div><div class="l">Permits (intel)</div></div></div>';
@@ -758,13 +765,13 @@ function buildOverview(){
   for(const [nm,c,col] of rows)
     h+='<div class="barrow"><div class="nm"><span class="sw" style="background:'+col+'"></span>'+esc(nm)+'</div><div class="bar"><span style="width:'+(c/max*100)+'%;background:'+col+'"></span></div><div class="ct">'+c+'</div></div>';
   h+='<div class="stat" style="margin-top:14px"><div class="b"><div class="n">'+ucS+'</div><div class="l">UC — Single Lot</div></div><div class="b"><div class="n">'+ucX+'</div><div class="l">UC — Split Lot</div></div><div class="b"><div class="n r">'+(rsf+rsp)+'</div><div class="l">Ready — Single</div></div><div class="b"><div class="n" style="color:#e64980">'+(rxf+rxp)+'</div><div class="l">Ready — Split</div></div></div>';
-  h+='<p class="note-foot">Stages derive from deed, inventory, and active-listing data; construction pins auto-advance toward completion over time.</p>';
+  h+='<p class="note-foot">Stages derive from deed, inventory, active-listing, and live city inspection data; permits advance as inspections pass.</p>';
   document.getElementById('ovBody').innerHTML=h;
 }
 function buildTimeline(){
   const now=new Date(); const base=new Date(now.getFullYear(),now.getMonth(),1);
   const buckets={}; let noStage=0,deedN=0;
-  DATA.filter(r=>r.kind!=='permit').forEach(r=>{const s=primaryStage(r.id);
+  DATA.filter(inPipeline).forEach(r=>{const s=primaryStage(r.id);
     if(s==='deed'){deedN++;return;}
     const ml=monthsLeft(r.id); if(ml===null||ml===undefined){noStage++;return;}
     let key,label,ord;
