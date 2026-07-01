@@ -356,14 +356,18 @@ const INSP_PHASE=[
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
 function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
 function inspToPhase(ins){
-  // furthest PASSED inspection -> phase; if final passed -> market
-  let best=null,bestRank=0;
-  for(const it of (ins.inspections||[])){
-    if(it.result!=='Passed')continue;
-    const ph=inspPhase(it.type); if(!ph)continue;
-    if(PHASE_RANK[ph]>bestRank){bestRank=PHASE_RANK[ph];best=ph;}
-  }
-  return best; // null if nothing passed yet
+  // Phase = the stage of the MOST RECENT inspection (what they're working on now).
+  // This follows the real construction process rather than the furthest milestone ever hit.
+  const rows=(ins.inspections||[]).filter(it=>it.type);
+  if(!rows.length)return null;
+  // sort by date descending; rows with a real date first, undated (scheduled) treated as newest activity
+  const dated=rows.filter(it=>it.date).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const undated=rows.filter(it=>!it.date);
+  // an undated (scheduled but not yet done) inspection is the current front of work
+  const ordered=undated.concat(dated);
+  // walk from most recent, return the first row whose type maps to a known construction phase
+  for(const it of ordered){const ph=inspPhase(it.type);if(ph)return ph;}
+  return null;
 }
 // Re-tag permit pins from inspection data. A permit with passed inspections
 // graduates out of the gray "New Construction (Permit)" layer into the matching
@@ -526,7 +530,7 @@ function popupHTML(r){
      if(ins.updated)h+='<div class="pmeta"><span>Updated '+esc(ins.updated)+'</span><span>#'+esc(ins.proj)+'</span></div>';
      {const pp=pt(r.id); if(pp.inspPromoted){const ph=pp.tags.find(t=>['foundation','framing','dried_in','finishing','market'].includes(t));
        const lbl=ph==='market'?'Ready / On Market':(state.tags[ph]&&state.tags[ph].name)||ph;
-       h+='<div class="insppromo">▲ Moved to '+esc(lbl)+' from inspection status</div>';}}
+       h+='<div class="insppromo">▲ '+esc(lbl)+' — current stage per latest inspection</div>';}}
      const list=(ins.inspections||[]).slice().reverse();
      if(list.length){h+='<div class="insprows">';
        for(const it of list.slice(0,8)){const c=inspStatusColor(it.result);
@@ -737,6 +741,53 @@ function monthsLeft(pid){const r=byId[pid]||{};
   if(PHASE_MONTHS[s]!==undefined) return PHASE_MONTHS[s];
   const tm=(((state.points[pid]||{}).notes)||'').match(/timeline:\s*(\d+)\s*month/i); return tm?parseInt(tm[1],10):null;}
 function stageColor(s){ return state.tags[s]?state.tags[s].color:'#8c857a';}
+// ============================================================
+// SUPPLY FORECAST — Spencer's core question: how many homes come
+// online (reach market) within a given window, and what phase is
+// everything in right now. Built on inspection-driven phases.
+// ============================================================
+const PHASE_LABELS={foundation:'Foundation',framing:'Framing',dried_in:'Dried-In',finishing:'Finishing',market:'Ready'};
+const PHASE_SEQ=['foundation','framing','dried_in','finishing','market'];
+
+// Every home currently in the construction pipeline (tracked builds + inspection-promoted permits).
+function pipelineHomes(){
+  return DATA.filter(inPipeline).filter(r=>{
+    const s=primaryStage(r.id);
+    return s && s!=='deed';           // exclude raw deed transfers (pre-construction)
+  });
+}
+
+// A home's current construction phase (foundation..market), from inspections/tags.
+function homePhase(pid){
+  const t=(state.points[pid]||{}).tags||[];
+  for(const p of PHASE_SEQ) if(t.includes(p)) return p;
+  if(t.includes('active_single')||t.includes('active_split')) return 'market';
+  return null;
+}
+
+// Count of homes by phase — the "what phase is everything in" snapshot.
+function phaseBreakdown(){
+  const out={foundation:0,framing:0,dried_in:0,finishing:0,market:0};
+  for(const r of pipelineHomes()){const p=homePhase(r.id); if(p&&out[p]!==undefined)out[p]++;}
+  return out;
+}
+
+// How many homes reach market within N months (cumulative supply curve).
+// A home "comes online" when its monthsLeft <= N.
+function comingOnline(months){
+  let n=0; const list=[];
+  for(const r of pipelineHomes()){
+    const ml=monthsLeft(r.id);
+    if(ml!==null && ml!==undefined && ml<=months){n++; list.push(r);}
+  }
+  return {count:n, homes:list};
+}
+
+// The full supply curve at standard checkpoints — feeds the redesign's forecast view.
+function supplyCurve(){
+  return [3,6,9,12,18,24].map(m=>({months:m, ...comingOnline(m)}));
+}
+
 function stageName(s){ return state.tags[s]?state.tags[s].name:s;}
 function txtOn(hex){const c=(hex||'#888').replace('#','');const r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#1a1a1a':'#fff';}
 function buildOverview(){
