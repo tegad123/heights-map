@@ -367,7 +367,7 @@ if(!state.tags.punch){state.tags.punch={name:'Punch List',color:'#f783ac'};save(
 for(const id in LIFE){const e=LIFE[id];if(e.s!=='deed'&&byId[id]&&byId[id].kind==='permit')byId[id].kind='active';}
 function lifeElapsed(){const s=new Date('2026-06-01T00:00:00');const n=new Date();return Math.max(0,(n-s)/(1000*60*60*24*30.44));}
 function lifePhase(ph0){const rem=LIFE_PM[ph0]-lifeElapsed();if(rem>6)return'foundation';if(rem>4)return'framing';if(rem>2)return'dried_in';if(rem>0)return'finishing';return'market';}
-const LIFE_SEED=7;
+const LIFE_SEED=8;
 if((state._lifeSeed||0)<LIFE_SEED){
   for(const id in state.points){if(!byId[id])delete state.points[id];}
   if(!state.tags.deed)state.tags.deed={name:'Deed Transfer',color:'#1971c2'};
@@ -428,11 +428,13 @@ function inspStatusColor(s){return s==='Passed'?'#2f9e44':s==='Failed'?'#e03131'
 // types kept in foundation (they happen pre-pour). Built from the live 99-type
 // vocabulary across all 238 scraped permits.
 const INSP_PHASE=[
-  [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|site final|final building|punch list|reconnect|visitab/i,'market'],
-  [/insulation|shower pan|lath|grille|duct seal|egress|sfr kitchen|tree\/shrub|sprinkler|decor|flood final/i,'finishing'],
+  [/sawpole|saw pole|pole final/i,'framing'],
+  [/elect final|temp gas final|gas final|\bp\d ?final\b|cc final|ww final|add el final|\bv\d final\b|\bc\d final\b|ac final|mech(?:anical)? final|plumb(?:ing)? final|flood final/i,'finishing'],
+  [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|site final|final building|\bfinal\b|\btci\b|punch list|reconnect|visitab/i,'market'],
+  [/insulation|shower pan|lath|grille|duct seal|egress|sfr kitchen|tree\/shrub|sprinkler|decor/i,'finishing'],
   [/rough in|top out|water service|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b/i,'dried_in'],
-  [/frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|sawpole|saw pole|pole final|1035/i,'framing'],
-  [/1031|fdn|foundation|ground in|ground|ditch|\bcover\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|culvert|bore|storm sewer|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|sidewalk|driveway|apron|flatwork|building layout|layout|form survey/i,'foundation'],
+  [/frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|1035/i,'framing'],
+  [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|ditch|\bcover\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|culvert|bore|storm sewer|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|sidewalk|driveway|apron|flatwork|building layout|layout|form survey/i,'foundation'],
   [/\bec\b|electric|plumb|mechanic|\bac\b|\bev\b/i,'dried_in'],
 ];
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
@@ -477,7 +479,7 @@ function applyInspectionPromotions(){
     if(!r.permits||!r.permits.length)continue;
     const ins=inspForPin(r); if(!ins)continue;
     let ph=inspToPhase(ins);
-    const _pk=projectBaseKey(r); if(PROJ[_pk]&&_PHRANK[PROJ[_pk]]>_PHRANK[ph||'foundation'])ph=PROJ[_pk];
+    const _pk=projectBaseKey(r); const _pr=PROJ[_pk]==='market'?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>_PHRANK[ph||'foundation'])ph=_pr;
     const p=pt(r.id);
     if(ph==='market'){
       // final passed -> ready/on market, keep product type if known
