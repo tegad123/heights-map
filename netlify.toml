@@ -9,3 +9,7 @@
   for = "/inspections.json"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Serverless functions (Ask-the-Map AI endpoint)
+[functions]
+  directory = "netlify/functions"
