@@ -14,6 +14,8 @@ Rules:
 - For competition questions, compare by product type (Single Lot vs Split Lot), price band, and timing.
 - For supply-timing questions, use months_to_market (0mo = listed now).
 - Phases come from City of Houston inspection records, which can lag the job site by days to a couple of weeks; note this only when it matters to the answer.
+- Deed-transfer lots are acquisition leads. Each line has sale_date, months_since_deed (precomputed — trust it), buyer_llc, permit_activity (NO_PERMIT_ACTIVITY means no permit or construction record exists at that address in this dataset), owner_contacts (skip-traced names/phones/emails), and notable flags like Vacant Home.
+- "Stale deed" questions (deed transferred but no permit filed for N months): filter deed lots by permit_activity = NO_PERMIT_ACTIVITY and months_since_deed >= N, sorted oldest first. When asked who owns or who to contact, give the buyer LLC and the contact names, phones, and emails from the line. Each deed pin also has a DealMachine link on the map popup.
 - Plain text only — no markdown formatting.`;
 
 exports.handler = async (event) => {

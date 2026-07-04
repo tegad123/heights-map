@@ -305,7 +305,7 @@ const DATA = [{"id":"2131193248","a":"201 E 26th St, Houston, Tx 77008","llc":"2
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7-2026-07-03';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.1-2026-07-03';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -1071,12 +1071,23 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>swit
 // ---- ASK: AI layer ----
 function askContext(){
   const PH=['market','finishing','dried_in','framing','foundation'];
-  const lines=[];const agg={active_on_market:0,under_construction:0,deed_lots:0,permits_queued:0};
+  const now=new Date();
+  // addresses (project-normalized) that have ANY permit / construction activity
+  const activeKeys=new Set();
+  for(const r of DATA)if(r.permits&&r.permits.length)activeKeys.add(projectBaseKey(r));
+  const lines=[];const deedLines=[];const agg={active_on_market:0,under_construction:0,deed_lots:0,permits_queued:0};
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     const ph=PH.find(p=>t.includes(p));
+    if(t.includes('deed')&&!ph){
+      agg.deed_lots++;
+      const monthsSince=r.sd?Math.max(0,Math.round((now-new Date(r.sd+'T00:00:00'))/(30.44*24*3600e3))):null;
+      const act=activeKeys.has(projectBaseKey(r))?'HAS_PERMIT_ACTIVITY':'NO_PERMIT_ACTIVITY';
+      const contacts=(r.c||[]).slice(0,2).map(c=>c.n+((c.p&&c.p[0])?' '+c.p[0]:'')+((c.e&&c.e[0])?' '+c.e[0]:'')).join('; ')||'no contacts on file';
+      deedLines.push([r.a.replace(/, Houston.*$/i,''),r.sd||'-',(monthsSince===null?'-':monthsSince+'mo ago'),r.llc||'-',r.v||'-',(r.lot?r.lot+'sqft':'-'),act,contacts,(r.f||'').split(', ').filter(x=>/vacant|corner|out of state|senior|free and clear/i.test(x)).join(',')||'-'].join(' | '));
+      continue;
+    }
     let grp;
-    if(t.includes('deed')){grp='deed_lot';agg.deed_lots++;}
-    else if(ph==='market'){grp='active_on_market';agg.active_on_market++;}
+    if(ph==='market'){grp='active_on_market';agg.active_on_market++;}
     else if(ph){grp='under_construction';agg.under_construction++;}
     else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
     else grp='other';
@@ -1084,8 +1095,9 @@ function askContext(){
     const note=((state.points[r.id]||{}).notes||'').split('\n')[0].slice(0,90);
     lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',note].join(' | '));
   }
-  return 'AS OF '+new Date().toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
-   '\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n');
+  return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
+   '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
+   '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n');
 }
 const askHist=[];
 function askAdd(cls,txt){const d=document.createElement('div');d.className='askm '+cls;d.textContent=txt;document.getElementById('askLog').appendChild(d);d.scrollIntoView({block:'end'});return d;}
