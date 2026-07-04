@@ -312,7 +312,7 @@ for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.17-2026-07-04';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.19-2026-07-04';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -468,19 +468,15 @@ const INSP_PHASE=[
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
 function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
 function inspToPhase(ins){
-  // Phase from PASSED inspections only. Two hard-won rules:
-  // 1) Completion is STICKY: if any building final / TCI / CO ever passed, the home is
-  //    complete — trailing civil items (storm sewer, ground-in) can't un-finish it.
-  // 2) Same-day ties break to the HIGHER phase (P2 FINAL beats GROUND IN on the same date).
+  // Phase = the FURTHEST phase any PASSED inspection has reached.
+  // Construction is monotonic: passed insulation means the house is framed and dried-in,
+  // no matter what civil paperwork (ground-in, culvert, storm sewer) posts afterwards.
+  // Failed and scheduled inspections never count (a failed Site Final is not completion).
   const rows=(ins.inspections||[]).filter(it=>it.type && /pass/i.test(it.result||''));
   if(!rows.length)return null;
-  if(rows.some(it=>inspPhase(it.type)==='market'))return 'market';
-  const dated=rows.filter(it=>it.date)
-    .map(it=>({d:it.date,t:it.type,r:_PHRANK[inspPhase(it.type)]||0}))
-    .sort((a,b)=>(b.d.localeCompare(a.d))||(b.r-a.r));
-  for(const it of dated){const ph=inspPhase(it.t);if(ph)return ph;}
-  for(const it of rows){const ph=inspPhase(it.type);if(ph)return ph;}
-  return null;
+  let best=null,bestR=0;
+  for(const it of rows){const p=inspPhase(it.type);if(p&&_PHRANK[p]>bestR){best=p;bestR=_PHRANK[p];}}
+  return best;
 }
 // Project-level rollup: units built together (same base address / shared master
 // permit) advance together, so a multi-unit project's phase is its FURTHEST unit.
@@ -658,7 +654,8 @@ function popupHTML(r){
   const A=r.kind==='active';
   const cells=[];
   if(r.v)cells.push([A?'List price':'Assessed',r.v,'big']);
-  if(r.sd)cells.push([A?'Target':'Sale date',r.sd,'']);
+  if(r.sd)cells.push([A?'Listed':'Sale date',r.sd,'']);
+  if(A&&r.comp)cells.push(['Est. completion',r.comp,'']);
   if(r.lot)cells.push([A?'Sq ft':'Lot sq ft',(+r.lot).toLocaleString(),'']);
   if(A&&r.bb)cells.push(['Bed / Bath',r.bb,'']);
   if(A&&r.prod)cells.push(['Product',r.prod,'']);
