@@ -1,0 +1,76 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Spencer working zone — Heights / Shady Acres / Norhill / Woodland Heights / Brooke Smith",
+    "bounds": "610 (N), I-45–N Main (E), I-10 (S), White Oak Bayou–TC Jester (W)",
+    "created": "2026-07-03"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -95.4415,
+       29.8155
+      ],
+      [
+       -95.42,
+       29.8165
+      ],
+      [
+       -95.39,
+       29.817
+      ],
+      [
+       -95.366,
+       29.8165
+      ],
+      [
+       -95.363,
+       29.802
+      ],
+      [
+       -95.36,
+       29.79
+      ],
+      [
+       -95.356,
+       29.776
+      ],
+      [
+       -95.358,
+       29.769
+      ],
+      [
+       -95.39,
+       29.7695
+      ],
+      [
+       -95.4135,
+       29.77
+      ],
+      [
+       -95.42,
+       29.7905
+      ],
+      [
+       -95.4275,
+       29.796
+      ],
+      [
+       -95.433,
+       29.806
+      ],
+      [
+       -95.4415,
+       29.8155
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}
