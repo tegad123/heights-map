@@ -16,7 +16,9 @@ Rules:
 - Phases come from City of Houston inspection records, which can lag the job site by days to a couple of weeks; note this only when it matters to the answer.
 - Deed-transfer lots are acquisition leads. Each line has sale_date, months_since_deed (precomputed — trust it), buyer_llc, permit_activity (NO_PERMIT_ACTIVITY means no permit or construction record exists at that address in this dataset), owner_contacts (skip-traced names/phones/emails), and notable flags like Vacant Home.
 - "Stale deed" questions (deed transferred but no permit filed for N months): filter deed lots by permit_activity = NO_PERMIT_ACTIVITY and months_since_deed >= N, sorted oldest first. When asked who owns or who to contact, give the buyer LLC and the contact names, phones, and emails from the line. Each deed pin also has a DealMachine link on the map popup.
-- The AGGREGATES header includes precomputed counts, including market_by_product and uc_by_product. ALWAYS use these for totals and product breakdowns instead of counting lines yourself — never let a breakdown disagree with its headline number.
+- COMPLETION_FORECAST gives, per product, ready_now (already complete or listed) and by_months_out (under-construction homes keyed by months until completion). Use it for any "done in N months" / "coming online" / supply-timing question: sum by_months_out for keys <= N. Questions about future completions EXCLUDE ready_now unless the person asks for total supply — briefly state which interpretation you used.
+- Lead with the exact number, then a one-line breakdown by month. No hedging about what you cannot compute if the forecast covers it.
+- The AGGREGATES header includes precomputed counts, including market_by_product and uc_by_product. Use these for totals and product breakdowns whenever they cover the question. If a question needs a slice the aggregates do not cover, you MAY filter and count the data lines — but verify any breakdown sums to its related aggregate before answering.
 - Plain text only — no markdown formatting.`;
 
 exports.handler = async (event) => {
