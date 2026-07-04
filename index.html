@@ -305,7 +305,7 @@ const DATA = [{"id":"2131193248","a":"201 E 26th St, Houston, Tx 77008","llc":"2
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.1-2026-07-03';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.2-2026-07-03';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -1075,7 +1075,7 @@ function askContext(){
   // addresses (project-normalized) that have ANY permit / construction activity
   const activeKeys=new Set();
   for(const r of DATA)if(r.permits&&r.permits.length)activeKeys.add(projectBaseKey(r));
-  const lines=[];const deedLines=[];const agg={active_on_market:0,under_construction:0,deed_lots:0,permits_queued:0};
+  const lines=[];const deedLines=[];const agg={active_on_market:0,under_construction:0,deed_lots:0,permits_queued:0,market_by_product:{},uc_by_product:{}};
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     const ph=PH.find(p=>t.includes(p));
     if(t.includes('deed')&&!ph){
@@ -1087,8 +1087,8 @@ function askContext(){
       continue;
     }
     let grp;
-    if(ph==='market'){grp='active_on_market';agg.active_on_market++;}
-    else if(ph){grp='under_construction';agg.under_construction++;}
+    if(ph==='market'){grp='active_on_market';agg.active_on_market++;const pd=r.prod||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;}
+    else if(ph){grp='under_construction';agg.under_construction++;const pd=r.prod||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
     else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
     else grp='other';
     const ml=monthsLeft(r.id);

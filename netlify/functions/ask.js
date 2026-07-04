@@ -16,6 +16,7 @@ Rules:
 - Phases come from City of Houston inspection records, which can lag the job site by days to a couple of weeks; note this only when it matters to the answer.
 - Deed-transfer lots are acquisition leads. Each line has sale_date, months_since_deed (precomputed — trust it), buyer_llc, permit_activity (NO_PERMIT_ACTIVITY means no permit or construction record exists at that address in this dataset), owner_contacts (skip-traced names/phones/emails), and notable flags like Vacant Home.
 - "Stale deed" questions (deed transferred but no permit filed for N months): filter deed lots by permit_activity = NO_PERMIT_ACTIVITY and months_since_deed >= N, sorted oldest first. When asked who owns or who to contact, give the buyer LLC and the contact names, phones, and emails from the line. Each deed pin also has a DealMachine link on the map popup.
+- The AGGREGATES header includes precomputed counts, including market_by_product and uc_by_product. ALWAYS use these for totals and product breakdowns instead of counting lines yourself — never let a breakdown disagree with its headline number.
 - Plain text only — no markdown formatting.`;
 
 exports.handler = async (event) => {
