@@ -312,7 +312,7 @@ for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.14-2026-07-03';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.17-2026-07-04';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -427,9 +427,9 @@ document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bG
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const telHref=n=>'tel:'+(n||'').replace(/[^+\d]/g,'');
 function fmtPhone(n){const d=(n||'').replace(/[^\d]/g,'').replace(/^1/,'');return d.length===10?d.slice(0,3)+'-'+d.slice(3,6)+'-'+d.slice(6):n;}
-const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',deed:'#1971c2',pmt:'#868e96'};
+const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',act_uc:'#eab308',deed:'#1971c2',pmt:'#868e96'};
 const pinColor=id=>{const t=pt(id).tags;
-  if(t.includes('listed')||t.includes('market'))return GROUP_C.act;
+  if(t.includes('listed')||t.includes('market'))return t.includes('market')?GROUP_C.act:GROUP_C.act_uc;
   for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p))return t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single;
   if(t.includes('deed'))return GROUP_C.deed;
   if(t.includes('permit'))return GROUP_C.pmt;
@@ -468,13 +468,17 @@ const INSP_PHASE=[
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
 function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
 function inspToPhase(ins){
-  // Phase = the stage of the NEWEST PASSED inspection. Failed and undated/
-  // scheduled inspections do not count — only work that actually cleared.
+  // Phase from PASSED inspections only. Two hard-won rules:
+  // 1) Completion is STICKY: if any building final / TCI / CO ever passed, the home is
+  //    complete — trailing civil items (storm sewer, ground-in) can't un-finish it.
+  // 2) Same-day ties break to the HIGHER phase (P2 FINAL beats GROUND IN on the same date).
   const rows=(ins.inspections||[]).filter(it=>it.type && /pass/i.test(it.result||''));
   if(!rows.length)return null;
-  const dated=rows.filter(it=>it.date).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  for(const it of dated){const ph=inspPhase(it.type);if(ph)return ph;}
-  // no dated passes mapped; fall back to any passed row
+  if(rows.some(it=>inspPhase(it.type)==='market'))return 'market';
+  const dated=rows.filter(it=>it.date)
+    .map(it=>({d:it.date,t:it.type,r:_PHRANK[inspPhase(it.type)]||0}))
+    .sort((a,b)=>(b.d.localeCompare(a.d))||(b.r-a.r));
+  for(const it of dated){const ph=inspPhase(it.t);if(ph)return ph;}
   for(const it of rows){const ph=inspPhase(it.type);if(ph)return ph;}
   return null;
 }
@@ -790,7 +794,7 @@ function renderLegend(){
    for(const [key,label,sp] of RT){
      h+='<div class="subg'+(collapsed.has('mkt:'+key)?' col':'')+'"><div class="subg-h'+sOn('RT:'+key)+'" data-col="mkt:'+key+'"><span class="chev2">▼</span><span class="mbox'+(activeF.has('RT:'+key)?' on':'')+'" data-sel="RT:'+key+'"></span><span class="sw" style="background:'+GROUP_C.act+'"></span><span class="sn">'+label+'</span><span class="ct2">'+listedTypeCount(sp)+'</span></div><div class="subg-body">';
      h+='<div class="leafrow'+sOn('RF:'+key+':ready')+'" data-sel="RF:'+key+':ready"><span class="sw" style="background:'+GROUP_C.act+'"></span><span class="nm">Move-in ready</span><span class="ct2">'+listedReadyCount(sp,true)+'</span></div>';
-     h+='<div class="leafrow'+sOn('RF:'+key+':uc')+'" data-sel="RF:'+key+':uc"><span class="sw" style="background:'+(sp?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="nm">Under construction</span><span class="ct2">'+listedReadyCount(sp,false)+'</span></div>';
+     h+='<div class="leafrow'+sOn('RF:'+key+':uc')+'" data-sel="RF:'+key+':uc"><span class="sw" style="background:'+GROUP_C.act_uc+'"></span><span class="nm">Under construction</span><span class="ct2">'+listedReadyCount(sp,false)+'</span></div>';
      h+='</div></div>';}
    h+='</div></div>';}
   // Other / custom
@@ -1118,6 +1122,16 @@ function askContext(){
     const note=((state.points[r.id]||{}).notes||'').split('\n')[0].slice(0,90);
     lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',note].join(' | '));
   }
+  // cross-tabs matching the sidebar exactly (tag-based grouping)
+  const active_breakdown={'Single Lot':{move_in_ready:0,still_building:0},'Split Lot':{move_in_ready:0,still_building:0}};
+  const uc_breakdown={'Single Lot':{foundation:0,framing:0,dried_in:0,finishing:0},'Split Lot':{foundation:0,framing:0,dried_in:0,finishing:0}};
+  for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
+    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    if(!key)continue;
+    const phx=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
+    if(t.includes('listed')){if(t.includes('market'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
+    else if(phx)uc_breakdown[key][phx]++;}
+  agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
   const forecast={ 'Single Lot':{ready_now:0,by_month:{},done_within:{}}, 'Split Lot':{ready_now:0,by_month:{},done_within:{}}, 'ALL':{ready_now:0,by_month:{},done_within:{}} };
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     if(t.includes('deed'))continue;
