@@ -312,7 +312,7 @@ for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.19-2026-07-04';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.20-2026-07-05';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -431,6 +431,7 @@ const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',act_uc:'#eab
 const pinColor=id=>{const t=pt(id).tags;
   if(t.includes('listed')||t.includes('market'))return t.includes('market')?GROUP_C.act:GROUP_C.act_uc;
   for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p))return t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single;
+  if(t.includes('built'))return GROUP_C.pmt;
   if(t.includes('deed'))return GROUP_C.deed;
   if(t.includes('permit'))return GROUP_C.pmt;
   if(t.includes('active_single')||t.includes('active_split'))return GROUP_C.act;
@@ -512,7 +513,13 @@ function applyInspectionPromotions(){
     const ins=inspForPin(r); if(!ins)continue;
     let ph=inspToPhase(ins);
     const _pk=projectBaseKey(r); const _pr=PROJ[_pk]==='market'?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>_PHRANK[ph||'foundation'])ph=_pr;
-    if(ph==='market'&&!(r.kind==='active'&&r.v!==undefined))ph='finishing'; // complete but not listed => Finishing
+    if(ph==='market'&&!(r.kind==='active'&&r.v!==undefined)){
+      // completed but not listed: recent final = imminent supply; old final = built & gone
+      const mk=(ins.inspections||[]).filter(it=>it.type&&/pass/i.test(it.result||'')&&it.date&&inspPhase(it.type)==='market')
+        .map(it=>it.date).sort().pop();
+      const ageMo=mk?((new Date())-new Date(mk+'T00:00:00'))/(30.44*24*3600e3):99;
+      ph=(ageMo<=6)?'finishing':'built';
+    }
     const _lst=(r.kind==='active'&&r.v!==undefined);
     const p=pt(r.id);
     if(ph==='market'){
@@ -520,7 +527,12 @@ function applyInspectionPromotions(){
       const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
       const want=['market'].concat(ty?[ty]:[]).concat(_lst?['listed']:[]);
       if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;p.inspPromoted=true;changed=true;}
-    } else if(ph){
+    } else if(ph==='built'){
+      const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
+      const want=['built'].concat(ty?[ty]:[]);
+      if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;changed=true;}
+    }
+    else if(ph){
       const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
       const want=[ph].concat(ty?[ty]:[]).concat(_lst?['listed']:[]);
       if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;p.inspPromoted=true;changed=true;}
@@ -775,7 +787,7 @@ function renderLegend(){
   }
   // Market Intel (permit toggle layer)
   if(state.tags.permit){
-    h+='<div class="grp'+(collapsed.has('intel')?' col':'')+'" data-grp="intel"><div class="grp-h'+sOn('L:permit')+'" data-col="intel"><span class="chev2">▼</span><span class="mbox'+(activeF.has('L:permit')?' on':'')+'" data-sel="L:permit"></span><span class="gn">Market Intel</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="grp-body"><div class="leafrow'+sOn('L:permit')+'" data-sel="L:permit">'+cSw('permit')+'<span class="nm">'+esc(state.tags.permit.name)+'</span><span class="ct2">'+tagCount('permit')+'</span></div></div></div>';}
+    h+='<div class="grp'+(collapsed.has('intel')?' col':'')+'" data-grp="intel"><div class="grp-h'+sOn('L:permit')+'" data-col="intel"><span class="chev2">▼</span><span class="mbox'+(activeF.has('L:permit')?' on':'')+'" data-sel="L:permit"></span><span class="gn">Market Intel</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="grp-body"><div class="leafrow'+sOn('L:permit')+'" data-sel="L:permit">'+cSw('permit')+'<span class="nm">'+esc(state.tags.permit.name)+'</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="leafrow'+sOn('L:built')+'" data-sel="L:built"><span class="sw" style="background:'+GROUP_C.pmt+'"></span><span class="nm">Built (not listed)</span><span class="ct2">'+tagCount('built')+'</span></div></div></div>';}
   // Under Construction
   h+='<div class="grp'+(collapsed.has('uc')?' col':'')+'" data-grp="uc"><div class="grp-h'+sOn('G:uc')+'" data-col="uc"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:uc')?' on':'')+'" data-sel="G:uc"></span><span class="gn">Under Construction</span><span class="ct2">'+ucCount()+'</span></div><div class="grp-body">';
   for(const [ty,tlabel] of TYPES){ if(!state.tags[ty])continue;
@@ -881,6 +893,7 @@ const PHASE_MONTHS={foundation:8,framing:6,dried_in:4,finishing:2,market:0};
 function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['foundation','framing','dried_in','finishing','market'].includes(x));}
 function inPipeline(r){return r.kind!=='permit'||isPromotedPermit(r);}
 function primaryStage(pid){const t=(state.points[pid]||{}).tags||[];
+  if(t.includes('built')) return null; // completed long ago, not pipeline supply
   for(const k of PHASE_ORDER) if(t.includes(k)) return k;
   if(t.includes('active_single')) return 'active_single';
   if(t.includes('active_split')) return 'active_split';
@@ -1112,6 +1125,7 @@ function askContext(){
     }
     let grp;const listed=t.includes('listed');
     if(listed){grp=ph==='market'?'active_on_market_READY':'active_on_market_UNDER_CONSTRUCTION';agg.active_on_market++;const pd=r.prod||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;if(ph==='market')agg.active_ready=(agg.active_ready||0)+1;else agg.active_still_building=(agg.active_still_building||0)+1;}
+    else if(t.includes('built')){grp='built_not_listed';agg.built_not_listed=(agg.built_not_listed||0)+1;}
     else if(ph&&ph!=='market'){grp='under_construction';agg.under_construction++;const pd=r.prod||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
     else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
     else grp='other';
