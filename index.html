@@ -315,7 +315,7 @@ DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kep
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.30-2026-07-05';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.31-2026-07-05';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -477,10 +477,16 @@ function inspToPhase(ins){
   // Construction is monotonic: passed insulation means the house is framed and dried-in,
   // no matter what civil paperwork (ground-in, culvert, storm sewer) posts afterwards.
   // Failed and scheduled inspections never count (a failed Site Final is not completion).
+  // Stale-history guard: a passed inspection >18 months older than the permit's newest
+  // passed inspection belongs to a previous life of the permit (abandoned start, re-permit)
+  // and must not set phase — e.g. a stray 2022 CC FINAL on a home framing in 2026.
   const rows=(ins.inspections||[]).filter(it=>it.type && /pass/i.test(it.result||''));
   if(!rows.length)return null;
+  const latest=rows.map(it=>it.date||'').sort().pop();
+  const cut=latest?new Date(new Date(latest+'T00:00:00')-548*864e5).toISOString().slice(0,10):null;
+  const live=cut?rows.filter(it=>!it.date||it.date>=cut):rows;
   let best=null,bestR=0;
-  for(const it of rows){const p=inspPhase(it.type);if(p&&_PHRANK[p]>bestR){best=p;bestR=_PHRANK[p];}}
+  for(const it of live){const p=inspPhase(it.type);if(p&&_PHRANK[p]>bestR){best=p;bestR=_PHRANK[p];}}
   return best;
 }
 // Project-level rollup: units built together (same base address / shared master
