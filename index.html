@@ -315,7 +315,7 @@ DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kep
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.31-2026-07-05';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.32-2026-07-05';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -520,6 +520,12 @@ function applyInspectionPromotions(){
   const PROJ=projectPhase();
   for(const r of DATA){
     if(!r.permits||!r.permits.length)continue;
+    // pending wins over inspection phase: an under-contract home is spoken-for supply,
+    // whatever its trade finals say. Keep the pending tag, skip promotion entirely.
+    if(r.st==='pending'){const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
+      const p0=pt(r.id);const want=['pending'].concat(ty?[ty]:[]);
+      if(JSON.stringify(p0.tags)!==JSON.stringify(want)){p0.tags=want;changed=true;}
+      continue;}
     const ins=inspForPin(r); if(!ins)continue;
     let ph=inspToPhase(ins);
     const _pk=projectBaseKey(r); const _pr=PROJ[_pk]==='market'?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>_PHRANK[ph||'foundation'])ph=_pr;
@@ -530,7 +536,7 @@ function applyInspectionPromotions(){
       const ageMo=mk?((new Date())-new Date(mk+'T00:00:00'))/(30.44*24*3600e3):99;
       ph=(ageMo<=6)?'finishing':'built';
     }
-    const _lst=(r.kind==='active'&&r.v!==undefined);
+    const _lst=(r.kind==='active'&&r.v!==undefined&&r.st!=='pending');
     const p=pt(r.id);
     if(ph==='market'){
       // final passed -> ready/on market, keep product type if known
