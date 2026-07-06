@@ -316,7 +316,7 @@ const MARKET_METRICS={"window": "sold: trailing ~12 months", "sold_n": 103, "act
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.35-2026-07-05';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.36-2026-07-05';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -1163,18 +1163,29 @@ function askContext(){
     if(t.includes('listed')){if(t.includes('market'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
     else if(phx)uc_breakdown[key][phx]++;}
   agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
-  const forecast={ 'Single Lot':{ready_now:0,by_month:{},done_within:{}}, 'Split Lot':{ready_now:0,by_month:{},done_within:{}}, 'ALL':{ready_now:0,by_month:{},done_within:{}} };
+  // Completion timing is a PHASE COHORT model, not a real per-home schedule: months come from a
+  // flat phase->months lookup (foundation~8, framing~6, dried_in~4, finishing~2), so homes at the
+  // same phase share one estimate. We therefore bucket by PHASE COHORT with an honest month RANGE,
+  // never as a single-month completion count (that created a fake "36 homes finish in Feb" cluster).
+  const COHORT_RANGE={finishing:'0-3mo',dried_in:'3-5mo',framing:'5-7mo',foundation:'7-9mo'};
+  const mk=()=>({ready_now:0,by_phase_cohort:{finishing:0,dried_in:0,framing:0,foundation:0},cohort_ranges:COHORT_RANGE,done_within:{}});
+  const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'ALL':mk() };
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     if(t.includes('deed'))continue;
     const ml=monthsLeft(r.id);if(ml===null||ml===undefined)continue;
+    const ph=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
     const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
     for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
-      if(ml<=0)f.ready_now++;
-      else{const b=ml>12?'12+':String(ml);f.by_month[b]=(f.by_month[b]||0)+1;}}}
-  for(const k in forecast){const f=forecast[k];let cum=0;
-    for(let m=1;m<=12;m++){cum+=(f.by_month[String(m)]||0);f.done_within[m]=cum;}}
+      if(ml<=0||t.includes('market'))f.ready_now++;
+      else if(ph)f.by_phase_cohort[ph]++;}}
+  // done_within stays as a cumulative count using the flat estimate — but labeled as an approximation.
+  for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
+    if(t.includes('deed'))continue;const ml=monthsLeft(r.id);if(ml===null||ml===undefined||ml<=0)continue;
+    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
+      for(let m=Math.max(1,Math.ceil(ml));m<=12;m++)f.done_within[m]=(f.done_within[m]||0)+1;}}
   return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
-   '\nCOMPLETION_FORECAST (grouping matches the Timeline tab exactly; ready_now = complete/listed now, EXCLUDED from all other numbers; by_month = under-construction homes keyed by months until done; done_within[N] = PRECOMPUTED cumulative count completing within N months — use it verbatim, never sum by_month yourself): '+JSON.stringify(forecast)+
+   '\nCOMPLETION_FORECAST (PHASE-COHORT model. ready_now = complete/listed now, EXCLUDED from all other numbers. by_phase_cohort = count of under-construction homes at each build stage; cohort_ranges gives the ROUGH month window for each stage. These are STAGE COHORTS, not monthly completion counts — e.g. a foundation count of 36 means 36 homes are AT foundation stage (~7-9 months out), NOT 36 homes finishing in a single month. done_within[N] = approximate cumulative count expected done within N months, from a flat phase->months estimate; treat as directional, use verbatim, never restate as a single-month figure): '+JSON.stringify(forecast)+
    '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
    '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
    '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
