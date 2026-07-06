@@ -316,7 +316,7 @@ const MARKET_METRICS={"window": "sold: trailing ~12 months", "sold_n": 103, "act
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.34-2026-07-05';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.35-2026-07-05';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -415,20 +415,10 @@ function applyAutoAdvance(){let ch=false;for(const id in state.points){const p=s
   if((p.tags||[]).join(',')!==tags.join(',')){p.tags=tags;ch=true;}}
   if(ch)save();}
 applyAutoAdvance();
-// Product-tag hygiene: active_single/active_split is a *listing* class, not a product label.
-// On an unlisted permit it wrongly renders a green 'Active' chip while the pin is (correctly)
-// phase-colored. Strip that membership tag from anything not genuinely on the market so the
-// phase headline is the only signal. Product type stays visible via the permit + prod field.
-function dropUnlistedActiveTags(){for(const id in state.points){const p=state.points[id];const t=p.tags||[];
-  const r=byId[id];const listed=r&&r.kind==='active'&&r.v!==undefined&&r.st!=='pending';
-  const onMarket=t.includes('listed')||t.includes('market');
-  if(!listed&&!onMarket){const nt=t.filter(x=>x!=='active_single'&&x!=='active_split');
-    if(nt.length!==t.length)p.tags=nt;}}save();}
 function syncListed(){for(const r of DATA){const p=pt(r.id);const should=r.kind==='active'&&r.v!==undefined&&r.st!=='pending';const has=(p.tags||[]).includes('listed');
   if(should&&!has)p.tags=(p.tags||[]).concat(['listed']);
   else if(!should&&has)p.tags=p.tags.filter(t=>t!=='listed');}}
 syncListed();
-dropUnlistedActiveTags();
 
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.80,-95.40],13);
@@ -567,7 +557,6 @@ function applyInspectionPromotions(){
     // if nothing passed yet, leave it in the permit layer
   }
   syncListed();
-  dropUnlistedActiveTags();
   if(changed){Object.keys(mById).forEach(recolor);renderLegend();refresh();
     // keep Overview and Timeline tabs in sync with inspection-driven phases
     if(typeof buildOverview==='function')buildOverview();
@@ -739,6 +728,9 @@ function popupHTML(r){
   // tags
   h+='<div style="margin-top:12px"><div class="lbl">Tags</div><div class="pchips">';
   for(const tid of p.tags){const t=state.tags[tid]; if(!t)continue;
+    // 'Active – Single/Split Lot' is a listing-class chip; on unlisted UC/permit pins it read as
+    // false market status. The tag stays (drives grouping + pin color) — only the chip hides.
+    if((tid==='active_single'||tid==='active_split')&&!(p.tags.includes('listed')||p.tags.includes('market')))continue;
     h+='<span class="pchip" style="background:'+t.color+'">'+esc(t.name)+(VIEWER?'':'<span class="x" data-rm="'+esc(tid)+'">&times;</span>')+'</span>';}
   if(!VIEWER){const avail=Object.keys(state.tags).filter(tid=>!p.tags.includes(tid));
    const PHX=['foundation','framing','dried_in','finishing','market'];const grp={type:[],phase:[],intel:[],other:[]};
