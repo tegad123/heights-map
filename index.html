@@ -312,10 +312,11 @@ for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1
 const DATA_ALL = DATA;
 const SOLD = DATA.filter(r=>r.st==='sold');
 DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kept in DATA_ALL/SOLD for export
+const MARKET_METRICS={"window": "sold: trailing ~12 months", "sold_n": 103, "active_pending_n": 67, "absorption_per_month": 8.6, "months_of_inventory": 7.8, "note": "DOM/list-price/$psf reliable on all rows; TRUE sold price+close date present on minority (49/103) so sold-to-list & margin are directional only, not precise.", "by_product": {"Single Lot": {"sold_12mo": 35, "active_pending_now": 33, "absorption_per_month": 2.92, "months_of_inventory": 11.3, "median_dom": 39, "median_list_ppsf": 434.8, "by_price_band": {"<800k": {"sold_n": 1, "active_pending_n": 0, "median_dom": 19, "median_list_ppsf": 274.5, "months_inventory": 0.0}, "800k-1.3M": {"sold_n": 1, "active_pending_n": 2, "median_dom": 39, "median_list_ppsf": 400.5, "months_inventory": 24.0}, "1.3M-2M": {"sold_n": 23, "active_pending_n": 20, "median_dom": 39, "median_list_ppsf": 423.0, "months_inventory": 10.4}, "2M+": {"sold_n": 10, "active_pending_n": 11, "median_dom": 48.5, "median_list_ppsf": 494.8, "months_inventory": 13.2}}}, "Split Lot": {"sold_12mo": 68, "active_pending_now": 34, "absorption_per_month": 5.67, "months_of_inventory": 6.0, "median_dom": 21.5, "median_list_ppsf": 278.6, "by_price_band": {"<800k": {"sold_n": 42, "active_pending_n": 15, "median_dom": 20.5, "median_list_ppsf": 269.8, "months_inventory": 4.3}, "800k-1.3M": {"sold_n": 26, "active_pending_n": 17, "median_dom": 30.0, "median_list_ppsf": 319.9, "months_inventory": 7.8}, "1.3M-2M": {"sold_n": 0, "active_pending_n": 2, "median_dom": null, "median_list_ppsf": null, "months_inventory": "no_comps"}}}}}; // HAR trailing-12mo sold + active/pending, computed 2026-07-05
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.32-2026-07-05';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.34-2026-07-05';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -414,10 +415,20 @@ function applyAutoAdvance(){let ch=false;for(const id in state.points){const p=s
   if((p.tags||[]).join(',')!==tags.join(',')){p.tags=tags;ch=true;}}
   if(ch)save();}
 applyAutoAdvance();
+// Product-tag hygiene: active_single/active_split is a *listing* class, not a product label.
+// On an unlisted permit it wrongly renders a green 'Active' chip while the pin is (correctly)
+// phase-colored. Strip that membership tag from anything not genuinely on the market so the
+// phase headline is the only signal. Product type stays visible via the permit + prod field.
+function dropUnlistedActiveTags(){for(const id in state.points){const p=state.points[id];const t=p.tags||[];
+  const r=byId[id];const listed=r&&r.kind==='active'&&r.v!==undefined&&r.st!=='pending';
+  const onMarket=t.includes('listed')||t.includes('market');
+  if(!listed&&!onMarket){const nt=t.filter(x=>x!=='active_single'&&x!=='active_split');
+    if(nt.length!==t.length)p.tags=nt;}}save();}
 function syncListed(){for(const r of DATA){const p=pt(r.id);const should=r.kind==='active'&&r.v!==undefined&&r.st!=='pending';const has=(p.tags||[]).includes('listed');
   if(should&&!has)p.tags=(p.tags||[]).concat(['listed']);
   else if(!should&&has)p.tags=p.tags.filter(t=>t!=='listed');}}
 syncListed();
+dropUnlistedActiveTags();
 
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.80,-95.40],13);
@@ -556,6 +567,7 @@ function applyInspectionPromotions(){
     // if nothing passed yet, leave it in the permit layer
   }
   syncListed();
+  dropUnlistedActiveTags();
   if(changed){Object.keys(mById).forEach(recolor);renderLegend();refresh();
     // keep Overview and Timeline tabs in sync with inspection-driven phases
     if(typeof buildOverview==='function')buildOverview();
@@ -1172,7 +1184,8 @@ function askContext(){
   return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
    '\nCOMPLETION_FORECAST (grouping matches the Timeline tab exactly; ready_now = complete/listed now, EXCLUDED from all other numbers; by_month = under-construction homes keyed by months until done; done_within[N] = PRECOMPUTED cumulative count completing within N months — use it verbatim, never sum by_month yourself): '+JSON.stringify(forecast)+
    '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
-   '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n');
+   '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
+   '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
 }
 const askHist=[];
 function askAdd(cls,txt){const d=document.createElement('div');d.className='askm '+cls;d.textContent=txt;document.getElementById('askLog').appendChild(d);d.scrollIntoView({block:'end'});return d;}
