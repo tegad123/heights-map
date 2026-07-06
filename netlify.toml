@@ -13,3 +13,10 @@
 # Serverless functions (Ask-the-Map AI endpoint)
 [functions]
   directory = "netlify/functions"
+
+# Ask-the-Map runs a ~12K-token map payload through Claude Sonnet; a full
+# build/no-build analysis takes 15-25s, past Netlify's 10s default. Raise it.
+# 26s is the Pro-plan ceiling. If the site is on the Free plan (10s max),
+# this has no effect — trim the payload instead.
+[functions.ask]
+  timeout = 26
