@@ -316,7 +316,7 @@ const MARKET_METRICS={"window": "sold: trailing ~12 months", "sold_n": 103, "act
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.37-2026-07-06';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.38-2026-07-07';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -1254,5 +1254,11 @@ const _origApply=applyInspectionPromotions;
 applyInspectionPromotions=function(){_origApply.apply(this,arguments);renderSupplyCard();};
 renderSupplyCard();
 </script>
+
+<div id="marketNav" style="position:fixed;top:12px;right:14px;z-index:1200;display:flex;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;">
+  <a href="index.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#c0392b;color:#fff;border:1px solid #333;">HEIGHTS</a>
+  <a href="montrose.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">MONTROSE</a>
+  <span style="padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#555;border:1px solid #2a2a2a;">WEST U · soon</span>
+</div>
 </body>
 </html>
