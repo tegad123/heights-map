@@ -316,7 +316,7 @@ const MARKET_METRICS={"window": "sold: trailing ~12 months", "sold_n": 103, "act
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='heights_entities_state_v3';
-window.BUILD='v7.38-2026-07-07';console.log('[build] heights-map '+window.BUILD);
+window.BUILD='v7.39-2026-07-08';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -466,9 +466,13 @@ const INSP_PHASE=[
   [/elect final|temp gas final|gas final|\bp\d ?final\b|cc final|ww final|add el final|\bv\d final\b|\bc\d final\b|ac final|mech(?:anical)? final|plumb(?:ing)? final|flood final/i,'finishing'],
   [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|site final|final building|\bfinal\b|\btci\b|punch list|reconnect|visitab/i,'market'],
   [/insulation|shower pan|lath|grille|duct seal|egress|sfr kitchen|tree\/shrub|sprinkler|decor/i,'finishing'],
-  [/rough in|top out|water service|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b/i,'dried_in'],
-  [/frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|1035/i,'framing'],
-  [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|ditch|\bcover\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|culvert|bore|storm sewer|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|sidewalk|driveway|apron|flatwork|building layout|layout|form survey/i,'foundation'],
+  // DITCH COVER = foundation-era trench cover, must be caught BEFORE the generic \bcover\b dried-in gate
+  [/ditch ?cover|trench cover/i,'foundation'],
+  // Dried-in is gated by a real building close-up: COVER or building insulation/wrap. Rough trades are NOT dried-in.
+  [/\bcover\b|building ?wrap|house ?wrap|weather ?barrier|sheathing cover/i,'dried_in'],
+  // Rough-trades (rough in, water service, top out, gas rough) are the tail end of FRAMING, not dried-in.
+  [/rough in|top out|water service|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b|frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|1035/i,'framing'],
+  [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|culvert|bore|storm sewer|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|sidewalk|driveway|apron|flatwork|building layout|layout|form survey/i,'foundation'],
   [/\bec\b|electric|plumb|mechanic|\bac\b|\bev\b/i,'dried_in'],
 ];
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
