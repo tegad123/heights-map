@@ -68,45 +68,59 @@ import sys
 import json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-INSPECTIONS_FILE = os.path.join(HERE, "inspections.json")
-PERMITS_FILE = os.path.join(HERE, "heights_permits.json")
 SCRAPER = os.path.join(HERE, "scrape_inspections.py")
+
+# Each market: which permit list feeds it, which inspections file it writes,
+# and the path Netlify serves it at. Add West U here later — one line.
+MARKETS = [
+    {"name": "heights",
+     "permits": os.path.join(HERE, "heights_permits.json"),
+     "out":     os.path.join(HERE, "inspections.json"),
+     "netlify_path": "/inspections.json"},
+    {"name": "montrose",
+     "permits": os.path.join(HERE, "montrose_permits.json"),
+     "out":     os.path.join(HERE, "inspections_montrose.json"),
+     "netlify_path": "/inspections_montrose.json"},
+]
 
 # Read from env first; fall back to inline (leave blank and use env in prod).
 NETLIFY_SITE_ID = os.environ.get("NETLIFY_SITE_ID", "")
 NETLIFY_TOKEN = os.environ.get("NETLIFY_TOKEN", "")
 
 
-def run_scraper(limit):
-    """Run the Playwright scraper; it writes/merges inspections.json."""
+def run_scraper(market, limit):
+    """Run the Playwright scraper for one market; writes/merges its out file."""
+    if not os.path.exists(market["permits"]):
+        print(f"[{market['name']}] permit file missing ({market['permits']}); skipping.")
+        return False
     cmd = [
         sys.executable, SCRAPER,
-        "--permits", PERMITS_FILE,
-        "--out", INSPECTIONS_FILE,
+        "--permits", market["permits"],
+        "--out", market["out"],
     ]
     if limit:
         cmd += ["--limit", str(limit)]
-    print("Running scraper:", " ".join(cmd), "\n")
+    print(f"[{market['name']}] running scraper:", " ".join(cmd), "\n")
     r = subprocess.run(cmd)
     if r.returncode != 0:
-        print("Scraper exited non-zero; deploying whatever data exists anyway.")
-    # sanity check the file is valid JSON before we deploy it
+        print(f"[{market['name']}] scraper exited non-zero; deploying existing data anyway.")
     try:
-        data = json.load(open(INSPECTIONS_FILE))
-        print(f"\ninspections.json holds {len(data)} permits — ready to deploy.")
+        data = json.load(open(market["out"]))
+        print(f"[{market['name']}] {os.path.basename(market['out'])} holds {len(data)} permits — ready to deploy.")
         return True
     except Exception as e:
-        print(f"inspections.json is missing or invalid ({e}); aborting deploy.")
+        print(f"[{market['name']}] {os.path.basename(market['out'])} missing or invalid ({e}); skipping deploy.")
         return False
 
 
-def deploy_netlify():
-    """Upload only inspections.json to the live site via Netlify's API.
+def deploy_netlify(markets):
+    """Upload all markets' inspection files to the live site in ONE deploy.
 
-    Uses the file-digest deploy endpoint: we tell Netlify the SHA1 of
-    the one file we want live, it tells us if it needs the bytes, we PUT
-    them. This updates a single file without touching the rest of the
-    deployed site.
+    Uses the file-digest deploy endpoint: declare the SHA1 of every file
+    we want live, Netlify tells us which bytes it still needs, we PUT those.
+    Declaring all files in a single deploy keeps the other files on the site
+    intact (a deploy that names only some files leaves the rest as-is only
+    when we pass the full digest set — so we include every market's file).
     """
     try:
         import requests
@@ -120,50 +134,63 @@ def deploy_netlify():
         )
 
     import hashlib
-    blob = open(INSPECTIONS_FILE, "rb").read()
-    sha = hashlib.sha1(blob).hexdigest()
     headers = {"Authorization": f"Bearer {NETLIFY_TOKEN}"}
-
-    # 1) create a deploy that declares the file we intend to ship
     base = f"https://api.netlify.com/api/v1/sites/{NETLIFY_SITE_ID}"
+
+    # Build the digest map for every market file that exists on disk.
+    files_map = {}
+    blobs = {}
+    for m in markets:
+        if not os.path.exists(m["out"]):
+            continue
+        blob = open(m["out"], "rb").read()
+        sha = hashlib.sha1(blob).hexdigest()
+        files_map[m["netlify_path"]] = sha
+        blobs[m["netlify_path"]] = (sha, blob)
+    if not files_map:
+        print("No inspection files to deploy.")
+        return
+
     r = requests.post(
         f"{base}/deploys",
         headers={**headers, "Content-Type": "application/json"},
-        json={"files": {"/inspections.json": sha}},
+        json={"files": files_map},
         timeout=60,
     )
     r.raise_for_status()
     deploy = r.json()
     deploy_id = deploy["id"]
+    required = set(deploy.get("required") or [])
 
-    # 2) if Netlify still needs the bytes, PUT them
-    required = deploy.get("required") or []
-    if sha in required:
-        up = requests.put(
-            f"https://api.netlify.com/api/v1/deploys/{deploy_id}/files/inspections.json",
-            headers={**headers, "Content-Type": "application/octet-stream"},
-            data=blob,
-            timeout=120,
-        )
-        up.raise_for_status()
-        print("Uploaded inspections.json bytes to Netlify.")
-    else:
-        print("Netlify already had this exact file (no change to upload).")
+    for path, (sha, blob) in blobs.items():
+        if sha in required:
+            up = requests.put(
+                f"https://api.netlify.com/api/v1/deploys/{deploy_id}/files{path}",
+                headers={**headers, "Content-Type": "application/octet-stream"},
+                data=blob,
+                timeout=120,
+            )
+            up.raise_for_status()
+            print(f"Uploaded {path} bytes to Netlify.")
+        else:
+            print(f"Netlify already had current {path} (no change).")
 
-    print(f"Deployed inspections.json — deploy id {deploy_id}")
+    print(f"Deployed {len(files_map)} inspection file(s) — deploy id {deploy_id}")
     print(f"Live URL: {deploy.get('ssl_url') or deploy.get('url','(check dashboard)')}")
 
 
-def deploy_git():
-    """Commit + push inspections.json; Netlify's GitHub integration rebuilds."""
-    subprocess.run(["git", "-C", HERE, "add", "inspections.json"], check=True)
-    msg = "data: refresh inspections.json"
+def deploy_git(markets):
+    """Commit + push all markets' inspection files; Netlify rebuilds."""
+    for m in markets:
+        if os.path.exists(m["out"]):
+            subprocess.run(["git", "-C", HERE, "add", os.path.basename(m["out"])], check=True)
+    msg = "data: refresh inspections (all markets)"
     r = subprocess.run(["git", "-C", HERE, "commit", "-m", msg])
     if r.returncode != 0:
         print("Nothing to commit (data unchanged).")
         return
     subprocess.run(["git", "-C", HERE, "push"], check=True)
-    print("Pushed inspections.json to GitHub — Netlify will rebuild.")
+    print("Pushed inspection files to GitHub — Netlify will rebuild.")
 
 
 def main():
@@ -173,17 +200,31 @@ def main():
     ap.add_argument("--limit", type=int, default=0,
                     help="Only scrape first N permits (testing). 0 = all")
     ap.add_argument("--skip-scrape", action="store_true",
-                    help="Deploy the existing inspections.json without re-scraping")
+                    help="Deploy existing inspection files without re-scraping")
+    ap.add_argument("--market", default="",
+                    help="Only run one market (heights|montrose). Default = all.")
     args = ap.parse_args()
 
+    # Optional: restrict to one market from the CLI (default = all)
+    markets = MARKETS
+    if args.market:
+        markets = [m for m in MARKETS if m["name"] == args.market]
+        if not markets:
+            sys.exit(f"Unknown --market {args.market}; known: {[m['name'] for m in MARKETS]}")
+
     if not args.skip_scrape:
-        if not run_scraper(args.limit):
+        any_ok = False
+        for m in markets:
+            if run_scraper(m, args.limit):
+                any_ok = True
+        if not any_ok:
+            print("No market produced valid data; nothing to deploy.")
             sys.exit(1)
 
     if args.mode == "netlify":
-        deploy_netlify()
+        deploy_netlify(markets)
     else:
-        deploy_git()
+        deploy_git(markets)
 
 
 if __name__ == "__main__":
