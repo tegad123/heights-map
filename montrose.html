@@ -315,8 +315,8 @@ DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kep
 const MARKET_METRICS={"as_of":"2026-07-08","zips":["77006","77019","77098"],"sold_12mo":{"total":246,"nc":30,"resale":216,"nc_median_sold":1999950,"nc_ppsf":473,"nc_dom":63,"resale_median_sold":1299975,"resale_ppsf":436,"resale_dom":29,"bands_total_per_yr":{"under_800k":45,"800k_1_3m":63,"1_3m_2_15m":69,"2_15m_plus":69},"bands_nc_per_yr":{"under_800k":0,"800k_1_3m":0,"1_3m_2_15m":18,"2_15m_plus":12}},"actives_nc":{"n":47,"median_price":1199900,"median_ppsf":371,"median_cdom_days":145,"relisted_pct":38},"months_of_inventory_nc":18.8,"key_facts":["NC MOI 18.8mo vs Heights ~10mo \u2014 Montrose NC oversupplied","NC sells at PREMIUM to resale ($473 vs $436/sqft) but 2x slower (63d vs 29d)","ZERO NC closings under $1.3M in 12mo while 28 NC actives priced there \u2014 patio-home product not clearing","$2.15M+ tier absorbs 69/yr total (12 NC) \u2014 much deeper than Heights (25/yr)","Resale actives not pulled yet \u2014 NC-vs-NC MOI only"]}; // placeholder
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
-const KEY='montrose_entities_state_v1';
-window.BUILD='montrose-v0.7-2026-07-08';console.log('[build] heights-map '+window.BUILD);
+const KEY='montrose_entities_state_v2';
+window.BUILD='montrose-v0.8-2026-07-08';console.log('[build] heights-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
