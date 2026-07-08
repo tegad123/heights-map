@@ -81,6 +81,10 @@ MARKETS = [
      "permits": os.path.join(HERE, "montrose_permits.json"),
      "out":     os.path.join(HERE, "inspections_montrose.json"),
      "netlify_path": "/inspections_montrose.json"},
+    {"name": "westu",
+     "permits": os.path.join(HERE, "westu_permits.json"),
+     "out":     os.path.join(HERE, "inspections_westu.json"),
+     "netlify_path": "/inspections_westu.json"},
 ]
 
 # Read from env first; fall back to inline (leave blank and use env in prod).
