@@ -1,18 +1,8 @@
 [
   {
-    "proj": "25028032",
-    "address": "1301 Saulnier St, Houston, TX 77019",
-    "owner": "CISNEROS FELIX"
-  },
-  {
     "proj": "25041469",
     "address": "2235 Brentwood Dr, Houston, TX 77019",
     "owner": "VINCENT BLAKE"
-  },
-  {
-    "proj": "25054886",
-    "address": "1306 Crocker St, Houston, TX 77019",
-    "owner": "*1306 CROCKER LLC"
   },
   {
     "proj": "25058597",
@@ -23,11 +13,6 @@
     "proj": "25077925",
     "address": "1817 Sharp Place, Houston, TX 77019",
     "owner": "TENORIO MICHAEL"
-  },
-  {
-    "proj": "25078300",
-    "address": "1606 Woodhead Street, Houston, TX 77019",
-    "owner": "CROIX MICHAEL"
   },
   {
     "proj": "25080058",
@@ -45,64 +30,9 @@
     "owner": "TURNER JOHN"
   },
   {
-    "proj": "25090429",
-    "address": "1906 Driscoll Street, Houston, TX 77019",
-    "owner": "*INVESTAVERSE CORP"
-  },
-  {
-    "proj": "25092208",
-    "address": "2412 Elmen St, Houston, TX 77019",
-    "owner": "*2412 ELMEN LLC"
-  },
-  {
-    "proj": "25092209",
-    "address": "2414 Elmen St, Houston, TX 77019",
-    "owner": "*2412 ELMEN LLC"
-  },
-  {
-    "proj": "25094784",
-    "address": "1107 Wilson St, Houston, TX 77019",
-    "owner": "*MASH DEVELOPMENT LLC"
-  },
-  {
-    "proj": "25094785",
-    "address": "1105 Wilson St, Houston, TX 77019",
-    "owner": "*MASH DEVELOPMENT LLC"
-  },
-  {
-    "proj": "25094786",
-    "address": "1103 Wilson St, Houston, TX 77019",
-    "owner": "*MASH DEVELOPMENT LLC"
-  },
-  {
     "proj": "25098554",
     "address": "3482 Inwood Dr, Houston, TX 77019",
     "owner": "MENAL NABEEL"
-  },
-  {
-    "proj": "25106917",
-    "address": "1918 Huldy St, Houston, TX 77019",
-    "owner": "*ROQUE, LLC"
-  },
-  {
-    "proj": "25108616",
-    "address": "2202 Huldy St, Houston, TX 77019",
-    "owner": "*L&H4 LLC"
-  },
-  {
-    "proj": "25108617",
-    "address": "2204 Huldy St, Houston, TX 77019",
-    "owner": "*L&H4 LLC"
-  },
-  {
-    "proj": "25114777",
-    "address": "2413 Brun St A, Houston, TX 77019",
-    "owner": "*2413 BRUN LLC"
-  },
-  {
-    "proj": "25114778",
-    "address": "2413 Brun St B, Houston, TX 77019",
-    "owner": "*2413 BRUN LLC"
   },
   {
     "proj": "26001641",
@@ -110,24 +40,9 @@
     "owner": "*MIRADOR CUSTOM BUILDERS LLC RS BELMONT 1"
   },
   {
-    "proj": "26001679",
-    "address": "2424 Elmen St, Houston, TX 77019",
-    "owner": "NAQUI NASREEN"
-  },
-  {
     "proj": "26001858",
     "address": "2505 Inwood Dr, Houston, TX 77019",
     "owner": "*HEIM DEVELOPMENT LLC"
-  },
-  {
-    "proj": "26002697",
-    "address": "2027 Fairview St, Houston, TX 77019",
-    "owner": "*SANDCASTLE HOMES"
-  },
-  {
-    "proj": "26003094",
-    "address": "2025 Fairview St, Houston, TX 77019",
-    "owner": "*SANDCASTLE HOMES"
   },
   {
     "proj": "26014099",
@@ -135,43 +50,8 @@
     "owner": "MILLER ADAM"
   },
   {
-    "proj": "26015633",
-    "address": "1906 WOODHEAD Street, Houston, TX 77019",
-    "owner": "*MAZZARINO"
-  },
-  {
     "proj": "26016023",
     "address": "2121 Inwood Dr, Houston, TX 77019",
     "owner": "*WINFREY DESIGN BUILD, LLC"
-  },
-  {
-    "proj": "26018492",
-    "address": "314 W Gray St, Houston, TX 77019",
-    "owner": "*TAFT MODHAUS LLC"
-  },
-  {
-    "proj": "26018493",
-    "address": "1514 Taft St, Houston, TX 77019",
-    "owner": "*TAFT MODHAUS LLC"
-  },
-  {
-    "proj": "26025531",
-    "address": "2415 Elmen Street, Houston, TX 77019",
-    "owner": "*CROIX CUSTOM HOMES, INC"
-  },
-  {
-    "proj": "26028917",
-    "address": "2026 Morse St, Houston, TX 77019",
-    "owner": "*2026 MORSE LLC"
-  },
-  {
-    "proj": "26028918",
-    "address": "2028 Morse St, Houston, TX 77019",
-    "owner": "*2026 MORSE LLC"
-  },
-  {
-    "proj": "26030766",
-    "address": "1510 Stanford St, Houston, TX 77019",
-    "owner": "DEMUREN SINMISOLA"
   }
 ]
