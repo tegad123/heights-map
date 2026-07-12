@@ -317,7 +317,7 @@ const MARKET_METRICS=null; // pending HAR sold/active pull for Spring Valley
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='springvalley_state_v1';
-window.BUILD='springvalley-v0.1-2026-07-11';console.log('[build] springvalley-map '+window.BUILD);
+window.BUILD='springvalley-v0.1.1-2026-07-12';console.log('[build] springvalley-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -449,7 +449,7 @@ const layer=L.layerGroup().addTo(map);
 // Shape: { "25111965": { status:"Passed"|"Failed"|"Pending"|"Partial", updated:"2026-06-18",
 //   inspections:[{type:"Foundation Form Survey", date:"2026-03-04", result:"Passed", inspector:"" }, ...] }, ... }
 let INSPECTIONS={};
-const INSPECTIONS_URL='springvalley_inspections.json';
+const INSPECTIONS_URL='inspections_springvalley.json';
 function inspForPin(r){
   if(!r.permits)return null;
   for(const pm of r.permits){ if(pm.proj && INSPECTIONS[pm.proj]) return {proj:pm.proj, ...INSPECTIONS[pm.proj]}; }

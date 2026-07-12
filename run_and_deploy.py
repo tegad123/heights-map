@@ -71,7 +71,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SCRAPER = os.path.join(HERE, "scrape_inspections.py")
 
 # Each market: which permit list feeds it, which inspections file it writes,
-# and the path Netlify serves it at. Add West U here later — one line.
+# and the path Netlify serves it at. New markets are one entry each; the
+# scraper skips any market whose permit file doesn't exist yet.
 MARKETS = [
     {"name": "heights",
      "permits": os.path.join(HERE, "heights_permits.json"),
@@ -85,6 +86,18 @@ MARKETS = [
      "permits": os.path.join(HERE, "westu_permits.json"),
      "out":     os.path.join(HERE, "inspections_westu.json"),
      "netlify_path": "/inspections_westu.json"},
+    {"name": "riveroaks",
+     "permits": os.path.join(HERE, "riveroaks_permits.json"),
+     "out":     os.path.join(HERE, "inspections_riveroaks.json"),
+     "netlify_path": "/inspections_riveroaks.json"},
+    {"name": "springbranch",
+     "permits": os.path.join(HERE, "springbranch_permits.json"),
+     "out":     os.path.join(HERE, "inspections_springbranch.json"),
+     "netlify_path": "/inspections_springbranch.json"},
+    {"name": "springvalley",
+     "permits": os.path.join(HERE, "springvalley_permits.json"),
+     "out":     os.path.join(HERE, "inspections_springvalley.json"),
+     "netlify_path": "/inspections_springvalley.json"},
 ]
 
 # Read from env first; fall back to inline (leave blank and use env in prod).
@@ -206,7 +219,7 @@ def main():
     ap.add_argument("--skip-scrape", action="store_true",
                     help="Deploy existing inspection files without re-scraping")
     ap.add_argument("--market", default="",
-                    help="Only run one market (heights|montrose). Default = all.")
+                    help="Only run one market (heights|montrose|westu|riveroaks|springbranch|springvalley). Default = all.")
     args = ap.parse_args()
 
     # Optional: restrict to one market from the CLI (default = all)

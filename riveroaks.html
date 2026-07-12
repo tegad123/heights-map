@@ -313,11 +313,11 @@ const DATA_ALL = DATA;
 const UNITS={};for(const r of DATA)UNITS[r.id]=r.units||1;const UW=id=>UNITS[id]||1; // split-lot solo masters count as their full MST home count
 const SOLD = DATA.filter(r=>r.st==='sold');
 DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kept in DATA_ALL/SOLD for export
-const MARKET_METRICS=null; // pending HAR sold/active pull for River Oaks
+const MARKET_METRICS={"window": "sold: trailing 12 months (2025-07-12 to 2026-07-12) by close date, zip 77019 full residential; source file contained 178 solds back to 2023, filtered to 125", "sold_n": 125, "active_pending_n": 72, "absorption_per_month": 10.42, "months_of_inventory": 6.9, "note": "Prices are close prices; DOM and $psf reliable on all rows. NC = year built 2021+. Actives combine full-market + split-lot pulls, deduped. RO proper vs Montrose-side split lives on map pins via boundary polygon.", "by_product": {"New Construction (YB 2021+)": {"sold_12mo": 20, "active_pending_now": 23, "absorption_per_month": 1.67, "months_of_inventory": 13.8, "median_dom": 32.0, "median_sold_ppsf": 369.0, "by_price_band": {"<800k": {"sold_n": 1, "active_pending_n": 1, "median_dom": 61, "median_sold_ppsf": 230.1, "months_inventory": 12.0}, "800k-1.3M": {"sold_n": 11, "active_pending_n": 9, "median_dom": 29, "median_sold_ppsf": 348.9, "months_inventory": 9.8}, "1.3M-2M": {"sold_n": 4, "active_pending_n": 4, "median_dom": 52.0, "median_sold_ppsf": 421.1, "months_inventory": 12.0}, "2M-5M": {"sold_n": 2, "active_pending_n": 5, "median_dom": 53.0, "median_sold_ppsf": 547.7, "months_inventory": 30.0}, "5M+": {"sold_n": 2, "active_pending_n": 4, "median_dom": 20.5, "median_sold_ppsf": 842.4, "months_inventory": 24.0}}}, "Resale": {"sold_12mo": 105, "active_pending_now": 49, "absorption_per_month": 8.75, "months_of_inventory": 5.6, "median_dom": 18, "median_sold_ppsf": 366.4, "by_price_band": {"<800k": {"sold_n": 41, "active_pending_n": 13, "median_dom": 15, "median_sold_ppsf": 245.4, "months_inventory": 3.8}, "800k-1.3M": {"sold_n": 16, "active_pending_n": 7, "median_dom": 35.0, "median_sold_ppsf": 279.9, "months_inventory": 5.2}, "1.3M-2M": {"sold_n": 12, "active_pending_n": 4, "median_dom": 22.5, "median_sold_ppsf": 400.4, "months_inventory": 4.0}, "2M-5M": {"sold_n": 27, "active_pending_n": 17, "median_dom": 10, "median_sold_ppsf": 712.8, "months_inventory": 7.6}, "5M+": {"sold_n": 9, "active_pending_n": 8, "median_dom": 29, "median_sold_ppsf": 869.1, "months_inventory": 10.7}}}}}; // HAR trailing-12mo sold + active/pending 77019, computed 2026-07-12
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='riveroaks_state_v1';
-window.BUILD='riveroaks-v0.7.1-2026-07-12';console.log('[build] riveroaks-map '+window.BUILD);
+window.BUILD='riveroaks-v0.8-2026-07-12';console.log('[build] riveroaks-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
@@ -449,7 +449,7 @@ const layer=L.layerGroup().addTo(map);
 // Shape: { "25111965": { status:"Passed"|"Failed"|"Pending"|"Partial", updated:"2026-06-18",
 //   inspections:[{type:"Foundation Form Survey", date:"2026-03-04", result:"Passed", inspector:"" }, ...] }, ... }
 let INSPECTIONS={};
-const INSPECTIONS_URL='riveroaks_inspections.json';
+const INSPECTIONS_URL='inspections_riveroaks.json';
 function inspForPin(r){
   if(!r.permits)return null;
   for(const pm of r.permits){ if(pm.proj && INSPECTIONS[pm.proj]) return {proj:pm.proj, ...INSPECTIONS[pm.proj]}; }
