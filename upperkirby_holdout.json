@@ -1,0 +1,555 @@
+[
+ {
+  "id": "act_2630-peckham-street",
+  "a": "2630 PECKHAM Street, Houston, TX 77098",
+  "llc": "2628 PECKHAM LLC",
+  "kind": "active",
+  "lat": 29.7419644,
+  "lng": -95.4115927,
+  "v": "$1,099,900",
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "2628 PECKHAM LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (2 OF 2)",
+    "val": "513401",
+    "ptype": "13",
+    "proj": "25042037",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "act_2329-richton-street",
+  "a": "2329 RICHTON Street, Houston, TX 77098",
+  "llc": "2327 RICHTON LLC",
+  "kind": "active",
+  "lat": 29.7355576,
+  "lng": -95.4155354,
+  "v": "$1,129,900",
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "2327 RICHTON LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (M # 25063034)",
+    "val": "544822",
+    "ptype": "13",
+    "proj": "25063034",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "act_2325-richton-street",
+  "a": "2325 RICHTON Street, Houston, TX 77098",
+  "llc": "2323 RICHTON LLC",
+  "kind": "active",
+  "lat": 29.7355578,
+  "lng": -95.4154895,
+  "v": "$1,199,900",
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "2323 RICHTON LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (M # 25063028)",
+    "val": "544822",
+    "ptype": "13",
+    "proj": "25063029",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "act_2129-harold-street",
+  "a": "2129 Harold Street, Houston, TX 77098",
+  "llc": "GEM BUILDING GROUP LLC",
+  "kind": "active",
+  "lat": 29.7405995,
+  "lng": -95.4121185,
+  "v": "$1,275,000",
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "GEM BUILDING GROUP LLC",
+    "desc": "S.F. RES-W/ATT GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (M# 25023959)",
+    "val": "608241",
+    "ptype": "13",
+    "proj": "25023960",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "act_2006-lexington-street",
+  "a": "2006 Lexington Street, Houston, TX 77098",
+  "llc": "LEXINGTON PLACE",
+  "kind": "active",
+  "lat": 29.7317849,
+  "lng": -95.4089298,
+  "v": "$1,899,000",
+  "ty": "active_single"
+ },
+ {
+  "id": "act_2310-w-main-street",
+  "a": "2310 W Main Street, Houston, TX 77098",
+  "llc": "George Rich",
+  "kind": "active",
+  "lat": 29.7363567,
+  "lng": -95.41557,
+  "v": "$2,375,000",
+  "ty": "active_split"
+ },
+ {
+  "id": "act_2312-w-main-street",
+  "a": "2312 W Main Street, Houston, TX 77098",
+  "llc": "George Rich",
+  "kind": "active",
+  "lat": 29.7363565,
+  "lng": -95.4155859,
+  "v": "$2,375,000",
+  "ty": "active_split"
+ },
+ {
+  "id": "act_1911-milford-street",
+  "a": "1911 Milford Street, Houston, TX 77098",
+  "llc": "CROIX CUSTOM HOMES,INC",
+  "kind": "active",
+  "lat": 29.7286686,
+  "lng": -95.4058198,
+  "v": "$2,599,000",
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "CROIX CUSTOM HOMES,INC",
+    "desc": "S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "788407",
+    "ptype": "13",
+    "proj": "25120104",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "act_1701-banks-street",
+  "a": "1701 BANKS Street, Houston, TX 77098",
+  "llc": "1701 BANKS LLC",
+  "kind": "active",
+  "lat": 29.7295648,
+  "lng": -95.4021551,
+  "v": "$3,499,900",
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "1701 BANKS LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "971600",
+    "ptype": "13",
+    "proj": "25061191",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2628-peckham-st",
+  "a": "2628 PECKHAM ST, Houston, TX 77098",
+  "llc": "MAZZARINO",
+  "kind": "permit",
+  "lat": 29.7420012,
+  "lng": -95.4115929,
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "MAZZARINO",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (M OF 2)",
+    "val": "534445",
+    "ptype": "13",
+    "proj": "25042036",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2127-harold-st",
+  "a": "2127 HAROLD ST, Houston, TX 77098",
+  "llc": "GEM BUILDING GROUP LLC",
+  "kind": "permit",
+  "lat": 29.7405995,
+  "lng": -95.4120115,
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "GEM BUILDING GROUP LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (MST OF 2)",
+    "val": "608241",
+    "ptype": "13",
+    "proj": "25023959",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2935-ferndale-st",
+  "a": "2935 FERNDALE ST, Houston, TX 77098",
+  "llc": "TOUCHSTONE RESOURCES LLC",
+  "kind": "permit",
+  "lat": 29.739504,
+  "lng": -95.4218192,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "TOUCHSTONE RESOURCES LLC",
+    "desc": "QS2 S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC",
+    "val": "587053",
+    "ptype": "13",
+    "proj": "26014939",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2638-persa-st",
+  "a": "2638 PERSA ST, Houston, TX 77098",
+  "llc": "LENDVAI JOHN PAUL",
+  "kind": "permit",
+  "lat": 29.741806,
+  "lng": -95.4123711,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "LENDVAI JOHN PAUL",
+    "desc": "QS2 S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "709566",
+    "ptype": "13",
+    "proj": "25073729",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2933-ferndale-st",
+  "a": "2933 FERNDALE ST, Houston, TX 77098",
+  "llc": "TOUCHSTONE RESOURCES LLC",
+  "kind": "permit",
+  "lat": 29.7395357,
+  "lng": -95.4218194,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "TOUCHSTONE RESOURCES LLC",
+    "desc": "QS2 S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC",
+    "val": "587053",
+    "ptype": "13",
+    "proj": "26014938",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_1907-vassar-st",
+  "a": "1907 VASSAR ST, Houston, TX 77098",
+  "llc": "ZM VENTURES, LLC.",
+  "kind": "permit",
+  "lat": 29.7301072,
+  "lng": -95.4057785,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "ZM VENTURES, LLC.",
+    "desc": "QS2 S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC",
+    "val": "583306",
+    "ptype": "13",
+    "proj": "25066775",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2914-virginia-st",
+  "a": "2914 VIRGINIA ST, Houston, TX 77098",
+  "llc": "CENTURY CUSTOM HOMES",
+  "kind": "permit",
+  "lat": 29.7395416,
+  "lng": -95.4211669,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "CENTURY CUSTOM HOMES",
+    "desc": "S.F. RES ATT GAR (REPEAT-WILLIAM LB1) 2015 IRC / 2015 IECC",
+    "val": "355864",
+    "ptype": "13",
+    "proj": "25054004",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2125-branard-st",
+  "a": "2125 BRANARD ST, Houston, TX 77098",
+  "llc": "HOMEBOUND",
+  "kind": "permit",
+  "lat": 29.7367448,
+  "lng": -95.411252,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "HOMEBOUND",
+    "desc": "QS2 S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "652634",
+    "ptype": "13",
+    "proj": "25117465",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2250-bartlett-st",
+  "a": "2250 BARTLETT ST, Houston, TX 77098",
+  "llc": "BPHB ASSETCO",
+  "kind": "permit",
+  "lat": 29.7271712,
+  "lng": -95.4116912,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "BPHB ASSETCO",
+    "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "717061",
+    "ptype": "13",
+    "proj": "25089013",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2122-north-blvd",
+  "a": "2122 NORTH BLVD, Houston, TX 77098",
+  "llc": "2122 NORTH BLVD LLC",
+  "kind": "permit",
+  "lat": 29.7279027,
+  "lng": -95.4097897,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "2122 NORTH BLVD LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "728592",
+    "ptype": "13",
+    "proj": "25118739",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_1813-banks-st",
+  "a": "1813 BANKS ST, Houston, TX 77098",
+  "llc": "CONNELLY JAMES",
+  "kind": "permit",
+  "lat": 29.7295355,
+  "lng": -95.4046368,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "CONNELLY JAMES",
+    "desc": "S.F. RES. W/ATT. CARPORT (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "538913",
+    "ptype": "13",
+    "proj": "25082242",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2327-richton-st",
+  "a": "2327 RICHTON ST, Houston, TX 77098",
+  "llc": "2327 RICHTON LLC",
+  "kind": "permit",
+  "lat": 29.7355577,
+  "lng": -95.4155125,
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "2327 RICHTON LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (MST OF 2)",
+    "val": "534445",
+    "ptype": "13",
+    "proj": "25063033",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2210-bartlett-st",
+  "a": "2210 BARTLETT ST, Houston, TX 77098",
+  "llc": "MATSUI ELIZABETH",
+  "kind": "permit",
+  "lat": 29.7271895,
+  "lng": -95.4108253,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "MATSUI ELIZABETH",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC",
+    "val": "823864",
+    "ptype": "13",
+    "proj": "25058874",
+    "vald": "Building Pmt"
+   }
+  ],
+  "st": "sold",
+  "v": "$2,450,000"
+ },
+ {
+  "id": "pmt_2225-branard-st",
+  "a": "2225 BRANARD ST, Houston, TX 77098",
+  "llc": "HOMEBOUND",
+  "kind": "permit",
+  "lat": 29.7367959,
+  "lng": -95.4133596,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "HOMEBOUND",
+    "desc": "QS2 S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "717061",
+    "ptype": "13",
+    "proj": "25059191",
+    "vald": "Building Pmt"
+   }
+  ],
+  "st": "sold",
+  "v": "$1,649,000"
+ },
+ {
+  "id": "pmt_2323-richton-st",
+  "a": "2323 RICHTON ST, Houston, TX 77098",
+  "llc": "MAZZARINO",
+  "kind": "permit",
+  "lat": 29.7355579,
+  "lng": -95.4154666,
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "MAZZARINO",
+    "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC (MST OF 2)",
+    "val": "534445",
+    "ptype": "13",
+    "proj": "25063028",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2916-virginia-st",
+  "a": "2916 VIRGINIA ST, Houston, TX 77098",
+  "llc": "CENTURY CUSTOM HOMES",
+  "kind": "permit",
+  "lat": 29.7394702,
+  "lng": -95.4211661,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "CENTURY CUSTOM HOMES",
+    "desc": "S.F. RES ATT GAR (REPEAT-WILLIAM 3RB) 2015 IRC / 2015 IECC.",
+    "val": "355864",
+    "ptype": "13",
+    "proj": "25064850",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_3319-bammel-ln",
+  "a": "3319 BAMMEL LN, Houston, TX 77098",
+  "llc": "BAMMEL DEVELOPMENT LLC",
+  "kind": "permit",
+  "lat": 29.7358865,
+  "lng": -95.423669,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "BAMMEL DEVELOPMENT LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "770390",
+    "ptype": "13",
+    "proj": "26039918",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2630-persa-st",
+  "a": "2630 PERSA ST, Houston, TX 77098",
+  "llc": "MAZZARINO",
+  "kind": "permit",
+  "lat": 29.7419517,
+  "lng": -95.4123728,
+  "ty": "active_split",
+  "permits": [
+   {
+    "owner": "MAZZARINO",
+    "desc": "QS2 S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC (MST OF 2)",
+    "val": "531995",
+    "ptype": "13",
+    "proj": "26037795",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2632-persa-st",
+  "a": "2632 PERSA ST, Houston, TX 77098",
+  "llc": "CORE BUILDERS LLC",
+  "kind": "permit",
+  "lat": 29.7419153,
+  "lng": -95.4123724,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "CORE BUILDERS LLC",
+    "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC (M # 26037795)",
+    "val": "531995",
+    "ptype": "13",
+    "proj": "26037796",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2038-norfolk-st",
+  "a": "2038 NORFOLK ST, Houston, TX 77098",
+  "llc": "NORFOLK LUXURY HOMES, LLC",
+  "kind": "permit",
+  "lat": 29.7326253,
+  "lng": -95.4095031,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "NORFOLK LUXURY HOMES, LLC",
+    "desc": "S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "802532",
+    "ptype": "13",
+    "proj": "26020874",
+    "vald": "Building Pmt"
+   }
+  ]
+ },
+ {
+  "id": "pmt_2336-bartlett-st",
+  "a": "2336 BARTLETT ST, Houston, TX 77098",
+  "llc": "PARTNERS IN BUILDING",
+  "kind": "permit",
+  "lat": 29.7272062,
+  "lng": -95.4135537,
+  "ty": "active_single",
+  "permits": [
+   {
+    "owner": "PARTNERS IN BUILDING",
+    "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC",
+    "val": "787254",
+    "ptype": "13",
+    "proj": "26031928",
+    "vald": "Building Pmt"
+   }
+  ]
+ }
+]
