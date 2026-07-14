@@ -317,13 +317,17 @@ const MARKET_METRICS=null; // pending HAR sold/active pull for Spring Valley
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
 const KEY='springvalley_state_v2';
-window.BUILD='springvalley-v0.2-2026-07-12';console.log('[build] springvalley-map '+window.BUILD);
+window.BUILD='springvalley-v0.2.1-2026-07-14';console.log('[build] springvalley-map '+window.BUILD);
 
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
 try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.tags) state=s; }catch(e){}
-if(Object.keys(state.tags).length===0){ // seed starter tags (editable/deletable)
-  state.tags={"pending":{"name":"Pending / Under Contract","color":"#d6336c"},"foundation":{"name":"Just Started / Foundation","color":"#e8590c"},"dried_in":{"name":"Dried-In / Siding","color":"#d7b13a"},"finishing":{"name":"Finishing","color":"#3a9d8f"},"market":{"name":"Active on Market","color":"#2f9e44"},"active_single":{"name":"Active – Single Lot","color":"#3f6cd1"},"active_split":{"name":"Active – Split Lot","color":"#8e5bd0"}}; state.points={"act_1432-bingle": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8919-echo-valley": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}, "act_1328-mickey": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8722-lupton": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8412-lofland": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "sv_9050-elizabeth": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}};
+const SEED_TAGS={"pending":{"name":"Pending / Under Contract","color":"#d6336c"},"foundation":{"name":"Just Started / Foundation","color":"#e8590c"},"dried_in":{"name":"Dried-In / Siding","color":"#d7b13a"},"finishing":{"name":"Finishing","color":"#3a9d8f"},"market":{"name":"Active on Market","color":"#2f9e44"},"active_single":{"name":"Active – Single Lot","color":"#3f6cd1"},"active_split":{"name":"Active – Split Lot","color":"#8e5bd0"}},SEED_POINTS={"act_1432-bingle": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8919-echo-valley": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}, "act_1328-mickey": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8722-lupton": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8412-lofland": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "sv_9050-elizabeth": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}};
+if(Object.keys(state.tags).length===0){ // first visit: full seed
+  state.tags=SEED_TAGS; state.points=SEED_POINTS;
+}else{ // returning visit: additive-merge new seed ids (user edits preserved)
+  for(const k in SEED_POINTS){ if(!state.points[k]) state.points[k]=SEED_POINTS[k]; }
+  for(const k in SEED_TAGS){ if(!state.tags[k]) state.tags[k]=SEED_TAGS[k]; }
 }
 function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
 const pt=id=>{ if(!state.points[id]) state.points[id]={notes:'',tags:[]}; return state.points[id]; };
