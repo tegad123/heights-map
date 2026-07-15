@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Timbergrove / Lazybrook — Supply Timing Map</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#131210;--ink2:#1d1b18;--paper:#f1ede6;--paper2:#d8d2c7;--red:#cf2230;--red2:#e23a47;--line:rgba(241,237,230,.14);--muted:#8c857a}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:"IBM Plex Sans",sans-serif;background:var(--ink);color:var(--paper);-webkit-text-size-adjust:100%}
+#map{position:absolute;inset:0;background:#aadaff}
+.leaflet-container{font-family:"IBM Plex Sans",sans-serif}
+#panel{position:absolute;z-index:1000;top:14px;left:14px;width:min(348px,calc(100vw - 28px));
+  background:linear-gradient(180deg,var(--ink),var(--ink2));border:1px solid var(--line);border-radius:3px;
+  box-shadow:0 18px 50px -12px rgba(0,0,0,.55),0 2px 0 0 var(--red);overflow:hidden;animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+#panel:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.pad{padding:14px 16px;position:relative;z-index:1}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--red2);margin:0 0 5px}
+h1{font-family:"Anton",sans-serif;font-weight:400;font-size:25px;line-height:.96;margin:0;text-transform:uppercase}
+h1 .thin{display:block;font-size:13px;color:var(--paper2)}
+#collapse{flex:0 0 auto;background:none;border:1px solid var(--line);color:var(--paper2);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:.2s}
+#collapse:hover{border-color:var(--red);color:var(--red2)}
+#collapse .chev{transition:transform .25s}#panel.collapsed #collapse .chev{transform:rotate(180deg)}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);margin:8px 0 0}
+.meta b{color:var(--paper)}.meta b.r{color:var(--red2)}
+#more{overflow:auto;max-height:min(64vh,560px);transition:max-height .28s,opacity .2s;opacity:1}
+#panel.collapsed #more{max-height:0;opacity:0}
+.hr{height:1px;background:var(--line);margin:13px -16px}
+.field{position:relative}
+#q{width:100%;background:#0d0c0b;border:1px solid var(--line);color:var(--paper);font-family:"IBM Plex Mono",monospace;font-size:13px;padding:10px 11px 10px 31px;border-radius:2px;outline:none}
+#q::placeholder{color:#6b655c}#q:focus{border-color:var(--red)}
+.field .si{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;opacity:.6}
+.sec-t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 9px;display:flex;justify-content:space-between;align-items:center}
+.lk{color:var(--red2);cursor:pointer;text-transform:none;letter-spacing:.02em;font-size:11px}
+.lk:hover{text-decoration:underline}
+.tags{display:flex;flex-direction:column;gap:6px}
+.tagrow{display:flex;align-items:center;gap:9px;font-size:12.5px;cursor:pointer;padding:4px 6px;border-radius:2px;border:1px solid transparent}
+.tagrow:hover{background:rgba(255,255,255,.04)}
+.tagrow.on{border-color:var(--line);background:rgba(255,255,255,.05)}
+.sw{width:13px;height:13px;border-radius:3px;flex:0 0 auto;border:1px solid rgba(255,255,255,.35)}
+.sw-edit{-webkit-appearance:none;appearance:none;padding:0;background:none;cursor:pointer}.sw-edit::-webkit-color-swatch-wrapper{padding:0}.sw-edit::-webkit-color-swatch{border:none;border-radius:2px}.sw-edit::-moz-color-swatch{border:none;border-radius:2px}
+.tagrow .nm{flex:1}.tagrow .ct{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted)}
+.tagrow .del{color:var(--muted);font-size:14px;line-height:1;opacity:0;transition:.15s}
+.tagrow:hover .del{opacity:1}.tagrow .del:hover{color:var(--red2)}
+.newtag{margin-top:9px;display:none}.newtag.show{display:block}
+.newtag input[type=text]{width:100%;background:#0d0c0b;border:1px solid var(--line);color:var(--paper);font-family:"IBM Plex Sans";font-size:12.5px;padding:8px 10px;border-radius:2px;outline:none}
+.newtag input[type=text]:focus{border-color:var(--red)}
+.swatches{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center}
+.swatches .sw{width:18px;height:18px;cursor:pointer;border-radius:3px;transition:transform .1s}
+.swatches .sw:hover{transform:scale(1.15)}.swatches .sw.sel{outline:2px solid #fff;outline-offset:1px}
+.swatches input[type=color]{width:22px;height:22px;padding:0;border:1px solid var(--line);background:none;border-radius:3px;cursor:pointer}
+.btn{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:8px 11px;border-radius:2px;cursor:pointer;border:1px solid var(--line);background:#0d0c0b;color:var(--paper2);transition:.15s}
+.btn:hover{border-color:var(--red);color:var(--paper)}
+.btn.solid{background:var(--red);color:#fff;border-color:var(--red)}.btn.solid:hover{background:var(--red2)}
+.btns{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.tog{display:flex;align-items:center;gap:9px;cursor:pointer;user-select:none;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--paper2)}
+.tog input{display:none}
+.box{width:16px;height:16px;border:1px solid var(--muted);border-radius:2px;position:relative;flex:0 0 auto}
+.tog input:checked + .box{background:var(--red);border-color:var(--red)}
+.tog input:checked + .box:after{content:"";position:absolute;left:5px;top:1px;width:4px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(43deg)}
+
+.leaflet-popup-content-wrapper{background:var(--ink);color:var(--paper);border-radius:3px;border:1px solid var(--line);box-shadow:0 16px 40px -10px rgba(0,0,0,.7),0 2px 0 0 var(--red);padding:0}
+.leaflet-popup-content{margin:0;width:290px!important;line-height:1.4}
+.leaflet-popup-tip{background:var(--ink)}
+.leaflet-popup-close-button{color:var(--muted)!important;font-size:20px!important;padding:9px 11px 0 0!important}
+.card{padding:14px 15px}
+.card .llc{font-family:"Anton",sans-serif;font-size:18px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em}
+.card .addr{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--paper2);margin-top:4px}
+.lbl{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.cell .v{font-family:"IBM Plex Mono",monospace;font-size:12.5px;margin-top:2px}.cell .v.big{color:var(--red2);font-size:13.5px}
+.pchips{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px;align-items:center}
+.pchip{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#fff;padding:3px 7px;border-radius:2px;display:inline-flex;align-items:center;gap:5px}
+.pchip .x{cursor:pointer;opacity:.8}.pchip .x:hover{opacity:1}
+.addtag{font-family:"IBM Plex Mono",monospace;font-size:10px;background:#0d0c0b;border:1px solid var(--line);color:var(--paper2);border-radius:2px;padding:3px 6px;outline:none}
+.note-in{width:100%;margin-top:7px;background:#0d0c0b;border:1px solid var(--line);color:var(--paper);font-family:"IBM Plex Sans";font-size:12.5px;padding:9px 10px;border-radius:2px;outline:none;resize:vertical;min-height:62px}
+.note-in:focus{border-color:var(--red)}
+.notebox{width:100%;margin-top:7px;background:#0d0c0b;border:1px solid var(--line);color:var(--paper);font-family:"IBM Plex Sans";font-size:12.5px;padding:9px 10px;border-radius:2px;line-height:1.4;white-space:pre-wrap}
+.saved{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#5aa83a;opacity:0;transition:.2s;margin-top:4px;height:11px}
+.saved.on{opacity:1}
+.flags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.notefields{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+.nf{display:flex;gap:8px;align-items:baseline;border:1px solid var(--line);background:#0d0c0b;border-radius:2px;padding:6px 9px}
+.nf .nfk{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex:none;min-width:74px}
+.nf .nfv{font-family:"IBM Plex Sans";font-size:12.5px;color:var(--paper);line-height:1.35}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:9.5px;border:1px solid var(--line);color:var(--paper2);padding:2px 6px;border-radius:2px}
+.contacts{margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.contact{margin-top:8px}.contact .nm{font-size:12px;font-weight:600}
+.contact a{display:block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--paper2);text-decoration:none;margin-top:3px}
+.contact a:hover{color:var(--red2)}
+.dm{display:block;text-align:center;margin-top:12px;background:var(--red);color:#fff;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px;border-radius:2px;text-decoration:none}
+.dm:hover{background:var(--red2)}
+.leaflet-control-attribution{font-size:9px;background:rgba(255,255,255,.7)}
+@keyframes rise{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+@media(max-width:520px){h1{font-size:22px}#panel{top:10px;left:10px}.leaflet-popup-content{width:82vw!important;max-width:290px}}
+
+#tabs{position:absolute;z-index:1100;top:13px;left:50%;transform:translateX(-50%);display:flex;background:var(--ink);border:1px solid var(--line);border-radius:3px;overflow:hidden;box-shadow:0 10px 30px -10px rgba(0,0,0,.55)}
+#tabs.hidden{display:none}
+.leaflet-popup{z-index:1200!important}
+#readywrap{position:absolute;top:62px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;align-items:center;gap:8px;background:rgba(13,12,11,.92);border:1px solid #2a2823;border-radius:10px;padding:8px 12px;font-family:"IBM Plex Mono",monospace;backdrop-filter:blur(6px)}
+#readywrap .rw-lbl{color:#8c857a;font-size:10.5px;letter-spacing:.12em}
+#readywrap .rw-btn{background:transparent;border:1px solid #3a3730;color:#d8d2c7;font-family:inherit;font-size:11px;padding:4px 10px;border-radius:6px;cursor:pointer;letter-spacing:.04em}
+#readywrap .rw-btn:hover{border-color:#8c857a}
+#readywrap .rw-btn.on{background:#cf2230;border-color:#cf2230;color:#fff}
+#readywrap .rw-show{color:#8c857a;font-size:10.5px;letter-spacing:.06em;margin-left:2px}
+#readywrap .rw-show b{color:#e23a47}
+#supplycard{position:absolute;bottom:20px;right:20px;z-index:1000;width:290px;background:rgba(13,12,11,.94);border:1px solid #2a2823;border-radius:12px;padding:16px 18px;font-family:"IBM Plex Mono",monospace;backdrop-filter:blur(6px)}
+#supplycard .sc-h{color:#8c857a;font-size:10px;letter-spacing:.14em;margin-bottom:8px}
+#supplycard .sc-hero{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+#supplycard .sc-big{font-family:"Anton","IBM Plex Mono",sans-serif;font-size:52px;line-height:.9;color:#e23a47;font-weight:400}
+#supplycard .sc-sub{color:#d8d2c7;font-size:10px;letter-spacing:.1em;line-height:1.4}
+#supplycard .sc-bar{display:flex;height:6px;border-radius:3px;overflow:hidden;margin-bottom:10px;background:#2a2823}
+#supplycard .sc-bar span{display:block;height:100%}
+#supplycard .sc-phases{display:flex;justify-content:space-between;margin-bottom:12px}
+#supplycard .sc-ph{text-align:center;flex:1}
+#supplycard .sc-ph .n{font-size:16px;font-weight:600}
+#supplycard .sc-ph .l{font-size:8.5px;color:#8c857a;letter-spacing:.08em;margin-top:2px}
+#supplycard .sc-foot{color:#8c857a;font-size:9.5px;letter-spacing:.05em;border-top:1px solid #2a2823;padding-top:8px}
+.phasehead{display:flex;align-items:center;gap:10px;margin:10px 0 4px;flex-wrap:wrap}
+.phasechip{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.08em;padding:5px 11px;border-radius:6px}
+.phasetime{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#d8d2c7;letter-spacing:.02em}
+/* ===== Overview cockpit ===== */
+.ovx-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em}
+.ovx-kicker{color:#e23a47}.ovx-live{color:#2f9e44}
+.ovx-hero{display:flex;gap:0;border:1px solid #2a2823;border-left:3px solid #cf2230;border-radius:10px;overflow:hidden;margin:12px 0 20px;background:#0d0c0b}
+.ovx-heroL{flex:1.4;padding:18px 20px}
+.ovx-herolbl{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#8c857a;letter-spacing:.14em;margin-bottom:6px}
+.ovx-big{font-family:"Anton",sans-serif;font-size:74px;line-height:.95;color:#e23a47}
+.ovx-herosub{font-size:12px;color:#d8d2c7;margin-top:8px;line-height:1.5;max-width:340px}
+.ovx-heroR{flex:1;border-left:1px solid #2a2823;display:flex;flex-direction:column}
+.ovx-stat{flex:1;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid #2a2823}
+.ovx-stat:last-child{border-bottom:none}
+.ovx-stat .k{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#8c857a;letter-spacing:.1em}
+.ovx-stat .v{font-family:"Anton",sans-serif;font-size:26px}
+.ovx-secH{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#8c857a;letter-spacing:.12em;margin:20px 0 12px;border-bottom:1px solid #2a2823;padding-bottom:6px}
+.ovx-pipe{display:flex;align-items:flex-start;justify-content:space-between;margin:8px 0 6px;padding:0 8px}
+.ovx-node{position:relative;flex:1;text-align:center}
+.ovx-node .dot{width:46px;height:46px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-family:"Anton",sans-serif;font-size:18px;color:#0d0c0b}
+.ovx-node.line:after{content:'';position:absolute;top:23px;left:calc(50% + 26px);width:calc(100% - 52px);height:1px;background:#3a3730}
+.ovx-node .nl{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#f1ede6;letter-spacing:.08em;margin-top:8px}
+.ovx-node .ns{font-family:"IBM Plex Mono",monospace;font-size:8.5px;color:#8c857a;margin-top:2px}
+.ovx-chart{background:#0d0c0b;border:1px solid #2a2823;border-radius:10px;padding:10px 8px 4px}
+.ovx-chart svg{width:100%;height:auto;display:block}
+/* ===== Timeline schedule ===== */
+.tlx-tiles{display:flex;gap:10px;margin:10px 0 18px}
+.tlx-tile{flex:1;border:1px solid #2a2823;border-radius:8px;padding:12px 14px;background:#0d0c0b}
+.tlx-tile.hot{border-color:#cf2230;background:rgba(207,34,48,.08)}
+.tlx-tile .n{font-family:"Anton",sans-serif;font-size:30px;color:#f1ede6}
+.tlx-tile.hot .n{color:#e23a47}
+.tlx-tile .l{font-family:"IBM Plex Mono",monospace;font-size:8.5px;color:#8c857a;letter-spacing:.12em;margin-top:2px}
+.tlx-bucket{margin-bottom:18px}
+.tlx-bh{display:flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em}
+.tlx-bh .dot{width:8px;height:8px;border-radius:50%}
+.tlx-bh .t{color:#f1ede6}
+.tlx-bh .c{margin-left:auto;color:#8c857a;font-size:9.5px}
+.tlx-bar{height:4px;border-radius:2px;background:#2a2823;margin:7px 0 9px;overflow:hidden}
+.tlx-bar span{display:block;height:100%}
+.tlx-more{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#8c857a;letter-spacing:.06em;padding:6px 2px;cursor:pointer}
+.tlx-more:hover{color:#e23a47}
+.tlx-bh{cursor:pointer;user-select:none}
+.tlx-bh .caret{color:#8c857a;font-size:10px;transition:transform .15s}
+.tlx-bucket.closed .caret{transform:rotate(-90deg)}
+.tlx-bucket.closed .tlx-body{display:none}
+.permit.insp{margin-top:10px}
+.insprows{display:flex;flex-direction:column;gap:3px;margin-top:6px}
+.insprow{display:grid;grid-template-columns:10px 1fr auto auto;gap:7px;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:10.5px}
+.insprow .idot{width:7px;height:7px;border-radius:50%}
+.insprow .ity{color:var(--paper2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.insprow .idate{color:var(--muted)}
+.insprow .ires{font-weight:600;text-align:right}
+.insppromo{margin-top:7px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.06em;color:var(--red2);text-transform:uppercase}
+.tab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper2);background:none;border:0;padding:9px 15px;cursor:pointer;transition:.15s;border-right:1px solid var(--line)}
+.tab:last-child{border-right:0}.tab:hover{color:var(--paper)}.tab.on{background:var(--red);color:#fff}
+.overlay{position:absolute;z-index:1050;inset:56px 0 0 0;display:none;overflow:auto;background:linear-gradient(180deg,#100f0d,#15130f);padding:24px 20px 60px}
+.overlay:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.dash{max-width:780px;margin:0 auto;position:relative;z-index:1}
+.dash h2{font-family:"Anton",sans-serif;font-weight:400;font-size:31px;text-transform:uppercase;margin:0 0 4px;letter-spacing:.01em}
+.dash .sub{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);margin:0 0 20px;line-height:1.5}
+.stat{display:flex;gap:14px;margin-bottom:24px;flex-wrap:wrap}
+.stat .b{border:1px solid var(--line);border-radius:3px;padding:12px 16px;min-width:122px;flex:1}
+.stat .n{font-family:"Anton",sans-serif;font-size:30px;line-height:1}.stat .n.r{color:var(--red2)}
+.stat .l{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.barrow{display:flex;align-items:center;gap:11px;margin:10px 0}
+.barrow .nm{width:138px;font-size:12.5px;flex:0 0 auto;display:flex;align-items:center;gap:8px}
+.barrow .sw{width:11px;height:11px;border-radius:3px;flex:0 0 auto}
+.bar{flex:1;height:18px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.bar>span{display:block;height:100%;border-radius:2px;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.barrow .ct{width:34px;text-align:right;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+.bucket{border:1px solid var(--line);border-radius:3px;margin-bottom:13px;overflow:hidden}
+.bucket .bh{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:rgba(255,255,255,.045)}
+.bucket .bh .t{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.bucket .bh .c{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--red2)}
+.house{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 14px;border-top:1px solid var(--line);cursor:pointer;transition:background .12s}
+.house:hover{background:rgba(255,255,255,.055)}
+.house .a{font-size:12.5px}.house .m{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);margin-top:2px}
+.house .stg{font-family:"IBM Plex Mono",monospace;font-size:9px;color:#fff;padding:3px 7px;border-radius:2px;white-space:nowrap}
+.note-foot{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted);margin-top:16px;line-height:1.5}
+@media(max-width:560px){#panel{top:54px}.overlay{padding:18px 12px 50px}.dash h2{font-size:25px}.barrow .nm{width:108px;font-size:12px}}
+.permit{margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.permit .lbl-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.permit .ptag{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--red);padding:2px 6px;border-radius:2px;white-space:nowrap}
+.permit .pitem{margin-top:8px}.permit .pitem:first-of-type{margin-top:6px}
+.permit .pitem+.pitem{padding-top:8px;border-top:1px dashed var(--line)}
+.permit .pdesc{font-size:12px;line-height:1.45}
+.permit .powner{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--paper2);margin-top:6px}
+.permit .pmeta{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);margin-top:4px;display:flex;gap:12px;flex-wrap:wrap}
+.grp{border:1px solid var(--line);border-radius:3px;margin-bottom:8px;overflow:hidden}
+.grp-h{display:flex;align-items:center;gap:9px;padding:9px 10px;background:rgba(255,255,255,.05);cursor:pointer}
+.grp-h .gn{flex:1;font-size:12.5px;font-weight:600}
+.grp.col .grp-body{display:none}
+.grp.col .grp-h .chev2,.subg.col .subg-h .chev2{transform:rotate(-90deg)}
+.chev2{font-size:9px;color:var(--muted);transition:transform .2s;width:10px;flex:0 0 auto;text-align:center}
+.subg{border-top:1px solid var(--line)}
+.subg-h{display:flex;align-items:center;gap:9px;padding:7px 10px 7px 18px;cursor:pointer;font-size:12px}
+.subg-h .sn{flex:1}
+.subg.col .subg-body{display:none}
+.leafrow{display:flex;align-items:center;gap:9px;padding:5px 10px 5px 38px;cursor:pointer;font-size:12px;border-top:1px solid rgba(255,255,255,.05)}
+.leafrow .nm{flex:1}
+.grp-h.on,.subg-h.on,.leafrow.on{box-shadow:inset 3px 0 0 0 var(--red)}
+.leafrow:hover,.subg-h:hover,.grp-h:hover{background:rgba(255,255,255,.07)}
+.leafrow .del{color:var(--muted);font-size:14px;line-height:1;opacity:0;transition:.15s}.leafrow:hover .del{opacity:1}.leafrow .del:hover{color:var(--red2)}
+.mbox{width:13px;height:13px;border:1px solid var(--muted);border-radius:2px;flex:0 0 auto;position:relative}
+.mbox.on{background:var(--red);border-color:var(--red)}
+.mbox.on:after{content:"";position:absolute;left:4px;top:1px;width:3px;height:7px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(43deg)}
+.ct2{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);min-width:18px;text-align:right;flex:0 0 auto}
+#askLog{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;max-height:calc(100vh - 260px);overflow-y:auto}
+.askm{padding:10px 14px;border-radius:10px;white-space:pre-wrap;line-height:1.45;font-size:13px;max-width:85%}
+.askm.u{background:#2b2f36;align-self:flex-end}
+.askm.a{background:#1b2a22;border:1px solid #2f9e4433;align-self:flex-start}
+.askm.w{background:#2a1b1b;border:1px solid #e8590c44;align-self:flex-start}
+#askRow{display:flex;gap:8px}
+#askIn{flex:1;background:#15181d;color:#eee;border:1px solid #333;border-radius:8px;padding:10px;font:inherit;resize:vertical}
+#askGo{background:#2f9e44;color:#fff;border:0;border-radius:8px;padding:0 22px;font-weight:700;cursor:pointer}
+#askGo:disabled{opacity:.5;cursor:wait}
+.tlx-filter{display:flex;gap:6px;margin:6px 0 14px}
+.tlxf{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;padding:6px 12px;border-radius:3px;border:1px solid #444;background:transparent;color:#bbb;cursor:pointer}
+.tlxf.on{background:#e8590c;border-color:#e8590c;color:#fff;font-weight:700}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<!-- READY WITHIN toggle (wired to comingOnline) -->
+<div id="readywrap">
+  <span class="rw-lbl">READY WITHIN</span>
+  <button class="rw-btn" data-mo="3">3 mo</button>
+  <button class="rw-btn" data-mo="6">6 mo</button>
+  <button class="rw-btn" data-mo="12">12 mo</button>
+  <span class="rw-show" id="rw-show"></span>
+</div>
+<!-- SUPPLY SNAPSHOT corner card (wired to phaseBreakdown + comingOnline) -->
+<div id="supplycard">
+  <div class="sc-h">SUPPLY SNAPSHOT</div>
+  <div class="sc-hero"><span class="sc-big" id="sc-big">–</span><span class="sc-sub">HOMES READY<br>NEXT 12 MONTHS</span></div>
+  <div class="sc-bar" id="sc-bar"></div>
+  <div class="sc-phases" id="sc-phases"></div>
+  <div class="sc-foot" id="sc-foot"></div>
+</div>
+<div id="tabs"><button class="tab on" data-t="map">Map</button><button class="tab" data-t="overview">Overview</button><button class="tab" data-t="timeline">Timeline</button><button class="tab" data-t="ask">Ask</button></div>
+<div id="overview" class="overlay"><div class="dash" id="ovBody"></div></div>
+<div id="timeline" class="overlay"><div class="dash" id="tlBody"></div></div>
+<div id="ask" class="overlay"><div class="dash" id="askBody">
+  <h2 style="margin:0 0 4px">Ask the Map</h2>
+  <p class="note-foot" style="margin:0 0 12px">Answers come from the live map data — supply, phases, pricing, competition. Try: "Which active split-lot listings compete with 609 E 25th?" · "How many homes hit the market in the next 90 days?" · "Which builders have the most under construction?"</p>
+  <div id="askLog"></div>
+  <div id="askRow"><textarea id="askIn" rows="2" placeholder="Ask anything about the map…"></textarea><button id="askGo">Ask</button></div>
+</div></div>
+
+<div id="panel"><div class="pad">
+  <div class="head"><div>
+    <p class="kicker">34dev · Working Map</p>
+    <h1>Timbergrove / Lazybrook<span class="thin">New Construction Supply</span></h1>
+  </div><button id="collapse" aria-label="Collapse"><span class="chev">&#9650;</span></button></div>
+  <p class="meta"><b class="r" id="shown">0</b> of <b id="total">0</b> shown</p>
+  <div id="more">
+    <div class="hr"></div>
+    <div class="field">
+      <svg class="si" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#cf2230" stroke-width="2"/><line x1="21" y1="21" x2="16.5" y2="16.5" stroke="#cf2230" stroke-width="2"/></svg>
+      <input id="q" placeholder="search LLC, address, zip…" autocomplete="off"/>
+    </div>
+    <div class="hr"></div>
+    <div class="sec-t">Tags <span class="lk" id="newBtn">+ New tag</span></div>
+    <div class="tags" id="legend"></div>
+    <div class="newtag" id="newForm">
+      <input type="text" id="newName" placeholder="tag name (e.g. Hot lead)" maxlength="28"/>
+      <div class="swatches" id="swatches"></div>
+      <div class="btns"><button class="btn solid" id="addTag">Add tag</button><button class="btn" id="cancelTag">Cancel</button></div>
+    </div>
+    <div class="hr"></div>
+    <div class="btns">
+      <button class="btn" id="expJson">Export notes</button>
+      <button class="btn" id="expCsv">Export CSV</button>
+      <button class="btn" id="impBtn">Import</button>
+      <input type="file" id="impFile" accept="application/json" style="display:none"/>
+    </div>
+    <div style="margin-top:11px"><label class="tog"><input type="checkbox" id="bnd"/><span class="box"></span>Show market boundary</label></div>
+  </div>
+</div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+let DATA = [{"id": "tg_6322-wynnwood", "a": "6322 Wynnwood Lane", "llc": "SVJ Properties", "v": "$1,350,000", "sd": "Timbergrove Manor Sec 06", "kind": "active", "bb": "", "prod": "Single Lot", "ty": "active_single", "f": "3020 sqft, YB 2026, 70 DOM", "c": "", "lat": 29.794577452047, "lng": -95.42607510239}, {"id": "tg_1110-grovewood", "a": "1110 Grovewood Lane", "llc": "", "v": "$1,624,900", "sd": "Timbergrove Manor", "kind": "active", "bb": "", "prod": "Single Lot", "ty": "active_single", "f": "3742 sqft, YB 2023, 26 DOM", "c": "", "lat": 29.793681502026, "lng": -95.417837067615}, {"id": "tg_mig_2131538328", "a": "922 Prince St, Houston, Tx 77008", "llc": "Gilbert Adams Llc", "v": "$1,376,434", "sd": "2025-12-29", "lot": "8400", "f": "Recently Sold, Cash Buyer, High Equity, Tax Delinquent, Absentee Owner, Corporate Owner", "u": "https://app.dealmachine.com/leads#property(id)=2131538328", "lat": 29.788508, "lng": -95.413123, "c": [{"n": "Gilbert Adams", "p": ["+14094344198", "+14097676146", "+14098353000"], "e": ["gilbertadams4@gmail.com", "gilbert@gta-law.com"]}]}, {"id": "tg_mig_2131538429", "a": "1023 Nashua St, Houston, Tx 77008", "llc": "Brownstone Living Llc", "v": "$506,806", "sd": "2026-05-04", "lot": "8772", "f": "MLS Pending, Recently Sold, Adjustable Loan, Cash Buyer, Low Equity, Absentee Owner, Corporate Owner", "u": "https://app.dealmachine.com/leads#property(id)=2131538429", "lat": 29.789507, "lng": -95.41265, "c": []}, {"id": "tg_mig_2131538725", "a": "1510 Glen Oaks St, Houston, Tx 77008", "llc": "Home Liquidators Llc", "v": "$435,845", "sd": "2026-02-11", "lot": "7735", "f": "Recently Sold, Cash Buyer, Low Equity, Absentee Owner, Corporate Owner", "u": "https://app.dealmachine.com/leads#property(id)=2131538725", "lat": 29.784593, "lng": -95.412318, "c": [{"n": "Jonathan Chacon", "p": ["+17142655046"], "e": ["jonathanee562@gmail.com", "aprilhjwan@gmail.com"]}, {"n": "Kaylin C Plumlee", "p": ["+18175781785", "+18322608265"], "e": ["kaylinchristine24@gmail.com"]}], "permits": [{"owner": "HOME LIQUIDATORS 2,LLC", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "790281", "ptype": "13", "proj": "25066472", "permitDesc": "Building Pmt"}], "ty": "active_single", "prod": "Single Lot"}, {"id": "tg_mig_2131538738", "a": "1522 Glen Oaks St, Houston, Tx 77008", "llc": "1 Of 1 Custom Builders Inc", "v": "$907,620", "sd": "2025-12-09", "lot": "16290", "f": "Recently Sold, Cash Buyer, High Equity, Corporate Owner", "u": "https://app.dealmachine.com/leads#property(id)=2131538738", "lat": 29.784542, "lng": -95.413019, "c": []}, {"id": "tg_mig_pmt_1602-turnpike-rd-77008", "a": "1602 Turnpike Rd, Houston, TX 77008", "llc": "TEETER JEANA", "kind": "permit", "lat": 29.7867211, "lng": -95.4128494, "permits": [{"owner": "TEETER JEANA", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "736952", "ptype": "13", "proj": "25039329", "permitDesc": "Building Pmt"}], "ty": "active_single", "prod": "Single Lot"}, {"id": "tg_mig_pmt_822-nashua-st-77008", "a": "822 Nashua St, Houston, TX 77008", "llc": "SANSONE MATTHEW WADE", "kind": "permit", "lat": 29.7858824, "lng": -95.4120928, "permits": [{"owner": "SANSONE MATTHEW WADE", "desc": "QS2 S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "1013110", "ptype": "13", "proj": "25118994", "permitDesc": "Building Pmt"}], "ty": "active_single", "prod": "Single Lot"}, {"id": "tg_mig_2131537524", "a": "1219 Bay Oaks Rd, Houston, Tx 77008", "llc": "Heffley Capital Llc", "v": "$677,477", "sd": "2026-02-27", "lot": "17600", "f": "Recently Sold, Off Market, Adjustable Loan, Cash Buyer, Low Equity, Corporate Owner", "u": "https://app.dealmachine.com/leads#property(id)=2131537524", "lat": 29.793357, "lng": -95.414778, "c": [{"n": "William E Heffley", "p": ["+19797334419", "+15404834920", "+19797323497"], "e": ["williameheffley@hotmail.com", "bheffley@drymalla.com", "billheffley@tmobile.com"]}, {"n": "Monica L Heffley", "p": ["+19797327583", "+19797323497"], "e": ["monicaheffley@hotmail.com"]}], "permits": [{"owner": "HEFFLEY CAPITAL, LLC.", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "751797", "ptype": "13", "proj": "26031780", "permitDesc": "Building Pmt"}], "ty": "active_single", "prod": "Single Lot"}, {"id": "tg_mig_2131538680", "a": "911 Bay Oaks Rd, Houston, Tx 77008", "llc": "Vsn Investments Llc", "v": "$522,041", "sd": "2026-03-18", "lot": "8970", "f": "Recently Sold, Off Market, Cash Buyer, Free And Clear, High Equity, Corporate Owner", "u": "https://app.dealmachine.com/leads#property(id)=2131538680", "lat": 29.788444, "lng": -95.414589, "c": [{"n": "Vikas Mittal", "p": ["+17134320703"], "e": ["mittalvikas@gmail.com", "sukulmittal2@gmail.com", "vmittal@rice.edu"]}, {"n": "Nandita Gupta", "p": ["+17138619500", "+18327291102", "+17138680029"], "e": ["drnanditagupta@hotmail.com", "vmittal_rice@hotmail.com"]}, {"n": "Sukul Mittal", "p": [], "e": ["sukulmittal2@gmail.com", "mittalvikas@gmail.com", "mittal.vikas@gmail.com"]}]}, {"id": "tg_mig_2131538718", "a": "905 Bay Oaks Rd, Houston, Tx 77008", "llc": "Vsn Investments Llc", "v": "$750,285", "sd": "2025-06-04", "lot": "14450", "f": "Recently Sold, Off Market, Cash Buyer, Free And Clear, High Equity, Absentee Owner, Corporate Owner, Corner Lot", "u": "https://app.dealmachine.com/leads#property(id)=2131538718", "lat": 29.788195, "lng": -95.414657, "c": [{"n": "Vikas Mittal", "p": ["+17134320703"], "e": ["mittalvikas@gmail.com", "sukulmittal2@gmail.com", "vmittal@rice.edu"]}, {"n": "Nandita Gupta", "p": ["+17138619500", "+18327291102", "+17138680029"], "e": ["drnanditagupta@hotmail.com", "vmittal_rice@hotmail.com"]}, {"n": "Sukul Mittal", "p": [], "e": ["sukulmittal2@gmail.com", "mittalvikas@gmail.com", "mittal.vikas@gmail.com"]}]}, {"id": "tg_mig_pmt_1118-worthshire-st-77008", "a": "1118 Worthshire St, Houston, TX 77008", "llc": "1118 WORTHSHIRE", "kind": "permit", "lat": 29.7910407, "lng": -95.4150106, "permits": [{"owner": "1118 WORTHSHIRE", "desc": "S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "828476", "ptype": "13", "proj": "26001989", "permitDesc": "Building Pmt"}], "ty": "active_single", "prod": "Single Lot"}, {"id": "tgp_6118-abington", "a": "6118 Abington Way 77008", "llc": "ALBRIGHT KIRBY", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #24117058", "c": "", "lat": 29.788803282864, "lng": -95.421629575424, "permits": [{"owner": "ALBRIGHT KIRBY", "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC", "val": "1366380", "ptype": "13", "proj": "24117058", "permitDesc": "Building Pmt"}]}, {"id": "tgp_2006-cranston", "a": "2006 Cranston Ct 77008", "llc": "GLESSMAN CHAD", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25098822", "c": "", "lat": 29.787566447989, "lng": -95.416830480212, "permits": [{"owner": "GLESSMAN CHAD", "desc": "QS2 S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "807288", "ptype": "13", "proj": "25098822", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1018-grovewood", "a": "1018 Grovewood Ln 77008", "llc": "GROVEWOOD LP", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25096486", "c": "", "lat": 29.793626536903, "lng": -95.416528451328, "permits": [{"owner": "GROVEWOOD LP", "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC", "val": "742573", "ptype": "13", "proj": "25096486", "permitDesc": "Building Pmt"}]}, {"id": "tgp_6111-hurst", "a": "6111 Hurst St 77008", "llc": "SHIRAK MICHELLE", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #26011945", "c": "", "lat": 29.78785316127, "lng": -95.420705075559, "permits": [{"owner": "SHIRAK MICHELLE", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "815072", "ptype": "13", "proj": "26011945", "permitDesc": "Building Pmt"}]}, {"id": "tgp_2611-lazybrook", "a": "2611 Lazybrook Dr 77008", "llc": "OBERLIN PAUL", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25069172", "c": "", "lat": 29.803913571292, "lng": -95.445364115282, "permits": [{"owner": "OBERLIN PAUL", "desc": "QS2 S.F. RES. W/ATT. GARAGE (1-1-5-R3-B) 21 IRC/21 IECC", "val": "397807", "ptype": "13", "proj": "25069172", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1202-timbergrove", "a": "1202 Timbergrove Ln 77008", "llc": "BEESON JOHN E", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25058957", "c": "", "lat": 29.792901395415, "lng": -95.416414473704, "permits": [{"owner": "BEESON JOHN E", "desc": "S.F. RES ATT. & DET. GARAGE W/APT (1-2-5-R3-B) 21 IRC/21 IECC", "val": "1061395", "ptype": "13", "proj": "25058957", "permitDesc": "Building Pmt"}]}, {"id": "tgp_2606-droxford", "a": "2606 Droxford Dr 77008", "llc": "2606 DROXFORD LLC", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25116900", "c": "", "lat": 29.798216555454, "lng": -95.445530003852, "permits": [{"owner": "2606 DROXFORD LLC", "desc": "S.F. RES W/DET. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "727006", "ptype": "13", "proj": "25116900", "permitDesc": "Building Pmt"}]}, {"id": "tgp_6515-lindyann", "a": "6515 Lindyann Ln 77008", "llc": "RIVERA EUSEBIO", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25098806", "c": "", "lat": 29.796359110347, "lng": -95.43049550983, "permits": [{"owner": "RIVERA EUSEBIO", "desc": "QS2 S.F. RES W/ATT. GARAGE (1-1-5-R3-B) 21 IRC/21 IECC", "val": "542660", "ptype": "13", "proj": "25098806", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1834-crystal", "a": "1834 Crystal Ct 77008", "llc": "HINOJOSA ALBERTO LANCE", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #26008570", "c": "", "lat": 29.802636124675, "lng": -95.442579858376, "permits": [{"owner": "HINOJOSA ALBERTO LANCE", "desc": "S.F. RES. W/ATT. GARAGE (1-1-5-R3-B) 21 IRC/21 IECC", "val": "513690", "ptype": "13", "proj": "26008570", "permitDesc": "Building Pmt"}]}, {"id": "tgp_2418-brookmere", "a": "2418 Brookmere Dr 77008", "llc": "WONG ANDREW & JUDY GAW", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25080169", "c": "", "lat": 29.806045108336, "lng": -95.443090824645, "permits": [{"owner": "WONG ANDREW & JUDY GAW", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "626978", "ptype": "13", "proj": "25080169", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1307-foxwood", "a": "1307 Foxwood Rd 77008", "llc": "1307 FOXWOOD LLC", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25104677", "c": "", "lat": 29.793414443487, "lng": -95.434961336438, "permits": [{"owner": "1307 FOXWOOD LLC", "desc": "S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "746320", "ptype": "13", "proj": "25104677", "permitDesc": "Building Pmt"}]}, {"id": "tgp_6430-lindyann", "a": "6430 Lindyann Ln 77008", "llc": "NEATH CHARLIE", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25097930", "c": "", "lat": 29.796480483967, "lng": -95.428647418373, "permits": [{"owner": "NEATH CHARLIE", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "660561", "ptype": "13", "proj": "25097930", "permitDesc": "Building Pmt"}]}, {"id": "tgp_6227-lindyann", "a": "6227 Lindyann Ln 77008", "llc": "INKER STREET LANDING LLC", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25090800", "c": "", "lat": 29.796382445944, "lng": -95.424784273308, "permits": [{"owner": "INKER STREET LANDING LLC", "desc": "QS2 S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "644562", "ptype": "13", "proj": "25090800", "permitDesc": "Building Pmt"}]}, {"id": "tgp_6607-cindy", "a": "6607 Cindy Ln 77008", "llc": "MANDIE EICHENLAUB", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25061909", "c": "", "lat": 29.795471234848, "lng": -95.43392144841, "permits": [{"owner": "MANDIE EICHENLAUB", "desc": "S.F. RES W/ATT. GARAGE (1-1-5-R3-B) 21 IRC/21 IECC", "val": "443785", "ptype": "13", "proj": "25061909", "permitDesc": "Building Pmt"}]}, {"id": "tgp_6107-waltway", "a": "6107 Waltway Dr 77008", "llc": "FOWN GREGORY", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25068449", "c": "", "lat": 29.79296892741, "lng": -95.422694605202, "permits": [{"owner": "FOWN GREGORY", "desc": "S.F. RES W/ATT. GARAGE (1-1-5-R3-B) 21 IRC/21 IECC", "val": "865518", "ptype": "13", "proj": "25068449", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1126-timbergrove", "a": "1126 Timbergrove Ln 77008", "llc": "YALOWICA DARCY", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #25111624", "c": "", "lat": 29.79186804129, "lng": -95.417292358094, "permits": [{"owner": "YALOWICA DARCY", "desc": "S.F. RES. W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC", "val": "1132452", "ptype": "13", "proj": "25111624", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1723-tannehill", "a": "1723 Tannehill Dr 77008", "llc": "CARRILLO ALLISON", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #26021492", "c": "", "lat": 29.799284937444, "lng": -95.430413562363, "permits": [{"owner": "CARRILLO ALLISON", "desc": "S.F. RES. W/ATT. GAR. (1-1-5-R3-B) 21 IRC/21 IECC", "val": "272066", "ptype": "13", "proj": "26021492", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1226-timbergrove", "a": "1226 Timbergrove Ln 77008", "llc": "OKOROHA UCHENNA ERIC", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #26019598", "c": "", "lat": 29.793752793187, "lng": -95.416112380027, "permits": [{"owner": "OKOROHA UCHENNA ERIC", "desc": "QS2 S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC", "val": "1341013", "ptype": "13", "proj": "26019598", "permitDesc": "Building Pmt"}]}, {"id": "tgp_1011-grovewood", "a": "1011 Grovewood Ln 77008", "llc": "BIG RED INVESTMENTS, LLC", "kind": "permit", "prod": "Single Lot", "ty": "active_single", "f": "permit #26017805", "c": "", "lat": 29.793724414011, "lng": -95.416394546311, "permits": [{"owner": "BIG RED INVESTMENTS, LLC", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "746176", "ptype": "13", "proj": "26017805", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3507-harvest-dance", "a": "3507 Harvest Dance Dr 77008", "llc": "SULLIVAN BROTHERS BUILDER", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #25023737 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.7915, "lng": -95.437, "permits": [{"owner": "SULLIVAN BROTHERS BUILDER", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 12 IRC/15 IECC", "val": "0", "ptype": "13", "proj": "25023737", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3525-harvest-dance", "a": "3525 Harvest Dance Dr 77008", "llc": "SULLIVAN BROTHERS BUILDERS", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #24106506 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.79162, "lng": -95.437, "permits": [{"owner": "SULLIVAN BROTHERS BUILDERS", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 12 IRC/15 IECC", "val": "0", "ptype": "13", "proj": "24106506", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3523-harvest-dance", "a": "3523 Harvest Dance Dr 77008", "llc": "SULLIVAN BROTHERS BUILDERS", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #24106508 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.79174, "lng": -95.437, "permits": [{"owner": "SULLIVAN BROTHERS BUILDERS", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 12 IRC/15 IECC", "val": "0", "ptype": "13", "proj": "24106508", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3521-harvest-dance", "a": "3521 Harvest Dance Dr 77008", "llc": "SULLIVAN BROTHERS BUILDERS", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #24106512 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.79186, "lng": -95.437, "permits": [{"owner": "SULLIVAN BROTHERS BUILDERS", "desc": "S.F. RES. W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC", "val": "0", "ptype": "13", "proj": "24106512", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3502-huntsford", "a": "3502 Huntsford Dr 77008", "llc": "SULLIVAN BROTHERS BUILDERS", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #25023738 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.79198, "lng": -95.437, "permits": [{"owner": "SULLIVAN BROTHERS BUILDERS", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 12 IRC/15 IECC", "val": "0", "ptype": "13", "proj": "25023738", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3516-harvest-dance", "a": "3516 Harvest Dance Dr 77008", "llc": "SULLIVAN BROTHERS BUILDERS", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #25023741 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.7915, "lng": -95.43685, "permits": [{"owner": "SULLIVAN BROTHERS BUILDERS", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 12 IRC/15 IECC", "val": "0", "ptype": "13", "proj": "25023741", "permitDesc": "Building Pmt"}]}, {"id": "tgp_3511-harvest-dance", "a": "3511 Harvest Dance Dr 77008", "llc": "SULLIVAN BROTHERS BUILDERS", "kind": "permit", "prod": "Split Lot", "ty": "active_split", "f": "permit #25023742 — Timbergrove Trails (approx. placement)", "c": "", "lat": 29.79162, "lng": -95.43685, "permits": [{"owner": "SULLIVAN BROTHERS BUILDERS", "desc": "S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 12 IRC/15 IECC", "val": "0", "ptype": "13", "proj": "25023742", "permitDesc": "Building Pmt"}]}]; // Timbergrove / Lazybrook: pending HAR actives + permit pull
+// ---- out-of-zone guard: streets Spencer has excluded (Timbergrove/Lazybrook + west Cottage Grove) ----
+// Precise street list, no geometry guesswork. If a legit street ever matches, remove it here.
+const OUT_OF_ZONE=/lindyann|golden nectar|lamelia|1011 wynnwood|101[18] grovewood|cranston ct|waltway|abington|pineshade|6111 hurst|timbergrove ln|5339.*larkin|5240 cornish|18(22|24|26|28) w 23rd st|2013 w 14th|2002 w 14th/i;
+for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1);}
+const DATA_ALL = DATA;
+const UNITS={};for(const r of DATA)UNITS[r.id]=r.units||1;const UW=id=>UNITS[id]||1; // split-lot solo masters count as their full MST home count
+const SOLD = DATA.filter(r=>r.st==='sold');
+DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kept in DATA_ALL/SOLD for export
+const MARKET_METRICS={"window": "sold: trailing 12mo pull (July 2025 - July 2026); 614-row 77008 export filtered to Timbergrove/Lazybrook by subdivision", "scope": "Timbergrove & Lazybrook subdivisions only (Timbergrove Manor/Trails/Green/Heights/Point, Lazybrook, Palisades Park, Wynnwood, Grovewood). Page pins boundary-filtered; metrics subdivision-filtered.", "sold_n": 140, "active_pending_n": null, "absorption_per_month": 11.67, "months_of_inventory": null, "note": "NC = year built 2021+. NC actives = 10 (2 exact + 8 in gated communities). Resale actives not pulled; resale MOI unavailable.", "by_product": {"New Construction (YB 2021+)": {"sold_12mo": 14, "active_pending_now": 10, "absorption_per_month": 1.17, "months_of_inventory": 8.6, "median_dom": 14.5, "median_sold_ppsf": 264.9, "by_price_band": {"400k-700k": {"sold_n": 7, "median_dom": 101.0, "median_sold_ppsf": 250.0}, "700k-1M": {"sold_n": 3, "median_dom": 4.0, "median_sold_ppsf": 264.3}, "1M-1.5M": {"sold_n": 3, "median_dom": 16.0, "median_sold_ppsf": 361.8}, "1.5M+": {"sold_n": 1, "median_dom": 11.0, "median_sold_ppsf": 409.2}}}, "Resale": {"sold_12mo": 125, "active_pending_now": null, "absorption_per_month": 10.42, "months_of_inventory": null, "median_dom": 13.0, "median_sold_ppsf": 357.4, "by_price_band": {"400k-700k": {"sold_n": 73, "median_dom": 14.0, "median_sold_ppsf": 318.6}, "700k-1M": {"sold_n": 37, "median_dom": 10.0, "median_sold_ppsf": 390.2}, "1M-1.5M": {"sold_n": 13, "median_dom": 20.0, "median_sold_ppsf": 393.6}, "1.5M+": {"sold_n": 2, "median_dom": 37.0, "median_sold_ppsf": 401.6}}}}}; // pending HAR sold/active pull for Timbergrove / Lazybrook
+const byId = {}; DATA.forEach(r=>byId[r.id]=r);
+const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
+const KEY='timbergrove_state_v2';
+window.BUILD='timbergrove-v0.2-2026-07-14';console.log('[build] timbergrove-map '+window.BUILD);
+
+// ---- state + safe persistence ----
+let state={tags:{},points:{}};
+try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.tags) state=s; }catch(e){}
+if(Object.keys(state.tags).length===0){ // seed starter tags (editable/deletable)
+  state.tags={"pending":{"name":"Pending / Under Contract","color":"#d6336c"},"foundation":{"name":"Just Started / Foundation","color":"#e8590c"},"dried_in":{"name":"Dried-In / Siding","color":"#d7b13a"},"finishing":{"name":"Finishing","color":"#3a9d8f"},"market":{"name":"Active on Market","color":"#2f9e44"},"active_single":{"name":"Active – Single Lot","color":"#3f6cd1"},"active_split":{"name":"Active – Split Lot","color":"#8e5bd0"}}; state.points={"tg_6322-wynnwood": {"notes": "Timbergrove Manor Sec 06 active, under construction. $1,350,000.", "tags": ["listed", "active_single"]}, "tg_1110-grovewood": {"notes": "Timbergrove Manor active, move-in ready. $1,624,900.", "tags": ["listed", "active_single", "market"]}, "tg_mig_2131538328": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_2131538429": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_2131538725": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_2131538738": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_pmt_1602-turnpike-rd-77008": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["permit"]}, "tg_mig_pmt_822-nashua-st-77008": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["permit"]}, "tg_mig_2131537524": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_2131538680": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_2131538718": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}, "tg_mig_pmt_1118-worthshire-st-77008": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["permit"]}, "tgp_6118-abington": {"notes": "Permit #24117058 · owner ALBRIGHT KIRBY.", "tags": []}, "tgp_2006-cranston": {"notes": "Permit #25098822 · owner GLESSMAN CHAD.", "tags": []}, "tgp_1018-grovewood": {"notes": "Permit #25096486 · owner GROVEWOOD LP.", "tags": []}, "tgp_6111-hurst": {"notes": "Permit #26011945 · owner SHIRAK MICHELLE.", "tags": []}, "tgp_2611-lazybrook": {"notes": "Permit #25069172 · owner OBERLIN PAUL.", "tags": []}, "tgp_1202-timbergrove": {"notes": "Permit #25058957 · owner BEESON JOHN E.", "tags": []}, "tgp_2606-droxford": {"notes": "Permit #25116900 · owner 2606 DROXFORD LLC.", "tags": []}, "tgp_6515-lindyann": {"notes": "Permit #25098806 · owner RIVERA EUSEBIO.", "tags": []}, "tgp_1834-crystal": {"notes": "Permit #26008570 · owner HINOJOSA ALBERTO LANCE.", "tags": []}, "tgp_2418-brookmere": {"notes": "Permit #25080169 · owner WONG ANDREW & JUDY GAW.", "tags": []}, "tgp_1307-foxwood": {"notes": "Permit #25104677 · owner 1307 FOXWOOD LLC.", "tags": []}, "tgp_6430-lindyann": {"notes": "Permit #25097930 · owner NEATH CHARLIE.", "tags": []}, "tgp_6227-lindyann": {"notes": "Permit #25090800 · owner INKER STREET LANDING LLC.", "tags": []}, "tgp_6607-cindy": {"notes": "Permit #25061909 · owner MANDIE EICHENLAUB.", "tags": []}, "tgp_6107-waltway": {"notes": "Permit #25068449 · owner FOWN GREGORY.", "tags": []}, "tgp_1126-timbergrove": {"notes": "Permit #25111624 · owner YALOWICA DARCY.", "tags": []}, "tgp_1723-tannehill": {"notes": "Permit #26021492 · owner CARRILLO ALLISON.", "tags": []}, "tgp_1226-timbergrove": {"notes": "Permit #26019598 · owner OKOROHA UCHENNA ERIC.", "tags": []}, "tgp_1011-grovewood": {"notes": "Permit #26017805 · owner BIG RED INVESTMENTS, LLC.", "tags": []}, "tgp_3507-harvest-dance": {"notes": "Permit #25023737 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}, "tgp_3525-harvest-dance": {"notes": "Permit #24106506 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}, "tgp_3523-harvest-dance": {"notes": "Permit #24106508 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}, "tgp_3521-harvest-dance": {"notes": "Permit #24106512 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}, "tgp_3502-huntsford": {"notes": "Permit #25023738 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}, "tgp_3516-harvest-dance": {"notes": "Permit #25023741 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}, "tgp_3511-harvest-dance": {"notes": "Permit #25023742 · Timbergrove Trails (Sullivan Brothers). Placed at community anchor W 11th & Seamist — approximate within gated development.", "tags": []}};
+}
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+const pt=id=>{ if(!state.points[id]) state.points[id]={notes:'',tags:[]}; return state.points[id]; };
+// ---- seed permit tag + notes; prune orphans (one-time per version) ----
+const PERMIT_SEED=4;
+if((state._permitSeed||0)<PERMIT_SEED){
+  if(!state.tags.permit) state.tags.permit={name:'New Construction (Permit)',color:'#868e96'};
+  DATA.forEach(r=>{ if(!r.permits||!r.permits.length)return; const p=pt(r.id);
+    const blk=r.permits.map(pm=>'Owner occupant: '+pm.owner+'\nPermit: '+pm.desc).join('\n\n');
+    if(!p.notes) p.notes=blk;
+    else if(p.notes.indexOf('Owner occupant:')===-1) p.notes=blk+'\n\n'+p.notes;
+    if(r.kind==='permit' && !p.tags.includes('permit')) p.tags.push('permit'); });
+  for(const id in state.points) if(!byId[id]) delete state.points[id]; // drop removed-pin annotations
+  state._permitSeed=PERMIT_SEED; save();
+}
+// ---- inventory sync (Heights Inventory 6/1/26) — versioned, authoritative for phase ----
+const INVENTORY={};
+for(const id in INVENTORY){ if(byId[id]&&byId[id].kind==='permit') byId[id].kind='active'; } // promoted: out of permit layer
+const INV_SEED=2;
+if((state._invSeed||0)<INV_SEED){
+  const PH=['foundation','framing','dried_in','finishing','market'];
+  for(const id in INVENTORY){const e=INVENTORY[id];const p=pt(id);
+    if(e.phase){p.tags=(p.tags||[]).filter(t=>!PH.includes(t)); if(!p.tags.includes(e.phase))p.tags.push(e.phase);}
+    if(e.type&&!p.tags.includes(e.type))p.tags.push(e.type);
+    if(e.note&&(!p.notes||p.notes.indexOf('Inventory 6/1/26')===-1))p.notes=p.notes?e.note+'\n'+p.notes:e.note;}
+  state._invSeed=INV_SEED; save();
+}
+// ---- active-but-not-under-construction => Active on Market (green) ----
+const MKT_SEED=2;
+if((state._mktSeed||0)<MKT_SEED){
+  const PH=['foundation','framing','dried_in','finishing','market'];
+  for(const id in state.points){const t=state.points[id].tags||[];
+    const active=t.includes('active_single')||t.includes('active_split');
+    if(active && !PH.some(p=>t.includes(p)) && byId[id] && byId[id].v!==undefined) t.unshift('market');} // unshift so pin color = green
+  state._mktSeed=MKT_SEED; save();
+}
+// ---- distinct color scheme (one-time, structural tags) ----
+const COLOR_SEED=2;
+if((state._colorSeed||0)<COLOR_SEED){
+  const C={foundation:'#e8590c',framing:'#e8590c',dried_in:'#e8590c',finishing:'#e8590c',market:'#2f9e44',active_single:'#2f9e44',active_split:'#2f9e44',permit:'#868e96'};
+  if(state.tags.market)state.tags.market.name='Active on Market';
+  for(const k in C){ if(state.tags[k]) state.tags[k].color=C[k]; }
+  state._colorSeed=COLOR_SEED; save();
+}
+// ---- promote: permit pins logged into inventory leave the hidden permit layer ----
+const PROMOTE_SEED=1;
+if((state._promoteSeed||0)<PROMOTE_SEED){
+  const PH=['foundation','framing','dried_in','finishing','market'];
+  for(const id in state.points){const t=state.points[id].tags||[];
+    if(t.includes('permit') && (PH.some(p=>t.includes(p))||t.includes('active_single')||t.includes('active_split')))
+      state.points[id].tags=t.filter(x=>x!=='permit');}
+  state._promoteSeed=PROMOTE_SEED; save();
+}
+// ---- merge Just Started into Foundation (one-time) ----
+const MERGE_SEED=1;
+if((state._mergeSeed||0)<MERGE_SEED){
+  for(const id in state.points){const t=state.points[id].tags||[];
+    if(t.includes('just_started')) state.points[id].tags=[...new Set(t.map(x=>x==='just_started'?'foundation':x))];}
+  if(state.tags.just_started) delete state.tags.just_started;
+  if(state.tags.foundation){state.tags.foundation.name='Just Started / Foundation';state.tags.foundation.color='#e8590c';}
+  state._mergeSeed=MERGE_SEED; save();
+}
+
+
+// ---- lifecycle: deed transfer -> auto-advancing construction -> ready (single/split, finished/punch) ----
+const LIFE={};
+const LIFE_PM={foundation:8,framing:6,dried_in:4,finishing:2};
+if(!state.tags.deed)state.tags.deed={name:'Deed Transfer',color:'#1971c2'};
+if(!state.tags.punch){state.tags.punch={name:'Punch List',color:'#f783ac'};save();}
+for(const id in LIFE){const e=LIFE[id];if(e.s!=='deed'&&byId[id]&&byId[id].kind==='permit')byId[id].kind='active';}
+function lifeElapsed(){const s=new Date('2026-06-01T00:00:00');const n=new Date();return Math.max(0,(n-s)/(1000*60*60*24*30.44));}
+function lifePhase(ph0){const rem=LIFE_PM[ph0]-lifeElapsed();if(rem>6)return'foundation';if(rem>4)return'framing';if(rem>2)return'dried_in';if(rem>0)return'finishing';return'market';}
+const LIFE_SEED=9;
+if((state._lifeSeed||0)<LIFE_SEED){
+  for(const id in state.points){if(!byId[id])delete state.points[id];}
+  if(!state.tags.deed)state.tags.deed={name:'Deed Transfer',color:'#1971c2'};
+  for(const id in LIFE){const e=LIFE[id];if(!byId[id])continue;const p=pt(id);
+    if(e.s==='deed'){p.tags=['deed'];}
+    else if(e.s==='ready'){const _pd=byId[id].st==='pending';const _l=!_pd&&byId[id].kind==='active'&&byId[id].v!==undefined;p.tags=[_pd?'pending':(_l?'market':'finishing')].concat(e.ty?[e.ty]:[]).concat(_l&&e.fin==='punch'?['punch']:[]);}
+    else if(e.s==='uc'){const cur=lifePhase(e.ph);
+      if(cur==='market'){p.tags=['market'].concat(e.ty?[e.ty]:[]);}
+      else{p.tags=[cur].concat(e.ty?[e.ty]:[]);p.snap={ph:e.ph};}}
+    if(e.note&&(!p.notes||p.notes.indexOf('Lifecycle')===-1))p.notes=p.notes?e.note+'\n'+p.notes:e.note;}
+  state._lifeSeed=LIFE_SEED;save();
+}
+// recompute construction phase every load so pins auto-advance over time
+function applyAutoAdvance(){let ch=false;for(const id in state.points){const p=state.points[id];if(!p.snap)continue;
+  const ty=(p.tags||[]).find(t=>t==='active_single'||t==='active_split');let cur=lifePhase(p.snap.ph);const _r=byId[id];if(cur==='market'&&!(_r&&_r.kind==='active'&&_r.v!==undefined))cur='finishing';let tags;
+  if(cur==='market'){tags=['market'].concat(ty?[ty]:[]);delete p.snap;}else{tags=[cur].concat(ty?[ty]:[]);}
+  if((p.tags||[]).join(',')!==tags.join(',')){p.tags=tags;ch=true;}}
+  if(ch)save();}
+applyAutoAdvance();
+function syncListed(){for(const r of DATA){const p=pt(r.id);const should=r.kind==='active'&&r.v!==undefined&&r.st!=='pending';const has=(p.tags||[]).includes('listed');
+  if(should&&!has)p.tags=(p.tags||[]).concat(['listed']);
+  else if(!should&&has)p.tags=p.tags.filter(t=>t!=='listed');}}
+syncListed();
+
+// ---- map ----
+const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.7995,-95.4360],14);
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{maxZoom:20,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+const HD_POLYS=[[[29.8152, -95.45929], [29.81526, -95.44372], [29.81156, -95.44235], [29.80938, -95.44079], [29.80903, -95.44115], [29.80617, -95.43583], [29.80402, -95.43349], [29.80297, -95.42731], [29.80239, -95.42677], [29.80099, -95.42629], [29.80012, -95.42483], [29.79856, -95.42464], [29.79688, -95.42344], [29.7951, -95.42291], [29.79513, -95.41406], [29.7923, -95.41404], [29.79234, -95.41154], [29.79087, -95.4118], [29.78562, -95.41172], [29.78313, -95.4112], [29.78376, -95.43575], [29.78434, -95.43671], [29.78507, -95.43677], [29.78627, -95.43819], [29.78834, -95.4421], [29.80041, -95.45861], [29.8152, -95.45929]]]; // no historic-district overlay for Timbergrove / Lazybrook
+const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
+document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});
+
+const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const telHref=n=>'tel:'+(n||'').replace(/[^+\d]/g,'');
+function fmtPhone(n){const d=(n||'').replace(/[^\d]/g,'').replace(/^1/,'');return d.length===10?d.slice(0,3)+'-'+d.slice(3,6)+'-'+d.slice(6):n;}
+const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',act_uc:'#eab308',deed:'#1971c2',pmt:'#868e96'};
+const pinColor=id=>{const t=pt(id).tags;
+  if(t.includes('pending'))return '#d6336c';
+  if(t.includes('listed')||t.includes('market'))return t.includes('market')?GROUP_C.act:GROUP_C.act_uc;
+  for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p))return t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single;
+  if(t.includes('built'))return GROUP_C.pmt;
+  if(t.includes('deed'))return GROUP_C.deed;
+  if(t.includes('permit'))return GROUP_C.pmt;
+  if(t.includes('active_single')||t.includes('active_split'))return GROUP_C.act;
+  return t.length&&state.tags[t[0]]?state.tags[t[0]].color:GROUP_C.pmt;};
+
+// ---- markers ----
+const layer=L.layerGroup().addTo(map);
+// ---- Inspections layer: external inspections.json keyed by permit project number ----
+// Shape: { "25111965": { status:"Passed"|"Failed"|"Pending"|"Partial", updated:"2026-06-18",
+//   inspections:[{type:"Foundation Form Survey", date:"2026-03-04", result:"Passed", inspector:"" }, ...] }, ... }
+let INSPECTIONS={};
+const INSPECTIONS_URL='inspections_timbergrove.json';
+function inspForPin(r){
+  if(!r.permits)return null;
+  for(const pm of r.permits){ if(pm.proj && INSPECTIONS[pm.proj]) return {proj:pm.proj, ...INSPECTIONS[pm.proj]}; }
+  return null;
+}
+function inspStatusColor(s){return s==='Passed'?'#2f9e44':s==='Failed'?'#e03131':s==='Partial'?'#d7b13a':s==='Pending'?'#868e96':'#868e96';}
+// Map an inspection type to a construction phase. The furthest phase whose
+// inspection has PASSED determines where a permit sits in the lifecycle.
+// Houston ILMS real inspection vocabulary -> construction phase.
+// Order matters: market checked first so a "FINAL" beats a "ROUGH"; cover/slab
+// types kept in foundation (they happen pre-pour). Built from the live 99-type
+// vocabulary across all 238 scraped permits.
+const INSP_PHASE=[
+  [/sawpole|saw pole|pole final/i,'foundation'], // temp power pole = job start, pre-slab
+  [/elect final|temp gas final|gas final|\bp\d ?final\b|cc final|ww final|add el final|\bv\d final\b|\bc\d final\b|ac final|mech(?:anical)? final|plumb(?:ing)? final|flood final/i,'finishing'],
+  [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|site final|final building|\bfinal\b|\btci\b|punch list|reconnect|visitab/i,'market'],
+  [/insulation|shower pan|lath|grille|duct seal|egress|sfr kitchen|tree\/shrub|sprinkler|decor/i,'finishing'],
+  // DITCH COVER = foundation-era trench cover, must be caught BEFORE the generic \bcover\b dried-in gate
+  [/ditch ?cover|trench cover/i,'foundation'],
+  // Dried-in is gated by a real building close-up: COVER or building insulation/wrap. Rough trades are NOT dried-in.
+  [/\bcover\b|building ?wrap|house ?wrap|weather ?barrier|sheathing cover/i,'dried_in'],
+  // Rough-trades (rough in, water service, top out, gas rough) are the tail end of FRAMING, not dried-in.
+  [/rough in|top out|water service|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b|frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|1035/i,'framing'],
+  [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|culvert|bore|storm sewer|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|sidewalk|driveway|apron|flatwork|building layout|layout|form survey/i,'foundation'],
+  [/\bec\b|electric|plumb|mechanic|\bac\b|\bev\b/i,'dried_in'],
+];
+const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
+function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
+function inspToPhase(ins){
+  // Phase = the FURTHEST phase any PASSED inspection has reached.
+  // Construction is monotonic: passed insulation means the house is framed and dried-in,
+  // no matter what civil paperwork (ground-in, culvert, storm sewer) posts afterwards.
+  // Failed and scheduled inspections never count (a failed Site Final is not completion).
+  // Stale-history guard: a passed inspection >18 months older than the permit's newest
+  // passed inspection belongs to a previous life of the permit (abandoned start, re-permit)
+  // and must not set phase — e.g. a stray 2022 CC FINAL on a home framing in 2026.
+  const rows=(ins.inspections||[]).filter(it=>it.type && /pass/i.test(it.result||''));
+  if(!rows.length)return null;
+  const latest=rows.map(it=>it.date||'').sort().pop();
+  const cut=latest?new Date(new Date(latest+'T00:00:00')-548*864e5).toISOString().slice(0,10):null;
+  const live=cut?rows.filter(it=>!it.date||it.date>=cut):rows;
+  let best=null,bestR=0;
+  for(const it of live){const p=inspPhase(it.type);if(p&&_PHRANK[p]>bestR){best=p;bestR=_PHRANK[p];}}
+  return best;
+}
+// Project-level rollup: units built together (same base address / shared master
+// permit) advance together, so a multi-unit project's phase is its FURTHEST unit.
+const _PHRANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
+function projectBaseKey(r){
+  return (r.a||'').toLowerCase().replace(/,.*$/,'')
+    .replace(/unit\s*#?\s*[a-z0-9]+\s*$/i,'').replace(/\s[a-f]\s*$/i,'').replace(/^(\d+)[a-f]\s/i,'$1 ')
+    .replace(/\bwest\b/g,'w').replace(/\beast\b/g,'e').replace(/\bnorth\b/g,'n').replace(/\bsouth\b/g,'s')
+    .replace(/(\d+)\s+(st|nd|rd|th)\b/g,'$1$2')
+    .replace(/\b(street|st|avenue|ave|drive|dr|lane|ln|boulevard|blvd|road|rd|court|ct|place|pl|way)\b/g,'')
+    .replace(/\b(\d+)(st|nd|rd|th)\b/g,'$1')
+    .replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();
+}
+function projectPhase(){
+  // returns {baseKey: furthestPhase} across all pins that carry permits w/ inspections
+  const best={};
+  for(const r of DATA){ if(!r.permits||!r.permits.length)continue;
+    const ins=inspForPin(r); if(!ins)continue;
+    const ph=inspToPhase(ins); if(!ph)continue;
+    const k=projectBaseKey(r);
+    if(!best[k]||_PHRANK[ph]>_PHRANK[best[k]])best[k]=ph;
+  }
+  return best;
+}
+// Re-tag permit pins from inspection data. A permit with passed inspections
+// graduates out of the gray "New Construction (Permit)" layer into the matching
+// Under-Construction phase (or Ready/On-Market once the final has passed).
+function applyInspectionPromotions(){
+  let changed=false;
+  const PROJ=projectPhase();
+  for(const r of DATA){
+    if(!r.permits||!r.permits.length)continue;
+    // pending wins over inspection phase: an under-contract home is spoken-for supply,
+    // whatever its trade finals say. Keep the pending tag, skip promotion entirely.
+    if(r.st==='pending'){const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
+      const p0=pt(r.id);const want=['pending'].concat(ty?[ty]:[]);
+      if(JSON.stringify(p0.tags)!==JSON.stringify(want)){p0.tags=want;changed=true;}
+      continue;}
+    const ins=inspForPin(r); if(!ins)continue;
+    let ph=inspToPhase(ins);
+    const _pk=projectBaseKey(r); const _pr=PROJ[_pk]==='market'?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>_PHRANK[ph||'foundation'])ph=_pr;
+    if(ph==='market'&&!(r.kind==='active'&&r.v!==undefined)){
+      // completed but not listed: recent final = imminent supply; old final = built & gone
+      const mk=(ins.inspections||[]).filter(it=>it.type&&/pass/i.test(it.result||'')&&it.date&&inspPhase(it.type)==='market')
+        .map(it=>it.date).sort().pop();
+      const ageMo=mk?((new Date())-new Date(mk+'T00:00:00'))/(30.44*24*3600e3):99;
+      ph=(ageMo<=6)?'finishing':'built';
+    }
+    const _lst=(r.kind==='active'&&r.v!==undefined&&r.st!=='pending');
+    const p=pt(r.id);
+    if(ph==='market'){
+      // final passed -> ready/on market, keep product type if known
+      const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
+      const want=['market'].concat(ty?[ty]:[]).concat(_lst?['listed']:[]);
+      if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;p.inspPromoted=true;changed=true;}
+    } else if(ph==='built'){
+      const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
+      const want=['built'].concat(ty?[ty]:[]);
+      if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;changed=true;}
+    }
+    else if(ph){
+      const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
+      const want=[ph].concat(ty?[ty]:[]).concat(_lst?['listed']:[]);
+      if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;p.inspPromoted=true;changed=true;}
+    }
+    // if nothing passed yet, leave it in the permit layer
+  }
+  syncListed();
+  if(changed){Object.keys(mById).forEach(recolor);renderLegend();refresh();
+    // keep Overview and Timeline tabs in sync with inspection-driven phases
+    if(typeof buildOverview==='function')buildOverview();
+    if(typeof buildTimeline==='function')buildTimeline();
+  }
+}
+let INSP_LOADED=false, INSP_ERR=null;
+function loadInspections(){
+  fetch(INSPECTIONS_URL,{cache:'no-store'}).then(r=>{
+    if(!r.ok){INSP_ERR='HTTP '+r.status;throw new Error(INSP_ERR);}
+    return r.json();
+  }).then(j=>{
+    INSPECTIONS=j||{}; INSP_LOADED=true; INSP_ERR=null;
+    const nk=Object.keys(INSPECTIONS).length;
+    console.log('[inspections] loaded '+nk+' permits from '+INSPECTIONS_URL);
+    applyInspectionPromotions();
+    // refresh an open popup so inspection data appears without reopening
+    const cur=map._popup; if(cur&&cur._source&&cur._source._rec){cur.setContent(popupHTML(cur._source._rec));}
+    updateInspStatusBadge(nk);
+  }).catch(e=>{
+    INSP_ERR=INSP_ERR||e.message;
+    console.warn('[inspections] could not load '+INSPECTIONS_URL+': '+INSP_ERR+
+      ' — make sure inspections.json is deployed next to this HTML file.');
+    updateInspStatusBadge(0);
+    // refresh open popup so it shows the "feed not loaded" note
+    const cur=map._popup; if(cur&&cur._source&&cur._source._rec){cur.setContent(popupHTML(cur._source._rec));}
+  });
+}
+function updateInspStatusBadge(n){
+  let el=document.getElementById('inspbadge');
+  if(!el){const sub=document.querySelector('#panel .meta'); if(!sub)return;
+    el=document.createElement('div'); el.id='inspbadge';
+    el.style.cssText='font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;margin-top:5px';
+    sub.parentNode.insertBefore(el, sub.nextSibling);}
+  if(INSP_ERR){el.style.color='#e8590c';el.textContent='● inspections feed not loaded ('+INSP_ERR+')';}
+  else{el.style.color='#3a9d8f';el.textContent='● inspections: '+n+' permits live';}
+}
+const mById={}, markers=[];
+function mkStyle(id){return{radius:6,color:'#fff',weight:1.2,fillColor:pinColor(id),fillOpacity:.9};}
+// spread coincident pins (e.g. units A/B/C at one address) so each is individually clickable
+const dispLL={};{const grp={};for(const r of DATA){const k=r.lat.toFixed(6)+','+r.lng.toFixed(6);(grp[k]=grp[k]||[]).push(r);}
+  for(const k in grp){const a=grp[k];if(a.length<2){dispLL[a[0].id]=[a[0].lat,a[0].lng];continue;}
+    const rad=0.000058*(a.length>4?1.5:1),cl=Math.cos(a[0].lat*Math.PI/180)||1;
+    a.forEach((r,i)=>{const ang=2*Math.PI*i/a.length;dispLL[r.id]=[r.lat+rad*Math.cos(ang),r.lng+rad*Math.sin(ang)/cl];});}}
+for(const r of DATA){
+  const m=L.circleMarker(dispLL[r.id]||[r.lat,r.lng],mkStyle(r.id));
+  m._rec=r; m._s=((r.llc||'')+' '+(r.a||'')).toLowerCase();
+  m.bindPopup(()=>popupHTML(r),{maxWidth:304,minWidth:290,autoPan:true});
+  m.on('mouseover',function(){this.setStyle({radius:9,weight:1.6})});
+  m.on('mouseout',function(){this.setStyle(mkStyle(r.id))});
+  mById[r.id]=m; markers.push(m); layer.addLayer(m);
+}
+map.fitBounds(L.latLngBounds(markers.map(m=>m.getLatLng())).pad(0.06));
+document.getElementById('total').textContent=DATA.length.toLocaleString();
+const recolor=id=>{const m=mById[id]; if(m) m.setStyle(mkStyle(id));};
+loadInspections();              // initial fetch of external inspections feed
+setInterval(loadInspections, 6*60*60*1000); // re-pull every 6h so map reflects scraper updates without reload
+
+
+// ---- popup ----
+function splitNoteLines(raw){return String(raw||'').split(/\n+/).map(s=>s.trim()).filter(Boolean);}
+const NOTE_LABELS=[['Phase:','Phase'],['Timeline:','Timeline'],['Builder:','Builder'],['Owner occupant:','Owner'],['Permit:','Permit'],['Est. completion:','Est. completion']];
+function parseNote(line){
+  // "Active inventory — Single Lot. Builder: X. Agent: Y. Est. completion: Z." -> several fields
+  const out=[];
+  let work=line.trim();
+  const inv=work.match(/^Active inventory\s*[—-]\s*([^.]+)\.?\s*/i);
+  if(inv){out.push(['Inventory',inv[1].trim()]);work=work.slice(inv[0].length);}
+  // pull known trailing fields out first so periods inside them don't break segmentation
+  const grab=(re,label)=>{const m=work.match(re);if(m){if(label)out.push([label,(m[1]||m[0]).trim().replace(/\.$/,'')]);work=work.replace(m[0],' ');}};
+  grab(/Est\.\s*completion:\s*([0-9-]+)\.?/i,'Est. completion');
+  grab(/Agent:\s*([^.]+?)(?:\.|$)/i,'Agent');
+  grab(/Builder:\s*([^.]+?)(?:\.|$)/i,'Builder');
+  grab(/\(location approximate\)/i,'');
+  // anything left over as labeled segments
+  work.split(/\.\s+/).forEach(seg=>{seg=seg.replace(/\.$/,'').trim();if(!seg||seg==='—'||seg==='-')return;
+    const m=seg.match(/^([\w .\/]+?):\s*(.+)$/);
+    if(m)out.push([m[1].trim(),m[2].trim()]); else out.push([null,seg]);});
+  return out.filter(r=>r[0]!=='').length?out.filter(r=>r[0]!==''||r[1]):out;
+}
+function noteFields(raw){
+  const lines=splitNoteLines(raw); let h='';
+  const rows=[];
+  for(const ln of lines){
+    let matched=false;
+    for(const [pre,lab] of NOTE_LABELS){if(ln.indexOf(pre)===0){rows.push([lab,ln.slice(pre.length).trim()]);matched=true;break;}}
+    if(matched)continue;
+    if(/^Active inventory/i.test(ln)){parseNote(ln).forEach(([k,v])=>rows.push([k,v]));continue;}
+    if(/^[A-Z][\w .\/]{0,22}:\s/.test(ln)){const m=ln.match(/^([\w .\/]+?):\s*(.+)$/);rows.push([m[1].trim(),m[2].trim()]);continue;}
+    rows.push([null,ln]); // freeform -> handled separately
+  }
+  const boxed=rows.filter(r=>r[0]);
+  if(!boxed.length)return '';
+  h+='<div class="notefields">';
+  for(const [k,v] of boxed)h+='<div class="nf"><span class="nfk">'+esc(k)+'</span><span class="nfv">'+esc(v)+'</span></div>';
+  h+='</div>';
+  return h;
+}
+function noteFreeText(raw){
+  // returns only the lines that did NOT become labeled boxes, so editing stays possible
+  const lines=splitNoteLines(raw); const keep=[];
+  for(const ln of lines){
+    let isField=NOTE_LABELS.some(([pre])=>ln.indexOf(pre)===0)||/^Active inventory/i.test(ln)||/^[A-Z][\w .\/]{0,22}:\s/.test(ln);
+    if(!isField)keep.push(ln);
+  }
+  return keep.join('\n');
+}
+function popupHTML(r){
+  const p=pt(r.id);
+  let h='<div class="card" data-pid="'+esc(r.id)+'">';
+  h+='<div class="llc">'+(esc(r.llc)||'Unknown entity')+'</div>';
+  h+='<div class="addr">'+esc(r.a)+'</div>';
+  // phase-first header: big phase chip + months-to-completion (matches redesign)
+  {const ph=(typeof homePhase==='function')?homePhase(r.id):null;
+   if(ph){const nm=(state.tags[ph]&&state.tags[ph].name)||PHASE_LABELS&&PHASE_LABELS[ph]||ph;
+     const col=(PH_C&&PH_C[ph])||'#8c857a';
+     const ml=(typeof monthsLeft==='function')?monthsLeft(r.id):null;
+     h+='<div class="phasehead">';
+     h+='<span class="phasechip" style="background:'+col+';color:#0d0c0b">'+esc(String(nm).toUpperCase())+'</span>';
+     if(ph==='market')h+='<span class="phasetime">ready / on market</span>';
+     else if(ml!=null)h+='<span class="phasetime">≈ '+ml+' month'+(ml===1?'':'s')+' to completion</span>';
+     h+='</div>';}
+  }
+  const A=r.kind==='active';
+  const cells=[];
+  if(r.v)cells.push([A?'List price':'Assessed',r.v,'big']);
+  if(r.sd)cells.push([A?'Listed':'Sale date',r.sd,'']);
+  if(A&&r.comp)cells.push(['Est. completion',r.comp,'']);
+  if(r.lot)cells.push([A?'Sq ft':'Lot sq ft',(+r.lot).toLocaleString(),'']);
+  if(A&&r.bb)cells.push(['Bed / Bath',r.bb,'']);
+  if(A&&r.prod)cells.push(['Product',r.prod,'']);
+  if(cells.length){h+='<div class="grid">';for(const[l,v,c]of cells)h+='<div class="cell"><div class="lbl">'+l+'</div><div class="v '+c+'">'+esc(String(v))+'</div></div>';h+='</div>';}
+  // permit (read-only, from HCAD building-permit data)
+  if(r.permits&&r.permits.length){
+    h+='<div class="permit"><div class="lbl-row"><span class="lbl">'+(r.permits.length>1?r.permits.length+' Permits':'Permit')+'</span><span class="ptag">HCAD</span></div>';
+    for(const pm of r.permits){
+      h+='<div class="pitem"><div class="pdesc">'+esc(pm.desc)+'</div>';
+      h+='<div class="powner">Owner occupant: '+esc(pm.owner)+'</div>';
+      h+='<div class="pmeta">';
+      if(pm.permitDesc)h+='<span>'+esc(pm.permitDesc)+'</span>';
+      if(pm.val&&pm.val!=='0')h+='<span>$'+(+pm.val).toLocaleString()+'</span>';
+      if(pm.proj)h+='<span>#'+esc(pm.proj)+'</span>';
+      h+='</div></div>';}
+    h+='</div>';}
+  // inspections (from external feed, keyed by permit project number)
+  {const ins=inspForPin(r);
+   if(ins){
+     h+='<div class="permit insp"><div class="lbl-row"><span class="lbl">Inspections</span>';
+     h+='<span class="ptag" style="background:'+inspStatusColor(ins.status)+';color:#0d0c0b">'+esc(ins.status||'—')+'</span></div>';
+     if(ins.updated)h+='<div class="pmeta"><span>Updated '+esc(ins.updated)+'</span><span>#'+esc(ins.proj)+'</span></div>';
+     {const pp=pt(r.id); if(pp.inspPromoted){const ph=pp.tags.find(t=>['foundation','framing','dried_in','finishing','market'].includes(t));
+       const lbl=ph==='market'?'Active on Market':(state.tags[ph]&&state.tags[ph].name)||ph;
+       h+='<div class="insppromo">▲ '+esc(lbl)+' — current stage per latest inspection</div>';}}
+     const list=(ins.inspections||[]).slice().reverse();
+     if(list.length){h+='<div class="insprows">';
+       for(const it of list.slice(0,8)){const c=inspStatusColor(it.result);
+         h+='<div class="insprow"><span class="idot" style="background:'+c+'"></span><span class="ity">'+esc(it.type||'')+'</span><span class="idate">'+esc(it.date||'')+'</span><span class="ires" style="color:'+c+'">'+esc(it.result||'')+'</span></div>';}
+       h+='</div>'; if(list.length>8)h+='<div class="pmeta"><span>+'+(list.length-8)+' earlier</span></div>';
+     } else h+='<div class="pmeta"><span>No inspection records yet</span></div>';
+     h+='</div>';
+   } else if(r.kind==='permit'){
+     // permit pin but no inspection match — tell the user why (feed state)
+     h+='<div class="permit insp"><div class="lbl-row"><span class="lbl">Inspections</span></div>';
+     if(!INSP_LOADED){h+='<div class="pmeta"><span style="color:#e8590c">Inspection feed not loaded yet</span></div>';}
+     else{h+='<div class="pmeta"><span>No inspection records on file for #'+esc((r.permits&&r.permits[0]&&r.permits[0].proj)||'—')+'</span></div>';}
+     h+='</div>';
+   }
+  }
+  // tags
+  h+='<div style="margin-top:12px"><div class="lbl">Tags</div><div class="pchips">';
+  for(const tid of p.tags){const t=state.tags[tid]; if(!t)continue;
+    // 'Active – Single/Split Lot' is a listing-class chip; on unlisted UC/permit pins it read as
+    // false market status. The tag stays (drives grouping + pin color) — only the chip hides.
+    if((tid==='active_single'||tid==='active_split')&&!(p.tags.includes('listed')||p.tags.includes('market')))continue;
+    h+='<span class="pchip" style="background:'+t.color+'">'+esc(t.name)+(VIEWER?'':'<span class="x" data-rm="'+esc(tid)+'">&times;</span>')+'</span>';}
+  if(!VIEWER){const avail=Object.keys(state.tags).filter(tid=>!p.tags.includes(tid));
+   const PHX=['foundation','framing','dried_in','finishing','market'];const grp={type:[],phase:[],intel:[],other:[]};
+   avail.forEach(tid=>{if(tid==='active_single'||tid==='active_split')grp.type.push(tid);else if(PHX.includes(tid))grp.phase.push(tid);else if(tid==='permit')grp.intel.push(tid);else grp.other.push(tid);});
+   const og=(lbl,arr)=>arr.length?'<optgroup label="'+lbl+'">'+arr.map(tid=>'<option value="'+esc(tid)+'">'+esc(state.tags[tid].name)+'</option>').join('')+'</optgroup>':'';
+   h+='<select class="addtag" data-add="1"><option value="">+ tag…</option>'+og('Type',grp.type)+og('Phase',grp.phase)+og('Market Intel',grp.intel)+og('Other',grp.other)+'</select>';}
+  h+='</div></div>';
+  // notes — split into structured field boxes + free-text remainder
+  h+='<div style="margin-top:12px"><div class="lbl">Notes</div>';
+  h+=noteFields(p.notes);
+  {const ft=noteFreeText(p.notes);
+   if(VIEWER){ if(ft) h+='<div class="notebox">'+esc(ft)+'</div>'; h+='</div>'; }
+   else h+='<textarea class="note-in" placeholder="Add a note…">'+esc(ft)+'</textarea><div class="saved">saved</div></div>';}
+  if(r.f){const fl=r.f.split(',').map(x=>x.trim()).filter(Boolean);if(fl.length){h+='<div class="flags">';for(const f of fl)h+='<span class="chip">'+esc(f)+'</span>';h+='</div>';}}
+  if(r.c&&r.c.length){h+='<div class="contacts"><div class="lbl">Contacts</div>';
+    for(const ct of r.c){h+='<div class="contact">';if(ct.n)h+='<div class="nm">'+esc(ct.n)+'</div>';
+      for(const num of(ct.p||[]))h+='<a href="'+telHref(num)+'">'+esc(fmtPhone(num))+'</a>';
+      for(const em of(ct.e||[]))h+='<a href="mailto:'+esc(em)+'">'+esc(em)+'</a>';h+='</div>';}h+='</div>';}
+  if(r.u)h+='<a class="dm" href="'+esc(r.u)+'" target="_blank" rel="noopener">Open in DealMachine</a>';
+  return h+'</div>';
+}
+function wire(popup){
+  if(VIEWER)return; // read-only: no edit handlers
+  const node=popup._contentNode, pid=node.querySelector('[data-pid]').getAttribute('data-pid');
+  const ta=node.querySelector('.note-in'), sv=node.querySelector('.saved');
+  if(ta){let t; ta.addEventListener('input',()=>{clearTimeout(t);t=setTimeout(()=>{pt(pid).notes=ta.value;save();sv.classList.add('on');setTimeout(()=>sv.classList.remove('on'),900);},250);});}
+  const sel=node.querySelector('[data-add]');
+  if(sel)sel.addEventListener('change',()=>{if(sel.value){const p=pt(pid);if(!p.tags.includes(sel.value))p.tags.push(sel.value);save();recolor(pid);renderLegend();popup.setContent(popupHTML(byId[pid]));wire(popup);}});
+  node.querySelectorAll('[data-rm]').forEach(x=>x.addEventListener('click',()=>{const p=pt(pid);p.tags=p.tags.filter(t=>t!==x.getAttribute('data-rm'));save();recolor(pid);renderLegend();popup.setContent(popupHTML(byId[pid]));wire(popup);}));
+}
+map.on('popupopen',e=>{wire(e.popup);const tb=document.getElementById('tabs');if(tb)tb.classList.add('hidden');});
+map.on('popupclose',()=>{const tb=document.getElementById('tabs');if(tb)tb.classList.remove('hidden');});
+
+// ---- legend / filtering ----
+const activeF=new Set();
+const VIEWER=true; // read-only for shared viewers: no tag/note editing
+const collapsed=new Set();
+const PHASE_TAGS=['foundation','framing','dried_in','finishing','market'];
+const PHASE_DEF={foundation:['Just Started / Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Dried-In / Siding','#d7b13a'],finishing:['Finishing','#0ca678'],market:['Active on Market','#2f9e44']};
+function ensureTags(){let ch=false;PHASE_TAGS.forEach(p=>{if(!state.tags[p]){state.tags[p]={name:PHASE_DEF[p][0],color:PHASE_DEF[p][1]};ch=true;}});if(ch)save();}
+function tagCount(tid){let n=0;for(const id in state.points)if((state.points[id].tags||[]).includes(tid))n++;return n;}
+function comboCount(a,b){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(!t.includes('listed')&&t.includes(a)&&t.includes(b))n++;}return n;}
+const BUILD_PHASES=['foundation','framing','dried_in','finishing'];
+function ucCount(){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(!t.includes('listed')&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucTypeCount(ty){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(!t.includes('listed')&&t.includes(ty)&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function mktCount(){return tagCount('market');}
+function listedCount(){return tagCount('listed');}
+function listedTypeCount(sp){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(t.includes('listed')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
+function listedReadyCount(sp,ready){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(!t.includes('listed')||t.includes('active_split')!==sp)continue;const r=t.includes('market');if(r===ready)n+=UW(id);}return n;}
+function deedCount(){return tagCount('deed');}
+function readyTypeCount(sp){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
+function readyFinCount(sp,pu){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp)&&(t.includes('punch')===pu))n+=UW(id);}return n;}
+function matchSel(tags,k){
+  if(k==='G:deed')return tags.includes('deed');
+  if(k==='G:uc')return !tags.includes('listed')&&BUILD_PHASES.some(p=>tags.includes(p));
+  if(k==='G:mkt')return tags.includes('listed');
+  if(k.slice(0,4)==='UCT:'){const ty=k.slice(4);return !tags.includes('listed')&&tags.includes(ty)&&BUILD_PHASES.some(p=>tags.includes(p));}
+  if(k.slice(0,3)==='RT:'){const sp=tags.includes('active_split');return tags.includes('listed')&&((k.slice(3)==='split')===sp);}
+  if(k.slice(0,3)==='RF:'){const pr=k.slice(3).split(':');const sp=tags.includes('active_split');const ready=tags.includes('market');return tags.includes('listed')&&((pr[0]==='split')===sp)&&((pr[1]==='ready')===ready);}
+  if(k.slice(0,2)==='T:')return tags.includes(k.slice(2));
+  if(k.slice(0,2)==='L:')return tags.includes(k.slice(2));
+  const i=k.indexOf('|');if(i>=0)return !tags.includes('listed')&&tags.includes(k.slice(0,i))&&tags.includes(k.slice(i+1));
+  return tags.includes(k);}
+const TYPES=[['active_single','Single Lot'],['active_split','Split Lot']];
+function cSw(tid){return '<input type="color" class="sw sw-edit" data-color="'+tid+'" value="'+(state.tags[tid]?state.tags[tid].color:'#8c857a')+'" title="Edit color">';}
+function sOn(k){return activeF.has(k)?' on':'';}
+function renderLegend(){
+  ensureTags();
+  const el=document.getElementById('legend');
+  let h='';
+  // Deed Transfer (recently sold, pre-construction)
+  if(state.tags.deed){
+    h+='<div class="grp'+(collapsed.has('deed')?' col':'')+'" data-grp="deed"><div class="grp-h'+sOn('G:deed')+'" data-col="deed"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:deed')?' on':'')+'" data-sel="G:deed"></span><span class="gn">Deed Transfer</span><span class="ct2">'+deedCount()+'</span></div><div class="grp-body"><div class="leafrow'+sOn('G:deed')+'" data-sel="G:deed">'+cSw('deed')+'<span class="nm">Recently sold</span><span class="ct2">'+deedCount()+'</span></div></div></div>';
+  }
+  // Market Intel (permit toggle layer)
+  if(state.tags.permit){
+    h+='<div class="grp'+(collapsed.has('intel')?' col':'')+'" data-grp="intel"><div class="grp-h'+sOn('L:permit')+'" data-col="intel"><span class="chev2">▼</span><span class="mbox'+(activeF.has('L:permit')?' on':'')+'" data-sel="L:permit"></span><span class="gn">Market Intel</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="grp-body"><div class="leafrow'+sOn('L:permit')+'" data-sel="L:permit">'+cSw('permit')+'<span class="nm">'+esc(state.tags.permit.name)+'</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="leafrow'+sOn('L:built')+'" data-sel="L:built"><span class="sw" style="background:'+GROUP_C.pmt+'"></span><span class="nm">Built (not listed)</span><span class="ct2">'+tagCount('built')+'</span></div></div></div>';}
+  // Under Construction
+  h+='<div class="grp'+(collapsed.has('uc')?' col':'')+'" data-grp="uc"><div class="grp-h'+sOn('G:uc')+'" data-col="uc"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:uc')?' on':'')+'" data-sel="G:uc"></span><span class="gn">Under Construction</span><span class="ct2">'+ucCount()+'</span></div><div class="grp-body">';
+  for(const [ty,tlabel] of TYPES){ if(!state.tags[ty])continue;
+    h+='<div class="subg'+(collapsed.has('uc:'+ty)?' col':'')+'"><div class="subg-h'+sOn('UCT:'+ty)+'" data-col="uc:'+ty+'"><span class="chev2">▼</span><span class="mbox'+(activeF.has('UCT:'+ty)?' on':'')+'" data-sel="UCT:'+ty+'"></span><span class="sw" style="background:'+(ty==='active_split'?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="sn">'+esc(tlabel)+'</span><span class="ct2">'+ucTypeCount(ty)+'</span></div><div class="subg-body">';
+    for(const ph of BUILD_PHASES){const k=ty+'|'+ph;
+      h+='<div class="leafrow'+sOn(k)+'" data-sel="'+k+'"><span class="sw" style="background:'+(ty==='active_split'?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="nm">'+esc(state.tags[ph].name)+'</span><span class="ct2">'+comboCount(ty,ph)+'</span></div>';}
+    h+='</div></div>';}
+  h+='</div></div>';
+  // Active on Market = every live listing; split by product, then readiness
+  {const rC=collapsed.has('mkt')?' col':'';
+   h+='<div class="grp'+rC+'" data-grp="mkt"><div class="grp-h'+sOn('G:mkt')+'" data-col="mkt"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:mkt')?' on':'')+'" data-sel="G:mkt"></span><span class="gn">Active on Market</span><span class="ct2">'+listedCount()+'</span></div><div class="grp-body">';
+   const RT=[['single','Single Lot',false],['split','Split Lot',true]];
+   for(const [key,label,sp] of RT){
+     h+='<div class="subg'+(collapsed.has('mkt:'+key)?' col':'')+'"><div class="subg-h'+sOn('RT:'+key)+'" data-col="mkt:'+key+'"><span class="chev2">▼</span><span class="mbox'+(activeF.has('RT:'+key)?' on':'')+'" data-sel="RT:'+key+'"></span><span class="sw" style="background:'+GROUP_C.act+'"></span><span class="sn">'+label+'</span><span class="ct2">'+listedTypeCount(sp)+'</span></div><div class="subg-body">';
+     h+='<div class="leafrow'+sOn('RF:'+key+':ready')+'" data-sel="RF:'+key+':ready"><span class="sw" style="background:'+GROUP_C.act+'"></span><span class="nm">Move-in ready</span><span class="ct2">'+listedReadyCount(sp,true)+'</span></div>';
+     h+='<div class="leafrow'+sOn('RF:'+key+':uc')+'" data-sel="RF:'+key+':uc"><span class="sw" style="background:'+GROUP_C.act_uc+'"></span><span class="nm">Under construction</span><span class="ct2">'+listedReadyCount(sp,false)+'</span></div>';
+     h+='</div></div>';}
+   h+='</div></div>';}
+  // Other / custom
+  const known=new Set(['active_single','active_split','permit','deed','punch'].concat(PHASE_TAGS));
+  const others=Object.keys(state.tags).filter(t=>!known.has(t));
+  if(others.length){
+    h+='<div class="grp'+(collapsed.has('other')?' col':'')+'" data-grp="other"><div class="grp-h" data-col="other"><span class="chev2">▼</span><span class="gn">Other</span><span class="ct2">'+others.length+'</span></div><div class="grp-body">';
+    for(const tid of others)h+='<div class="leafrow'+sOn('L:'+tid)+'" data-sel="L:'+tid+'">'+cSw(tid)+'<span class="nm">'+esc(state.tags[tid].name)+'</span><span class="ct2">'+tagCount(tid)+'</span><span class="del" data-del="'+tid+'" title="Delete tag">×</span></div>';
+    h+='</div></div>';}
+  el.innerHTML=h;
+  wireLegend(el);
+}
+function wireLegend(el){
+  el.querySelectorAll('.sw-edit').forEach(ci=>{ci.addEventListener('click',ev=>ev.stopPropagation());
+    ci.addEventListener('input',ev=>{ev.stopPropagation();const tid=ci.getAttribute('data-color');state.tags[tid].color=ci.value;save();Object.keys(mById).forEach(recolor);renderLegend();});});
+  el.querySelectorAll('.mbox').forEach(mb=>{mb.addEventListener('click',ev=>{ev.stopPropagation();const k=mb.getAttribute('data-sel');activeF.has(k)?activeF.delete(k):activeF.add(k);renderLegend();refresh();});});
+  el.querySelectorAll('[data-col]').forEach(hd=>{hd.addEventListener('click',ev=>{if(ev.target.closest('.mbox')||ev.target.closest('.sw-edit'))return;const id=hd.getAttribute('data-col');collapsed.has(id)?collapsed.delete(id):collapsed.add(id);renderLegend();});});
+  el.querySelectorAll('.leafrow').forEach(lf=>{lf.addEventListener('click',ev=>{if(ev.target.closest('.sw-edit'))return;
+    if(ev.target.classList.contains('del')){const tid=ev.target.getAttribute('data-del');if(confirm('Delete tag "'+state.tags[tid].name+'"? It will be removed from all pins.')){delete state.tags[tid];for(const id in state.points)state.points[id].tags=(state.points[id].tags||[]).filter(x=>x!==tid);activeF.delete('L:'+tid);save();Object.keys(mById).forEach(recolor);renderLegend();refresh();}return;}
+    const k=lf.getAttribute('data-sel');activeF.has(k)?activeF.delete(k):activeF.add(k);renderLegend();refresh();});});
+}
+function refresh(){
+  const q=document.getElementById('q').value.trim().toLowerCase();let n=0;layer.clearLayers();
+  const nothing=activeF.size===0;
+  const permitOn=activeF.has('L:permit');
+  const baseSels=[...activeF].filter(k=>k!=='L:permit');
+  for(const m of markers){const okText=!q||m._s.includes(q);
+    const tags=pt(m._rec.id).tags;
+    const isPermit=tags.includes('permit');
+    let show;
+    if(nothing){ show=okText; }                                   // no filters -> show all (subject to search)
+    else if(isPermit){ show=permitOn&&okText; }                   // permit pins only when New Construction is checked
+    else { show=okText && baseSels.length>0 && baseSels.some(k=>matchSel(tags,k)); } // non-permit pins need a matching non-permit filter
+    if(show){layer.addLayer(m);n++;}}
+  document.getElementById('shown').textContent=n.toLocaleString();
+}
+let qt;document.getElementById('q').addEventListener('input',()=>{clearTimeout(qt);qt=setTimeout(refresh,120);});
+
+// ---- new tag form ----
+let pickColor=PALETTE[0];
+(function(){const sw=document.getElementById('swatches');
+  PALETTE.forEach((c,i)=>{const d=document.createElement('span');d.className='sw'+(i===0?' sel':'');d.style.background=c;d.dataset.c=c;
+    d.addEventListener('click',()=>{pickColor=c;sw.querySelectorAll('.sw').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');ci.value=c;});sw.appendChild(d);});
+  const ci=document.createElement('input');ci.type='color';ci.value=PALETTE[0];
+  ci.addEventListener('input',()=>{pickColor=ci.value;sw.querySelectorAll('.sw').forEach(x=>x.classList.remove('sel'));});sw.appendChild(ci);
+})();
+document.getElementById('newBtn').addEventListener('click',()=>document.getElementById('newForm').classList.toggle('show'));
+document.getElementById('cancelTag').addEventListener('click',()=>{document.getElementById('newForm').classList.remove('show');document.getElementById('newName').value='';});
+document.getElementById('addTag').addEventListener('click',()=>{const nm=document.getElementById('newName').value.trim();if(!nm)return;
+  const id='t_'+Math.random().toString(36).slice(2,8);state.tags[id]={name:nm,color:pickColor};save();
+  document.getElementById('newName').value='';document.getElementById('newForm').classList.remove('show');renderLegend();});
+
+// ---- export / import ----
+function dl(name,text,type){const b=new Blob([text],{type});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(u);},800);}
+document.getElementById('expJson').addEventListener('click',()=>dl('heights_map_notes.json',JSON.stringify(state,null,2),'application/json'));
+document.getElementById('expCsv').addEventListener('click',()=>{
+  let rows=[['address','entity','stage','lot_type','finish','months_to_completion','sale_or_list_date','value','lot_sqft','layer','tags','notes']];
+  for(const r of DATA){const p=state.points[r.id]||{notes:'',tags:[]};const t=p.tags||[];
+    const s=primaryStage(r.id);
+    const stage=s==='deed'?'Deed Transfer':(s&&BUILD_PHASES.includes(s))?'Under Construction - '+stageName(s):(s==='market'||s==='active_single'||s==='active_split')?'Active on Market':(r.kind==='permit'?'Permit (Market Intel)':'');
+    const lt=t.includes('active_split')?'Split Lot':t.includes('active_single')?'Single Lot':'';
+    const fin=t.includes('market')?(t.includes('punch')?'Punch List':'Finished'):'';
+    const ml=monthsLeft(r.id);
+    const tg=t.map(x=>state.tags[x]?state.tags[x].name:'').filter(Boolean).join('; ');
+    rows.push([r.a,r.llc||'',stage,lt,fin,(ml===null||ml===undefined)?'':ml,r.sd||'',r.v||'',r.lot||'',r.kind||'lead',tg,(p.notes||'').replace(/\n/g,' ')]);}
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  dl('heights_map_export.csv',csv,'text/csv');});
+document.getElementById('impBtn').addEventListener('click',()=>document.getElementById('impFile').click());
+document.getElementById('impFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();
+  rd.onload=()=>{try{const s=JSON.parse(rd.result);if(s.tags)Object.assign(state.tags,s.tags);
+    if(s.points)for(const id in s.points){const inc=s.points[id];const cur=pt(id);
+      if(inc.notes)cur.notes=cur.notes?cur.notes+'\n'+inc.notes:inc.notes;
+      (inc.tags||[]).forEach(t=>{if(!cur.tags.includes(t))cur.tags.push(t);});}
+    save();Object.keys(mById).forEach(recolor);renderLegend();refresh();alert('Imported notes & tags.');}
+    catch(err){alert('Could not read that file.');}};rd.readAsText(f);});
+
+// ---- panel collapse + init ----
+const panel=document.getElementById('panel');
+document.getElementById('collapse').addEventListener('click',()=>panel.classList.toggle('collapsed'));
+if(window.innerWidth<=520)panel.classList.add('collapsed');
+renderLegend();refresh();
+
+// ---- dashboards (Overview + Timeline) ----
+const PHASE_ORDER=['foundation','framing','dried_in','finishing','market'];
+const PHASE_MONTHS={foundation:8,framing:6,dried_in:4,finishing:2,market:0};
+// A permit pin that inspections promoted carries a real phase tag; treat it like a tracked pin.
+function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['foundation','framing','dried_in','finishing','market'].includes(x));}
+function inPipeline(r){return r.kind!=='permit'||isPromotedPermit(r);}
+function primaryStage(pid){const t=(state.points[pid]||{}).tags||[];
+  if(t.includes('built')) return null; // completed long ago, not pipeline supply
+  for(const k of PHASE_ORDER) if(t.includes(k)) return k;
+  if(t.includes('active_single')) return 'active_single';
+  if(t.includes('active_split')) return 'active_split';
+  if(t.includes('deed')) return 'deed'; return null;}
+function monthsLeft(pid){const r=byId[pid]||{};
+  const s=primaryStage(pid); if(s===null||s==='deed') return null;
+  const t=(state.points[pid]||{}).tags||[];
+  const compM=r.comp?(function(){const d=new Date(r.comp+'T00:00:00'),n=new Date();return (d.getFullYear()-n.getFullYear())*12+(d.getMonth()-n.getMonth());})():null;
+  // ready homes: 0 (punch list: 1)
+  if(t.includes('market')) return t.includes('punch')?1:0;
+  // under construction: NEVER "available now" — future comp date wins, overdue comp falls back to phase estimate
+  const ph=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
+  if(ph){ if(compM!==null&&compM>0) return compM; return Math.max(1,(PHASE_MONTHS[ph]!==undefined?PHASE_MONTHS[ph]:1)); }
+  if(s==='active_single'||s==='active_split') return (compM!==null&&compM>0)?compM:0;
+  if(compM!==null) return Math.max(0,compM);
+  const tm=(((state.points[pid]||{}).notes)||'').match(/timeline:\s*(\d+)\s*month/i); return tm?parseInt(tm[1],10):null;}
+function stageColor(s){ return state.tags[s]?state.tags[s].color:'#8c857a';}
+// ============================================================
+// SUPPLY FORECAST — Spencer's core question: how many homes come
+// online (reach market) within a given window, and what phase is
+// everything in right now. Built on inspection-driven phases.
+// ============================================================
+const PHASE_LABELS={foundation:'Foundation',framing:'Framing',dried_in:'Dried-In',finishing:'Finishing',market:'Active'};
+const PHASE_SEQ=['foundation','framing','dried_in','finishing','market'];
+
+// Every home currently in the construction pipeline (tracked builds + inspection-promoted permits).
+function pipelineHomes(){
+  return DATA.filter(inPipeline).filter(r=>{
+    const s=primaryStage(r.id);
+    return s && s!=='deed';           // exclude raw deed transfers (pre-construction)
+  });
+}
+
+// A home's current construction phase (foundation..market), from inspections/tags.
+function homePhase(pid){
+  const t=(state.points[pid]||{}).tags||[];
+  for(const p of PHASE_SEQ) if(t.includes(p)) return p;
+  if(t.includes('active_single')||t.includes('active_split')) return 'market';
+  return null;
+}
+
+// Count of homes by phase — the "what phase is everything in" snapshot.
+function phaseBreakdown(){
+  const out={foundation:0,framing:0,dried_in:0,finishing:0,market:0};
+  for(const r of pipelineHomes()){const p=homePhase(r.id); if(p&&out[p]!==undefined)out[p]+=UW(r.id);}
+  return out;
+}
+
+// How many homes reach market within N months (cumulative supply curve).
+// A home "comes online" when its monthsLeft <= N.
+function comingOnline(months,prodTag){
+  let n=0; const list=[];
+  for(const r of pipelineHomes()){
+    if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
+    const ml=monthsLeft(r.id);
+    if(ml!==null && ml!==undefined && ml<=months){n++; list.push(r);}
+  }
+  return {count:n, homes:list};
+}
+
+// The full supply curve at standard checkpoints — feeds the redesign's forecast view.
+function supplyCurve(){
+  return [3,6,9,12,18,24].map(m=>({months:m, ...comingOnline(m)}));
+}
+
+function stageName(s){ return state.tags[s]?state.tags[s].name:s;}
+function txtOn(hex){const c=(hex||'#888').replace('#','');const r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#1a1a1a':'#fff';}
+function buildOverview(){
+  const bd=phaseBreakdown();
+  const uc=(bd.foundation||0)+(bd.framing||0)+(bd.dried_in||0)+(bd.finishing||0);
+  const ready=bd.market||0;
+  const within12=comingOnline(12).count;
+  const permitN=DATA.filter(r=>r.kind==='permit'&&!isPromotedPermit(r)).length;
+  const deedN=DATA.filter(r=>primaryStage(r.id)==='deed').length;
+  const upd=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+
+  let h='<div class="ovx-top"><span class="ovx-kicker">34DEV · SUPPLY FORECAST</span><span class="ovx-live">● LIVE · UPDATED '+upd.toUpperCase()+'</span></div>';
+  h+='<h2>Pipeline Overview</h2>';
+
+  // HERO: big number + side stats
+  h+='<div class="ovx-hero">';
+  h+='<div class="ovx-heroL"><div class="ovx-herolbl">HOMES COMPLETE WITHIN 12 MONTHS</div><div class="ovx-big">'+within12+'</div>';
+  h+='<div class="ovx-herosub">'+(within12===uc+ready?'Every home now under construction reaches market inside a year. ':'')+permitN+' permits are queued behind them.</div></div>';
+  h+='<div class="ovx-heroR">';
+  h+='<div class="ovx-stat"><span class="k">UNDER CONSTRUCTION</span><span class="v" style="color:#e8590c">'+ucCount()+'</span></div>';
+  h+='<div class="ovx-stat"><span class="k">ACTIVE ON MARKET</span><span class="v" style="color:#2f9e44">'+listedCount()+'</span></div>';
+  h+='<div class="ovx-stat"><span class="k">PERMITS QUEUED</span><span class="v" style="color:#f1ede6">'+permitN+'</span></div>';
+  h+='<div class="ovx-stat"><span class="k">LOTS BOUGHT · PRE-CON</span><span class="v" style="color:#3f6cd1">'+deedN+'</span></div>';
+  h+='</div></div>';
+
+  // CONSTRUCTION PIPELINE: 5 phase circles
+  h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>FOUNDATION → READY · '+(uc+ready)+' HOMES</span></div>';
+  h+='<div class="ovx-pipe">';
+  const pipeDefs=[['foundation','FOUNDATION','≈ 8 mo out'],['framing','FRAMING','≈ 6 mo out'],['dried_in','DRIED-IN','≈ 4 mo out'],['finishing','FINISHING','≈ 2 mo out'],['market','READY','on market']];
+  pipeDefs.forEach(([k,lbl,sub],i)=>{
+    h+='<div class="ovx-node'+(i<pipeDefs.length-1?' line':'')+'"><div class="dot" style="background:'+PH_C[k]+'">'+(bd[k]||0)+'</div><div class="nl">'+lbl+'</div><div class="ns">'+sub+'</div></div>';
+  });
+  h+='</div>';
+
+  // SUPPLY CURVE: SVG chart of comingOnline at checkpoints
+  const curve=supplyCurve();
+  const maxN=Math.max(1,...curve.map(c=>c.count));
+  const W=640,H=180,PX=44,PY=18;
+  const xs=m=>PX+( [3,6,9,12,18,24].indexOf(m) )*( (W-PX-14)/5 );
+  const ys=n=>H-PY-(n/maxN)*(H-PY*2);
+  let pts=curve.map(c=>xs(c.months)+','+ys(c.count)).join(' ');
+  const twelveX=xs(12),twelveY=ys(comingOnline(12).count);
+  h+='<div class="ovx-secH"><span>HOMES REACHING MARKET</span><span>CUMULATIVE · FROM TODAY</span></div>';
+  h+='<div class="ovx-chart"><svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet">';
+  // area fill
+  h+='<polygon points="'+PX+','+(H-PY)+' '+pts+' '+xs(24)+','+(H-PY)+'" fill="rgba(47,158,68,.15)"/>';
+  h+='<polyline points="'+pts+'" fill="none" stroke="#2f9e44" stroke-width="2"/>';
+  curve.forEach(c=>{h+='<circle cx="'+xs(c.months)+'" cy="'+ys(c.count)+'" r="4" fill="'+(c.months===12?'#e23a47':'#0d0c0b')+'" stroke="#2f9e44" stroke-width="2"/>';
+    h+='<text x="'+xs(c.months)+'" y="'+(ys(c.count)-10)+'" fill="#d8d2c7" font-size="11" text-anchor="middle" font-family="IBM Plex Mono,monospace">'+c.count+'</text>';
+    h+='<text x="'+xs(c.months)+'" y="'+(H-3)+'" fill="'+(c.months===12?'#e23a47':'#8c857a')+'" font-size="10" text-anchor="middle" font-family="IBM Plex Mono,monospace">'+c.months+'mo</text>';});
+  // 12-mo marker line
+  h+='<line x1="'+twelveX+'" y1="'+(H-PY)+'" x2="'+twelveX+'" y2="'+twelveY+'" stroke="#e23a47" stroke-dasharray="3,3" stroke-width="1"/>';
+  h+='</svg></div>';
+
+  h+='<p class="note-foot">Phases derive from deed, inventory, active-listing and live city inspection data; permits advance as inspections pass.</p>';
+  document.getElementById('ovBody').innerHTML=h;
+}
+let TL_PRODUCT='all';
+function tlMatch(id){if(TL_PRODUCT==='all')return true;return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
+function buildTimeline(){
+  const now=new Date(); const base=new Date(now.getFullYear(),now.getMonth(),1);
+  const buckets={}; let noStage=0,deedN=0;
+  DATA.filter(inPipeline).forEach(r=>{const s=primaryStage(r.id);
+    if(s==='deed'){deedN++;return;}
+    if(!tlMatch(r.id))return;
+    const ml=monthsLeft(r.id); if(ml===null||ml===undefined){noStage++;return;}
+    let key,label,ord;
+    if(ml<=0){key='now';label='AVAILABLE NOW';ord=10000;}
+    else if(ml>12){key='p12';label='12+ MONTHS OUT';ord=999;}
+    else{const d=new Date(base.getFullYear(),base.getMonth()+ml,1);key='m'+ml;label=d.toLocaleString('en-US',{month:'short',year:'numeric'}).toUpperCase();ord=ml;}
+    (buckets[key]=buckets[key]||{label:label,ord:ord,ml:ml,items:[]}).items.push(r);});
+  const arr=Object.values(buckets).sort((a,b)=>a.ord-b.ord);
+
+  // summary tiles: within 3 / 6 / 12
+  const _pf=TL_PRODUCT==='all'?null:TL_PRODUCT;
+  const c3=comingOnline(3,_pf).count,c6=comingOnline(6,_pf).count,c12=comingOnline(12,_pf).count;
+  let h='<h2>Timeline to Completion</h2>';
+  h+='<div class="tlx-filter">'+[['all','ALL'],['active_single','SINGLE LOT'],['active_split','SPLIT LOT']].map(([v,l])=>'<button class="tlxf'+(TL_PRODUCT===v?' on':'')+'" data-tlp="'+v+'">'+l+'</button>').join('')+'</div>';
+  h+='<div class="tlx-tiles">';
+  h+='<div class="tlx-tile"><div class="n">'+c3+'</div><div class="l">WITHIN 3 MO</div></div>';
+  h+='<div class="tlx-tile"><div class="n">'+c6+'</div><div class="l">WITHIN 6 MO</div></div>';
+  h+='<div class="tlx-tile hot"><div class="n">'+c12+'</div><div class="l">WITHIN 12 MO</div></div>';
+  h+='</div>';
+
+  if(!arr.length) h+='<p class="note-foot">No properties have a construction stage yet.</p>';
+  const maxB=Math.max(1,...arr.map(b=>b.items.length));
+  for(const b of arr){
+    // dominant phase of the bucket for the header accent
+    const phCount={};b.items.forEach(r=>{const p=homePhase(r.id);if(p)phCount[p]=(phCount[p]||0)+1;});
+    const domPh=Object.keys(phCount).sort((a,c)=>phCount[c]-phCount[a])[0];
+    const accent=domPh?PH_C[domPh]:'#8c857a';
+    const phLbl=domPh?(' · '+(PHASE_LABELS[domPh]||domPh).toUpperCase()):'';
+    const startClosed=(b.ord===10000); // Available Now starts compressed
+    h+='<div class="tlx-bucket'+(startClosed?' closed':'')+'">';
+    h+='<div class="tlx-bh" data-tgl="1"><span class="caret">▾</span><span class="dot" style="background:'+accent+'"></span><span class="t">'+esc(b.label)+phLbl+'</span><span class="c">'+b.items.length+' '+(b.items.length===1?'home':'homes')+'</span></div>';
+    h+='<div class="tlx-bar"><span style="width:'+(b.items.length/maxB*100)+'%;background:'+accent+'"></span></div>';
+    h+='<div class="tlx-body">';
+    b.items.sort((x,y)=>(x.a||'').localeCompare(y.a||''));
+    const show=b.items.slice(0,3);
+    for(const r of show){const p=homePhase(r.id);const t=pt(r.id).tags||[];
+      let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
+      if(p==='market'){const sp=t.includes('active_split'),pu=t.includes('punch');
+        lbl=(sp?'Split':'Single')+(pu?' · Punch List':' · Finished');}
+      h+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
+    if(b.items.length>3)h+='<div class="tlx-more" data-more="'+esc(b.label)+'">+ '+(b.items.length-3)+' more homes</div>';
+    h+='</div></div>';}
+  if(deedN) h+='<p class="note-foot">'+deedN+' deed-transfer lots are pre-construction and not yet scheduled.</p>';
+  if(noStage) h+='<p class="note-foot">'+noStage+' pins have no stage set.</p>';
+  const el=document.getElementById('tlBody'); el.innerHTML=h;
+  el.querySelectorAll('.tlxf').forEach(b=>b.addEventListener('click',()=>{TL_PRODUCT=b.getAttribute('data-tlp');buildTimeline();}));
+  el.querySelectorAll('[data-go]').forEach(x=>x.addEventListener('click',()=>openPin(x.getAttribute('data-go'))));
+  el.querySelectorAll('.tlx-bh[data-tgl]').forEach(hd=>hd.addEventListener('click',function(){this.closest('.tlx-bucket').classList.toggle('closed');}));
+  // expand "+N more" in place
+  el.querySelectorAll('.tlx-more').forEach(x=>x.addEventListener('click',function(){
+    const bkt=arr.find(b=>b.label===this.getAttribute('data-more')); if(!bkt)return;
+    let hh='';
+    for(const r of bkt.items.slice(3)){const p=homePhase(r.id);const t=pt(r.id).tags||[];
+      let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
+      if(p==='market'){const sp=t.includes('active_split'),pu=t.includes('punch');lbl=(sp?'Split':'Single')+(pu?' · Punch List':' · Finished');}
+      hh+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
+    this.outerHTML=hh;
+    el.querySelectorAll('[data-go]').forEach(y=>y.addEventListener('click',()=>openPin(y.getAttribute('data-go'))));
+  }));
+}
+function shortAddr(a){return (a||'').replace(/, Houston.*$/i,'');}
+function openPin(id){switchTab('map');const m=mById[id];if(!m)return;
+  // collapse the header panel on small screens so the popup isn't hidden behind it
+  const small=window.matchMedia('(max-width:560px)').matches;
+  if(small&&panel)panel.classList.add('collapsed');
+  setTimeout(()=>{
+    map.invalidateSize();
+    map.setView(m.getLatLng(),17,{animate:false});
+    // push the marker down into the lower half so its popup opens clear of the title box
+    const yShift=small?Math.round(map.getSize().y*0.28):0;
+    if(yShift)map.panBy([0,-yShift],{animate:false});
+    setTimeout(()=>m.openPopup(),140);
+  },200);}
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+  document.getElementById('overview').style.display=t==='overview'?'block':'none';
+  document.getElementById('timeline').style.display=t==='timeline'?'block':'none';
+  document.getElementById('ask').style.display=t==='ask'?'block':'none';
+  panel.style.display=t==='map'?'':'none';
+  if(t==='overview')buildOverview(); else if(t==='timeline')buildTimeline(); else setTimeout(()=>map.invalidateSize(),60);
+}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.t)));
+// ---- ASK: AI layer ----
+function askContext(){
+  const PH=['market','finishing','dried_in','framing','foundation'];
+  const now=new Date();
+  // addresses (project-normalized) that have ANY permit / construction activity
+  const activeKeys=new Set();
+  for(const r of DATA)if(r.permits&&r.permits.length)activeKeys.add(projectBaseKey(r));
+  const lines=[];const deedLines=[];const agg={active_on_market:0,under_construction:0,deed_lots:0,permits_queued:0,market_by_product:{},uc_by_product:{}};
+  for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
+    const ph=PH.find(p=>t.includes(p));
+    if(t.includes('deed')&&!ph){
+      agg.deed_lots++;
+      const monthsSince=r.sd?Math.max(0,Math.round((now-new Date(r.sd+'T00:00:00'))/(30.44*24*3600e3))):null;
+      const act=activeKeys.has(projectBaseKey(r))?'HAS_PERMIT_ACTIVITY':'NO_PERMIT_ACTIVITY';
+      const contacts=(r.c||[]).slice(0,2).map(c=>c.n+((c.p&&c.p[0])?' '+c.p[0]:'')+((c.e&&c.e[0])?' '+c.e[0]:'')).join('; ')||'no contacts on file';
+      deedLines.push([r.a.replace(/, Houston.*$/i,''),r.sd||'-',(monthsSince===null?'-':monthsSince+'mo ago'),r.llc||'-',r.v||'-',(r.lot?r.lot+'sqft':'-'),act,contacts,(r.f||'').split(', ').filter(x=>/vacant|corner|out of state|senior|free and clear/i.test(x)).join(',')||'-'].join(' | '));
+      continue;
+    }
+    let grp;const listed=t.includes('listed');
+    if(listed){grp=ph==='market'?'active_on_market_READY':'active_on_market_UNDER_CONSTRUCTION';agg.active_on_market++;const pd=r.prod||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;if(ph==='market')agg.active_ready=(agg.active_ready||0)+1;else agg.active_still_building=(agg.active_still_building||0)+1;}
+    else if(t.includes('built')){grp='built_not_listed';agg.built_not_listed=(agg.built_not_listed||0)+1;}
+    else if(ph&&ph!=='market'){grp='under_construction';agg.under_construction++;const pd=r.prod||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
+    else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
+    else grp='other';
+    const ml=monthsLeft(r.id);
+    const note=((state.points[r.id]||{}).notes||'').split('\n')[0].slice(0,90);
+    lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',note].join(' | '));
+  }
+  // cross-tabs matching the sidebar exactly (tag-based grouping)
+  const active_breakdown={'Single Lot':{move_in_ready:0,still_building:0},'Split Lot':{move_in_ready:0,still_building:0}};
+  const uc_breakdown={'Single Lot':{foundation:0,framing:0,dried_in:0,finishing:0},'Split Lot':{foundation:0,framing:0,dried_in:0,finishing:0}};
+  for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
+    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    if(!key)continue;
+    const phx=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
+    if(t.includes('listed')){if(t.includes('market'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
+    else if(phx)uc_breakdown[key][phx]++;}
+  agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
+  // Completion timing is a PHASE COHORT model, not a real per-home schedule: months come from a
+  // flat phase->months lookup (foundation~8, framing~6, dried_in~4, finishing~2), so homes at the
+  // same phase share one estimate. We therefore bucket by PHASE COHORT with an honest month RANGE,
+  // never as a single-month completion count (that created a fake "36 homes finish in Feb" cluster).
+  const COHORT_RANGE={finishing:'0-3mo',dried_in:'3-5mo',framing:'5-7mo',foundation:'7-9mo'};
+  const mk=()=>({ready_now:0,by_phase_cohort:{finishing:0,dried_in:0,framing:0,foundation:0},cohort_ranges:COHORT_RANGE,done_within:{}});
+  const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'ALL':mk() };
+  for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
+    if(t.includes('deed'))continue;
+    const ml=monthsLeft(r.id);if(ml===null||ml===undefined)continue;
+    const ph=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
+    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
+      if(ml<=0||t.includes('market'))f.ready_now+=UW(r.id);
+      else if(ph)f.by_phase_cohort[ph]+=UW(r.id);}}
+  // done_within stays as a cumulative count using the flat estimate — but labeled as an approximation.
+  for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
+    if(t.includes('deed'))continue;const ml=monthsLeft(r.id);if(ml===null||ml===undefined||ml<=0)continue;
+    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
+      for(let m=Math.max(1,Math.ceil(ml));m<=12;m++)f.done_within[m]=(f.done_within[m]||0)+1;}}
+  return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
+   '\nCOMPLETION_FORECAST (PHASE-COHORT model. ready_now = complete/listed now, EXCLUDED from all other numbers. by_phase_cohort = count of under-construction homes at each build stage; cohort_ranges gives the ROUGH month window for each stage. These are STAGE COHORTS, not monthly completion counts — e.g. a foundation count of 36 means 36 homes are AT foundation stage (~7-9 months out), NOT 36 homes finishing in a single month. done_within[N] = approximate cumulative count expected done within N months, from a flat phase->months estimate; treat as directional, use verbatim, never restate as a single-month figure): '+JSON.stringify(forecast)+
+   '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
+   '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
+   '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
+}
+const askHist=[];
+function askAdd(cls,txt){const d=document.createElement('div');d.className='askm '+cls;d.textContent=txt;document.getElementById('askLog').appendChild(d);d.scrollIntoView({block:'end'});return d;}
+async function askSend(){
+  const inp=document.getElementById('askIn'),btn=document.getElementById('askGo');
+  const q=inp.value.trim();if(!q)return;
+  inp.value='';btn.disabled=true;askAdd('u',q);
+  const think=askAdd('a','Thinking…');
+  try{
+    const res=await fetch('/.netlify/functions/ask',{method:'POST',headers:{'content-type':'application/json'},
+      body:JSON.stringify({question:q,context:askContext(),history:askHist.slice(-8)})});
+    const j=await res.json();
+    think.textContent=j.answer||'No answer returned.';
+    if(!res.ok)think.className='askm w';
+    askHist.push({role:'user',content:q},{role:'assistant',content:j.answer||''});
+  }catch(e){think.className='askm w';think.textContent='Could not reach the AI service ('+e.message+'). Check that the Netlify function is deployed and ANTHROPIC_API_KEY is set.';}
+  btn.disabled=false;
+}
+document.getElementById('askGo').addEventListener('click',askSend);
+document.getElementById('askIn').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();askSend();}});
+
+// ===== Supply snapshot card + Ready-within toggle (real data) =====
+const PH_C={foundation:'#e8590c',framing:'#f59f00',dried_in:'#d7b13a',finishing:'#3a9d8f',market:'#2f9e44'};
+const PH_ABBR=[['foundation','FDN'],['framing','FRM'],['dried_in','DRY'],['finishing','FIN'],['market','RDY']];
+let readyMonths=0; // 0 = off (show all)
+function renderSupplyCard(){
+  if(typeof phaseBreakdown!=='function')return;
+  const bd=phaseBreakdown();
+  const total=PH_ABBR.reduce((s,[k])=>s+(bd[k]||0),0);
+  const twelve=(typeof comingOnline==='function')?comingOnline(12).count:0;
+  const big=document.getElementById('sc-big'); if(big)big.textContent=twelve;
+  // stacked bar
+  const bar=document.getElementById('sc-bar');
+  if(bar){bar.innerHTML=PH_ABBR.map(([k])=>{const w=total?((bd[k]||0)/total*100):0;return '<span style="width:'+w+'%;background:'+PH_C[k]+'"></span>';}).join('');}
+  // per-phase counts
+  const ph=document.getElementById('sc-phases');
+  if(ph){ph.innerHTML=PH_ABBR.map(([k,l])=>'<div class="sc-ph"><div class="n" style="color:'+PH_C[k]+'">'+(bd[k]||0)+'</div><div class="l">'+l+'</div></div>').join('');}
+  // footer counts
+  const foot=document.getElementById('sc-foot');
+  if(foot){const permits=DATA.filter(r=>r.kind==='permit').length;const sold=DATA.filter(r=>primaryStage(r.id)==='deed').length;
+    foot.textContent=DATA.length+' tracked · '+permits+' permits · '+sold+' sold';}
+}
+// Ready-within toggle: filter map pins to homes reaching market within N months
+function applyReadyFilter(){
+  const show=document.getElementById('rw-show');
+  if(!readyMonths){ if(show)show.innerHTML=''; refresh(); return; }
+  const set=new Set((comingOnline(readyMonths).homes||[]).map(r=>r.id));
+  let n=0; layer.clearLayers();
+  for(const m of markers){ if(set.has(m._rec.id)){layer.addLayer(m);n++;} }
+  if(show)show.innerHTML='showing <b>'+n+'</b>';
+  const sh=document.getElementById('shown'); if(sh)sh.textContent=n.toLocaleString();
+}
+document.querySelectorAll('#readywrap .rw-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const mo=+b.getAttribute('data-mo');
+    if(readyMonths===mo){readyMonths=0;b.classList.remove('on');}
+    else{readyMonths=mo;document.querySelectorAll('#readywrap .rw-btn').forEach(x=>x.classList.toggle('on',x===b));}
+    applyReadyFilter();
+  });
+});
+// refresh card whenever inspections promote phases
+const _origApply=applyInspectionPromotions;
+applyInspectionPromotions=function(){_origApply.apply(this,arguments);renderSupplyCard();};
+renderSupplyCard();
+</script>
+
+<div id="marketNav" style="position:fixed;top:12px;right:14px;z-index:1200;display:flex;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;flex-wrap:wrap;justify-content:flex-end;">
+  <a href="index.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">HEIGHTS</a>
+  <a href="montrose.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">MONTROSE</a>
+  <a href="westu.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">WEST U</a>
+  <a href="riveroaks.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">RIVER OAKS</a>
+  <a href="springbranch.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING BRANCH</a>
+  <a href="timbergrove.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#c0392b;color:#fff;border:1px solid #333;">TIMBERGROVE / LAZYBROOK</a>
+</div>
+</body>
+</html>

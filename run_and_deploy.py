@@ -98,6 +98,10 @@ MARKETS = [
      "permits": os.path.join(HERE, "springvalley_permits.json"),
      "out":     os.path.join(HERE, "inspections_springvalley.json"),
      "netlify_path": "/inspections_springvalley.json"},
+    {"name": "timbergrove",
+     "permits": os.path.join(HERE, "timbergrove_permits.json"),
+     "out":     os.path.join(HERE, "inspections_timbergrove.json"),
+     "netlify_path": "/inspections_timbergrove.json"},
 ]
 
 # Read from env first; fall back to inline (leave blank and use env in prod).
@@ -219,7 +223,7 @@ def main():
     ap.add_argument("--skip-scrape", action="store_true",
                     help="Deploy existing inspection files without re-scraping")
     ap.add_argument("--market", default="",
-                    help="Only run one market (heights|montrose|westu|riveroaks|springbranch|springvalley). Default = all.")
+                    help="Only run one market (heights|montrose|westu|riveroaks|springbranch|springvalley|timbergrove). Default = all.")
     args = ap.parse_args()
 
     # Optional: restrict to one market from the CLI (default = all)
