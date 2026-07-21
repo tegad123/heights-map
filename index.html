@@ -35,6 +35,10 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 .field{position:relative}
 #q{width:100%;background:#0d0c0b;border:1px solid var(--line);color:var(--paper);font-family:"IBM Plex Mono",monospace;font-size:13px;padding:10px 11px 10px 31px;border-radius:2px;outline:none}
 #q::placeholder{color:#6b655c}#q:focus{border-color:var(--red)}
+.qnote{margin:6px 2px 0;font-family:"IBM Plex Mono",monospace;font-size:11px;line-height:1.5}
+.qnote-lk{color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.qnote-lk:hover{opacity:.8}
+.qnote-mut{color:#8a8378}
 .field .si{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;opacity:.6}
 .sec-t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 9px;display:flex;justify-content:space-between;align-items:center}
 .lk{color:var(--red2);cursor:pointer;text-transform:none;letter-spacing:.02em;font-size:11px}
@@ -283,6 +287,7 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
       <svg class="si" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#cf2230" stroke-width="2"/><line x1="21" y1="21" x2="16.5" y2="16.5" stroke="#cf2230" stroke-width="2"/></svg>
       <input id="q" placeholder="search LLC, address, zip…" autocomplete="off"/>
     </div>
+    <div id="qnote" class="qnote" hidden><span id="qnote-filter" class="qnote-lk"></span><span id="qnote-sold" class="qnote-mut"></span></div>
     <div class="hr"></div>
     <div class="sec-t">Tags <span class="lk" id="newBtn">+ New tag</span></div>
     <div class="tags" id="legend"></div>
@@ -313,6 +318,7 @@ const DATA_ALL = DATA;
 const UNITS={};for(const r of DATA)UNITS[r.id]=r.units||1;const UW=id=>UNITS[id]||1; // split-lot solo masters count as their full MST home count
 const SOLD = DATA.filter(r=>r.st==='sold');
 DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kept in DATA_ALL/SOLD for export
+SOLD.forEach(r=>r._s=((r.llc||'')+' '+(r.a||'')).toLowerCase()); // sold rows keep a search string for the hidden-match counter (no marker built)
 const MARKET_METRICS={"window": "sold: trailing ~12 months", "sold_n": 103, "active_pending_n": 67, "absorption_per_month": 8.6, "months_of_inventory": 7.8, "note": "DOM/list-price/$psf reliable on all rows; TRUE sold price+close date present on minority (49/103) so sold-to-list & margin are directional only, not precise.", "by_product": {"Single Lot": {"sold_12mo": 35, "active_pending_now": 33, "absorption_per_month": 2.92, "months_of_inventory": 11.3, "median_dom": 39, "median_list_ppsf": 434.8, "by_price_band": {"<800k": {"sold_n": 1, "active_pending_n": 0, "median_dom": 19, "median_list_ppsf": 274.5, "months_inventory": 0.0}, "800k-1.3M": {"sold_n": 1, "active_pending_n": 2, "median_dom": 39, "median_list_ppsf": 400.5, "months_inventory": 24.0}, "1.3M-2M": {"sold_n": 23, "active_pending_n": 20, "median_dom": 39, "median_list_ppsf": 423.0, "months_inventory": 10.4}, "2M+": {"sold_n": 10, "active_pending_n": 11, "median_dom": 48.5, "median_list_ppsf": 494.8, "months_inventory": 13.2}}}, "Split Lot": {"sold_12mo": 68, "active_pending_now": 34, "absorption_per_month": 5.67, "months_of_inventory": 6.0, "median_dom": 21.5, "median_list_ppsf": 278.6, "by_price_band": {"<800k": {"sold_n": 42, "active_pending_n": 15, "median_dom": 20.5, "median_list_ppsf": 269.8, "months_inventory": 4.3}, "800k-1.3M": {"sold_n": 26, "active_pending_n": 17, "median_dom": 30.0, "median_list_ppsf": 319.9, "months_inventory": 7.8}, "1.3M-2M": {"sold_n": 0, "active_pending_n": 2, "median_dom": null, "median_list_ppsf": null, "months_inventory": "no_comps"}}}}}; // HAR trailing-12mo sold + active/pending, computed 2026-07-05
 const byId = {}; DATA.forEach(r=>byId[r.id]=r);
 const PALETTE=['#cf2230','#e08a1e','#c9a227','#5aa83a','#3a9d8f','#3f6cd1','#8a4fd1','#c2417a','#5b6470','#d8d2c7'];
@@ -859,6 +865,7 @@ function refresh(){
   const nothing=activeF.size===0;
   const permitOn=activeF.has('L:permit');
   const baseSels=[...activeF].filter(k=>k!=='L:permit');
+  let hiddenByFilter=0;
   for(const m of markers){const okText=!q||m._s.includes(q);
     const tags=pt(m._rec.id).tags;
     const isPermit=tags.includes('permit');
@@ -866,9 +873,21 @@ function refresh(){
     if(nothing){ show=okText; }                                   // no filters -> show all (subject to search)
     else if(isPermit){ show=permitOn&&okText; }                   // permit pins only when New Construction is checked
     else { show=okText && baseSels.length>0 && baseSels.some(k=>matchSel(tags,k)); } // non-permit pins need a matching non-permit filter
-    if(show){layer.addLayer(m);n++;}}
+    if(show){layer.addLayer(m);n++;} else if(okText&&q) hiddenByFilter++;}
   document.getElementById('shown').textContent=n.toLocaleString();
+  const soldHidden=q?SOLD.reduce((a,r)=>a+((r._s||'').includes(q)?1:0),0):0;
+  updateQNote(q,hiddenByFilter,soldHidden);
 }
+function updateQNote(q,hiddenByFilter,soldHidden){
+  const box=document.getElementById('qnote');if(!box)return;
+  const fe=document.getElementById('qnote-filter'),se=document.getElementById('qnote-sold');
+  if(!q||(!hiddenByFilter&&!soldHidden)){box.hidden=true;fe.textContent='';se.textContent='';return;}
+  box.hidden=false;
+  fe.style.display=hiddenByFilter?'':'none';
+  fe.textContent=hiddenByFilter?hiddenByFilter+(hiddenByFilter===1?' match':' matches')+' hidden by filters — show all':'';
+  se.textContent=soldHidden?(hiddenByFilter?' · ':'')+soldHidden+' sold (off map)':'';
+}
+document.getElementById('qnote-filter').addEventListener('click',()=>{activeF.clear();renderLegend();refresh();});
 let qt;document.getElementById('q').addEventListener('input',()=>{clearTimeout(qt);qt=setTimeout(refresh,120);});
 
 // ---- new tag form ----
@@ -1244,6 +1263,7 @@ function renderSupplyCard(){
 function applyReadyFilter(){
   const show=document.getElementById('rw-show');
   if(!readyMonths){ if(show)show.innerHTML=''; refresh(); return; }
+  const _qn=document.getElementById('qnote');if(_qn)_qn.hidden=true; // ready-within path bypasses refresh(); clear the hidden-match note
   const set=new Set((comingOnline(readyMonths).homes||[]).map(r=>r.id));
   let n=0; layer.clearLayers();
   for(const m of markers){ if(set.has(m._rec.id)){layer.addLayer(m);n++;} }

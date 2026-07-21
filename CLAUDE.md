@@ -43,5 +43,8 @@ Timbergrove/Lazybrook, West University.
 ## Working style
 
 - Verify root cause from actual file contents or logs before writing a fix.
-- Overwrite whole files rather than doing in-place string surgery.
+- Overwrite whole files rather than in-place string surgery — EXCEPT the 7
+  market .html files, which contain hand-authored embedded pin data that no
+  script can regenerate. Those get anchored edits on unique code strings,
+  applied identically across all 7.
 - Show me the plan before running anything that writes to committed files.
