@@ -2,7 +2,8 @@
 """
 run_and_deploy.py
 =====================================================================
-The hands-off updater that lives on the Mac Mini.
+The hands-off inspections updater. Runs on any machine that has the
+repo cloned and git push access — no specific host.
 
 It does two things, in order, with zero manual steps:
   1. Runs scrape_inspections.py to refresh each market's inspections
@@ -16,12 +17,12 @@ same way: push to main, Netlify CI rebuilds. Data refreshes add a
 "data: refresh inspections" commit each run; that is expected.
 
 ---------------------------------------------------------------------
-ONE-TIME SETUP ON THE MAC MINI
+ONE-TIME SETUP (any machine with the repo cloned)
 ---------------------------------------------------------------------
 1. You already have the venv from the scraper:
        source ~/insp-venv/bin/activate
 
-2. Clone the repo on the Mac Mini with git push auth set up (the push
+2. Clone the repo on that machine with git push auth set up (the push
    in step 4 must succeed non-interactively for cron).
 
 3. Test it once by hand:
