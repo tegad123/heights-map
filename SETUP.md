@@ -11,6 +11,11 @@ hosted on Netlify and rebuilds from `main` via CI, so there is one path:
 - **Inspection data (inspections.json + per-market files)** → the Mac Mini
   scraper commits and pushes them → Netlify CI rebuilds.
 
+Deploy is host-agnostic: any machine with the repo cloned and push access
+can `git push` to `main`. The **Mac Mini** is not special for deploying — it
+is just the scheduled scraper host (PART 2) that runs cron and pushes the
+inspection data on its own.
+
 (There used to be a direct Netlify-API upload for data. It has been
 removed — it replaced the whole site with just the JSON files and wiped
 everything else. Do not reintroduce it. Push to `main` is the only deploy.)
@@ -122,6 +127,11 @@ week and pushes them to the live map automatically. You do nothing.
   `[inspections]` log line; it says exactly what loaded or why it failed.
 
 ## Deploy path
-Data is versioned in git and Netlify rebuilds on each push — this is the
-only path. `git` is the default mode; `--mode git` is accepted but
-redundant. Requires the repo cloned on the Mac Mini with push access.
+Deployment is a `git push` to `main` from **any** machine that has the repo
+cloned with push access — Netlify CI rebuilds the full tree. There is no
+host-specific deploy path. `git` is the default mode; `--mode git` is
+accepted but redundant.
+
+The **Mac Mini** is only special as the *scheduled scraper host*: it runs the
+cron job (PART 2) that scrapes and pushes inspection data automatically. A
+manual deploy can come from your laptop or anywhere else with the repo.
