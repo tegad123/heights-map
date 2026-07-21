@@ -1,7 +1,7 @@
 {
   "25020503": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3779 SYRACUSE ST 77005",
     "inspections": [
       {
@@ -36,8 +36,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-06-29",
-        "result": "Failed",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -78,6 +78,12 @@
       },
       {
         "type": "COVER",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
         "date": "2026-04-10",
         "result": "Passed",
         "inspector": ""
@@ -91,8 +97,8 @@
     ]
   },
   "25038586": {
-    "status": "Partial",
-    "updated": "2026-07-09",
+    "status": "Passed",
+    "updated": "2026-07-20",
     "address": "2404 QUENBY ST 77005",
     "inspections": [
       {
@@ -175,8 +181,8 @@
       },
       {
         "type": "Struct Final",
-        "date": "2026-07-09",
-        "result": "Pending",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -200,13 +206,13 @@
       {
         "type": "1031-FDN PM",
         "date": "2026-07-09",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "INSULATION",
         "date": "2026-07-09",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -217,8 +223,8 @@
       },
       {
         "type": "FDN-WOOD/INSUL",
-        "date": "2026-07-09",
-        "result": "Pending",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -254,7 +260,7 @@
       {
         "type": "15 Final",
         "date": "2026-07-09",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -283,7 +289,7 @@
       },
       {
         "type": "Prefill",
-        "date": "2026-06-03",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -295,20 +301,26 @@
       },
       {
         "type": "3rd EC",
-        "date": "2026-07-02",
-        "result": "Failed",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Site Final",
-        "date": "2026-06-03",
-        "result": "Failed",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "TREE/SHRUB FNL",
         "date": "2026-07-09",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -327,7 +339,7 @@
   },
   "25038587": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2406 QUENBY ST 77005",
     "inspections": [
       {
@@ -409,6 +421,12 @@
         "inspector": ""
       },
       {
+        "type": "Struct Final",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "date": "2025-10-02",
         "result": "Passed",
@@ -428,13 +446,13 @@
       },
       {
         "type": "1031-FDN PM",
-        "date": "2025-10-02",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
       {
         "type": "INSULATION",
-        "date": "2026-02-20",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -446,7 +464,7 @@
       },
       {
         "type": "FDN-WOOD/INSUL",
-        "date": "2025-11-14",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -458,8 +476,8 @@
       },
       {
         "type": "AC FINAL",
-        "date": "2026-07-08",
-        "result": "Failed",
+        "date": "2026-07-13",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -518,7 +536,7 @@
       },
       {
         "type": "3rd EC",
-        "date": "2025-07-07",
+        "date": "2026-07-09",
         "result": "Failed",
         "inspector": ""
       },
@@ -526,6 +544,12 @@
         "type": "Site Final",
         "date": "2025-07-07",
         "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -550,7 +574,7 @@
   },
   "25037683": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "1803 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -585,7 +609,7 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-06-30",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -598,6 +622,12 @@
       {
         "type": "Nail Pattern",
         "date": "2026-06-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -623,7 +653,7 @@
   },
   "25037686": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "1807 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -658,8 +688,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-06-09",
-        "result": "Failed",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -671,6 +701,12 @@
       {
         "type": "Nail Pattern",
         "date": "2026-06-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -696,7 +732,7 @@
   },
   "25037688": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "1811 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -731,8 +767,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-06-09",
-        "result": "Failed",
+        "date": "2026-07-15",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -744,6 +780,12 @@
       {
         "type": "Nail Pattern",
         "date": "2026-06-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -769,7 +811,7 @@
   },
   "25078146": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "5329 DORA ST 77005",
     "inspections": [
       {
@@ -950,12 +992,24 @@
   },
   "25082414": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2428 NOTTINGHAM ST 77005",
     "inspections": [
       {
+        "type": "DITCH COVER",
+        "date": "2026-07-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "ROUGH",
         "date": "2026-04-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       },
@@ -1015,8 +1069,8 @@
       },
       {
         "type": "LATH",
-        "date": "2026-07-01",
-        "result": "Failed",
+        "date": "2026-07-10",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -1095,7 +1149,7 @@
   },
   "25117126": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2426 QUENBY ST 77005",
     "inspections": [
       {
@@ -1138,7 +1192,7 @@
   },
   "25117127": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2424 QUENBY ST 77005",
     "inspections": [
       {
@@ -1181,7 +1235,7 @@
   },
   "25072450": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "5303 CHEROKEE ST 77005",
     "inspections": [
       {
@@ -1199,6 +1253,12 @@
       {
         "type": "SEWER",
         "date": "2025-09-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2026-07-10",
         "result": "Passed",
         "inspector": ""
       },
@@ -1297,12 +1357,24 @@
         "date": "2025-09-10",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "25076577": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3802 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -1549,7 +1621,7 @@
   },
   "25083081": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2357 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -1652,7 +1724,7 @@
   },
   "25052444": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3746 CHILDRESS ST 77005",
     "inspections": [
       {
@@ -1776,6 +1848,12 @@
         "inspector": ""
       },
       {
+        "type": "DECOR AD FINAL",
+        "date": "2026-07-20",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "DITCH COVER",
         "date": "2026-03-25",
         "result": "Passed",
@@ -1815,7 +1893,7 @@
   },
   "25068930": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2325 WROXTON RD 77005",
     "inspections": [
       {
@@ -2080,7 +2158,7 @@
   },
   "25077921": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3782 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -2122,6 +2200,12 @@
       {
         "type": "ROUGH IN",
         "date": "2026-03-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2026-07-16",
         "result": "Passed",
         "inspector": ""
       },
@@ -2195,7 +2279,7 @@
   },
   "25101670": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "5312 CHEROKEE ST 77005",
     "inspections": [
       {
@@ -2238,7 +2322,7 @@
   },
   "25106029": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2334 DUNSTAN RD 77005",
     "inspections": [
       {
@@ -2306,12 +2390,18 @@
         "date": "2025-11-13",
         "result": "Failed",
         "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-17",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "25076059": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2410 QUENBY ST 77005",
     "inspections": [
       {
@@ -2507,6 +2597,18 @@
         "inspector": ""
       },
       {
+        "type": "GROUND IN",
+        "date": "2026-07-20",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "P4 FINAL",
+        "date": "2026-07-20",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "TEMP GAS INSP",
         "date": "2026-05-27",
         "result": "Passed",
@@ -2522,7 +2624,7 @@
   },
   "25076060": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2412 QUENBY ST 77005",
     "inspections": [
       {
@@ -2700,6 +2802,18 @@
         "inspector": ""
       },
       {
+        "type": "GROUND IN",
+        "date": "2026-07-20",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2026-07-20",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "TEMP GAS INSP",
         "date": "2026-05-27",
         "result": "Passed",
@@ -2715,7 +2829,7 @@
   },
   "25053572": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3753 DRAKE ST 77005",
     "inspections": [
       {
@@ -2812,7 +2926,7 @@
   },
   "26038687": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2405 NOTTINGHAM ST 77005",
     "inspections": [
       {
@@ -2825,7 +2939,7 @@
   },
   "26019294": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "2328 QUENBY ST 77005",
     "inspections": [
       {
@@ -2853,6 +2967,12 @@
         "inspector": ""
       },
       {
+        "type": "Nail Pattern",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "1031-FDN PM",
         "date": "2026-05-22",
         "result": "Passed",
@@ -2860,8 +2980,8 @@
       },
       {
         "type": "WINDSTORM",
-        "date": "2026-07-06",
-        "result": "Failed",
+        "date": "2026-07-10",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -2904,9 +3024,21 @@
   },
   "26017678": {
     "status": "Partial",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "5335 MANDELL ST 77005",
     "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "inspector": ""
+      },
       {
         "type": "Piers AM",
         "date": "2026-07-01",
@@ -2923,7 +3055,7 @@
   },
   "26027179": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3771 PURDUE ST 77005",
     "inspections": [
       {
@@ -2960,7 +3092,7 @@
   },
   "26030757": {
     "status": "Passed",
-    "updated": "2026-07-09",
+    "updated": "2026-07-20",
     "address": "3743 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -2984,6 +3116,38 @@
       {
         "type": "SAWPOLE FINAL",
         "date": "2026-06-11",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26031875": {
+    "status": "Passed",
+    "updated": "2026-07-20",
+    "address": "2337 WROXTON RD 77005",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-13",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26042600": {
+    "status": "Passed",
+    "updated": "2026-07-20",
+    "address": "2341 WROXTON RD 77005",
+    "inspections": [
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-07-15",
         "result": "Passed",
         "inspector": ""
       }
