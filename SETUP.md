@@ -4,11 +4,16 @@ Goal: stop manually re-uploading. After this, you `git push` to update the
 map, and the Mac Mini pushes inspection data on its own. You never drag a
 file into Netlify again.
 
-There are two separate auto-updates, and they work differently on purpose:
+Everything ships the same way — a push to GitHub `main`. The site is
+hosted on Netlify and rebuilds from `main` via CI, so there is one path:
 
-- **Map code (index.html)** → lives in GitHub → Netlify auto-rebuilds on every push.
-- **Inspection data (inspections.json)** → the Mac Mini scraper uploads it
-  straight to Netlify via API → updates instantly, no rebuild, no git noise.
+- **Map code (index.html)** → commit + push → Netlify CI rebuilds.
+- **Inspection data (inspections.json + per-market files)** → the Mac Mini
+  scraper commits and pushes them → Netlify CI rebuilds.
+
+(There used to be a direct Netlify-API upload for data. It has been
+removed — it replaced the whole site with just the JSON files and wiped
+everything else. Do not reintroduce it. Push to `main` is the only deploy.)
 
 ---
 
@@ -66,20 +71,16 @@ into a folder, e.g. `/Users/spencer/jarvis/inspections/`.
 ```bash
 python3 -m venv ~/insp-venv
 source ~/insp-venv/bin/activate
-pip install playwright requests
+pip install playwright
 playwright install chromium
 ```
 
-### 3. Get your two Netlify values
-- **Site ID**: Netlify → your site → Site configuration → copy **Site ID**.
-- **Access token**: Netlify → (avatar) User settings → Applications →
-  Personal access tokens → **New access token** → copy it (you only see it once).
-
-Add them to `~/.zshrc` so cron can read them:
+### 3. Clone the repo with push access
+The scraper commits and pushes, so the Mac Mini needs the repo cloned and
+git push auth set up to work non-interactively (SSH key or a cached
+credential helper) — cron cannot answer a password prompt.
 ```bash
-echo 'export NETLIFY_SITE_ID="paste-site-id-here"' >> ~/.zshrc
-echo 'export NETLIFY_TOKEN="paste-token-here"'     >> ~/.zshrc
-source ~/.zshrc
+git clone git@github.com:YOUR_USERNAME/heights-map.git /Users/spencer/jarvis/inspections
 ```
 
 ### 4. Test it once
@@ -88,9 +89,9 @@ source ~/insp-venv/bin/activate
 cd /Users/spencer/jarvis/inspections
 python3 run_and_deploy.py --limit 5
 ```
-Watch for `Deployed inspections.json`. Then open the live map — the header
-badge should read green "● inspections: N permits live". If it does, the
-whole pipeline works.
+Watch for `Pushed inspection files to GitHub`. Netlify CI rebuilds from
+`main` in ~30s; then open the live map — the header badge should read green
+"● inspections: N permits live". If it does, the whole pipeline works.
 
 ### 5. Schedule it (every Mon & Thu, 5am)
 ```bash
@@ -120,10 +121,7 @@ week and pushes them to the live map automatically. You do nothing.
 - Check the browser console (right-click → Inspect → Console) for the
   `[inspections]` log line; it says exactly what loaded or why it failed.
 
-## Optional: have the scraper version data in git instead
-If you ever want the inspection history tracked in git (with a rebuild each
-run instead of the instant API push):
-```bash
-python3 run_and_deploy.py --mode git
-```
-Requires the repo cloned on the Mac Mini with push access.
+## Deploy path
+Data is versioned in git and Netlify rebuilds on each push — this is the
+only path. `git` is the default mode; `--mode git` is accepted but
+redundant. Requires the repo cloned on the Mac Mini with push access.

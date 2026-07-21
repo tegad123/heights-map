@@ -5,42 +5,30 @@ run_and_deploy.py
 The hands-off updater that lives on the Mac Mini.
 
 It does two things, in order, with zero manual steps:
-  1. Runs scrape_inspections.py to refresh inspections.json from the
-     Houston Permitting Center.
-  2. Pushes the fresh inspections.json straight to your live Netlify
-     site via the Netlify API — NO git commit, NO full rebuild, no
-     re-upload. The map sees the new data on its next 6-hour refresh
-     (or whenever someone reloads).
+  1. Runs scrape_inspections.py to refresh each market's inspections
+     JSON from the Houston Permitting Center.
+  2. Commits the fresh inspection files and pushes to GitHub main.
+     The site is hosted on Netlify and rebuilds from main via CI, so
+     the push is the whole deploy — there is no other path.
 
-This is the "clean" architecture: your map code lives in GitHub and
-deploys on your pushes; the every-few-days DATA refresh goes directly
-to Netlify so it doesn't spam your git history with "data update"
-commits or trigger a rebuild each time.
+The map code and the inspection DATA both live in git and ship the
+same way: push to main, Netlify CI rebuilds. Data refreshes add a
+"data: refresh inspections" commit each run; that is expected.
 
 ---------------------------------------------------------------------
 ONE-TIME SETUP ON THE MAC MINI
 ---------------------------------------------------------------------
 1. You already have the venv from the scraper:
        source ~/insp-venv/bin/activate
-       pip install requests          # (scraper already needs playwright)
 
-2. Get two values from Netlify and put them in this script (or, better,
-   in environment variables so they're not sitting in a file):
-
-   NETLIFY_SITE_ID  - Netlify dashboard -> your site -> Site configuration
-                      -> "Site ID" (looks like a UUID).
-   NETLIFY_TOKEN    - Netlify -> User settings -> Applications ->
-                      "Personal access tokens" -> New access token.
-                      Scope it to this one site if you can.
-
-   Set them in your shell profile (~/.zshrc) so cron picks them up:
-       export NETLIFY_SITE_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-       export NETLIFY_TOKEN="nfp_xxxxxxxxxxxxxxxxxxxx"
+2. Clone the repo on the Mac Mini with git push auth set up (the push
+   in step 4 must succeed non-interactively for cron).
 
 3. Test it once by hand:
        source ~/insp-venv/bin/activate
-       python3 run_and_deploy.py --limit 5      # scrape 5, deploy
-   Watch the output. If it says "Deployed inspections.json", you're done.
+       python3 run_and_deploy.py --limit 5      # scrape 5, commit+push
+   Watch the output. If it says "Pushed inspection files to GitHub",
+   Netlify CI will rebuild from main.
 
 4. Schedule it (cron, every Mon/Thu at 5am):
        crontab -e
@@ -49,15 +37,7 @@ ONE-TIME SETUP ON THE MAC MINI
                     /Users/spencer/insp-venv/bin/python run_and_deploy.py \
                     >> deploy.log 2>&1
 
-After that you never touch it. Scrape -> deploy -> map updates. Done.
-
----------------------------------------------------------------------
-ALTERNATIVE: commit to GitHub instead of direct Netlify upload
----------------------------------------------------------------------
-If you'd rather have the data versioned in git (and don't mind a
-rebuild each run), pass --mode git. That stages inspections.json,
-commits, and pushes; Netlify's GitHub integration rebuilds the site.
-Requires the repo cloned on the Mac Mini and git push auth set up.
+After that you never touch it. Scrape -> push -> Netlify rebuilds. Done.
 =====================================================================
 """
 
@@ -70,44 +50,33 @@ import json
 HERE = os.path.dirname(os.path.abspath(__file__))
 SCRAPER = os.path.join(HERE, "scrape_inspections.py")
 
-# Each market: which permit list feeds it, which inspections file it writes,
-# and the path Netlify serves it at. New markets are one entry each; the
-# scraper skips any market whose permit file doesn't exist yet.
+# Each market: which permit list feeds it and which inspections file it
+# writes (committed to git and served by Netlify at /<basename>). New
+# markets are one entry each; the scraper skips any market whose permit
+# file doesn't exist yet.
 MARKETS = [
     {"name": "heights",
      "permits": os.path.join(HERE, "heights_permits.json"),
-     "out":     os.path.join(HERE, "inspections.json"),
-     "netlify_path": "/inspections.json"},
+     "out":     os.path.join(HERE, "inspections.json")},
     {"name": "montrose",
      "permits": os.path.join(HERE, "montrose_permits.json"),
-     "out":     os.path.join(HERE, "inspections_montrose.json"),
-     "netlify_path": "/inspections_montrose.json"},
+     "out":     os.path.join(HERE, "inspections_montrose.json")},
     {"name": "westu",
      "permits": os.path.join(HERE, "westu_permits.json"),
-     "out":     os.path.join(HERE, "inspections_westu.json"),
-     "netlify_path": "/inspections_westu.json"},
+     "out":     os.path.join(HERE, "inspections_westu.json")},
     {"name": "riveroaks",
      "permits": os.path.join(HERE, "riveroaks_permits.json"),
-     "out":     os.path.join(HERE, "inspections_riveroaks.json"),
-     "netlify_path": "/inspections_riveroaks.json"},
+     "out":     os.path.join(HERE, "inspections_riveroaks.json")},
     {"name": "springbranch",
      "permits": os.path.join(HERE, "springbranch_permits.json"),
-     "out":     os.path.join(HERE, "inspections_springbranch.json"),
-     "netlify_path": "/inspections_springbranch.json"},
+     "out":     os.path.join(HERE, "inspections_springbranch.json")},
     {"name": "springvalley",
      "permits": os.path.join(HERE, "springvalley_permits.json"),
-     "out":     os.path.join(HERE, "inspections_springvalley.json"),
-     "netlify_path": "/inspections_springvalley.json"},
+     "out":     os.path.join(HERE, "inspections_springvalley.json")},
     {"name": "timbergrove",
      "permits": os.path.join(HERE, "timbergrove_permits.json"),
-     "out":     os.path.join(HERE, "inspections_timbergrove.json"),
-     "netlify_path": "/inspections_timbergrove.json"},
+     "out":     os.path.join(HERE, "inspections_timbergrove.json")},
 ]
-
-# Read from env first; fall back to inline (leave blank and use env in prod).
-NETLIFY_SITE_ID = os.environ.get("NETLIFY_SITE_ID", "")
-NETLIFY_TOKEN = os.environ.get("NETLIFY_TOKEN", "")
-
 
 def run_scraper(market, limit):
     """Run the Playwright scraper for one market; writes/merges its out file."""
@@ -134,72 +103,6 @@ def run_scraper(market, limit):
         return False
 
 
-def deploy_netlify(markets):
-    """Upload all markets' inspection files to the live site in ONE deploy.
-
-    Uses the file-digest deploy endpoint: declare the SHA1 of every file
-    we want live, Netlify tells us which bytes it still needs, we PUT those.
-    Declaring all files in a single deploy keeps the other files on the site
-    intact (a deploy that names only some files leaves the rest as-is only
-    when we pass the full digest set — so we include every market's file).
-    """
-    try:
-        import requests
-    except ImportError:
-        sys.exit("pip install requests  (needed for Netlify upload)")
-
-    if not NETLIFY_SITE_ID or not NETLIFY_TOKEN:
-        sys.exit(
-            "NETLIFY_SITE_ID / NETLIFY_TOKEN not set.\n"
-            "Set them as environment variables (see the header of this file)."
-        )
-
-    import hashlib
-    headers = {"Authorization": f"Bearer {NETLIFY_TOKEN}"}
-    base = f"https://api.netlify.com/api/v1/sites/{NETLIFY_SITE_ID}"
-
-    # Build the digest map for every market file that exists on disk.
-    files_map = {}
-    blobs = {}
-    for m in markets:
-        if not os.path.exists(m["out"]):
-            continue
-        blob = open(m["out"], "rb").read()
-        sha = hashlib.sha1(blob).hexdigest()
-        files_map[m["netlify_path"]] = sha
-        blobs[m["netlify_path"]] = (sha, blob)
-    if not files_map:
-        print("No inspection files to deploy.")
-        return
-
-    r = requests.post(
-        f"{base}/deploys",
-        headers={**headers, "Content-Type": "application/json"},
-        json={"files": files_map},
-        timeout=60,
-    )
-    r.raise_for_status()
-    deploy = r.json()
-    deploy_id = deploy["id"]
-    required = set(deploy.get("required") or [])
-
-    for path, (sha, blob) in blobs.items():
-        if sha in required:
-            up = requests.put(
-                f"https://api.netlify.com/api/v1/deploys/{deploy_id}/files{path}",
-                headers={**headers, "Content-Type": "application/octet-stream"},
-                data=blob,
-                timeout=120,
-            )
-            up.raise_for_status()
-            print(f"Uploaded {path} bytes to Netlify.")
-        else:
-            print(f"Netlify already had current {path} (no change).")
-
-    print(f"Deployed {len(files_map)} inspection file(s) — deploy id {deploy_id}")
-    print(f"Live URL: {deploy.get('ssl_url') or deploy.get('url','(check dashboard)')}")
-
-
 def deploy_git(markets):
     """Commit + push all markets' inspection files; Netlify rebuilds."""
     for m in markets:
@@ -216,8 +119,8 @@ def deploy_git(markets):
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape inspections then auto-deploy")
-    ap.add_argument("--mode", choices=["netlify", "git"], default="netlify",
-                    help="netlify = direct API upload (no rebuild); git = commit+push")
+    ap.add_argument("--mode", choices=["git"], default="git",
+                    help="git = commit+push; Netlify CI rebuilds from the push")
     ap.add_argument("--limit", type=int, default=0,
                     help="Only scrape first N permits (testing). 0 = all")
     ap.add_argument("--skip-scrape", action="store_true",
@@ -242,10 +145,7 @@ def main():
             print("No market produced valid data; nothing to deploy.")
             sys.exit(1)
 
-    if args.mode == "netlify":
-        deploy_netlify(markets)
-    else:
-        deploy_git(markets)
+    deploy_git(markets)
 
 
 if __name__ == "__main__":
