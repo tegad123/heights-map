@@ -435,7 +435,7 @@ syncListed();
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.744,-95.394],14);
 L.control.zoom({position:'bottomright'}).addTo(map);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{maxZoom:20,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
-const HD_POLYS=[[[29.7904,-95.40374],[29.7999,-95.403959],[29.7999,-95.399372],[29.7904,-95.399154]],[[29.7904,-95.397738],[29.8042,-95.398055],[29.8042,-95.392479],[29.7904,-95.392162]],[[29.7777,-95.397446],[29.7904,-95.397738],[29.7904,-95.392162],[29.7777,-95.39187]],[[29.7929,-95.399211],[29.7947,-95.399253],[29.7947,-95.398553],[29.7929,-95.398511]],[[29.8009,-95.399395],[29.8016,-95.399411],[29.8016,-95.398712],[29.8009,-95.398695]]]; // Official: Heights West / East / South + Yale annex (houstontx.gov)
+const HD_POLYS=[[[29.74055,-95.41074],[29.7286,-95.4106],[29.724,-95.387],[29.73304,-95.38683],[29.73906,-95.3823],[29.74548,-95.38163],[29.74688,-95.38176],[29.74685,-95.38394],[29.75032,-95.384],[29.75028,-95.38572],[29.76158,-95.38581],[29.76294,-95.39566],[29.76178,-95.39912],[29.76199,-95.40098],[29.76094,-95.40374],[29.76045,-95.40839],[29.75635,-95.40833],[29.7545,-95.41066]]]; // Montrose/Neartown (OSM outline, south edge extended Richmond->US-59); Fourth Ward + deed-acq spillover pins sit outside by design
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});
 
@@ -995,7 +995,8 @@ function phaseBreakdown(){
 function comingOnline(months,prodTag){
   let n=0; const list=[];
   for(const r of pipelineHomes()){
-    if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
+    if(prodTag==='frontloader'){if(r.prod!=='Frontloader')continue;}
+    else if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
     const ml=monthsLeft(r.id);
     if(ml!==null && ml!==undefined && ml<=months){n++; list.push(r);}
   }
@@ -1065,7 +1066,7 @@ function buildOverview(){
   document.getElementById('ovBody').innerHTML=h;
 }
 let TL_PRODUCT='all';
-function tlMatch(id){if(TL_PRODUCT==='all')return true;return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
+function tlMatch(id){if(TL_PRODUCT==='all')return true;if(TL_PRODUCT==='frontloader'){const r=DATA.find(x=>x.id===id);return !!r&&r.prod==='Frontloader';}return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
 function buildTimeline(){
   const now=new Date(); const base=new Date(now.getFullYear(),now.getMonth(),1);
   const buckets={}; let noStage=0,deedN=0;
@@ -1084,7 +1085,7 @@ function buildTimeline(){
   const _pf=TL_PRODUCT==='all'?null:TL_PRODUCT;
   const c3=comingOnline(3,_pf).count,c6=comingOnline(6,_pf).count,c12=comingOnline(12,_pf).count;
   let h='<h2>Timeline to Completion</h2>';
-  h+='<div class="tlx-filter">'+[['all','ALL'],['active_single','SINGLE LOT'],['active_split','SPLIT LOT']].map(([v,l])=>'<button class="tlxf'+(TL_PRODUCT===v?' on':'')+'" data-tlp="'+v+'">'+l+'</button>').join('')+'</div>';
+  h+='<div class="tlx-filter">'+[['all','ALL'],['active_single','SINGLE LOT'],['active_split','SPLIT LOT'],['frontloader','COMMON DRIVEWAY']].map(([v,l])=>'<button class="tlxf'+(TL_PRODUCT===v?' on':'')+'" data-tlp="'+v+'">'+l+'</button>').join('')+'</div>';
   h+='<div class="tlx-tiles">';
   h+='<div class="tlx-tile"><div class="n">'+c3+'</div><div class="l">WITHIN 3 MO</div></div>';
   h+='<div class="tlx-tile"><div class="n">'+c6+'</div><div class="l">WITHIN 6 MO</div></div>';

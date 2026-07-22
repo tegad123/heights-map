@@ -995,7 +995,8 @@ function phaseBreakdown(){
 function comingOnline(months,prodTag){
   let n=0; const list=[];
   for(const r of pipelineHomes()){
-    if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
+    if(prodTag==='frontloader'){if(r.prod!=='Frontloader')continue;}
+    else if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
     const ml=monthsLeft(r.id);
     if(ml!==null && ml!==undefined && ml<=months){n++; list.push(r);}
   }
@@ -1065,7 +1066,7 @@ function buildOverview(){
   document.getElementById('ovBody').innerHTML=h;
 }
 let TL_PRODUCT='all';
-function tlMatch(id){if(TL_PRODUCT==='all')return true;return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
+function tlMatch(id){if(TL_PRODUCT==='all')return true;if(TL_PRODUCT==='frontloader'){const r=DATA.find(x=>x.id===id);return !!r&&r.prod==='Frontloader';}return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
 function buildTimeline(){
   const now=new Date(); const base=new Date(now.getFullYear(),now.getMonth(),1);
   const buckets={}; let noStage=0,deedN=0;
@@ -1084,7 +1085,7 @@ function buildTimeline(){
   const _pf=TL_PRODUCT==='all'?null:TL_PRODUCT;
   const c3=comingOnline(3,_pf).count,c6=comingOnline(6,_pf).count,c12=comingOnline(12,_pf).count;
   let h='<h2>Timeline to Completion</h2>';
-  h+='<div class="tlx-filter">'+[['all','ALL'],['active_single','SINGLE LOT'],['active_split','SPLIT LOT']].map(([v,l])=>'<button class="tlxf'+(TL_PRODUCT===v?' on':'')+'" data-tlp="'+v+'">'+l+'</button>').join('')+'</div>';
+  h+='<div class="tlx-filter">'+[['all','ALL'],['active_single','SINGLE LOT'],['active_split','SPLIT LOT'],['frontloader','COMMON DRIVEWAY']].map(([v,l])=>'<button class="tlxf'+(TL_PRODUCT===v?' on':'')+'" data-tlp="'+v+'">'+l+'</button>').join('')+'</div>';
   h+='<div class="tlx-tiles">';
   h+='<div class="tlx-tile"><div class="n">'+c3+'</div><div class="l">WITHIN 3 MO</div></div>';
   h+='<div class="tlx-tile"><div class="n">'+c6+'</div><div class="l">WITHIN 6 MO</div></div>';
