@@ -270,7 +270,7 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 <div id="timeline" class="overlay"><div class="dash" id="tlBody"></div></div>
 <div id="ask" class="overlay"><div class="dash" id="askBody">
   <h2 style="margin:0 0 4px">Ask the Map</h2>
-  <p class="note-foot" style="margin:0 0 12px">Answers come from the live map data — supply, phases, pricing, competition. Try: "Which active split-lot listings compete with 609 E 25th?" · "How many homes hit the market in the next 90 days?" · "Which builders have the most under construction?"</p>
+  <p class="note-foot" style="margin:0 0 12px">Answers come from the live map data — supply, phases, pricing, competition. Try: "How many split lots are on the market right now?" · "How many homes hit the market in the next 90 days?" · "Which builders have the most under construction?"</p>
   <div id="askLog"></div>
   <div id="askRow"><textarea id="askIn" rows="2" placeholder="Ask anything about the map…"></textarea><button id="askGo">Ask</button></div>
 </div></div>
@@ -430,6 +430,9 @@ function syncListed(){for(const r of DATA){const p=pt(r.id);const should=r.kind=
   if(should&&!has)p.tags=(p.tags||[]).concat(['listed']);
   else if(!should&&has)p.tags=p.tags.filter(t=>t!=='listed');}}
 syncListed();
+// field-first classification: row fields (ty/kind/prod) win where present; tags cover legacy rows
+function prodKeyR(r){if(r.ty==='active_split')return'Split Lot';if(r.ty==='active_single')return'Single Lot';if(r.prod==='Split Lot')return'Split Lot';if(r.prod==='Single Lot')return'Single Lot';const t=(state.points[r.id]||{}).tags||[];return t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);}
+function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==undefined&&r.st!=='pending';return ((state.points[r.id]||{}).tags||[]).includes('listed');}
 
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.80,-95.40],13);
@@ -996,6 +999,7 @@ function comingOnline(months,prodTag){
   let n=0; const list=[];
   for(const r of pipelineHomes()){
     if(prodTag==='frontloader'){if(r.prod!=='Frontloader')continue;}
+    else if(prodTag==='active_split'||prodTag==='active_single'){const k=prodKeyR(r);if(k){if(k!==(prodTag==='active_split'?'Split Lot':'Single Lot'))continue;}else if(!((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;}
     else if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
     const ml=monthsLeft(r.id);
     if(ml!==null && ml!==undefined && ml<=months){n++; list.push(r);}
@@ -1066,7 +1070,7 @@ function buildOverview(){
   document.getElementById('ovBody').innerHTML=h;
 }
 let TL_PRODUCT='all';
-function tlMatch(id){if(TL_PRODUCT==='all')return true;if(TL_PRODUCT==='frontloader'){const r=DATA.find(x=>x.id===id);return !!r&&r.prod==='Frontloader';}return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
+function tlMatch(id){if(TL_PRODUCT==='all')return true;const r=DATA.find(x=>x.id===id);if(TL_PRODUCT==='frontloader')return !!r&&r.prod==='Frontloader';if(TL_PRODUCT==='active_split'||TL_PRODUCT==='active_single'){const k=r?prodKeyR(r):null;if(k)return k===(TL_PRODUCT==='active_split'?'Split Lot':'Single Lot');}return ((state.points[id]||{}).tags||[]).includes(TL_PRODUCT);}
 function buildTimeline(){
   const now=new Date(); const base=new Date(now.getFullYear(),now.getMonth(),1);
   const buckets={}; let noStage=0,deedN=0;
@@ -1109,7 +1113,7 @@ function buildTimeline(){
     const show=b.items.slice(0,3);
     for(const r of show){const p=homePhase(r.id);const t=pt(r.id).tags||[];
       let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
-      if(p==='market'){const sp=t.includes('active_split'),pu=t.includes('punch');
+      if(p==='market'){const sp=prodKeyR(r)==='Split Lot',pu=t.includes('punch');
         lbl=(sp?'Split':'Single')+(pu?' · Punch List':' · Finished');}
       h+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
     if(b.items.length>3)h+='<div class="tlx-more" data-more="'+esc(b.label)+'">+ '+(b.items.length-3)+' more homes</div>';
@@ -1126,7 +1130,7 @@ function buildTimeline(){
     let hh='';
     for(const r of bkt.items.slice(3)){const p=homePhase(r.id);const t=pt(r.id).tags||[];
       let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
-      if(p==='market'){const sp=t.includes('active_split'),pu=t.includes('punch');lbl=(sp?'Split':'Single')+(pu?' · Punch List':' · Finished');}
+      if(p==='market'){const sp=prodKeyR(r)==='Split Lot',pu=t.includes('punch');lbl=(sp?'Split':'Single')+(pu?' · Punch List':' · Finished');}
       hh+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
     this.outerHTML=hh;
     el.querySelectorAll('[data-go]').forEach(y=>y.addEventListener('click',()=>openPin(y.getAttribute('data-go'))));
@@ -1172,21 +1176,21 @@ function askContext(){
       deedLines.push([r.a.replace(/, Houston.*$/i,''),r.sd||'-',(monthsSince===null?'-':monthsSince+'mo ago'),r.llc||'-',r.v||'-',(r.lot?r.lot+'sqft':'-'),act,contacts,(r.f||'').split(', ').filter(x=>/vacant|corner|out of state|senior|free and clear/i.test(x)).join(',')||'-'].join(' | '));
       continue;
     }
-    let grp;const listed=t.includes('listed');
-    if(listed){grp=ph==='market'?'active_on_market_READY':'active_on_market_UNDER_CONSTRUCTION';agg.active_on_market++;const pd=r.prod||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;if(ph==='market')agg.active_ready=(agg.active_ready||0)+1;else agg.active_still_building=(agg.active_still_building||0)+1;}
+    let grp;const listed=isListedR(r);
+    if(listed){grp=ph==='market'?'active_on_market_READY':'active_on_market_UNDER_CONSTRUCTION';agg.active_on_market++;const pd=r.prod||prodKeyR(r)||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;if(ph==='market')agg.active_ready=(agg.active_ready||0)+1;else agg.active_still_building=(agg.active_still_building||0)+1;}
     else if(t.includes('built')){grp='built_not_listed';agg.built_not_listed=(agg.built_not_listed||0)+1;}
-    else if(ph&&ph!=='market'){grp='under_construction';agg.under_construction++;const pd=r.prod||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
+    else if(ph&&ph!=='market'){grp='under_construction';agg.under_construction++;const pd=r.prod||prodKeyR(r)||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
     else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
     else grp='other';
     const ml=monthsLeft(r.id);
     const note=((state.points[r.id]||{}).notes||'').split('\n')[0].slice(0,90);
-    lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',note].join(' | '));
+    lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||prodKeyR(r)||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',note].join(' | '));
   }
   // cross-tabs matching the sidebar exactly (tag-based grouping)
   const active_breakdown={'Single Lot':{move_in_ready:0,still_building:0},'Split Lot':{move_in_ready:0,still_building:0}};
   const uc_breakdown={'Single Lot':{foundation:0,framing:0,dried_in:0,finishing:0},'Split Lot':{foundation:0,framing:0,dried_in:0,finishing:0}};
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
-    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    const key=prodKeyR(r);
     if(!key)continue;
     const phx=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
     if(t.includes('listed')){if(t.includes('market'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
@@ -1203,14 +1207,14 @@ function askContext(){
     if(t.includes('deed'))continue;
     const ml=monthsLeft(r.id);if(ml===null||ml===undefined)continue;
     const ph=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
-    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    const key=prodKeyR(r);
     for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
       if(ml<=0||t.includes('market'))f.ready_now+=UW(r.id);
       else if(ph)f.by_phase_cohort[ph]+=UW(r.id);}}
   // done_within stays as a cumulative count using the flat estimate — but labeled as an approximation.
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     if(t.includes('deed'))continue;const ml=monthsLeft(r.id);if(ml===null||ml===undefined||ml<=0)continue;
-    const key=t.includes('active_split')?'Split Lot':(t.includes('active_single')?'Single Lot':null);
+    const key=prodKeyR(r);
     for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
       for(let m=Math.max(1,Math.ceil(ml));m<=12;m++)f.done_within[m]=(f.done_within[m]||0)+1;}}
   return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
