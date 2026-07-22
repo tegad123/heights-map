@@ -759,7 +759,7 @@ function popupHTML(r){
   {const ft=noteFreeText(p.notes);
    if(VIEWER){ if(ft) h+='<div class="notebox">'+esc(ft)+'</div>'; h+='</div>'; }
    else h+='<textarea class="note-in" placeholder="Add a note…">'+esc(ft)+'</textarea><div class="saved">saved</div></div>';}
-  if(r.f){const fl=r.f.split(',').map(x=>x.trim()).filter(Boolean);if(fl.length){h+='<div class="flags">';for(const f of fl)h+='<span class="chip">'+esc(f)+'</span>';h+='</div>';}}
+  if(r.f){const fl=r.f.split(', ').map(x=>x.trim()).filter(Boolean);if(fl.length){h+='<div class="flags">';for(const f of fl)h+='<span class="chip">'+esc(f)+'</span>';h+='</div>';}}
   if(r.c&&r.c.length){h+='<div class="contacts"><div class="lbl">Contacts</div>';
     for(const ct of r.c){h+='<div class="contact">';if(ct.n)h+='<div class="nm">'+esc(ct.n)+'</div>';
       for(const num of(ct.p||[]))h+='<a href="'+telHref(num)+'">'+esc(fmtPhone(num))+'</a>';
