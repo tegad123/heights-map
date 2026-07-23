@@ -1,0 +1,27 @@
+master_address,twin_address,master_id,twin_id,units
+"118 E 23rd St, Houston, Tx 77008","116 E 23RD Street",2131144961,act_116-e-23rd-street,2
+"713 E 26th St, Houston, Tx 77009","711 E 26TH Street",2131192874,act_711-e-26th-street,2
+"1120 E 26th St, Houston, Tx 77009","1122 E 26th St, Houston, TX 77009",2131318242,pmt_1122-e-26th-st-77009,2
+"820 Waverly St A, Houston, TX 77007","820 Waverly St B, Houston, TX 77007",pmt_820-waverly-st-a-77007,pmt_820-waverly-st-b-77007,2
+"310 W 9th St, Houston, TX 77007","312 w 9th St",pmt_310-w-9th-st-77007,act_312-w-9th-st,2
+"1520 W 21st St B, Houston, TX 77008","1520 W 21st St Unit#A",pmt_1520-w-21st-st-b-77008,act_1520-w-21st-st-unit-a,2
+"529 W 27th St, Houston, TX 77008","527 W 27th St, Houston, Tx 77008",pmt_529-w-27th-st-77008,2131143861,2
+"1432 Alexander St, Houston, TX 77008","1434 Alexander Street",pmt_1432-alexander-st-77008,act_1434-alexander-street,2
+"711 E 25th St A, Houston, TX 77008","711 E 25th St B, Houston, TX 77008",pmt_711-e-25th-st-a-77008,pmt_711-e-25th-st-b-77008,2
+"1320 Alexander St A, Houston, TX 77008","1320 Alexander St B, Houston, TX 77008",pmt_1320-alexander-st-a-77008,pmt_1320-alexander-st-b-77008,2
+"112 E 27th St A, Houston, TX 77008","112 E 27th Street",pmt_112-e-27th-st-a-77008,act_112-e-27th-street,2
+"1322 Lawrence St, Houston, TX 77008","1324 Lawrence Street",pmt_1322-lawrence-st-77008,act_1324-lawrence-street,2
+"1033 Voight St, Houston, TX 77009","1035 Voight St, Houston, TX 77009",pmt_1033-voight-st-77009,pmt_1035-voight-st-77009,2
+"1107 E 24th St, Houston, TX 77009","1109 E 24th St, Houston, TX 77009",pmt_1107-e-24th-st-77009,pmt_1109-e-24th-st-77009,2
+"1010 E 26th St, Houston, TX 77009","1012 E 26TH Street",pmt_1010-e-26th-st-77009,act_1012-e-26th-street,2
+"409 Walton St A, Houston, TX 77009","409 Walton St B, Houston, TX 77009",pmt_409-walton-st-a-77009,pmt_409-walton-st-b-77009,2
+"1124 Robbie St, Houston, TX 77009","1122 Robbie St, Houston, TX 77009",pmt_1124-robbie-st-77009,pmt_1122-robbie-st-77009,2
+"1135 Adele St, Houston, TX 77009","1137 Adele St, Houston, TX 77009",pmt_1135-adele-st-77009,pmt_1137-adele-st-77009,2
+"932 Algregg St, Houston, TX 77009","934 Algregg St, Houston, TX 77009",pmt_932-algregg-st-77009,pmt_934-algregg-st-77009,2
+"805 W 22nd Street","807 W 22nd St, Houston, TX 77008",act_805-w-22nd-street,pmt_807-w-22nd-st-77008,2
+"318 W 21st Street","318 W 21st St B (est), Houston, TX 77008",act_318-w-21st-street,pmt_318b-w-21st-st-77008,2
+"609 W 27th Street","607 W 27th St, Houston, TX 77008",act_609-w-27th-street,pmt_607-w-27th-st-77008,2
+"407 E 27TH Street","409 E 27th St, Houston, TX 77008",act_407-e-27th-street,pmt_409-e-27th-st-77008,2
+"1229 Prince Street","1227 Prince Street",act_1229-prince-street,act_1227-prince-street,2
+"814 W 17TH Street","816 W 17TH Street",act_814-w-17th-street,act_816-w-17th-street,2
+"611 E 25th Street Unit#A","611 E 25th Street Unit#B",act_611-e-25th-street-unit-a,act_611-e-25th-street-unit-b,2
