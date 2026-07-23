@@ -318,7 +318,10 @@ window._DROPPED=new Set();
 (function(){
   let ov={}; try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
   const off=new Set(ov.off||[]);
-  const isSplit=r=>{ if(r.st==='sold')return false; if(r.prod==='Split Lot')return true; if(r.prod)return false; return r.ty==='active_split'; };
+  let _st={}; try{_st=JSON.parse(localStorage.getItem('heights_entities_state_v3'))||{};}catch(e){}
+  const FE=_st.fieldEdits||{}; window._FE0=JSON.stringify(FE);
+  const effProd=r=>(FE[r.id]&&('prod' in FE[r.id]))?FE[r.id].prod:r.prod;
+  const isSplit=r=>{ if(r.st==='sold')return false; const p=effProd(r); if(p==='Split Lot')return true; if(p)return false; return r.ty==='active_split'; };
   const projOf=r=>r.permits&&r.permits[0]&&String(r.permits[0].proj||'');
   const masterRef=r=>{const d=(r.permits&&r.permits[0]&&r.permits[0].desc)||'';const m=d.match(/(?:M\s*#?|#)\s*(\d{7,9})/);return m?m[1]:null;};
   const num=a=>{const m=String(a).match(/^(\d+)/);return m?+m[1]:null;};
@@ -752,6 +755,19 @@ applyFieldEdits();applyPosEdits();markers.forEach(mm=>mm.setStyle(mkStyle(mm._re
     }catch(e){}
     if(remote.points){ for(const id in remote.points){ state.points[id]=remote.points[id]; } }
     if(remote.fieldEdits){ state.fieldEdits=Object.assign(state.fieldEdits||{},remote.fieldEdits); }
+    try{
+      const fe0=JSON.parse(window._FE0||'{}'), fe1=state.fieldEdits||{};
+      let splitRelevant=false;
+      const ids=new Set(Object.keys(fe0).concat(Object.keys(fe1)));
+      for(const id of ids){const a=fe0[id]&&fe0[id].prod,b=fe1[id]&&fe1[id].prod;
+        if(a!==b&&(a==='Split Lot'||b==='Split Lot')){splitRelevant=true;break;}}
+      if(splitRelevant&&!sessionStorage.getItem('_feReloaded')){
+        sessionStorage.setItem('_feReloaded','1');
+        localStorage.setItem(KEY,JSON.stringify(state));
+        location.reload();return;
+      }
+      if(!splitRelevant)sessionStorage.removeItem('_feReloaded');
+    }catch(e){}
     if(remote.posEdits){ state.posEdits=Object.assign(state.posEdits||{},remote.posEdits); }
     try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
     applyNC();applyFieldEdits();applyPosEdits();
