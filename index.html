@@ -112,6 +112,11 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 #readywrap .rw-btn{background:transparent;border:1px solid #3a3730;color:#d8d2c7;font-family:inherit;font-size:11px;padding:4px 10px;border-radius:6px;cursor:pointer;letter-spacing:.04em}
 #readywrap .rw-btn:hover{border-color:#8c857a}
 #readywrap .rw-btn.on{background:#cf2230;border-color:#cf2230;color:#fff}
+#editwrap{position:absolute;top:14px;right:56px;z-index:1100}
+#editwrap #editbtn{background:#131210;border:1px solid #3a3730;color:#d8d2c7;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;padding:6px 12px;border-radius:3px;cursor:pointer}
+#editwrap #editbtn:hover{border-color:#8c857a}
+#editwrap #editbtn.on{background:#cf2230;border-color:#cf2230;color:#fff}
+body.editing .leaflet-interactive{cursor:move}
 #readywrap .rw-show{color:#8c857a;font-size:10.5px;letter-spacing:.06em;margin-left:2px}
 #readywrap .rw-show b{color:#e23a47}
 #supplycard{position:absolute;bottom:20px;right:20px;z-index:1000;width:290px;background:rgba(13,12,11,.94);border:1px solid #2a2823;border-radius:12px;padding:16px 18px;font-family:"IBM Plex Mono",monospace;backdrop-filter:blur(6px)}
@@ -252,11 +257,11 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 <!-- READY WITHIN toggle (wired to comingOnline) -->
 <div id="readywrap">
   <span class="rw-lbl">READY WITHIN</span>
-  <button class="rw-btn" data-mo="3">3 mo</button>
   <button class="rw-btn" data-mo="6">6 mo</button>
   <button class="rw-btn" data-mo="12">12 mo</button>
   <span class="rw-show" id="rw-show"></span>
 </div>
+<div id="editwrap"><button id="editbtn" title="Toggle edit mode: reclassify, restage, drag pins">&#9998; EDIT</button></div>
 <!-- SUPPLY SNAPSHOT corner card (wired to phaseBreakdown + comingOnline) -->
 <div id="supplycard">
   <div class="sc-h">SUPPLY SNAPSHOT</div>
@@ -314,8 +319,45 @@ let DATA = [{"id": "2131193248", "a": "201 E 26th St, Houston, Tx 77008", "llc":
 // Precise street list, no geometry guesswork. If a legit street ever matches, remove it here.
 const OUT_OF_ZONE=/lindyann|golden nectar|lamelia|1011 wynnwood|101[18] grovewood|cranston ct|waltway|abington|pineshade|6111 hurst|timbergrove ln|5339.*larkin|5240 cornish|18(22|24|26|28) w 23rd st|2013 w 14th|2002 w 14th/i;
 for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1);}
+
+// ---- split-lot pair merge: one pin per split project, units=2 (Spencer 2026-07-23) ----
+window._DROPPED=new Set();
+(function(){
+  let ov={}; try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
+  const off=new Set(ov.off||[]);
+  const isSplit=r=>{ if(r.st==='sold')return false; if(r.prod==='Split Lot')return true; if(r.prod)return false; return r.ty==='active_split'; };
+  const projOf=r=>r.permits&&r.permits[0]&&String(r.permits[0].proj||'');
+  const masterRef=r=>{const d=(r.permits&&r.permits[0]&&r.permits[0].desc)||'';const m=d.match(/(?:M\s*#?|#)\s*(\d{7,9})/);return m?m[1]:null;};
+  const num=a=>{const m=String(a).match(/^(\d+)/);return m?+m[1]:null;};
+  const street=a=>String(a).toLowerCase().replace(/^\d+\s*/,'').replace(/\s+(unit#?\s*)?[a-f]\b.*$/,'').replace(/,.*/,'').replace(/\bstreet\b/,'st').trim();
+  const unitOf=a=>{const m=String(a).toLowerCase().match(/\b(?:unit#?\s*)?([a-f])(?:\s*\(est\))?\s*(?:,|$)/);return m?m[1]:null;};
+  const near=(a,b)=>{const dx=(a.lat-b.lat)*111320,dy=(a.lng-b.lng)*111320*Math.cos(a.lat*Math.PI/180);return Math.hypot(dx,dy)<90;};
+  const splits=DATA.filter(isSplit), used=new Set(), pairs=[];
+  const byProj={}; splits.forEach(r=>{const p=projOf(r); if(p)byProj[p]=r;});
+  for(const r of splits){ if(used.has(r.id))continue; const ref=masterRef(r); if(!ref)continue;
+    const m=byProj[ref]; if(!m||m.id===r.id||used.has(m.id)||!near(r,m))continue;
+    pairs.push([m,r]); used.add(m.id); used.add(r.id); }
+  for(let i=0;i<splits.length;i++){const a=splits[i]; if(used.has(a.id))continue;
+    for(let j=i+1;j<splits.length;j++){const b=splits[j]; if(used.has(b.id)||!near(a,b))continue;
+      const na=num(a.a),nb=num(b.a); if(na===null||nb===null||street(a.a)!==street(b.a))continue;
+      const ua=unitOf(a.a),ub=unitOf(b.a);
+      const ok=(na===nb&&ua&&ub&&ua!==ub)||(Math.abs(na-nb)===2&&(na%2)===(nb%2)&&!ua&&!ub);
+      if(ok){pairs.push([a,b]);used.add(a.id);used.add(b.id);break;}}}
+  for(const pr of pairs){
+    const key=[pr[0].id,pr[1].id].sort().join('|'); if(off.has(key))continue;
+    const isM=r=>/M(?:ST)?\s+OF\s+\d/i.test((r.permits&&r.permits[0]&&r.permits[0].desc)||'');
+    let m=pr[0],s=pr[1];
+    if(!isM(m)&&isM(s)){m=pr[1];s=pr[0];}
+    else if(!isM(m)&&!isM(s)&&num(s.a)!==null&&num(m.a)!==null&&num(s.a)<num(m.a)){m=pr[1];s=pr[0];}
+    m._twin=s; m._pairKey=key; m.units=(m.units||1)+(s.units||1);
+    m.lat=(m.lat+s.lat)/2; m.lng=(m.lng+s.lng)/2;
+    if(s.permits)m.permits=(m.permits||[]).concat(s.permits.filter(p=>!(m.permits||[]).some(q=>q.proj===p.proj)));
+    window._DROPPED.add(s.id);
+  }
+  DATA=DATA.filter(r=>!window._DROPPED.has(r.id));
+})();
 const DATA_ALL = DATA;
-const UNITS={};for(const r of DATA)UNITS[r.id]=r.units||1;const UW=id=>UNITS[id]||1; // split-lot solo masters count as their full MST home count
+const UNITS={};for(const r of DATA)UNITS[r.id]=r.units||1;const UW=id=>UNITS[id]||((window._DROPPED&&window._DROPPED.has(id))?0:1); // split-lot solo masters count as their full MST home count
 const SOLD = DATA.filter(r=>r.st==='sold');
 DATA = DATA.filter(r=>r.st!=='sold');   // sold homes drop off the live map; kept in DATA_ALL/SOLD for export
 SOLD.forEach(r=>r._s=((r.llc||'')+' '+(r.a||'')).toLowerCase()); // sold rows keep a search string for the hidden-match counter (no marker built)
@@ -335,7 +377,22 @@ if(Object.keys(state.tags).length===0){ // first visit: full seed
   for(const k in SEED_POINTS){ if(!state.points[k]) state.points[k]=SEED_POINTS[k]; }
   for(const k in SEED_TAGS){ if(!state.tags[k]) state.tags[k]=SEED_TAGS[k]; }
 }
-function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+const REMOTE_EDITS_URL='https://script.google.com/macros/s/AKfycbydaT9RMOcOj20l1JhieXanv0qhVrqeq5Fez0rzOPxKhy422-QIuzP_NS2hmd7-bD3I/exec'; // paste Apps Script /exec URL to enable live shared edits; '' = local-only
+let _syncT=null,_syncBusy=false;
+function _sharedSlice(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
+  return {v:1,updated:new Date().toISOString(),points:state.points,fieldEdits:state.fieldEdits||{},posEdits:state.posEdits||{},pairOverrides:ov};}
+function remoteSave(){ if(!REMOTE_EDITS_URL) return;
+  clearTimeout(_syncT);
+  _syncT=setTimeout(()=>{ _syncBusy=true; setSyncDot('sync');
+    fetch(REMOTE_EDITS_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(_sharedSlice())})
+      .then(r=>r.ok?r.json():Promise.reject(r.status))
+      .then(()=>{_syncBusy=false;setSyncDot('ok');})
+      .catch(err=>{_syncBusy=false;setSyncDot('err');console.warn('[edits] remote save failed',err);});
+  },900);}
+function setSyncDot(st){const b=document.getElementById('editbtn');if(!b)return;
+  b.style.boxShadow= st==='ok'?'0 0 0 2px rgba(47,158,68,.5)': st==='sync'?'0 0 0 2px rgba(234,179,8,.5)': st==='err'?'0 0 0 2px rgba(207,34,48,.7)':'none';
+  if(st==='err')b.title='Edit mode \u2014 LAST SYNC FAILED, edits saved locally only';}
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} remoteSave(); }
 const pt=id=>{ if(!state.points[id]) state.points[id]={notes:'',tags:[]}; return state.points[id]; };
 // ---- seed permit tag + notes; prune orphans (one-time per version) ----
 const PERMIT_SEED=4;
@@ -449,7 +506,7 @@ const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',act_uc:'#eab
 const pinColor=id=>{const t=pt(id).tags;
   if(t.includes('pending'))return '#d6336c';
   if(t.includes('listed')||t.includes('market'))return t.includes('market')?GROUP_C.act:GROUP_C.act_uc;
-  for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p))return (byId[id]&&byId[id].prod==='Common Driveway')?GROUP_C.cd:(t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single);
+  for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p)){const k=byId[id]?prodKeyR(byId[id]):null;if(k==='Common Driveway')return GROUP_C.cd;if(k==='Split Lot')return GROUP_C.uc_split;if(k==='Single Lot')return GROUP_C.uc_single;return t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single;}
   if(t.includes('built'))return GROUP_C.pmt;
   if(t.includes('deed'))return GROUP_C.deed;
   if(t.includes('permit'))return GROUP_C.pmt;
@@ -621,7 +678,7 @@ const dispLL={};{const grp={};for(const r of DATA){const k=r.lat.toFixed(6)+','+
     a.forEach((r,i)=>{const ang=2*Math.PI*i/a.length;dispLL[r.id]=[r.lat+rad*Math.cos(ang),r.lng+rad*Math.sin(ang)/cl];});}}
 for(const r of DATA){
   const m=L.circleMarker(dispLL[r.id]||[r.lat,r.lng],mkStyle(r.id));
-  m._rec=r; m._s=((r.llc||'')+' '+(r.a||'')).toLowerCase();
+  m._rec=r; m._s=((r.llc||'')+' '+(r.a||'')+(r._twin?' '+(r._twin.a||'')+' '+(r._twin.llc||''):'')).toLowerCase();
   m.bindPopup(()=>popupHTML(r),{maxWidth:304,minWidth:290,autoPan:true});
   m.on('mouseover',function(){this.setStyle({radius:9,weight:1.6})});
   m.on('mouseout',function(){this.setStyle(mkStyle(r.id))});
@@ -630,6 +687,58 @@ for(const r of DATA){
 map.fitBounds(L.latLngBounds(markers.map(m=>m.getLatLng())).pad(0.06));
 document.getElementById('total').textContent=DATA.length.toLocaleString();
 const recolor=id=>{const m=mById[id]; if(m) m.setStyle(mkStyle(id));};
+// ---- EDIT MODE (Spencer 2026-07-23): flip VIEWER, drag pins, product/stage edits, export ----
+if(!state.fieldEdits)state.fieldEdits={};
+if(!state.posEdits)state.posEdits={};
+function applyFieldEdits(){for(const id in state.fieldEdits){const r=byId[id];if(!r)continue;const e=state.fieldEdits[id];
+  if('prod' in e){if(e.prod){r.prod=e.prod;if(e.prod==='Split Lot')r.ty='active_split';else if(e.prod==='Single Lot')r.ty='active_single';else delete r.ty;}else{delete r.prod;delete r.ty;}}}}
+function applyPosEdits(){for(const id in state.posEdits){const p=state.posEdits[id];const r=byId[id];if(r){r.lat=p[0];r.lng=p[1];}const m=mById[id];if(m)m.setLatLng(p);}}
+function setProd(id,v){state.fieldEdits[id]={prod:v||null};applyFieldEdits();save();recolor(id);if(typeof renderLegend==='function')renderLegend();}
+function setStage(id,v){const p=pt(id);p.tags=(p.tags||[]).filter(t=>PHASE_SEQ.indexOf(t)<0);if(v)p.tags.push(v);save();recolor(id);if(typeof renderLegend==='function')renderLegend();}
+function unpairSplit(key){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
+  ov.off=ov.off||[];if(ov.off.indexOf(key)<0)ov.off.push(key);
+  localStorage.setItem('heights_pair_overrides_v1',JSON.stringify(ov));
+  alert('Pair disabled \u2014 reloading to show 2 separate pins.');location.reload();}
+function exportEdits(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
+  const out={exported:new Date().toISOString(),fieldEdits:state.fieldEdits,posEdits:state.posEdits,pairOverrides:ov,points:state.points};
+  const s=JSON.stringify(out,null,1);
+  try{navigator.clipboard.writeText(s);}catch(e){}
+  console.log('HEIGHTS EDITS EXPORT\n'+s);
+  alert('All edits copied to clipboard (and logged to console). Paste into a message to Tega so they get committed \u2014 edits only live in THIS browser until then.');}
+(function(){let dragM=null;
+  function onDown(e){if(VIEWER)return;dragM=this;map.dragging.disable();L.DomEvent.stop(e);}
+  map.on('mousemove',e=>{if(dragM)dragM.setLatLng(e.latlng);});
+  map.on('mouseup',e=>{if(!dragM)return;const id=dragM._rec.id;state.posEdits[id]=[e.latlng.lat,e.latlng.lng];const r=byId[id];if(r){r.lat=e.latlng.lat;r.lng=e.latlng.lng;}save();dragM=null;map.dragging.enable();});
+  markers.forEach(m=>m.on('mousedown',onDown));
+})();
+(function(){const b=document.getElementById('editbtn');if(!b)return;
+  b.addEventListener('click',()=>{VIEWER=!VIEWER;b.classList.toggle('on',!VIEWER);document.body.classList.toggle('editing',!VIEWER);
+    map.closePopup();if(typeof renderLegend==='function')renderLegend();});})();
+applyFieldEdits();applyPosEdits();markers.forEach(mm=>mm.setStyle(mkStyle(mm._rec.id)));
+// ---- shared edits: pull from remote at load; server wins for edit fields ----
+(function(){ if(!REMOTE_EDITS_URL) return;
+  fetch(REMOTE_EDITS_URL,{method:'GET'}).then(r=>r.ok?r.json():Promise.reject(r.status)).then(remote=>{
+    if(!remote||typeof remote!=='object')return;
+    // pair overrides need a pre-merge pass: if server differs from local, cache + reload once
+    try{
+      const localOv=JSON.parse(localStorage.getItem('heights_pair_overrides_v1')||'{}');
+      const remOv=remote.pairOverrides||{};
+      if(JSON.stringify(localOv)!==JSON.stringify(remOv)){
+        localStorage.setItem('heights_pair_overrides_v1',JSON.stringify(remOv));
+        if(!sessionStorage.getItem('_pairReloaded')){sessionStorage.setItem('_pairReloaded','1');location.reload();return;}
+      } else { sessionStorage.removeItem('_pairReloaded'); }
+    }catch(e){}
+    if(remote.points){ for(const id in remote.points){ state.points[id]=remote.points[id]; } }
+    if(remote.fieldEdits){ state.fieldEdits=Object.assign(state.fieldEdits||{},remote.fieldEdits); }
+    if(remote.posEdits){ state.posEdits=Object.assign(state.posEdits||{},remote.posEdits); }
+    try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
+    applyFieldEdits();applyPosEdits();
+    markers.forEach(mm=>mm.setStyle(mkStyle(mm._rec.id)));
+    if(typeof renderLegend==='function')renderLegend();
+    setSyncDot('ok');
+    console.log('[edits] remote edits applied');
+  }).catch(err=>{setSyncDot('err');console.warn('[edits] remote load failed \u2014 using local cache',err);});
+})();
 loadInspections();              // initial fetch of external inspections feed
 setInterval(loadInspections, 6*60*60*1000); // re-pull every 6h so map reflects scraper updates without reload
 
@@ -687,6 +796,7 @@ function popupHTML(r){
   let h='<div class="card" data-pid="'+esc(r.id)+'">';
   h+='<div class="llc">'+(esc(r.llc)||'Unknown entity')+'</div>';
   h+='<div class="addr">'+esc(r.a)+'</div>';
+  if(r._twin)h+='<div class="addr">'+esc(r._twin.a)+' <span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">paired \u00b7 2 homes</span></div>';
   // phase-first header: big phase chip + months-to-completion (matches redesign)
   {const ph=(typeof homePhase==='function')?homePhase(r.id):null;
    if(ph){const nm=(state.tags[ph]&&state.tags[ph].name)||PHASE_LABELS&&PHASE_LABELS[ph]||ph;
@@ -768,6 +878,20 @@ function popupHTML(r){
       for(const num of(ct.p||[]))h+='<a href="'+telHref(num)+'">'+esc(fmtPhone(num))+'</a>';
       for(const em of(ct.e||[]))h+='<a href="mailto:'+esc(em)+'">'+esc(em)+'</a>';h+='</div>';}h+='</div>';}
   if(r.u)h+='<a class="dm" href="'+esc(r.u)+'" target="_blank" rel="noopener">Open in DealMachine</a>';
+  if(!VIEWER){
+   h+='<div class="grid" style="grid-template-columns:1fr;gap:6px">';
+   h+='<div class="cell"><div class="lbl">Edit \u00b7 Product</div><select class="addtag" style="width:100%" data-setprod>';
+   const curP=r.prod||'';
+   [['','(none / deed)'],['Single Lot','Single Lot'],['Split Lot','Split Lot'],['Common Driveway','Common Driveway'],['Frontloader','Frontloader']].forEach(o=>{h+='<option value="'+o[0]+'"'+(curP===o[0]?' selected':'')+'>'+o[1]+'</option>';});
+   h+='</select></div>';
+   h+='<div class="cell"><div class="lbl">Edit \u00b7 Stage</div><select class="addtag" style="width:100%" data-setstage>';
+   const curS=(pt(r.id).tags||[]).find(t=>PHASE_SEQ.indexOf(t)>=0)||'';
+   [['','(none)'],['foundation','Foundation'],['framing','Framing'],['dried_in','Dried-In'],['finishing','Finishing'],['market','On Market']].forEach(o=>{h+='<option value="'+o[0]+'"'+(curS===o[0]?' selected':'')+'>'+o[1]+'</option>';});
+   h+='</select></div>';
+   if(r._pairKey)h+='<button class="btn" data-unpair="'+esc(r._pairKey)+'">Unpair \u00b7 show as 2 pins</button>';
+   h+='<div class="lbl" style="letter-spacing:.08em">drag pin to move \u00b7 <span class="qnote-lk" data-exportedits>copy all edits (send to Tega)</span></div>';
+   h+='</div>';
+  }
   return h+'</div>';
 }
 function wire(popup){
@@ -778,13 +902,21 @@ function wire(popup){
   const sel=node.querySelector('[data-add]');
   if(sel)sel.addEventListener('change',()=>{if(sel.value){const p=pt(pid);if(!p.tags.includes(sel.value))p.tags.push(sel.value);save();recolor(pid);renderLegend();popup.setContent(popupHTML(byId[pid]));wire(popup);}});
   node.querySelectorAll('[data-rm]').forEach(x=>x.addEventListener('click',()=>{const p=pt(pid);p.tags=p.tags.filter(t=>t!==x.getAttribute('data-rm'));save();recolor(pid);renderLegend();popup.setContent(popupHTML(byId[pid]));wire(popup);}));
+  const sp=node.querySelector('[data-setprod]');
+  if(sp)sp.addEventListener('change',()=>{setProd(pid,sp.value);popup.setContent(popupHTML(byId[pid]));wire(popup);});
+  const ss=node.querySelector('[data-setstage]');
+  if(ss)ss.addEventListener('change',()=>{setStage(pid,ss.value);popup.setContent(popupHTML(byId[pid]));wire(popup);});
+  const up=node.querySelector('[data-unpair]');
+  if(up)up.addEventListener('click',()=>{unpairSplit(up.getAttribute('data-unpair'));});
+  const ex=node.querySelector('[data-exportedits]');
+  if(ex)ex.addEventListener('click',exportEdits);
 }
 map.on('popupopen',e=>{wire(e.popup);const tb=document.getElementById('tabs');if(tb)tb.classList.add('hidden');});
 map.on('popupclose',()=>{const tb=document.getElementById('tabs');if(tb)tb.classList.remove('hidden');});
 
 // ---- legend / filtering ----
 const activeF=new Set();
-const VIEWER=true; // read-only for shared viewers: no tag/note editing
+let VIEWER=true; // read-only by default; EDIT button (top right) flips this live
 const collapsed=new Set();
 const PHASE_TAGS=['foundation','framing','dried_in','finishing','market'];
 const PHASE_DEF={foundation:['Just Started / Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Dried-In / Siding','#d7b13a'],finishing:['Finishing','#0ca678'],market:['Active on Market','#2f9e44']};
