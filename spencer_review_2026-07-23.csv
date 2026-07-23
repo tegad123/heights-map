@@ -15,3 +15,8 @@ nbr,Address,Your Label,Code Label,why,map_context,spencer_verdict
 14,"1021 Nadine St, Houston, Tx 77009",,Single Lot,"Active construction (foundation, ~7mo timeline) but NO permit matched - needs classification + permit hunt","LIFE stage: uc, field notes present",
 15,"830 E 26th St, Houston, Tx 77009",,Split Lot,"Active construction (foundation, ~8mo, Titan Homes) but NO permit matched - needs classification + permit hunt","LIFE stage: uc, field notes present",
 16,"1518 Herkimer St, Houston, Tx 77008",,Split Lot,Has Ansari permit but still tagged deed (stale lifecycle) - verify label when reviewing; deed tag should clear on next LIFE regen,"LIFE stage: deed (stale), permit 26003024",
+17,"1219 Bay Oaks Rd, Houston, Tx 77008",,Single Lot,"Auto-labeled Single Lot, never satellite-verified (ported from local working copy 2026-07-23)",has permit; LIFE deed tag currently masks label,
+18,"1510 Glen Oaks St, Houston, Tx 77008",,Single Lot,"Auto-labeled Single Lot, never satellite-verified (ported from local working copy 2026-07-23)",has permit; LIFE deed tag currently masks label,
+19,"1602 Turnpike Rd, Houston, Tx 77008",,Single Lot,"Auto-labeled Single Lot, never satellite-verified (ported from local working copy 2026-07-23)",has permit,
+20,"822 Nashua St, Houston, Tx 77008",,Single Lot,"Auto-labeled Single Lot, never satellite-verified (ported from local working copy 2026-07-23)",has permit,
+21,"1118 Worthshire St, Houston, Tx 77008",,Single Lot,"Auto-labeled Single Lot, never satellite-verified (ported from local working copy 2026-07-23)",has permit,
