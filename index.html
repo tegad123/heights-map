@@ -348,6 +348,21 @@ window._DROPPED=new Set();
     window._DROPPED.add(s.id);
   }
   DATA=DATA.filter(r=>!window._DROPPED.has(r.id));
+  // pass 3: a solo split pin whose counterpart appears NOWHERE in the data (any label, incl. sold)
+  // represents the whole 2-home project -> units=2. If the twin exists anywhere, each pin stays 1.
+  for(const r of DATA){
+    if(!isSplit(r)||r._twin||used.has(r.id))continue;
+    const rn=num(r.a),rs=street(r.a),ru=unitOf(r.a);
+    if(rn===null)continue;
+    let twinTracked=false;
+    for(const o of DATA){
+      if(o.id===r.id||!near(r,o))continue;
+      const on=num(o.a); if(on===null||street(o.a)!==rs)continue;
+      const ou=unitOf(o.a);
+      if((on===rn&&ru&&ou&&ru!==ou)||(Math.abs(on-rn)===2&&(on%2)===(rn%2)&&!ru&&!ou)){twinTracked=true;break;}
+    }
+    if(!twinTracked){ r.units=Math.max(r.units||1,2); r._soloSplit=true; }
+  }
 })();
 const DATA_ALL = DATA;
 const UNITS={};for(const r of DATA)UNITS[r.id]=r.units||1;const UW=id=>UNITS[id]||((window._DROPPED&&window._DROPPED.has(id))?0:1); // split-lot solo masters count as their full MST home count
@@ -804,6 +819,7 @@ function popupHTML(r){
   h+='<div class="llc">'+(esc(r.llc)||'Unknown entity')+'</div>';
   h+='<div class="addr">'+esc(r.a)+'</div>';
   if(r._twin)h+='<div class="addr">'+esc(r._twin.a)+' <span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">paired \u00b7 2 homes</span></div>';
+  else if(r._soloSplit)h+='<div class="addr"><span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">split project \u00b7 2 homes \u00b7 twin not tracked</span></div>';
   // phase-first header: big phase chip + months-to-completion (matches redesign)
   {const ph=(typeof homePhase==='function')?homePhase(r.id):null;
    if(ph){const nm=(state.tags[ph]&&state.tags[ph].name)||PHASE_LABELS&&PHASE_LABELS[ph]||ph;
