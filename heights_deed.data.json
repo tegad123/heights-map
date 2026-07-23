@@ -1,0 +1,839 @@
+{
+ "market": "heights",
+ "pulls": [
+  {
+   "pulled_date": "2026-07-23",
+   "window_start": "2026-06-01",
+   "window_end": "2026-07-22",
+   "source_file": "Deed_Transfer_-_Houston_Heights_6_1_26_-_7_22_26__1_.csv",
+   "source": "DealMachine export",
+   "property_count": 25,
+   "crossref_summary": {
+    "new_not_on_map": 23,
+    "already_on_map_deed": 1,
+    "attach_to_existing_pin": 1,
+    "life_orphans_still_unresolved": 11,
+    "note": "Orphan transfer dates (Jun 2025 - May 2026) predate this pull window; needs a second pull covering 2025-06-01..2026-05-31."
+   },
+   "properties": [
+    {
+     "id": "2131238842",
+     "a": "905 Dorothy St, Houston, Tx 77008",
+     "llc": "Terra Holdings Group Inc",
+     "sale_date": "2026-07-09",
+     "v": "$402,022",
+     "lot": "4750",
+     "lat": 29.787195,
+     "lng": -95.40857,
+     "apn": "064-238-000-0003",
+     "year_built": 1920,
+     "f": "Recently Sold, High Equity, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131238842",
+     "c": [
+      {
+       "n": "Ruby D Steward",
+       "p": [
+        "17138626278.0"
+       ],
+       "e": []
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131044972",
+     "a": "841 Rutland St, Houston, Tx 77007",
+     "llc": "Jones & Co Developments Llc",
+     "sale_date": "2026-07-08",
+     "v": "$666,568",
+     "lot": "6600",
+     "lat": 29.786642,
+     "lng": -95.401385,
+     "apn": "020-239-000-0002",
+     "year_built": 1920,
+     "f": "Recently Sold, Off Market, High Equity, Senior Owner, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131044972",
+     "c": [
+      {
+       "n": "Virginia Cowan",
+       "p": [
+        "17138611002.0",
+        "17132945679.0",
+        "17132945276.0"
+       ],
+       "e": [
+        "vcowan@metlife.com",
+        "ginny.cowan@metlife.com",
+        "ginnycowan@metlife.com"
+       ]
+      },
+      {
+       "n": "Mary Marino",
+       "p": [],
+       "e": []
+      },
+      {
+       "n": "Henry P Cowan",
+       "p": [
+        "17138681155.0"
+       ],
+       "e": [
+        "superjakeandchristie@msn.com"
+       ]
+      },
+      {
+       "n": "Zebulon T Fletcher",
+       "p": [
+        "18324758970.0",
+        "12814433768.0",
+        "12814431769.0"
+       ],
+       "e": [
+        "roxfletcher@msn.com",
+        "zebulonfletcher@yahoo.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131191542",
+     "a": "1115 Adele St, Houston, Tx 77009",
+     "llc": "Havenridge Investments Llc",
+     "sale_date": "2026-06-26",
+     "v": "$413,000",
+     "lot": "5000",
+     "lat": 29.805867,
+     "lng": -95.386818,
+     "apn": "035-012-005-0008",
+     "year_built": 1928,
+     "f": "Recently Sold, High Equity, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131191542",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131437247",
+     "a": "205 E 24th St, Houston, Tx 77008",
+     "llc": "Thirty Four Ventures Llc",
+     "sale_date": "2026-06-02",
+     "v": "$548,790",
+     "lot": "5300",
+     "lat": 29.807856,
+     "lng": -95.396949,
+     "apn": "056-277-000-0003",
+     "year_built": 1920,
+     "f": "Recently Sold, Off Market, Senior Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131437247",
+     "c": [
+      {
+       "n": "Derrell K Barron",
+       "p": [
+        "18174591176.0",
+        "18172690357.0",
+        "17138630341.0"
+       ],
+       "e": [
+        "barrondk@aol.com",
+        "keithbarron@sbcglobal.net"
+       ]
+      },
+      {
+       "n": "Michelle E Barron",
+       "p": [
+        "18172690357.0",
+        "18175015552.0",
+        "17138630341.0"
+       ],
+       "e": [
+        "michellebarron@gmail.com",
+        "mdtnelson@hotmail.com",
+        "barrondk@aol.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131283630",
+     "a": "1624 Heights Blvd, Houston, Tx 77008",
+     "llc": "Burco Holdings Llc",
+     "sale_date": "2026-06-16",
+     "v": "$1,249,876",
+     "lot": "11250",
+     "lat": 29.800669,
+     "lng": -95.397472,
+     "apn": "020-113-000-0017",
+     "year_built": 1921,
+     "f": "Recently Sold, Cash Buyer, Absentee Owner, Corporate Owner, Landlocked",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131283630",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131208578",
+     "a": "303 Bayland Ave, Houston, Tx 77009",
+     "llc": "303 Bayland Partners Llc",
+     "sale_date": "2026-07-07",
+     "v": "$876,212",
+     "lot": "7500",
+     "lat": 29.787056,
+     "lng": -95.374373,
+     "apn": "037-271-000-0001",
+     "year_built": 1972,
+     "f": "Recently Sold, Off Market, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131208578",
+     "c": [
+      {
+       "n": "Min T Le",
+       "p": [],
+       "e": []
+      },
+      {
+       "n": "Charlie T Lam",
+       "p": [
+        "12812514393.0",
+        "17139796290.0",
+        "12819935305.0"
+       ],
+       "e": [
+        "charlietvlam97@gmail.com",
+        "charlie.lam@ies-co.com"
+       ]
+      },
+      {
+       "n": "Michelle Lam",
+       "p": [
+        "18323314657.0",
+        "17139796290.0",
+        "12819935305.0"
+       ],
+       "e": [
+        "mlam79@gmail.com",
+        "michelle.lam@hines.com",
+        "lammy.little15@gmail.com"
+       ]
+      },
+      {
+       "n": "Victoria T Lam",
+       "p": [
+        "17135849304.0",
+        "12819935305.0",
+        "12814822421.0"
+       ],
+       "e": [
+        "vicky1412lam@gmail.com",
+        "arisaxuiozu@gmail.com"
+       ]
+      },
+      {
+       "n": "Olivia M Lam",
+       "p": [
+        "12819935305.0",
+        "12814822421.0",
+        "18326773225.0"
+       ],
+       "e": [
+        "olivialam27@yahoo.com",
+        "oliviacollegelam@gmail.com",
+        "olivia.college.lam@gmail.com"
+       ]
+      },
+      {
+       "n": "Nathan G Lam",
+       "p": [
+        "12819935305.0",
+        "12814822421.0"
+       ],
+       "e": [
+        "lammynathan@gmail.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131387479",
+     "a": "932 W Temple St, Houston, Tx 77009",
+     "llc": "Harbinger Holdings Rei-ga Llc",
+     "sale_date": "2026-07-01",
+     "v": "$573,804",
+     "lot": "5200",
+     "lat": 29.792729,
+     "lng": -95.383997,
+     "apn": "062-133-019-0002",
+     "year_built": 1920,
+     "f": "Recently Sold, Off Market, Corporate Owner, Vacant Home",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131387479",
+     "c": [
+      {
+       "n": "Joseph K Goode",
+       "p": [
+        "12693277181.0",
+        "19363557822.0"
+       ],
+       "e": [
+        "josephgoode@gmail.com",
+        "goode.joseph@total.com",
+        "joseph.goode@totalenergies.com"
+       ]
+      },
+      {
+       "n": "Patricia J Keith",
+       "p": [
+        "12085534844.0",
+        "12087922292.0"
+       ],
+       "e": []
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131318105",
+     "a": "122 Redan St, Houston, Tx 77009",
+     "llc": "Bmi Investments Incorporated",
+     "sale_date": "2026-06-18",
+     "v": "$603,623",
+     "lot": "6300",
+     "lat": 29.789584,
+     "lng": -95.373098,
+     "apn": "034-254-000-0006",
+     "year_built": 1920,
+     "f": "Recently Sold, Bank Owned, Cash Buyer, Low Equity, Absentee Owner, Corporate Owner, Vacant Home, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131318105",
+     "c": [],
+     "map_status_at_pull": "already_on_map_deed"
+    },
+    {
+     "id": "2131074923",
+     "a": "707 E 6th 1/2 St, Houston, Tx 77007",
+     "llc": "Tomo Development Llc",
+     "sale_date": "2026-06-17",
+     "v": "$2,370,849",
+     "lot": "23750",
+     "lat": 29.782793,
+     "lng": -95.389195,
+     "apn": "035-029-055-0020",
+     "year_built": 1973,
+     "f": "Recently Sold, Off Market, Cash Buyer, Low Equity, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131074923",
+     "c": [
+      {
+       "n": "Anthony L Monaco",
+       "p": [
+        "18326142770.0"
+       ],
+       "e": [
+        "monaco5780@gmail.com",
+        "anthony.monaco@bt.com",
+        "monacoanthony@deemfirst.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131145361",
+     "a": "2052 Columbia St, Houston, Tx 77008",
+     "llc": "Classic Estate Homes Llc",
+     "sale_date": "2026-06-18",
+     "v": "$1,035,700",
+     "lot": "7920",
+     "lat": 29.805908,
+     "lng": -95.393143,
+     "apn": "020-063-000-0026",
+     "year_built": 1941,
+     "f": "Recently Sold, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131145361",
+     "c": [
+      {
+       "n": "Charles G Candela",
+       "p": [
+        "17132698727.0",
+        "12812778772.0"
+       ],
+       "e": [
+        "charlescandela@gmail.com"
+       ]
+      },
+      {
+       "n": "Jessica D Candela",
+       "p": [
+        "17134640204.0",
+        "12812778772.0"
+       ],
+       "e": [
+        "jesscandela@gmail.com",
+        "candelajessica@hotmail.com",
+        "charlescandela@gmail.com"
+       ]
+      },
+      {
+       "n": "Lauren D Candela",
+       "p": [
+        "17134640204.0",
+        "12812778772.0"
+       ],
+       "e": [
+        "laurcandela@gmail.com"
+       ]
+      },
+      {
+       "n": "Megan E Candela",
+       "p": [
+        "18325706447.0",
+        "17134640204.0",
+        "12812778772.0"
+       ],
+       "e": [
+        "meganecandela@gmail.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "attach_to_existing_pin:pmt_2052-columbia-st-77008"
+    },
+    {
+     "id": "2131156653",
+     "a": "2715 Houston Ave, Houston, Tx 77009",
+     "llc": "White Oak Jl Investments Llc",
+     "sale_date": "2026-06-09",
+     "v": "$516,946",
+     "lot": "5000",
+     "lat": 29.781593,
+     "lng": -95.37238,
+     "apn": "053-300-000-0005",
+     "year_built": 1920,
+     "f": "Recently Sold, Off Market, Free And Clear, High Equity, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131156653",
+     "c": [
+      {
+       "n": "Benjamin A Stroman",
+       "p": [
+        "17133590016.0"
+       ],
+       "e": [
+        "ben.a.stroman@gmail.com",
+        "ben.stroman@bcm.edu",
+        "benjaminstroman64@outlook.com"
+       ]
+      },
+      {
+       "n": "Julia C Lowe",
+       "p": [
+        "17133035799.0"
+       ],
+       "e": [
+        "jlowe809@yahoo.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131186526",
+     "a": "404 W 21st St, Houston, Tx 77008",
+     "llc": "Ashland Street Partners Lp",
+     "sale_date": "2026-06-03",
+     "v": "$2,249,385",
+     "lot": "29475",
+     "lat": 29.804755,
+     "lng": -95.403951,
+     "apn": "020-080-000-0001",
+     "year_built": null,
+     "f": "Recently Sold, Off Market, Cash Buyer, Low Equity, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131186526",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131187480",
+     "a": "1818 N Shepherd Dr, Houston, Tx 77008",
+     "llc": "Elite Dermatology Holdings Llc",
+     "sale_date": "2026-06-02",
+     "v": "$1,170,508",
+     "lot": "9500",
+     "lat": 29.80258,
+     "lng": -95.409873,
+     "apn": "020-094-000-0021",
+     "year_built": 1984,
+     "f": "Recently Sold, Off Market, Low Equity, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131187480",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131187484",
+     "a": "1808 N Shepherd Dr, Houston, Tx 77008",
+     "llc": "Elite Dermatology Holdings Llc",
+     "sale_date": "2026-06-02",
+     "v": "$1,994,943",
+     "lot": "19646",
+     "lat": 29.801988,
+     "lng": -95.409636,
+     "apn": "145-570-001-0001",
+     "year_built": 1920,
+     "f": "Recently Sold, Off Market, Low Equity, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131187484",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131191607",
+     "a": "1025 Adele St, Houston, Tx 77009",
+     "llc": "Espn Homes Llc",
+     "sale_date": "2026-07-01",
+     "v": "$534,915",
+     "lot": "5000",
+     "lat": 29.80587,
+     "lng": -95.385547,
+     "apn": "035-012-006-0004",
+     "year_built": 1938,
+     "f": "Recently Sold, Off Market, Cash Buyer, Free And Clear, High Equity, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131191607",
+     "c": [
+      {
+       "n": "John D Browning",
+       "p": [
+        "17138175249.0",
+        "17132527546.0",
+        "18328071556.0"
+       ],
+       "e": [
+        "jlbrowning1975@yahoo.com",
+        "jlbrowning5555@gmail.com"
+       ]
+      },
+      {
+       "n": "Jeff P Deery",
+       "p": [],
+       "e": []
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131194086",
+     "a": "726 E 26th St, Houston, Tx 77009",
+     "llc": "Terra Holdings Llc",
+     "sale_date": "2026-06-18",
+     "v": "$510,834",
+     "lot": "5300",
+     "lat": 29.810472,
+     "lng": -95.389382,
+     "apn": "035-091-043-0003",
+     "year_built": 1925,
+     "f": "Recently Sold, Cash Buyer, High Equity, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131194086",
+     "c": [
+      {
+       "n": "Becky Swanson",
+       "p": [
+        "13615757937.0",
+        "18324930293.0"
+       ],
+       "e": [
+        "beckybear02@yahoo.com",
+        "becky.barreda@gmail.com",
+        "beckybarreda@gmail.com"
+       ]
+      },
+      {
+       "n": "Eric Swanson",
+       "p": [
+        "15124687550.0",
+        "17138968007.0",
+        "17135270982.0"
+       ],
+       "e": [
+        "eswansonmail@yahoo.com"
+       ]
+      },
+      {
+       "n": "John E Swanson",
+       "p": [
+        "13615757937.0",
+        "17138968007.0"
+       ],
+       "e": []
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131200768",
+     "a": "902 W 22nd St, Houston, Tx 77008",
+     "llc": "Sandcastle Homes Inc",
+     "sale_date": "2026-07-08",
+     "v": "$1,245,263",
+     "lot": "22028",
+     "lat": 29.805495,
+     "lng": -95.414445,
+     "apn": "061-019-001-0019",
+     "year_built": 1975,
+     "f": "Recently Sold, Cash Buyer, Free And Clear, High Equity, Senior Owner, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131200768",
+     "c": [
+      {
+       "n": "William J Bravenec",
+       "p": [
+        "18324835870.0",
+        "17138644168.0",
+        "17132529465.0"
+       ],
+       "e": [
+        "billbrave33@gmail.com",
+        "wjbdkb@hotmail.com",
+        "d6wbravenec@msn.com"
+       ]
+      },
+      {
+       "n": "Debra K Bravenec",
+       "p": [
+        "17138682964.0",
+        "17138616001.0"
+       ],
+       "e": [
+        "karenann21@hotmail.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131201005",
+     "a": "946 W 21st St, Houston, Tx 77008",
+     "llc": "Onyx Land Partners Llc",
+     "sale_date": "2026-07-08",
+     "v": "$545,413",
+     "lot": "8800",
+     "lat": 29.804551,
+     "lng": -95.416332,
+     "apn": "061-019-004-0006",
+     "year_built": 1940,
+     "f": "Recently Sold, Off Market, Cash Buyer, Free And Clear, High Equity, Senior Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131201005",
+     "c": [
+      {
+       "n": "Anna M Ringwald",
+       "p": [
+        "12818407368.0",
+        "17138695269.0",
+        "12818408504.0"
+       ],
+       "e": [
+        "annagringwald@gmail.com",
+        "agarcia@pacehs.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131207218",
+     "a": "820 E 29th St, Houston, Tx 77009",
+     "llc": "Lazy River Properties Llc",
+     "sale_date": "2026-06-04",
+     "v": "$628,446",
+     "lot": "6000",
+     "lat": 29.812936,
+     "lng": -95.388426,
+     "apn": "035-075-009-0073",
+     "year_built": 1920,
+     "f": "Recently Sold, Off Market, Cash Buyer, High Equity, Senior Owner, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131207218",
+     "c": [
+      {
+       "n": "Charles B Musslewhite",
+       "p": [
+        "17135292629.0",
+        "17134466558.0",
+        "17134261900.0"
+       ],
+       "e": [
+        "charles@musslewhite-law.com",
+        "cmusslewhite@gmail.com",
+        "musslewhitelaw@gmail.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131218924",
+     "a": "1516 Lawrence St, Houston, Tx 77008",
+     "llc": "Brownstone Living Llc",
+     "sale_date": "2026-07-10",
+     "v": "$630,235",
+     "lot": "5000",
+     "lat": 29.798522,
+     "lng": -95.407443,
+     "apn": "039-114-000-0400",
+     "year_built": 1930,
+     "f": "Recently Sold, Adjustable Loan, Low Equity, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131218924",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131240334",
+     "a": "745 E 11th 1/2 St, Houston, Tx 77008",
+     "llc": "1111 Studewood Wcp Llc",
+     "sale_date": "2026-06-11",
+     "v": "$1,139,796",
+     "lot": "12500",
+     "lat": 29.792029,
+     "lng": -95.388111,
+     "apn": "035-019-036-0013",
+     "year_built": 1984,
+     "f": "Recently Sold, Off Market, Cash Buyer, High Equity, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131240334",
+     "c": [],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131282833",
+     "a": "205 W 24th St, Houston, Tx 77008",
+     "llc": "205 Realty Llc",
+     "sale_date": "2026-06-12",
+     "v": "$1,164,657",
+     "lot": "4585",
+     "lat": 29.80830442,
+     "lng": -95.39980833,
+     "apn": "020-038-000-0071",
+     "year_built": 2014,
+     "f": "Recently Sold, Adjustable Loan, Out Of State Owner, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131282833",
+     "c": [
+      {
+       "n": "Richard L Luckett",
+       "p": [
+        "17134173676.0"
+       ],
+       "e": [
+        "rickluckett@allstate.com",
+        "rickl@franchiseconceptsinc.com",
+        "litamelton@aol.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131318291",
+     "a": "1211 Gibbs St, Houston, Tx 77009",
+     "llc": "Esma Fresh Produce Llc",
+     "sale_date": "2026-06-29",
+     "v": "$1,634,675",
+     "lot": "20812",
+     "lat": 29.80938,
+     "lng": -95.382943,
+     "apn": "035-093-045-0029",
+     "year_built": 1966,
+     "f": "Recently Sold, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131318291",
+     "c": [
+      {
+       "n": "Brandon I Espinoza",
+       "p": [],
+       "e": []
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131360701",
+     "a": "1032 Alexander St, Houston, Tx 77008",
+     "llc": "Big Dog Real Property Investments Llc",
+     "sale_date": "2026-07-01",
+     "v": "$692,557",
+     "lot": "6000",
+     "lat": 29.789839,
+     "lng": -95.407741,
+     "apn": "060-084-007-0005",
+     "year_built": 1936,
+     "f": "Recently Sold, Off Market, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131360701",
+     "c": [
+      {
+       "n": "Adam M Lyons",
+       "p": [
+        "16172793660.0",
+        "12818884800.0",
+        "16463516163.0"
+       ],
+       "e": [
+        "alyons@willkie.com",
+        "alyons@post.harvard.edu"
+       ]
+      },
+      {
+       "n": "David J Mayes",
+       "p": [
+        "18324559319.0",
+        "12814423395.0"
+       ],
+       "e": [
+        "thedavemayes@gmail.com",
+        "daddydaycare50@aol.com",
+        "davetheone48@aol.com"
+       ]
+      },
+      {
+       "n": "Pratyush Painuly",
+       "p": [
+        "12063704664.0"
+       ],
+       "e": [
+        "reachpraty@hotmail.com",
+        "pratyushpainuly@gmail.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    },
+    {
+     "id": "2131360892",
+     "a": "930 Dorothy St, Houston, Tx 77008",
+     "llc": "Brownstone Living Llc",
+     "sale_date": "2026-06-22",
+     "v": "$600,100",
+     "lot": "6000",
+     "lat": 29.788119,
+     "lng": -95.408641,
+     "apn": "060-085-010-0021",
+     "year_built": 1930,
+     "f": "MLS Pending, Recently Sold, Adjustable Loan, Cash Buyer, Low Equity, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131360892",
+     "c": [
+      {
+       "n": "Nicolas J Cardenas",
+       "p": [],
+       "e": []
+      },
+      {
+       "n": "Victoria Mitre",
+       "p": [
+        "17138510834.0"
+       ],
+       "e": [
+        "victoria.mitre@bcm.edu",
+        "vicmitre@gmail.com"
+       ]
+      },
+      {
+       "n": "Carla Pastor",
+       "p": [
+        "17138623556.0"
+       ],
+       "e": [
+        "carlapastor@hotmail.com"
+       ]
+      }
+     ],
+     "map_status_at_pull": "new_not_on_map"
+    }
+   ]
+  }
+ ]
+}
