@@ -682,6 +682,9 @@ function noteFreeText(raw){
   }
   return keep.join('\n');
 }
+const DEED_PULL={};
+const DEED_PULL_EST="~Jul 21, 2026";
+function deedPull(r){const p=pt(r.id);if(!(r.prod==='Deed Transfer'||(p.tags||[]).includes('deed')))return null;return DEED_PULL[r.id]||DEED_PULL_EST;}
 function popupHTML(r){
   const p=pt(r.id);
   let h='<div class="card" data-pid="'+esc(r.id)+'">';
@@ -707,6 +710,7 @@ function popupHTML(r){
   if(A&&r.bb)cells.push(['Bed / Bath',r.bb,'']);
   if(A&&r.prod)cells.push(['Product',r.prod,'']);
   if(cells.length){h+='<div class="grid">';for(const[l,v,c]of cells)h+='<div class="cell"><div class="lbl">'+l+'</div><div class="v '+c+'">'+esc(String(v))+'</div></div>';h+='</div>';}
+  {const dp=deedPull(r); if(dp)h+='<div class="pmeta" style="margin-top:8px"><span>Pulled: '+esc(dp)+'</span></div>';}
   // permit (read-only, from HCAD building-permit data)
   if(r.permits&&r.permits.length){
     h+='<div class="permit"><div class="lbl-row"><span class="lbl">'+(r.permits.length>1?r.permits.length+' Permits':'Permit')+'</span><span class="ptag">HCAD</span></div>';
