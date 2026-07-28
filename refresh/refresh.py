@@ -290,6 +290,118 @@ def cmd_generate(html_path, skip_pull=False):
     print(f"spliced RECONCILE: {len(rec['off'])} off, {len(rec['relist'])} relist — validated")
 
 
+# ---------- stage (c): generated off-market CSV + LIFE sync ----------
+
+CSV_NAME = 'heights_off_market.csv'
+CSV_HDR = ['id', 'address', 'lot_type', 'last_list_price', 'builder', 'agent',
+           'lot_sqft', 'building_sqft', 'mls_number', 'date_off_market',
+           'disposition', 'lat', 'lng', 'notes']
+
+
+def fold_events():
+    """Full fold: off/relist state plus newest-wins dispositions and drop dates."""
+    with open(os.path.join(CHANGES_DIR, 'index.json'), encoding='utf-8') as f:
+        idx = json.load(f)
+    off, rel, disp, ddate = {}, {}, {}, {}
+    for entry in idx['files']:
+        with open(os.path.join(CHANGES_DIR, entry['file']), encoding='utf-8') as f:
+            c = json.load(f)
+        for d in c.get('dropped', []):
+            off[d['id']] = {'t': d['ty'], 'd': c['date']}
+            rel.pop(d['id'], None)
+            ddate[d['id']] = c['date']
+            disp[d['id']] = (d.get('disposition') or 'unconfirmed', c['date'])
+        for r in c.get('relisted', []):
+            t = 'split' if 'split' in str(r.get('ty')) else 'single'
+            rel[r['id']] = {'t': t, 'd': c['date']}
+            off.pop(r['id'], None)
+        for k, v in c.get('dispositionUpdates', {}).items():
+            disp[k] = (v, c['date'])
+    return off, rel, disp, ddate
+
+
+def cmd_csv(html_path):
+    src = load_html(html_path)
+    data = {d['id']: d for d in extract_data(src)}
+    sp = json.loads(re.search(r'SEED_POINTS=(\{.*?\});\nif\(Object', src, re.S).group(1))
+    off, rel, disp, ddate = fold_events()
+    # carry enrichment fields + row order from the previous CSV
+    prev, order = {}, []
+    path = os.path.join(ROOT, CSV_NAME)
+    if os.path.exists(path):
+        with open(path, encoding='utf-8', newline='') as f:
+            rows = list(csv.DictReader(f))
+        for r in rows:
+            prev[r['id']] = r
+            order.append(r['id'])
+    ordered = [i for i in order if i in off] + sorted(i for i in off if i not in order)
+    out = []
+    for i in ordered:
+        d, p = data.get(i, {}), prev.get(i, {})
+        out.append({
+            'id': i,
+            'address': p.get('address') or d.get('a', ''),
+            'lot_type': p.get('lot_type') or ('Split Lot' if off[i]['t'] == 'split' else 'Single Lot'),
+            'last_list_price': d.get('v') or p.get('last_list_price', ''),
+            'builder': p.get('builder') or d.get('llc', ''),
+            'agent': p.get('agent') or (d.get('c') or [{}])[0].get('n', ''),
+            'lot_sqft': p.get('lot_sqft', ''),
+            'building_sqft': p.get('building_sqft', ''),
+            'mls_number': p.get('mls_number', ''),
+            'date_off_market': ddate.get(i) or p.get('date_off_market', ''),
+            'disposition': disp.get(i, ('unconfirmed', ''))[0],
+            'lat': p.get('lat') or d.get('lat', ''),
+            'lng': p.get('lng') or d.get('lng', ''),
+            'notes': (sp.get(i) or {}).get('notes') or p.get('notes', ''),
+        })
+    with open(path, 'w', encoding='utf-8', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=CSV_HDR, lineterminator='\n')
+        w.writeheader()
+        w.writerows(out)
+    print(f'wrote {CSV_NAME}: {len(out)} rows')
+
+
+LIFE_NOTES = {
+    'unconfirmed': 'Lifecycle: Off market as of {d} — was active MLS listing',
+    'sold': 'Lifecycle: Sold as of {d} — was active MLS listing',
+    'under contract': 'Lifecycle: Under contract as of {d} — was active MLS listing',
+    'terminated': 'Lifecycle: Listing terminated as of {d} — was active MLS listing',
+}
+
+
+def cmd_life_sync(html_path):
+    """Rewrite LIFE entries for changelog-event ids from dispositions.
+    Owns s + note only; ty/fin (and every non-event entry) preserved."""
+    src = load_html(html_path)
+    m = re.search(r'const LIFE=(\{.*?\});\n', src, re.S)
+    raw = m.group(1)
+    life = json.loads(raw)
+    assert json.dumps(life, ensure_ascii=False, separators=(',', ':')) == raw, \
+        'LIFE does not round-trip — aborting'
+    off, rel, disp, ddate = fold_events()
+    changed = 0
+    for i in list(off) + list(rel):
+        e = life.get(i)
+        if e is None:
+            continue
+        if i in rel:
+            want_s, want_note = 'ready', 'Lifecycle: Ready for market — active MLS listing'
+        else:
+            dsp, ddt = disp.get(i, ('unconfirmed', ddate.get(i, '')))
+            date = ddt if dsp != 'unconfirmed' else ddate.get(i, ddt)
+            want_s, want_note = 'sold', LIFE_NOTES[dsp].format(d=date)
+        if e.get('s') != want_s or e.get('note') != want_note:
+            e['s'], e['note'] = want_s, want_note
+            changed += 1
+    new_raw = json.dumps(life, ensure_ascii=False, separators=(',', ':'))
+    candidate = src.replace('const LIFE=' + raw, 'const LIFE=' + new_raw)
+    validate_spliced(candidate)
+    if changed:
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(candidate)
+    print(f'life-sync: {changed} entries changed')
+
+
 # ---------- cli ----------
 
 def main():
@@ -304,10 +416,20 @@ def main():
     g = sub.add_parser('generate', help='splice RECONCILE block into index.html from the changelog')
     g.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
     g.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
+    c = sub.add_parser('csv', help='regenerate heights_off_market.csv from changelog + DATA')
+    c.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
+    l = sub.add_parser('life-sync', help='sync LIFE s/note from changelog dispositions')
+    l.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
     args = ap.parse_args()
 
     if args.cmd == 'generate':
         cmd_generate(args.html, skip_pull=args.skip_pull)
+        return
+    if args.cmd == 'csv':
+        cmd_csv(args.html)
+        return
+    if args.cmd == 'life-sync':
+        cmd_life_sync(args.html)
         return
 
     if args.cmd == 'diff':

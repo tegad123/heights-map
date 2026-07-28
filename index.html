@@ -306,7 +306,7 @@ body.editing .leaflet-interactive{cursor:move}
     <div class="btns">
       <button class="btn" id="expJson">Export notes</button>
       <button class="btn" id="expCsv">Export CSV</button>
-      <button class="btn" id="soldsBtn">Solds</button>
+      <button class="btn" id="soldsBtn">Off Market</button>
       <button class="btn" id="impBtn">Import</button>
       <input type="file" id="impFile" accept="application/json" style="display:none"/>
     </div>
@@ -1196,7 +1196,7 @@ function parseSoldsCsv(text){const out=[];let row=[],cur='',q=false;
   return out;}
 function soldsVal(s){const n=parseFloat(String(s).replace(/[$,]/g,''));return isNaN(n)?null:n;}
 function renderSolds(){const el=document.getElementById('soldsBody');
-  let h='<h2>Solds</h2><p class="sub">Off-market listings — heights_solds.csv. Click a column to sort.</p>';
+  let h='<h2>Off Market</h2><p class="sub">Off-market listings — heights_off_market.csv. Click a column to sort.</p>';
   h+='<div class="btns"><button class="btn" id="soldsDl">Download CSV</button><button class="btn" id="soldsClose">Close</button></div>';
   if(!SOLDS_ROWS){h+='<div class="slderr">'+esc(SOLDS_ERR||'No data loaded.')+'</div>';el.innerHTML=h;}
   else{const rows=SOLDS_ROWS.slice();const k=SOLDS_SORT.k;
@@ -1209,13 +1209,13 @@ function renderSolds(){const el=document.getElementById('soldsBody');
     h+='</tbody></table></div>';el.innerHTML=h;
     el.querySelectorAll('.sldtbl th').forEach(th=>th.addEventListener('click',()=>{const i=+th.getAttribute('data-k');
       if(SOLDS_SORT.k===i)SOLDS_SORT.dir*=-1;else{SOLDS_SORT.k=i;SOLDS_SORT.dir=1;}renderSolds();}));}
-  const d=document.getElementById('soldsDl');if(d)d.addEventListener('click',()=>{if(SOLDS_RAW)dl('heights_solds.csv',SOLDS_RAW,'text/csv');});
+  const d=document.getElementById('soldsDl');if(d)d.addEventListener('click',()=>{if(SOLDS_RAW)dl('heights_off_market.csv',SOLDS_RAW,'text/csv');});
   document.getElementById('soldsClose').addEventListener('click',()=>{document.getElementById('solds').style.display='none';});}
 document.getElementById('soldsBtn').addEventListener('click',()=>{
   document.getElementById('solds').style.display='block';
-  fetch('heights_solds.csv').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text();})
+  fetch('heights_off_market.csv').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text();})
     .then(t=>{SOLDS_RAW=t;const rows=parseSoldsCsv(t);SOLDS_HDR=rows.shift()||[];SOLDS_ROWS=rows;SOLDS_ERR='';renderSolds();})
-    .catch(e=>{SOLDS_HDR=null;SOLDS_ROWS=null;SOLDS_ERR='Could not load heights_solds.csv — '+e.message;renderSolds();});});
+    .catch(e=>{SOLDS_HDR=null;SOLDS_ROWS=null;SOLDS_ERR='Could not load heights_off_market.csv — '+e.message;renderSolds();});});
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.getElementById('solds').style.display='none';}));
 document.getElementById('impBtn').addEventListener('click',()=>document.getElementById('impFile').click());
 document.getElementById('impFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();
