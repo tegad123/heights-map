@@ -1048,22 +1048,22 @@ const collapsed=new Set();
 const PHASE_TAGS=['foundation','framing','dried_in','finishing','market'];
 const PHASE_DEF={foundation:['Just Started / Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Dried-In / Siding','#d7b13a'],finishing:['Finishing','#0ca678'],market:['Active (Finished)','#2f9e44']};
 function ensureTags(){let ch=false;PHASE_TAGS.forEach(p=>{if(!state.tags[p]){state.tags[p]={name:PHASE_DEF[p][0],color:PHASE_DEF[p][1]};ch=true;}});if(ch)save();}
-function tagCount(tid){let n=0;for(const id in state.points)if((state.points[id].tags||[]).includes(tid))n+=UW(id);return n;}
+function tagCount(tid){let n=0;for(const id in state.points)if(mById[id]&&(state.points[id].tags||[]).includes(tid))n+=UW(id);return n;}
 const TY2K={active_single:'Single Lot',active_split:'Split Lot',active_cd:'Common Driveway',off_market_single:'Single Lot (Off Market)',off_market_split:'Split Lot (Off Market)'};
 function typeKeyOf(id){const r=byId[id];return r?prodKeyR(r):null;}
-function comboCount(a,b){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(typeKeyOf(id)!==TY2K[a])continue;const bld=BUILD_PHASES.some(p=>t.includes(p));if(!bld)continue;if(b==='onmkt'){if(_mkted(t))n+=UW(id);}else{if(t.includes(b)&&!_mkted(t))n+=UW(id);}}return n;}
+function comboCount(a,b){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(typeKeyOf(id)!==TY2K[a])continue;const bld=BUILD_PHASES.some(p=>t.includes(p));if(!bld)continue;if(b==='onmkt'){if(_mkted(t))n+=UW(id);}else{if(t.includes(b)&&!_mkted(t))n+=UW(id);}}return n;}
 const BUILD_PHASES=['foundation','framing','dried_in','finishing'];
 const _mkted=t=>t.includes('listed')||t.includes('market');
-function ucCount(){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
-function ucTypeCount(ty){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(typeKeyOf(id)===TY2K[ty]&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
-function ucNCCount(){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(!typeKeyOf(id)&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucCount(){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucTypeCount(ty){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(typeKeyOf(id)===TY2K[ty]&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucNCCount(){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(!typeKeyOf(id)&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
 function mktCount(){return tagCount('market');}
-function listedCount(){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
-function listedTypeCount(k){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p))&&typeKeyOf(id)===k)n+=UW(id);}return n;}
-function listedReadyCount(k,ready){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(!t.includes('listed')||typeKeyOf(id)!==k)continue;const r=t.includes('market');if(r===ready)n+=UW(id);}return n;}
+function listedCount(){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function listedTypeCount(k){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p))&&typeKeyOf(id)===k)n+=UW(id);}return n;}
+function listedReadyCount(k,ready){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(!t.includes('listed')||typeKeyOf(id)!==k)continue;const r=t.includes('market');if(r===ready)n+=UW(id);}return n;}
 function deedCount(){return tagCount('deed');}
-function readyTypeCount(sp){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
-function readyFinCount(sp,pu){let n=0;for(const id in state.points){const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp)&&(t.includes('punch')===pu))n+=UW(id);}return n;}
+function readyTypeCount(sp){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
+function readyFinCount(sp,pu){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp)&&(t.includes('punch')===pu))n+=UW(id);}return n;}
 function matchSel(tags,k,id){
   const bld=BUILD_PHASES.some(p=>tags.includes(p));
   if(k==='G:deed')return tags.includes('deed');
