@@ -1,1 +1,3 @@
 store_backup_*.json
+__pycache__/
+*.pyc
