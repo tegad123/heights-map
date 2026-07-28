@@ -27,6 +27,12 @@ via CI from the GitHub main branch.
 - HAR exports use the address-led no-header-row template. The stats-style
   MLS view lacks an Address column and will not parse.
 - Census batch geocoding runs locally, not in any sandbox.
+- Heights index.html: the `OFFMKT_727` constant is the authoritative
+  off-market list for the 2026-07-27 batch. Its reconcile transform is
+  ungated and runs on every load (after seeding and after the remote
+  merge), so a pin whose id is in the list can never be relisted through
+  the UI — an active_single/active_split tag gets stripped on next load.
+  Removing the id from OFFMKT_727 is the only way to relist that pin.
 
 ## Live markets
 

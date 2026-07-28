@@ -420,6 +420,29 @@ if(Object.keys(state.tags).length===0){ // first visit: full seed
   for(const k in SEED_POINTS){ if(!state.points[k]) state.points[k]=SEED_POINTS[k]; }
   for(const k in SEED_TAGS){ if(!state.tags[k]) state.tags[k]=SEED_TAGS[k]; }
 }
+// ---- 7/27 off-market reconcile (idempotent, ungated — runs every load) ----
+// OFFMKT_727 is the AUTHORITATIVE off-market list for the 2026-07-27 batch.
+// Because the transform runs on every load (seed + post-remote-merge), an id in
+// this list can never be relisted through the UI: an active_single/active_split
+// tag set by hand will be stripped on the next load. Removing the id from this
+// list is the ONLY way to relist that pin. Ungated by design — it permanently
+// immunizes local state and the shared store against stale pre-7/27 pushes.
+const OFFMKT_727_NOTE='Off market as of 2026-07-27. ';
+const OFFMKT_727={"2131432164":"single","act_231-e-26":"single","act_1520-nicholson":"single","act_826-ralfallen":"single","act_1023-euclid":"single","act_616-ridge":"single","act_107-e-24":"single","act_710-e-18":"single","act_1011-e-25":"single","act_1016-e-27":"single","act_709-ridge":"single","act_1119-e-7-12":"single","act_2612-greenleaf":"single","act_1122-e-27th-st-unit-b":"split","act_835-w-25th-street":"split","act_1229-prince-street":"split","act_816-w-17th-street":"split","act_814-w-17th-street":"split","act_1326-lawrence-street":"split","act_815-lawrence-street-unit-a":"split","act_611-e-25th-street-unit-a":"split","act_602-jewett-street-unit-b":"split","act_1524-w-21st-st":"split","act_406-e-28th-street":"split","act_1436-alexander-st":"split","act_1321-alexander-street":"split"};
+function applyOffmkt727(pts){
+  for(const id in OFFMKT_727){
+    const p=pts[id]; if(!p) continue;
+    const want='off_market_'+OFFMKT_727[id];
+    let tg=Array.isArray(p.tags)?p.tags:[];
+    tg=tg.filter(t=>t!=='active_single'&&t!=='active_split');
+    if(!tg.includes(want)) tg.push(want);
+    p.tags=tg;
+    if(typeof p.notes==='string'&&p.notes.indexOf('Off market as of 2026-07-27')===-1)
+      p.notes=OFFMKT_727_NOTE+p.notes;
+    else if(typeof p.notes!=='string') p.notes=OFFMKT_727_NOTE;
+  }
+}
+applyOffmkt727(state.points);
 const REMOTE_EDITS_URL='https://script.google.com/macros/s/AKfycbydaT9RMOcOj20l1JhieXanv0qhVrqeq5Fez0rzOPxKhy422-QIuzP_NS2hmd7-bD3I/exec'; // paste Apps Script /exec URL to enable live shared edits; '' = local-only
 let _syncT=null,_syncBusy=false;
 function _sharedSlice(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
@@ -789,6 +812,7 @@ applyFieldEdits();applyPosEdits();markers.forEach(mm=>mm.setStyle(mkStyle(mm._re
       } else { sessionStorage.removeItem('_pairReloaded'); }
     }catch(e){}
     if(remote.points){ for(const id in remote.points){ state.points[id]=remote.points[id]; } }
+    applyOffmkt727(state.points);
     if(remote.fieldEdits){ state.fieldEdits=Object.assign(state.fieldEdits||{},remote.fieldEdits); }
     try{
       const fe0=JSON.parse(window._FE0||'{}'), fe1=state.fieldEdits||{};
