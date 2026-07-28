@@ -119,7 +119,7 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 body.editing .leaflet-interactive{cursor:move}
 #readywrap .rw-show{color:#8c857a;font-size:10.5px;letter-spacing:.06em;margin-left:2px}
 #readywrap .rw-show b{color:#e23a47}
-#supplycard{position:absolute;bottom:20px;right:20px;z-index:1000;width:290px;background:rgba(13,12,11,.94);border:1px solid #2a2823;border-radius:12px;padding:16px 18px;font-family:"IBM Plex Mono",monospace;backdrop-filter:blur(6px)}
+#supplycard{position:absolute;bottom:56px;right:20px;z-index:1000;width:290px;background:rgba(13,12,11,.94);border:1px solid #2a2823;border-radius:12px;padding:16px 18px;font-family:"IBM Plex Mono",monospace;backdrop-filter:blur(6px)}
 #supplycard .sc-h{color:#8c857a;font-size:10px;letter-spacing:.14em;margin-bottom:8px}
 #supplycard .sc-hero{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 #supplycard .sc-big{font-family:"Anton","IBM Plex Mono",sans-serif;font-size:52px;line-height:.9;color:#e23a47;font-weight:400}
@@ -347,6 +347,23 @@ for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1
 
 // ---- split-lot pair merge: one pin per split project, units=2 (Spencer 2026-07-23) ----
 window._DROPPED=new Set();
+// ---- hardcoded special case: 710 Waverly St A/B/C — one 3-home split project (Spencer 2026-07-28).
+// Exact-id merge that runs BEFORE the generic pairing pass; the _noPair flag keeps that pass off
+// this record. Site-specific by id — does not change how any other address gets grouped.
+(function(){
+  const IDS=['pmt_710-waverly-st-a-77007','pmt_710-waverly-st-b-77007','pmt_710-waverly-st-c-77007'];
+  const recs=IDS.map(i=>DATA.find(r=>r.id===i)).filter(Boolean);
+  if(recs.length<2)return;
+  const m=recs[0];
+  m.a='710 Waverly St A / B / C, Houston, TX 77007';
+  m.prod='Split Lot'; m.units=recs.length; m._noPair=true; m._chip=recs.length+' homes · one project';
+  m.lat=recs.reduce((s,r)=>s+r.lat,0)/recs.length; m.lng=recs.reduce((s,r)=>s+r.lng,0)/recs.length;
+  for(const r of recs.slice(1)){
+    if(r.permits)m.permits=(m.permits||[]).concat(r.permits.filter(p=>!(m.permits||[]).some(q=>q.proj===p.proj)));
+    window._DROPPED.add(r.id);
+  }
+  DATA=DATA.filter(r=>r.id===m.id||!IDS.includes(r.id));
+})();
 (function(){
   let ov={}; try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
   const off=new Set(ov.off||[]);
@@ -362,11 +379,11 @@ window._DROPPED=new Set();
   const near=(a,b)=>{const dx=(a.lat-b.lat)*111320,dy=(a.lng-b.lng)*111320*Math.cos(a.lat*Math.PI/180);return Math.hypot(dx,dy)<90;};
   const splits=DATA.filter(isSplit), used=new Set(), pairs=[];
   const byProj={}; splits.forEach(r=>{const p=projOf(r); if(p)byProj[p]=r;});
-  for(const r of splits){ if(used.has(r.id))continue; const ref=masterRef(r); if(!ref)continue;
+  for(const r of splits){ if(used.has(r.id)||r._noPair)continue; const ref=masterRef(r); if(!ref)continue;
     const m=byProj[ref]; if(!m||m.id===r.id||used.has(m.id)||!near(r,m))continue;
     pairs.push([m,r]); used.add(m.id); used.add(r.id); }
-  for(let i=0;i<splits.length;i++){const a=splits[i]; if(used.has(a.id))continue;
-    for(let j=i+1;j<splits.length;j++){const b=splits[j]; if(used.has(b.id)||!near(a,b))continue;
+  for(let i=0;i<splits.length;i++){const a=splits[i]; if(used.has(a.id)||a._noPair)continue;
+    for(let j=i+1;j<splits.length;j++){const b=splits[j]; if(used.has(b.id)||b._noPair||!near(a,b))continue;
       const na=num(a.a),nb=num(b.a); if(na===null||nb===null||street(a.a)!==street(b.a))continue;
       const ua=unitOf(a.a),ub=unitOf(b.a);
       const ok=(na===nb&&ua&&ub&&ua!==ub)||(Math.abs(na-nb)===2&&(na%2)===(nb%2)&&!ua&&!ub);
@@ -931,6 +948,7 @@ function popupHTML(r){
   let h='<div class="card" data-pid="'+esc(r.id)+'">';
   h+='<div class="llc">'+(esc(r.llc)||'Unknown entity')+'</div>';
   h+='<div class="addr">'+esc(r.a)+'</div>';
+  if(r._chip)h+='<div class="addr"><span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">'+esc(r._chip)+'</span></div>';
   if(r._twin)h+='<div class="addr">'+esc(r._twin.a)+' <span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">paired \u00b7 2 homes</span></div>';
   if(r._twin){ // per-twin status badge: only rendered when the twins' statuses diverge
     const _ts=id=>{const tg=(state.points[id]&&state.points[id].tags)||[];
@@ -1639,14 +1657,14 @@ applyInspectionPromotions=function(){_origApply.apply(this,arguments);renderSupp
 renderSupplyCard();
 </script>
 
-<div id="marketNav" style="position:fixed;top:12px;right:14px;z-index:1200;display:flex;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;flex-wrap:wrap;justify-content:flex-end;">
-  <a href="index.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#c0392b;color:#fff;border:1px solid #333;">HEIGHTS</a>
-  <a href="montrose.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">MONTROSE</a>
-  <a href="westu.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">WEST U</a>
-  <a href="riveroaks.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">RIVER OAKS</a>
-  <a href="springbranch.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING BRANCH</a>
-  <a href="springvalley.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING VALLEY</a>
-  <a href="timbergrove.html" style="text-decoration:none;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">TIMBERGROVE</a>
+<div id="marketNav" style="position:fixed;bottom:10px;left:12px;right:12px;z-index:500;display:flex;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+  <a href="index.html" style="margin-left:auto;text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#c0392b;color:#fff;border:1px solid #333;">HEIGHTS</a>
+  <a href="montrose.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">MONTROSE</a>
+  <a href="westu.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">WEST U</a>
+  <a href="riveroaks.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">RIVER OAKS</a>
+  <a href="springbranch.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING BRANCH</a>
+  <a href="springvalley.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING VALLEY</a>
+  <a href="timbergrove.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">TIMBERGROVE</a>
 </div>
 </body>
 </html>
