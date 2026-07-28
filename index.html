@@ -532,7 +532,7 @@ if((state._invSeed||0)<INV_SEED){
     if(e.note&&(!p.notes||p.notes.indexOf('Inventory 6/1/26')===-1))p.notes=p.notes?e.note+'\n'+p.notes:e.note;}
   state._invSeed=INV_SEED; save();
 }
-// ---- active-but-not-under-construction => Active on Market (green) ----
+// ---- active-but-not-under-construction => Finished on Market (green) ----
 const MKT_SEED=2;
 if((state._mktSeed||0)<MKT_SEED){
   const PH=['foundation','framing','dried_in','finishing','market'];
@@ -1141,9 +1141,9 @@ function renderLegend(){
     h+='</div></div>';}
   if(ucNCCount())h+='<div class="leafrow'+sOn('UCT:nc')+'" data-sel="UCT:nc"><span class="sw" style="background:#f03e3e"></span><span class="nm">Needs Clarification</span><span class="ct2">'+ucNCCount()+'</span></div>';
   h+='</div></div>';
-  // Active on Market = every live listing; split by product, then readiness
+  // Finished on Market = every live listing; split by product, then readiness
   {const rC=collapsed.has('mkt')?' col':'';
-   h+='<div class="grp'+rC+'" data-grp="mkt"><div class="grp-h'+sOn('G:mkt')+'" data-col="mkt"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:mkt')?' on':'')+'" data-sel="G:mkt"></span><span class="gn">Active on Market</span><span class="ct2">'+listedCount()+'</span></div><div class="grp-body">';
+   h+='<div class="grp'+rC+'" data-grp="mkt"><div class="grp-h'+sOn('G:mkt')+'" data-col="mkt"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:mkt')?' on':'')+'" data-sel="G:mkt"></span><span class="gn">Finished on Market</span><span class="ct2">'+listedCount()+'</span></div><div class="grp-body">';
    const RT=[['single','Single Lot','Single Lot'],['split','Split Lot','Split Lot'],['cd','Common Driveway','Common Driveway']];
    for(const [key,label,sp] of RT){
      if(key==='cd'&&!listedTypeCount(sp))continue;
@@ -1220,7 +1220,7 @@ document.getElementById('expCsv').addEventListener('click',()=>{
   let rows=[['address','entity','stage','lot_type','finish','months_to_completion','sale_or_list_date','value','lot_sqft','layer','tags','notes']];
   for(const r of DATA){const p=state.points[r.id]||{notes:'',tags:[]};const t=p.tags||[];
     const s=primaryStage(r.id);
-    const stage=s==='deed'?'Deed Transfer':(s&&BUILD_PHASES.includes(s))?'Under Construction - '+stageName(s):(s==='market'||s==='active_single'||s==='active_split')?'Active on Market':(r.kind==='permit'?'Permit (Market Intel)':'');
+    const stage=s==='deed'?'Deed Transfer':(s&&BUILD_PHASES.includes(s))?'Under Construction - '+stageName(s):(s==='market'||s==='active_single'||s==='active_split')?'Finished on Market':(r.kind==='permit'?'Permit (Market Intel)':'');
     const lt=t.includes('active_split')?'Split Lot':t.includes('active_single')?'Single Lot':'';
     const fin=t.includes('market')?(t.includes('punch')?'Punch List':'Finished'):'';
     const ml=monthsLeft(r.id);

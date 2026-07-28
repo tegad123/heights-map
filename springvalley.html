@@ -328,13 +328,14 @@ window.BUILD='springvalley-v0.2.1-2026-07-14+nav0715';console.log('[build] sprin
 // ---- state + safe persistence ----
 let state={tags:{},points:{}};
 try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.tags) state=s; }catch(e){}
-const SEED_TAGS={"pending":{"name":"Pending / Under Contract","color":"#d6336c"},"foundation":{"name":"Just Started / Foundation","color":"#e8590c"},"dried_in":{"name":"Dried-In / Siding","color":"#d7b13a"},"finishing":{"name":"Finishing","color":"#3a9d8f"},"market":{"name":"Active on Market","color":"#2f9e44"},"active_single":{"name":"Active – Single Lot","color":"#3f6cd1"},"active_split":{"name":"Active – Split Lot","color":"#8e5bd0"}},SEED_POINTS={"act_1432-bingle": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8919-echo-valley": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}, "act_1328-mickey": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8722-lupton": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8412-lofland": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "sv_9050-elizabeth": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}};
+const SEED_TAGS={"pending":{"name":"Pending / Under Contract","color":"#d6336c"},"foundation":{"name":"Just Started / Foundation","color":"#e8590c"},"dried_in":{"name":"Dried-In / Siding","color":"#d7b13a"},"finishing":{"name":"Finishing","color":"#3a9d8f"},"market":{"name":"Finished on Market","color":"#2f9e44"},"active_single":{"name":"Active – Single Lot","color":"#3f6cd1"},"active_split":{"name":"Active – Split Lot","color":"#8e5bd0"}},SEED_POINTS={"act_1432-bingle": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8919-echo-valley": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}, "act_1328-mickey": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8722-lupton": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "act_8412-lofland": {"notes": "SVV single-lot active. Move-in ready.", "tags": ["listed", "active_single", "market"]}, "sv_9050-elizabeth": {"notes": "SVV single-lot active. Under construction, est completion 2026-09-30.", "tags": ["listed", "active_single"]}};
 if(Object.keys(state.tags).length===0){ // first visit: full seed
   state.tags=SEED_TAGS; state.points=SEED_POINTS;
 }else{ // returning visit: additive-merge new seed ids (user edits preserved)
   for(const k in SEED_POINTS){ if(!state.points[k]) state.points[k]=SEED_POINTS[k]; }
   for(const k in SEED_TAGS){ if(!state.tags[k]) state.tags[k]=SEED_TAGS[k]; }
 }
+if(state.tags.market)state.tags.market.name='Finished on Market';
 function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
 const pt=id=>{ if(!state.points[id]) state.points[id]={notes:'',tags:[]}; return state.points[id]; };
 // ---- seed permit tag + notes; prune orphans (one-time per version) ----
@@ -361,7 +362,7 @@ if((state._invSeed||0)<INV_SEED){
     if(e.note&&(!p.notes||p.notes.indexOf('Inventory 6/1/26')===-1))p.notes=p.notes?e.note+'\n'+p.notes:e.note;}
   state._invSeed=INV_SEED; save();
 }
-// ---- active-but-not-under-construction => Active on Market (green) ----
+// ---- active-but-not-under-construction => Finished on Market (green) ----
 const MKT_SEED=2;
 if((state._mktSeed||0)<MKT_SEED){
   const PH=['foundation','framing','dried_in','finishing','market'];
@@ -374,7 +375,7 @@ if((state._mktSeed||0)<MKT_SEED){
 const COLOR_SEED=2;
 if((state._colorSeed||0)<COLOR_SEED){
   const C={foundation:'#e8590c',framing:'#e8590c',dried_in:'#e8590c',finishing:'#e8590c',market:'#2f9e44',active_single:'#2f9e44',active_split:'#2f9e44',permit:'#868e96'};
-  if(state.tags.market)state.tags.market.name='Active on Market';
+  if(state.tags.market)state.tags.market.name='Finished on Market';
   for(const k in C){ if(state.tags[k]) state.tags[k].color=C[k]; }
   state._colorSeed=COLOR_SEED; save();
 }
@@ -726,7 +727,7 @@ function popupHTML(r){
      h+='<span class="ptag" style="background:'+inspStatusColor(ins.status)+';color:#0d0c0b">'+esc(ins.status||'—')+'</span></div>';
      if(ins.updated)h+='<div class="pmeta"><span>Updated '+esc(ins.updated)+'</span><span>#'+esc(ins.proj)+'</span></div>';
      {const pp=pt(r.id); if(pp.inspPromoted){const ph=pp.tags.find(t=>['foundation','framing','dried_in','finishing','market'].includes(t));
-       const lbl=ph==='market'?'Active on Market':(state.tags[ph]&&state.tags[ph].name)||ph;
+       const lbl=ph==='market'?'Finished on Market':(state.tags[ph]&&state.tags[ph].name)||ph;
        h+='<div class="insppromo">▲ '+esc(lbl)+' — current stage per latest inspection</div>';}}
      const list=(ins.inspections||[]).slice().reverse();
      if(list.length){h+='<div class="insprows">';
@@ -787,7 +788,7 @@ const activeF=new Set();
 const VIEWER=true; // read-only for shared viewers: no tag/note editing
 const collapsed=new Set();
 const PHASE_TAGS=['foundation','framing','dried_in','finishing','market'];
-const PHASE_DEF={foundation:['Just Started / Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Dried-In / Siding','#d7b13a'],finishing:['Finishing','#0ca678'],market:['Active on Market','#2f9e44']};
+const PHASE_DEF={foundation:['Just Started / Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Dried-In / Siding','#d7b13a'],finishing:['Finishing','#0ca678'],market:['Finished on Market','#2f9e44']};
 function ensureTags(){let ch=false;PHASE_TAGS.forEach(p=>{if(!state.tags[p]){state.tags[p]={name:PHASE_DEF[p][0],color:PHASE_DEF[p][1]};ch=true;}});if(ch)save();}
 function tagCount(tid){let n=0;for(const id in state.points)if((state.points[id].tags||[]).includes(tid))n++;return n;}
 const TY2K={active_single:'Single Lot',active_split:'Split Lot',active_cd:'Common Driveway'};
@@ -836,9 +837,9 @@ function renderLegend(){
       h+='<div class="leafrow'+sOn(k)+'" data-sel="'+k+'"><span class="sw" style="background:'+(ty==='active_cd'?GROUP_C.cd:ty==='active_split'?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="nm">'+esc(state.tags[ph].name)+'</span><span class="ct2">'+comboCount(ty,ph)+'</span></div>';}
     h+='</div></div>';}
   h+='</div></div>';
-  // Active on Market = every live listing; split by product, then readiness
+  // Finished on Market = every live listing; split by product, then readiness
   {const rC=collapsed.has('mkt')?' col':'';
-   h+='<div class="grp'+rC+'" data-grp="mkt"><div class="grp-h'+sOn('G:mkt')+'" data-col="mkt"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:mkt')?' on':'')+'" data-sel="G:mkt"></span><span class="gn">Active on Market</span><span class="ct2">'+listedCount()+'</span></div><div class="grp-body">';
+   h+='<div class="grp'+rC+'" data-grp="mkt"><div class="grp-h'+sOn('G:mkt')+'" data-col="mkt"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:mkt')?' on':'')+'" data-sel="G:mkt"></span><span class="gn">Finished on Market</span><span class="ct2">'+listedCount()+'</span></div><div class="grp-body">';
    const RT=[['single','Single Lot','Single Lot'],['split','Split Lot','Split Lot'],['cd','Common Driveway','Common Driveway']];
    for(const [key,label,sp] of RT){
      if(key==='cd'&&!listedTypeCount(sp))continue;
@@ -917,7 +918,7 @@ document.getElementById('expCsv').addEventListener('click',()=>{
   let rows=[['address','entity','stage','lot_type','finish','months_to_completion','sale_or_list_date','value','lot_sqft','layer','tags','notes']];
   for(const r of DATA){const p=state.points[r.id]||{notes:'',tags:[]};const t=p.tags||[];
     const s=primaryStage(r.id);
-    const stage=s==='deed'?'Deed Transfer':(s&&BUILD_PHASES.includes(s))?'Under Construction - '+stageName(s):(s==='market'||s==='active_single'||s==='active_split')?'Active on Market':(r.kind==='permit'?'Permit (Market Intel)':'');
+    const stage=s==='deed'?'Deed Transfer':(s&&BUILD_PHASES.includes(s))?'Under Construction - '+stageName(s):(s==='market'||s==='active_single'||s==='active_split')?'Finished on Market':(r.kind==='permit'?'Permit (Market Intel)':'');
     const lt=t.includes('active_split')?'Split Lot':t.includes('active_single')?'Single Lot':'';
     const fin=t.includes('market')?(t.includes('punch')?'Punch List':'Finished'):'';
     const ml=monthsLeft(r.id);
