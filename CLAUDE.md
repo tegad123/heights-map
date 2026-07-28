@@ -17,6 +17,12 @@ via CI from the GitHub main branch.
   commit. The webhook drops pushes occasionally.
 - Never regenerate a market's HTML from empty or missing input files.
   Check inputs are non-empty first.
+- refresh/refresh.py is the ONLY thing allowed to write inside the
+  RECONCILE marker region of index.html. Before writing it must run
+  `git pull --ff-only` (abort on divergence) and re-parse the entire
+  spliced file (DATA valid JSON, markers balanced exactly once,
+  applyReconcile referenced at both call sites) — refuse on any failure.
+  Human-invoked only; never run it from cron or any scheduler.
 
 ## Pipeline rules
 

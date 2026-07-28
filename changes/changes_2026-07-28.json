@@ -1,0 +1,70 @@
+{
+ "date": "2026-07-28",
+ "sources": [
+  "Spencer ground truth 2026-07-28 (session commits 3025b7d, 4510376)"
+ ],
+ "counts": {
+  "matched": 0,
+  "dropped": 1,
+  "new": 0,
+  "relisted": 2,
+  "excluded": 0
+ },
+ "matchedIds": [],
+ "dropped": [
+  {
+   "id": "act_833-w-25th-street",
+   "a": "833 W 25th Street",
+   "ty": "split",
+   "disposition": "terminated"
+  }
+ ],
+ "relisted": [
+  {
+   "id": "act_602-jewett-street-unit-b",
+   "a": "602 Jewett Street Unit#B",
+   "ty": "active_split",
+   "offSince": "2026-07-27"
+  },
+  {
+   "id": "act_835-w-25th-street",
+   "a": "835 W 25th Street",
+   "ty": "active_split",
+   "offSince": "2026-07-27"
+  }
+ ],
+ "new": [],
+ "excluded": [],
+ "dispositionUpdates": {
+  "act_709-ridge": "sold",
+  "act_815-lawrence-street-unit-a": "sold",
+  "act_1229-prince-street": "sold",
+  "act_1122-e-27th-st-unit-b": "sold",
+  "act_710-e-18": "under contract",
+  "2131432164": "under contract",
+  "act_826-ralfallen": "under contract",
+  "act_1023-euclid": "under contract",
+  "act_616-ridge": "under contract",
+  "act_1326-lawrence-street": "under contract",
+  "act_814-w-17th-street": "under contract",
+  "act_816-w-17th-street": "under contract",
+  "act_611-e-25th-street-unit-a": "under contract",
+  "act_231-e-26": "terminated",
+  "act_1011-e-25": "terminated",
+  "act_1016-e-27": "terminated"
+ },
+ "merges": [
+  {
+   "from": "act_1120-e-26th-street",
+   "to": "2131318242"
+  },
+  {
+   "from": "pmt_833-w-25th-st-77008",
+   "to": "act_833-w-25th-street"
+  },
+  {
+   "from": "pmt_2924-watson-st-77009",
+   "to": "act_2924-watson-street"
+  }
+ ]
+}

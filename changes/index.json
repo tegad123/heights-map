@@ -1,0 +1,27 @@
+{
+ "files": [
+  {
+   "file": "changes_2026-07-27.json",
+   "date": "2026-07-27",
+   "counts": {
+    "matched": 53,
+    "dropped": 26,
+    "new": 6,
+    "relisted": 0,
+    "excluded": 3
+   }
+  },
+  {
+   "file": "changes_2026-07-28.json",
+   "date": "2026-07-28",
+   "counts": {
+    "matched": 0,
+    "dropped": 1,
+    "new": 0,
+    "relisted": 2,
+    "excluded": 0
+   }
+  }
+ ],
+ "updated": "2026-07-28"
+}

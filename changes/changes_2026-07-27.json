@@ -1,0 +1,292 @@
+{
+ "date": "2026-07-27",
+ "sources": [
+  "Current_Active_Listings_Single_lot_727.csv",
+  "Current_Active_Listings_Split_lot_727.csv"
+ ],
+ "counts": {
+  "matched": 53,
+  "dropped": 26,
+  "new": 6,
+  "relisted": 0,
+  "excluded": 3
+ },
+ "matchedIds": [
+  "act_1002-e-6-12",
+  "act_1012-e-26th-street",
+  "act_1032-w-17th-street-unit-a",
+  "act_1109-tabor",
+  "act_111-e-18",
+  "act_1113-voight",
+  "act_1116-highland",
+  "act_112-e-27th-street",
+  "act_1126-e-7-12",
+  "act_1140-waverly",
+  "act_116-e-23rd-street",
+  "act_1207-tabor",
+  "act_1208-e-26th-street-unit-a",
+  "act_1218-prince-street",
+  "act_122-e-4",
+  "act_1227-prince-street",
+  "act_1303-cordell-street-unit-b",
+  "act_1315-waverly",
+  "act_1324-lawrence-street",
+  "act_1434-alexander-street",
+  "act_1502-w-21",
+  "act_1504-w-21st-street",
+  "act_1520-w-21st-st-unit-a",
+  "act_1906-w-14",
+  "act_2015-harvard",
+  "act_212-e-24",
+  "act_227-e-26th-street",
+  "act_2434-white-oak",
+  "act_2436-white-oak",
+  "act_248-w-22",
+  "act_2603-julian",
+  "act_3115-beauchamp",
+  "act_312-w-9th-st",
+  "act_318-w-21st-street",
+  "act_335-harvard-street",
+  "act_407-e-27th-street",
+  "act_603-e-23",
+  "act_609-e-25",
+  "act_609-w-27th-street",
+  "act_611-e-25th-street-unit-b",
+  "act_613-wendel",
+  "act_623-e-13",
+  "act_710-waverly-street-unit-d",
+  "act_711-e-26th-street",
+  "act_715-merrill",
+  "act_731-e-8-12",
+  "act_735-e-8-12",
+  "act_805-w-22nd-street",
+  "act_827-w-16th-street-unit-a",
+  "act_830-e-27",
+  "act_845-w-23",
+  "act_902-e-25",
+  "act_920-e-25"
+ ],
+ "dropped": [
+  {
+   "id": "2131432164",
+   "a": "709 E 17th St, Houston, Tx 77008",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1011-e-25",
+   "a": "1011 E 25th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1016-e-27",
+   "a": "1016 E 27 th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1023-euclid",
+   "a": "1023 Euclid Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_107-e-24",
+   "a": "107 E 24th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1119-e-7-12",
+   "a": "1119 E 7th 1/2 Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1122-e-27th-st-unit-b",
+   "a": "1122 E 27TH ST Unit#B",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1229-prince-street",
+   "a": "1229 Prince Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1321-alexander-street",
+   "a": "1321 Alexander Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1326-lawrence-street",
+   "a": "1326 Lawrence Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1436-alexander-st",
+   "a": "1436 Alexander St",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1520-nicholson",
+   "a": "1520 Nicholson Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1524-w-21st-st",
+   "a": "1524 W 21st St",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_231-e-26",
+   "a": "231 E 26th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_2612-greenleaf",
+   "a": "2612 Greenleaf Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_406-e-28th-street",
+   "a": "406 E 28th Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_602-jewett-street-unit-b",
+   "a": "602 Jewett Street Unit#B",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_611-e-25th-street-unit-a",
+   "a": "611 E 25th Street Unit#A",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_616-ridge",
+   "a": "616 Ridge Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_709-ridge",
+   "a": "709 Ridge Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_710-e-18",
+   "a": "710 E 18th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_814-w-17th-street",
+   "a": "814 W 17TH Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_815-lawrence-street-unit-a",
+   "a": "815 Lawrence Street Unit#A",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_816-w-17th-street",
+   "a": "816 W 17TH Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_826-ralfallen",
+   "a": "826 Ralfallen Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_835-w-25th-street",
+   "a": "835 W 25th Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  }
+ ],
+ "relisted": [],
+ "new": [
+  {
+   "a": "615 Wendel Street",
+   "prod": "Single Lot",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_615-wendel-street",
+   "applied": true
+  },
+  {
+   "a": "2924 Watson Street",
+   "prod": "Single Lot",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2924-watson-street",
+   "applied": true
+  },
+  {
+   "a": "1122 E 27TH ST Unit#A",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null,
+   "note": "in export 7/27, never pinned by the hand pass — pending review"
+  },
+  {
+   "a": "741 W 21st Street Unit#A",
+   "prod": "Split Lot",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_741-w-21st-street-unit-a",
+   "applied": true
+  },
+  {
+   "a": "1120 E 26th Street",
+   "prod": "Split Lot",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1120-e-26th-street",
+   "applied": true
+  },
+  {
+   "a": "833 W 25th Street",
+   "prod": "Split Lot",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_833-w-25th-street",
+   "applied": true
+  }
+ ],
+ "excluded": [
+  {
+   "a": "5339 A Larkin Street",
+   "rule": "5339.*larkin"
+  },
+  {
+   "a": "5339 Larkin Street",
+   "rule": "5339.*larkin"
+  },
+  {
+   "a": "5240 Cornish Street Unit#A",
+   "rule": "5240 cornish"
+  }
+ ],
+ "dispositionUpdates": {}
+}
