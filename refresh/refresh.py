@@ -48,7 +48,11 @@ def extract_reconcile(src):
     m = re.search(r'const RECONCILE=(\{.*?\});', src)
     if m:
         rec = json.loads(m.group(1))
-        return rec.get('off', {}), rec.get('relist', {})
+        # pending (under contract) ids are still off the market — if one
+        # reappears in an export that is a relist, so fold them into off here
+        off = dict(rec.get('off', {}))
+        off.update(rec.get('pending', {}))
+        return off, rec.get('relist', {})
     off, rel = {}, {}
     m = re.search(r'const OFFMKT_727=(\{.*?\});', src)
     if m:
@@ -233,24 +237,16 @@ MARK_END = '/* RECONCILE:END */'
 
 
 def fold_reconcile():
-    """Fold the changelog chronologically into latest-state-per-id off/relist."""
-    with open(os.path.join(CHANGES_DIR, 'index.json'), encoding='utf-8') as f:
-        idx = json.load(f)
-    off, rel = {}, {}
-    for entry in idx['files']:
-        with open(os.path.join(CHANGES_DIR, entry['file']), encoding='utf-8') as f:
-            c = json.load(f)
-        for d in c.get('dropped', []):
-            off[d['id']] = {'t': d['ty'], 'd': c['date']}
-            rel.pop(d['id'], None)
-        for r in c.get('relisted', []):
-            t = 'split' if 'split' in str(r.get('ty')) else 'single'
-            rel[r['id']] = {'t': t, 'd': c['date']}
-            off.pop(r['id'], None)
-    overlap = set(off) & set(rel)
-    if overlap:
-        raise SystemExit(f'FATAL: off/relist overlap after fold: {overlap}')
-    return off, rel
+    """Latest-state-per-id buckets for the RECONCILE block. Business rule:
+    off_market applies to sold/terminated/unconfirmed only — ids whose newest
+    disposition is 'under contract' go in the pending bucket instead."""
+    off, rel, pend, _, _ = fold_events()
+    for a, b in (('off', 'relist'), ('off', 'pending'), ('relist', 'pending')):
+        overlap = set({'off': off, 'relist': rel, 'pending': pend}[a]) & \
+                  set({'off': off, 'relist': rel, 'pending': pend}[b])
+        if overlap:
+            raise SystemExit(f'FATAL: {a}/{b} overlap after fold: {overlap}')
+    return off, rel, pend
 
 
 def validate_spliced(src):
@@ -263,8 +259,11 @@ def validate_spliced(src):
     json.loads(re.search(r'SEED_POINTS=(\{.*?\});\nif\(Object', src, re.S).group(1))
     json.loads(re.search(r'const LIFE=(\{.*?\});\n', src, re.S).group(1))
     rec = json.loads(re.search(r'const RECONCILE=(\{.*?\});', src, re.S).group(1))
-    assert set(rec) == {'off', 'relist'}, 'RECONCILE keys wrong'
-    assert not set(rec['off']) & set(rec['relist']), 'RECONCILE off/relist overlap'
+    assert set(rec) == {'off', 'relist', 'pending'}, 'RECONCILE keys wrong'
+    for a in ('off', 'relist', 'pending'):
+        for b in ('off', 'relist', 'pending'):
+            if a < b:
+                assert not set(rec[a]) & set(rec[b]), f'RECONCILE {a}/{b} overlap'
     if src.count('applyReconcile(state.points)') < 2:
         raise SystemExit('FATAL: applyReconcile not referenced at both call sites')
     return rec
@@ -276,10 +275,10 @@ def cmd_generate(html_path, skip_pull=False):
         if r != 0:
             raise SystemExit('FATAL: git pull --ff-only failed — resolve divergence first')
     src = load_html(html_path)
-    off, rel = fold_reconcile()
+    off, rel, pend = fold_reconcile()
     block = (MARK_BEGIN + '\nconst RECONCILE=' +
-             json.dumps({'off': off, 'relist': rel}, ensure_ascii=False,
-                        separators=(',', ':')) + ';\n' + MARK_END)
+             json.dumps({'off': off, 'relist': rel, 'pending': pend},
+                        ensure_ascii=False, separators=(',', ':')) + ';\n' + MARK_END)
     i, j = src.find(MARK_BEGIN), src.find(MARK_END)
     if i == -1 or j == -1:
         raise SystemExit('FATAL: RECONCILE markers missing — one-time migration must exist first')
@@ -287,7 +286,8 @@ def cmd_generate(html_path, skip_pull=False):
     rec = validate_spliced(candidate)
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(candidate)
-    print(f"spliced RECONCILE: {len(rec['off'])} off, {len(rec['relist'])} relist — validated")
+    print(f"spliced RECONCILE: {len(rec['off'])} off, {len(rec['relist'])} relist, "
+          f"{len(rec['pending'])} pending — validated")
 
 
 # ---------- stage (c): generated off-market CSV + LIFE sync ----------
@@ -299,7 +299,9 @@ CSV_HDR = ['id', 'address', 'lot_type', 'last_list_price', 'builder', 'agent',
 
 
 def fold_events():
-    """Full fold: off/relist state plus newest-wins dispositions and drop dates."""
+    """Full fold: off/relist/pending state plus newest-wins dispositions and
+    drop dates. 'under contract' ids move from off to pending (they are not
+    Off Market until they resolve to sold or terminated)."""
     with open(os.path.join(CHANGES_DIR, 'index.json'), encoding='utf-8') as f:
         idx = json.load(f)
     off, rel, disp, ddate = {}, {}, {}, {}
@@ -317,14 +319,16 @@ def fold_events():
             off.pop(r['id'], None)
         for k, v in c.get('dispositionUpdates', {}).items():
             disp[k] = (v, c['date'])
-    return off, rel, disp, ddate
+    pend = {i: off.pop(i) for i in [i for i in off
+            if disp.get(i, ('', ''))[0] == 'under contract']}
+    return off, rel, pend, disp, ddate
 
 
 def cmd_csv(html_path):
     src = load_html(html_path)
     data = {d['id']: d for d in extract_data(src)}
     sp = json.loads(re.search(r'SEED_POINTS=(\{.*?\});\nif\(Object', src, re.S).group(1))
-    off, rel, disp, ddate = fold_events()
+    off, rel, pend, disp, ddate = fold_events()
     # carry enrichment fields + row order from the previous CSV
     prev, order = {}, []
     path = os.path.join(ROOT, CSV_NAME)
@@ -378,9 +382,9 @@ def cmd_life_sync(html_path):
     life = json.loads(raw)
     assert json.dumps(life, ensure_ascii=False, separators=(',', ':')) == raw, \
         'LIFE does not round-trip — aborting'
-    off, rel, disp, ddate = fold_events()
+    off, rel, pend, disp, ddate = fold_events()
     changed = 0
-    for i in list(off) + list(rel):
+    for i in list(off) + list(rel) + list(pend):
         e = life.get(i)
         if e is None:
             continue

@@ -154,8 +154,11 @@ touches `pending` or phase tags; idempotent; `off` and `relist` are disjoint
 by construction (the generator asserts it).
 
 **RECONCILE is one entry per id, latest-state-wins** (amendment 2, confirmed):
-an id lives in exactly one of `off` / `relist` with a single `{t, d}` — no
-dated batches accumulate. When state changes, the generator replaces the
+an id lives in exactly one of `off` / `relist` / `pending` with a single
+`{t, d}` — no dated batches accumulate. The `pending` bucket (added 7/28)
+holds under-contract ids: the transform strips `off_market_*` and ensures the
+`pending` tag; they are excluded from heights_off_market.csv and from all
+Off Market counts/filters until they resolve to sold or terminated. When state changes, the generator replaces the
 entry (relist → later drop moves it back to `off` with the new date, old
 entry gone). History lives only in the changelog.
 

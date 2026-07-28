@@ -33,9 +33,14 @@ via CI from the GitHub main branch.
 - HAR exports use the address-led no-header-row template. The stats-style
   MLS view lacks an Address column and will not parse.
 - Census batch geocoding runs locally, not in any sandbox.
+- Business rule: Off Market applies to sold/terminated (and unconfirmed)
+  listings only. Under-contract ids live in RECONCILE.pending — tagged
+  pending, never off_market_*, never counted or rendered as Off Market,
+  and excluded from heights_off_market.csv until they resolve to sold
+  or terminated.
 - Heights index.html: the `RECONCILE` marker block is the authoritative
-  off-market/relist state — one entry per id, latest state wins, off and
-  relist disjoint. It is generated from changes/*.json by
+  off-market/relist/pending state — one entry per id, latest state wins,
+  buckets disjoint. It is generated from changes/*.json by
   `refresh/refresh.py generate`; never hand-edit inside the markers.
   The applyReconcile transform is ungated and runs on every load (after
   seeding and after the remote merge), so an id in `off` cannot be
