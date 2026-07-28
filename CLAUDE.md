@@ -34,6 +34,20 @@ via CI from the GitHub main branch.
   the UI — an active_single/active_split tag gets stripped on next load.
   Removing the id from OFFMKT_727 is the only way to relist that pin.
 
+## Out-of-zone exclusions (Heights)
+
+- `OUT_OF_ZONE` in index.html is the authoritative exclusion list
+  (streets Spencer excluded: Timbergrove/Lazybrook + west Cottage Grove).
+  Anything matching it must NOT be added to DATA, no matter what a HAR
+  export shows — a load-time loop splices matching records out, so the
+  entry would silently never render. These addresses recur in every
+  actives export because they are genuinely active inside the search
+  polygon; they have been added and removed at least twice already.
+- The SEED_POINTS orphans `act_5339-larkin-street`,
+  `act_5339-a-larkin-street`, and `act_5240-cornish-street-unit-a`
+  (no DATA entry) are intentional leftovers from this exclusion,
+  not missing work. Leave them alone.
+
 ## Live markets
 
 Heights, Montrose, River Oaks, Spring Branch, Spring Valley Village,
