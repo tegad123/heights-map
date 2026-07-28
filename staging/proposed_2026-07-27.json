@@ -1,0 +1,212 @@
+[
+ {
+  "id": "act_615-wendel-street",
+  "a": "615 Wendel Street",
+  "geocode": "Exact",
+  "mergeCandidate": null,
+  "data": {
+   "id": "act_615-wendel-street",
+   "a": "615 Wendel Street",
+   "llc": "Daimler Builds",
+   "v": "$1,350,000",
+   "sd": "2026-07-13",
+   "lot": "4216",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Woodland Terrace",
+   "u": "",
+   "lat": 29.7822851,
+   "lng": -95.3784948,
+   "c": [
+    {
+     "n": "Destiny Demuren",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Daimler Builds. Agent: Destiny Demuren.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2924-watson-street",
+  "a": "2924 Watson Street",
+  "geocode": "Exact",
+  "mergeCandidate": "pmt_2924-watson-st-77009",
+  "data": {
+   "id": "act_2924-watson-street",
+   "a": "2924 Watson Street",
+   "llc": "TOMO Homes",
+   "v": "$2,199,900",
+   "sd": "2026-07-24",
+   "lot": "4038",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Woodland Heights",
+   "u": "",
+   "lat": 29.7846559,
+   "lng": -95.3806592,
+   "c": [
+    {
+     "n": "Oliver Carter",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: TOMO Homes. Agent: Oliver Carter.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1122-e-27th-st-unit-a",
+  "a": "1122 E 27TH ST Unit#A",
+  "geocode": "Exact",
+  "mergeCandidate": null,
+  "data": {
+   "id": "act_1122-e-27th-st-unit-a",
+   "a": "1122 E 27TH ST Unit#A",
+   "llc": "NA",
+   "v": "$685,000",
+   "sd": "2026-07-13",
+   "lot": "2466",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, HEIGHTS PAVILION",
+   "u": "",
+   "lat": 29.8118232,
+   "lng": -95.3848713,
+   "c": [
+    {
+     "n": "Ashley L Brown",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: NA. Agent: Ashley L Brown.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_741-w-21st-street-unit-a",
+  "a": "741 W 21st Street Unit#A",
+  "geocode": "Exact",
+  "mergeCandidate": null,
+  "data": {
+   "id": "act_741-w-21st-street-unit-a",
+   "a": "741 W 21st Street Unit#A",
+   "llc": "ROC Homes",
+   "v": "$699,990",
+   "sd": "2026-07-22",
+   "lot": "2455",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights",
+   "u": "",
+   "lat": 29.8048564,
+   "lng": -95.4110347,
+   "c": [
+    {
+     "n": "Ashwin Kewalramani",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: ROC Homes. Agent: Ashwin Kewalramani.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1120-e-26th-street",
+  "a": "1120 E 26th Street",
+  "geocode": "Exact",
+  "mergeCandidate": "2131318242",
+  "data": {
+   "id": "act_1120-e-26th-street",
+   "a": "1120 E 26th Street",
+   "llc": "CORE BUILDERS, LLC",
+   "v": "$719,900",
+   "sd": "2026-07-24",
+   "lot": "2500",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Sunset Heights",
+   "u": "",
+   "lat": 29.8106598,
+   "lng": -95.3846686,
+   "c": [
+    {
+     "n": "Jorge Bolio",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: CORE BUILDERS, LLC. Agent: Jorge Bolio.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_833-w-25th-street",
+  "a": "833 W 25th Street",
+  "geocode": "Exact",
+  "mergeCandidate": "pmt_833-w-25th-st-77008",
+  "data": {
+   "id": "act_833-w-25th-street",
+   "a": "833 W 25th Street",
+   "llc": "CORE BUILDERS, LLC",
+   "v": "$769,900",
+   "sd": "2026-07-16",
+   "lot": "2700",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights",
+   "u": "",
+   "lat": 29.808892,
+   "lng": -95.413164,
+   "c": [
+    {
+     "n": "Jorge Bolio",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: CORE BUILDERS, LLC. Agent: Jorge Bolio.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ }
+]

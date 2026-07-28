@@ -245,9 +245,11 @@
   {
    "a": "1122 E 27TH ST Unit#A",
    "prod": "Split Lot",
-   "staged": true,
+   "staged": false,
    "mergeCandidate": null,
-   "note": "in export 7/27, never pinned by the hand pass — pending review"
+   "note": "in export 7/27; missed by the hand pass, applied 2026-07-28 after review",
+   "id": "act_1122-e-27th-st-unit-a",
+   "applied": true
   },
   {
    "a": "741 W 21st Street Unit#A",
