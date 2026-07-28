@@ -583,6 +583,10 @@ const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',act_uc:'#eab
 const pinColor=id=>{const t=pt(id).tags;
   if(t.includes('pending'))return '#d6336c';
   if(t.includes('needs_clarification'))return '#f03e3e';
+  // off-market outranks any residual listed/market/phase tag (those are preserved
+  // by the reconcile for phase history and must not repaint a dead listing green)
+  if(t.includes('off_market_single'))return (state.tags.off_market_single||{}).color||'#8a8f98';
+  if(t.includes('off_market_split'))return (state.tags.off_market_split||{}).color||'#5f636b';
   for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p)){const k=byId[id]?prodKeyR(byId[id]):null;if(k==='Common Driveway')return GROUP_C.cd;if(k==='Split Lot')return GROUP_C.uc_split;if(k==='Single Lot')return GROUP_C.uc_single;return t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single;}
   if(t.includes('listed')||t.includes('market'))return GROUP_C.act;
   if(t.includes('built'))return GROUP_C.pmt;
