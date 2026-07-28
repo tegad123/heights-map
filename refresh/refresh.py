@@ -402,6 +402,112 @@ def cmd_life_sync(html_path):
     print(f'life-sync: {changed} entries changed')
 
 
+# ---------- stage (d): staging of new listings ----------
+
+STAGING_DIR = os.path.join(ROOT, 'staging')
+
+
+def slug_id(addr):
+    return 'act_' + re.sub(r'[^a-z0-9]+', '-', str(addr).lower().split(',')[0]).strip('-')
+
+
+def geocode_batch(addrs):
+    """Census batch geocode. Returns {input_addr: (lat, lng, quality)} with
+    quality Exact/Non_Exact/FAILED. Local-only per CLAUDE.md."""
+    import io, urllib.request, uuid
+    lines = []
+    for n, a in enumerate(addrs, 1):
+        street = str(a).split(',')[0].replace('"', '')
+        street = re.sub(r'\bunit\s*#?\s*[a-z0-9]+\b', '', street, flags=re.I).strip()
+        lines.append(f'{n},{street},Houston,TX,')
+    body = '\n'.join(lines).encode()
+    boundary = uuid.uuid4().hex
+    parts = []
+    for name, val, fn in (('benchmark', b'Public_AR_Current', None),
+                          ('addressFile', body, 'batch.csv')):
+        h = f'--{boundary}\r\nContent-Disposition: form-data; name="{name}"'
+        h += f'; filename="{fn}"\r\nContent-Type: text/csv' if fn else ''
+        parts.append(h.encode() + b'\r\n\r\n' + (val if isinstance(val, bytes) else val) + b'\r\n')
+    payload = b''.join(parts) + f'--{boundary}--\r\n'.encode()
+    req = urllib.request.Request(
+        'https://geocoding.geo.census.gov/geocoder/locations/addressbatch',
+        data=payload, headers={'Content-Type': f'multipart/form-data; boundary={boundary}'})
+    rows = list(csv.reader(io.StringIO(urllib.request.urlopen(req, timeout=120).read().decode())))
+    out = {}
+    for r in rows:
+        idx = int(r[0]) - 1
+        if len(r) >= 6 and r[2] == 'Match':
+            lng, lat = r[5].split(',')
+            out[addrs[idx]] = (round(float(lat), 7), round(float(lng), 7), r[3])
+        else:
+            out[addrs[idx]] = (None, None, 'FAILED')
+    return out
+
+
+def fmt_price(v):
+    try:
+        return '${:,.0f}'.format(float(str(v).replace('$', '').replace(',', '')))
+    except ValueError:
+        return str(v)
+
+
+def stage_new(chg, csv_paths, html_path):
+    """Build staging/proposed_<date>.json for the diff's new listings."""
+    from datetime import date as _date, timedelta
+    src = load_html(html_path)
+    data = extract_data(src)
+    all_by_key = {}
+    for d in data:
+        all_by_key.setdefault(key(d['a']), d['id'])
+    rows = {}
+    for prod, path in csv_paths:
+        for rec in parse_har(path):
+            rec['_prod'] = prod
+            rows[key(rec['Address'])] = rec
+    new_addrs = [e['a'] for e in chg['new']]
+    geo = geocode_batch(new_addrs) if new_addrs else {}
+    y, m, dd = map(int, chg['date'].split('-'))
+    staged = []
+    for e in chg['new']:
+        rec = rows.get(key(e['a']), {})
+        lat, lng, q = geo.get(e['a'], (None, None, 'FAILED'))
+        pid = slug_id(e['a'])
+        prod = rec.get('_prod', e.get('prod', ''))
+        subdiv = (rec.get('Subdivision') or '').strip()
+        f_val = f'{prod}, {subdiv}' if subdiv and subdiv.upper() != 'NA' else prod
+        sd = ''
+        if rec.get('DOM', '').isdigit():
+            sd = str(_date(y, m, dd) - timedelta(days=int(rec['DOM'])))
+        agent = rec.get('List Agent Full Name', '')
+        builder = rec.get('Builder Name', '')
+        ty = 'active_split' if prod == 'Split Lot' else 'active_single'
+        drec = {'id': pid, 'a': e['a'], 'llc': builder,
+                'v': fmt_price(rec.get('Original List Price', '')),
+                'sd': sd, 'lot': rec.get('Building SqFt', ''), 'kind': 'active',
+                'bb': '', 'prod': prod, 'f': f_val, 'u': '', 'lat': lat, 'lng': lng,
+                'c': [{'n': agent, 'p': [], 'e': []}], 'ty': ty}
+        note = f'Active inventory — {prod}.'
+        if builder:
+            note += f' Builder: {builder}.'
+        if agent:
+            note += f' Agent: {agent}.'
+        if q == 'Non_Exact':
+            note += ' (location approximate).'
+        staged.append({'id': pid, 'a': e['a'], 'geocode': q,
+                       'mergeCandidate': all_by_key.get(key(e['a'])),
+                       'data': drec,
+                       'seed': {'notes': note, 'tags': [ty]}})
+    os.makedirs(STAGING_DIR, exist_ok=True)
+    fn = os.path.join(STAGING_DIR, f"proposed_{chg['date']}.json")
+    with open(fn, 'w', encoding='utf-8') as f:
+        json.dump(staged, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    print(f'staged {len(staged)} new listings -> staging/proposed_{chg["date"]}.json')
+    for s in staged:
+        flag = f" MERGE-CANDIDATE:{s['mergeCandidate']}" if s['mergeCandidate'] else ''
+        print(f"  {s['id']:38s} geocode={s['geocode']}{flag}")
+
+
 # ---------- cli ----------
 
 def main():
@@ -442,6 +548,9 @@ def main():
         if args.write:
             fn = write_changelog(chg)
             print(f'wrote changes/{fn} + index.json')
+            if chg['new']:
+                stage_new(chg, [('Single Lot', args.single_csv),
+                                ('Split Lot', args.split_csv)], args.html)
         else:
             print('(dry run — nothing written)')
 
