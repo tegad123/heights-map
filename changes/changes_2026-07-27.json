@@ -106,7 +106,7 @@
   {
    "id": "act_1122-e-27th-st-unit-b",
    "a": "1122 E 27TH ST Unit#B",
-   "ty": "single",
+   "ty": "split",
    "disposition": "unconfirmed"
   },
   {
@@ -118,7 +118,7 @@
   {
    "id": "act_1321-alexander-street",
    "a": "1321 Alexander Street",
-   "ty": "single",
+   "ty": "split",
    "disposition": "unconfirmed"
   },
   {
@@ -142,7 +142,7 @@
   {
    "id": "act_1524-w-21st-st",
    "a": "1524 W 21st St",
-   "ty": "single",
+   "ty": "split",
    "disposition": "unconfirmed"
   },
   {

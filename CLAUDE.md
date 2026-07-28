@@ -33,17 +33,14 @@ via CI from the GitHub main branch.
 - HAR exports use the address-led no-header-row template. The stats-style
   MLS view lacks an Address column and will not parse.
 - Census batch geocoding runs locally, not in any sandbox.
-- Heights index.html: the `OFFMKT_727` constant is the authoritative
-  off-market list for the 2026-07-27 batch. Its reconcile transform is
-  ungated and runs on every load (after seeding and after the remote
-  merge), so a pin whose id is in the list can never be relisted through
-  the UI — an active_single/active_split tag gets stripped on next load.
-  Removing the id from OFFMKT_727 is the only way to relist that pin —
-  and removal alone only stops the stripping; browsers/store that
-  already hold off_market_* keep it. To fully relist, also add the id
-  to RELIST_727, whose reverse transform removes off_market_*, restores
-  active_*, and strips the 7/27 note prefix (first used for 602 Jewett B
-  and 835 W 25th on 2026-07-28).
+- Heights index.html: the `RECONCILE` marker block is the authoritative
+  off-market/relist state — one entry per id, latest state wins, off and
+  relist disjoint. It is generated from changes/*.json by
+  `refresh/refresh.py generate`; never hand-edit inside the markers.
+  The applyReconcile transform is ungated and runs on every load (after
+  seeding and after the remote merge), so an id in `off` cannot be
+  relisted through the UI — record the relist in the changelog and
+  regenerate instead. History lives only in changes/.
 
 ## Out-of-zone exclusions (Heights)
 
