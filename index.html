@@ -1518,6 +1518,33 @@ function askContext(){
    '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
    '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
 }
+// ---- ASK: changelog event stream (changes/*.json) for change-over-time questions ----
+let _CHG=null;
+async function loadChanges(){
+  if(_CHG)return _CHG;
+  try{
+    const idx=await (await fetch('changes/index.json',{cache:'no-store'})).json();
+    const files=await Promise.all(idx.files.map(f=>fetch('changes/'+f.file,{cache:'no-store'}).then(r=>r.json())));
+    const events=[],disp={};
+    for(const c of files){
+      for(const d of (c.dropped||[])){events.push({date:c.date,type:'off',id:d.id,a:d.a,ty:d.ty});disp[d.id]=[d.disposition||'unconfirmed',c.date];}
+      for(const r of (c.relisted||[])){events.push({date:c.date,type:'relist',id:r.id,a:r.a,offSince:r.offSince});disp[r.id]=['relisted',c.date];}
+      for(const n of (c.new||[]))events.push({date:c.date,type:'new',id:n.id||null,a:n.a,applied:!!n.applied});
+      for(const k in (c.dispositionUpdates||{}))disp[k]=[c.dispositionUpdates[k],c.date];
+    }
+    _CHG={events,disp,updated:idx.updated};
+  }catch(e){_CHG={events:[],disp:{},updated:null,error:e.message};}
+  return _CHG;
+}
+function changesContext(chg){
+  if(!chg||!chg.events.length)return '';
+  const lines=chg.events.map(e=>{
+    const d=e.type==='off'?(chg.disp[e.id]||['unconfirmed',''])[0]:'-';
+    const note=e.type==='new'?(e.applied?'pinned':'staged-for-review'):(e.offSince?'off since '+e.offSince:'-');
+    return [e.date,e.type,e.id||'-',(e.a||'').replace(/, Houston.*$/i,''),e.ty||'-',d,note].join(' | ');
+  });
+  return '\n\n=== LISTING CHANGE LOG (event stream from dated refreshes; use for change-over-time questions: how many went off market / sold / under contract / terminated / relisted / newly listed in a window. disposition on off events is the NEWEST ruling; unconfirmed = no ruling yet. These are EVENTS, not current inventory — AGGREGATES above is the current snapshot. Deed-transfer events are not in this stream yet; answer deed change-over-time questions from sale_date fields in the deed section instead.) ===\nFIELDS: date | event | id | address | product | disposition | note\n'+lines.join('\n')+'\nLast refresh: '+(chg.updated||'unknown');
+}
 const askHist=[];
 function askAdd(cls,txt){const d=document.createElement('div');d.className='askm '+cls;d.textContent=txt;document.getElementById('askLog').appendChild(d);d.scrollIntoView({block:'end'});return d;}
 async function askSend(){
@@ -1526,8 +1553,9 @@ async function askSend(){
   inp.value='';btn.disabled=true;askAdd('u',q);
   const think=askAdd('a','Thinking…');
   try{
+    const chg=await loadChanges();
     const res=await fetch('/.netlify/functions/ask',{method:'POST',headers:{'content-type':'application/json'},
-      body:JSON.stringify({question:q,context:askContext(),history:askHist.slice(-8)})});
+      body:JSON.stringify({question:q,context:askContext()+changesContext(chg),history:askHist.slice(-8)})});
     const j=await res.json();
     think.textContent=j.answer||'No answer returned.';
     if(!res.ok)think.className='askm w';
