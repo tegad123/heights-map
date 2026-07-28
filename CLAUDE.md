@@ -32,7 +32,12 @@ via CI from the GitHub main branch.
   ungated and runs on every load (after seeding and after the remote
   merge), so a pin whose id is in the list can never be relisted through
   the UI — an active_single/active_split tag gets stripped on next load.
-  Removing the id from OFFMKT_727 is the only way to relist that pin.
+  Removing the id from OFFMKT_727 is the only way to relist that pin —
+  and removal alone only stops the stripping; browsers/store that
+  already hold off_market_* keep it. To fully relist, also add the id
+  to RELIST_727, whose reverse transform removes off_market_*, restores
+  active_*, and strips the 7/27 note prefix (first used for 602 Jewett B
+  and 835 W 25th on 2026-07-28).
 
 ## Out-of-zone exclusions (Heights)
 
