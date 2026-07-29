@@ -307,6 +307,8 @@ body.editing .leaflet-interactive{cursor:move}
       <button class="btn" id="expJson">Export notes</button>
       <button class="btn" id="expCsv">Export CSV</button>
       <button class="btn" id="soldsBtn">Off Market</button>
+      <a class="btn" href="https://docs.google.com/spreadsheets/d/1TESOz13kZEEh2ql56KQrIyjKPpxJFHLeqHU2P2yVVSg/edit?usp=sharing" target="_blank" rel="noopener" style="text-decoration:none">Sheet &#8599;</a>
+      <a class="btn" href="https://cohtora.houstontx.gov/approot/soldpermits/online_permit.htm" target="_blank" rel="noopener" style="text-decoration:none">Permits &#8599;</a>
       <button class="btn" id="impBtn">Import</button>
       <input type="file" id="impFile" accept="application/json" style="display:none"/>
     </div>
@@ -993,6 +995,7 @@ function popupHTML(r){
       if(pm.val&&pm.val!=='0')h+='<span>$'+(+pm.val).toLocaleString()+'</span>';
       if(pm.proj)h+='<span>#'+esc(pm.proj)+'</span>';
       h+='</div></div>';}
+    h+='<div class="pmeta"><a href="https://cohtora.houstontx.gov/approot/soldpermits/online_permit.htm" target="_blank" rel="noopener" style="color:var(--red2)">Look up on COH &#8599;</a></div>';
     h+='</div>';}
   // inspections (from external feed, keyed by permit project number)
   {const ins=inspForPin(r);
