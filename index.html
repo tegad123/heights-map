@@ -256,6 +256,11 @@ body.editing .leaflet-interactive{cursor:move}
 .sldtbl th{cursor:pointer;text-transform:uppercase;letter-spacing:.08em;font-size:10px;color:var(--muted);user-select:none}
 .sldtbl th.on{color:var(--paper)}
 .sldtbl td.nte{white-space:normal;min-width:220px}
+.sldtbl td.om-ed{box-shadow:inset 2px 0 0 #d6336c}
+.sldtbl select.om-disp{font-family:"IBM Plex Mono",monospace;font-size:11px;background:transparent;color:var(--paper);border:1px solid var(--line);border-radius:2px;padding:2px 4px}
+.sldtbl textarea.om-note{font-family:"IBM Plex Mono",monospace;font-size:11px;background:transparent;color:var(--paper);border:1px solid var(--line);border-radius:2px;padding:3px 5px;width:240px;min-height:34px;resize:vertical;display:block}
+.sldsv{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#5aa83a;opacity:0;transition:.2s;display:block}
+.sldsv.on{opacity:1}
 .slderr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#d6336c;margin-top:14px}
 </style>
 </head>
@@ -483,7 +488,7 @@ if(state.tags.market)state.tags.market.name='Active (Finished)';
 const REMOTE_EDITS_URL='https://script.google.com/macros/s/AKfycbydaT9RMOcOj20l1JhieXanv0qhVrqeq5Fez0rzOPxKhy422-QIuzP_NS2hmd7-bD3I/exec'; // paste Apps Script /exec URL to enable live shared edits; '' = local-only
 let _syncT=null,_syncBusy=false;
 function _sharedSlice(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
-  return {v:1,updated:new Date().toISOString(),points:state.points,fieldEdits:state.fieldEdits||{},posEdits:state.posEdits||{},pairOverrides:ov};}
+  return {v:1,updated:new Date().toISOString(),points:state.points,fieldEdits:state.fieldEdits||{},posEdits:state.posEdits||{},pairOverrides:ov,offMarketEdits:state.offMarketEdits||{}};}
 function remoteSave(){ if(!REMOTE_EDITS_URL) return;
   clearTimeout(_syncT);
   _syncT=setTimeout(()=>{ _syncT=null; _syncBusy=true; setSyncDot('sync');
@@ -824,7 +829,7 @@ function unpairSplit(key){let ov={};try{ov=JSON.parse(localStorage.getItem('heig
   localStorage.setItem('heights_pair_overrides_v1',JSON.stringify(ov));
   alert('Pair disabled \u2014 reloading to show 2 separate pins.');location.reload();}
 function exportEdits(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
-  const out={exported:new Date().toISOString(),fieldEdits:state.fieldEdits,posEdits:state.posEdits,pairOverrides:ov,points:state.points};
+  const out={exported:new Date().toISOString(),fieldEdits:state.fieldEdits,posEdits:state.posEdits,pairOverrides:ov,offMarketEdits:state.offMarketEdits||{},points:state.points};
   const s=JSON.stringify(out,null,1);
   try{navigator.clipboard.writeText(s);}catch(e){}
   console.log('HEIGHTS EDITS EXPORT\n'+s);
@@ -837,7 +842,9 @@ function exportEdits(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights
 })();
 (function(){const b=document.getElementById('editbtn');if(!b)return;
   b.addEventListener('click',()=>{VIEWER=!VIEWER;b.classList.toggle('on',!VIEWER);document.body.classList.toggle('editing',!VIEWER);
-    map.closePopup();if(typeof renderLegend==='function')renderLegend();});})();
+    map.closePopup();if(typeof renderLegend==='function')renderLegend();
+    const sd=document.getElementById('solds');
+    if(sd&&sd.style.display==='block'&&typeof renderSolds==='function'){if(typeof omFlush==='function')omFlush();renderSolds();}});})();
 // ---- Needs Clarification: flag unresolved review properties until Spencer sets a product ----
 const NC_IDS=["2131318733", "2131421176", "pmt_745-w-17th-st-77008", "pmt_1410-herkimer-st-77008", "pmt_433-w-23rd-st-77008", "pmt_918-dorothy-st-77008", "pmt_1434-herkimer-st-77008", "pmt_949-ridge-st-77009", "pmt_1314-e-28th-st-77009", "act_231-e-26", "act_1011-e-25", "2131191267", "2131194125", "2131284475", "2131537524", "2131538725", "pmt_1602-turnpike-rd-77008", "pmt_822-nashua-st-77008", "pmt_1118-worthshire-st-77008"];
 function applyNC(){
@@ -882,6 +889,12 @@ applyFieldEdits();applyPosEdits();markers.forEach(mm=>mm.setStyle(mkStyle(mm._re
       if(!splitRelevant)sessionStorage.removeItem('_feReloaded');
     }catch(e){}
     if(remote.posEdits){ state.posEdits=Object.assign(state.posEdits||{},remote.posEdits); }
+    // off-market table corrections: per-id newest-wins on the `updated` stamp
+    // (two browsers can edit the same row; blind Object.assign would let a stale
+    //  remote entry overwrite a newer local one)
+    if(remote.offMarketEdits){ const loc=state.offMarketEdits=state.offMarketEdits||{};
+      for(const id in remote.offMarketEdits){ const rv=remote.offMarketEdits[id];
+        if(!loc[id]||String(rv&&rv.updated||'')>String(loc[id].updated||'')) loc[id]=rv; } }
     try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
     applyNC();applyFieldEdits();applyPosEdits();
     markers.forEach(mm=>mm.setStyle(mkStyle(mm._rec.id)));
@@ -1243,28 +1256,71 @@ function parseSoldsCsv(text){const out=[];let row=[],cur='',q=false;
   if(cur!==''||row.length){row.push(cur);if(row.length>1||row[0]!=='')out.push(row);}
   return out;}
 function soldsVal(s){const n=parseFloat(String(s).replace(/[$,]/g,''));return isNaN(n)?null:n;}
+// ---- off-market table corrections: manual disposition/note edits layered over the
+// generated CSV. Vocabulary is the changelog's dispositionUpdates vocabulary, verbatim.
+// Table display only — pins stay driven by RECONCILE; refresh.py pull-edits folds
+// these into changes/ so the next csv regen agrees with them.
+const OM_DISPS=['sold','under contract','terminated','unconfirmed'];
+let _omT=null,_omPending=null;
+function omStamp(id,patch){ state.offMarketEdits=state.offMarketEdits||{};
+  const e=state.offMarketEdits[id]=state.offMarketEdits[id]||{};
+  Object.assign(e,patch); e.updated=new Date().toISOString(); save(); }
+function omFlush(){ if(_omT){clearTimeout(_omT);_omT=null;}
+  if(_omPending){const p=_omPending;_omPending=null;omStamp(p.id,{note:p.val});} }
+window.addEventListener('pagehide',()=>{ // om edits inside the debounce window must not die with the tab
+  omFlush();
+  if(REMOTE_EDITS_URL&&_syncT){clearTimeout(_syncT);_syncT=null;
+    try{ fetch(REMOTE_EDITS_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(_sharedSlice()),keepalive:true}); }catch(e){}}
+});
+function omSavedFlash(cell){const sv=cell&&cell.querySelector('.sldsv');
+  if(sv){sv.classList.add('on');setTimeout(()=>sv.classList.remove('on'),900);}
+  if(cell&&!cell.classList.contains('om-ed'))cell.classList.add('om-ed');}
 function renderSolds(){const el=document.getElementById('soldsBody');
-  let h='<h2>Off Market</h2><p class="sub">Off-market listings — heights_off_market.csv. Click a column to sort.</p>';
+  const canEd=!VIEWER;
+  let h='<h2>Off Market</h2><p class="sub">Off-market listings — heights_off_market.csv. Click a column to sort.'+(canEd?' Disposition and notes are editable; corrections sync live and fold into the next refresh.':' Toggle EDIT (top right) to correct dispositions or notes.')+'</p>';
   h+='<div class="btns"><button class="btn" id="soldsDl">Download CSV</button><button class="btn" id="soldsClose">Close</button></div>';
   if(!SOLDS_ROWS){h+='<div class="slderr">'+esc(SOLDS_ERR||'No data loaded.')+'</div>';el.innerHTML=h;}
-  else{const rows=SOLDS_ROWS.slice();const k=SOLDS_SORT.k;
-    if(k>=0)rows.sort((a,b)=>{const x=soldsVal(a[k]),y=soldsVal(b[k]);
-      const c=(x!==null&&y!==null)?x-y:String(a[k]).localeCompare(String(b[k]));return c*SOLDS_SORT.dir;});
+  else{const idIdx=SOLDS_HDR.indexOf('id'),dIdx=SOLDS_HDR.indexOf('disposition'),nIdx=SOLDS_HDR.indexOf('notes');
+    const om=state.offMarketEdits||{};
+    const merged=SOLDS_ROWS.map(r=>{const id=idIdx>=0?String(r[idIdx]||''):'';const e=id&&om[id];
+      if(!e)return{c:r,id:id,ed:{}};
+      const c=r.slice(),ed={};
+      if(e.disposition!==undefined&&dIdx>=0){c[dIdx]=e.disposition;ed[dIdx]=1;}
+      if(e.note!==undefined&&nIdx>=0){c[nIdx]=e.note;ed[nIdx]=1;}
+      return{c:c,id:id,ed:ed};});
+    const k=SOLDS_SORT.k;
+    if(k>=0)merged.sort((a,b)=>{const x=soldsVal(a.c[k]),y=soldsVal(b.c[k]);
+      const c=(x!==null&&y!==null)?x-y:String(a.c[k]).localeCompare(String(b.c[k]));return c*SOLDS_SORT.dir;});
     h+='<div class="sldwrap"><table class="sldtbl"><thead><tr>';
     SOLDS_HDR.forEach((c,i)=>{h+='<th data-k="'+i+'" class="'+(i===k?'on':'')+'">'+esc(c)+(i===k?(SOLDS_SORT.dir>0?' ▲':' ▼'):'')+'</th>';});
     h+='</tr></thead><tbody>';
-    rows.forEach(r=>{h+='<tr>'+r.map((c,i)=>'<td'+(SOLDS_HDR[i]==='notes'?' class="nte"':'')+'>'+esc(c)+'</td>').join('')+'</tr>';});
+    merged.forEach(m=>{h+='<tr>'+m.c.map((c,i)=>{
+      const edc=m.ed[i]?' om-ed':'';
+      if(canEd&&m.id&&i===dIdx){const cur=String(c||'');let o='';
+        if(!cur)o+='<option value="" selected>—</option>';
+        else if(OM_DISPS.indexOf(cur)<0)o+='<option value="'+esc(cur)+'" selected>'+esc(cur)+'</option>';
+        OM_DISPS.forEach(dv=>{o+='<option value="'+dv+'"'+(dv===cur?' selected':'')+'>'+dv+'</option>';});
+        return '<td class="'+edc.trim()+'"><select class="om-disp" data-id="'+esc(m.id)+'" title="under contract = pending only; the id leaves Off Market on the next refresh">'+o+'</select><span class="sldsv">saved</span></td>';}
+      if(canEd&&m.id&&i===nIdx)return '<td class="nte'+edc+'"><textarea class="om-note" data-id="'+esc(m.id)+'">'+esc(c)+'</textarea><span class="sldsv">saved</span></td>';
+      return '<td class="'+((SOLDS_HDR[i]==='notes'?'nte':'')+edc).trim()+'">'+esc(c)+'</td>';}).join('')+'</tr>';});
     h+='</tbody></table></div>';el.innerHTML=h;
     el.querySelectorAll('.sldtbl th').forEach(th=>th.addEventListener('click',()=>{const i=+th.getAttribute('data-k');
-      if(SOLDS_SORT.k===i)SOLDS_SORT.dir*=-1;else{SOLDS_SORT.k=i;SOLDS_SORT.dir=1;}renderSolds();}));}
+      omFlush(); // full re-render would eat an in-flight edit
+      if(SOLDS_SORT.k===i)SOLDS_SORT.dir*=-1;else{SOLDS_SORT.k=i;SOLDS_SORT.dir=1;}renderSolds();}));
+    el.querySelectorAll('.om-disp').forEach(s=>s.addEventListener('change',()=>{
+      omStamp(s.getAttribute('data-id'),{disposition:s.value});omSavedFlash(s.parentElement);}));
+    el.querySelectorAll('.om-note').forEach(ta=>ta.addEventListener('input',()=>{
+      clearTimeout(_omT);_omPending={id:ta.getAttribute('data-id'),val:ta.value,el:ta};
+      _omT=setTimeout(()=>{_omT=null;const p=_omPending;_omPending=null;
+        omStamp(p.id,{note:p.val});omSavedFlash(p.el.parentElement);},250);}));}
   const d=document.getElementById('soldsDl');if(d)d.addEventListener('click',()=>{if(SOLDS_RAW)dl('heights_off_market.csv',SOLDS_RAW,'text/csv');});
-  document.getElementById('soldsClose').addEventListener('click',()=>{document.getElementById('solds').style.display='none';});}
+  document.getElementById('soldsClose').addEventListener('click',()=>{omFlush();document.getElementById('solds').style.display='none';});}
 document.getElementById('soldsBtn').addEventListener('click',()=>{
   document.getElementById('solds').style.display='block';
   fetch('heights_off_market.csv').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text();})
     .then(t=>{SOLDS_RAW=t;const rows=parseSoldsCsv(t);SOLDS_HDR=rows.shift()||[];SOLDS_ROWS=rows;SOLDS_ERR='';renderSolds();})
     .catch(e=>{SOLDS_HDR=null;SOLDS_ROWS=null;SOLDS_ERR='Could not load heights_off_market.csv — '+e.message;renderSolds();});});
-document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.getElementById('solds').style.display='none';}));
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{omFlush();document.getElementById('solds').style.display='none';}));
 document.getElementById('impBtn').addEventListener('click',()=>document.getElementById('impFile').click());
 document.getElementById('impFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();
   rd.onload=()=>{try{const s=JSON.parse(rd.result);if(s.tags)Object.assign(state.tags,s.tags);
