@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Actives refresh pipeline for the Heights map.
+"""Actives refresh pipeline for the CQ Houston market maps.
+
+Services all 7 markets via --market (default: heights). Heights keeps its
+changelog at changes/ and staging at staging/ (pre-generalization layout);
+every other market uses changes/<market>/ and staging/<market>/.
 
 Stage (a) scope: diff a dated pair of HAR actives CSVs against the current
 DATA actives, respecting OUT_OF_ZONE and the current reconcile state, and
@@ -26,7 +30,35 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from norm import key
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Per-market file layout. Heights predates the generalization and keeps the
+# root-level changes/ + staging/ dirs (no history churn); other markets nest.
+MARKETS = {
+    'heights':      {'html': 'index.html',        'csv': 'heights_off_market.csv',      'sub': None},
+    'montrose':     {'html': 'montrose.html',     'csv': 'montrose_off_market.csv',     'sub': 'montrose'},
+    'springbranch': {'html': 'springbranch.html', 'csv': 'springbranch_off_market.csv', 'sub': 'springbranch'},
+    'springvalley': {'html': 'springvalley.html', 'csv': 'springvalley_off_market.csv', 'sub': 'springvalley'},
+    'timbergrove':  {'html': 'timbergrove.html',  'csv': 'timbergrove_off_market.csv',  'sub': 'timbergrove'},
+    'westu':        {'html': 'westu.html',        'csv': 'westu_off_market.csv',        'sub': 'westu'},
+    'riveroaks':    {'html': 'riveroaks.html',    'csv': 'riveroaks_off_market.csv',    'sub': 'riveroaks'},
+}
+
+# Resolved per-run by set_market(); heights defaults keep every pre-existing
+# invocation byte-identical.
 CHANGES_DIR = os.path.join(ROOT, 'changes')
+STAGING_DIR = os.path.join(ROOT, 'staging')
+CSV_NAME = 'heights_off_market.csv'
+DEFAULT_HTML = os.path.join(ROOT, 'index.html')
+
+
+def set_market(name):
+    global CHANGES_DIR, STAGING_DIR, CSV_NAME, DEFAULT_HTML
+    mk = MARKETS[name]
+    sub = mk['sub']
+    CHANGES_DIR = os.path.join(ROOT, 'changes', sub) if sub else os.path.join(ROOT, 'changes')
+    STAGING_DIR = os.path.join(ROOT, 'staging', sub) if sub else os.path.join(ROOT, 'staging')
+    CSV_NAME = mk['csv']
+    DEFAULT_HTML = os.path.join(ROOT, mk['html'])
 
 
 # ---------- index.html extraction ----------
@@ -300,7 +332,6 @@ def cmd_generate(html_path, skip_pull=False):
 
 # ---------- stage (c): generated off-market CSV + LIFE sync ----------
 
-CSV_NAME = 'heights_off_market.csv'
 CSV_HDR = ['id', 'address', 'lot_type', 'last_list_price', 'builder', 'agent',
            'lot_sqft', 'building_sqft', 'mls_number', 'date_off_market',
            'disposition', 'lat', 'lng', 'notes']
@@ -310,7 +341,12 @@ def fold_events():
     """Full fold: off/relist/pending state plus newest-wins dispositions and
     drop dates. 'under contract' ids move from off to pending (they are not
     Off Market until they resolve to sold or terminated)."""
-    with open(os.path.join(CHANGES_DIR, 'index.json'), encoding='utf-8') as f:
+    idx_path = os.path.join(CHANGES_DIR, 'index.json')
+    if not os.path.exists(idx_path):
+        # a market with no changelog yet (pre-first-refresh port) folds to empty
+        print(f'note: {os.path.relpath(idx_path, ROOT)} absent — empty reconcile state')
+        return {}, {}, {}, {}, {}
+    with open(idx_path, encoding='utf-8') as f:
         idx = json.load(f)
     off, rel, disp, ddate = {}, {}, {}, {}
     for entry in idx['files']:
@@ -526,8 +562,6 @@ def cmd_pull_edits(html_path, apply_=False):
 
 # ---------- stage (d): staging of new listings ----------
 
-STAGING_DIR = os.path.join(ROOT, 'staging')
-
 
 def slug_id(addr):
     return 'act_' + re.sub(r'[^a-z0-9]+', '-', str(addr).lower().split(',')[0]).strip('-')
@@ -633,44 +667,50 @@ def stage_new(chg, csv_paths, html_path):
 # ---------- cli ----------
 
 def main():
+    common = argparse.ArgumentParser(add_help=False)
+    common.add_argument('--market', default='heights', choices=sorted(MARKETS),
+                        help='which market to service (default: heights)')
+    common.add_argument('--html', default=None,
+                        help="override the market's html file (default: per --market)")
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
-    d = sub.add_parser('diff', help='diff HAR exports against DATA actives')
+    d = sub.add_parser('diff', parents=[common], help='diff HAR exports against DATA actives')
     d.add_argument('--date', required=True)
     d.add_argument('single_csv')
     d.add_argument('split_csv')
-    d.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
     d.add_argument('--write', action='store_true', help='write the changelog (default: dry run)')
-    g = sub.add_parser('generate', help='splice RECONCILE block into index.html from the changelog')
-    g.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
+    g = sub.add_parser('generate', parents=[common],
+                       help="splice RECONCILE block into the market's html from the changelog")
     g.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
-    c = sub.add_parser('csv', help='regenerate heights_off_market.csv from changelog + DATA')
-    c.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
-    l = sub.add_parser('life-sync', help='sync LIFE s/note from changelog dispositions')
-    l.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
-    p = sub.add_parser('pull-edits', help='fetch off-market table corrections from the '
+    sub.add_parser('csv', parents=[common],
+                   help="regenerate the market's off_market csv from changelog + DATA")
+    sub.add_parser('life-sync', parents=[common],
+                   help='sync LIFE s/note from changelog dispositions')
+    p = sub.add_parser('pull-edits', parents=[common],
+                       help='fetch off-market table corrections from the '
                        'shared edits store; --apply folds dispositions into changes/')
-    p.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
     p.add_argument('--apply', action='store_true',
                    help='fold proposed disposition updates into changes/ (default: dry run)')
     args = ap.parse_args()
+    set_market(args.market)
+    html = args.html or DEFAULT_HTML
 
     if args.cmd == 'generate':
-        cmd_generate(args.html, skip_pull=args.skip_pull)
+        cmd_generate(html, skip_pull=args.skip_pull)
         return
     if args.cmd == 'csv':
-        cmd_csv(args.html)
+        cmd_csv(html)
         return
     if args.cmd == 'life-sync':
-        cmd_life_sync(args.html)
+        cmd_life_sync(html)
         return
     if args.cmd == 'pull-edits':
-        cmd_pull_edits(args.html, apply_=args.apply)
+        cmd_pull_edits(html, apply_=args.apply)
         return
 
     if args.cmd == 'diff':
         chg = run_diff(args.date, [('Single Lot', args.single_csv),
-                                   ('Split Lot', args.split_csv)], args.html)
+                                   ('Split Lot', args.split_csv)], html)
         print(json.dumps(chg['counts']))
         for sec in ('dropped', 'relisted', 'new', 'excluded'):
             for e in chg[sec]:
@@ -680,7 +720,7 @@ def main():
             print(f'wrote changes/{fn} + index.json')
             if chg['new']:
                 stage_new(chg, [('Single Lot', args.single_csv),
-                                ('Split Lot', args.split_csv)], args.html)
+                                ('Split Lot', args.split_csv)], html)
         else:
             print('(dry run — nothing written)')
 
