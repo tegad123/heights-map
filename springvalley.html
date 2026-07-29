@@ -815,6 +815,7 @@ function popupHTML(r){
       if(pm.val&&pm.val!=='0')h+='<span>$'+(+pm.val).toLocaleString()+'</span>';
       if(pm.proj)h+='<span>#'+esc(pm.proj)+'</span>';
       h+='</div></div>';}
+    h+='<div class="pmeta"><a href="https://cohtora.houstontx.gov/approot/soldpermits/online_permit.htm" target="_blank" rel="noopener" style="color:var(--red2)">Look up on COH &#8599;</a></div>';
     h+='</div>';}
   // inspections (from external feed, keyed by permit project number)
   {const ins=inspForPin(r);
