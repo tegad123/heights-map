@@ -69,7 +69,8 @@ def load_html(path):
 
 
 def extract_data(src):
-    m = re.search(r'let DATA = (\[.*?\]);\n', src, re.S)
+    # some market files carry a trailing // comment after the DATA literal
+    m = re.search(r'let DATA = (\[.*?\]);[ \t]*(?://[^\n]*)?\n', src, re.S)
     if not m:
         raise SystemExit('FATAL: DATA block not found')
     return json.loads(m.group(1))
@@ -295,7 +296,7 @@ def validate_spliced(src):
         raise SystemExit('FATAL: RECONCILE markers not present exactly once')
     if src.index(MARK_BEGIN) > src.index(MARK_END):
         raise SystemExit('FATAL: RECONCILE markers out of order')
-    json.loads(re.search(r'let DATA = (\[.*?\]);\n', src, re.S).group(1))
+    json.loads(re.search(r'let DATA = (\[.*?\]);[ \t]*(?://[^\n]*)?\n', src, re.S).group(1))
     json.loads(re.search(r'SEED_POINTS=(\{.*?\});\nif\(Object', src, re.S).group(1))
     json.loads(re.search(r'const LIFE=(\{.*?\});\n', src, re.S).group(1))
     rec = json.loads(re.search(r'const RECONCILE=(\{.*?\});', src, re.S).group(1))
