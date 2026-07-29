@@ -1,31 +1,44 @@
-// Heights Map — shared edits backend (Google Apps Script)
-// Stores the map's edit overlay (product/stage changes, moved pins, notes, pair overrides)
-// in a Drive file so every viewer sees Spencer's edits live. Last write wins.
+// CQ Houston maps — shared edits backend (Google Apps Script)
+// Stores each market map's edit overlay (product/stage changes, moved pins,
+// notes, pair overrides, off-market table corrections) in a per-market Drive
+// file so every viewer sees Spencer's edits live. Last write wins per market.
 //
-// SETUP (3 minutes, one time):
-// 1. Go to script.google.com -> New project. Delete the default code, paste this file.
-// 2. Save. Click Deploy -> New deployment -> type: Web app.
-//    - Description: heights map edits
-//    - Execute as: Me
-//    - Who has access: Anyone
-// 3. Click Deploy, authorize with the Google account, copy the Web app URL (ends in /exec).
-// 4. Give that URL to Claude/Claude Code to paste into index.html's REMOTE_EDITS_URL constant.
+// MARKET ROUTING: ?market=<name> on GET, and/or a "market" field in the POST
+// body. Unknown or missing market falls back to 'heights', which keeps the
+// original single-file contract — existing Heights clients that predate
+// namespacing keep working unchanged.
 //
-// The edits live in a Drive file named heights_map_edits.json in this account's My Drive.
-// Every write also appends a timestamped backup (last 50 kept) so nothing is ever lost.
+// SETUP (one time) / REDEPLOY (after edits):
+// 1. script.google.com -> open the existing project (or New project), paste this file.
+// 2. Deploy -> Manage deployments -> Edit (pencil) -> Version: New version -> Deploy.
+//    (Editing the EXISTING deployment keeps the /exec URL stable. Only a brand-new
+//    deployment mints a new URL.)
+// 3. Execute as: Me. Who has access: Anyone.
+// 4. The /exec URL goes into each market html's REMOTE_EDITS_URL constant.
+//
+// Files live in this account's My Drive: heights_map_edits.json,
+// montrose_map_edits.json, ... Every write appends a timestamped backup
+// (last 50 kept per market) so nothing is ever lost.
 
-const FILE_NAME = 'heights_map_edits.json';
-const BACKUP_PREFIX = 'heights_map_edits_backup_';
+const MARKETS = ['heights', 'montrose', 'springbranch', 'springvalley',
+                 'timbergrove', 'westu', 'riveroaks'];
 const MAX_BACKUPS = 50;
 
-function _file() {
-  const it = DriveApp.getFilesByName(FILE_NAME);
-  return it.hasNext() ? it.next() : DriveApp.createFile(FILE_NAME, '{}', 'application/json');
+function _marketOf(e, parsed) {
+  const m = (e && e.parameter && e.parameter.market) ||
+            (parsed && parsed.market) || 'heights';
+  return MARKETS.indexOf(m) >= 0 ? m : 'heights';
 }
 
-function doGet() {
+function _fileFor(market) {
+  const name = market + '_map_edits.json';
+  const it = DriveApp.getFilesByName(name);
+  return it.hasNext() ? it.next() : DriveApp.createFile(name, '{}', 'application/json');
+}
+
+function doGet(e) {
   return ContentService
-    .createTextOutput(_file().getBlob().getDataAsString())
+    .createTextOutput(_fileFor(_marketOf(e, null)).getBlob().getDataAsString())
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -41,21 +54,23 @@ function doPost(e) {
     return ContentService.createTextOutput(JSON.stringify({ ok: false, error: 'too large' }))
       .setMimeType(ContentService.MimeType.JSON);
   }
-  const f = _file();
+  const market = _marketOf(e, parsed);
+  const backupPrefix = market + '_map_edits_backup_';
+  const f = _fileFor(market);
   // timestamped backup of the previous state
   try {
     const prev = f.getBlob().getDataAsString();
     if (prev && prev !== '{}') {
-      DriveApp.createFile(BACKUP_PREFIX + new Date().toISOString().replace(/[:.]/g, '-') + '.json', prev, 'application/json');
-      // prune old backups
+      DriveApp.createFile(backupPrefix + new Date().toISOString().replace(/[:.]/g, '-') + '.json', prev, 'application/json');
+      // prune old backups (per market)
       const backups = [];
-      const it = DriveApp.searchFiles('title contains "' + BACKUP_PREFIX + '"');
+      const it = DriveApp.searchFiles('title contains "' + backupPrefix + '"');
       while (it.hasNext()) backups.push(it.next());
       backups.sort(function (a, b) { return b.getDateCreated() - a.getDateCreated(); });
       for (let i = MAX_BACKUPS; i < backups.length; i++) backups[i].setTrashed(true);
     }
   } catch (err) { /* backup failure never blocks a save */ }
   f.setContent(body);
-  return ContentService.createTextOutput(JSON.stringify({ ok: true, bytes: body.length, at: new Date().toISOString() }))
+  return ContentService.createTextOutput(JSON.stringify({ ok: true, market: market, bytes: body.length, at: new Date().toISOString() }))
     .setMimeType(ContentService.MimeType.JSON);
 }

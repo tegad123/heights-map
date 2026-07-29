@@ -488,7 +488,7 @@ if(state.tags.market)state.tags.market.name='Active (Finished)';
 const REMOTE_EDITS_URL='https://script.google.com/macros/s/AKfycbydaT9RMOcOj20l1JhieXanv0qhVrqeq5Fez0rzOPxKhy422-QIuzP_NS2hmd7-bD3I/exec'; // paste Apps Script /exec URL to enable live shared edits; '' = local-only
 let _syncT=null,_syncBusy=false;
 function _sharedSlice(){let ov={};try{ov=JSON.parse(localStorage.getItem('heights_pair_overrides_v1'))||{};}catch(e){}
-  return {v:1,updated:new Date().toISOString(),points:state.points,fieldEdits:state.fieldEdits||{},posEdits:state.posEdits||{},pairOverrides:ov,offMarketEdits:state.offMarketEdits||{}};}
+  return {v:1,market:'heights',updated:new Date().toISOString(),points:state.points,fieldEdits:state.fieldEdits||{},posEdits:state.posEdits||{},pairOverrides:ov,offMarketEdits:state.offMarketEdits||{}};}
 function remoteSave(){ if(!REMOTE_EDITS_URL) return;
   clearTimeout(_syncT);
   _syncT=setTimeout(()=>{ _syncT=null; _syncBusy=true; setSyncDot('sync');
@@ -863,6 +863,7 @@ applyFieldEdits();applyPosEdits();markers.forEach(mm=>mm.setStyle(mkStyle(mm._re
 (function(){ if(!REMOTE_EDITS_URL) return;
   fetch(REMOTE_EDITS_URL,{method:'GET'}).then(r=>r.ok?r.json():Promise.reject(r.status)).then(remote=>{
     if(!remote||typeof remote!=='object')return;
+    if(remote.market&&remote.market!=='heights'){setSyncDot('err');console.warn('[edits] remote blob is for',remote.market,'— refusing merge');return;}
     // pair overrides need a pre-merge pass: if server differs from local, cache + reload once
     try{
       const localOv=JSON.parse(localStorage.getItem('heights_pair_overrides_v1')||'{}');
