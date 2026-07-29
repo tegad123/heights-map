@@ -8,6 +8,14 @@ emit changes/changes_YYYY-MM-DD.json + changes/index.json.
 Usage:
   python3 refresh/refresh.py diff --date 2026-08-10 single.csv split.csv
       [--html index.html] [--write]
+  python3 refresh/refresh.py pull-edits [--html index.html] [--apply]
+
+pull-edits fetches the browser-side offMarketEdits overlay (manual
+disposition/note corrections made in the Off Market table) from the shared
+edits store. Dry run stages a proposal; --apply folds disposition rulings
+into changes/ (the changelog stays the single source of truth — the overlay
+is an inbox, not a second writer). Overlay notes are applied by `csv` from
+the staged snapshot; they never enter the changelog.
 
 Without --write it prints the classification and touches nothing.
 HUMAN-INVOKED ONLY — never run from cron (CLAUDE.md hard rule).
@@ -329,6 +337,10 @@ def cmd_csv(html_path):
     data = {d['id']: d for d in extract_data(src)}
     sp = json.loads(re.search(r'SEED_POINTS=(\{.*?\});\nif\(Object', src, re.S).group(1))
     off, rel, pend, disp, ddate = fold_events()
+    # manual note corrections from the Off Market table (pull-edits snapshot):
+    # an overlay note, when present, outranks seed/carried notes — it is the
+    # newest explicit human statement about the row
+    om = load_overlay_snapshot()
     # carry enrichment fields + row order from the previous CSV
     prev, order = {}, []
     path = os.path.join(ROOT, CSV_NAME)
@@ -356,7 +368,9 @@ def cmd_csv(html_path):
             'disposition': disp.get(i, ('unconfirmed', ''))[0],
             'lat': p.get('lat') or d.get('lat', ''),
             'lng': p.get('lng') or d.get('lng', ''),
-            'notes': (sp.get(i) or {}).get('notes') or p.get('notes', ''),
+            'notes': ((om.get(i) or {}).get('note')
+                      if (om.get(i) or {}).get('note') is not None
+                      else ((sp.get(i) or {}).get('notes') or p.get('notes', ''))),
         })
     with open(path, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=CSV_HDR, lineterminator='\n')
@@ -404,6 +418,110 @@ def cmd_life_sync(html_path):
         with open(html_path, 'w', encoding='utf-8') as f:
             f.write(candidate)
     print(f'life-sync: {changed} entries changed')
+
+
+# ---------- pull-edits: fold browser off-market corrections into the changelog ----------
+
+SNAPSHOT_NAME = 'remote_edits_snapshot.json'
+
+
+def _extract_remote_url(src):
+    m = re.search(r"const REMOTE_EDITS_URL='([^']*)'", src)
+    return m.group(1) if m else ''
+
+
+def load_overlay_snapshot():
+    """offMarketEdits from the last pull-edits run, or {} if never pulled."""
+    path = os.path.join(STAGING_DIR, SNAPSHOT_NAME)
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding='utf-8') as f:
+        return json.load(f).get('offMarketEdits', {})
+
+
+def cmd_pull_edits(html_path, apply_=False):
+    """Fetch offMarketEdits from the shared edits store. The changelog stays
+    canonical: overlay dispositions newer than the newest changelog ruling are
+    folded into changes/ (with --apply); stale or unknown entries are skipped.
+    Overlay notes are snapshotted for cmd_csv and never enter the changelog."""
+    from datetime import date as _date
+    today = str(_date.today())
+    src = load_html(html_path)
+    url = _extract_remote_url(src)
+    if not url:
+        raise SystemExit('FATAL: REMOTE_EDITS_URL is empty in %s — nothing to pull'
+                         % os.path.basename(html_path))
+    import urllib.request
+    raw = urllib.request.urlopen(url, timeout=60).read().decode('utf-8')
+    try:
+        blob = json.loads(raw)
+    except ValueError:
+        raise SystemExit('FATAL: remote edits store returned non-JSON')
+    om = blob.get('offMarketEdits') or {}
+    if not isinstance(om, dict):
+        raise SystemExit('FATAL: offMarketEdits is not an object')
+    os.makedirs(STAGING_DIR, exist_ok=True)
+    with open(os.path.join(STAGING_DIR, SNAPSHOT_NAME), 'w', encoding='utf-8') as f:
+        json.dump({'fetched': today, 'offMarketEdits': om}, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    off, rel, pend, disp, ddate = fold_events()
+    known = set(off) | set(pend)
+    proposed = {}
+    for i in sorted(om):
+        e = om[i] if isinstance(om[i], dict) else {}
+        dv = e.get('disposition')
+        if not dv:
+            continue
+        if dv not in LIFE_NOTES:
+            print(f'  SKIP  {i}: unknown disposition {dv!r}')
+            continue
+        if i not in known:
+            print(f'  SKIP  {i}: not an off-market/pending id in the changelog')
+            continue
+        cur, curdate = disp.get(i, ('', ''))
+        if dv == cur:
+            continue
+        odate = str(e.get('updated') or '')[:10]
+        if odate and curdate and odate < curdate:
+            print(f'  STALE {i}: overlay {dv} ({odate}) older than changelog {cur} ({curdate})')
+            continue
+        proposed[i] = dv
+        print(f'  {i:38s} {cur or "-"} -> {dv} (edited {odate or "?"})')
+    n_notes = sum(1 for e in om.values() if isinstance(e, dict) and e.get('note') is not None)
+    print(f'pull-edits: {len(om)} overlay entries, {len(proposed)} disposition updates, '
+          f'{n_notes} notes (notes apply at csv regen)')
+    if not apply_:
+        prop = os.path.join(STAGING_DIR, f'pull_edits_proposed_{today}.json')
+        with open(prop, 'w', encoding='utf-8') as f:
+            json.dump({'date': today, 'dispositionUpdates': proposed},
+                      f, ensure_ascii=False, indent=1)
+            f.write('\n')
+        print(f'(dry run) proposal -> staging/pull_edits_proposed_{today}.json '
+              '— rerun with --apply to fold into changes/')
+        return
+    if not proposed:
+        print('nothing to apply')
+        return
+    r = os.system('git -C "%s" pull --ff-only -q' % ROOT)
+    if r != 0:
+        raise SystemExit('FATAL: git pull --ff-only failed — resolve divergence first')
+    fn = os.path.join(CHANGES_DIR, f'changes_{today}.json')
+    if os.path.exists(fn):
+        with open(fn, encoding='utf-8') as f:
+            chg = json.load(f)
+        chg.setdefault('dispositionUpdates', {}).update(proposed)
+    else:
+        chg = {'date': today, 'sources': ['pull-edits'],
+               'counts': {'matched': 0, 'dropped': 0, 'new': 0,
+                          'relisted': 0, 'excluded': 0},
+               'matchedIds': [], 'dropped': [], 'relisted': [], 'new': [],
+               'excluded': [], 'dispositionUpdates': proposed}
+    with open(fn, 'w', encoding='utf-8') as f:
+        json.dump(chg, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    rebuild_index()
+    print(f'applied {len(proposed)} disposition updates -> changes/{os.path.basename(fn)}; '
+          'run generate + csv + life-sync next')
 
 
 # ---------- stage (d): staging of new listings ----------
@@ -530,6 +648,11 @@ def main():
     c.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
     l = sub.add_parser('life-sync', help='sync LIFE s/note from changelog dispositions')
     l.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
+    p = sub.add_parser('pull-edits', help='fetch off-market table corrections from the '
+                       'shared edits store; --apply folds dispositions into changes/')
+    p.add_argument('--html', default=os.path.join(ROOT, 'index.html'))
+    p.add_argument('--apply', action='store_true',
+                   help='fold proposed disposition updates into changes/ (default: dry run)')
     args = ap.parse_args()
 
     if args.cmd == 'generate':
@@ -540,6 +663,9 @@ def main():
         return
     if args.cmd == 'life-sync':
         cmd_life_sync(args.html)
+        return
+    if args.cmd == 'pull-edits':
+        cmd_pull_edits(args.html, apply_=args.apply)
         return
 
     if args.cmd == 'diff':
