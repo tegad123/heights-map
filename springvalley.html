@@ -400,7 +400,7 @@ function applyReconcile(pts){
 applyReconcile(state.points);
 // ---- shared edits sync (per-market blob; backend routes on market) ----
 const MARKET_KEY='springvalley';
-const REMOTE_EDITS_URL=''; // paste the Apps Script /exec URL AFTER the market-routing backend is redeployed; '' = local-only
+const REMOTE_EDITS_URL='https://script.google.com/macros/s/AKfycbydaT9RMOcOj20l1JhieXanv0qhVrqeq5Fez0rzOPxKhy422-QIuzP_NS2hmd7-bD3I/exec'; // market-routing backend (redeployed 2026-07-29); '' = local-only
 let _syncT=null,_syncBusy=false;
 function _sharedSlice(){
   return {v:1,market:MARKET_KEY,updated:new Date().toISOString(),points:state.points,fieldEdits:state.fieldEdits||{},posEdits:state.posEdits||{},pairOverrides:{},offMarketEdits:state.offMarketEdits||{}};}
