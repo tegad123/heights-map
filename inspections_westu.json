@@ -1,7 +1,7 @@
 {
   "25020503": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3779 SYRACUSE ST 77005",
     "inspections": [
       {
@@ -98,7 +98,7 @@
   },
   "25038586": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2404 QUENBY ST 77005",
     "inspections": [
       {
@@ -339,7 +339,7 @@
   },
   "25038587": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2406 QUENBY ST 77005",
     "inspections": [
       {
@@ -574,7 +574,7 @@
   },
   "25037683": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "1803 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -653,7 +653,7 @@
   },
   "25037686": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "1807 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -732,7 +732,7 @@
   },
   "25037688": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "1811 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -811,7 +811,7 @@
   },
   "25078146": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "5329 DORA ST 77005",
     "inspections": [
       {
@@ -992,7 +992,7 @@
   },
   "25082414": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2428 NOTTINGHAM ST 77005",
     "inspections": [
       {
@@ -1149,7 +1149,7 @@
   },
   "25117126": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2426 QUENBY ST 77005",
     "inspections": [
       {
@@ -1192,7 +1192,7 @@
   },
   "25117127": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2424 QUENBY ST 77005",
     "inspections": [
       {
@@ -1235,7 +1235,7 @@
   },
   "25072450": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "5303 CHEROKEE ST 77005",
     "inspections": [
       {
@@ -1374,7 +1374,7 @@
   },
   "25076577": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3802 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -1621,7 +1621,7 @@
   },
   "25083081": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2357 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -1664,6 +1664,12 @@
         "type": "Piers PM",
         "date": "2026-01-29",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-07-30",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -1724,7 +1730,7 @@
   },
   "25052444": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3746 CHILDRESS ST 77005",
     "inspections": [
       {
@@ -1893,7 +1899,7 @@
   },
   "25068930": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2325 WROXTON RD 77005",
     "inspections": [
       {
@@ -2158,7 +2164,7 @@
   },
   "25077921": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3782 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -2278,14 +2284,20 @@
     ]
   },
   "25101670": {
-    "status": "Passed",
-    "updated": "2026-07-27",
+    "status": "Pending",
+    "updated": "2026-07-30",
     "address": "5312 CHEROKEE ST 77005",
     "inspections": [
       {
         "type": "GROUND IN",
         "date": "2026-02-13",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-07-30",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2322,7 +2334,7 @@
   },
   "25106029": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2334 DUNSTAN RD 77005",
     "inspections": [
       {
@@ -2375,8 +2387,8 @@
       },
       {
         "type": "2nd EC",
-        "date": "2025-11-13",
-        "result": "Failed",
+        "date": "2026-07-31",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2401,7 +2413,7 @@
   },
   "25076059": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2410 QUENBY ST 77005",
     "inspections": [
       {
@@ -2549,6 +2561,12 @@
         "inspector": ""
       },
       {
+        "type": "DECOR AD FINAL",
+        "date": "2026-07-31",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2025-11-04",
         "result": "Passed",
@@ -2624,7 +2642,7 @@
   },
   "25076060": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2412 QUENBY ST 77005",
     "inspections": [
       {
@@ -2760,6 +2778,12 @@
         "inspector": ""
       },
       {
+        "type": "DECOR AD FINAL",
+        "date": "2026-07-31",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-06-03",
         "result": "Passed",
@@ -2829,7 +2853,7 @@
   },
   "25053572": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3753 DRAKE ST 77005",
     "inspections": [
       {
@@ -2925,8 +2949,8 @@
     ]
   },
   "26038687": {
-    "status": "Passed",
-    "updated": "2026-07-27",
+    "status": "Partial",
+    "updated": "2026-07-30",
     "address": "2405 NOTTINGHAM ST 77005",
     "inspections": [
       {
@@ -2942,6 +2966,18 @@
         "inspector": ""
       },
       {
+        "type": "1031-FDN AM",
+        "date": "2026-07-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-07-28",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-07-08",
         "result": "Passed",
@@ -2951,7 +2987,7 @@
   },
   "26019294": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2328 QUENBY ST 77005",
     "inspections": [
       {
@@ -3036,7 +3072,7 @@
   },
   "26017678": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "5335 MANDELL ST 77005",
     "inspections": [
       {
@@ -3079,7 +3115,7 @@
   },
   "26027179": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3771 PURDUE ST 77005",
     "inspections": [
       {
@@ -3116,7 +3152,7 @@
   },
   "26030757": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "3743 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -3147,7 +3183,7 @@
   },
   "26031875": {
     "status": "Partial",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2337 WROXTON RD 77005",
     "inspections": [
       {
@@ -3184,9 +3220,21 @@
   },
   "26042600": {
     "status": "Passed",
-    "updated": "2026-07-27",
+    "updated": "2026-07-30",
     "address": "2341 WROXTON RD 77005",
     "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-29",
+        "result": "Passed",
+        "inspector": ""
+      },
       {
         "type": "SAWPOLE FINAL",
         "date": "2026-07-15",
