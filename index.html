@@ -381,8 +381,10 @@ window._DROPPED=new Set();
   const projOf=r=>r.permits&&r.permits[0]&&String(r.permits[0].proj||'');
   const masterRef=r=>{const d=(r.permits&&r.permits[0]&&r.permits[0].desc)||'';const m=d.match(/(?:M\s*#?|#)\s*(\d{7,9})/);return m?m[1]:null;};
   const num=a=>{const m=String(a).match(/^(\d+)/);return m?+m[1]:null;};
-  const street=a=>String(a).toLowerCase().replace(/^\d+\s*/,'').replace(/\s+(unit#?\s*)?[a-f]\b.*$/,'').replace(/,.*/,'').replace(/\bstreet\b/,'st').trim();
-  const unitOf=a=>{const m=String(a).toLowerCase().match(/\b(?:unit#?\s*)?([a-f])(?:\s*\(est\))?\s*(?:,|$)/);return m?m[1]:null;};
+  // '#A'-style unit designators and comma-less 'Dr C 77055' zip-terminated units
+  // are visible to both helpers (regression-checked identical on Heights data 2026-07-30)
+  const street=a=>String(a).toLowerCase().replace(/^\d+\s*/,'').replace(/\s+(unit#?\s*|#\s*)?[a-f]\b.*$/,'').replace(/,.*/,'').replace(/\s+\d{5}$/,'').replace(/\b(street|st|dr|ln|ave|blvd|rd|ct|pl|way)\s+[nsew]$/,'$1').replace(/\bstreet\b/,'st').trim();
+  const unitOf=a=>{const m=String(a).toLowerCase().match(/\b(?:unit#?\s*|#\s*)?([a-f])(?:\s*\(est\))?(?:\s*(?:,|$)|\s+\d{5}\b)/);return m?m[1]:null;};
   const near=(a,b)=>{const dx=(a.lat-b.lat)*111320,dy=(a.lng-b.lng)*111320*Math.cos(a.lat*Math.PI/180);return Math.hypot(dx,dy)<90;};
   const splits=DATA.filter(isSplit), used=new Set(), pairs=[];
   const byProj={}; splits.forEach(r=>{const p=projOf(r); if(p)byProj[p]=r;});
