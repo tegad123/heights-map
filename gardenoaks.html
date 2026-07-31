@@ -608,7 +608,7 @@ const layer=L.layerGroup().addTo(map);
 // Shape: { "25111965": { status:"Passed"|"Failed"|"Pending"|"Partial", updated:"2026-06-18",
 //   inspections:[{type:"Foundation Form Survey", date:"2026-03-04", result:"Passed", inspector:"" }, ...] }, ... }
 let INSPECTIONS={};
-const INSPECTIONS_URL=''; // no inspections pull for this market yet — '' degrades cleanly (no badge, popups say 'no records on file')
+const INSPECTIONS_URL='inspections_gardenoaks.json';
 function inspForPin(r){
   if(!r.permits)return null;
   for(const pm of r.permits){ if(pm.proj && INSPECTIONS[pm.proj]) return {proj:pm.proj, ...INSPECTIONS[pm.proj]}; }

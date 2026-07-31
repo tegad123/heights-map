@@ -1,0 +1,7067 @@
+{
+  "22028915": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "408 W 30TH ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-07-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-05-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2026-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-07-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2026-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2025-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-07-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2026-02-09",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2026-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2025-05-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-05-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-02-09",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-02-09",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-04-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-08-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD AC FINAL 1",
+        "date": "2026-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-09-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-07-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2026-01-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2025-01-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GO BY",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2025-09-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-09-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2025-09-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-09-19",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "22011082": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "802 W 32ND ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-02-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-08-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-02-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-08-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-10-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-07-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-02-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-07-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2024-11-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-11-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-11-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-01-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-08-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-04-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "VISIT, ETC.",
+        "date": "2025-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-02-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-08-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-08-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-08-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-07-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADMIN.FINAL",
+        "date": "2025-02-25",
+        "result": "Failed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23022697": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "203 W 34TH ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2023-12-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-02-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2023-09-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-04-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2023-09-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-05-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-01-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-05-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2024-04-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-01-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-04-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2023-09-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2023-11-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2023-11-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2023-12-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-05-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-04-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2024-03-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2024-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "date": "2024-05-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2023-09-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-06-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-06-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-04-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-04-03",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23099686": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "1010 GARDENIA DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-06-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "EV Level 1",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-11-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-01-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-01-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-02-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-04-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-04-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "date": "2025-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-07-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Go By",
+        "date": "2025-02-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2024-10-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2025-02-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-02-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-07-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-01-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-04-07",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-02-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2025-01-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-11-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-11-18",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23102934": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "4319 APOLLO ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-01-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-01-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-05-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-03-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-05-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-02-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-04-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SFR Kitchen",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-04-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2024-04-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2024-04-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2024-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-03-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 2",
+        "date": "2024-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-01-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-04-30",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23043677": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "3408 N SHEPHERD DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "SLAB COVER",
+        "date": "2024-05-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WALL COVER",
+        "date": "2024-06-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CEILING",
+        "date": "2024-07-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-09-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCO",
+        "date": "2024-09-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-05-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCO",
+        "date": "2024-09-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-10-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Wall Cover",
+        "date": "2024-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ceiling Cover",
+        "date": "2024-08-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "EGRESS ILLUMIN",
+        "date": "2024-09-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-10-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "date": "2024-08-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCO",
+        "date": "2024-09-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-05-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-08-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-09-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Duct Seal",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CO FINAL",
+        "date": "2024-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "EXPIRATION DAY",
+        "date": "2024-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Expiration",
+        "date": "2024-10-08",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP C/O FINAL",
+        "date": "2024-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INCEPTION",
+        "date": "2024-07-08",
+        "result": "Failed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23035660": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "926 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2024-06-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-10-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-10-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-10-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-06-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-03-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-03-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-01-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2023-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-10-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-10-03",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23079835": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "710 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-03-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-01-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-05-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2023-12-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-07-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2023-11-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-07-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-07-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2024-07-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-02-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2023-11-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-02-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-02-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2023-11-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-01-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-07-23",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-07-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-08-01",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD AC FINAL 1",
+        "date": "2024-08-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-01-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2023-11-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-07-23",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23079997": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "219 W 34TH ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-02-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-12-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-05-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-12-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2023-12-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2023-12-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-03-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-12-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2023-12-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-02-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-12-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-03-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-01-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-03-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD AC FINAL 1",
+        "date": "2024-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-08-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-06-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-02-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-12-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-12-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-08-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2024-08-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-08-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23062293": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "1043 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2023-12-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-02-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2023-08-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-05-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-01-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2023-12-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2023-08-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2023-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2023-11-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2023-10-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2023-12-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2024-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Go By",
+        "date": "2024-06-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-06-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2023-12-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2024-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2024-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DITCH COVER",
+        "date": "2024-02-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2024-02-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2023-09-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2024-05-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-05-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-04-24",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23077844": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "966 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-02-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2023-12-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-05-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-02-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-05-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2023-10-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-04-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2023-10-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-03-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-01-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2023-12-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2023-11-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-01-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2023-11-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2023-12-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-05-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2024-03-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2023-12-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2023-11-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-05-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-03-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-04-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-04-05",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23103458": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "335 W 34TH ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-03-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-03-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-08-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-08-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-02-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-08-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-02-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-08-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-04-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-08-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2024-08-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-02-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-04-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-04-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-09-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-02-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-09-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-04-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-07-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-06-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SFR Kitchen",
+        "date": "2024-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-04-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2024-09-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-01-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2024-07-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-07-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2024-07-05",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24022142": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "216 W 31ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2024-11-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-03-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-03-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-06-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-03-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-03-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-06-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-09-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "date": "2024-06-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-03-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-08-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-02-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-03-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-02-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-03-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "date": "2025-06-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-06-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-06-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-07-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-03-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-03-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-10-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-03-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-12-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-03-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-02-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2025-03-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24015363": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "1063 GARDENIA DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-08-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-03-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-03-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-01-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-02-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-02-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-08-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-09-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-03-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-05-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-03-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-08-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-08-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-12-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-11-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2024-11-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-08-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-03-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GO BY",
+        "date": "2025-03-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-03-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-04-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-01-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-01-15",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23123135": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "919 GARDENIA DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-12-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-09-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-03-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-09-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-09-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-09-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-09-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-01-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "date": "2024-08-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-01-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-09-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-04-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-05-16",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-09-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2025-09-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-10-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-08-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-09-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-09-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-10-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2025-09-22",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24069846": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "539 W 34TH ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-06-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-06-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2026-05-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-06-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2026-05-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2026-04-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2026-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2025-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-09-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2026-05-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-03-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2025-03-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2025-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2026-05-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2026-04-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2026-05-04",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-07-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2026-08-03",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-08-03",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2025-04-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24069896": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "765 SUE BARNETT DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-02-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-03-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-12-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-12-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-06-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-02-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-06-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-02-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-02-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-01-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-04-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SFR Kitchen",
+        "date": "2025-04-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-04-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "VISIT, ETC.",
+        "date": "2025-02-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-06-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-12-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-05-06",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24019264": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "431 W 32ND ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-07-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-03-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2026-04-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2025-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2026-04-28",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-05-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "V1 Final",
+        "date": "2024-04-18",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23120943": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "1003 LAMONTE LN, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-07-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-12-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "EV Level 1",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-11-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-11-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-09-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2026-05-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-07-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-09-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2026-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2025-02-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2025-10-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-08-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2026-04-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GO BY",
+        "date": "2025-12-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2026-03-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-08-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-08-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2026-06-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "RECONNECT",
+        "date": "2026-06-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2026-07-24",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-12-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GO BY",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2026-05-11",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-07-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2026-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-04-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2026-04-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "V2 Final",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23114912": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "1587 SUE BARNETT DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-05-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-04-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-03-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-08-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-03-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-09-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2024-05-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Wall Cover",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-04-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-04-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-02-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-03-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-04-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-03-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2024-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2024-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD AC FINAL 1",
+        "date": "2024-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-03-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2024-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-07-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECO AE FINAL",
+        "date": "2024-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2024-09-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-01-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-08-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-08-20",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24063623": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "1030 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-03-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-11-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-10-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-10-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-10-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-03-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-02-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2025-03-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-12-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-11-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-10-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-02-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "VISIT, ETC.",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECO AE FINAL",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-05-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2025-10-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-03-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2025-03-20",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24063542": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "1032 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-03-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-03-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-03-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-09-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-02-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2025-03-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-10-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-09-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-11-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-02-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "VISIT, ETC.",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECO AE FINAL",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-12-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-10-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-03-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "date": "2025-03-18",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23114904": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "3201 N SHEPHERD DR 105, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "SLAB COVER",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WALL COVER",
+        "date": "2024-05-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CEILING",
+        "date": "2024-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2024-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2024-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-06-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-06-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GREASE TRAP",
+        "date": "2024-04-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAMPLE WELL",
+        "date": "2024-04-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2024-06-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Wall Cover",
+        "date": "2024-05-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-07-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ceiling Cover",
+        "date": "2024-06-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "EGRESS ILLUMIN",
+        "date": "2024-07-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2024-07-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "date": "2024-07-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-04-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-06-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-06-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2024-06-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Duct Seal",
+        "date": "2024-06-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Final",
+        "date": "2024-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD AC FINAL 2",
+        "date": "2024-06-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Final",
+        "date": "2024-06-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CO FINAL",
+        "date": "2024-07-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sprinkler FNL",
+        "date": "2024-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Admin Final",
+        "date": "2024-07-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2024-06-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-06-18",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24039427": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "750 SUE BARNETT DR, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-09-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SLAB COVER",
+        "date": "2025-04-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-11-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-09-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-11-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-08-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-10-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2025-04-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-12-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-06-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-12-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-04-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2025-04-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "date": "2025-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-12-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-12-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-12-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-12-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-10-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Go By",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-11-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2025-11-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2025-03-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-12-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2025-09-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-12-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-12-03",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-12-03",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "ADMIN.FINAL",
+        "date": "2025-12-03",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24040448": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "963 W 41ST ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2025-03-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2026-01-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2026-01-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-09-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-11-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-03-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2026-03-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-03-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2026-04-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2025-01-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2025-03-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-01-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-03-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-02-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-12-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2026-03-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-05-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Go By",
+        "date": "2025-06-02",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-08-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DITCH COVER",
+        "date": "2025-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2026-01-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2026-04-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2025-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-08-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-09-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-09-02",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24063896": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "830 AZALEA ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-08-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-01-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-08-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-10-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-07-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-10-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-10-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-05-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-10-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-01-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2025-02-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-01-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-11-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SFR Kitchen",
+        "date": "2025-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-08-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-08-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-11-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-09-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "date": "2025-11-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-11-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-10-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-10-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-10-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-11-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-07-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-07-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-07-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-07-17",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24066177": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "843 W 42ND ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2024-12-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-01-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-10-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-10-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-04-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-01-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-04-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-01-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-04-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-11-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-04-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-04-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-12-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-01-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-02-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2025-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DITCH COVER",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-10-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-04-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-04-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24058808": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "950 W 42ND ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2024-11-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-11-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-02-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-01-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-08-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-10-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-08-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2024-09-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2024-11-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-09-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-11-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-01-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Duct Seal",
+        "date": "2025-01-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2024-12-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Go By",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-03-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-04-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "RECONNECT",
+        "date": "2025-04-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "date": "2025-04-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "RECONNECT",
+        "date": "2025-04-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 2",
+        "date": "2025-04-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-08-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2024-12-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-12-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-02-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-01-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-01-27",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23110760": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "974 W 43RD ST, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-10-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-05-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-10-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-12-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-05-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-04-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-02-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2024-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-06-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-04-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-11-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2024-12-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2024-12-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-01-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-02-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-12-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2024-12-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2024-12-19",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24051906": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "966 LAMONTE LN, Houston, TX 77018",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-01-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-12-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-01-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-05-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-09-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-02-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-09-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-01-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-05-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2024-11-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2024-12-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-10-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-06-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-10-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-12-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-02-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-06-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2025-02-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-11-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-05-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-09-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-02-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-02-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-02-18",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "23103403": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "431 W 30th Street, Houston, TX",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2024-09-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2024-07-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2024-09-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "EV Level 1",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-02-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-05-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2024-10-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2024-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-03-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-04-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2024-07-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-08-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2024-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-07-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-02-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2024-10-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-01-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Go By",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2025-01-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2025-01-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-05-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "date": "2025-01-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2024-08-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-05-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-03-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GO BY",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-04-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2024-07-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2024-08-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-02-14",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24020523": {
+    "status": "Passed",
+    "updated": "2026-07-31",
+    "address": "1014 Gardenia Drive, Houston, TX",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2025-03-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "date": "2025-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "date": "2025-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2024-12-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-09-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2024-12-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-09-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-04-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2025-09-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "date": "2025-09-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-03-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2025-09-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2024-12-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "date": "2025-04-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-01-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2024-12-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-09-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-01-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-03-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "date": "2025-08-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-04-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-06-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2025-08-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-04-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "date": "2025-08-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2025-09-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2024-11-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "date": "2025-08-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "date": "2025-08-27",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "24060955": {
+    "status": "Partial",
+    "updated": "2026-07-31",
+    "address": "934 W 43rd Street, Houston, TX",
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2025-08-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2025-07-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2025-08-29",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2025-03-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2025-11-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2025-03-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2025-07-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2025-09-18",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2025-03-27",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2025-05-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2025-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2025-06-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2025-04-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Vapor Barrier",
+        "date": "2025-05-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2025-05-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2025-08-25",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2025-05-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2025-06-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2025-10-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2025-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2025-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2025-02-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "date": "2025-09-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "date": "2025-09-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2025-11-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2025-11-10",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  }
+}
