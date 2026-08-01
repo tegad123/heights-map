@@ -72,6 +72,13 @@ Timbergrove/Lazybrook, West University.
   springvalley_permits.json, yet springvalley.html is fully sized.
   Determine how it is built before touching it.
 - upperkirby_holdout.json exists with no corresponding HTML. Status unknown.
+- The garden_oaks filled boundaries (`*_boundary_filled.geojson`) overreach
+  into commercial frontage: N Shepherd Dr (Garden Oaks) and W 43rd St
+  (Oak Forest). Three commercial permits got in via the polygon test and
+  were removed from DATA on 2026-07-31 (Nothing Bundt Cakes 3201 N Shepherd
+  105, Garden Oaks Veterinary 3408 N Shepherd, La Viva Cocina 1201 W 43rd).
+  Boundary itself not yet fixed — future polygon-test ingests on those
+  frontages need eyeballing.
 
 ## Working style
 
