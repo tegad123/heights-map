@@ -33,6 +33,14 @@ via CI from the GitHub main branch.
 - HAR exports use the address-led no-header-row template. The stats-style
   MLS view lacks an Address column and will not parse.
 - Census batch geocoding runs locally, not in any sandbox.
+- HCAD parcel layer (arcweb.hcad.org public_query/MapServer/0): polygon-rings
+  geometry payloads are broken server-side — an esriSpatialRelIntersects query
+  with esriGeometryPolygon returns only a small rim-parcel subset, identical
+  regardless of ring orientation. Correct approach: envelope query per
+  boundary part (esriGeometryEnvelope paginates correctly via
+  exceededTransferLimit), then LOCAL shapely intersect against the true
+  polygon. Found and documented in garden_oaks/fetch_parcels_all.py
+  (fetch_by_polygon).
 - Business rule: Off Market applies to sold/terminated (and unconfirmed)
   listings only. Under-contract ids live in RECONCILE.pending — tagged
   pending, never off_market_*, never counted or rendered as Off Market,
