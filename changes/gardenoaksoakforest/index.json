@@ -1,0 +1,16 @@
+{
+ "files": [
+  {
+   "file": "changes_2026-08-02.json",
+   "date": "2026-08-02",
+   "counts": {
+    "matched": 0,
+    "dropped": 281,
+    "new": 0,
+    "relisted": 0,
+    "excluded": 0
+   }
+  }
+ ],
+ "updated": "2026-08-02"
+}

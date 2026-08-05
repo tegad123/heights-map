@@ -1,0 +1,1706 @@
+{
+ "date": "2026-08-02",
+ "sources": [
+  "market merge: five-year sold history baked into DATA (closed sales, disposition sold)"
+ ],
+ "counts": {
+  "matched": 0,
+  "dropped": 281,
+  "new": 0,
+  "relisted": 0,
+  "excluded": 0
+ },
+ "matchedIds": [],
+ "dropped": [
+  {
+   "id": "act_1003-w-42nd-street",
+   "a": "1003 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1003-wakefield-drive",
+   "a": "1003 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1010-w-41st-street",
+   "a": "1010 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1010-w-42nd-street",
+   "a": "1010 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1022-wakefield-drive",
+   "a": "1022 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1025-lamonte-lane",
+   "a": "1025 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1025-wakefield-drive",
+   "a": "1025 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1039-w-41st-street",
+   "a": "1039 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1046-gardenia-drive",
+   "a": "1046 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1051-althea-drive",
+   "a": "1051 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1066-gardenia-drive",
+   "a": "1066 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1079-w-41st-street",
+   "a": "1079 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1103-du-barry-lane",
+   "a": "1103 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1111-wakefield-drive",
+   "a": "1111 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1119-du-barry-lane",
+   "a": "1119 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1128-du-barry-lane",
+   "a": "1128 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1132-wakefield-drive",
+   "a": "1132 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1211-candlelight-lane",
+   "a": "1211 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1211-overhill-street",
+   "a": "1211 Overhill Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1213-kinley-lane",
+   "a": "1213 Kinley Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1215-richelieu-lane",
+   "a": "1215 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1216-chamboard-lane",
+   "a": "1216 Chamboard Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1216-richelieu-lane",
+   "a": "1216 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1218-chippendale-road",
+   "a": "1218 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1220-candlelight-lane",
+   "a": "1220 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1220-thornton-road",
+   "a": "1220 Thornton Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1221-lamonte-lane",
+   "a": "1221 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1222-du-barry-lane",
+   "a": "1222 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1223-cheshire-lane",
+   "a": "1223 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1223-curtin-street",
+   "a": "1223 Curtin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1224-chantilly-lane",
+   "a": "1224 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1225-du-barry-lane",
+   "a": "1225 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1227-richelieu-lane",
+   "a": "1227 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1228-chantilly-lane",
+   "a": "1228 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1228-martin-street",
+   "a": "1228 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1230-althea-drive",
+   "a": "1230 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1231-cheshire-lane",
+   "a": "1231 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1232-cheshire-lane",
+   "a": "1232 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1236-curtin-street",
+   "a": "1236 Curtin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1236-martin-street",
+   "a": "1236 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1237-wakefield-drive",
+   "a": "1237 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1239-chantilly-lane",
+   "a": "1239 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1240-candlelight-lane",
+   "a": "1240 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1240-richelieu-lane",
+   "a": "1240 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1241-du-barry-lane",
+   "a": "1241 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1243-candlelight-lane",
+   "a": "1243 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1244-cheshire-lane",
+   "a": "1244 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1244-richelieu-lane",
+   "a": "1244 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1245-kinley-lane",
+   "a": "1245 Kinley Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1248-richelieu-lane",
+   "a": "1248 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1249-lamonte-lane",
+   "a": "1249 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1251-chamboard-lane",
+   "a": "1251 Chamboard Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1255-richelieu-lane",
+   "a": "1255 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1260-candlelight-lane",
+   "a": "1260 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1261-wakefield-drive",
+   "a": "1261 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1304-lamonte-lane",
+   "a": "1304 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1305-martin-street",
+   "a": "1305 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1305-overhill-street",
+   "a": "1305 Overhill Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1306-chantilly-lane",
+   "a": "1306 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1308-wakefield-drive",
+   "a": "1308 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1309-candlelight-lane",
+   "a": "1309 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1309-overhill-street",
+   "a": "1309 Overhill Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1309-thornton-road",
+   "a": "1309 Thornton Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1310-chantilly-lane",
+   "a": "1310 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1313-candlelight-lane",
+   "a": "1313 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1315-gardenia-drive",
+   "a": "1315 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1318-overhill-street",
+   "a": "1318 Overhill Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1321-cheshire-lane",
+   "a": "1321 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1321-martin-street",
+   "a": "1321 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1322-martin-street",
+   "a": "1322 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1322-overhill-street",
+   "a": "1322 Overhill Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1325-martin-street",
+   "a": "1325 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1329-chamboard-lane",
+   "a": "1329 Chamboard Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1333-curtin-street",
+   "a": "1333 Curtin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1333-martin-street",
+   "a": "1333 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1336-althea-drive",
+   "a": "1336 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1338-candlelight-lane",
+   "a": "1338 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1341-candlelight-lane",
+   "a": "1341 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1343-du-barry-lane",
+   "a": "1343 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1344-ebony-lane",
+   "a": "1344 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1345-martin-street",
+   "a": "1345 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1347-althea-drive",
+   "a": "1347 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1349-chantilly-lane",
+   "a": "1349 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1351-althea-drive",
+   "a": "1351 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1352-du-barry-lane",
+   "a": "1352 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1352-gardenia-drive",
+   "a": "1352 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1353-candlelight-lane",
+   "a": "1353 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1353-chantilly-lane",
+   "a": "1353 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1353-richelieu-lane",
+   "a": "1353 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1360-woodcrest-drive",
+   "a": "1360 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1363-ebony-lane",
+   "a": "1363 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1376-woodcrest-drive",
+   "a": "1376 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1406-cheshire-lane",
+   "a": "1406 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1410-chantilly-lane",
+   "a": "1410 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1411-ebony-lane",
+   "a": "1411 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1411-lamonte-lane",
+   "a": "1411 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1411-richelieu-lane",
+   "a": "1411 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1411-sue-barnett-drive",
+   "a": "1411 Sue Barnett Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1411-wakefield-drive",
+   "a": "1411 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1417-overhill-street",
+   "a": "1417 Overhill Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1418-chantilly-lane",
+   "a": "1418 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1418-cheshire-lane",
+   "a": "1418 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1419-candlelight-lane",
+   "a": "1419 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1419-hewitt-drive",
+   "a": "1419 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1423-gardenia-drive",
+   "a": "1423 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1426-chamboard-lane",
+   "a": "1426 Chamboard Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1427-chamboard-lane",
+   "a": "1427 Chamboard Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1427-martin-street",
+   "a": "1427 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1430-overhill",
+   "a": "1430 Overhill",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1431-chantilly-lane",
+   "a": "1431 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1431-cheshire-lane",
+   "a": "1431 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1432-w-43rd-street",
+   "a": "1432 W 43rd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1434-thornton-road",
+   "a": "1434 Thornton Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1434-woodcrest-drive",
+   "a": "1434 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1435-curtin-street",
+   "a": "1435 Curtin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1435-woodcrest-drive",
+   "a": "1435 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1438-thornton-road",
+   "a": "1438 Thornton Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1438-wakefield-drive",
+   "a": "1438 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1439-chantilly-lane",
+   "a": "1439 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1439-martin-street",
+   "a": "1439 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1441-chamboard-lane",
+   "a": "1441 Chamboard Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1443-martin-street",
+   "a": "1443 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1450-martin-street",
+   "a": "1450 Martin Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1478-sue-barnett-drive",
+   "a": "1478 Sue Barnett Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1502-chantilly-lane",
+   "a": "1502 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1502-du-barry-lane",
+   "a": "1502 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1502-gardenia-drive",
+   "a": "1502 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1505-wakefield-drive",
+   "a": "1505 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1506-chippendale-road",
+   "a": "1506 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1506-wakefield-drive",
+   "a": "1506 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1509-wakefield-drive",
+   "a": "1509 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1515-candlelight-lane",
+   "a": "1515 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1526-cheshire-lane",
+   "a": "1526 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1529-althea-drive",
+   "a": "1529 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1535-hewitt-drive",
+   "a": "1535 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1537-gardenia-drive",
+   "a": "1537 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1539-sue-barnett-drive",
+   "a": "1539 Sue Barnett Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1543-hewitt-drive",
+   "a": "1543 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1550-hewitt-drive",
+   "a": "1550 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1553-lamonte-lane",
+   "a": "1553 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1558-cheshire-lane",
+   "a": "1558 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1582-hewitt-drive",
+   "a": "1582 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1602-hewitt-drive",
+   "a": "1602 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1607-wakefield-drive",
+   "a": "1607 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1610-woodcrest-drive",
+   "a": "1610 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1614-cheshire-lane",
+   "a": "1614 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1614-woodcrest-drive",
+   "a": "1614 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1618-gardenia-drive",
+   "a": "1618 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1618-latexo-drive",
+   "a": "1618 Latexo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1619-richelieu-lane",
+   "a": "1619 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1622-candlelight",
+   "a": "1622 Candlelight",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1622-wakefield-drive",
+   "a": "1622 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1623-candlelight-lane",
+   "a": "1623 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1626-woodcrest-drive",
+   "a": "1626 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1627-chippendale-road",
+   "a": "1627 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1630-richelieu-lane",
+   "a": "1630 Richelieu Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1631-saxon-drive",
+   "a": "1631 Saxon Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1632-lamonte-lane",
+   "a": "1632 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1638-latexo-drive",
+   "a": "1638 Latexo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1638-wakefield-drive",
+   "a": "1638 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1642-du-barry-lane",
+   "a": "1642 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1654-du-barry-lane",
+   "a": "1654 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1702-candlelight-lane",
+   "a": "1702 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1705-chantilly-lane",
+   "a": "1705 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1705-saxon-drive",
+   "a": "1705 Saxon Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1706-candlelight-lane",
+   "a": "1706 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1709-libbey-drive",
+   "a": "1709 Libbey Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1710-chantilly-lane",
+   "a": "1710 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1710-du-barry-lane",
+   "a": "1710 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1711-latexo-drive",
+   "a": "1711 Latexo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1713-althea-drive",
+   "a": "1713 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1714-hewitt-drive",
+   "a": "1714 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1714-wakefield-drive",
+   "a": "1714 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1717-saxon-drive",
+   "a": "1717 Saxon Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1723-candlelight-lane",
+   "a": "1723 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1723-latexo-drive",
+   "a": "1723 Latexo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1726-chippendale-road",
+   "a": "1726 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1727-candlelight-lane",
+   "a": "1727 Candlelight Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1727-latexo-drive",
+   "a": "1727 Latexo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1729-althea-drive",
+   "a": "1729 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1729-chippendale-road",
+   "a": "1729 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1730-ebony-lane",
+   "a": "1730 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1730-lamonte-lane",
+   "a": "1730 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1730-woodcrest-drive",
+   "a": "1730 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1732-libbey-drive",
+   "a": "1732 Libbey Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1733-du-barry-lane",
+   "a": "1733 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1735-lamonte-lane",
+   "a": "1735 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1737-viking-drive",
+   "a": "1737 Viking Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1738-ebony-lane",
+   "a": "1738 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1754-du-barry-lane",
+   "a": "1754 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1767-de-milo-drive",
+   "a": "1767 De Milo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1806-cheshire-lane",
+   "a": "1806 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1806-chippendale-road",
+   "a": "1806 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1806-woodcrest-drive",
+   "a": "1806 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1807-du-barry-lane",
+   "a": "1807 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1807-wakefield-drive",
+   "a": "1807 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1811-althea-drive",
+   "a": "1811 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1811-du-barry-lane",
+   "a": "1811 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1815-cheshire-lane",
+   "a": "1815 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1818-hewitt-drive",
+   "a": "1818 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1818-wakefield-drive",
+   "a": "1818 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1827-libbey-drive",
+   "a": "1827 Libbey Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1842-chantilly-lane",
+   "a": "1842 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1851-nina-lee-lane",
+   "a": "1851 Nina Lee Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1854-chantilly-lane",
+   "a": "1854 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1854-nina-lee-lane",
+   "a": "1854 Nina Lee Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1903-de-milo-drive",
+   "a": "1903 De Milo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1905-althea-drive",
+   "a": "1905 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1905-chippendale-road",
+   "a": "1905 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1909-wakefield-drive",
+   "a": "1909 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1913-ebony-lane",
+   "a": "1913 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1915-latexo-drive",
+   "a": "1915 Latexo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1917-chippendale-road",
+   "a": "1917 Chippendale Road",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1917-du-barry-lane",
+   "a": "1917 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_1917-ebony-lane",
+   "a": "1917 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2002-cheshire-lane",
+   "a": "2002 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2003-du-barry-lane",
+   "a": "2003 Du Barry Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2006-chantilly-lane",
+   "a": "2006 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2007-gardenia-drive",
+   "a": "2007 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2010-althea-drive",
+   "a": "2010 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2011-althea-drive",
+   "a": "2011 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2011-brimberry-street",
+   "a": "2011 Brimberry Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2011-gardenia-drive",
+   "a": "2011 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2018-althea-drive",
+   "a": "2018 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2018-ebony-lane",
+   "a": "2018 Ebony Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2026-cheshire-lane",
+   "a": "2026 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_207-w-33rd-street",
+   "a": "207 W 33rd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_208-w-31st-street",
+   "a": "208 W 31st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2103-brimberry-street",
+   "a": "2103 Brimberry Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2103-woodcrest-drive",
+   "a": "2103 Woodcrest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2115-cheshire-lane",
+   "a": "2115 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2118-nina-lee-lane",
+   "a": "2118 Nina Lee Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2119-chantilly-lane",
+   "a": "2119 Chantilly Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2119-wakefield-drive",
+   "a": "2119 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2202-hewitt-drive",
+   "a": "2202 Hewitt Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2203-gardenia-drive",
+   "a": "2203 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2214-wakefield-drive",
+   "a": "2214 Wakefield Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2227-saxon-drive",
+   "a": "2227 Saxon Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2302-gardenia-drive",
+   "a": "2302 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2306-gardenia-drive",
+   "a": "2306 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2311-saxon-drive",
+   "a": "2311 Saxon Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2323-althea-drive",
+   "a": "2323 Althea Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_2323-saxon-drive",
+   "a": "2323 Saxon Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_336-w-32nd-street",
+   "a": "336 W 32nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_3716-ella-boulevard",
+   "a": "3716 Ella Boulevard",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_3720-ella-boulevard",
+   "a": "3720 Ella Boulevard",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_408-w-31st-street",
+   "a": "408 W 31st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_412-w-31st-street",
+   "a": "412 W 31st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_4231-apollo-street",
+   "a": "4231 Apollo Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_4247-apollo-street",
+   "a": "4247 Apollo Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_4311-piney-woods-drive",
+   "a": "4311 Piney Woods Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_4516-de-lange",
+   "a": "4516 De Lange",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_4701-de-milo-drive",
+   "a": "4701 De Milo Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_4902-oak-forest-drive",
+   "a": "4902 Oak Forest Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_532-w-33rd-street",
+   "a": "532 W 33rd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_703-w-42nd-street",
+   "a": "703 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_705-w-42nd-street",
+   "a": "705 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_710-sue-barnett-drive",
+   "a": "710 Sue Barnett Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_730-w-42nd-street",
+   "a": "730 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_742-sue-barnett-drive",
+   "a": "742 Sue Barnett Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_813-w-32nd-street",
+   "a": "813 W 32nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_814-31st-street",
+   "a": "814 31st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_825-w-30th-street",
+   "a": "825 W 30th Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_855-w-42nd-street",
+   "a": "855 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_859-w-41st-street",
+   "a": "859 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_863-w-41st-street",
+   "a": "863 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_874-w-41st-street",
+   "a": "874 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_878-w-41st-street",
+   "a": "878 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_910-w-41st-street",
+   "a": "910 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_927-w-43rd-street",
+   "a": "927 W 43rd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_935-gardenia-drive",
+   "a": "935 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_938-gardenia-drive",
+   "a": "938 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_943-w-42nd-street",
+   "a": "943 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_958-gardenia-drive",
+   "a": "958 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_958-w-42nd-street",
+   "a": "958 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_962-gardenia-drive",
+   "a": "962 Gardenia Drive",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_962-lamonte-lane",
+   "a": "962 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_967-w-42nd-street",
+   "a": "967 W 42nd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_971-lamonte-lane",
+   "a": "971 Lamonte Lane",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_971-w-43rd-street",
+   "a": "971 W 43rd Street",
+   "ty": "single",
+   "disposition": "sold"
+  },
+  {
+   "id": "act_974-w-41st-street",
+   "a": "974 W 41st Street",
+   "ty": "single",
+   "disposition": "sold"
+  }
+ ],
+ "relisted": [],
+ "new": [],
+ "excluded": [],
+ "dispositionUpdates": {}
+}

@@ -77,12 +77,9 @@ MARKETS = [
     {"name": "timbergrove",
      "permits": os.path.join(HERE, "timbergrove_permits.json"),
      "out":     os.path.join(HERE, "inspections_timbergrove.json")},
-    {"name": "gardenoaks",
-     "permits": os.path.join(HERE, "gardenoaks_permits.json"),
-     "out":     os.path.join(HERE, "inspections_gardenoaks.json")},
-    {"name": "oakforest",
-     "permits": os.path.join(HERE, "oakforest_permits.json"),
-     "out":     os.path.join(HERE, "inspections_oakforest.json")},
+    {"name": "gardenoaksoakforest",
+     "permits": os.path.join(HERE, "gardenoaksoakforest_permits.json"),
+     "out":     os.path.join(HERE, "inspections_gardenoaksoakforest.json")},
 ]
 
 def run_scraper(market, limit):

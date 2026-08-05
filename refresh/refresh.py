@@ -41,8 +41,7 @@ MARKETS = {
     'timbergrove':  {'html': 'timbergrove.html',  'csv': 'timbergrove_off_market.csv',  'sub': 'timbergrove'},
     'westu':        {'html': 'westu.html',        'csv': 'westu_off_market.csv',        'sub': 'westu'},
     'riveroaks':    {'html': 'riveroaks.html',    'csv': 'riveroaks_off_market.csv',    'sub': 'riveroaks'},
-    'gardenoaks':   {'html': 'gardenoaks.html',   'csv': 'gardenoaks_off_market.csv',   'sub': 'gardenoaks'},
-    'oakforest':    {'html': 'oakforest.html',    'csv': 'oakforest_off_market.csv',    'sub': 'oakforest'},
+    'gardenoaksoakforest': {'html': 'gardenoaksoakforest.html', 'csv': 'gardenoaksoakforest_off_market.csv', 'sub': 'gardenoaksoakforest'},
 }
 
 # Resolved per-run by set_market(); heights defaults keep every pre-existing

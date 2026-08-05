@@ -64,7 +64,10 @@ via CI from the GitHub main branch.
 ## Live markets
 
 Heights, Montrose, River Oaks, Spring Branch, Spring Valley Village,
-Timbergrove/Lazybrook, West University.
+Timbergrove/Lazybrook, West University, Garden Oaks + Oak Forest
+(one merged market: gardenoaksoakforest — the two were separate until
+2026-08-02; their retired html/permits/inspections/csv files must not
+be recreated).
 
 ## Known issues
 
