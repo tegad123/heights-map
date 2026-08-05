@@ -1383,6 +1383,7 @@ function pipelineHomes(){
 // A home's current construction phase (foundation..market), from inspections/tags.
 function homePhase(pid){
   const t=(state.points[pid]||{}).tags||[];
+  if(t.includes('built')) return null; // completed long ago — grey pin keeps its color, no false FINISHED ON MARKET badge
   for(const p of PHASE_SEQ) if(t.includes(p)) return p;
   if(t.includes('active_single')||t.includes('active_split')) return 'market';
   return null;
@@ -1691,8 +1692,8 @@ function renderSupplyCard(){
   if(ph){ph.innerHTML=PH_ABBR.map(([k,l])=>'<div class="sc-ph"><div class="n" style="color:'+PH_C[k]+'">'+(bd[k]||0)+'</div><div class="l">'+l+'</div></div>').join('');}
   // footer counts
   const foot=document.getElementById('sc-foot');
-  if(foot){const permits=DATA.reduce((a,r)=>a+(r.kind==='permit'?(r.units||1):0),0);const sold=DATA.reduce((a,r)=>a+(primaryStage(r.id)==='deed'?(r.units||1):0),0);
-    foot.textContent=DATA.reduce((a,r)=>a+(r.units||1),0)+' homes · '+permits+' permits · '+sold+' sold';}
+  if(foot){const permits=DATA.reduce((a,r)=>a+(r.kind==='permit'?(r.units||1):0),0);const sold=SOLD.length;
+    foot.textContent=DATA.reduce((a,r)=>a+(r.units||1),0)+' homes · '+permits+' permits · '+sold+' closed sales';}
 }
 // Ready-within toggle: filter map pins to homes reaching market within N months
 function applyReadyFilter(){
