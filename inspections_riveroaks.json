@@ -865,7 +865,7 @@
   },
   "25083752": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3030 Ella Lee Ln, Houston, TX 77019",
     "inspections": [
       {
@@ -937,8 +937,8 @@
     ]
   },
   "25088034": {
-    "status": "Partial",
-    "updated": "2026-08-03",
+    "status": "Passed",
+    "updated": "2026-08-06",
     "address": "3713 Chevy Chase Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -1034,6 +1034,18 @@
       {
         "type": "COVER",
         "date": "2026-05-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2026-08-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "date": "2026-08-04",
         "result": "Passed",
         "inspector": ""
       },
@@ -2696,7 +2708,7 @@
   },
   "26001641": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3729 Del Monte Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -3219,7 +3231,7 @@
   },
   "26016023": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2121 Inwood Dr, Houston, TX 77019",
     "inspections": [
       {

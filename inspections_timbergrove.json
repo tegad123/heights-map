@@ -339,7 +339,7 @@
   },
   "24106512": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3521 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -508,7 +508,7 @@
   },
   "24117058": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "6118 Abington Way 77008",
     "inspections": [
       {
@@ -581,7 +581,7 @@
   },
   "25023737": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3507 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -744,7 +744,7 @@
   },
   "25023738": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3502 Huntsford Dr 77008",
     "inspections": [
       {
@@ -901,7 +901,7 @@
   },
   "25023741": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3516 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -1028,7 +1028,7 @@
   },
   "25023742": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3511 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -2369,7 +2369,7 @@
   },
   "25096486": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1018 Grovewood Ln 77008",
     "inspections": [
       {
@@ -2647,7 +2647,7 @@
   },
   "25098806": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "6515 Lindyann Ln 77008",
     "inspections": [
       {
@@ -2718,14 +2718,20 @@
       },
       {
         "type": "1031-FDN AM",
-        "date": "2026-02-19",
-        "result": "Passed",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
         "type": "1035-Frame",
         "date": "2026-04-28",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2736,8 +2742,8 @@
       },
       {
         "type": "INSULATION",
-        "date": "2026-04-24",
-        "result": "Passed",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2754,8 +2760,8 @@
       },
       {
         "type": "AC FINAL",
-        "date": "2026-07-30",
-        "result": "Failed",
+        "date": "2026-08-04",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -2786,6 +2792,12 @@
         "type": "Sidewalk PM",
         "date": "2026-07-09",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2825,6 +2837,12 @@
         "inspector": ""
       },
       {
+        "type": "FINAL",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "Gas Test",
         "date": "2026-07-27",
         "result": "Passed",
@@ -2852,7 +2870,7 @@
   },
   "25098822": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2006 Cranston Ct 77008",
     "inspections": [
       {
@@ -2880,6 +2898,12 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "date": "2026-03-27",
         "result": "Passed",
@@ -2887,8 +2911,8 @@
       },
       {
         "type": "Nail Pattern",
-        "date": "2026-06-11",
-        "result": "Passed",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2899,8 +2923,14 @@
       },
       {
         "type": "FDN-WOOD/INSUL",
-        "date": "2026-04-20",
-        "result": "Passed",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -2968,7 +2998,7 @@
   },
   "25111624": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1126 Timbergrove Ln 77008",
     "inspections": [
       {
@@ -3310,7 +3340,7 @@
   },
   "26017805": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1011 Grovewood Ln 77008",
     "inspections": [
       {
@@ -3352,6 +3382,12 @@
       {
         "type": "FDN-WOOD/INSUL",
         "date": "2026-06-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-08-04",
         "result": "Passed",
         "inspector": ""
       },
@@ -3444,19 +3480,19 @@
   },
   "26021492": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1723 Tannehill Dr 77008",
     "inspections": [
       {
         "type": "GROUND IN",
         "date": "2026-08-03",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "ROUGH IN",
         "date": "2026-08-03",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -3511,7 +3547,7 @@
   },
   "26031780": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1219 Bay Oaks Rd, Houston, Tx 77008",
     "inspections": [
       {

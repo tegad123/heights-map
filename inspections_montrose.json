@@ -248,7 +248,7 @@
   },
   "25041935": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1312 CASTLE CT B 77006",
     "inspections": [
       {
@@ -465,7 +465,7 @@
   },
   "25024203": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1644 BONNIE BRAE ST 77006",
     "inspections": [
       {
@@ -670,7 +670,7 @@
   },
   "25024204": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1642 BONNIE BRAE ST 77006",
     "inspections": [
       {
@@ -815,7 +815,7 @@
   },
   "25031363": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "10 COURTLANDT PLACE 77006",
     "inspections": [
       {
@@ -1081,7 +1081,7 @@
   },
   "25119218": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1125 JACKSON BLVD 77006",
     "inspections": [
       {
@@ -1121,8 +1121,14 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "date": "2026-08-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Fire Wall",
-        "date": "2026-05-22",
+        "date": "2026-08-03",
         "result": "Passed",
         "inspector": ""
       },
@@ -1147,7 +1153,7 @@
       {
         "type": "COVER",
         "date": "2026-07-08",
-        "result": "Passed",
+        "result": "Failed",
         "inspector": ""
       },
       {
@@ -1165,13 +1171,13 @@
       {
         "type": "Driveway PM",
         "date": "2026-07-23",
-        "result": "Passed",
+        "result": "Failed",
         "inspector": ""
       },
       {
         "type": "Sidewalk PM",
         "date": "2026-07-23",
-        "result": "Passed",
+        "result": "Failed",
         "inspector": ""
       },
       {
@@ -1190,7 +1196,7 @@
   },
   "26013758": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1323 SOUTH BLVD 77006",
     "inspections": [
       {
@@ -1246,7 +1252,7 @@
   },
   "25089108": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4526 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -1311,15 +1317,15 @@
       },
       {
         "type": "COVER",
-        "date": "2026-07-28",
-        "result": "Failed",
+        "date": "2026-08-05",
+        "result": "Passed",
         "inspector": ""
       }
     ]
   },
   "25089109": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4528 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -1384,15 +1390,15 @@
       },
       {
         "type": "COVER",
-        "date": "2026-07-28",
-        "result": "Failed",
+        "date": "2026-08-05",
+        "result": "Passed",
         "inspector": ""
       }
     ]
   },
   "25054883": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1511 KIPLING ST 77006",
     "inspections": [
       {
@@ -1560,6 +1566,12 @@
       {
         "type": "15 Final",
         "date": "2026-07-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "date": "2026-08-04",
         "result": "Passed",
         "inspector": ""
       },
@@ -1859,7 +1871,7 @@
   },
   "25121137": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "720 PEDEN ST 77006",
     "inspections": [
       {
@@ -1873,12 +1885,18 @@
         "date": "2026-06-23",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "25089091": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4512 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -1903,7 +1921,7 @@
   },
   "25089092": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4514 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -1934,7 +1952,7 @@
   },
   "25089117": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4516 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -1990,7 +2008,7 @@
   },
   "25121136": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "718 PEDEN ST 77006",
     "inspections": [
       {
@@ -3178,7 +3196,7 @@
   },
   "25099835": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1312 VASSAR ST 77006",
     "inspections": [
       {
@@ -3201,8 +3219,8 @@
       },
       {
         "type": "ROUGH IN",
-        "date": "2026-08-03",
-        "result": "Pending",
+        "date": "2026-08-04",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -3962,7 +3980,7 @@
   },
   "25089112": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4522 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -4108,7 +4126,7 @@
   },
   "25048142": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1604 SUL ROSS ST 77006",
     "inspections": [
       {
@@ -4440,7 +4458,7 @@
   },
   "25086166": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1603 VERMONT ST 77006",
     "inspections": [
       {
@@ -4669,7 +4687,7 @@
   },
   "25075844": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4317 ROSELAND ST A 77006",
     "inspections": [
       {
@@ -4941,7 +4959,7 @@
   },
   "25089148": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "4532 YOAKUM BLVD 77006",
     "inspections": [
       {
@@ -5188,8 +5206,8 @@
     ]
   },
   "25120079": {
-    "status": "Pending",
-    "updated": "2026-08-03",
+    "status": "Partial",
+    "updated": "2026-08-06",
     "address": "1246 PEDEN ST A 77006",
     "inspections": [
       {
@@ -5224,8 +5242,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-03",
-        "result": "Pending",
+        "date": "2026-08-04",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -5248,8 +5266,8 @@
       },
       {
         "type": "INSULATION",
-        "date": "2026-08-03",
-        "result": "Pending",
+        "date": "2026-08-04",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -5267,7 +5285,7 @@
       {
         "type": "COVER",
         "date": "2026-08-03",
-        "result": "Pending",
+        "result": "Failed",
         "inspector": ""
       },
       {
@@ -5414,7 +5432,7 @@
   },
   "26017362": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1615 VASSAR ST 77006",
     "inspections": [
       {
@@ -6601,7 +6619,7 @@
   },
   "26015052": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1744 HAROLD ST 77098",
     "inspections": [
       {
@@ -8469,7 +8487,7 @@
   },
   "25104276": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "3909 DRISCOLL ST 77098",
     "inspections": [
       {
@@ -9686,7 +9704,7 @@
   },
   "25116555": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1818 BRANARD ST 77098",
     "inspections": [
       {
@@ -10491,7 +10509,7 @@
   },
   "25112652": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1802 PORTSMOUTH ST C 77098",
     "inspections": [
       {
@@ -10577,7 +10595,7 @@
   },
   "25112654": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1802 PORTSMOUTH ST A 77098",
     "inspections": [
       {
@@ -10601,6 +10619,12 @@
       {
         "type": "1031-FDN PM",
         "date": "2026-05-19",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-08-04",
         "result": "Passed",
         "inspector": ""
       }
@@ -10807,7 +10831,7 @@
   },
   "23068821": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1016 RUTHVEN ST B 77019",
     "inspections": [
       {
@@ -11121,7 +11145,7 @@
   },
   "25028032": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1301 SAULNIER ST 77019",
     "inspections": [
       {
@@ -11474,7 +11498,7 @@
   },
   "25054886": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1306 CROCKER ST 77019",
     "inspections": [
       {
@@ -11727,7 +11751,7 @@
   },
   "25094784": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1107 WILSON ST 77019",
     "inspections": [
       {
@@ -11957,7 +11981,7 @@
   },
   "26003094": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2025 FAIRVIEW ST 77019",
     "inspections": [
       {
@@ -11970,6 +11994,12 @@
         "type": "GROUND IN",
         "date": "2026-03-03",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -12005,6 +12035,12 @@
       {
         "type": "Sidewalk AM",
         "date": "2026-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2026-08-04",
         "result": "Passed",
         "inspector": ""
       },
@@ -12277,7 +12313,7 @@
   },
   "25094786": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1103 WILSON ST 77019",
     "inspections": [
       {
@@ -12336,7 +12372,7 @@
       },
       {
         "type": "PLUMBING FINAL",
-        "date": "2026-07-20",
+        "date": "2026-08-05",
         "result": "Failed",
         "inspector": ""
       },
@@ -12669,7 +12705,7 @@
   },
   "25106917": {
     "status": "Passed",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1918 HULDY ST 77019",
     "inspections": [
       {
@@ -12929,7 +12965,7 @@
   },
   "25090429": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1906 DRISCOLL ST 77019",
     "inspections": [
       {
@@ -13286,7 +13322,7 @@
   },
   "26001679": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2424 ELMEN ST 77019",
     "inspections": [
       {
@@ -13396,7 +13432,7 @@
   },
   "25114777": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2413 BRUN ST A 77019",
     "inspections": [
       {
@@ -13679,7 +13715,7 @@
   },
   "25114778": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2413 BRUN ST B 77019",
     "inspections": [
       {
@@ -14107,7 +14143,7 @@
   },
   "25092209": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2414 ELMEN ST 77019",
     "inspections": [
       {
@@ -14180,6 +14216,12 @@
         "type": "WINDSTORM",
         "date": "2026-06-09",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-08-06",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -14307,7 +14349,7 @@
   },
   "25108617": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2204 HULDY ST 77019",
     "inspections": [
       {
@@ -14320,6 +14362,12 @@
         "type": "ROUGH",
         "date": "2026-04-29",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2026-08-05",
+        "result": "Failed",
         "inspector": ""
       },
       {
@@ -14550,9 +14598,15 @@
   },
   "26018492": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "314 W GRAY ST 77019",
     "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-08-04",
+        "result": "Failed",
+        "inspector": ""
+      },
       {
         "type": "STORM SEWER",
         "date": "2026-06-22",
@@ -14587,9 +14641,15 @@
   },
   "26018493": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1514 TAFT ST 77019",
     "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-08-04",
+        "result": "Failed",
+        "inspector": ""
+      },
       {
         "type": "STORM SEWER",
         "date": "2026-06-22",
@@ -14673,9 +14733,15 @@
   },
   "26028918": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2028 MORSE ST 77019",
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
       {
         "type": "GROUND IN",
         "date": "2026-07-01",
@@ -14692,9 +14758,15 @@
   },
   "26028917": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "2026 MORSE ST 77019",
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
       {
         "type": "GROUND IN",
         "date": "2026-07-02",
@@ -14717,7 +14789,7 @@
   },
   "26043480": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1218 BOMAR ST 77006",
     "inspections": [
       {
@@ -14733,6 +14805,18 @@
         "inspector": ""
       },
       {
+        "type": "1031-FDN PM",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "date": "2026-08-06",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-07-14",
         "result": "Passed",
@@ -14742,7 +14826,7 @@
   },
   "26005250": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-06",
     "address": "1916 HAWTHORNE ST 77098",
     "inspections": [
       {
@@ -14772,39 +14856,39 @@
     ]
   },
   "26015338": {
-    "status": "Pending",
-    "updated": "2026-07-30",
+    "status": "Passed",
+    "updated": "2026-08-06",
     "address": "1811 SUL ROSS ST 77098",
     "inspections": [
       {
         "type": "GROUND IN",
-        "date": "2026-07-30",
-        "result": "Pending",
+        "date": "2026-07-31",
+        "result": "Passed",
         "inspector": ""
       }
     ]
   },
   "26013572": {
-    "status": "Pending",
-    "updated": "2026-08-03",
+    "status": "Passed",
+    "updated": "2026-08-06",
     "address": "1417 VASSAR ST 77006",
     "inspections": [
       {
         "type": "SEWER",
         "date": "2026-07-30",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
         "date": "2026-07-30",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
-        "date": "2026-08-03",
-        "result": "Pending",
+        "date": "2026-08-04",
+        "result": "Passed",
         "inspector": ""
       }
     ]
