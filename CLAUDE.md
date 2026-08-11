@@ -68,6 +68,18 @@ via CI from the GitHub main branch.
   `act_5339-a-larkin-street`, and `act_5240-cornish-street-unit-a`
   (no DATA entry) are intentional leftovers from this exclusion,
   not missing work. Leave them alone.
+- Eastern boundary: lng > -95.370 is out of zone (east of the I-45 North
+  Freeway corridor — Near Northside/Northside Village; zip 77009 extends
+  past the boundary, so zip alone proves nothing). The index.html splice
+  loop enforces this render-side, but permit-ingest scripts must ALSO
+  apply lng > -95.370 as a pre-insert filter so DATA never picks these
+  up. 35 such pins were added and removed on 2026-08-10 (a8bef5e /
+  4176de2). Easternmost legit pin sits at -95.3724.
+- Geocode-fail retry list (in-zone, permits not yet in HCAD parcel base
+  as of 2026-08-10): 2436 White Oak Dr, 832 E 27th St, 627 + 631 Mazal
+  (Pvt) Ln. Worth a future retry pass. All other Aug-10 geocode failures
+  (Terry, Reynolds, Griffin, Elysian 4912-4919, etc.) are east of the
+  boundary — do not re-attempt them.
 
 ## Live markets
 
