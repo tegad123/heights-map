@@ -75,14 +75,15 @@ via CI from the GitHub main branch.
   apply lng > -95.370 as a pre-insert filter so DATA never picks these
   up. 35 such pins were added and removed on 2026-08-10 (a8bef5e /
   4176de2). Easternmost legit pin sits at -95.3724.
-- Geocode-fail retry list (in-zone): 627 + 631 Mazal (Pvt) Ln only —
-  private lane, absent from both HCAD parcel base and Census TIGER as of
-  2026-08-10. If ever needed, place manually relative to the existing
-  pmt_635-mazal-pvt-ln-77009 pin; do not auto-geocode. (2436 White Oak
-  Dr and 832 E 27th St were rescued via Census on 2026-08-10, ca25a94 —
-  their pins are street-interpolated, not parcel centroids.) All other
-  Aug-10 geocode failures (Terry, Reynolds, Griffin, Elysian 4912-4919,
-  etc.) are east of the boundary — do not re-attempt them.
+- 627 + 631 Mazal (Pvt) Ln pins are manually placed (b893bb1) beside
+  635 — the lane is absent from Census TIGER and HCAD still holds lots
+  7-9 as one unaddressed parcel. Each row carries a "note" field saying
+  so; when HCAD addresses those lots, replace the estimated coords with
+  real parcel centroids. (2436 White Oak Dr and 832 E 27th St were
+  rescued via Census on 2026-08-10, ca25a94 — street-interpolated, not
+  parcel centroids.) All other Aug-10 geocode failures (Terry, Reynolds,
+  Griffin, Elysian 4912-4919, etc.) are east of the boundary — do not
+  re-attempt them.
 
 ## Live markets
 
