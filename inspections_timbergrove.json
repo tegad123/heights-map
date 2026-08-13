@@ -164,7 +164,8 @@
   },
   "24106508": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "3523 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -339,7 +340,8 @@
   },
   "24106512": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "3521 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -508,7 +510,8 @@
   },
   "24117058": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6118 Abington Way 77008",
     "inspections": [
       {
@@ -581,7 +584,8 @@
   },
   "25023737": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "3507 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -744,7 +748,8 @@
   },
   "25023738": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "3502 Huntsford Dr 77008",
     "inspections": [
       {
@@ -900,8 +905,9 @@
     ]
   },
   "25023741": {
-    "status": "Partial",
-    "updated": "2026-08-10",
+    "status": "Passed",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "3516 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -966,8 +972,8 @@
       },
       {
         "type": "PLUMBING FINAL",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -1052,7 +1058,8 @@
   },
   "25023742": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "3511 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -1215,7 +1222,8 @@
   },
   "25039329": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1602 Turnpike Rd, Houston, TX 77008",
     "inspections": [
       {
@@ -1456,7 +1464,8 @@
   },
   "25058957": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1202 Timbergrove Ln 77008",
     "inspections": [
       {
@@ -1661,7 +1670,8 @@
   },
   "25061909": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6607 Cindy Ln 77008",
     "inspections": [
       {
@@ -1774,8 +1784,8 @@
       },
       {
         "type": "AC FINAL",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -1794,7 +1804,8 @@
   },
   "25066472": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1510 Glen Oaks St, Houston, Tx 77008",
     "inspections": [
       {
@@ -1945,7 +1956,8 @@
   },
   "25068449": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6107 Waltway Dr 77008",
     "inspections": [
       {
@@ -2079,12 +2091,25 @@
         "date": "2025-10-30",
         "result": "Failed",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
       }
     ]
   },
   "25069172": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2611 Lazybrook Dr 77008",
     "inspections": [
       {
@@ -2265,7 +2290,8 @@
   },
   "25080169": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2418 Brookmere Dr 77008",
     "inspections": [
       {
@@ -2362,7 +2388,8 @@
   },
   "25090800": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6227 Lindyann Ln 77008",
     "inspections": [
       {
@@ -2441,7 +2468,8 @@
   },
   "25096486": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1018 Grovewood Ln 77008",
     "inspections": [
       {
@@ -2616,7 +2644,8 @@
   },
   "25097930": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6430 Lindyann Ln 77008",
     "inspections": [
       {
@@ -2663,8 +2692,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-06",
-        "result": "Pending",
+        "date": "2026-08-10",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -2688,6 +2717,12 @@
       {
         "type": "1031-FDN PM",
         "date": "2026-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -2718,8 +2753,9 @@
     ]
   },
   "25098806": {
-    "status": "Partial",
-    "updated": "2026-08-10",
+    "status": "Passed",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6515 Lindyann Ln 77008",
     "inspections": [
       {
@@ -2885,6 +2921,12 @@
         "inspector": ""
       },
       {
+        "type": "CC FINAL",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "date": "2026-07-28",
         "result": "Passed",
@@ -2917,7 +2959,7 @@
       {
         "type": "TREE/SHRUB FNL",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -2928,8 +2970,8 @@
       },
       {
         "type": "P1 FINAL",
-        "date": "2026-07-27",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -2948,7 +2990,8 @@
   },
   "25098822": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2006 Cranston Ct 77008",
     "inspections": [
       {
@@ -2961,6 +3004,12 @@
         "type": "GROUND IN",
         "date": "2026-03-23",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -3007,8 +3056,8 @@
       },
       {
         "type": "COVER",
-        "date": "2026-08-06",
-        "result": "Failed",
+        "date": "2026-08-14",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -3057,7 +3106,8 @@
   },
   "25104677": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1307 Foxwood Rd 77008",
     "inspections": [
       {
@@ -3076,7 +3126,8 @@
   },
   "25111624": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1126 Timbergrove Ln 77008",
     "inspections": [
       {
@@ -3197,7 +3248,8 @@
   },
   "25116900": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2606 Droxford Dr 77008",
     "inspections": [
       {
@@ -3228,7 +3280,8 @@
   },
   "25118994": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "822 Nashua St, Houston, TX 77008",
     "inspections": [
       {
@@ -3283,7 +3336,8 @@
   },
   "26001989": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1118 Worthshire St, Houston, TX 77008",
     "inspections": [
       {
@@ -3350,7 +3404,8 @@
   },
   "26008570": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1834 Crystal Ct 77008",
     "inspections": [
       {
@@ -3372,6 +3427,24 @@
         "inspector": ""
       },
       {
+        "type": "1031-FDN AM",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-06-26",
         "result": "Passed",
@@ -3381,7 +3454,8 @@
   },
   "26011945": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6111 Hurst St 77008",
     "inspections": [
       {
@@ -3418,7 +3492,8 @@
   },
   "26017805": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1011 Grovewood Ln 77008",
     "inspections": [
       {
@@ -3509,7 +3584,8 @@
   },
   "26019598": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1226 Timbergrove Ln 77008",
     "inspections": [
       {
@@ -3521,7 +3597,7 @@
       {
         "type": "1031-FDN AM",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -3564,7 +3640,8 @@
   },
   "26021492": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1723 Tannehill Dr 77008",
     "inspections": [
       {
@@ -3631,7 +3708,8 @@
   },
   "26031780": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1219 Bay Oaks Rd, Houston, Tx 77008",
     "inspections": [
       {

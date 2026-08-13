@@ -1,7 +1,8 @@
 {
   "25111965": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "248 W 22nd St, Houston, Tx 77008",
     "inspections": [
       {
@@ -122,7 +123,8 @@
   },
   "25039460": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2225 Singleton St, Houston, Tx 77008",
     "inspections": [
       {
@@ -154,12 +156,25 @@
         "date": "2026-05-29",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "Date Received",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Str Cut Permit",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "25111629": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2011 Singleton St, Houston, Tx 77008",
     "inspections": [
       {
@@ -334,7 +349,8 @@
   },
   "25076882": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "118 E 23rd St, Houston, Tx 77008",
     "inspections": [
       {
@@ -545,7 +561,8 @@
   },
   "25113508": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "735 E 8th 1/2 St, Houston, Tx 77007",
     "inspections": [
       {
@@ -610,6 +627,12 @@
       },
       {
         "type": "COVER",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
         "date": "2026-08-07",
         "result": "Failed",
         "inspector": ""
@@ -618,7 +641,8 @@
   },
   "25112613": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "731 E 8th 1/2 St, Houston, Tx 77007",
     "inspections": [
       {
@@ -689,8 +713,14 @@
       },
       {
         "type": "COVER",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -703,7 +733,8 @@
   },
   "25102311": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "527 W 27th St, Houston, Tx 77008",
     "inspections": [
       {
@@ -792,21 +823,22 @@
       },
       {
         "type": "Driveway AM",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Sidewalk AM",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       }
     ]
   },
   "26032635": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2047 Columbia St, Houston, Tx 77008",
     "inspections": [
       {
@@ -831,7 +863,8 @@
   },
   "26010787": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "314 W 21st St, Houston, Tx 77008",
     "inspections": [
       {
@@ -877,8 +910,14 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Fire Wall",
-        "date": "2026-07-08",
+        "date": "2026-08-12",
         "result": "Passed",
         "inspector": ""
       },
@@ -902,8 +941,8 @@
       },
       {
         "type": "COVER",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -916,7 +955,8 @@
   },
   "26015303": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1123 Louise St, Houston, Tx 77009",
     "inspections": [
       {
@@ -1007,7 +1047,8 @@
   },
   "25087111": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "713 E 26th St, Houston, Tx 77009",
     "inspections": [
       {
@@ -1169,8 +1210,9 @@
     ]
   },
   "25105488": {
-    "status": "Partial",
-    "updated": "2026-08-10",
+    "status": "Passed",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "709 Ridge St, Houston, Tx 77009",
     "inspections": [
       {
@@ -1253,7 +1295,7 @@
       },
       {
         "type": "Struct Final",
-        "date": "2026-07-14",
+        "date": "2026-08-10",
         "result": "Passed",
         "inspector": ""
       },
@@ -1423,7 +1465,8 @@
   },
   "26014140": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "618 Wendel St, Houston, Tx 77009",
     "inspections": [
       {
@@ -1440,8 +1483,14 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-10",
-        "result": "Pending",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -1457,6 +1506,12 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "date": "2026-07-08",
         "result": "Passed",
@@ -1466,6 +1521,12 @@
         "type": "COVER",
         "date": "2026-08-06",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -1514,7 +1575,8 @@
   },
   "25103369": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1326 Lawrence St, Houston, Tx 77008",
     "inspections": [
       {
@@ -1869,7 +1931,8 @@
   },
   "23084458": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1140 Waverly St, Houston, Tx 77008",
     "inspections": [
       {
@@ -2050,7 +2113,8 @@
   },
   "25067224": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1436 Alexander St, Houston, Tx 77008",
     "inspections": [
       {
@@ -2249,7 +2313,8 @@
   },
   "25116392": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "614 E 26th St, Houston, Tx 77008",
     "inspections": [
       {
@@ -2307,6 +2372,12 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "date": "2026-07-17",
         "result": "Passed",
@@ -2319,6 +2390,12 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-04-30",
         "result": "Passed",
@@ -2328,7 +2405,8 @@
   },
   "25105558": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "407 E 27th St, Houston, Tx 77008",
     "inspections": [
       {
@@ -2599,7 +2677,8 @@
   },
   "25088149": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1006 E 28th St, Houston, Tx 77009",
     "inspections": [
       {
@@ -2648,7 +2727,8 @@
   },
   "25080674": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "711 E 12th St, Houston, Tx 77008",
     "inspections": [
       {
@@ -2841,7 +2921,8 @@
   },
   "25077358": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "603 E 23rd St, Houston, Tx 77008",
     "inspections": [
       {
@@ -2968,7 +3049,8 @@
   },
   "25049520": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "715 Merrill St, Houston, Tx 77009",
     "inspections": [
       {
@@ -3299,7 +3381,8 @@
   },
   "26003024": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1518 Herkimer St, Houston, Tx 77008",
     "inspections": [
       {
@@ -3334,7 +3417,7 @@
       },
       {
         "type": "SHOWER PAN",
-        "date": "2026-07-28",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -3432,7 +3515,8 @@
   },
   "25104267": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "826 Ralfallen St, Houston, Tx 77008",
     "inspections": [
       {
@@ -3643,7 +3727,8 @@
   },
   "26013221": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1120 E 26th St, Houston, Tx 77009",
     "inspections": [
       {
@@ -3685,7 +3770,7 @@
       {
         "type": "SHOWER PAN",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -3737,6 +3822,12 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-04-17",
         "result": "Passed",
@@ -3758,7 +3849,8 @@
   },
   "25062197": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1119 E 7th 1/2 St, Houston, Tx 77009",
     "inspections": [
       {
@@ -4011,7 +4103,8 @@
   },
   "26004239": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1030 W 8th St, Houston, Tx 77007",
     "inspections": [
       {
@@ -4132,7 +4225,8 @@
   },
   "25089073": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2603 Julian St, Houston, Tx 77009",
     "inspections": [
       {
@@ -4151,6 +4245,12 @@
         "type": "GROUND IN",
         "date": "2025-12-19",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -4174,7 +4274,7 @@
       {
         "type": "Nail Pattern",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -4253,7 +4353,8 @@
   },
   "26017805": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1011 Grovewood Ln, Houston, Tx 77008",
     "inspections": [
       {
@@ -4344,7 +4445,8 @@
   },
   "26031780": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1219 Bay Oaks Rd, Houston, Tx 77008",
     "inspections": [
       {
@@ -4423,7 +4525,8 @@
   },
   "25066472": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1510 Glen Oaks St, Houston, Tx 77008",
     "inspections": [
       {
@@ -4574,7 +4677,8 @@
   },
   "26017597": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "310 E 25th St, Houston, Tx 77008",
     "inspections": [
       {
@@ -4629,7 +4733,8 @@
   },
   "26001769": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "920 E 25th St, Houston, Tx 77009",
     "inspections": [
       {
@@ -4780,7 +4885,8 @@
   },
   "26018707": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "410 Merrill St, Houston, Tx 77009",
     "inspections": [
       {
@@ -4844,6 +4950,12 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "date": "2026-08-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-05-05",
         "result": "Passed",
@@ -4859,7 +4971,8 @@
   },
   "25115993": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "709 E 17th St, Houston, Tx 77008",
     "inspections": [
       {
@@ -5076,7 +5189,8 @@
   },
   "26012829": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "118 Munford St, Houston, Tx 77008",
     "inspections": [
       {
@@ -5185,7 +5299,8 @@
   },
   "22021528": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "820 Waverly St A, Houston, TX 77007",
     "inspections": [
       {
@@ -5228,7 +5343,8 @@
   },
   "22021530": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "820 Waverly St B, Houston, TX 77007",
     "inspections": [
       {
@@ -5277,7 +5393,8 @@
   },
   "22107074": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1811 Bonner St, Houston, TX 77007",
     "inspections": [
       {
@@ -5290,7 +5407,8 @@
   },
   "24067231": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "310 W 9th St, Houston, TX 77007",
     "inspections": [
       {
@@ -5423,7 +5541,8 @@
   },
   "24067232": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "312 W 9th St, Houston, TX 77007",
     "inspections": [
       {
@@ -5562,7 +5681,8 @@
   },
   "25021549": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "408 Columbia St, Houston, TX 77007",
     "inspections": [
       {
@@ -5719,7 +5839,8 @@
   },
   "25037476": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "122 E 4th St, Houston, TX 77007",
     "inspections": [
       {
@@ -6032,7 +6153,8 @@
   },
   "25037477": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "335 Harvard St, Houston, TX 77007",
     "inspections": [
       {
@@ -6291,7 +6413,8 @@
   },
   "25022162": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "410 Columbia St, Houston, TX 77007",
     "inspections": [
       {
@@ -6313,6 +6436,18 @@
         "inspector": ""
       },
       {
+        "type": "SEWER",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "GROUND IN",
         "date": "2025-07-14",
         "result": "Passed",
@@ -6320,13 +6455,19 @@
       },
       {
         "type": "ROUGH IN",
-        "date": "2025-10-14",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
       {
         "type": "SHOWER PAN",
         "date": "2025-10-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -6436,7 +6577,8 @@
   },
   "25049523": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "815 Lawrence St A, Houston, TX 77007",
     "inspections": [
       {
@@ -6695,7 +6837,8 @@
   },
   "25071966": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "625 Oxford St, Houston, TX 77007",
     "inspections": [
       {
@@ -6816,7 +6959,8 @@
   },
   "26010007": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "734 E 7th 1/2 St, Houston, TX 77007",
     "inspections": [
       {
@@ -6877,7 +7021,8 @@
   },
   "25074031": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "710 Waverly St C, Houston, TX 77007",
     "inspections": [
       {
@@ -6920,7 +7065,8 @@
   },
   "25074212": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "710 Waverly St B, Houston, TX 77007",
     "inspections": [
       {
@@ -6963,7 +7109,8 @@
   },
   "25074213": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "710 Waverly St A, Houston, TX 77007",
     "inspections": [
       {
@@ -7006,7 +7153,8 @@
   },
   "25071489": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "718 E 7th St, Houston, TX 77007",
     "inspections": [
       {
@@ -7145,7 +7293,8 @@
   },
   "22125285": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1108 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -7182,7 +7331,8 @@
   },
   "22125286": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1110 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -7219,7 +7369,8 @@
   },
   "22125287": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1112 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -7256,7 +7407,8 @@
   },
   "22125288": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1114 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -7293,7 +7445,8 @@
   },
   "22125289": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1116 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -7330,7 +7483,8 @@
   },
   "22125290": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1118 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -7367,7 +7521,8 @@
   },
   "24016351": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1004 Golden Nectar (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -7560,7 +7715,8 @@
   },
   "24007883": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1006 Golden Nectar (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -7735,7 +7891,8 @@
   },
   "25011842": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "915 W 18th St D, Houston, TX 77008",
     "inspections": [
       {
@@ -7838,7 +7995,8 @@
   },
   "25011841": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "915 W 18th St C, Houston, TX 77008",
     "inspections": [
       {
@@ -7996,7 +8154,8 @@
   },
   "25042403": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "827 W 16th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -8369,7 +8528,8 @@
   },
   "25042404": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "827 W 16th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -8610,7 +8770,8 @@
   },
   "25039329": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1602 Turnpike Rd, Houston, TX 77008",
     "inspections": [
       {
@@ -8851,7 +9012,8 @@
   },
   "25028860": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1520 W 21st St B, Houston, TX 77008",
     "inspections": [
       {
@@ -9230,7 +9392,8 @@
   },
   "25028861": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1520 W 21st St A, Houston, TX 77008",
     "inspections": [
       {
@@ -9447,7 +9610,8 @@
   },
   "25011840": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "915 W 18th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -9550,7 +9714,8 @@
   },
   "25031314": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "308 E 28th St, Houston, TX 77008",
     "inspections": [
       {
@@ -9749,7 +9914,8 @@
   },
   "25011839": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "915 W 18th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -9870,7 +10036,8 @@
   },
   "25029757": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1623 Blount St, Houston, TX 77008",
     "inspections": [
       {
@@ -10087,7 +10254,8 @@
   },
   "24117058": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6118 Abington Way, Houston, TX 77008",
     "inspections": [
       {
@@ -10160,7 +10328,8 @@
   },
   "25007118": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6031 Pineshade Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -10407,7 +10576,8 @@
   },
   "25011843": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "915 W 18th St E, Houston, TX 77008",
     "inspections": [
       {
@@ -10516,7 +10686,8 @@
   },
   "25011844": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "915 W 18th St F, Houston, TX 77008",
     "inspections": [
       {
@@ -10619,7 +10790,8 @@
   },
   "25098822": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2006 Cranston Ct, Houston, TX 77008",
     "inspections": [
       {
@@ -10632,6 +10804,12 @@
         "type": "GROUND IN",
         "date": "2026-03-23",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -10678,8 +10856,8 @@
       },
       {
         "type": "COVER",
-        "date": "2026-08-06",
-        "result": "Failed",
+        "date": "2026-08-14",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -10728,7 +10906,8 @@
   },
   "25096486": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1018 Grovewood Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -10903,7 +11082,8 @@
   },
   "25105559": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "409 E 27th St, Houston, TX 77008",
     "inspections": [
       {
@@ -11078,7 +11258,8 @@
   },
   "26009463": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1028 Lamelia (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -11109,7 +11290,8 @@
   },
   "25046370": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2013 Cortlandt St, Houston, TX 77008",
     "inspections": [
       {
@@ -11260,7 +11442,8 @@
   },
   "25119654": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2052 Columbia St, Houston, TX 77008",
     "inspections": [
       {
@@ -11375,7 +11558,8 @@
   },
   "26009059": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "629 E 26th St, Houston, TX 77008",
     "inspections": [
       {
@@ -11442,7 +11626,8 @@
   },
   "26014973": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "807 W 22nd St, Houston, TX 77008",
     "inspections": [
       {
@@ -11495,8 +11680,8 @@
       },
       {
         "type": "Fire Wall",
-        "date": "2026-07-29",
-        "result": "Passed",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -11534,12 +11719,19 @@
         "date": "2026-04-15",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "26007607": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1026 Lamelia (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -11570,7 +11762,8 @@
   },
   "26011945": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6111 Hurst St, Houston, TX 77008",
     "inspections": [
       {
@@ -11607,7 +11800,8 @@
   },
   "26014282": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "805 W 22nd St, Houston, TX 77008",
     "inspections": [
       {
@@ -11669,12 +11863,25 @@
         "date": "2026-07-10",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "26013698": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2013 W 14th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -11735,7 +11942,8 @@
   },
   "25058957": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1202 Timbergrove Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -11940,7 +12148,8 @@
   },
   "25071975": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "611 E 25th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -12241,7 +12450,8 @@
   },
   "25071976": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "611 E 25th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -12428,7 +12638,8 @@
   },
   "25116890": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1410 Herkimer St, Houston, TX 77008",
     "inspections": [
       {
@@ -12495,7 +12706,8 @@
   },
   "25049380": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1306 W 24th St F, Houston, TX 77008",
     "inspections": [
       {
@@ -12574,7 +12786,8 @@
   },
   "25049381": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1306 W 24th St E, Houston, TX 77008",
     "inspections": [
       {
@@ -12647,7 +12860,8 @@
   },
   "25049382": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1306 W 24th St D, Houston, TX 77008",
     "inspections": [
       {
@@ -12720,7 +12934,8 @@
   },
   "25049383": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1306 W 24th St C, Houston, TX 77008",
     "inspections": [
       {
@@ -12793,7 +13008,8 @@
   },
   "25049384": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1306 W 24th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -12872,7 +13088,8 @@
   },
   "25049385": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1306 W 24th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -12951,7 +13168,8 @@
   },
   "25064988": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "433 W 23rd St, Houston, TX 77008",
     "inspections": [
       {
@@ -13072,7 +13290,8 @@
   },
   "25053861": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1341 Nashua St, Houston, TX 77008",
     "inspections": [
       {
@@ -13253,7 +13472,8 @@
   },
   "25053862": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1343 Nashua St, Houston, TX 77008",
     "inspections": [
       {
@@ -13440,7 +13660,8 @@
   },
   "25120724": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2464 Nicholson St, Houston, TX 77008",
     "inspections": [
       {
@@ -13507,7 +13728,8 @@
   },
   "25120725": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2462 Nicholson St, Houston, TX 77008",
     "inspections": [
       {
@@ -13568,7 +13790,8 @@
   },
   "25120726": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2450 Nicholson St, Houston, TX 77008",
     "inspections": [
       {
@@ -13629,7 +13852,8 @@
   },
   "25120727": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2452 Nicholson St, Houston, TX 77008",
     "inspections": [
       {
@@ -13696,7 +13920,8 @@
   },
   "25078195": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2013 Sheldon St A, Houston, TX 77008",
     "inspections": [
       {
@@ -14015,7 +14240,8 @@
   },
   "25078196": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2013 Sheldon St B, Houston, TX 77008",
     "inspections": [
       {
@@ -14226,7 +14452,8 @@
   },
   "26005892": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "930 Waverly St, Houston, TX 77008",
     "inspections": [
       {
@@ -14260,6 +14487,12 @@
         "inspector": ""
       },
       {
+        "type": "Fire Wall",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Nail Pattern",
         "date": "2026-06-23",
         "result": "Passed",
@@ -14281,7 +14514,8 @@
   },
   "25075678": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "737 W 21st St C, Houston, TX 77008",
     "inspections": [
       {
@@ -14432,7 +14666,8 @@
   },
   "25075679": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "737 W 21st St B, Houston, TX 77008",
     "inspections": [
       {
@@ -14583,7 +14818,8 @@
   },
   "25075680": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "737 W 21st St A, Houston, TX 77008",
     "inspections": [
       {
@@ -14740,7 +14976,8 @@
   },
   "25075677": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "737 W 21st St D, Houston, TX 77008",
     "inspections": [
       {
@@ -14891,7 +15128,8 @@
   },
   "25118994": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "822 Nashua St, Houston, TX 77008",
     "inspections": [
       {
@@ -14946,7 +15184,8 @@
   },
   "26006108": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "835 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -15145,7 +15384,8 @@
   },
   "26006109": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "833 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -15350,7 +15590,8 @@
   },
   "25054802": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1002 Lamelia (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -15568,7 +15809,8 @@
   },
   "25045801": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "729 W 21st St A, Houston, TX 77008",
     "inspections": [
       {
@@ -15743,7 +15985,8 @@
   },
   "25045802": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "723 W 21st St, Houston, TX 77008",
     "inspections": [
       {
@@ -15918,7 +16161,8 @@
   },
   "25045803": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "725 W 21st St, Houston, TX 77008",
     "inspections": [
       {
@@ -16087,7 +16331,8 @@
   },
   "25102310": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "529 W 27th St, Houston, TX 77008",
     "inspections": [
       {
@@ -16189,20 +16434,21 @@
       {
         "type": "Driveway PM",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Sidewalk PM",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       }
     ]
   },
   "25045800": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "729 W 21st St B, Houston, TX 77008",
     "inspections": [
       {
@@ -16371,7 +16617,8 @@
   },
   "25092767": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "212 E 24th St, Houston, TX 77008",
     "inspections": [
       {
@@ -16546,7 +16793,8 @@
   },
   "25068840": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1432 Alexander St, Houston, TX 77008",
     "inspections": [
       {
@@ -16745,7 +16993,8 @@
   },
   "26001989": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1118 Worthshire St, Houston, TX 77008",
     "inspections": [
       {
@@ -16812,7 +17061,8 @@
   },
   "25048170": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1229 Prince St, Houston, TX 77008",
     "inspections": [
       {
@@ -17221,7 +17471,8 @@
   },
   "25048171": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1227 Prince St, Houston, TX 77008",
     "inspections": [
       {
@@ -17486,7 +17737,8 @@
   },
   "26011885": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "711 E 25th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -17515,20 +17767,20 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Fire Wall",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -17539,8 +17791,8 @@
       },
       {
         "type": "WINDSTORM",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -17613,7 +17865,8 @@
   },
   "26011886": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "711 E 25th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -17642,20 +17895,20 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Fire Wall",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -17666,8 +17919,8 @@
       },
       {
         "type": "WINDSTORM",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -17698,7 +17951,8 @@
   },
   "26009078": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1320 Alexander St A, Houston, TX 77008",
     "inspections": [
       {
@@ -17855,7 +18109,8 @@
   },
   "26009079": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1320 Alexander St B, Houston, TX 77008",
     "inspections": [
       {
@@ -18006,9 +18261,16 @@
   },
   "26012473": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "918 Dorothy St, Houston, TX 77008",
     "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
       {
         "type": "GROUND IN",
         "date": "2026-08-03",
@@ -18046,6 +18308,12 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "date": "2026-08-11",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-04-08",
         "result": "Passed",
@@ -18055,7 +18323,8 @@
   },
   "25071972": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "112 E 27th St B, Houston, TX 77008",
     "inspections": [
       {
@@ -18248,7 +18517,8 @@
   },
   "26010786": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "318 W 21st St, Houston, TX 77008",
     "inspections": [
       {
@@ -18272,6 +18542,12 @@
       {
         "type": "SEWER",
         "date": "2026-04-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "date": "2026-08-12",
         "result": "Passed",
         "inspector": ""
       },
@@ -18358,12 +18634,25 @@
         "date": "2026-08-05",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "25071971": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "112 E 27th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -18664,7 +18953,8 @@
   },
   "26012607": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "705 E 13th St, Houston, TX 77008",
     "inspections": [
       {
@@ -18707,7 +18997,8 @@
   },
   "25067226": {
     "status": "Passed",
-    "updated": "2026-08-06",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1434 Alexander St, Houston, TX 77008",
     "inspections": [
       {
@@ -18906,7 +19197,8 @@
   },
   "25097930": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6430 Lindyann Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -18953,8 +19245,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-06",
-        "result": "Pending",
+        "date": "2026-08-10",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -18978,6 +19270,12 @@
       {
         "type": "1031-FDN PM",
         "date": "2026-03-20",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -19009,7 +19307,8 @@
   },
   "25097981": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "609 W 27th St, Houston, TX 77008",
     "inspections": [
       {
@@ -19214,7 +19513,8 @@
   },
   "25097982": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "607 W 27th St, Houston, TX 77008",
     "inspections": [
       {
@@ -19407,7 +19707,8 @@
   },
   "25076883": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "116 E 23rd St, Houston, TX 77008",
     "inspections": [
       {
@@ -19612,13 +19913,20 @@
   },
   "25107135": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "814 W 17th St, Houston, TX 77008",
     "inspections": [
       {
         "type": "DITCH COVER",
         "date": "2026-05-05",
         "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -19635,8 +19943,8 @@
       },
       {
         "type": "ROUGH IN",
-        "date": "2026-08-04",
-        "result": "Failed",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -19859,7 +20167,8 @@
   },
   "25107136": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "816 W 17th St, Houston, TX 77008",
     "inspections": [
       {
@@ -19882,8 +20191,8 @@
       },
       {
         "type": "ROUGH IN",
-        "date": "2026-08-04",
-        "result": "Failed",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -19962,7 +20271,8 @@
   },
   "25090800": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6227 Lindyann Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -20041,7 +20351,8 @@
   },
   "25075097": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "404 E 28th St, Houston, TX 77008",
     "inspections": [
       {
@@ -20366,7 +20677,8 @@
   },
   "25075098": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "406 E 28th St, Houston, TX 77008",
     "inspections": [
       {
@@ -20589,7 +20901,8 @@
   },
   "25045806": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "729 W 21st St C, Houston, TX 77008",
     "inspections": [
       {
@@ -20770,7 +21083,8 @@
   },
   "25045807": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "727 W 21st St, Houston, TX 77008",
     "inspections": [
       {
@@ -20933,7 +21247,8 @@
   },
   "25117489": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "745 E 16th St, Houston, TX 77008",
     "inspections": [
       {
@@ -20976,7 +21291,8 @@
   },
   "25103370": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1324 Lawrence St, Houston, TX 77008",
     "inspections": [
       {
@@ -21325,7 +21641,8 @@
   },
   "25103371": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1322 Lawrence St, Houston, TX 77008",
     "inspections": [
       {
@@ -21536,7 +21853,8 @@
   },
   "25082826": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1822 W 23rd St, Houston, TX 77008",
     "inspections": [
       {
@@ -21547,8 +21865,8 @@
       },
       {
         "type": "TCI",
-        "date": "2026-08-07",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -21657,7 +21975,8 @@
   },
   "25082827": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1824 W 23rd St, Houston, TX 77008",
     "inspections": [
       {
@@ -21692,8 +22011,8 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-07-21",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -21704,7 +22023,7 @@
       },
       {
         "type": "Fire Wall",
-        "date": "2026-06-10",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -21716,8 +22035,8 @@
       },
       {
         "type": "WINDSTORM",
-        "date": "2026-07-21",
-        "result": "Failed",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -21766,7 +22085,8 @@
   },
   "25082828": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1826 W 23rd St, Houston, TX 77008",
     "inspections": [
       {
@@ -21833,7 +22153,8 @@
   },
   "25082829": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1828 W 23rd St, Houston, TX 77008",
     "inspections": [
       {
@@ -21900,7 +22221,8 @@
   },
   "25070463": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "527 W 26th St, Houston, TX 77008",
     "inspections": [
       {
@@ -22123,7 +22445,8 @@
   },
   "25070464": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "525 W 26th St, Houston, TX 77008",
     "inspections": [
       {
@@ -22328,7 +22651,8 @@
   },
   "25089390": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "623 E 13th St, Houston, TX 77008",
     "inspections": [
       {
@@ -22605,7 +22929,8 @@
   },
   "25080675": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "715 E 12th St, Houston, TX 77008",
     "inspections": [
       {
@@ -22870,7 +23195,8 @@
   },
   "25054320": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1029 Lamelia (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -23057,7 +23383,8 @@
   },
   "25059398": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "609 E 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -23256,7 +23583,8 @@
   },
   "25068449": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "6107 Waltway Dr, Houston, TX 77008",
     "inspections": [
       {
@@ -23390,12 +23718,25 @@
         "date": "2025-10-30",
         "result": "Failed",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
       }
     ]
   },
   "25054803": {
     "status": "Partial",
-    "updated": "2026-08-03",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1004 Lamelia (Pvt) Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -23564,7 +23905,8 @@
   },
   "25058066": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1595 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -23605,13 +23947,13 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-04",
+        "date": "2026-08-11",
         "result": "Failed",
         "inspector": ""
       },
       {
         "type": "Fire Wall",
-        "date": "2026-08-04",
+        "date": "2026-08-11",
         "result": "Failed",
         "inspector": ""
       },
@@ -23691,7 +24033,8 @@
   },
   "25058067": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1597 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -23830,7 +24173,8 @@
   },
   "25058068": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1599 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -23969,7 +24313,8 @@
   },
   "25058069": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1601 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -24108,7 +24453,8 @@
   },
   "25058070": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1603 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -24247,7 +24593,8 @@
   },
   "25058071": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1605 W 25th St, Houston, TX 77008",
     "inspections": [
       {
@@ -24288,7 +24635,7 @@
       },
       {
         "type": "1035-Frame",
-        "date": "2026-08-04",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -24308,6 +24655,12 @@
         "type": "1031-FDN PM",
         "date": "2026-01-08",
         "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-08-11",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -24489,7 +24842,8 @@
   },
   "25050531": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "815 W 18th St, Houston, TX 77008",
     "inspections": [
       {
@@ -24682,7 +25036,8 @@
   },
   "25050532": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "813 W 18th St, Houston, TX 77008",
     "inspections": [
       {
@@ -24875,7 +25230,8 @@
   },
   "25111624": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1126 Timbergrove Ln, Houston, TX 77008",
     "inspections": [
       {
@@ -24996,7 +25352,8 @@
   },
   "26024075": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1220 Prince St, Houston, TX 77008",
     "inspections": [
       {
@@ -25018,6 +25375,18 @@
         "inspector": ""
       },
       {
+        "type": "Driveway AM",
+        "date": "2026-08-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-05-08",
         "result": "Passed",
@@ -25027,7 +25396,8 @@
   },
   "26017264": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2002 W 14th St A, Houston, TX 77008",
     "inspections": [
       {
@@ -25118,7 +25488,8 @@
   },
   "26023957": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1218 Prince St, Houston, TX 77008",
     "inspections": [
       {
@@ -25138,12 +25509,25 @@
         "date": "2026-06-03",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "date": "2026-08-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
       }
     ]
   },
   "26022264": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2005 Harvard St, Houston, TX 77008",
     "inspections": [
       {
@@ -25180,7 +25564,8 @@
   },
   "26027632": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1246 Omar St, Houston, TX 77008",
     "inspections": [
       {
@@ -25233,13 +25618,19 @@
       },
       {
         "type": "Nail Pattern",
-        "date": "2026-07-09",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
         "date": "2026-06-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -25277,7 +25668,8 @@
   },
   "22030748": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1035 Voight St, Houston, TX 77009",
     "inspections": [
       {
@@ -25404,7 +25796,8 @@
   },
   "22030746": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1033 Voight St, Houston, TX 77009",
     "inspections": [
       {
@@ -25525,7 +25918,8 @@
   },
   "24111379": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2811 Ave, Houston, TX 77009",
     "inspections": [
       {
@@ -25760,7 +26154,8 @@
   },
   "25042637": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1301 Tabor St, Houston, TX 77009",
     "inspections": [
       {
@@ -25977,7 +26372,8 @@
   },
   "25042687": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1116 Highland St, Houston, TX 77009",
     "inspections": [
       {
@@ -26248,7 +26644,8 @@
   },
   "25042035": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1002 E 6th 1/2 St, Houston, TX 77009",
     "inspections": [
       {
@@ -26301,13 +26698,19 @@
       },
       {
         "type": "ROUGH IN",
-        "date": "2025-12-30",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
       {
         "type": "SHOWER PAN",
         "date": "2026-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -26459,7 +26862,8 @@
   },
   "25038428": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1126 E 7th 1/2 St, Houston, TX 77009",
     "inspections": [
       {
@@ -26664,7 +27068,8 @@
   },
   "24116013": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1303 Cordell St B, Houston, TX 77009",
     "inspections": [
       {
@@ -26863,7 +27268,8 @@
   },
   "24116014": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1303 Cordell St A, Houston, TX 77009",
     "inspections": [
       {
@@ -27074,7 +27480,8 @@
   },
   "25020438": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1132 E 6th 1/2 St, Houston, TX 77009",
     "inspections": [
       {
@@ -27105,7 +27512,8 @@
   },
   "25087112": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "711 E 26th St, Houston, TX 77009",
     "inspections": [
       {
@@ -27370,7 +27778,8 @@
   },
   "25088874": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1008 E 28th St, Houston, TX 77009",
     "inspections": [
       {
@@ -27425,7 +27834,8 @@
   },
   "26009896": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2924 Watson St, Houston, TX 77009",
     "inspections": [
       {
@@ -27443,7 +27853,7 @@
       {
         "type": "TCI",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -27490,7 +27900,7 @@
       },
       {
         "type": "INSULATION",
-        "date": "2026-08-03",
+        "date": "2026-08-11",
         "result": "Passed",
         "inspector": ""
       },
@@ -27522,7 +27932,8 @@
   },
   "25077928": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2434 White Oak Dr, Houston, TX 77009",
     "inspections": [
       {
@@ -27601,7 +28012,8 @@
   },
   "25069482": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1113 Voight St, Houston, TX 77009",
     "inspections": [
       {
@@ -27854,7 +28266,8 @@
   },
   "26013222": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1122 E 26th St, Houston, TX 77009",
     "inspections": [
       {
@@ -27895,8 +28308,8 @@
       },
       {
         "type": "SHOWER PAN",
-        "date": "2026-08-10",
-        "result": "Pending",
+        "date": "2026-08-12",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -27946,12 +28359,19 @@
         "date": "2026-06-23",
         "result": "Passed",
         "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
       }
     ]
   },
   "25069481": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1109 Voight St, Houston, TX 77009",
     "inspections": [
       {
@@ -27969,7 +28389,7 @@
       {
         "type": "ELECT FINAL",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Failed",
         "inspector": ""
       },
       {
@@ -28162,7 +28582,8 @@
   },
   "25060378": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1109 Tabor St, Houston, TX 77009",
     "inspections": [
       {
@@ -28301,7 +28722,8 @@
   },
   "26015304": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1121 Louise St, Houston, TX 77009",
     "inspections": [
       {
@@ -28386,7 +28808,8 @@
   },
   "25065659": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "523 Link Rd, Houston, TX 77009",
     "inspections": [
       {
@@ -28435,7 +28858,8 @@
   },
   "25065660": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "519 Link Rd, Houston, TX 77009",
     "inspections": [
       {
@@ -28484,7 +28908,8 @@
   },
   "25065655": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1906 Northwood St, Houston, TX 77009",
     "inspections": [
       {
@@ -28521,7 +28946,8 @@
   },
   "25065656": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1910 Northwood St, Houston, TX 77009",
     "inspections": [
       {
@@ -28570,7 +28996,8 @@
   },
   "25065657": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1914 Northwood St, Houston, TX 77009",
     "inspections": [
       {
@@ -28619,7 +29046,8 @@
   },
   "25065658": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1918 Northwood St, Houston, TX 77009",
     "inspections": [
       {
@@ -28668,7 +29096,8 @@
   },
   "25046023": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1125 E 24th St, Houston, TX 77009",
     "inspections": [
       {
@@ -28867,7 +29296,8 @@
   },
   "25066215": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1107 E 24th St, Houston, TX 77009",
     "inspections": [
       {
@@ -29192,7 +29622,8 @@
   },
   "25066216": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1109 E 24th St, Houston, TX 77009",
     "inspections": [
       {
@@ -29397,7 +29828,8 @@
   },
   "25066217": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1104 Gibbs St, Houston, TX 77009",
     "inspections": [
       {
@@ -29596,7 +30028,8 @@
   },
   "25080290": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "906 Bayland Ave, Houston, TX 77009",
     "inspections": [
       {
@@ -29696,6 +30129,24 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SFR Kitchen",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Duct Seal",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Driveway AM",
         "date": "2026-07-02",
         "result": "Passed",
@@ -29723,7 +30174,8 @@
   },
   "25089096": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "826 E 27th St, Houston, TX 77009",
     "inspections": [
       {
@@ -30078,7 +30530,8 @@
   },
   "25121207": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "949 Ridge St, Houston, TX 77009",
     "inspections": [
       {
@@ -30190,6 +30643,18 @@
         "inspector": ""
       },
       {
+        "type": "Driveway AM",
+        "date": "2026-08-11",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "date": "2026-08-11",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
         "type": "Go By",
         "date": "2026-08-04",
         "result": "Passed",
@@ -30253,7 +30718,8 @@
   },
   "25091918": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1010 E 26th St, Houston, TX 77009",
     "inspections": [
       {
@@ -30299,6 +30765,12 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "date": "2026-03-17",
         "result": "Passed",
@@ -30306,8 +30778,8 @@
       },
       {
         "type": "Fire Wall",
-        "date": "2026-07-02",
-        "result": "Passed",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -30518,7 +30990,8 @@
   },
   "25091919": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1012 E 26th St, Houston, TX 77009",
     "inspections": [
       {
@@ -30529,7 +31002,13 @@
       },
       {
         "type": "ROUGH",
-        "date": "2026-08-10",
+        "date": "2026-08-12",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2026-08-13",
         "result": "Pending",
         "inspector": ""
       },
@@ -30541,8 +31020,8 @@
       },
       {
         "type": "Fire Wall",
-        "date": "2026-07-08",
-        "result": "Passed",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -30633,7 +31112,8 @@
   },
   "26002652": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "702 Euclid St, Houston, TX 77009",
     "inspections": [
       {
@@ -30661,6 +31141,12 @@
         "inspector": ""
       },
       {
+        "type": "WINDSTORM",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "date": "2026-05-29",
         "result": "Passed",
@@ -30670,7 +31156,8 @@
   },
   "25091277": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1208 E 26th St B, Houston, TX 77009",
     "inspections": [
       {
@@ -30863,9 +31350,28 @@
   },
   "26006967": {
     "status": "Partial",
-    "updated": "2026-07-06",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "728 Euclid St, Houston, TX 77009",
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2026-07-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
       {
         "type": "GROUND IN",
         "date": "2026-05-13",
@@ -30879,6 +31385,12 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "date": "2026-05-18",
         "result": "Passed",
@@ -30886,7 +31398,7 @@
       },
       {
         "type": "Nail Pattern",
-        "date": "2026-06-22",
+        "date": "2026-07-29",
         "result": "Passed",
         "inspector": ""
       },
@@ -30897,8 +31409,20 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "date": "2026-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-07-27",
         "result": "Passed",
         "inspector": ""
       }
@@ -30906,12 +31430,19 @@
   },
   "26011838": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1137 Adele St, Houston, TX 77009",
     "inspections": [
       {
         "type": "ROUGH",
         "date": "2026-07-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2026-08-12",
         "result": "Passed",
         "inspector": ""
       },
@@ -30985,7 +31516,8 @@
   },
   "25118077": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1314 E 28th St, Houston, TX 77009",
     "inspections": [
       {
@@ -31003,7 +31535,7 @@
       {
         "type": "Nail Pattern",
         "date": "2026-08-11",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -31022,7 +31554,8 @@
   },
   "25119945": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "409 Walton St A, Houston, TX 77009",
     "inspections": [
       {
@@ -31233,7 +31766,8 @@
   },
   "25119946": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "409 Walton St B, Houston, TX 77009",
     "inspections": [
       {
@@ -31438,7 +31972,8 @@
   },
   "25053903": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "931 Merrill St, Houston, TX 77009",
     "inspections": [
       {
@@ -31673,7 +32208,8 @@
   },
   "25114943": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "635 Mazal (Pvt) Ln, Houston, TX 77009",
     "inspections": [
       {
@@ -31746,7 +32282,8 @@
   },
   "25050913": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1316 Heslep St, Houston, TX 77009",
     "inspections": [
       {
@@ -32065,7 +32602,8 @@
   },
   "25050911": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1318 Heslep St, Houston, TX 77009",
     "inspections": [
       {
@@ -32294,7 +32832,8 @@
   },
   "26007129": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1124 Robbie St, Houston, TX 77009",
     "inspections": [
       {
@@ -32451,7 +32990,8 @@
   },
   "26007130": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1122 Robbie St, Houston, TX 77009",
     "inspections": [
       {
@@ -32614,7 +33154,8 @@
   },
   "26001982": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1118 Adele St, Houston, TX 77009",
     "inspections": [
       {
@@ -32669,12 +33210,25 @@
   },
   "26007211": {
     "status": "Partial",
-    "updated": "2026-07-06",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1138 Fugate St, Houston, TX 77009",
     "inspections": [
       {
+        "type": "DITCH COVER",
+        "date": "2026-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "ROUGH",
         "date": "2026-05-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "date": "2026-07-17",
         "result": "Passed",
         "inspector": ""
       },
@@ -32698,7 +33252,7 @@
       },
       {
         "type": "SHOWER PAN",
-        "date": "2026-06-23",
+        "date": "2026-07-16",
         "result": "Passed",
         "inspector": ""
       },
@@ -32763,6 +33317,12 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
         "type": "Driveway AM",
         "date": "2026-06-12",
         "result": "Passed",
@@ -32783,7 +33343,7 @@
       {
         "type": "COVER",
         "date": "2026-07-09",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -32796,12 +33356,19 @@
   },
   "26011835": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1135 Adele St, Houston, TX 77009",
     "inspections": [
       {
         "type": "ROUGH",
         "date": "2026-07-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "date": "2026-08-12",
         "result": "Passed",
         "inspector": ""
       },
@@ -32869,7 +33436,8 @@
   },
   "25093062": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "602 Northwood St, Houston, TX 77009",
     "inspections": [
       {
@@ -32893,7 +33461,7 @@
       {
         "type": "SEWER",
         "date": "2026-08-10",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -32984,7 +33552,8 @@
   },
   "25045819": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "902 E 25th St, Houston, TX 77009",
     "inspections": [
       {
@@ -33213,7 +33782,8 @@
   },
   "25091370": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1208 E 26th St A, Houston, TX 77009",
     "inspections": [
       {
@@ -33520,7 +34090,8 @@
   },
   "25114005": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "845 E 26th St, Houston, TX 77009",
     "inspections": [
       {
@@ -33549,8 +34120,8 @@
       },
       {
         "type": "SHOWER PAN",
-        "date": "2026-08-05",
-        "result": "Passed",
+        "date": "2026-08-13",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -33665,7 +34236,8 @@
   },
   "25046809": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2715 Beauchamp St, Houston, TX 77009",
     "inspections": [
       {
@@ -33864,7 +34436,8 @@
   },
   "25046810": {
     "status": "Passed",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2713 Beauchamp St, Houston, TX 77009",
     "inspections": [
       {
@@ -34099,7 +34672,8 @@
   },
   "25046043": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1121 E 24th St, Houston, TX 77009",
     "inspections": [
       {
@@ -34400,7 +34974,8 @@
   },
   "25077930": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "2436 White Oak Dr, Houston, TX 77009",
     "inspections": [
       {
@@ -34479,7 +35054,8 @@
   },
   "26025617": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "932 Algregg St, Houston, TX 77009",
     "inspections": [
       {
@@ -34540,7 +35116,8 @@
   },
   "26025618": {
     "status": "Partial",
-    "updated": "2026-08-10",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "934 Algregg St, Houston, TX 77009",
     "inspections": [
       {
@@ -34595,29 +35172,29 @@
   },
   "23091472": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "745 W 17th St, Houston, TX 77008",
     "inspections": []
   },
   "25027859": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "902 Jewett St, Houston, TX 77009",
     "inspections": []
   },
   "25097288": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1434 Herkimer St, Houston, TX 77008",
     "inspections": []
   },
   "25114941": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "627 Mazal (Pvt) Ln, Houston, TX 77009",
     "inspections": [
       {
@@ -34690,8 +35267,8 @@
   },
   "25114942": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "631 Mazal (Pvt) Ln, Houston, TX 77009",
     "inspections": [
       {
@@ -34764,8 +35341,8 @@
   },
   "25117199": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "710 E 7th St, Houston, TX 77007",
     "inspections": [
       {
@@ -34802,15 +35379,15 @@
   },
   "25117865": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1032 Key St, Houston, TX 77009",
     "inspections": []
   },
   "25120411": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "940 Nadine St, Houston, TX 77009",
     "inspections": []
   },
@@ -34842,8 +35419,8 @@
   },
   "26016486": {
     "status": "Passed",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1040 Louise St, Houston, TX 77009",
     "inspections": [
       {
@@ -34862,8 +35439,8 @@
   },
   "26020607": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "710 Le Green St, Houston, TX 77008",
     "inspections": [
       {
@@ -34924,8 +35501,8 @@
   },
   "26021733": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "214 Sylvester Rd, Houston, TX 77009",
     "inspections": []
   },
@@ -34975,8 +35552,8 @@
   },
   "26024502": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "914 W 16th St, Houston, TX 77008",
     "inspections": [
       {
@@ -35020,8 +35597,8 @@
   },
   "26026525": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "625 Merrill St, Houston, TX 77009",
     "inspections": [
       {
@@ -35064,8 +35641,8 @@
   },
   "26027027": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "832 E 27th St, Houston, TX 77009",
     "inspections": [
       {
@@ -35102,8 +35679,8 @@
   },
   "26027252": {
     "status": "Partial",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1013 Woodland St, Houston, TX 77009",
     "inspections": [
       {
@@ -35166,8 +35743,8 @@
   },
   "26049088": {
     "status": "Pending",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "835 Lawrence St, Houston, TX 77007",
     "inspections": [
       {
@@ -35186,43 +35763,43 @@
   },
   "26049441": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "1336 Herkimer St, Houston, TX 77008",
     "inspections": []
   },
   "26050841": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "906 W 20th St E, Houston, TX 77008",
     "inspections": []
   },
   "26050842": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "906 W 20th St F, Houston, TX 77008",
     "inspections": []
   },
   "26050843": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "906 W 20th St A, Houston, TX 77008",
     "inspections": []
   },
   "26050844": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "906 W 20th St B, Houston, TX 77008",
     "inspections": []
   },
   "26050845": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "906 W 20th St C, Houston, TX 77008",
     "inspections": []
   },
@@ -35235,15 +35812,15 @@
   },
   "26051253": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "845 W 23rd St A, Houston, TX 77008",
     "inspections": []
   },
   "26051258": {
     "status": "None",
-    "updated": "2026-08-12",
-    "scraped_at": "2026-08-12",
+    "updated": "2026-08-13",
+    "scraped_at": "2026-08-13",
     "address": "845 W 23rd St B, Houston, TX 77008",
     "inspections": []
   }
