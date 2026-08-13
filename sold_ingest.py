@@ -66,7 +66,14 @@ def in_zone_poly(ring, lng, lat):
 
 BANDS = ['<800k', '800k-1.3M', '1.3M-2M', '2M+']
 WINS = ['0-30', '30-60', '60-90', '90-180', '180-365']
-SPLIT_LOT_MAX = 3500
+# Heights lot reality (confirmed 2026-08-12): original lots ~6,600 (50x132) with a
+# 5,000-7,000 single cluster; splits are halves (~3,300 = 25x132) clustering
+# 1,500-4,000. The 4,000-5,000 gap is ambiguous -> Unclassified + needs_review.
+SPLIT_MAX = 4000
+SINGLE_MIN = 5000
+# unit-letter address (611B / #A / Unit#A / trailing " A") = near-certain shared-lot
+# product; deliberately does NOT match the E/W street directional ("107 E 24th")
+UNIT_LETTER_RE = re.compile(r'(\d+[A-F]\b|#\s*[A-F]\b|\bUnit\s*#?\s*[A-F]\b|\s[A-F]$)', re.I)
 
 
 def load_zone_regex(html_path):
@@ -185,7 +192,17 @@ def main():
                 days = (today - cd).days
                 if days < 0:
                     days = 0
-                prod = ('Split Lot' if lot < SPLIT_LOT_MAX else 'Single Lot') if lot else 'Unclassified'
+                unit_letter = bool(UNIT_LETTER_RE.search(addr))
+                if not lot:
+                    prod, review = 'Unclassified', True
+                elif lot <= SPLIT_MAX:
+                    prod, review = 'Split Lot', False
+                elif lot >= SINGLE_MIN:
+                    # unit-letter address on a full-size lot: HAR likely reports the
+                    # PARENT lot on a shared-lot unit — keep Single but flag for review
+                    prod, review = 'Single Lot', unit_letter
+                else:
+                    prod, review = 'Unclassified', True  # 4,000-5,000 ambiguity gap
                 row = {
                     'id': 's' + mls,
                     'a': addr,
@@ -200,7 +217,7 @@ def main():
                 if lot: row['lot'] = lot
                 if lp: row['svl'] = round((cp - lp) / lp, 4)
                 if dom == 0: row['p'] = 1          # presold new construction — signal, not junk
-                if not lot: row['nr'] = 1           # needs_review: no lot size, product unknown
+                if review: row['nr'] = 1            # needs_review: null/gap lot, or letter-address Single
                 for k, col in (('bl', 'Builder Name'), ('sch', 'School Elementary'),
                                ('la', 'List Agent Full Name'), ('ba', 'Selling Agent Full Name')):
                     v = (rec.get(col) or '').strip()
@@ -260,7 +277,9 @@ def main():
     print(f"east-lng excl:    {len(excl_lng)} {excl_lng[:5]}")
     print(f"polygon excl:     {len(excl_poly)} {excl_poly[:5]}")
     print(f"cohorts:          {coh_n}")
-    print(f"products:         {prod_n}  (Unclassified = lot-size null, needs_review)")
+    print(f"products:         {prod_n}  (Unclassified = lot null or 4-5k gap, needs_review)")
+    nr_single = sum(1 for r in rows if r.get('nr') and r['prod'] == 'Single Lot')
+    print(f"needs_review:     {sum(1 for r in rows if r.get('nr'))} total ({nr_single} letter-address Singles)")
     print(f"windows:          { {w: win_n.get(w, 0) for w in WINS} }")
     print(f"presold (DOM=0):  {sum(1 for r in rows if r.get('p'))}")
     print(f"emitted -> {cfg['out']} ({len(js)} bytes, {js.count(chr(10))} lines)")
