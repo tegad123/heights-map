@@ -34592,5 +34592,659 @@
         "inspector": ""
       }
     ]
+  },
+  "23091472": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "745 W 17th St, Houston, TX 77008",
+    "inspections": []
+  },
+  "25027859": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "902 Jewett St, Houston, TX 77009",
+    "inspections": []
+  },
+  "25097288": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "1434 Herkimer St, Houston, TX 77008",
+    "inspections": []
+  },
+  "25114941": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "627 Mazal (Pvt) Ln, Houston, TX 77009",
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "date": "2026-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-03-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "date": "2026-07-01",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2026-04-15",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-04-09",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "date": "2026-05-21",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "25114942": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "631 Mazal (Pvt) Ln, Houston, TX 77009",
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "date": "2026-06-12",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-03-05",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-03-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "date": "2026-04-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "date": "2026-06-25",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "25117199": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "710 E 7th St, Houston, TX 77007",
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-07-14",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2026-07-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-07-14",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "25117865": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "1032 Key St, Houston, TX 77009",
+    "inspections": []
+  },
+  "25120411": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "940 Nadine St, Houston, TX 77009",
+    "inspections": []
+  },
+  "26007533": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "806 Peddie St, Houston, TX 77008",
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "date": "2026-07-30",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26016486": {
+    "status": "Passed",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "1040 Louise St, Houston, TX 77009",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26020607": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "710 Le Green St, Houston, TX 77008",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-28",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-08-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "date": "2026-08-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2026-08-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SWIMMING POOL",
+        "date": "2026-08-03",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-08-03",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-07-28",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26021733": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "214 Sylvester Rd, Houston, TX 77009",
+    "inspections": []
+  },
+  "26022301": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "815 Olive St, Houston, TX 77007",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-07-13",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-07-08",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26024502": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "914 W 16th St, Houston, TX 77008",
+    "inspections": [
+      {
+        "type": "Precon",
+        "date": "2026-05-04",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "date": "2026-05-04",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "date": "2026-05-04",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "date": "2026-05-04",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "date": "2026-05-04",
+        "result": "Failed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26025600": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "1717 Lubbock St, Houston, TX 77007",
+    "inspections": []
+  },
+  "26026525": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "625 Merrill St, Houston, TX 77009",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-21",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-07-06",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "date": "2026-07-06",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-08-04",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26027027": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "832 E 27th St, Houston, TX 77009",
+    "inspections": [
+      {
+        "type": "Precon",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "date": "2026-04-30",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "date": "2026-04-30",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "date": "2026-04-30",
+        "result": "Failed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26027252": {
+    "status": "Partial",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "1013 Woodland St, Houston, TX 77009",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-07-17",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "date": "2026-07-16",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "date": "2026-07-24",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "date": "2026-07-23",
+        "result": "Failed",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "inspector": ""
+      }
+    ]
+  },
+  "26045938": {
+    "status": "Pending",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "207 Malone St, Houston, TX 77007",
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      }
+    ]
+  },
+  "26049088": {
+    "status": "Pending",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "835 Lawrence St, Houston, TX 77007",
+    "inspections": [
+      {
+        "type": "SEWER",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "date": "2026-08-13",
+        "result": "Pending",
+        "inspector": ""
+      }
+    ]
+  },
+  "26049441": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "1336 Herkimer St, Houston, TX 77008",
+    "inspections": []
+  },
+  "26050841": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "906 W 20th St E, Houston, TX 77008",
+    "inspections": []
+  },
+  "26050842": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "906 W 20th St F, Houston, TX 77008",
+    "inspections": []
+  },
+  "26050843": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "906 W 20th St A, Houston, TX 77008",
+    "inspections": []
+  },
+  "26050844": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "906 W 20th St B, Houston, TX 77008",
+    "inspections": []
+  },
+  "26050845": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "906 W 20th St C, Houston, TX 77008",
+    "inspections": []
+  },
+  "26050894": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "314 W Cowan Dr, Houston, TX 77007",
+    "inspections": []
+  },
+  "26051253": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "845 W 23rd St A, Houston, TX 77008",
+    "inspections": []
+  },
+  "26051258": {
+    "status": "None",
+    "updated": "2026-08-12",
+    "scraped_at": "2026-08-12",
+    "address": "845 W 23rd St B, Houston, TX 77008",
+    "inspections": []
   }
 }

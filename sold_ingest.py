@@ -36,8 +36,33 @@ MARKETS = {
         'csvs': [('HAR_Export_2025_heights.csv', 'nc'),
                  ('HAR_Export_2024-heights.csv', 'resale')],
         'lng_east_max': -95.370,   # east of I-45 North Fwy corridor = out of zone
+        'boundary': 'heights_boundary.geojson',
     },
 }
+
+
+def load_boundary_ring(path):
+    try:
+        g = json.load(open(path))
+        return g['features'][0]['geometry']['coordinates'][0]
+    except Exception as e:
+        print(f'WARN: boundary polygon unavailable ({e}) — polygon zone check disabled')
+        return None
+
+
+def in_zone_poly(ring, lng, lat):
+    """Ray-cast point-in-polygon against the market boundary ring."""
+    if ring is None:
+        return True
+    inside = False
+    j = len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i]
+        xj, yj = ring[j]
+        if (yi > lat) != (yj > lat) and lng < (xj - xi) * (lat - yi) / (yj - yi) + xi:
+            inside = not inside
+        j = i
+    return inside
 
 BANDS = ['<800k', '800k-1.3M', '1.3M-2M', '2M+']
 WINS = ['0-30', '30-60', '60-90', '90-180', '180-365']
@@ -121,9 +146,10 @@ def main():
 
     zone_re = load_zone_regex(cfg['html'])
     lng_max = cfg['lng_east_max']
+    ring = load_boundary_ring(cfg['boundary'])
 
     rows, seen, dupes = [], set(), 0
-    excl_zone, excl_lng, bad = [], [], []
+    excl_zone, excl_lng, excl_poly, bad = [], [], [], []
     for path, cohort in cfg['csvs']:
         with open(path, encoding='utf-8-sig', newline='') as f:
             for rec in csv.DictReader(f):
@@ -150,6 +176,9 @@ def main():
                     continue
                 if lng > lng_max:
                     excl_lng.append(addr)
+                    continue
+                if not in_zone_poly(ring, lng, lat):
+                    excl_poly.append(addr)
                     continue
                 lot = intval(rec.get('Lot Size'))
                 dom = intval(rec.get('DOM'))
@@ -229,6 +258,7 @@ def main():
     print(f"bad/incomplete:   {len(bad)} {bad[:5]}")
     print(f"zone-regex excl:  {len(excl_zone)} {excl_zone[:5]}")
     print(f"east-lng excl:    {len(excl_lng)} {excl_lng[:5]}")
+    print(f"polygon excl:     {len(excl_poly)} {excl_poly[:5]}")
     print(f"cohorts:          {coh_n}")
     print(f"products:         {prod_n}  (Unclassified = lot-size null, needs_review)")
     print(f"windows:          { {w: win_n.get(w, 0) for w in WINS} }")

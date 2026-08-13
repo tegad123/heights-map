@@ -281,12 +281,23 @@ def scrape(permits, delay, headless, limit):
                     out[proj] = {
                         "status": roll_up_status(rows),
                         "updated": date.today().isoformat(),
+                        "scraped_at": date.today().isoformat(),
                         "address": addr,
                         "inspections": clean,
                     }
                     print(f"[{i}/{len(todo)}] {proj}  {out[proj]['status']:8} "
                           f"{len(rows)} insp  ({addr})")
                 else:
+                    # grid rendered but held no inspection rows: record the lookup
+                    # so "scraped, none found" is distinguishable from "never scraped".
+                    # Empty inspections list -> map shows the section, promotes nothing.
+                    out[proj] = {
+                        "status": "None",
+                        "updated": date.today().isoformat(),
+                        "scraped_at": date.today().isoformat(),
+                        "address": addr,
+                        "inspections": [],
+                    }
                     print(f"[{i}/{len(todo)}] {proj}  no inspections yet  ({addr})")
             except Exception as e:
                 print(f"[{i}/{len(todo)}] {proj}  ERROR {type(e).__name__}: {e}")
@@ -303,12 +314,20 @@ def main():
     ap.add_argument("--delay", type=float, default=2.0)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--show", action="store_true")
+    ap.add_argument("--projects", default="",
+                    help="comma-separated project numbers: scrape ONLY these "
+                         "(addresses looked up from --permits when present)")
     args = ap.parse_args()
 
     try:
         permits = json.load(open(args.permits))
     except Exception as e:
         sys.exit(f"Could not read {args.permits}: {e}")
+
+    if args.projects:
+        by_proj = {str(r.get("proj")): r for r in permits}
+        wanted = [p.strip() for p in args.projects.split(",") if p.strip()]
+        permits = [by_proj.get(p, {"proj": p, "address": ""}) for p in wanted]
 
     print(f"Scraping {len(permits)} permits from ILMS "
           f"(delay {args.delay}s, headless={not args.show})...\n")
