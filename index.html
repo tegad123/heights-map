@@ -1260,7 +1260,7 @@ function refresh(){
   const q=document.getElementById('q').value.trim().toLowerCase();let n=0;layer.clearLayers();
   const nothing=activeF.size===0;
   const permitOn=activeF.has('L:permit');
-  const baseSels=[...activeF].filter(k=>k!=='L:permit');
+  const baseSels=[...activeF].filter(k=>k!=='L:permit'&&k!=='G:sold'); // G:sold drives the separate sold-comps layer, never DATA pins — but its presence still means "filters active", so sold-only hides everything else
   let hiddenByFilter=0;
   for(const m of markers){const okText=!q||m._s.includes(q);
     const tags=pt(m._rec.id).tags;
@@ -1898,14 +1898,23 @@ function renderSoldPins(){
     soldMk[r.id]=m;soldLayer.addLayer(m);
   }
 }
+function syncSoldSel(){
+  // sidebar selection model is the source of truth: 'G:sold' in activeF <=> sold layer on.
+  // SOLD_FILTER.on is a derived mirror kept for renderSoldPins/legend markup.
+  const on=activeF.has('G:sold');
+  SOLD_FILTER.on=on;
+  if(on&&!map.hasLayer(soldLayer))soldLayer.addTo(map);
+  if(!on&&map.hasLayer(soldLayer))map.removeLayer(soldLayer);
+}
 function renderSoldAll(){
+  syncSoldSel();
   renderSoldPins();
   const st=document.getElementById('soldtab');
   if(st&&st.style.display==='block')buildSoldDash();
   renderLegend();
 }
 function openSoldPin(id){
-  if(!SOLD_FILTER.on){SOLD_FILTER.on=true;soldLayer.addTo(map);renderSoldPins();renderLegend();}
+  if(!activeF.has('G:sold')){activeF.add('G:sold');renderSoldAll();refresh();}
   switchTab('map');
   const m=soldMk[id];if(!m)return;
   const small=window.matchMedia('(max-width:560px)').matches;
@@ -1920,6 +1929,7 @@ function openSoldPin(id){
 }
 function appendSoldLegend(){
   const el=document.getElementById('legend');if(!el)return;
+  syncSoldSel(); // reconcile layer with activeF on every legend render (covers activeF.clear() from "show all")
   const F=SOLD_FILTER;const rows=soldFiltered(false);
   const byWin={};rows.forEach(r=>byWin[r.win]=(byWin[r.win]||0)+1);
   let h='<div class="grp'+(collapsed.has('soldc')?' col':'')+'" data-grp="soldc"><div class="grp-h'+(F.on?' on':'')+'" data-scol="1"><span class="chev2">▼</span><span class="mbox'+(F.on?' on':'')+'" data-stoggle="1"></span><span class="gn">Sold Comps</span><span class="ct2">'+rows.length+'</span></div><div class="grp-body">';
@@ -1927,16 +1937,15 @@ function appendSoldLegend(){
   h+='</div></div>';
   const d=document.createElement('div');d.innerHTML=h;const g=d.firstChild;el.appendChild(g);
   g.querySelector('[data-stoggle]').addEventListener('click',ev=>{ev.stopPropagation();
-    SOLD_FILTER.on=!SOLD_FILTER.on;
-    SOLD_FILTER.on?soldLayer.addTo(map):map.removeLayer(soldLayer);
-    renderSoldAll();});
+    activeF.has('G:sold')?activeF.delete('G:sold'):activeF.add('G:sold');
+    renderSoldAll();refresh();});
   g.querySelector('[data-scol]').addEventListener('click',ev=>{if(ev.target.closest('.mbox'))return;
     collapsed.has('soldc')?collapsed.delete('soldc'):collapsed.add('soldc');renderLegend();});
   g.querySelectorAll('[data-swin]').forEach(lf=>lf.addEventListener('click',()=>{
     const w=lf.getAttribute('data-swin');
     SOLD_FILTER.mo=null;SOLD_FILTER.win=(SOLD_FILTER.win===w?'all':w);
-    if(!SOLD_FILTER.on){SOLD_FILTER.on=true;soldLayer.addTo(map);}
-    renderSoldAll();}));
+    const had=activeF.has('G:sold');activeF.add('G:sold');
+    renderSoldAll();if(!had)refresh();}));
 }
 const _rlSold=renderLegend;renderLegend=function(){_rlSold();appendSoldLegend();};
 renderLegend();
