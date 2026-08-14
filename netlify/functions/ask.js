@@ -55,10 +55,11 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        // 1200, not 2500: generation toward the old 2500 cap ran ~30s and hit
-        // Netlify's ~26s gateway ceiling, returning an HTML 504 the client
-        // can't parse. 1200 finishes ~18-20s worst case on the ~75KB payload.
-        max_tokens: 1200,
+        // Capped well below the old 2500: the gateway kills responses that
+        // take >~26-30s with an HTML 504 the client can't parse, and measured
+        // generation is only ~40 tok/s on the ~75KB map payload — 2500-token
+        // answers ran ~30s+. 800 keeps worst case ~2400 chars / ~24s.
+        max_tokens: 800,
         system: SYSTEM + '\n\n=== MAP DATASET ===\n' + (context || '(no dataset sent)'),
         messages
       })
