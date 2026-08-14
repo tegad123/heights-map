@@ -267,8 +267,17 @@ body.editing .leaflet-interactive{cursor:move}
 .sxc-row .cl{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;color:#8c857a;text-transform:uppercase;width:66px;flex:0 0 auto}
 .sxf{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;padding:5px 10px;border-radius:3px;border:1px solid #444;background:transparent;color:#bbb;cursor:pointer;text-transform:uppercase}
 .sxf.on{background:#cf2230;border-color:#cf2230;color:#fff;font-weight:700}
-.sxf.iv.on{background:#3f6cd1;border-color:#3f6cd1}
 .sxmo{font-family:"IBM Plex Mono",monospace;font-size:10px;background:#0d0c0b;border:1px solid #444;color:#bbb;border-radius:3px;padding:4px 6px;outline:none}
+.sx-vol{border:1px solid #2a2823;border-radius:8px;padding:12px 14px 10px;background:#0d0c0b;margin:0 0 14px}
+.sx-volh{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;color:#8c857a;text-transform:uppercase;margin-bottom:10px}
+.sx-volbars{display:flex;align-items:flex-end;gap:6px}
+.sx-volcol{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;min-width:0}
+.sx-volcol .v{font-family:"IBM Plex Mono",monospace;font-size:9px;color:#f1ede6}
+.sx-volcol .b{width:100%;max-width:34px;background:#8c857a;border-radius:2px 2px 0 0;transition:background .12s}
+.sx-volcol:hover .b{background:#d8d2c7}
+.sx-volcol.on .b{background:#cf2230}
+.sx-volcol.on .m{color:#cf2230}
+.sx-volcol .m{font-family:"IBM Plex Mono",monospace;font-size:8px;letter-spacing:.04em;color:#8c857a;white-space:nowrap}
 .sx-tiles{display:flex;gap:10px;margin:10px 0 16px;flex-wrap:wrap}
 .sx-tile{flex:1;min-width:128px;border:1px solid #2a2823;border-radius:8px;padding:12px 14px;background:#0d0c0b}
 .sx-tile.tap{cursor:pointer}.sx-tile.tap:hover{border-color:#8c857a}
@@ -1809,13 +1818,18 @@ renderSupplyCard();
 // ============================================================
 const SOLD_WINS=['0-30','30-60','60-90','90-180','180-365'];
 const SOLD_WIN_C={'0-30':'#c92a2a','30-60':'#e8590c','60-90':'#f59f00','90-180':'#a5845c','180-365':'#8c857a'};
-const SOLD_BANDS=['<800k','800k-1.3M','1.3M-2M','2M+'];
+const SOLD_BANDS=['500-600K','600-700K','700-800K','800-900K','900K-1M','1M-1.1M','1.1M-1.2M','1.2M-1.3M','1.3M-1.6M','1.6M-1.8M','1.8M-2M','2M-2.2M','2.2M+'];
+const SOLD_BAND_MAX=[600000,700000,800000,900000,1000000,1100000,1200000,1300000,1600000,1800000,2000000,2200000,Infinity];
+// r.band arrives pre-bucketed from sold_ingest.py on the OLD 4-band scheme;
+// re-bucket from close price here so the emit format never has to change.
+function soldBand(cp){for(let i=0;i<SOLD_BAND_MAX.length;i++)if(cp<SOLD_BAND_MAX[i])return SOLD_BANDS[i];return SOLD_BANDS[SOLD_BANDS.length-1];}
+SOLD_DATA.forEach(r=>{r.band=soldBand(r.cp);});
 const SOLD_PROD_C={'Single Lot':'#3f6cd1','Split Lot':'#8e5bd0','Unclassified':'#8c857a'};
-const SOLD_FILTER={on:false,win:'all',mo:null,band:'all',prod:'all',coh:'all',ovr:'all',inview:false,sort:null};
+const SOLD_FILTER={on:false,win:'all',mo:null,band:'all',prod:'all',coh:'all',sort:null};
 const soldById={};SOLD_DATA.forEach(r=>soldById[r.id]=r);
 const soldLayer=L.layerGroup();const soldMk={};
 function soldMedian(a){if(!a.length)return null;const s=a.slice().sort((x,y)=>x-y);const m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2;}
-function soldFiltered(useView){
+function soldFiltered(){
   const F=SOLD_FILTER;
   return SOLD_DATA.filter(r=>{
     if(F.mo){if(r.mo!==F.mo)return false;}
@@ -1823,9 +1837,6 @@ function soldFiltered(useView){
     if(F.band!=='all'&&r.band!==F.band)return false;
     if(F.prod!=='all'&&r.prod!==F.prod)return false;
     if(F.coh!=='all'&&r.coh!==F.coh)return false;
-    if(F.ovr==='over'&&!(r.svl>0))return false;
-    if(F.ovr==='under'&&!(r.svl<=0))return false;
-    if(useView!==false&&F.inview){const b=map.getBounds();if(!b.contains([r.lat,r.lng]))return false;}
     return true;
   });
 }
@@ -1848,7 +1859,7 @@ function soldCardHTML(r,pop){
   h+='<div class="sx-r2">'+bits.join(' · ')+'</div>';
   return h+'</div>';
 }
-function soldChip(sel,val,lbl,on,extra){return '<button class="sxf'+(on?' on':'')+(extra||'')+'" data-sf="'+sel+'" data-v="'+esc(val)+'">'+lbl+'</button>';}
+function soldChip(sel,val,lbl,on){return '<button class="sxf'+(on?' on':'')+'" data-sf="'+sel+'" data-v="'+esc(val)+'">'+lbl+'</button>';}
 function buildSoldDash(){
   const el=document.getElementById('soldBody');if(!el)return;
   const F=SOLD_FILTER;const rows=soldFiltered();
@@ -1869,6 +1880,20 @@ function buildSoldDash(){
   h+='<div class="sx-tile"><div class="n">'+absorb.toFixed(1)+'</div><div class="l">ABSORPTION / MO</div></div>';
   h+='<div class="sx-tile"><div class="n">'+(medDom===null?'—':Math.round(medDom))+'</div><div class="l">MEDIAN DOM</div></div>';
   h+='</div>';
+  // Sales volume by month — band/product/cohort filters apply; recency is
+  // deliberately ignored (the chart IS the timeline). Click a bar = month filter.
+  const MMM=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  const volRows=SOLD_DATA.filter(r=>(F.band==='all'||r.band===F.band)&&(F.prod==='all'||r.prod===F.prod)&&(F.coh==='all'||r.coh===F.coh));
+  const volMos=[...new Set(SOLD_DATA.map(r=>r.mo))].sort();
+  const volN={};volRows.forEach(r=>{volN[r.mo]=(volN[r.mo]||0)+1;});
+  const volMax=Math.max(1,...volMos.map(m=>volN[m]||0));
+  h+='<div class="sx-vol"><div class="sx-volh"><span>SALES VOLUME BY MONTH</span><span>'+volRows.length+' SALES · TRAILING 365D</span></div><div class="sx-volbars">';
+  for(const m of volMos){
+    const n=volN[m]||0,[yy,mm]=m.split('-');
+    const lbl=MMM[+mm-1]+((mm==='01'||m===volMos[0])?'’'+yy.slice(2):'');
+    h+='<div class="sx-volcol'+(F.mo===m?' on':'')+'" data-svmo="'+m+'" title="'+m+': '+n+' sales"><span class="v">'+(n||'&nbsp;')+'</span><span class="b" style="height:'+(n?Math.max(3,Math.round(n/volMax*72)):1)+'px"></span><span class="m">'+lbl+'</span></div>';
+  }
+  h+='</div></div>';
   const mos=[...new Set(SOLD_DATA.map(r=>r.mo))].sort().reverse();
   h+='<div class="sxc-row"><span class="cl">Recency</span>'+soldChip('win','all','ALL',F.win==='all'&&!F.mo);
   for(const w of SOLD_WINS)h+=soldChip('win',w,w,F.win===w&&!F.mo);
@@ -1876,7 +1901,6 @@ function buildSoldDash(){
   h+='<div class="sxc-row"><span class="cl">Band</span>'+soldChip('band','all','ALL',F.band==='all')+SOLD_BANDS.map(b=>soldChip('band',b,b,F.band===b)).join('')+'</div>';
   h+='<div class="sxc-row"><span class="cl">Product</span>'+soldChip('prod','all','ALL',F.prod==='all')+soldChip('prod','Single Lot','SINGLE',F.prod==='Single Lot')+soldChip('prod','Split Lot','SPLIT',F.prod==='Split Lot')+soldChip('prod','Unclassified','UNCLASSIFIED',F.prod==='Unclassified')+'</div>';
   h+='<div class="sxc-row"><span class="cl">Cohort</span>'+soldChip('coh','all','ALL',F.coh==='all')+soldChip('coh','nc','NEW CON',F.coh==='nc')+soldChip('coh','resale','RESALE',F.coh==='resale')+'</div>';
-  h+='<div class="sxc-row"><span class="cl">Vs list</span>'+soldChip('ovr','all','ALL',F.ovr==='all')+soldChip('ovr','over','OVER',F.ovr==='over')+soldChip('ovr','under','UNDER / AT',F.ovr==='under')+soldChip('iv','1','IN VIEW',F.inview,' iv')+'</div>';
   if(!rows.length)h+='<div class="sx-none">No sales match the current filter.</div>';
   else if(F.sort){
     const s=rows.slice().sort((a,b)=>F.sort==='psf'?(b.psf-a.psf):((b.svl||0)-(a.svl||0)));
@@ -1892,9 +1916,13 @@ function buildSoldDash(){
   el.innerHTML=h;
   el.querySelectorAll('[data-sf]').forEach(c=>c.addEventListener('click',()=>{
     const k=c.getAttribute('data-sf'),v=c.getAttribute('data-v');
-    if(k==='iv')F.inview=!F.inview;
-    else if(k==='win'){F.mo=null;F.win=v;}
+    if(k==='win'){F.mo=null;F.win=v;}
     else F[k]=v;
+    renderSoldAll();
+  }));
+  el.querySelectorAll('[data-svmo]').forEach(c=>c.addEventListener('click',()=>{
+    const m=c.getAttribute('data-svmo');
+    F.mo=(F.mo===m?null:m);if(F.mo)F.win='all';
     renderSoldAll();
   }));
   const mo=el.querySelector('#sxmo');
@@ -1905,7 +1933,7 @@ function buildSoldDash(){
 function renderSoldPins(){
   soldLayer.clearLayers();for(const k in soldMk)delete soldMk[k];
   if(!SOLD_FILTER.on)return;
-  for(const r of soldFiltered(false)){ // pins ignore IN VIEW — they ARE the view
+  for(const r of soldFiltered()){
     const m=L.circleMarker([r.lat,r.lng],{radius:5,color:'#fff',weight:1,fillColor:SOLD_WIN_C[r.win]||'#8c857a',fillOpacity:.85});
     m.bindPopup(()=>soldCardHTML(r,true),{maxWidth:304,minWidth:290,autoPan:true});
     m.on('mouseover',function(){this.setStyle({radius:8,weight:1.6})});
@@ -1974,12 +2002,9 @@ function appendSoldLegend(){
 }
 const _rlSold=renderLegend;renderLegend=function(){_rlSold();appendSoldLegend();};
 renderLegend();
-map.on('moveend',()=>{const st=document.getElementById('soldtab');
-  if(SOLD_FILTER.inview&&st&&st.style.display==='block')buildSoldDash();});
 function soldAskContext(){
   const F=SOLD_FILTER;const rows=soldFiltered();
-  let desc='recency='+(F.mo?('month '+F.mo):F.win)+', band='+F.band+', product='+F.prod+', cohort='+F.coh+', vs_list='+F.ovr+', in_view_only='+F.inview;
-  if(F.inview){const b=map.getBounds();desc+=' (viewport lat '+b.getSouth().toFixed(4)+'..'+b.getNorth().toFixed(4)+', lng '+b.getWest().toFixed(4)+'..'+b.getEast().toFixed(4)+')';}
+  const desc='recency='+(F.mo?('month '+F.mo):F.win)+', band='+F.band+', product='+F.prod+', cohort='+F.coh;
   let out='\n\n=== SOLD COMPS (HAR closed sales, trailing 365 days, $500k+, 1500+ sqft, in-zone. cohort nc = new construction (built 2025+), resale = built 2024 or earlier. presold_n counts DOM=0 sales that went under contract before completion — a demand signal. SOLD_COMP_METRICS below is PRECOMPUTED GROUND TRUTH: quote its figures verbatim for any count / median $psf / DOM / absorption / sold-vs-list question it covers, and NEVER recompute an aggregate from row lines when a matching precomputed figure exists. med_psf = CLOSED $/sqft (recomputed close/sqft, not the HAR export column). avg_svl_pct = mean (close-list)/list x100; negative = sold under list. by_window_product keys = recency_window|product. cells keys = recency_window|price_band|product|cohort. Product: Split Lot = lot under 3500 sqft, Single Lot = 3500+, Unclassified = lot size missing.) ===\nSOLD_COMP_METRICS: '+JSON.stringify(SOLD_METRICS);
   out+='\nCURRENT SOLD FILTER (what the user is looking at right now): '+desc+' — matches '+rows.length+' of '+SOLD_DATA.length+' sales.';
   if(rows.length&&rows.length<SOLD_DATA.length&&rows.length<=120){
