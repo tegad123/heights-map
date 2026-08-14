@@ -1,7 +1,13 @@
-// Ask-the-Map — Netlify Function proxy to the Anthropic API.
+// Ask-the-Map — Netlify Function proxy to the Anthropic API (streaming).
 // The API key lives in a Netlify environment variable (ANTHROPIC_API_KEY),
 // never in the browser. The client sends {question, context, history};
 // context is a compact dump of the live map dataset built client-side.
+//
+// Streams the answer as text/plain. Buffered (non-streaming) responses die at
+// ~30s: an idle proxy kills any connection that has sent no bytes for 30s
+// ("Inactivity Timeout" HTML 504), which capped answers at ~800 tokens.
+// Streaming sends bytes continuously from the first token, so long answers
+// survive. Non-200 paths still return JSON {answer} for the client fallback.
 
 const SYSTEM = `You are the analytical engine — an underwriter, not a cheerleader — behind a Houston Heights new-construction supply map used by Spencer Huck, a developer who acquires distressed/infill lots, does lot-splits, and builds spec homes in the Heights / Shady Acres. Your primary job is to help him decide whether specific builds, price segments, or acquisitions are WORTH PURSUING, and to judge whether his current projects are well-positioned.
 
@@ -37,16 +43,16 @@ DATA SEMANTICS YOU MUST RESPECT (these prevent real analytical errors):
 - AGGREGATES.active_breakdown = exact per-product move_in_ready vs still_building. AGGREGATES.uc_breakdown = unlisted UC counts per product per phase. market_by_product / uc_by_product for totals. Use verbatim; the precise split always exists.
 - Plain text only — no markdown formatting.`;
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') return { statusCode: 405, body: JSON.stringify({ answer: 'POST only' }) };
-  if (!process.env.ANTHROPIC_API_KEY) return { statusCode: 500, body: JSON.stringify({ answer: 'Server not configured: ANTHROPIC_API_KEY is missing in Netlify environment variables.' }) };
+export default async (req) => {
+  if (req.method !== 'POST') return Response.json({ answer: 'POST only' }, { status: 405 });
+  if (!process.env.ANTHROPIC_API_KEY) return Response.json({ answer: 'Server not configured: ANTHROPIC_API_KEY is missing in Netlify environment variables.' }, { status: 500 });
   try {
-    const { question, context, history } = JSON.parse(event.body || '{}');
-    if (!question) return { statusCode: 400, body: JSON.stringify({ answer: 'No question provided.' }) };
+    const { question, context, history } = await req.json().catch(() => ({}));
+    if (!question) return Response.json({ answer: 'No question provided.' }, { status: 400 });
     const messages = (Array.isArray(history) ? history.filter(m => m && m.role && m.content) : [])
       .slice(-8)
       .concat([{ role: 'user', content: question }]);
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
+    const upstream = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -55,23 +61,53 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        // Capped well below the old 2500: the gateway kills responses that
-        // take >~26-30s with an HTML 504 the client can't parse, and measured
-        // generation is only ~40 tok/s on the ~75KB map payload — 2500-token
-        // answers ran ~30s+. 800 keeps worst case ~2400 chars / ~24s.
-        max_tokens: 800,
+        max_tokens: 2500,
+        stream: true,
         system: SYSTEM + '\n\n=== MAP DATASET ===\n' + (context || '(no dataset sent)'),
         messages
       })
     });
-    const j = await r.json();
-    if (!r.ok) {
-      const msg = (j && j.error && j.error.message) || ('API error HTTP ' + r.status);
-      return { statusCode: 502, body: JSON.stringify({ answer: 'AI service error: ' + msg }) };
+    if (!upstream.ok) {
+      const j = await upstream.json().catch(() => null);
+      const msg = (j && j.error && j.error.message) || ('API error HTTP ' + upstream.status);
+      return Response.json({ answer: 'AI service error: ' + msg }, { status: 502 });
     }
-    const text = (j.content || []).map(c => c.text || '').join('').trim();
-    return { statusCode: 200, headers: { 'content-type': 'application/json' }, body: JSON.stringify({ answer: text || 'Empty response from model.' }) };
+    // Re-emit the Anthropic SSE stream as plain answer text, token by token.
+    const encoder = new TextEncoder();
+    const decoder = new TextDecoder();
+    const reader = upstream.body.getReader();
+    const stream = new ReadableStream({
+      async start(controller) {
+        let buf = '';
+        try {
+          for (;;) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buf += decoder.decode(value, { stream: true });
+            const lines = buf.split('\n');
+            buf = lines.pop();
+            for (const line of lines) {
+              if (!line.startsWith('data:')) continue;
+              let ev;
+              try { ev = JSON.parse(line.slice(5)); } catch (_) { continue; }
+              if (ev.type === 'content_block_delta' && ev.delta && ev.delta.type === 'text_delta' && ev.delta.text) {
+                controller.enqueue(encoder.encode(ev.delta.text));
+              } else if (ev.type === 'error') {
+                controller.enqueue(encoder.encode('\n[AI service error: ' + ((ev.error && ev.error.message) || 'unknown') + ']'));
+              }
+            }
+          }
+        } catch (e) {
+          controller.enqueue(encoder.encode('\n[Answer interrupted: ' + e.message + ' — ask again to continue.]'));
+        }
+        controller.close();
+      },
+      cancel() { reader.cancel().catch(() => {}); }
+    });
+    return new Response(stream, {
+      headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-cache' }
+    });
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ answer: 'Server error: ' + e.message }) };
+    return Response.json({ answer: 'Server error: ' + e.message }, { status: 500 });
   }
 };
