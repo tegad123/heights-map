@@ -1628,15 +1628,19 @@ async function askSend(){
     const chg=await loadChanges();
     const res=await fetch('/.netlify/functions/ask',{method:'POST',headers:{'content-type':'application/json'},
       body:JSON.stringify({question:q,context:askContext()+changesContext(chg),history:askHist.slice(-8)})});
-    let j=null;
-    if((res.headers.get('content-type')||'').includes('application/json')){try{j=await res.json();}catch(_){j=null;}}
-    if(j&&j.answer){
-      think.textContent=j.answer;
-      if(!res.ok)think.className='askm w';
-      askHist.push({role:'user',content:q},{role:'assistant',content:j.answer});
+    const ct=res.headers.get('content-type')||'';
+    if(res.ok&&ct.includes('text/plain')&&res.body){
+      const rd=res.body.getReader(),dec=new TextDecoder();let full='';
+      think.textContent='';
+      for(;;){const r=await rd.read();if(r.done)break;full+=dec.decode(r.value,{stream:true});think.textContent=full;think.scrollIntoView({block:'end'});}
+      full+=dec.decode();
+      if(full.trim()){askHist.push({role:'user',content:q},{role:'assistant',content:full});}
+      else{think.className='askm w';think.textContent='No answer returned.';}
     }else{
+      let j=null;
+      if(ct.includes('application/json')){try{j=await res.json();}catch(_){j=null;}}
       think.className='askm w';
-      think.textContent='That question needs a lot of digging — try narrowing it (e.g. one street, one time range) and ask again.';
+      think.textContent=(j&&j.answer)?j.answer:'That question needs a lot of digging — try narrowing it (e.g. one street, one time range) and ask again.';
     }
   }catch(e){think.className='askm w';think.textContent='Could not reach the AI service ('+e.message+'). Check that the Netlify function is deployed and ANTHROPIC_API_KEY is set.';}
   btn.disabled=false;
