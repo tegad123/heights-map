@@ -107,6 +107,24 @@ be recreated).
   Boundary itself not yet fixed — future polygon-test ingests on those
   frontages need eyeballing.
 
+## Automated permit pulls (Heights)
+
+- nightly_permit_pull.sh runs nightly at 05:30 via launchd
+  (~/Library/LaunchAgents/com.heightsmap.permitpull.plist) on
+  Tegas-MacBook-Air. Pulls a 14-day trailing window of Structural permits
+  for 77008/77009/77007 into pulls/permits_<zip>_<date>.csv. PULL ONLY —
+  ingest remains manual: review permit_pull.py --ingest dry-run output,
+  then rerun with --apply.
+- pulls/ is gitignored; raw pull CSVs must never be committed (the repo
+  deploys its entire tree via Netlify).
+- pulls/pull_log.txt gets one line per zip per run (date, zip, rows,
+  OK/FAIL). pulls/LAST_GOOD_PULL holds the date of the last run where all
+  three zips succeeded; if it is >3 days old, log lines are prefixed
+  "STALE:" (greppable). Scheduler output lands in pulls/cron.out.
+- "under Maintenance" in pull output is a date-format rejection
+  (dates must be YYYYMMDD), not real maintenance — the wrapper treats it
+  as failure.
+
 ## Working style
 
 - Verify root cause from actual file contents or logs before writing a fix.
