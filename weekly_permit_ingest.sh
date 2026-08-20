@@ -16,9 +16,11 @@ discord() {
     [ -z "${DISCORD_WEBHOOK_URL:-}" ] && { echo "discord (not configured): $1"; return; }
     python3 - "$1" <<'PY'
 import json, os, sys, urllib.request
+# Discord 403s the default Python-urllib User-Agent; any custom UA passes
 req = urllib.request.Request(os.environ['DISCORD_WEBHOOK_URL'],
     data=json.dumps({'content': sys.argv[1][:1900]}).encode(),
-    headers={'Content-Type': 'application/json'})
+    headers={'Content-Type': 'application/json',
+             'User-Agent': 'heights-map-ingest/1.0'})
 try:
     urllib.request.urlopen(req, timeout=20)
 except Exception as e:
