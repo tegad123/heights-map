@@ -125,6 +125,32 @@ be recreated).
   (dates must be YYYYMMDD), not real maintenance — the wrapper treats it
   as failure.
 
+## Weekly auto-ingest (Heights)
+
+- weekly_permit_ingest.sh runs Sundays 07:00 via launchd
+  (com.heightsmap.permitingest), after that morning's pull. It feeds the
+  newest pull CSV per zip (all three must be < 8 days old) into
+  weekly_ingest_driver.py, which wraps permit_pull.ingest() — the filter/
+  geocode/dedupe/zone engine is NOT reimplemented anywhere.
+- Confidence rule: only rows that pass S.F. RES/Building Pmt filter,
+  geocode exactly OK, in-zone, and non-duplicate are auto-applied
+  (ingest's insertable set IS this set). Geocode FAIL/AMBIG/MISMATCH,
+  OOZ, COORD_RANGE, ID_COLLISION rows go to pulls/quarantine_<date>.csv
+  with a REASON column. Dedupe/not-SFRES/old-proj skips are counted,
+  not quarantined.
+- Anomaly cap: > 15 clean rows in one run → NOTHING applies, everything
+  quarantined, loud Discord alert, exit 3. Normal weekly volume is 0–5.
+- On apply it commits ONLY index.html + heights_permits.json (never
+  add -A), pushes (auto-deploy), then curls the live site cache-busted
+  until the new project numbers appear (10 min max) — mismatch alerts.
+- Reporting: Discord webhook from DISCORD_WEBHOOK_URL in the plist env
+  (never hardcoded, never committed); one line per run in
+  pulls/ingest_log.txt; full breakdown in pulls/ingest_summary.json.
+- Clearing quarantine: review pulls/quarantine_<date>.csv, fix root
+  cause (bad geocode, boundary, etc.), then re-ingest manually as
+  always — permit_pull.py --ingest --from-csv <csv> dry-run, review,
+  rerun with --apply. Delete the quarantine CSV rows you've resolved.
+
 ## Working style
 
 - Verify root cause from actual file contents or logs before writing a fix.
