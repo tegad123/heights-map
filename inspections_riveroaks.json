@@ -515,8 +515,8 @@
   },
   "25058597": {
     "status": "Partial",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "2260 Pine Valley Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -546,7 +546,7 @@
       {
         "type": "Nail Pattern",
         "date": "2026-08-20",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -557,7 +557,7 @@
       },
       {
         "type": "WINDSTORM",
-        "date": "2026-08-19",
+        "date": "2026-08-20",
         "result": "Passed",
         "inspector": ""
       },
@@ -830,8 +830,8 @@
   },
   "25080058": {
     "status": "Partial",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "3438 Chevy Chase Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -874,8 +874,8 @@
   },
   "25083752": {
     "status": "Partial",
-    "updated": "2026-08-13",
-    "scraped_at": "2026-08-13",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "3030 Ella Lee Ln, Houston, TX 77019",
     "inspections": [
       {
@@ -948,8 +948,8 @@
   },
   "25088034": {
     "status": "Partial",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "3713 Chevy Chase Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -2719,8 +2719,8 @@
   },
   "26001641": {
     "status": "Partial",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "3729 Del Monte Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -3275,8 +3275,8 @@
   },
   "26016023": {
     "status": "Passed",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "2121 Inwood Dr, Houston, TX 77019",
     "inspections": [
       {
@@ -3450,15 +3450,15 @@
   },
   "25077925": {
     "status": "None",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "1817 Sharp Place, Houston, TX 77019",
     "inspections": []
   },
   "25098554": {
     "status": "None",
-    "updated": "2026-08-20",
-    "scraped_at": "2026-08-20",
+    "updated": "2026-08-24",
+    "scraped_at": "2026-08-24",
     "address": "3482 Inwood Dr, Houston, TX 77019",
     "inspections": []
   }
