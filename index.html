@@ -35,7 +35,7 @@ html,body{margin:0;height:100%}
 body{font-family:var(--disp);background:var(--bg);color:var(--txt);-webkit-text-size-adjust:100%}
 #map{position:absolute;inset:0;background:var(--mapbg)}
 .leaflet-container{font-family:var(--disp)}
-#panel{position:absolute;z-index:1000;top:14px;left:14px;width:min(348px,calc(100vw - 28px));
+#panel{position:absolute;z-index:1000;top:68px;left:14px;width:min(348px,calc(100vw - 28px));
   background:linear-gradient(180deg,var(--ink),var(--ink2));border:1px solid var(--line);border-radius:3px;
   box-shadow:0 18px 50px -12px rgba(30,25,15,.16),0 2px 0 0 var(--red);overflow:hidden;animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
 #panel:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.02;
@@ -123,17 +123,17 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 .dm:hover{background:var(--red2)}
 .leaflet-control-attribution{font-size:9px;background:rgba(255,255,255,.7)}
 @keyframes rise{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
-@media(max-width:520px){h1{font-size:22px}#panel{top:10px;left:10px}.leaflet-popup-content{width:82vw!important;max-width:290px}}
+@media(max-width:520px){h1{font-size:22px}#panel{top:64px;left:10px}.leaflet-popup-content{width:82vw!important;max-width:290px}}
 
 #tabs{position:absolute;z-index:1100;top:13px;left:50%;transform:translateX(-50%);display:flex;background:var(--ink);border:1px solid var(--line);border-radius:3px;overflow:hidden;box-shadow:0 10px 30px -10px rgba(30,25,15,.16)}
 #tabs.hidden{display:none}
 .leaflet-popup{z-index:1200!important}
-#readywrap{position:absolute;top:62px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;align-items:center;gap:8px;background:var(--sur);border:1px solid var(--bd);border-radius:10px;padding:8px 12px;font-family:var(--lab);backdrop-filter:blur(6px)}
+#readywrap{position:absolute;top:70px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;align-items:center;gap:8px;background:var(--sur);border:1px solid var(--bd);border-radius:10px;padding:8px 12px;font-family:var(--lab);backdrop-filter:blur(6px)}
 #readywrap .rw-lbl{color:var(--sub);font-size:10.5px;letter-spacing:.12em}
 #readywrap .rw-btn{background:transparent;border:1px solid var(--bd);color:var(--sub);font-family:inherit;font-size:11px;padding:4px 10px;border-radius:6px;cursor:pointer;letter-spacing:.04em}
 #readywrap .rw-btn:hover{border-color:var(--sub)}
 #readywrap .rw-btn.on{background:var(--acc);border-color:var(--acc);color:#fff}
-#editwrap{position:absolute;top:62px;left:50%;transform:translateX(-50%);z-index:1100}
+#editwrap{position:absolute;top:14px;right:14px;left:auto;transform:none;z-index:1100}
 #editwrap #editbtn{background:var(--sur);border:1px solid var(--bd);color:var(--sub);font-family:var(--lab);font-size:12px;letter-spacing:.1em;padding:8px 18px;border-radius:6px;cursor:pointer;box-shadow:0 10px 30px -10px rgba(30,25,15,.16)}
 #editwrap #editbtn:hover{border-color:var(--sub)}
 #editwrap #editbtn.on{background:var(--acc);border-color:var(--acc);color:#fff}
@@ -231,7 +231,7 @@ body.editing .leaflet-interactive{cursor:move}
 .house .a{font-size:12.5px}.house .m{font-family:var(--lab);font-size:10px;color:var(--muted);margin-top:2px}
 .house .stg{font-family:var(--lab);font-size:9px;color:#fff;padding:3px 7px;border-radius:2px;white-space:nowrap}
 .note-foot{font-family:var(--lab);font-size:10.5px;color:var(--muted);margin-top:16px;line-height:1.5}
-@media(max-width:560px){#panel{top:54px}.overlay{padding:18px 12px 50px}.dash h2{font-size:25px}.barrow .nm{width:108px;font-size:12px}}
+@media(max-width:560px){#panel{top:64px}.overlay{padding:18px 12px 50px}.dash h2{font-size:25px}.barrow .nm{width:108px;font-size:12px}}
 .permit{margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
 .permit .lbl-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .permit .ptag{font-family:var(--lab);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--red);padding:2px 6px;border-radius:2px;white-space:nowrap}
@@ -317,6 +317,46 @@ body.editing .leaflet-interactive{cursor:move}
 .sx-svl{font-family:var(--lab);font-size:10.5px;font-weight:600}
 .sx-pop .a{font-size:14px}
 .sx-none{font-family:var(--lab);font-size:11px;color:var(--sub);margin:14px 0}
+
+/* ===== redesign-v2 cp2: floating pill nav + zone/market switcher ===== */
+#tabs{position:fixed;z-index:1100;left:16px;right:16px;bottom:24px;top:auto;transform:none;
+  display:flex;gap:2px;padding:6px;border-radius:99px;overflow:visible;
+  background:var(--glass);border:1px solid var(--glassBd);
+  backdrop-filter:blur(22px) saturate(1.7);-webkit-backdrop-filter:blur(22px) saturate(1.7);
+  box-shadow:var(--glassHi)}
+#tabs.hidden{display:none}
+.tab{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  font-family:var(--lab);font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+  color:var(--sub);background:none;border:0;border-right:0;padding:9px 0 8px;border-radius:99px;
+  cursor:pointer;transition:background .15s,color .15s}
+.tab span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tab svg{width:17px;height:17px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.tab:hover{color:var(--txt)}
+.tab.on{background:var(--acc);color:var(--accT)}
+@media(max-width:400px){#tabs{left:10px;right:10px;padding:5px}.tab{font-size:8px;letter-spacing:.04em}}
+@media(min-width:1024px){#tabs{left:50%;right:auto;transform:translateX(-50%);width:520px;max-width:520px}}
+
+/* zone + market switcher — opaque menu surface (glass budget: nav + header card only) */
+#zoneswitch{position:absolute;z-index:1105;top:14px;left:14px}
+#zoneBtn{display:flex;align-items:center;gap:7px;padding:10px 14px;border-radius:var(--r);cursor:pointer;
+  font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.02em;color:var(--txt);
+  background:var(--glass);border:1px solid var(--glassBd);
+  backdrop-filter:blur(20px) saturate(1.7);-webkit-backdrop-filter:blur(20px) saturate(1.7);
+  box-shadow:var(--glassHi)}
+#zoneBtn .zchev{font-size:11px;color:var(--sub);transition:transform .2s}
+#zoneswitch.open #zoneBtn .zchev{transform:rotate(180deg)}
+#zoneMenu{display:none;margin-top:8px;min-width:232px;padding:6px;border-radius:var(--r);
+  background:var(--sur);border:1px solid var(--bd);box-shadow:var(--shadow);overflow:hidden}
+#zoneswitch.open #zoneMenu{display:block}
+#zoneMenu .zlbl{font-family:var(--lab);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sub);padding:8px 10px 6px}
+#zoneMenu a{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  font-family:var(--lab);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--txt);text-decoration:none;padding:9px 10px;border-radius:10px}
+#zoneMenu a:hover{background:var(--sur2);color:var(--txt)}
+#zoneMenu a.cur{background:var(--acc);color:var(--accT)}
+#zoneMenu a.cur:after{content:"\2713";font-size:11px}
 </style>
 </head>
 <body>
@@ -330,7 +370,9 @@ body.editing .leaflet-interactive{cursor:move}
   <div class="sc-phases" id="sc-phases"></div>
   <div class="sc-foot" id="sc-foot"></div>
 </div>
-<div id="tabs"><button class="tab on" data-t="map">Map</button><button class="tab" data-t="overview">Overview</button><button class="tab" data-t="timeline">Timeline</button><button class="tab" data-t="sold">Sold</button><button class="tab" data-t="ask">Ask</button></div>
+<div id="zoneswitch"><button id="zoneBtn" aria-haspopup="true" aria-expanded="false"><span>The Heights</span><span class="zchev">▾</span></button><nav id="zoneMenu" role="menu"><div class="zlbl">Markets</div><a href="index.html" class="cur">HEIGHTS</a><a href="montrose.html">MONTROSE</a><a href="westu.html">WEST U</a><a href="riveroaks.html">RIVER OAKS</a><a href="springbranch.html">SPRING BRANCH</a><a href="springvalley.html">SPRING VALLEY</a><a href="timbergrove.html">TIMBERGROVE</a><a href="gardenoaksoakforest.html">GO + OF</a></nav></div>
+<script>(function(){var w=document.getElementById("zoneswitch"),b=document.getElementById("zoneBtn");b.addEventListener("click",function(e){e.stopPropagation();var o=w.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});document.addEventListener("click",function(e){if(!w.contains(e.target)){w.classList.remove("open");b.setAttribute("aria-expanded","false");}});document.addEventListener("keydown",function(e){if(e.key==="Escape"){w.classList.remove("open");b.setAttribute("aria-expanded","false");}});})();</script>
+<div id="tabs"><button class="tab on" data-t="map" aria-label="Map"><svg viewBox="0 0 24 24"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3Zm0 0v15m6-12v15"/></svg><span>Map</span></button><button class="tab" data-t="overview" aria-label="Overview"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg><span>Overview</span></button><button class="tab" data-t="timeline" aria-label="Timeline"><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><span>Timeline</span></button><button class="tab" data-t="sold" aria-label="Sold"><svg viewBox="0 0 24 24"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8ZM7.5 7.5h.01"/></svg><span>Sold</span></button><button class="tab" data-t="ask" aria-label="Ask"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.9 8.9 0 0 1-4-.9L3 21l1.9-4.5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg><span>Ask</span></button></div>
 <div id="overview" class="overlay"><div class="dash" id="ovBody"></div></div>
 <div id="timeline" class="overlay"><div class="dash" id="tlBody"></div></div>
 <div id="soldtab" class="overlay"><div class="dash" id="soldBody"></div></div>
@@ -2041,15 +2083,6 @@ function soldAskContext(){
 }
 </script>
 
-<div id="marketNav" style="position:fixed;bottom:10px;left:12px;right:12px;z-index:500;display:flex;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:11px;overflow-x:auto;padding:2px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
-  <a href="index.html" style="margin-left:auto;text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#c0392b;color:#fff;border:1px solid #333;">HEIGHTS</a>
-  <a href="montrose.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">MONTROSE</a>
-  <a href="westu.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">WEST U</a>
-  <a href="riveroaks.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">RIVER OAKS</a>
-  <a href="springbranch.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING BRANCH</a>
-  <a href="springvalley.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">SPRING VALLEY</a>
-  <a href="timbergrove.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">TIMBERGROVE</a>
-  <a href="gardenoaksoakforest.html" style="text-decoration:none;flex:0 0 auto;padding:5px 10px;border-radius:3px;background:#1a1a1a;color:#bbb;border:1px solid #333;">GO + OF</a>
-</div>
+
 </body>
 </html>
