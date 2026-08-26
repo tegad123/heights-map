@@ -337,31 +337,83 @@ body.editing .leaflet-interactive{cursor:move}
 @media(max-width:400px){#tabs{left:10px;right:10px;padding:5px}.tab{font-size:8px;letter-spacing:.04em}}
 @media(min-width:1024px){#tabs{left:50%;right:auto;transform:translateX(-50%);width:520px;max-width:520px}}
 
-/* zone + market switcher — opaque menu surface (glass budget: nav + header card only) */
-#zoneswitch{position:absolute;z-index:1105;top:14px;left:14px}
-#zoneBtn{display:flex;align-items:center;gap:7px;padding:10px 14px;border-radius:var(--r);cursor:pointer;
-  font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.02em;color:var(--txt);
-  background:var(--glass);border:1px solid var(--glassBd);
+
+/* ===== redesign-v2 cp3: map screen — header card, layers panel, supply card ===== */
+/* GLASS BUDGET: #hdrcard and #tabs only. Layers panel, supply card, detail cards stay opaque. */
+#hdrcard{position:absolute;z-index:1105;top:12px;left:12px;right:12px;display:flex;align-items:center;gap:10px;
+  padding:12px 14px;border-radius:var(--r);background:var(--glass);border:1px solid var(--glassBd);
   backdrop-filter:blur(20px) saturate(1.7);-webkit-backdrop-filter:blur(20px) saturate(1.7);
   box-shadow:var(--glassHi)}
+#hdrcard .hc-main{flex:1;min-width:0}
+#hdrcard .hc-counts{font-family:var(--lab);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--sub);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#hdrcard .hc-counts b{color:var(--txt);font-weight:600}
+#hdr-insp:not(:empty):before{content:" \00b7 "}
+#zoneswitch{position:relative}
+#zoneBtn{display:flex;align-items:center;gap:6px;padding:0;border:0;background:none;cursor:pointer;
+  font-family:var(--disp);font-weight:700;font-size:17px;line-height:1;letter-spacing:-.02em;color:var(--txt)}
 #zoneBtn .zchev{font-size:11px;color:var(--sub);transition:transform .2s}
 #zoneswitch.open #zoneBtn .zchev{transform:rotate(180deg)}
-#zoneMenu{display:none;margin-top:8px;min-width:232px;padding:6px;border-radius:var(--r);
-  background:var(--sur);border:1px solid var(--bd);box-shadow:var(--shadow);overflow:hidden}
+#zoneMenu{display:none;position:absolute;z-index:1200;top:calc(100% + 12px);left:-4px;min-width:236px;padding:6px;
+  border-radius:var(--r);background:var(--sur);border:1px solid var(--bd);box-shadow:var(--shadow)}
 #zoneswitch.open #zoneMenu{display:block}
-#zoneMenu .zlbl{font-family:var(--lab);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--sub);padding:8px 10px 6px}
-#zoneMenu a{display:flex;align-items:center;justify-content:space-between;gap:10px;
-  font-family:var(--lab);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--txt);text-decoration:none;padding:9px 10px;border-radius:10px}
+#zoneMenu .zlbl{font-family:var(--lab);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--sub);padding:8px 10px 6px}
+#zoneMenu a{display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:var(--lab);
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt);text-decoration:none;
+  padding:9px 10px;border-radius:10px}
 #zoneMenu a:hover{background:var(--sur2);color:var(--txt)}
 #zoneMenu a.cur{background:var(--acc);color:var(--accT)}
 #zoneMenu a.cur:after{content:"\2713";font-size:11px}
+#layersBtn{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5px;
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:var(--acc);cursor:pointer}
+#layersBtn span{display:block;height:2px;border-radius:2px;background:var(--accT)}
+#layersBtn span:nth-child(1){width:14px}#layersBtn span:nth-child(2){width:10px;opacity:.6}
+#layersBtn span:nth-child(3){width:6px;opacity:.35}
+#layersBtn.on{background:var(--fdn);border-color:var(--fdn)}
+#editwrap{position:static;flex:0 0 auto;transform:none;top:auto;right:auto}
+#editwrap #editbtn{background:var(--sur);border:1px solid var(--bd);color:var(--txt);font-family:var(--lab);
+  font-size:10px;letter-spacing:.1em;padding:11px 12px;border-radius:99px;cursor:pointer;box-shadow:none}
+#editwrap #editbtn:hover{border-color:var(--sub)}
+#editwrap #editbtn.on{background:var(--fdn);border-color:var(--fdn);color:#fff}
+#panel{display:none;position:absolute;z-index:1102;top:88px;left:12px;right:12px;bottom:92px;width:auto;
+  flex-direction:column;background:var(--sur);border:1px solid var(--bd);border-radius:var(--r);
+  box-shadow:var(--shadow);overflow:hidden;animation:none}
+#panel.open{display:flex}
+#panel:before{display:none}
+#panel .pad{padding:0;display:flex;flex-direction:column;min-height:0;flex:1}
+.lay-h{display:flex;align-items:center;gap:10px;padding:15px 16px;border-bottom:1px solid var(--bd);flex:0 0 auto}
+.lay-h .lt{flex:1;min-width:0}
+.lay-h .lt .t{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.02em;color:var(--txt)}
+.lay-h .lt .s{font-family:var(--lab);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--sub);margin-top:3px}
+#layersDone{font-family:var(--lab);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;
+  border-radius:99px;border:none;background:var(--acc);color:var(--accT);cursor:pointer}
+#more{flex:1;min-height:0;max-height:none;overflow-y:auto;padding:14px 16px 18px}
+#more>.hr:first-child{display:none}
+#panel.collapsed #more{max-height:none;opacity:1}
+.hr{margin:13px -16px}
+@media(min-width:1024px){#hdrcard{right:auto;width:462px;top:14px;left:14px}
+  #panel{top:14px;right:14px;left:auto;bottom:auto;width:380px;max-height:calc(100vh - 132px)}}
+#supplycard{position:absolute;z-index:1000;left:12px;right:12px;bottom:96px;width:auto;
+  background:var(--sur);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--shadow);
+  padding:0;font-family:var(--lab);backdrop-filter:none;-webkit-backdrop-filter:none;
+  cursor:pointer;transition:box-shadow .15s}
+#supplycard:hover{box-shadow:0 14px 36px rgba(30,25,15,.16)}
+#supplycard .sc-h{padding:14px 16px 0;margin:0;color:var(--sub);font-size:10px;letter-spacing:.14em}
+#supplycard .sc-hero{padding:6px 16px 12px;margin:0;gap:13px}
+#supplycard .sc-big{font-family:var(--disp);font-weight:700;font-size:40px;letter-spacing:-.03em;line-height:1;color:var(--fdn)}
+#supplycard .sc-sub{color:var(--sub);font-size:9.5px;letter-spacing:.09em;line-height:1.6}
+#supplycard .sc-bar{height:8px;border-radius:99px;margin:0 16px 12px;background:var(--sur2)}
+#supplycard .sc-phases{padding:0 12px;margin:0 0 12px}
+#supplycard .sc-ph .n{font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:-.02em}
+#supplycard .sc-ph .l{color:var(--sub)}
+#supplycard .sc-foot{margin:0;padding:10px 16px 13px;border-top:1px solid var(--bd);color:var(--sub);font-size:9.5px}
+#supplycard.mini .sc-bar,#supplycard.mini .sc-phases,#supplycard.mini .sc-foot{display:none}
+@media(min-width:1024px){#supplycard{left:14px;right:auto;width:330px;bottom:106px}}
 </style>
 </head>
 <body>
 <div id="map"></div>
-<div id="editwrap"><button id="editbtn" title="Toggle edit mode: reclassify, restage, drag pins">&#9998; EDIT</button></div>
+
 <!-- SUPPLY SNAPSHOT corner card (wired to phaseBreakdown + comingOnline) -->
 <div id="supplycard">
   <div class="sc-h">SUPPLY SNAPSHOT</div>
@@ -370,7 +422,9 @@ body.editing .leaflet-interactive{cursor:move}
   <div class="sc-phases" id="sc-phases"></div>
   <div class="sc-foot" id="sc-foot"></div>
 </div>
-<div id="zoneswitch"><button id="zoneBtn" aria-haspopup="true" aria-expanded="false"><span>The Heights</span><span class="zchev">▾</span></button><nav id="zoneMenu" role="menu"><div class="zlbl">Markets</div><a href="index.html" class="cur">HEIGHTS</a><a href="montrose.html">MONTROSE</a><a href="westu.html">WEST U</a><a href="riveroaks.html">RIVER OAKS</a><a href="springbranch.html">SPRING BRANCH</a><a href="springvalley.html">SPRING VALLEY</a><a href="timbergrove.html">TIMBERGROVE</a><a href="gardenoaksoakforest.html">GO + OF</a></nav></div>
+
+
+<div id="hdrcard"><div class="hc-main"><div id="zoneswitch"><button id="zoneBtn" aria-haspopup="true" aria-expanded="false"><span>The Heights</span><span class="zchev">▾</span></button><nav id="zoneMenu" role="menu"><div class="zlbl">Markets</div><a href="index.html" class="cur">HEIGHTS</a><a href="montrose.html">MONTROSE</a><a href="westu.html">WEST U</a><a href="riveroaks.html">RIVER OAKS</a><a href="springbranch.html">SPRING BRANCH</a><a href="springvalley.html">SPRING VALLEY</a><a href="timbergrove.html">TIMBERGROVE</a><a href="gardenoaksoakforest.html">GO + OF</a></nav></div><div class="hc-counts"><b id="shown">0</b> of <b id="total">0</b> tracked<span id="hdr-insp"></span></div></div><div id="editwrap"><button id="editbtn" title="Toggle edit mode: reclassify, restage, drag pins">&#9998; EDIT</button></div><button id="layersBtn" aria-label="Layers and filters" aria-expanded="false"><span></span><span></span><span></span></button></div>
 <script>(function(){var w=document.getElementById("zoneswitch"),b=document.getElementById("zoneBtn");b.addEventListener("click",function(e){e.stopPropagation();var o=w.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});document.addEventListener("click",function(e){if(!w.contains(e.target)){w.classList.remove("open");b.setAttribute("aria-expanded","false");}});document.addEventListener("keydown",function(e){if(e.key==="Escape"){w.classList.remove("open");b.setAttribute("aria-expanded","false");}});})();</script>
 <div id="tabs"><button class="tab on" data-t="map" aria-label="Map"><svg viewBox="0 0 24 24"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3Zm0 0v15m6-12v15"/></svg><span>Map</span></button><button class="tab" data-t="overview" aria-label="Overview"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg><span>Overview</span></button><button class="tab" data-t="timeline" aria-label="Timeline"><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><span>Timeline</span></button><button class="tab" data-t="sold" aria-label="Sold"><svg viewBox="0 0 24 24"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8ZM7.5 7.5h.01"/></svg><span>Sold</span></button><button class="tab" data-t="ask" aria-label="Ask"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.9 8.9 0 0 1-4-.9L3 21l1.9-4.5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg><span>Ask</span></button></div>
 <div id="overview" class="overlay"><div class="dash" id="ovBody"></div></div>
@@ -385,11 +439,7 @@ body.editing .leaflet-interactive{cursor:move}
 </div></div>
 
 <div id="panel"><div class="pad">
-  <div class="head"><div>
-    <p class="kicker">34dev · Working Map</p>
-    <h1>Heights Entities<span class="thin">LLC Owners · Outside Historic</span></h1>
-  </div><button id="collapse" aria-label="Collapse"><span class="chev">&#9650;</span></button></div>
-  <p class="meta"><b class="r" id="shown">0</b> of <b id="total">0</b> shown</p>
+  <div class="lay-h"><div class="lt"><div class="t">Layers</div><div class="s"><span id="lay-shown">0</span> of <span id="lay-total">0</span> shown</div></div><button id="layersDone">Done</button></div>
   <div id="more">
     <div class="hr"></div>
     <div class="field">
@@ -923,12 +973,12 @@ function loadInspections(){
 }
 function updateInspStatusBadge(n){
   let el=document.getElementById('inspbadge');
-  if(!el){const sub=document.querySelector('#panel .meta'); if(!sub)return;
-    el=document.createElement('div'); el.id='inspbadge';
-    el.style.cssText='font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;margin-top:5px';
-    sub.parentNode.insertBefore(el, sub.nextSibling);}
-  if(INSP_ERR){el.style.color='#e8590c';el.textContent='● inspections feed not loaded ('+INSP_ERR+')';}
-  else{el.style.color='#3a9d8f';el.textContent='● inspections: '+n+' permits live';}
+  if(!el){const host=document.getElementById('hdr-insp'); if(!host)return;
+    el=document.createElement('span'); el.id='inspbadge';
+    el.style.cssText='font-family:var(--lab);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase';
+    host.appendChild(el);}
+  if(INSP_ERR){el.style.color='var(--fdn)';el.textContent='\u25cf inspections feed down';}
+  else{el.style.color='var(--fin)';el.textContent='\u25cf '+n+' permits live';}
 }
 const mById={}, markers=[];
 function mkStyle(id){return{radius:6,color:'#fff',weight:1.2,fillColor:pinColor(id),fillOpacity:.9};}
@@ -1483,7 +1533,20 @@ document.getElementById('impFile').addEventListener('change',e=>{const f=e.targe
 
 // ---- panel collapse + init ----
 const panel=document.getElementById('panel');
-document.getElementById('collapse').addEventListener('click',()=>panel.classList.toggle('collapsed'));
+const _cb=document.getElementById('collapse'); if(_cb)_cb.addEventListener('click',()=>panel.classList.toggle('collapsed'));
+(function(){var pn=document.getElementById('panel'),bt=document.getElementById('layersBtn'),dn=document.getElementById('layersDone');
+ function set(o){pn.classList.toggle('open',o);bt.classList.toggle('on',o);bt.setAttribute('aria-expanded',o?'true':'false');}
+ bt.addEventListener('click',function(){set(!pn.classList.contains('open'));});
+ dn.addEventListener('click',function(){set(false);});
+ set(window.innerWidth>=1024);
+ var sc=document.getElementById('supplycard');
+ sc.addEventListener('click',function(){sc.classList.toggle('mini');});
+ var ls=document.getElementById('lay-shown'),lt=document.getElementById('lay-total'),
+     sh=document.getElementById('shown'),tt=document.getElementById('total');
+ function mirror(){ls.textContent=sh.textContent;lt.textContent=tt.textContent;}
+ new MutationObserver(mirror).observe(sh,{childList:true,characterData:true,subtree:true});
+ new MutationObserver(mirror).observe(tt,{childList:true,characterData:true,subtree:true});
+ mirror();})();
 if(window.innerWidth<=520)panel.classList.add('collapsed');
 renderLegend();refresh();
 
