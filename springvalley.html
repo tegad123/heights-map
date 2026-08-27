@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <title>Spring Valley — Supply Timing Map</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -432,6 +433,11 @@ body.editing .leaflet-interactive{cursor:move}
 </div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- CARTO retired unauthenticated RASTER basemaps (tiles come back stamped "API KEY REQUIRED",
+     for every referrer including production). The VECTOR Voyager style is still keyless and is the
+     same design, so the basemap moves to MapLibre GL inside Leaflet. Markers/popups stay Leaflet. -->
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 <script>
 let DATA = [{"id": "act_1432-bingle", "a": "1432 Bingle Road", "llc": "Active listing", "v": "$2,395,000", "sd": "2026-05-22", "lot": "", "kind": "active", "bb": "4 / 5.1", "prod": "Single Lot", "ty": "active_single", "f": "Single Lot, Spring Valley, 4930 sqft, $486/sqft asking, 51 CDOM, YB 2023", "u": "", "c": [{"n": "Saher Said", "p": [], "e": []}], "lat": 29.7952314, "lng": -95.5003773, "comp": ""}, {"id": "act_8919-echo-valley", "a": "8919 Echo Valley Drive", "llc": "Well Home", "v": "$2,648,130", "sd": "2026-04-16", "lot": "", "kind": "active", "bb": "5 / 5.1", "prod": "Single Lot", "ty": "active_single", "f": "Single Lot, Echo Valley, 5142 sqft, $515/sqft asking, 87 CDOM, NC flagged (HAR), YB 2026", "u": "", "c": [{"n": "Johanna Cordova Esparza", "p": [], "e": []}], "lat": 29.7857956, "lng": -95.5085223, "comp": "2026-09-30"}, {"id": "act_1328-mickey", "a": "1328 Mickey Way", "llc": "Loyd Russel Homes", "v": "$2,850,000", "sd": "2026-05-28", "lot": "", "kind": "active", "bb": "5 / 6.2", "prod": "Single Lot", "ty": "active_single", "f": "Single Lot, Forest Retreat, 5497 sqft, $518/sqft asking, 45 CDOM, NC flagged (HAR), YB 2026", "u": "", "c": [{"n": "Katherine Woodroof", "p": [], "e": []}], "lat": 29.7928371, "lng": -95.5105659, "comp": "2026-05-28"}, {"id": "act_8722-lupton", "a": "8722 Lupton Lane", "llc": "Thakkar Development", "v": "$2,999,900", "sd": "2026-05-05", "lot": "", "kind": "active", "bb": "5 / 5.1", "prod": "Single Lot", "ty": "active_single", "f": "Single Lot, Spring Valley, 5403 sqft, $555/sqft asking, 68 CDOM, YB 2025", "u": "", "c": [{"n": "Rachel Conkling", "p": [], "e": []}], "lat": 29.7929286, "lng": -95.502454, "comp": ""}, {"id": "act_8412-lofland", "a": "8412 Lofland Drive", "llc": "Blazer Residential Inc", "v": "$3,495,000", "sd": "2026-05-21", "lot": "", "kind": "active", "bb": "5 / 5.3", "prod": "Single Lot", "ty": "active_single", "f": "Single Lot, Spring Oaks Sec 02, 6446 sqft, $542/sqft asking, 52 CDOM, NC flagged (HAR), YB 2025", "u": "", "c": [{"n": "John Prell", "p": [], "e": []}], "lat": 29.7945118, "lng": -95.4976105, "comp": "2026-06-01"}, {"id": "sv_9050-elizabeth", "a": "9050 Elizabeth Road", "llc": "Bethel Homes, LLC", "v": "$3,150,000", "sd": "Ruvern Village", "kind": "active", "bb": "5/5.3", "prod": "Single Lot", "ty": "active_single", "f": "5,447 sqft, listed 2026-07-06, est completion 2026-09-30", "c": "", "lat": 29.7908879, "lng": -95.5130862, "comp": "2026-09-30"}]; // Spring Valley: pending HAR actives + permit pull
 // ---- out-of-zone guard: streets Spencer has excluded (Timbergrove/Lazybrook + west Cottage Grove) ----
@@ -688,7 +694,7 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.7915,-95.5015],15);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{maxZoom:20,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
 const HD_POLYS=[[[29.784, -95.5135], [29.79441, -95.5135], [29.79441, -95.5128], [29.79727, -95.51279], [29.79727, -95.51193], [29.7983, -95.51193], [29.7983, -95.51013], [29.79885, -95.51013], [29.79704, -95.50608], [29.79597, -95.50559], [29.79667, -95.50179], [29.79572, -95.49759], [29.79484, -95.49724], [29.79378, -95.49539], [29.79474, -95.49539], [29.79474, -95.4905], [29.784, -95.4905], [29.784, -95.5135]]]; // no historic-district overlay for Spring Valley
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});
