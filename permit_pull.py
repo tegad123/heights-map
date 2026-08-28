@@ -195,14 +195,29 @@ def pull(zip5, ptype, headless, date_from='', date_to=''):
 # Dry-run by default; --apply writes. Refuses on any validation failure.
 # ---------------------------------------------------------------------------
 
+# Market-scoped globals. Defaults = Heights; a multi-market wrapper
+# (weekly_ingest_driver.py / market_config.py) overrides these per market and
+# re-runs _load_boundary_ring(). LNG_EAST_MAX=None disables the east check.
 LNG_EAST_MAX = -95.370   # east of I-45 North Fwy corridor = out of zone (CLAUDE.md, 723ccad)
 BOUNDARY_GEOJSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'heights_boundary.geojson')
+COORD_BOX = (29.70, 29.90, -95.50, -95.30)   # (lat_min, lat_max, lng_min, lng_max) sanity net
+PERMITS_JSON_NAME = 'heights_permits.json'   # inspection-cron scrape list, per market
 
 
 def _load_boundary_ring():
+    """Load boundary as a list of rings (Polygon or MultiPolygon features)."""
     try:
         g = json.load(open(BOUNDARY_GEOJSON))
-        return g['features'][0]['geometry']['coordinates'][0]
+        rings = []
+        for f in g['features']:
+            geom = f['geometry']
+            if geom['type'] == 'Polygon':
+                rings.append(geom['coordinates'][0])
+            elif geom['type'] == 'MultiPolygon':
+                rings.extend(poly[0] for poly in geom['coordinates'])
+        if not rings:
+            raise ValueError('no Polygon/MultiPolygon features')
+        return rings
     except Exception as e:
         print(f'WARN: boundary polygon unavailable ({e}) — polygon zone check disabled')
         return None
@@ -212,18 +227,21 @@ _BOUNDARY_RING = _load_boundary_ring()
 
 
 def in_zone_poly(lng, lat):
-    """Ray-cast point-in-polygon against the market boundary ring (heights_boundary.geojson)."""
+    """Ray-cast point-in-polygon; in zone if inside ANY boundary ring."""
     if _BOUNDARY_RING is None:
         return True
-    inside = False
-    j = len(_BOUNDARY_RING) - 1
-    for i in range(len(_BOUNDARY_RING)):
-        xi, yi = _BOUNDARY_RING[i]
-        xj, yj = _BOUNDARY_RING[j]
-        if (yi > lat) != (yj > lat) and lng < (xj - xi) * (lat - yi) / (yj - yi) + xi:
-            inside = not inside
-        j = i
-    return inside
+    for ring in _BOUNDARY_RING:
+        inside = False
+        j = len(ring) - 1
+        for i in range(len(ring)):
+            xi, yi = ring[i]
+            xj, yj = ring[j]
+            if (yi > lat) != (yj > lat) and lng < (xj - xi) * (lat - yi) / (yj - yi) + xi:
+                inside = not inside
+            j = i
+        if inside:
+            return True
+    return False
 HCAD_URL = 'https://arcweb.hcad.org/server/rest/services/public/public_query/MapServer/0'
 # arcweb.hcad.org serves an incomplete SSL chain; public read-only data
 _HCAD_CTX = ssl._create_unverified_context()
@@ -264,7 +282,7 @@ def out_of_zone_re(html):
 def norm_addr(a):
     a = a.upper()
     a = re.sub(r',?\s*HOUSTON.*$', '', a)
-    a = re.sub(r'\s+7700\d\s*$', '', a)
+    a = re.sub(r'\s+77\d{3}\s*$', '', a)
     a = re.sub(r'[.,]', '', a)
     a = re.sub(r'\bSTREET\b', 'ST', a)
     a = re.sub(r'\b(AVENUE|AVE\.?)\b', 'AVE', a)
@@ -400,7 +418,7 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
             flagged.append((c['proj'], c['street'], g['status'], g.get('matched')))
             print(f"  GEOCODE-{g['status']}: {c['proj']} {c['street']} {g.get('matched') or ''}")
             continue
-        if g['lng'] > LNG_EAST_MAX:
+        if LNG_EAST_MAX is not None and g['lng'] > LNG_EAST_MAX:
             skipped['ooz_addr'] += 1
             print(f"  OOZ-EAST (lng {g['lng']}): {c['proj']} {c['street']}")
             continue
@@ -408,7 +426,7 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
             skipped['ooz_poly'] = skipped.get('ooz_poly', 0) + 1
             print(f"  OOZ-POLY ({g['lat']},{g['lng']}): {c['proj']} {c['street']}")
             continue
-        if not (29.70 < g['lat'] < 29.90 and -95.50 < g['lng'] < -95.30):
+        if not (COORD_BOX[0] < g['lat'] < COORD_BOX[1] and COORD_BOX[2] < g['lng'] < COORD_BOX[3]):
             flagged.append((c['proj'], c['street'], 'COORD_RANGE', (g['lat'], g['lng'])))
             continue
         rid = 'pmt_' + re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-',
@@ -453,7 +471,7 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
     # newly ingested permits never reach scrape_inspections.py (root cause of
     # the 2026-08-12 backfill: 25 of 29 inspection-less projects were absent
     # from heights_permits.json because only DATA was updated on ingest).
-    plist_path = os.path.join(os.path.dirname(os.path.abspath(html_path)), 'heights_permits.json')
+    plist_path = os.path.join(os.path.dirname(os.path.abspath(html_path)), PERMITS_JSON_NAME)
     try:
         plist = json.load(open(plist_path))
     except Exception:
