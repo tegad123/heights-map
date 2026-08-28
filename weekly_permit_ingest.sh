@@ -136,5 +136,10 @@ if [ -n "$CHECKS" ]; then
     fi
 fi
 
+# --- sold-data staleness reminder (sold_staleness.py, threshold 21d) ---
+SOLD_WARN=$(python3 sold_staleness.py 2>/dev/null || true)
+[ -n "$SOLD_WARN" ] && REPORT_ALL="$REPORT_ALL
+$SOLD_WARN"
+
 discord "Weekly ingest $TODAY:$REPORT_ALL"
 exit "$ANYFAIL"
