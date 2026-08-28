@@ -45,9 +45,15 @@ fi
 for Z in $ZIPS; do
     OUT="pulls/permits_${Z}_${STAMP}.csv"
     CAP=$(mktemp)
-    python3 permit_pull.py --zip "$Z" --ptype "$PTYPE" \
-        --from "$FROM" --to "$TO" --out "$OUT" >"$CAP" 2>&1
-    RC=$?
+    # one retry per zip: 12 sequential Playwright sessions -> occasional
+    # transient portal timeouts (first seen 2026-08-27, 77043/77080)
+    for ATTEMPT in 1 2; do
+        python3 permit_pull.py --zip "$Z" --ptype "$PTYPE" \
+            --from "$FROM" --to "$TO" --out "$OUT" >"$CAP" 2>&1
+        RC=$?
+        [ "$RC" -eq 0 ] && break
+        [ "$ATTEMPT" -eq 1 ] && sleep 30
+    done
 
     ROWS=0
     if [ -f "$OUT" ]; then
