@@ -1,11 +1,11 @@
 #!/bin/bash
-# nightly_permit_pull.sh — scheduled COH permit PULLS for the Heights map.
-# Pull only: never runs ingest, never touches index.html, never commits CSVs.
-# Ingest remains manual: review permit_pull.py --ingest dry-run, then --apply.
+# nightly_permit_pull.sh — scheduled COH permit PULLS, all live markets.
+# Pull only: never runs ingest, never touches market HTML, never commits CSVs.
+# Zip list comes from market_config.ALL_ZIPS (single source of truth).
+# Ingest is weekly_permit_ingest.sh (Sun 07:00) or manual dry-run + --apply.
 set -u
 
 REPO=/Users/tegaumukoro/heights-map
-ZIPS="77008 77009 77007"
 PTYPE=Structural
 
 LOG="$REPO/pulls/pull_log.txt"
@@ -15,6 +15,7 @@ FAIL=0
 source "$HOME/insp-venv/bin/activate" || exit 1
 cd "$REPO" || exit 1
 mkdir -p pulls
+ZIPS=$(python3 -c "from market_config import ALL_ZIPS; print(' '.join(ALL_ZIPS))") || exit 1
 
 if ! git pull --ff-only >/dev/null 2>&1; then
     echo "$(date +%Y-%m-%d), -, -, FAIL(git pull --ff-only)" >> "$LOG"

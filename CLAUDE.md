@@ -107,14 +107,37 @@ be recreated).
   Boundary itself not yet fixed — future polygon-test ingests on those
   frontages need eyeballing.
 
-## Automated permit pulls (Heights)
+## Multi-market automation (since 2026-08-27)
+
+- market_config.py is the single source of truth: per-market html,
+  permits_json, zips, boundary geojson, coord box. All 7 live markets
+  enabled except Spring Valley (intentionally absent until its permits
+  JSON is created via a validated run). permit_pull.py's module defaults
+  ARE the heights entry; weekly_ingest_driver.py --market <name> overrides
+  them per market (never edit the engine to add a market — edit the config).
+- Zip overlaps are real: 77019 = montrose + riveroaks, 77008 = heights +
+  timbergrove. Boundary polygons disambiguate; the driver skips (not
+  quarantines) OOZ-POLY rows that fall inside another enabled market's ring
+  ("other_market" skip). westu has NO polygon by design (market = all of
+  COH-side 77005; West U city-proper permits are not in the COH portal).
+- The Heights OUT_OF_ZONE street regex was leaked verbatim into
+  riveroaks/springbranch/timbergrove html (fixed 2026-08-27; timbergrove
+  had been hiding 12 of its own records). springvalley.html still carries
+  the leaked regex — fix it when that market joins.
+- catchup_check.sh runs hourly via launchd (com.heightsmap.catchup,
+  RunAtLoad) and re-fires a missed nightly pull (no pull_log line for
+  today after 05:35) or missed Sunday ingest (no ingest_log line >= that
+  Sunday; Monday-before-noon window included). Idempotent via dated log
+  lines — never runs anything twice.
+
+## Automated permit pulls (nightly, all markets)
 
 - nightly_permit_pull.sh runs nightly at 05:30 via launchd
   (~/Library/LaunchAgents/com.heightsmap.permitpull.plist) on
   Tegas-MacBook-Air. Pulls a 14-day trailing window of Structural permits
-  for 77008/77009/77007 into pulls/permits_<zip>_<date>.csv. PULL ONLY —
-  ingest remains manual: review permit_pull.py --ingest dry-run output,
-  then rerun with --apply.
+  for every zip in market_config.ALL_ZIPS (12 zips as of 2026-08-27) into
+  pulls/permits_<zip>_<date>.csv. PULL ONLY — ingest is the weekly job or
+  manual: review permit_pull.py --ingest dry-run output, then --apply.
 - pulls/ is gitignored; raw pull CSVs must never be committed (the repo
   deploys its entire tree via Netlify).
 - pulls/pull_log.txt gets one line per zip per run (date, zip, rows,
@@ -125,27 +148,36 @@ be recreated).
   (dates must be YYYYMMDD), not real maintenance — the wrapper treats it
   as failure.
 
-## Weekly auto-ingest (Heights)
+## Weekly auto-ingest (all markets)
 
 - weekly_permit_ingest.sh runs Sundays 07:00 via launchd
-  (com.heightsmap.permitingest), after that morning's pull. It feeds the
-  newest pull CSV per zip (all three must be < 8 days old) into
-  weekly_ingest_driver.py, which wraps permit_pull.ingest() — the filter/
-  geocode/dedupe/zone engine is NOT reimplemented anywhere.
+  (com.heightsmap.permitingest), after that morning's pull. It loops
+  market_config.INGEST_ORDER; per market it feeds the newest pull CSV per
+  zip (each < 8 days old) into weekly_ingest_driver.py --market <name>,
+  which wraps permit_pull.ingest() — the filter/geocode/dedupe/zone engine
+  is NOT reimplemented anywhere. A market with missing/stale CSVs is
+  skipped + alerted; the others still run.
 - Confidence rule: only rows that pass S.F. RES/Building Pmt filter,
   geocode exactly OK, in-zone, and non-duplicate are auto-applied
   (ingest's insertable set IS this set). Geocode FAIL/AMBIG/MISMATCH,
   OOZ, COORD_RANGE, ID_COLLISION rows go to pulls/quarantine_<date>.csv
-  with a REASON column. Dedupe/not-SFRES/old-proj skips are counted,
-  not quarantined.
-- Anomaly cap: > 15 clean rows in one run → NOTHING applies, everything
-  quarantined, loud Discord alert, exit 3. Normal weekly volume is 0–5.
-- On apply it commits ONLY index.html + heights_permits.json (never
-  add -A), pushes (auto-deploy), then curls the live site cache-busted
-  until the new project numbers appear (10 min max) — mismatch alerts.
+  with MARKET + REASON columns. Dedupe/not-SFRES/old-proj/other_market
+  skips are counted, not quarantined. Geocode-FAIL rows in a shared zip
+  can't be zone-tested, so they may quarantine under both markets — same
+  root cause, resolve once.
+- Anomaly cap: > 15 clean rows for one market → that market applies
+  NOTHING, everything quarantined, loud Discord alert, exit 3 for the run.
+  Normal weekly volume is 0–5 per market. Manual backfills use the
+  driver's --no-cap (review the dry-run by eye first).
+- On apply it commits ONLY that market's <html> + <permits_json> (never
+  add -A), one commit per market, pushes (auto-deploy), then curls each
+  changed live page cache-busted until the new project numbers appear
+  (10 min max) — mismatch alerts.
 - Reporting: Discord webhook from DISCORD_WEBHOOK_URL in the plist env
-  (never hardcoded, never committed); one line per run in
-  pulls/ingest_log.txt; full breakdown in pulls/ingest_summary.json.
+  (never hardcoded, never committed — it lives in the permitingest AND
+  catchup plists); one line per market per run in pulls/ingest_log.txt;
+  per-market breakdown in pulls/ingest_summary.json (last market wins the
+  file; the log + Discord carry the full picture).
 - Clearing quarantine: review pulls/quarantine_<date>.csv, fix root
   cause (bad geocode, boundary, etc.), then re-ingest manually as
   always — permit_pull.py --ingest --from-csv <csv> dry-run, review,
