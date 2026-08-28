@@ -1,487 +1,523 @@
 [
-  {
-    "proj": "25041934",
-    "address": "1312 CASTLE CT A 77006",
-    "owner": "1312 CASTLE CT LLC"
-  },
-  {
-    "proj": "25041935",
-    "address": "1312 CASTLE CT B 77006",
-    "owner": "1312 CASTLE CT LLC"
-  },
-  {
-    "proj": "25024203",
-    "address": "1644 BONNIE BRAE ST 77006",
-    "owner": "GEDALA, LLC."
-  },
-  {
-    "proj": "25024204",
-    "address": "1642 BONNIE BRAE ST 77006",
-    "owner": "GEDALA, LLC."
-  },
-  {
-    "proj": "25031363",
-    "address": "10 COURTLANDT PLACE 77006",
-    "owner": "10 COURTLANDT LLC"
-  },
-  {
-    "proj": "25099983",
-    "address": "3412 AUDUBON PLACE 77006",
-    "owner": "FREED BRIAN"
-  },
-  {
-    "proj": "25119218",
-    "address": "1125 JACKSON BLVD 77006",
-    "owner": "BAJAJ TUSHAR"
-  },
-  {
-    "proj": "26013758",
-    "address": "1323 SOUTH BLVD 77006",
-    "owner": "STALLCUP JOHN & JULIA"
-  },
-  {
-    "proj": "26000466",
-    "address": "1829 MARYLAND ST 77006",
-    "owner": "MEARS KIRBY"
-  },
-  {
-    "proj": "25089108",
-    "address": "4526 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25089109",
-    "address": "4528 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25054883",
-    "address": "1511 KIPLING ST 77006",
-    "owner": "1511 KIPLING LLC"
-  },
-  {
-    "proj": "25089084",
-    "address": "4534 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25089097",
-    "address": "4524 YOAKUM BLVD 77006",
-    "owner": "SAGE LAND LP"
-  },
-  {
-    "proj": "26003095",
-    "address": "1830 FAIRVIEW ST S 77006",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "26003096",
-    "address": "1828 FAIRVIEW ST 77006",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "25121137",
-    "address": "720 PEDEN ST 77006",
-    "owner": " * *"
-  },
-  {
-    "proj": "25089091",
-    "address": "4512 YOAKUM BLVD 77006",
-    "owner": "SAGE LAND LP"
-  },
-  {
-    "proj": "25089092",
-    "address": "4514 YOAKUM BLVD 77006",
-    "owner": "SAGE LAND LP"
-  },
-  {
-    "proj": "25089117",
-    "address": "4516 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25089118",
-    "address": "4518 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25121136",
-    "address": "718 PEDEN ST 77006",
-    "owner": "ORACLE 718 PEDEN LLC"
-  },
-  {
-    "proj": "25075652",
-    "address": "1202 W DREW ST 77006",
-    "owner": "PREBISCH ENTREPRENEURS 7, LLC"
-  },
-  {
-    "proj": "26011549",
-    "address": "1304 WELCH ST 77006",
-    "owner": "ZM VENTURES"
-  },
-  {
-    "proj": "25075531",
-    "address": "419 LOVETT BLVD 77006",
-    "owner": "MCKAY SCOTT"
-  },
-  {
-    "proj": "25065678",
-    "address": "1415 HAROLD ST 77006",
-    "owner": "BPHB ASSETCO"
-  },
-  {
-    "proj": "25082179",
-    "address": "1634 CASTLE CT 77006",
-    "owner": "1634 CASTLE CT LL"
-  },
-  {
-    "proj": "25082180",
-    "address": "1636 CASTLE CT 77006",
-    "owner": "1634 CASTLE CT LL"
-  },
-  {
-    "proj": "26013572",
-    "address": "1417 VASSAR ST 77006",
-    "owner": "COPENHAVER MICHAEL"
-  },
-  {
-    "proj": "25099835",
-    "address": "1312 VASSAR ST 77006",
-    "owner": "PREBISCH ENTREPRENEURS 7, LLC"
-  },
-  {
-    "proj": "25112747",
-    "address": "1223 W DREW ST 77006",
-    "owner": "BPHB ASSETCO"
-  },
-  {
-    "proj": "25080759",
-    "address": "1501 BONNIE BRAE ST 77006",
-    "owner": "HOMEBOUND"
-  },
-  {
-    "proj": "25089111",
-    "address": "4520 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25089112",
-    "address": "4522 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25098277",
-    "address": "1408 INDIANA ST A 77006",
-    "owner": "DANESHVAR BAHRAM"
-  },
-  {
-    "proj": "25048142",
-    "address": "1604 SUL ROSS ST 77006",
-    "owner": "CARLIS ADAM & JULIA DORAN"
-  },
-  {
-    "proj": "25086165",
-    "address": "1601 VERMONT ST 77006",
-    "owner": "MAZZARINO"
-  },
-  {
-    "proj": "25086166",
-    "address": "1603 VERMONT ST 77006",
-    "owner": "1601 VERMONT LLC"
-  },
-  {
-    "proj": "25075844",
-    "address": "4317 ROSELAND ST A 77006",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "25089147",
-    "address": "4530 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25089148",
-    "address": "4532 YOAKUM BLVD 77006",
-    "owner": "SAGA LAND LP"
-  },
-  {
-    "proj": "25075843",
-    "address": "4317 ROSELAND ST B 77006",
-    "owner": "ROSELAND PATIO HOMES"
-  },
-  {
-    "proj": "25120079",
-    "address": "1246 PEDEN ST A 77006",
-    "owner": "SIGNITURE COLLECTION INC."
-  },
-  {
-    "proj": "25120080",
-    "address": "1246 PEDEN ST B 77006",
-    "owner": "SIGNITURE COLLECTION INC."
-  },
-  {
-    "proj": "25110062",
-    "address": "1414 KIPLING ST 77006",
-    "owner": "GRANDPRE TADZIA JEAN"
-  },
-  {
-    "proj": "26034562",
-    "address": "4404 YUPON ST 77006",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "26043480",
-    "address": "1218 BOMAR ST 77006",
-    "owner": "SIGNATURE COLLECTION INC"
-  },
-  {
-    "proj": "26043584",
-    "address": "608 PEDEN ST 77006",
-    "owner": "URBAN STRIDE"
-  },
-  {
-    "proj": "26017362",
-    "address": "1615 VASSAR ST 77006",
-    "owner": "DUPRES MARIE-FRANCE"
-  },
-  {
-    "proj": "26034563",
-    "address": "4400 YUPON ST 77006",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "26005250",
-    "address": "1916 HAWTHORNE ST 77098",
-    "owner": "BPHB ASSETCO"
-  },
-  {
-    "proj": "26015553",
-    "address": "1831 BRANARD ST 77098",
-    "owner": "EMPYREAL CONSTRUCTION LLC"
-  },
-  {
-    "proj": "26015554",
-    "address": "1829 BRANARD ST 77098",
-    "owner": "EMPYREAL CONSTRUCTION LLC"
-  },
-  {
-    "proj": "26015338",
-    "address": "1811 SUL ROSS ST 77098",
-    "owner": "ORACLE SUL ROSS LLC"
-  },
-  {
-    "proj": "26015052",
-    "address": "1744 HAROLD ST 77098",
-    "owner": "SIGNATURE COLLECTION INC"
-  },
-  {
-    "proj": "25087507",
-    "address": "1959 RICHMOND AVE 77098",
-    "owner": "RON DANIEL"
-  },
-  {
-    "proj": "25116922",
-    "address": "1819 BRANARD ST 77098",
-    "owner": "1819 BRANARD LLC"
-  },
-  {
-    "proj": "25116923",
-    "address": "1817 BRANARD ST 77098",
-    "owner": "1819 BRANARD LLC"
-  },
-  {
-    "proj": "25098743",
-    "address": "4207 DRISCOLL ST 77098",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "25104275",
-    "address": "3911 DRISCOLL ST 77098",
-    "owner": "3911 DRISCOLL LLC"
-  },
-  {
-    "proj": "25104276",
-    "address": "3909 DRISCOLL ST 77098",
-    "owner": "3911 DRISCOLL LLC"
-  },
-  {
-    "proj": "25098739",
-    "address": "4203 DRISCOLL ST 77098",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "25116555",
-    "address": "1818 BRANARD ST 77098",
-    "owner": "1818 BRANARD LLC"
-  },
-  {
-    "proj": "25116311",
-    "address": "1822 BRANARD ST A 77098",
-    "owner": "1822 BRANARD LLC"
-  },
-  {
-    "proj": "25116312",
-    "address": "1822 BRANARD ST B 77098",
-    "owner": "1822 BRANARD LLC"
-  },
-  {
-    "proj": "25116556",
-    "address": "1820 BRANARD ST 77098",
-    "owner": "1818 BRANARD LLC"
-  },
-  {
-    "proj": "25112651",
-    "address": "1802 PORTSMOUTH ST D 77098",
-    "owner": "MESKAY BUILDERS LLC"
-  },
-  {
-    "proj": "25112652",
-    "address": "1802 PORTSMOUTH ST C 77098",
-    "owner": "MESKAY BUILDERS LLC"
-  },
-  {
-    "proj": "25112653",
-    "address": "1802 PORTSMOUTH ST B 77098",
-    "owner": "MESKAY BUILDERS LLC"
-  },
-  {
-    "proj": "25112654",
-    "address": "1802 PORTSMOUTH ST A 77098",
-    "owner": "MESKAY BUILDERS LLC"
-  },
-  {
-    "proj": "26043369",
-    "address": "1744 NORFOLK ST 77098",
-    "owner": "EVANS JAMES M"
-  },
-  {
-    "proj": "26042400",
-    "address": "1720 KIPLING ST 77098",
-    "owner": "GOTHAM DEVELOPMENTS"
-  },
-  {
-    "proj": "23068821",
-    "address": "1016 RUTHVEN ST B 77019",
-    "owner": "DASSNAR HATHAWAY REAL ESTATE LLC"
-  },
-  {
-    "proj": "25028032",
-    "address": "1301 SAULNIER ST 77019",
-    "owner": "CISNEROS FELIX"
-  },
-  {
-    "proj": "26002697",
-    "address": "2027 FAIRVIEW ST 77019",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "25054886",
-    "address": "1306 CROCKER ST 77019",
-    "owner": "1306 CROCKER LLC"
-  },
-  {
-    "proj": "25094784",
-    "address": "1107 WILSON ST 77019",
-    "owner": "MASH DEVELOPMENT LLC"
-  },
-  {
-    "proj": "26003094",
-    "address": "2025 FAIRVIEW ST 77019",
-    "owner": "SANDCASTLE HOMES"
-  },
-  {
-    "proj": "25094785",
-    "address": "1105 WILSON ST 77019",
-    "owner": "MASH DEVELOPMENT LLC"
-  },
-  {
-    "proj": "25094786",
-    "address": "1103 WILSON ST 77019",
-    "owner": "MASH DEVELOPMENT LLC"
-  },
-  {
-    "proj": "25078300",
-    "address": "1606 WOODHEAD ST 77019",
-    "owner": "CROIX MICHAEL"
-  },
-  {
-    "proj": "25106917",
-    "address": "1918 HULDY ST 77019",
-    "owner": "ROQUE, LLC"
-  },
-  {
-    "proj": "25090429",
-    "address": "1906 DRISCOLL ST 77019",
-    "owner": "INVESTAVERSE CORP"
-  },
-  {
-    "proj": "26001679",
-    "address": "2424 ELMEN ST 77019",
-    "owner": "NAQUI NASREEN"
-  },
-  {
-    "proj": "25114777",
-    "address": "2413 BRUN ST A 77019",
-    "owner": "2413 BRUN LLC"
-  },
-  {
-    "proj": "25114778",
-    "address": "2413 BRUN ST B 77019",
-    "owner": "2413 BRUN LLC"
-  },
-  {
-    "proj": "25092208",
-    "address": "2412 ELMEN ST 77019",
-    "owner": "2412 ELMEN LLC"
-  },
-  {
-    "proj": "25092209",
-    "address": "2414 ELMEN ST 77019",
-    "owner": "2412 ELMEN LLC"
-  },
-  {
-    "proj": "25108616",
-    "address": "2202 HULDY ST 77019",
-    "owner": "L&H4 LLC"
-  },
-  {
-    "proj": "25108617",
-    "address": "2204 HULDY ST 77019",
-    "owner": "L&H4 LLC"
-  },
-  {
-    "proj": "26015633",
-    "address": "1906 WOODHEAD ST 77019",
-    "owner": "MAZZARINO"
-  },
-  {
-    "proj": "26018492",
-    "address": "314 W GRAY ST 77019",
-    "owner": "TAFT MODHAUS LLC"
-  },
-  {
-    "proj": "26018493",
-    "address": "1514 TAFT ST 77019",
-    "owner": "TAFT MODHAUS LLC"
-  },
-  {
-    "proj": "26025531",
-    "address": "2415 ELMEN ST 77019",
-    "owner": "CROIX CUSTOM HOMES, INC"
-  },
-  {
-    "proj": "26028918",
-    "address": "2028 MORSE ST 77019",
-    "owner": "2026 MORSE LLC"
-  },
-  {
-    "proj": "26030766",
-    "address": "1510 STANFORD ST 77019",
-    "owner": "DEMUREN SINMISOLA"
-  },
-  {
-    "proj": "26028917",
-    "address": "2026 MORSE ST 77019",
-    "owner": "2026 MORSE LLC"
-  }
+ {
+  "proj": "25041934",
+  "address": "1312 CASTLE CT A 77006",
+  "owner": "1312 CASTLE CT LLC"
+ },
+ {
+  "proj": "25041935",
+  "address": "1312 CASTLE CT B 77006",
+  "owner": "1312 CASTLE CT LLC"
+ },
+ {
+  "proj": "25024203",
+  "address": "1644 BONNIE BRAE ST 77006",
+  "owner": "GEDALA, LLC."
+ },
+ {
+  "proj": "25024204",
+  "address": "1642 BONNIE BRAE ST 77006",
+  "owner": "GEDALA, LLC."
+ },
+ {
+  "proj": "25031363",
+  "address": "10 COURTLANDT PLACE 77006",
+  "owner": "10 COURTLANDT LLC"
+ },
+ {
+  "proj": "25099983",
+  "address": "3412 AUDUBON PLACE 77006",
+  "owner": "FREED BRIAN"
+ },
+ {
+  "proj": "25119218",
+  "address": "1125 JACKSON BLVD 77006",
+  "owner": "BAJAJ TUSHAR"
+ },
+ {
+  "proj": "26013758",
+  "address": "1323 SOUTH BLVD 77006",
+  "owner": "STALLCUP JOHN & JULIA"
+ },
+ {
+  "proj": "26000466",
+  "address": "1829 MARYLAND ST 77006",
+  "owner": "MEARS KIRBY"
+ },
+ {
+  "proj": "25089108",
+  "address": "4526 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25089109",
+  "address": "4528 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25054883",
+  "address": "1511 KIPLING ST 77006",
+  "owner": "1511 KIPLING LLC"
+ },
+ {
+  "proj": "25089084",
+  "address": "4534 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25089097",
+  "address": "4524 YOAKUM BLVD 77006",
+  "owner": "SAGE LAND LP"
+ },
+ {
+  "proj": "26003095",
+  "address": "1830 FAIRVIEW ST S 77006",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "26003096",
+  "address": "1828 FAIRVIEW ST 77006",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "25121137",
+  "address": "720 PEDEN ST 77006",
+  "owner": " * *"
+ },
+ {
+  "proj": "25089091",
+  "address": "4512 YOAKUM BLVD 77006",
+  "owner": "SAGE LAND LP"
+ },
+ {
+  "proj": "25089092",
+  "address": "4514 YOAKUM BLVD 77006",
+  "owner": "SAGE LAND LP"
+ },
+ {
+  "proj": "25089117",
+  "address": "4516 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25089118",
+  "address": "4518 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25121136",
+  "address": "718 PEDEN ST 77006",
+  "owner": "ORACLE 718 PEDEN LLC"
+ },
+ {
+  "proj": "25075652",
+  "address": "1202 W DREW ST 77006",
+  "owner": "PREBISCH ENTREPRENEURS 7, LLC"
+ },
+ {
+  "proj": "26011549",
+  "address": "1304 WELCH ST 77006",
+  "owner": "ZM VENTURES"
+ },
+ {
+  "proj": "25075531",
+  "address": "419 LOVETT BLVD 77006",
+  "owner": "MCKAY SCOTT"
+ },
+ {
+  "proj": "25065678",
+  "address": "1415 HAROLD ST 77006",
+  "owner": "BPHB ASSETCO"
+ },
+ {
+  "proj": "25082179",
+  "address": "1634 CASTLE CT 77006",
+  "owner": "1634 CASTLE CT LL"
+ },
+ {
+  "proj": "25082180",
+  "address": "1636 CASTLE CT 77006",
+  "owner": "1634 CASTLE CT LL"
+ },
+ {
+  "proj": "26013572",
+  "address": "1417 VASSAR ST 77006",
+  "owner": "COPENHAVER MICHAEL"
+ },
+ {
+  "proj": "25099835",
+  "address": "1312 VASSAR ST 77006",
+  "owner": "PREBISCH ENTREPRENEURS 7, LLC"
+ },
+ {
+  "proj": "25112747",
+  "address": "1223 W DREW ST 77006",
+  "owner": "BPHB ASSETCO"
+ },
+ {
+  "proj": "25080759",
+  "address": "1501 BONNIE BRAE ST 77006",
+  "owner": "HOMEBOUND"
+ },
+ {
+  "proj": "25089111",
+  "address": "4520 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25089112",
+  "address": "4522 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25098277",
+  "address": "1408 INDIANA ST A 77006",
+  "owner": "DANESHVAR BAHRAM"
+ },
+ {
+  "proj": "25048142",
+  "address": "1604 SUL ROSS ST 77006",
+  "owner": "CARLIS ADAM & JULIA DORAN"
+ },
+ {
+  "proj": "25086165",
+  "address": "1601 VERMONT ST 77006",
+  "owner": "MAZZARINO"
+ },
+ {
+  "proj": "25086166",
+  "address": "1603 VERMONT ST 77006",
+  "owner": "1601 VERMONT LLC"
+ },
+ {
+  "proj": "25075844",
+  "address": "4317 ROSELAND ST A 77006",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "25089147",
+  "address": "4530 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25089148",
+  "address": "4532 YOAKUM BLVD 77006",
+  "owner": "SAGA LAND LP"
+ },
+ {
+  "proj": "25075843",
+  "address": "4317 ROSELAND ST B 77006",
+  "owner": "ROSELAND PATIO HOMES"
+ },
+ {
+  "proj": "25120079",
+  "address": "1246 PEDEN ST A 77006",
+  "owner": "SIGNITURE COLLECTION INC."
+ },
+ {
+  "proj": "25120080",
+  "address": "1246 PEDEN ST B 77006",
+  "owner": "SIGNITURE COLLECTION INC."
+ },
+ {
+  "proj": "25110062",
+  "address": "1414 KIPLING ST 77006",
+  "owner": "GRANDPRE TADZIA JEAN"
+ },
+ {
+  "proj": "26034562",
+  "address": "4404 YUPON ST 77006",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "26043480",
+  "address": "1218 BOMAR ST 77006",
+  "owner": "SIGNATURE COLLECTION INC"
+ },
+ {
+  "proj": "26043584",
+  "address": "608 PEDEN ST 77006",
+  "owner": "URBAN STRIDE"
+ },
+ {
+  "proj": "26017362",
+  "address": "1615 VASSAR ST 77006",
+  "owner": "DUPRES MARIE-FRANCE"
+ },
+ {
+  "proj": "26034563",
+  "address": "4400 YUPON ST 77006",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "26005250",
+  "address": "1916 HAWTHORNE ST 77098",
+  "owner": "BPHB ASSETCO"
+ },
+ {
+  "proj": "26015553",
+  "address": "1831 BRANARD ST 77098",
+  "owner": "EMPYREAL CONSTRUCTION LLC"
+ },
+ {
+  "proj": "26015554",
+  "address": "1829 BRANARD ST 77098",
+  "owner": "EMPYREAL CONSTRUCTION LLC"
+ },
+ {
+  "proj": "26015338",
+  "address": "1811 SUL ROSS ST 77098",
+  "owner": "ORACLE SUL ROSS LLC"
+ },
+ {
+  "proj": "26015052",
+  "address": "1744 HAROLD ST 77098",
+  "owner": "SIGNATURE COLLECTION INC"
+ },
+ {
+  "proj": "25087507",
+  "address": "1959 RICHMOND AVE 77098",
+  "owner": "RON DANIEL"
+ },
+ {
+  "proj": "25116922",
+  "address": "1819 BRANARD ST 77098",
+  "owner": "1819 BRANARD LLC"
+ },
+ {
+  "proj": "25116923",
+  "address": "1817 BRANARD ST 77098",
+  "owner": "1819 BRANARD LLC"
+ },
+ {
+  "proj": "25098743",
+  "address": "4207 DRISCOLL ST 77098",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "25104275",
+  "address": "3911 DRISCOLL ST 77098",
+  "owner": "3911 DRISCOLL LLC"
+ },
+ {
+  "proj": "25104276",
+  "address": "3909 DRISCOLL ST 77098",
+  "owner": "3911 DRISCOLL LLC"
+ },
+ {
+  "proj": "25098739",
+  "address": "4203 DRISCOLL ST 77098",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "25116555",
+  "address": "1818 BRANARD ST 77098",
+  "owner": "1818 BRANARD LLC"
+ },
+ {
+  "proj": "25116311",
+  "address": "1822 BRANARD ST A 77098",
+  "owner": "1822 BRANARD LLC"
+ },
+ {
+  "proj": "25116312",
+  "address": "1822 BRANARD ST B 77098",
+  "owner": "1822 BRANARD LLC"
+ },
+ {
+  "proj": "25116556",
+  "address": "1820 BRANARD ST 77098",
+  "owner": "1818 BRANARD LLC"
+ },
+ {
+  "proj": "25112651",
+  "address": "1802 PORTSMOUTH ST D 77098",
+  "owner": "MESKAY BUILDERS LLC"
+ },
+ {
+  "proj": "25112652",
+  "address": "1802 PORTSMOUTH ST C 77098",
+  "owner": "MESKAY BUILDERS LLC"
+ },
+ {
+  "proj": "25112653",
+  "address": "1802 PORTSMOUTH ST B 77098",
+  "owner": "MESKAY BUILDERS LLC"
+ },
+ {
+  "proj": "25112654",
+  "address": "1802 PORTSMOUTH ST A 77098",
+  "owner": "MESKAY BUILDERS LLC"
+ },
+ {
+  "proj": "26043369",
+  "address": "1744 NORFOLK ST 77098",
+  "owner": "EVANS JAMES M"
+ },
+ {
+  "proj": "26042400",
+  "address": "1720 KIPLING ST 77098",
+  "owner": "GOTHAM DEVELOPMENTS"
+ },
+ {
+  "proj": "23068821",
+  "address": "1016 RUTHVEN ST B 77019",
+  "owner": "DASSNAR HATHAWAY REAL ESTATE LLC"
+ },
+ {
+  "proj": "25028032",
+  "address": "1301 SAULNIER ST 77019",
+  "owner": "CISNEROS FELIX"
+ },
+ {
+  "proj": "26002697",
+  "address": "2027 FAIRVIEW ST 77019",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "25054886",
+  "address": "1306 CROCKER ST 77019",
+  "owner": "1306 CROCKER LLC"
+ },
+ {
+  "proj": "25094784",
+  "address": "1107 WILSON ST 77019",
+  "owner": "MASH DEVELOPMENT LLC"
+ },
+ {
+  "proj": "26003094",
+  "address": "2025 FAIRVIEW ST 77019",
+  "owner": "SANDCASTLE HOMES"
+ },
+ {
+  "proj": "25094785",
+  "address": "1105 WILSON ST 77019",
+  "owner": "MASH DEVELOPMENT LLC"
+ },
+ {
+  "proj": "25094786",
+  "address": "1103 WILSON ST 77019",
+  "owner": "MASH DEVELOPMENT LLC"
+ },
+ {
+  "proj": "25078300",
+  "address": "1606 WOODHEAD ST 77019",
+  "owner": "CROIX MICHAEL"
+ },
+ {
+  "proj": "25106917",
+  "address": "1918 HULDY ST 77019",
+  "owner": "ROQUE, LLC"
+ },
+ {
+  "proj": "25090429",
+  "address": "1906 DRISCOLL ST 77019",
+  "owner": "INVESTAVERSE CORP"
+ },
+ {
+  "proj": "26001679",
+  "address": "2424 ELMEN ST 77019",
+  "owner": "NAQUI NASREEN"
+ },
+ {
+  "proj": "25114777",
+  "address": "2413 BRUN ST A 77019",
+  "owner": "2413 BRUN LLC"
+ },
+ {
+  "proj": "25114778",
+  "address": "2413 BRUN ST B 77019",
+  "owner": "2413 BRUN LLC"
+ },
+ {
+  "proj": "25092208",
+  "address": "2412 ELMEN ST 77019",
+  "owner": "2412 ELMEN LLC"
+ },
+ {
+  "proj": "25092209",
+  "address": "2414 ELMEN ST 77019",
+  "owner": "2412 ELMEN LLC"
+ },
+ {
+  "proj": "25108616",
+  "address": "2202 HULDY ST 77019",
+  "owner": "L&H4 LLC"
+ },
+ {
+  "proj": "25108617",
+  "address": "2204 HULDY ST 77019",
+  "owner": "L&H4 LLC"
+ },
+ {
+  "proj": "26015633",
+  "address": "1906 WOODHEAD ST 77019",
+  "owner": "MAZZARINO"
+ },
+ {
+  "proj": "26018492",
+  "address": "314 W GRAY ST 77019",
+  "owner": "TAFT MODHAUS LLC"
+ },
+ {
+  "proj": "26018493",
+  "address": "1514 TAFT ST 77019",
+  "owner": "TAFT MODHAUS LLC"
+ },
+ {
+  "proj": "26025531",
+  "address": "2415 ELMEN ST 77019",
+  "owner": "CROIX CUSTOM HOMES, INC"
+ },
+ {
+  "proj": "26028918",
+  "address": "2028 MORSE ST 77019",
+  "owner": "2026 MORSE LLC"
+ },
+ {
+  "proj": "26030766",
+  "address": "1510 STANFORD ST 77019",
+  "owner": "DEMUREN SINMISOLA"
+ },
+ {
+  "proj": "26028917",
+  "address": "2026 MORSE ST 77019",
+  "owner": "2026 MORSE LLC"
+ },
+ {
+  "proj": "25113200",
+  "address": "4813 Milam St, Houston, TX 77006"
+ },
+ {
+  "proj": "25098278",
+  "address": "1408 Indiana St B, Houston, TX 77006"
+ },
+ {
+  "proj": "26024758",
+  "address": "418 W Saulnier St, Houston, TX 77019"
+ },
+ {
+  "proj": "26024759",
+  "address": "416 W Saulnier St, Houston, TX 77019"
+ },
+ {
+  "proj": "26021909",
+  "address": "608 W Saulnier St, Houston, TX 77019"
+ },
+ {
+  "proj": "26021910",
+  "address": "606 W Saulnier St, Houston, TX 77019"
+ },
+ {
+  "proj": "26025195",
+  "address": "410 W Saulnier St, Houston, TX 77019"
+ },
+ {
+  "proj": "26025196",
+  "address": "412 W Saulnier St, Houston, TX 77019"
+ },
+ {
+  "proj": "26033965",
+  "address": "1715 Harold St, Houston, TX 77098"
+ }
 ]
