@@ -577,8 +577,8 @@
   },
   "25037683": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "1803 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -657,8 +657,8 @@
   },
   "25037686": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "1807 BOLSOVER ST 77005",
     "inspections": [
       {
@@ -817,8 +817,8 @@
   },
   "25078146": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "5329 DORA ST 77005",
     "inspections": [
       {
@@ -1457,8 +1457,8 @@
   },
   "25076577": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "3802 WESTERMAN ST 77005",
     "inspections": [
       {
@@ -3267,10 +3267,16 @@
   },
   "26019294": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "2328 QUENBY ST 77005",
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "date": "2026-08-31",
+        "result": "Pending",
+        "inspector": ""
+      },
       {
         "type": "ROUGH",
         "date": "2026-08-10",
@@ -3357,19 +3363,19 @@
       },
       {
         "type": "Precon",
-        "date": "2026-08-27",
-        "result": "Pending",
+        "date": "2026-08-31",
+        "result": "Failed",
         "inspector": ""
       },
       {
         "type": "Prefill",
-        "date": "2026-08-27",
-        "result": "Pending",
+        "date": "2026-08-31",
+        "result": "Passed",
         "inspector": ""
       },
       {
         "type": "2nd EC",
-        "date": "2026-08-27",
+        "date": "2026-08-31",
         "result": "Pending",
         "inspector": ""
       },

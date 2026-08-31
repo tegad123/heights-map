@@ -585,8 +585,8 @@
   },
   "25023737": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "3507 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -749,8 +749,8 @@
   },
   "25023738": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "3502 Huntsford Dr 77008",
     "inspections": [
       {
@@ -907,8 +907,8 @@
   },
   "25023741": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "3516 Harvest Dance Dr 77008",
     "inspections": [
       {
@@ -2157,8 +2157,8 @@
   },
   "25069172": {
     "status": "Passed",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "2611 Lazybrook Dr 77008",
     "inspections": [
       {
@@ -2339,14 +2339,14 @@
   },
   "25080169": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "2418 Brookmere Dr 77008",
     "inspections": [
       {
         "type": "DITCH COVER",
         "date": "2026-08-28",
-        "result": "Pending",
+        "result": "Passed",
         "inspector": ""
       },
       {
@@ -2535,8 +2535,8 @@
   },
   "25096486": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "1018 Grovewood Ln 77008",
     "inspections": [
       {
@@ -2845,8 +2845,8 @@
   },
   "25098806": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "6515 Lindyann Ln 77008",
     "inspections": [
       {
@@ -3073,8 +3073,8 @@
       },
       {
         "type": "P2 FINAL",
-        "date": "2026-08-24",
-        "result": "Failed",
+        "date": "2026-08-31",
+        "result": "Pending",
         "inspector": ""
       },
       {
@@ -3221,8 +3221,8 @@
   },
   "25104677": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "1307 Foxwood Rd 77008",
     "inspections": [
       {
@@ -3395,8 +3395,8 @@
   },
   "25118994": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "822 Nashua St, Houston, TX 77008",
     "inspections": [
       {
@@ -3569,8 +3569,8 @@
   },
   "26011945": {
     "status": "Partial",
-    "updated": "2026-08-27",
-    "scraped_at": "2026-08-27",
+    "updated": "2026-08-31",
+    "scraped_at": "2026-08-31",
     "address": "6111 Hurst St 77008",
     "inspections": [
       {
