@@ -862,17 +862,25 @@ function inspStatusColor(s){return s==='Passed'?'#2f9e44':s==='Failed'?'#e03131'
 // vocabulary across all 238 scraped permits.
 const INSP_PHASE=[
   [/sawpole|saw pole|pole final/i,'foundation'], // temp power pole = job start, pre-slab
-  [/elect final|temp gas final|gas final|\bp\d ?final\b|cc final|ww final|add el final|\bv\d final\b|\bc\d final\b|ac final|mech(?:anical)? final|plumb(?:ing)? final|flood final/i,'finishing'],
-  [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|site final|final building|\bfinal\b|\btci\b|punch list|reconnect|visitab/i,'market'],
+  // Site / civil / utility work certifies nothing about the house above the slab, so it can never
+  // sit above foundation: P1..P5 FINAL + STORM SEWER are the public-works tie-in finals, Site Final /
+  // EC = erosion control, Flood Final = elevation cert, TEMP GAS = meter set, WATER SERVICE = yard
+  // line, WW Final / Punch List / Restoration = the wastewater civil sub-permit, SLAB COVER = pre-pour.
+  // Must precede every generic FINAL / COVER / gas rule below. 2026-09-01 street audit: P1 FINAL was
+  // reading as Finishing on foundation-stage homes (710 Waverly, 835 Lawrence), WATER SERVICE as
+  // Framing (832 E 27th), 2nd EC as Dried-In (1008 E 28th, 1306 W 24th).
+  [/\bp\d ?final\b|site final|flood final|temp gas|storm sewer|culvert|driveway|sidewalk|\bww final\b|\bsw final\b|\bec\b|water service|slab cover|punch list|restoration/i,'foundation'],
+  [/elect final|gas final|cc final|add el final|\bv\d final\b|\bc\d final\b|ac final|mech(?:anical)? final|plumb(?:ing)? final/i,'finishing'],
+  [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|final building|\bfinal\b|\btci\b|reconnect|visitab/i,'market'],
   [/insulation|shower pan|lath|grille|duct seal|egress|sfr kitchen|tree\/shrub|sprinkler|decor/i,'finishing'],
   // DITCH COVER = foundation-era trench cover, must be caught BEFORE the generic \bcover\b dried-in gate
   [/ditch ?cover|trench cover/i,'foundation'],
   // Dried-in is gated by a real building close-up: COVER or building insulation/wrap. Rough trades are NOT dried-in.
   [/\bcover\b|building ?wrap|house ?wrap|weather ?barrier|sheathing cover/i,'dried_in'],
-  // Rough-trades (rough in, water service, top out, gas rough) are the tail end of FRAMING, not dried-in.
-  [/rough in|top out|water service|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b|frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|1035/i,'framing'],
-  [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|culvert|bore|storm sewer|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|sidewalk|driveway|apron|flatwork|building layout|layout|form survey/i,'foundation'],
-  [/\bec\b|electric|plumb|mechanic|\bac\b|\bev\b/i,'dried_in'],
+  // Rough-trades (rough in, top out, gas rough) are the tail end of FRAMING, not dried-in.
+  [/rough in|top out|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b|frame|framing|\brough\b|nail pattern|nailing|brick tie|windstorm|windstrom|sheath|fire ?wall|1035/i,'framing'],
+  [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|bore|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|apron|flatwork|building layout|layout|form survey/i,'foundation'],
+  [/electric|plumb|mechanic|\bac\b|\bev\b/i,'dried_in'],
 ];
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
 function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
