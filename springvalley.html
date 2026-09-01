@@ -613,7 +613,7 @@ const INV_SEED=2;
 if((state._invSeed||0)<INV_SEED){
   const PH=['foundation','framing','dried_in','finishing','market'];
   for(const id in INVENTORY){const e=INVENTORY[id];const p=pt(id);
-    if(e.phase){p.tags=(p.tags||[]).filter(t=>!PH.includes(t)); if(!p.tags.includes(e.phase))p.tags.push(e.phase);}
+    // evidence rule (2026-09-01): an inventory drive-by phase is a NOTE, never a stage tag — only a passed inspection sets stage
     if(e.type&&!p.tags.includes(e.type))p.tags.push(e.type);
     if(e.note&&(!p.notes||p.notes.indexOf('Inventory 6/1/26')===-1))p.notes=p.notes?e.note+'\n'+p.notes:e.note;}
   state._invSeed=INV_SEED; save();
@@ -657,12 +657,11 @@ if((state._mergeSeed||0)<MERGE_SEED){
 
 // ---- lifecycle: deed transfer -> auto-advancing construction -> ready (single/split, finished/punch) ----
 const LIFE={};
-const LIFE_PM={foundation:8,framing:6,dried_in:4,finishing:2};
 if(!state.tags.deed)state.tags.deed={name:'Deed Transfer',color:'#1971c2'};
 if(!state.tags.punch){state.tags.punch={name:'Punch List',color:'#f783ac'};save();}
 for(const id in LIFE){const e=LIFE[id];if(e.s!=='deed'&&byId[id]&&byId[id].kind==='permit')byId[id].kind='active';}
-function lifeElapsed(){const s=new Date('2026-06-01T00:00:00');const n=new Date();return Math.max(0,(n-s)/(1000*60*60*24*30.44));}
-function lifePhase(ph0){const rem=LIFE_PM[ph0]-lifeElapsed();if(rem>6)return'foundation';if(rem>4)return'framing';if(rem>2)return'dried_in';if(rem>0)return'finishing';return'market';}
+// lifePhase() (calendar auto-advance foundation->framing->... from a lifecycle note) was removed 2026-09-01:
+// it staged 830 E 26th as Framing with zero permits. Stage now comes only from passed inspections.
 const LIFE_SEED=9;
 if((state._lifeSeed||0)<LIFE_SEED){
   for(const id in state.points){if(!byId[id])delete state.points[id];}
@@ -670,18 +669,15 @@ if((state._lifeSeed||0)<LIFE_SEED){
   for(const id in LIFE){const e=LIFE[id];if(!byId[id])continue;const p=pt(id);
     if(e.s==='deed'){p.tags=['deed'];}
     else if(e.s==='ready'){const _pd=byId[id].st==='pending';const _l=!_pd&&byId[id].kind==='active'&&byId[id].v!==undefined;p.tags=[_pd?'pending':(_l?'market':'finishing')].concat(e.ty?[e.ty]:[]).concat(_l&&e.fin==='punch'?['punch']:[]);}
-    else if(e.s==='uc'){const cur=lifePhase(e.ph);
-      if(cur==='market'){p.tags=['market'].concat(e.ty?[e.ty]:[]);}
-      else{p.tags=[cur].concat(e.ty?[e.ty]:[]);p.snap={ph:e.ph};}}
+    else if(e.s==='uc'){p.tags=[].concat(e.ty?[e.ty]:[]);} // no stage tag without inspection evidence (the note still displays)
     if(e.note&&(!p.notes||p.notes.indexOf('Lifecycle')===-1))p.notes=p.notes?e.note+'\n'+p.notes:e.note;}
   state._lifeSeed=LIFE_SEED;save();
 }
-// recompute construction phase every load so pins auto-advance over time
-function applyAutoAdvance(){let ch=false;for(const id in state.points){const p=state.points[id];if(!p.snap)continue;
-  const ty=(p.tags||[]).find(t=>t==='active_single'||t==='active_split');let cur=lifePhase(p.snap.ph);const _r=byId[id];if(cur==='market'&&!(_r&&_r.kind==='active'&&_r.v!==undefined))cur='finishing';let tags;
-  if(cur==='market'){tags=['market'].concat(ty?[ty]:[]);delete p.snap;}else{tags=[cur].concat(ty?[ty]:[]);}
-  if((p.tags||[]).join(',')!==tags.join(',')){p.tags=tags;ch=true;}}
-  if(ch)save();}
+// applyAutoAdvance() used to re-stage, on EVERY load, any point carrying a lifecycle `snap` purely from the
+// calendar (foundation -> framing after 2 months, ...). That is how 830 E 26th read Framing with zero permits
+// (shared state held snap:{ph:'foundation'}). Removed 2026-09-01: stage comes only from passed inspections.
+// The function name is kept as a no-op that drops stale snaps so older call sites stay valid.
+function applyAutoAdvance(){for(const id in state.points){const p=state.points[id];if(p&&p.snap)delete p.snap;}}
 applyAutoAdvance();
 function syncListed(){for(const r of DATA){const p=pt(r.id);const should=r.kind==='active'&&r.v!==undefined&&r.st!=='pending';const has=(p.tags||[]).includes('listed');
   if(should&&!has)p.tags=(p.tags||[]).concat(['listed']);
@@ -800,6 +796,16 @@ function projectPhase(){
   }
   return best;
 }
+// Evidence rule (2026-09-01): a construction stage exists only when a passed inspection certifies it.
+// Notes, inventory drives, lifecycle timers and stale shared edits display as notes, never as stage.
+// Ungated: runs on every load, after seeding and again after the remote merge (same cadence as promotions).
+const BUILD_PHASES_EV=['foundation','framing','dried_in','finishing'];
+function stripUnevidencedStage(r){
+  const p=pt(r.id); const before=p.tags.join('|');
+  p.tags=p.tags.filter(t=>!BUILD_PHASES_EV.includes(t));
+  if(r.kind==='permit'&&!p.tags.includes('permit'))p.tags.push('permit'); // back to the permit layer
+  if(p.inspPromoted)delete p.inspPromoted;
+  return p.tags.join('|')!==before;}
 // Re-tag permit pins from inspection data. A permit with passed inspections
 // graduates out of the gray "New Construction (Permit)" layer into the matching
 // Under-Construction phase (or Ready/On-Market once the final has passed).
@@ -807,14 +813,14 @@ function applyInspectionPromotions(){
   let changed=false;
   const PROJ=projectPhase();
   for(const r of DATA){
-    if(!r.permits||!r.permits.length)continue;
+    if(!r.permits||!r.permits.length){ if(r.st!=='pending'&&stripUnevidencedStage(r))changed=true; continue; }
     // pending wins over inspection phase: an under-contract home is spoken-for supply,
     // whatever its trade finals say. Keep the pending tag, skip promotion entirely.
     if(r.st==='pending'){const ty=(LIFE[r.id]&&LIFE[r.id].ty)||(INVENTORY[r.id]&&INVENTORY[r.id].type)||r.ty||null;
       const p0=pt(r.id);const want=['pending'].concat(ty?[ty]:[]);
       if(JSON.stringify(p0.tags)!==JSON.stringify(want)){p0.tags=want;changed=true;}
       continue;}
-    const ins=inspForPin(r); if(!ins)continue;
+    const ins=inspForPin(r); if(!ins){ if(stripUnevidencedStage(r))changed=true; continue; }
     let ph=inspToPhase(ins);
     const _pk=projectBaseKey(r); const _pr=PROJ[_pk]==='market'?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>_PHRANK[ph||'foundation'])ph=_pr;
     if(ph==='market'&&!(r.kind==='active'&&r.v!==undefined)){
@@ -841,7 +847,7 @@ function applyInspectionPromotions(){
       const want=[ph].concat(ty?[ty]:[]).concat(_lst?['listed']:[]);
       if(JSON.stringify(p.tags)!==JSON.stringify(want)){p.tags=want;p.inspPromoted=true;changed=true;}
     }
-    // if nothing passed yet, leave it in the permit layer
+    else { if(stripUnevidencedStage(r))changed=true; } // nothing passed yet -> no stage, back in the permit layer
   }
   syncListed();
   if(changed){Object.keys(mById).forEach(recolor);renderLegend();refresh();
