@@ -892,7 +892,10 @@ function inspAnnotations(r,ins){
   const days=d=>Math.round((now-new Date(d+'T00:00:00'))/864e5);
   const passed=rows.filter(it=>it.date&&/pass/i.test(it.result||''));
   if(homePhase(r.id)==='foundation'){
-    const fdn=passed.filter(it=>inspPhase(it.type)==='foundation').map(it=>it.date).sort().pop();
+    // FDN package = the structural foundation inspections only; civil/site rows (EC, storm sewer, driveway,
+    // P1 FINAL...) also map to foundation but say nothing about when the slab was poured.
+    const FDN_PKG=/1031|fdn|foundation|piers?|slab|footing|t-beam|ground in|ele grnd|grnd insp|form survey|layout/i;
+    const fdn=passed.filter(it=>inspPhase(it.type)==='foundation'&&FDN_PKG.test(it.type)).map(it=>it.date).sort().pop();
     const anyFraming=rows.some(it=>(_PHRANK[inspPhase(it.type)]||0)>=_PHRANK.framing);
     if(fdn&&days(fdn)>21&&!anyFraming)out.notes.push('framing likely underway');}
   for(const t of new Set(rows.filter(it=>/pend/i.test(it.result||'')).map(it=>it.type)))out.notes.push(t+' inspection scheduled');
