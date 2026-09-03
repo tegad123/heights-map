@@ -766,6 +766,23 @@ const INSP_PHASE=[
 ];
 const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5};
 function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
+// Popup order: newest first. The feed stores rows in COH grid order (grouped by sub-permit, not by
+// date), so a plain reverse() surfaced pre-con civil rows and hid the recent ones behind '+N earlier'.
+function inspSorted(ins){return ((ins&&ins.inspections)||[]).slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));}
+// Display-layer annotations (2026-09-01). Never change a stage or a count.
+function inspAnnotations(r,ins){
+  const out={notes:[],last:''}; if(!ins)return out;
+  const rows=(ins.inspections||[]).filter(it=>it.type); const now=new Date();
+  const days=d=>Math.round((now-new Date(d+'T00:00:00'))/864e5);
+  const passed=rows.filter(it=>it.date&&/pass/i.test(it.result||''));
+  if(homePhase(r.id)==='foundation'){
+    const fdn=passed.filter(it=>inspPhase(it.type)==='foundation').map(it=>it.date).sort().pop();
+    const anyFraming=rows.some(it=>(_PHRANK[inspPhase(it.type)]||0)>=_PHRANK.framing);
+    if(fdn&&days(fdn)>21&&!anyFraming)out.notes.push('framing likely underway');}
+  for(const t of new Set(rows.filter(it=>/pend/i.test(it.result||'')).map(it=>it.type)))out.notes.push(t+' inspection scheduled');
+  const last=rows.filter(it=>it.date&&!/pend/i.test(it.result||'')).map(it=>it.date).sort().pop();
+  if(last){const d=days(last),w=Math.floor(d/7);out.last='Last inspection: '+(d<7?d+' day'+(d===1?'':'s'):w+' week'+(w===1?'':'s'))+' ago';}
+  return out;}
 function inspToPhase(ins){
   // Phase = the FURTHEST phase any PASSED inspection has reached.
   // Construction is monotonic: passed insulation means the house is framed and dried-in,
@@ -1039,7 +1056,13 @@ function popupHTML(r){
      h+='<span class="phasechip" style="background:'+col+';color:#0d0c0b">'+esc(String(nm).toUpperCase())+'</span>';
      if(ph==='market')h+='<span class="phasetime">ready / on market</span>';
      else if(ml!=null)h+='<span class="phasetime">≈ '+ml+' month'+(ml===1?'':'s')+' to completion</span>';
+     for(const s of inspAnnotations(r,inspForPin(r)).notes)h+='<span class="phasetime">('+esc(s)+')</span>';
      h+='</div>';}
+   else if(INSP_LOADED&&!(p.tags||[]).some(t=>['pending','market','listed','off_market_single','off_market_split','built'].includes(t))){
+     // evidence rule: no passed inspection -> no stage. Say why instead of showing a phase chip.
+     const ins0=inspForPin(r); const hasP=!!(r.permits&&r.permits.length);
+     const why=!hasP?'No permit activity':(ins0&&(ins0.inspections||[]).length?'Permitted \u2014 no passed inspections':'Permitted \u2014 no inspections');
+     h+='<div class="phasehead"><span class="phasechip" style="background:#8c857a;color:#0d0c0b">'+esc(why.toUpperCase())+'</span></div>';}
   }
   const A=r.kind==='active';
   const cells=[];
@@ -1072,8 +1095,9 @@ function popupHTML(r){
      if(ins.updated)h+='<div class="pmeta"><span>Updated '+esc(ins.updated)+'</span><span>#'+esc(ins.proj)+'</span></div>';
      {const pp=pt(r.id); if(pp.inspPromoted){const ph=pp.tags.find(t=>['foundation','framing','dried_in','finishing','market'].includes(t));
        const lbl=ph==='market'?'Finished on Market':(state.tags[ph]&&state.tags[ph].name)||ph;
-       h+='<div class="insppromo">▲ '+esc(lbl)+' — current stage per latest inspection</div>';}}
-     const list=(ins.inspections||[]).slice().reverse();
+       h+='<div class="insppromo">▲ '+esc(lbl)+' — furthest stage certified by a passed inspection</div>';}}
+     {const an=inspAnnotations(r,ins); if(an.last)h+='<div class="pmeta"><span>'+esc(an.last)+'</span></div>';}
+     const list=inspSorted(ins); // newest first; '+N earlier' hides only the oldest rows
      if(list.length){h+='<div class="insprows">';
        for(const it of list.slice(0,8)){const c=inspStatusColor(it.result);
          h+='<div class="insprow"><span class="idot" style="background:'+c+'"></span><span class="ity">'+esc(it.type||'')+'</span><span class="idate">'+esc(it.date||'')+'</span><span class="ires" style="color:'+c+'">'+esc(it.result||'')+'</span></div>';}
