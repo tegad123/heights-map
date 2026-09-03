@@ -203,6 +203,27 @@ BOUNDARY_GEOJSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hei
 COORD_BOX = (29.70, 29.90, -95.50, -95.30)   # (lat_min, lat_max, lng_min, lng_max) sanity net
 PERMITS_JSON_NAME = 'heights_permits.json'   # inspection-cron scrape list, per market
 
+# DROPPED-ROWS LEDGER (2026-09-01): every CSV row that ingest() excludes — for ANY reason,
+# including the counted-only skips (not_sfres / old_proj / dup_* / OUT_OF_ZONE regex) — is
+# appended to LAST_DROPPED as (proj, street, reason, detail) and written by
+# write_dropped_ledger(). A guard that eats rows silently is the false-green pattern:
+# 224 Allston / 713 E 8th 1/2 (both large SFs under construction) were absent from the
+# map with no record of which layer dropped them.
+LAST_DROPPED = []
+
+
+def write_dropped_ledger(path, market, dropped):
+    """Append dropped rows to a CSV ledger (header written once). Returns the path."""
+    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+    new_file = not os.path.exists(path)
+    with open(path, 'a', newline='') as f:
+        w = csv.writer(f)
+        if new_file:
+            w.writerow(['MARKET', 'PROJECT_NO', 'ADDRESS', 'REASON', 'DETAIL'])
+        for proj, street, reason, detail in dropped:
+            w.writerow([market, proj, street, reason, str(detail or '')])
+    return path
+
 
 def _load_boundary_ring():
     """Load boundary as a list of rings (Polygon or MultiPolygon features)."""
@@ -382,6 +403,8 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
     ids = {r.get('id') for r in data}
 
     cands, skipped = [], {'dup_proj': 0, 'dup_addr': 0, 'not_sfres': 0, 'old_proj': 0, 'ooz_addr': 0}
+    dropped = []                      # (proj, street, reason, detail) — see LAST_DROPPED
+    LAST_DROPPED.clear()
     seen = set()
     for cp in csv_paths:
         for row in csv.DictReader(open(cp)):
@@ -389,21 +412,27 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
             if not proj or proj in seen:
                 continue
             seen.add(proj)
-            if row['PERMIT_DESC'].strip() != 'Building Pmt' or 'S.F. RES' not in row['PROJECT_DESC'].upper():
-                skipped['not_sfres'] += 1; continue
-            if int(proj[:2]) < min_proj_year:
-                skipped['old_proj'] += 1; continue
             addr_raw = row['Address'].strip()
+            if row['PERMIT_DESC'].strip() != 'Building Pmt' or 'S.F. RES' not in row['PROJECT_DESC'].upper():
+                skipped['not_sfres'] += 1
+                dropped.append((proj, addr_raw, 'NOT_SFRES', f"{row['PERMIT_DESC'].strip()} / {row['PROJECT_DESC'].strip()[:60]}")); continue
+            if int(proj[:2]) < min_proj_year:
+                skipped['old_proj'] += 1
+                dropped.append((proj, addr_raw, 'OLD_PROJ', f'proj year {proj[:2]} < {min_proj_year}')); continue
             zm = re.search(r'(7\d{4})\s*$', addr_raw)
             zipc = zm.group(1) if zm else ''
             street = re.sub(r'\s*7\d{4}\s*$', '', addr_raw).strip().upper()
             if proj in projs:
-                skipped['dup_proj'] += 1; continue
+                skipped['dup_proj'] += 1
+                dropped.append((proj, street, 'DUP_PROJ', 'project already in DATA')); continue
             if norm_addr(street) in norms:
-                skipped['dup_addr'] += 1; continue
-            a_disp = f"{title_addr(re.sub(r'\s+', ' ', street.replace('(PVT)', ' ')).strip())}, Houston, TX {zipc}"
+                skipped['dup_addr'] += 1
+                dropped.append((proj, street, 'DUP_ADDR', f'normalized {norm_addr(street)!r} already in DATA')); continue
+            street_disp = re.sub(r'\s+', ' ', street.replace('(PVT)', ' ')).strip()
+            a_disp = f"{title_addr(street_disp)}, Houston, TX {zipc}"
             if ooz.search(a_disp) or ooz.search(street):
-                skipped['ooz_addr'] += 1; continue
+                skipped['ooz_addr'] += 1
+                dropped.append((proj, street, 'OOZ_REGEX', 'matches OUT_OF_ZONE street list')); continue
             cands.append({'proj': proj, 'street': street, 'zip': zipc, 'a': a_disp,
                           'owner': row['OWNER_OCCUPANT'].lstrip('*').strip(),
                           'desc': row['PROJECT_DESC'].strip(),
@@ -416,30 +445,36 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
         g = hcad_geocode(c['street'])
         if g['status'] != 'OK':
             flagged.append((c['proj'], c['street'], g['status'], g.get('matched')))
+            dropped.append((c['proj'], c['street'], 'GEOCODE_' + g['status'], g.get('matched')))
             print(f"  GEOCODE-{g['status']}: {c['proj']} {c['street']} {g.get('matched') or ''}")
             continue
         if LNG_EAST_MAX is not None and g['lng'] > LNG_EAST_MAX:
             skipped['ooz_addr'] += 1
+            dropped.append((c['proj'], c['street'], 'OOZ_EAST', f"lng {g['lng']} > {LNG_EAST_MAX}"))
             print(f"  OOZ-EAST (lng {g['lng']}): {c['proj']} {c['street']}")
             continue
         if not in_zone_poly(g['lng'], g['lat']):
             skipped['ooz_poly'] = skipped.get('ooz_poly', 0) + 1
+            dropped.append((c['proj'], c['street'], 'OOZ_POLY', f"{g['lat']},{g['lng']} outside boundary"))
             print(f"  OOZ-POLY ({g['lat']},{g['lng']}): {c['proj']} {c['street']}")
             continue
         if not (COORD_BOX[0] < g['lat'] < COORD_BOX[1] and COORD_BOX[2] < g['lng'] < COORD_BOX[3]):
             flagged.append((c['proj'], c['street'], 'COORD_RANGE', (g['lat'], g['lng'])))
+            dropped.append((c['proj'], c['street'], 'COORD_RANGE', f"{g['lat']},{g['lng']}"))
             continue
         rid = 'pmt_' + re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-',
                     (c['street'] + ' ' + c['zip']).lower())).strip('-')
         if rid in ids:
-            flagged.append((c['proj'], c['street'], 'ID_COLLISION', rid)); continue
+            flagged.append((c['proj'], c['street'], 'ID_COLLISION', rid))
+            dropped.append((c['proj'], c['street'], 'ID_COLLISION', rid)); continue
         ids.add(rid)
         rows.append({"id": rid, "a": c['a'], "llc": c['owner'], "kind": "permit",
                      "lat": g['lat'], "lng": g['lng'],
                      "permits": [{"owner": c['owner'], "desc": c['desc'], "val": c['val'],
                                   "ptype": c['ptype'], "proj": c['proj'],
                                   "permitDesc": "Building Pmt"}]})
-    print(f'insertable: {len(rows)}  geocode-flagged: {len(flagged)}')
+    LAST_DROPPED.extend(dropped)
+    print(f'insertable: {len(rows)}  geocode-flagged: {len(flagged)}  dropped (all reasons): {len(dropped)}')
     for r in rows:
         print('  +', r['id'], r['a'], r['lat'], r['lng'])
     if not apply_changes:
@@ -515,6 +550,13 @@ def main():
         if not args.from_csv:
             sys.exit('--ingest needs --from-csv (run pull mode per zip first)')
         ingest(args.from_csv, args.html, args.min_proj_year, args.apply)
+        if LAST_DROPPED:
+            from datetime import date as _date
+            led = os.path.join(os.path.dirname(os.path.abspath(args.html)), 'pulls',
+                               f'dropped_{_date.today().isoformat()}.csv')
+            mk = os.path.basename(args.html).replace('.html', '')
+            write_dropped_ledger(led, 'heights' if mk == 'index' else mk, LAST_DROPPED)
+            print(f'dropped-rows ledger: {len(LAST_DROPPED)} row(s) -> {led}')
         return
 
     if not args.zip:

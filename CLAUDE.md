@@ -30,6 +30,20 @@ via CI from the GitHub main branch.
   run_and_deploy.py. Nothing else picks it up automatically.
 - Phase classification is monotonic furthest-passed. Failed and pending
   inspections never count toward phase. Phase never moves backwards.
+- Evidence rule (2026-09-01 street audit): a construction stage exists only
+  when a PASSED inspection certifies it. Notes, inventory drive-bys, lifecycle
+  timers and stale shared edits display as notes, never as stage
+  (stripUnevidencedStage in the html; the calendar auto-advance is gone).
+- Site/civil/utility inspections (P1..P5 FINAL, STORM SEWER, Site Final, EC,
+  Flood Final, TEMP GAS, WATER SERVICE, WW Final, SLAB COVER, Punch List, ...)
+  map to foundation via one explicit INSP_PHASE rule that precedes every
+  generic FINAL/COVER/gas rule. WINDSTORM is the entry point to the
+  "Framed / Drying-In" bucket (dried_in). Do not re-add a generic final ->
+  finishing path.
+- Dropped-rows ledger: permit_pull.ingest() records every excluded CSV row
+  (NOT_SFRES, OLD_PROJ, DUP_*, OOZ_REGEX, OOZ_EAST/POLY, GEOCODE_*, COORD_RANGE,
+  ID_COLLISION) in pulls/dropped_<date>.csv (manual path and weekly driver).
+  A guard that eats rows silently is the false-green pattern.
 - HAR exports use the address-led no-header-row template. The stats-style
   MLS view lacks an Address column and will not parse.
 - Census batch geocoding runs locally, not in any sandbox.

@@ -122,6 +122,12 @@ def main():
     today = date.today().isoformat()
 
     rows, flagged, skipped, ooz, dry_out = run_dry(csvs, html)
+    # dropped-rows ledger: every excluded row, every reason, with the market name
+    dropped = list(pp.LAST_DROPPED)
+    ledger = ''
+    if dropped and not dry_only:
+        ledger = pp.write_dropped_ledger(os.path.join(REPO, 'pulls', f'dropped_{today}.csv'),
+                                         market, dropped)
 
     # cross-market suppression: OOZ-POLY inside another market's ring is that
     # market's row, not an anomaly here
@@ -178,7 +184,8 @@ def main():
     summary = {'date': today, 'market': market, 'inputs': csvs,
                'skipped': skipped, 'clean': len(rows), 'cap': CAP,
                'cap_tripped': cap_tripped, 'applied': applied,
-               'quarantined': quarantined, 'quarantine_csv': qcsv}
+               'quarantined': quarantined, 'quarantine_csv': qcsv,
+               'dropped': len(dropped), 'dropped_ledger': ledger}
     with open(os.path.join(REPO, 'pulls', 'ingest_summary.json'), 'w') as f:
         json.dump(summary, f, indent=1)
 
@@ -204,6 +211,9 @@ def main():
         if len(quarantined) > 15:
             L.append(f'  … and {len(quarantined) - 15} more')
     L.append(f'{market} skips (normal): {skipped}')
+    if dropped:
+        L.append(f'{market} dropped-rows ledger: {len(dropped)} row(s)'
+                 + (f' -> {os.path.basename(ledger)}' if ledger else ' (dry-run, not written)'))
     with open(os.path.join(REPO, 'pulls', 'ingest_report.txt'), 'w') as f:
         f.write('\n'.join(L) + '\n')
 
