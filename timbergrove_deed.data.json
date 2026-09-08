@@ -1,0 +1,60 @@
+{
+ "market": "timbergrove",
+ "pulls": [
+  {
+   "pulled_date": "2026-09-08",
+   "window_start": "2026-07-29",
+   "window_end": "2026-08-06",
+   "source_file": "dealmachine-properties-deedtransfersheights.csv",
+   "source": "DealMachine export",
+   "property_count": 3,
+   "properties": [
+    {
+     "id": "2130421544",
+     "a": "6727 Grovewood Ln, Houston, Tx 77008",
+     "llc": "6727 Grovewood Llc",
+     "v": "$535,085",
+     "lot": "8645",
+     "lat": 29.793011,
+     "lng": -95.436447,
+     "f": "Recently Sold, Off Market, Cash Buyer, High Equity, Senior Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2130421544",
+     "c": null,
+     "sale_date": "2026-07-29",
+     "apn": "089-139-000-0007",
+     "year_built": 1961
+    },
+    {
+     "id": "2130573149",
+     "a": "2326 Haverhill Dr, Houston, Tx 77008",
+     "llc": "Revive Houston Llc",
+     "v": "$492,473",
+     "lot": "7590",
+     "lat": 29.799626,
+     "lng": -95.44133,
+     "f": "Recently Sold, Off Market, Cash Buyer, High Equity, Senior Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2130573149",
+     "c": null,
+     "sale_date": "2026-08-06",
+     "apn": "092-531-000-0002",
+     "year_built": 1962
+    },
+    {
+     "id": "2130573761",
+     "a": "2230 Tannehill Dr, Houston, Tx 77008",
+     "llc": "T Hobson Investments Llc",
+     "v": "$526,739",
+     "lot": "7590",
+     "lat": 29.798864,
+     "lng": -95.439819,
+     "f": "MLS Active, Recently Sold, Cash Buyer, Low Equity, Tax Delinquent, Senior Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2130573761",
+     "c": null,
+     "sale_date": "2026-08-05",
+     "apn": "092-532-000-0009",
+     "year_built": 1960
+    }
+   ]
+  }
+ ]
+}
