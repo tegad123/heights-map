@@ -92,7 +92,7 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 .tog input:checked + .box:after{content:"";position:absolute;left:5px;top:1px;width:4px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(43deg)}
 
 .leaflet-popup-content-wrapper{background:var(--ink);color:var(--paper);border-radius:3px;border:1px solid var(--line);box-shadow:0 16px 40px -10px rgba(30,25,15,.22),0 2px 0 0 var(--red);padding:0}
-.leaflet-popup-content{margin:0;width:290px!important;line-height:1.4}
+.leaflet-popup-content{max-height:75vh;overflow-y:auto;margin:0;width:290px!important;line-height:1.4}
 .leaflet-popup-tip{background:var(--ink)}
 .leaflet-popup-close-button{color:var(--muted)!important;font-size:20px!important;padding:9px 11px 0 0!important}
 .card{padding:14px 15px}
@@ -165,7 +165,7 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 .ovx-stat .k{font-family:var(--lab);font-size:9.5px;color:var(--sub);letter-spacing:.1em}
 .ovx-stat .v{font-family:var(--disp);font-weight:700;font-size:26px}
 .ovx-secH{display:flex;justify-content:space-between;font-family:var(--lab);font-size:9.5px;color:var(--sub);letter-spacing:.12em;margin:20px 0 12px;border-bottom:1px solid var(--bd);padding-bottom:6px}
-.ovx-pipe{display:flex;align-items:flex-start;justify-content:space-between;margin:8px 0 6px;padding:0 8px}
+.ovx-pipe{overflow-x:auto;gap:12px;display:flex;align-items:flex-start;justify-content:space-between;margin:8px 0 6px;padding:0 8px}
 .ovx-node{position:relative;flex:1;text-align:center}
 .ovx-node .dot{width:46px;height:46px;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:700;font-size:18px;color:var(--sur2)}
 .ovx-node.line:after{content:'';position:absolute;top:23px;left:calc(50% + 26px);width:calc(100% - 52px);height:1px;background:var(--bd)}
@@ -612,7 +612,7 @@ const INVENTORY={};
 for(const id in INVENTORY){ if(byId[id]&&byId[id].kind==='permit') byId[id].kind='active'; } // promoted: out of permit layer
 const INV_SEED=2;
 if((state._invSeed||0)<INV_SEED){
-  const PH=['foundation','framing','dried_in','finishing','market'];
+  const PH=['sitework','foundation','framing','dried_in','exterior','finishing','market'];
   for(const id in INVENTORY){const e=INVENTORY[id];const p=pt(id);
     // evidence rule (2026-09-01): an inventory drive-by phase is a NOTE, never a stage tag — only a passed inspection sets stage
     if(e.type&&!p.tags.includes(e.type))p.tags.push(e.type);
@@ -622,7 +622,7 @@ if((state._invSeed||0)<INV_SEED){
 // ---- active-but-not-under-construction => Finished on Market (green) ----
 const MKT_SEED=2;
 if((state._mktSeed||0)<MKT_SEED){
-  const PH=['foundation','framing','dried_in','finishing','market'];
+  const PH=['sitework','foundation','framing','dried_in','exterior','finishing','market'];
   for(const id in state.points){const t=state.points[id].tags||[];
     const active=t.includes('active_single')||t.includes('active_split');
     if(active && !PH.some(p=>t.includes(p)) && byId[id] && byId[id].v!==undefined) t.unshift('market');} // unshift so pin color = green
@@ -631,7 +631,7 @@ if((state._mktSeed||0)<MKT_SEED){
 // ---- distinct color scheme (one-time, structural tags) ----
 const COLOR_SEED=2;
 if((state._colorSeed||0)<COLOR_SEED){
-  const C={foundation:'#e8590c',framing:'#e8590c',dried_in:'#e8590c',finishing:'#e8590c',market:'#2f9e44',active_single:'#2f9e44',active_split:'#2f9e44',permit:'#868e96'};
+  const C={sitework:'#e8590c',exterior:'#e8590c',complete:'#2f9e44',foundation:'#e8590c',framing:'#e8590c',dried_in:'#e8590c',finishing:'#e8590c',market:'#2f9e44',active_single:'#2f9e44',active_split:'#2f9e44',permit:'#868e96'};
   if(state.tags.market)state.tags.market.name='Finished on Market';
   for(const k in C){ if(state.tags[k]) state.tags[k].color=C[k]; }
   state._colorSeed=COLOR_SEED; save();
@@ -639,7 +639,7 @@ if((state._colorSeed||0)<COLOR_SEED){
 // ---- promote: permit pins logged into inventory leave the hidden permit layer ----
 const PROMOTE_SEED=1;
 if((state._promoteSeed||0)<PROMOTE_SEED){
-  const PH=['foundation','framing','dried_in','finishing','market'];
+  const PH=['sitework','foundation','framing','dried_in','exterior','finishing','market'];
   for(const id in state.points){const t=state.points[id].tags||[];
     if(t.includes('permit') && (PH.some(p=>t.includes(p))||t.includes('active_single')||t.includes('active_split')))
       state.points[id].tags=t.filter(x=>x!=='permit');}
@@ -651,7 +651,7 @@ if((state._mergeSeed||0)<MERGE_SEED){
   for(const id in state.points){const t=state.points[id].tags||[];
     if(t.includes('just_started')) state.points[id].tags=[...new Set(t.map(x=>x==='just_started'?'foundation':x))];}
   if(state.tags.just_started) delete state.tags.just_started;
-  if(state.tags.foundation){state.tags.foundation.name='Just Started / Foundation';state.tags.foundation.color='#e8590c';}
+  if(state.tags.foundation){state.tags.foundation.name='Foundation';state.tags.foundation.color='#e8590c';}
   state._mergeSeed=MERGE_SEED; save();
 }
 
@@ -707,7 +707,7 @@ const pinColor=id=>{const t=pt(id).tags;
   if(t.includes('off_market_single'))return (state.tags.off_market_single||{}).color||'#8a8f98';
   if(t.includes('off_market_split'))return (state.tags.off_market_split||{}).color||'#5f636b';
   if(t.includes('listed')||t.includes('market'))return t.includes('market')?GROUP_C.act:GROUP_C.act_uc;
-  for(const p of ['finishing','dried_in','framing','foundation'])if(t.includes(p))return (byId[id]&&byId[id].prod==='Common Driveway')?GROUP_C.cd:(t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single);
+  for(const p of ['finishing','exterior','dried_in','framing','foundation','sitework'])if(t.includes(p))return (byId[id]&&byId[id].prod==='Common Driveway')?GROUP_C.cd:(t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single);
   if(t.includes('built'))return GROUP_C.pmt;
   if(t.includes('deed'))return GROUP_C.deed;
   if(t.includes('permit'))return GROUP_C.pmt;
@@ -735,10 +735,13 @@ function inspStatusColor(s){return s==='Passed'?'#2f9e44':s==='Failed'?'#e03131'
 // types kept in foundation (they happen pre-pour). Built from the live 99-type
 // vocabulary across all 238 scraped permits.
 const INSP_PHASE=[
+  [/fdn[ -]*wood|fdn[ -]*insul/i,'framing'],
+  [/nail pattern|nailing|fire[ -]?wall/i,'exterior'],
   [/brick ties?|\btci\b/i,null], // no structural evidence: arbitrarily timed brick ties / temporary power
   [/1035[ -]*frame|^frame$|rough in|^rough$|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b/i,'finishing'],
   [/makeup (?:foundation|fdn)|\b(?:form|frm)\b/i,'foundation'],
-  [/sawpole|saw pole|pole final/i,'foundation'], // temp power pole = job start, pre-slab
+  [/precon|pre-?fill|sewer|invert|bedding|flowable|bore|manhole|pipe instal|mandrel|utility|apron|flatwork|ele grnd|grnd insp|ditch ?cover|trench cover/i,'sitework'],
+  [/sawpole|saw pole|pole final/i,'sitework'], // temp power pole = job start, pre-slab
   // Site / civil / utility work certifies nothing about the house above the slab, so it can never
   // sit above foundation: P1..P5 FINAL + STORM SEWER are the public-works tie-in finals, Site Final /
   // EC = erosion control, Flood Final = elevation cert, TEMP GAS = meter set, WATER SERVICE = yard
@@ -746,7 +749,7 @@ const INSP_PHASE=[
   // Must precede every generic FINAL / COVER / gas rule below. 2026-09-01 street audit: P1 FINAL was
   // reading as Finishing on foundation-stage homes (710 Waverly, 835 Lawrence), WATER SERVICE as
   // Framing (832 E 27th), 2nd EC as Dried-In (1008 E 28th, 1306 W 24th).
-  [/\bp\d ?final\b|site final|flood final|temp gas|storm sewer|culvert|driveway|sidewalk|\bww final\b|\bsw final\b|\bec\b|water service|slab cover|punch list|restoration/i,'foundation'],
+  [/\bp\d ?final\b|site final|flood final|temp gas|storm sewer|culvert|driveway|sidewalk|\bww final\b|\bsw final\b|\bec\b|water service|slab cover|punch list|restoration/i,'sitework'],
   [/elect final|gas final|cc final|add el final|\bv\d final\b|\bc\d final\b|ac final|mech(?:anical)? final|plumb(?:ing)? final/i,'finishing'],
   [/certificate of occupancy|\bc\.?o\.?\b|building final|struct(?:ural)? final|final building|\bfinal\b|\btci\b|reconnect|visitab/i,'market'],
   [/insulation|shower pan|lath|grille|duct seal|egress|sfr kitchen|tree\/shrub|sprinkler|decor/i,'finishing'],
@@ -754,18 +757,22 @@ const INSP_PHASE=[
   [/ditch ?cover|trench cover/i,'foundation'],
   // Framed / Drying-In (F4, 2026-09-01): WINDSTORM is the entry point - the windstorm engineer certifies the
   // structure is complete, after which the house dries in and gets siding (street audit: siding 1-4 wks later).
-  // COVER / house wrap land in the same bucket. Rough trades alone are NOT dried-in.
-  [/windstorm|windstrom|\bcover\b|building ?wrap|house ?wrap|weather ?barrier|sheathing cover/i,'dried_in'],
+  // Trade COVER rows do not certify a closed structural shell.
+  [/windstorm|windstrom/i,'dried_in'],
   // Rough-trades (rough in, top out, gas rough) are the tail end of FRAMING, not dried-in.
   [/rough in|top out|gas test|gas insp|rough electric|rough plumb|rough mech|mechanical rough|\bac rough\b|frame|framing|\brough\b|nail pattern|nailing|brick tie|sheath|fire ?wall|1035/i,'framing'],
   [/1031|fdn|foundation|ground in|ele grnd|grnd insp|\bground\b|slab|piers?|t-beam|footing|sewer|invert|bedding|fill|flowable|bore|manhole|pipe instal|mandrel|utility|precon|prefill|pre-?fill|apron|flatwork|building layout|layout|form survey/i,'foundation'],
-  [/electric|plumb|mechanic|\bac\b|\bev\b/i,'dried_in'],
+  // Unrecognized trade names are not structural-stage evidence.
 ];
-const PHASE_RANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5,complete:6};
-function inspPhase(type){for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;}
+const PHASE_RANK={sitework:0.5,foundation:1,framing:2,dried_in:3,exterior:3.5,finishing:4,market:5,complete:6};
+function inspPhase(type,row){
+  // Legacy rows without raw status cannot prove full FDN approval.
+  if(/1031|fdn[ -]*pm/i.test(type||''))return row&&/^approved$/i.test(row.raw||'')?'framing':'foundation';
+  for(const [re,ph] of INSP_PHASE){if(re.test(type||''))return ph;}return null;
+}
 function structuralFinal(ins){
   return (ins&&ins.inspections||[]).filter(it=>/pass/i.test(it.result||'')&&
-    /\bstruct(?:ural)?[ -]+final\b/i.test(it.type||'')&&inspPhase(it.type)==='market')
+    /\bstruct(?:ural)?[ -]+final\b/i.test(it.type||'')&&inspPhase(it.type,it)==='market')
     .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))[0]||null;
 }
 function inspectionEta(r,now=new Date()){
@@ -795,7 +802,11 @@ function etaText(r){
 }
 // Popup order: newest first. The feed stores rows in COH grid order (grouped by sub-permit, not by
 // date), so a plain reverse() surfaced pre-con civil rows and hid the recent ones behind '+N earlier'.
-function inspSorted(ins){return ((ins&&ins.inspections)||[]).slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));}
+function inspectionDisplayDate(ins,it){
+  if(structuralFinal(ins)&&/insulation|1031[ -]*fdn|fire[ -]?wall|rough in|nail pattern|sewer/i.test(it.type||''))return '';
+  return it.date||'';
+}
+function inspSorted(ins){return ((ins&&ins.inspections)||[]).slice().sort((a,b)=>inspectionDisplayDate(ins,b).localeCompare(inspectionDisplayDate(ins,a)));}
 // Display-layer annotations (2026-09-01). Never change a stage or a count.
 function inspAnnotations(r,ins){
   const out={notes:[],last:''}; if(!ins)return out;
@@ -810,10 +821,10 @@ function inspAnnotations(r,ins){
     // FDN package = the structural foundation inspections only; civil/site rows (EC, storm sewer, driveway,
     // P1 FINAL...) also map to foundation but say nothing about when the slab was poured.
     const FDN_PKG=/1031|fdn|foundation|piers?|slab|footing|t-beam|ground in|ele grnd|grnd insp|form survey|layout/i;
-    const fdn=passed.filter(it=>inspPhase(it.type)==='foundation'&&FDN_PKG.test(it.type)).map(it=>it.date).sort().pop();
-    const anyFraming=rows.some(it=>(_PHRANK[inspPhase(it.type)]||0)>=_PHRANK.framing);
+    const fdn=passed.filter(it=>inspPhase(it.type,it)==='foundation'&&FDN_PKG.test(it.type)).map(it=>it.date).sort().pop();
+    const anyFraming=rows.some(it=>(_PHRANK[inspPhase(it.type,it)]||0)>=_PHRANK.framing);
     if(fdn&&days(fdn)>21&&!anyFraming)out.notes.push('framing likely underway');}
-  for(const t of new Set(rows.filter(it=>/pend/i.test(it.result||'')).map(it=>it.type)))out.notes.push(t+' inspection scheduled');
+  for(const t of new Set(rows.filter(it=>/pend/i.test(it.result||'')&&(!it.raw||/schedul|request|pending/i.test(it.raw))).map(it=>it.type)))out.notes.push(t+' inspection scheduled');
   const last=rows.filter(it=>it.date&&!/pend/i.test(it.result||'')).map(it=>it.date).sort().pop();
   if(last){const d=days(last),w=Math.floor(d/7);out.last='Last inspection: '+(d<7?d+' day'+(d===1?'':'s'):w+' week'+(w===1?'':'s'))+' ago';}
   return out;}
@@ -822,22 +833,15 @@ function inspToPhase(ins){
   // Construction is monotonic: passed insulation means the house is framed and dried-in,
   // no matter what civil paperwork (ground-in, culvert, storm sewer) posts afterwards.
   // Failed and scheduled inspections never count (a failed Site Final is not completion).
-  // Stale-history guard: a passed inspection >18 months older than the permit's newest
-  // passed inspection belongs to a previous life of the permit (abandoned start, re-permit)
-  // and must not set phase — e.g. a stray 2022 CC FINAL on a home framing in 2026.
   if(structuralFinal(ins))return 'complete';
-  const rows=(ins.inspections||[]).filter(it=>it.type && /pass/i.test(it.result||''));
-  if(!rows.length)return null;
-  const latest=rows.map(it=>it.date||'').sort().pop();
-  const cut=latest?new Date(new Date(latest+'T00:00:00')-548*864e5).toISOString().slice(0,10):null;
-  const live=cut?rows.filter(it=>!it.date||it.date>=cut):rows;
+  const live=(ins.inspections||[]).filter(it=>it.type&&/pass/i.test(it.result||''));
   let best=null,bestR=0;
-  for(const it of live){const p=inspPhase(it.type);if(p&&_PHRANK[p]>bestR){best=p;bestR=_PHRANK[p];}}
+  for(const it of live){const p=inspPhase(it.type,it);if(p&&_PHRANK[p]>bestR){best=p;bestR=_PHRANK[p];}}
   return best;
 }
 // Project-level rollup: units built together (same base address / shared master
 // permit) advance together, so a multi-unit project's phase is its FURTHEST unit.
-const _PHRANK={foundation:1,framing:2,dried_in:3,finishing:4,market:5,complete:6};
+const _PHRANK=PHASE_RANK;
 function projectBaseKey(r){
   return (r.a||'').toLowerCase().replace(/,.*$/,'')
     .replace(/unit\s*#?\s*[a-z0-9]+\s*$/i,'').replace(/\s[a-f]\s*$/i,'').replace(/^(\d+)[a-f]\s/i,'$1 ')
@@ -861,7 +865,7 @@ function projectPhase(){
 // Evidence rule (2026-09-01): a construction stage exists only when a passed inspection certifies it.
 // Notes, inventory drives, lifecycle timers and stale shared edits display as notes, never as stage.
 // Ungated: runs on every load, after seeding and again after the remote merge (same cadence as promotions).
-const BUILD_PHASES_EV=['foundation','framing','dried_in','finishing','complete'];
+const BUILD_PHASES_EV=['sitework','foundation','framing','dried_in','exterior','finishing','complete'];
 function stripUnevidencedStage(r){
   const p=pt(r.id); const before=p.tags.join('|');
   p.tags=p.tags.filter(t=>!BUILD_PHASES_EV.includes(t));
@@ -884,10 +888,10 @@ function applyInspectionPromotions(){
       continue;}
     const ins=inspForPin(r); if(!ins){ if(stripUnevidencedStage(r))changed=true; continue; }
     let ph=inspToPhase(ins);
-    const _pk=projectBaseKey(r); const _pr=['market','complete'].includes(PROJ[_pk])?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>_PHRANK[ph||'foundation'])ph=_pr;
+    const _pk=projectBaseKey(r); const _pr=['market','complete'].includes(PROJ[_pk])?'finishing':PROJ[_pk]; if(_pr&&_PHRANK[_pr]>(_PHRANK[ph]||0))ph=_pr;
     if(ph==='market'&&!(r.kind==='active'&&r.v!==undefined)){
       // completed but not listed: recent final = imminent supply; old final = built & gone
-      const mk=(ins.inspections||[]).filter(it=>it.type&&/pass/i.test(it.result||'')&&it.date&&inspPhase(it.type)==='market')
+      const mk=(ins.inspections||[]).filter(it=>it.type&&/pass/i.test(it.result||'')&&it.date&&inspPhase(it.type,it)==='market')
         .map(it=>it.date).sort().pop();
       const ageMo=mk?((new Date())-new Date(mk+'T00:00:00'))/(30.44*24*3600e3):99;
       ph=(ageMo<=6)?'finishing':'built';
@@ -1133,14 +1137,15 @@ function popupHTML(r){
      h+='<div class="permit insp"><div class="lbl-row"><span class="lbl">Inspections</span>';
      h+='<span class="ptag" style="background:'+inspStatusColor(ins.status)+';color:#0d0c0b">'+esc(ins.status||'—')+'</span></div>';
      if(ins.updated)h+='<div class="pmeta"><span>Updated '+esc(ins.updated)+'</span><span>#'+esc(ins.proj)+'</span></div>';
-     {const pp=pt(r.id); if(pp.inspPromoted){const ph=pp.tags.find(t=>['foundation','framing','dried_in','finishing','market'].includes(t));
+     {const pp=pt(r.id); if(pp.inspPromoted){const ph=pp.tags.find(t=>['complete','sitework','foundation','framing','dried_in','exterior','finishing','market'].includes(t));
        const lbl=ph==='market'?'Finished on Market':(state.tags[ph]&&state.tags[ph].name)||ph;
        h+='<div class="insppromo">▲ '+esc(lbl)+' — furthest stage certified by a passed inspection</div>';}}
      {const an=inspAnnotations(r,ins); if(an.last)h+='<div class="pmeta"><span>'+esc(an.last)+'</span></div>';}
+     if(ins.final_project_inspection_outstanding===true)h+='<div class="pmeta">City: Final Project Inspection is Outstanding</div>';
      const list=inspSorted(ins); // newest first; '+N earlier' hides only the oldest rows
      if(list.length){h+='<div class="insprows">';
-       for(const it of list.slice(0,8)){const c=inspStatusColor(it.result);
-         h+='<div class="insprow"><span class="idot" style="background:'+c+'"></span><span class="ity">'+esc(it.type||'')+'</span><span class="idate">'+esc(it.date||'')+'</span><span class="ires" style="color:'+c+'">'+esc(it.result||'')+'</span></div>';}
+       for(const it of list.slice(0,8)){const c=inspStatusColor(/partial/i.test(it.raw||'')?'Partial':it.result);
+         h+='<div class="insprow"><span class="idot" style="background:'+c+'"></span><span class="ity">'+esc(it.type||'')+(it.permit_type?' · '+esc(it.permit_type):'')+'</span><span class="idate">'+esc(inspectionDisplayDate(ins,it)||(it.date?'date restamped':''))+'</span><span class="ires" style="color:'+c+'">'+esc(it.raw||it.result||'')+'</span></div>';}
        h+='</div>'; if(list.length>8)h+='<div class="pmeta"><span>+'+(list.length-8)+' earlier</span></div>';
      } else h+='<div class="pmeta"><span>No inspection records yet</span></div>';
      h+='</div>';
@@ -1160,7 +1165,7 @@ function popupHTML(r){
     if((tid==='active_single'||tid==='active_split')&&!(p.tags.includes('listed')||p.tags.includes('market')))continue;
     h+='<span class="pchip" style="background:'+t.color+'">'+esc(t.name)+(VIEWER?'':'<span class="x" data-rm="'+esc(tid)+'">&times;</span>')+'</span>';}
   if(!VIEWER){const avail=Object.keys(state.tags).filter(tid=>!p.tags.includes(tid));
-   const PHX=['foundation','framing','dried_in','finishing','market'];const grp={type:[],phase:[],intel:[],other:[]};
+   const PHX=['complete','sitework','foundation','framing','dried_in','exterior','finishing','market'];const grp={type:[],phase:[],intel:[],other:[]};
    avail.forEach(tid=>{if(tid==='active_single'||tid==='active_split')grp.type.push(tid);else if(PHX.includes(tid))grp.phase.push(tid);else if(tid==='permit')grp.intel.push(tid);else grp.other.push(tid);});
    const og=(lbl,arr)=>arr.length?'<optgroup label="'+lbl+'">'+arr.map(tid=>'<option value="'+esc(tid)+'">'+esc(state.tags[tid].name)+'</option>').join('')+'</optgroup>':'';
    h+='<select class="addtag" data-add="1"><option value="">+ tag…</option>'+og('Type',grp.type)+og('Phase',grp.phase)+og('Market Intel',grp.intel)+og('Other',grp.other)+'</select>';}
@@ -1185,7 +1190,7 @@ function popupHTML(r){
    h+='</select></div>';
    h+='<div class="cell"><div class="lbl">Edit \u00b7 Stage</div><select class="addtag" style="width:100%" data-setstage>';
    const curS=(pt(r.id).tags||[]).find(t=>PHASE_SEQ.indexOf(t)>=0)||'';
-   [['','(none)'],['foundation','Foundation'],['framing','Framing'],['dried_in','Framed / Drying-In'],['finishing','Interior Finishing'],['market','On Market']].forEach(o=>{h+='<option value="'+o[0]+'"'+(curS===o[0]?' selected':'')+'>'+o[1]+'</option>';});
+   [['','(none)'],['sitework','Sitework / Pre-Pour'],['foundation','Foundation'],['framing','Framing'],['dried_in','Framed / Drying-In'],['exterior','Exterior Close-In'],['finishing','Interior Finishing'],['market','On Market'],['complete','Complete']].forEach(o=>{h+='<option value="'+o[0]+'"'+(curS===o[0]?' selected':'')+'>'+o[1]+'</option>';});
    h+='</select></div>';
    if(r._pairKey)h+='<button class="btn" data-unpair="'+esc(r._pairKey)+'">Unpair \u00b7 show as 2 pins</button>';
    h+='<div class="lbl" style="letter-spacing:.08em">drag pin to move \u00b7 <span class="qnote-lk" data-exportedits>copy all edits (send to Tega)</span></div>';
@@ -1217,8 +1222,8 @@ map.on('popupclose',()=>{const tb=document.getElementById('tabs');if(tb)tb.class
 const activeF=new Set();
 let VIEWER=true; // read-only by default; EDIT button (top right) flips this live
 const collapsed=new Set();
-const PHASE_TAGS=['complete','foundation','framing','dried_in','finishing','market'];
-const PHASE_DEF={complete:['Complete','#2f9e44'],foundation:['Just Started / Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Framed / Drying-In','#d7b13a'],finishing:['Interior Finishing','#0ca678'],market:['Finished on Market','#2f9e44']};
+const PHASE_TAGS=['complete','sitework','foundation','framing','dried_in','exterior','finishing','market'];
+const PHASE_DEF={sitework:['Sitework / Pre-Pour','#b77936'],exterior:['Exterior Close-In','#a6b83a'],complete:['Complete','#2f9e44'],foundation:['Foundation','#e8590c'],framing:['Framing','#f59f00'],dried_in:['Framed / Drying-In','#d7b13a'],finishing:['Interior Finishing','#0ca678'],market:['Finished on Market','#2f9e44']};
 function ensureTags(){let ch=false;PHASE_TAGS.forEach(p=>{if(!state.tags[p]){state.tags[p]={name:PHASE_DEF[p][0],color:PHASE_DEF[p][1]};ch=true;}
   else if(state.tags[p].name!==PHASE_DEF[p][0]){state.tags[p].name=PHASE_DEF[p][0];ch=true;}});if(ch)save();} // PHASE_DEF names win over cached localStorage names (renames reach returning visitors)
 function tagCount(tid){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(!t.includes(tid))continue;
@@ -1227,7 +1232,7 @@ function tagCount(tid){let n=0;for(const id in state.points){if(!mById[id])conti
 const TY2K={active_single:'Single Lot',active_split:'Split Lot',active_cd:'Common Driveway',off_market_single:'Single Lot (Off Market)',off_market_split:'Split Lot (Off Market)'};
 function typeKeyOf(id){const r=byId[id];return r?prodKeyR(r):null;}
 function comboCount(a,b){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(typeKeyOf(id)!==TY2K[a])continue;const bld=BUILD_PHASES.some(p=>t.includes(p));if(!bld)continue;if(b==='onmkt'){if(_mkted(t))n+=UW(id);}else{if(t.includes(b)&&!_mkted(t))n+=UW(id);}}return n;}
-const BUILD_PHASES=['foundation','framing','dried_in','finishing'];
+const BUILD_PHASES=['sitework','foundation','framing','dried_in','exterior','finishing'];
 const _mkted=t=>t.includes('listed')||t.includes('market');
 function ucCount(){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
 function ucTypeCount(ty){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(typeKeyOf(id)===TY2K[ty]&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
@@ -1235,7 +1240,7 @@ function ucNCCount(){let n=0;for(const id in state.points){if(!mById[id])continu
 function mktCount(){return tagCount('market');}
 function listedCount(){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
 function listedTypeCount(k){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p))&&typeKeyOf(id)===k)n+=UW(id);}return n;}
-function listedReadyCount(k,ready){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(!t.includes('listed')||typeKeyOf(id)!==k)continue;const r=t.includes('market');if(r===ready)n+=UW(id);}return n;}
+function listedReadyCount(k,ready){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(!t.includes('listed')||typeKeyOf(id)!==k)continue;const r=t.includes('market')||t.includes('complete');if(r===ready)n+=UW(id);}return n;}
 function deedCount(){return tagCount('deed');}
 function readyTypeCount(sp){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
 function readyFinCount(sp,pu){let n=0;for(const id in state.points){if(!mById[id])continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp)&&(t.includes('punch')===pu))n+=UW(id);}return n;}
@@ -1247,7 +1252,7 @@ function matchSel(tags,k,id){
   if(k==='UCT:nc')return bld&&!typeKeyOf(id);
   if(k.slice(0,4)==='UCT:'){const ty=k.slice(4);return typeKeyOf(id)===TY2K[ty]&&bld;}
   if(k.slice(0,3)==='RT:'){const kk={single:'Single Lot',split:'Split Lot',cd:'Common Driveway'}[k.slice(3)];return _mkted(tags)&&!bld&&typeKeyOf(id)===kk;}
-  if(k.slice(0,3)==='RF:'){const pr=k.slice(3).split(':');const kk={single:'Single Lot',split:'Split Lot',cd:'Common Driveway'}[pr[0]];const ready=tags.includes('market');return tags.includes('listed')&&typeKeyOf(id)===kk&&((pr[1]==='ready')===ready);}
+  if(k.slice(0,3)==='RF:'){const pr=k.slice(3).split(':');const kk={single:'Single Lot',split:'Split Lot',cd:'Common Driveway'}[pr[0]];const ready=tags.includes('market')||tags.includes('complete');return tags.includes('listed')&&typeKeyOf(id)===kk&&((pr[1]==='ready')===ready);}
   if(k.slice(0,2)==='T:'||k.slice(0,2)==='L:'){const tid=k.slice(2);
     if(tid.indexOf('off_market')===0&&tags.includes('pending'))return false; // pending never filters as Off Market
     return tags.includes(tid);}
@@ -1522,10 +1527,10 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{omF
 })();
 
 // ---- dashboards (Overview + Timeline) ----
-const PHASE_ORDER=['complete','foundation','framing','dried_in','finishing','market'];
-const PHASE_MONTHS={foundation:8,framing:6,dried_in:4,finishing:2,market:0};
+const PHASE_ORDER=['complete','sitework','foundation','framing','dried_in','exterior','finishing','market'];
+const PHASE_MONTHS={sitework:9,foundation:8,framing:6,dried_in:4,exterior:4,finishing:2,market:0};
 // A permit pin that inspections promoted carries a real phase tag; treat it like a tracked pin.
-function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['complete','foundation','framing','dried_in','finishing','market'].includes(x));}
+function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['complete','sitework','foundation','framing','dried_in','exterior','finishing','market'].includes(x));}
 function inPipeline(r){return r.kind!=='permit'||isPromotedPermit(r);}
 function primaryStage(pid){const t=(state.points[pid]||{}).tags||[];
   if(t.includes('built')) return null; // completed long ago, not pipeline supply
@@ -1541,7 +1546,7 @@ function monthsLeft(pid){const r=byId[pid]||{};
   // ready homes: 0 (punch list: 1)
   if(t.includes('market')) return t.includes('punch')?1:0;
   // under construction: NEVER "available now" — future comp date wins, overdue comp falls back to phase estimate
-  const ph=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
+  const ph=['finishing','exterior','dried_in','framing','foundation','sitework'].find(p=>t.includes(p));
   if(ph){ if(compM!==null&&compM>0) return compM; return Math.max(1,(PHASE_MONTHS[ph]!==undefined?PHASE_MONTHS[ph]:1)); }
   if(s==='active_single'||s==='active_split') return (compM!==null&&compM>0)?compM:0;
   if(compM!==null) return Math.max(0,compM);
@@ -1552,8 +1557,8 @@ function stageColor(s){ return state.tags[s]?state.tags[s].color:'#8c857a';}
 // online (reach market) within a given window, and what phase is
 // everything in right now. Built on inspection-driven phases.
 // ============================================================
-const PHASE_LABELS={complete:'Complete',foundation:'Foundation',framing:'Framing',dried_in:'Framed / Drying-In',finishing:'Interior Finishing',market:'Active'};
-const PHASE_SEQ=['complete','foundation','framing','dried_in','finishing','market'];
+const PHASE_LABELS={sitework:'Sitework / Pre-Pour',exterior:'Exterior Close-In',complete:'Complete',foundation:'Foundation',framing:'Framing',dried_in:'Framed / Drying-In',finishing:'Interior Finishing',market:'Active'};
+const PHASE_SEQ=['complete','sitework','foundation','framing','dried_in','exterior','finishing','market'];
 
 // Every home currently in the construction pipeline (tracked builds + inspection-promoted permits).
 function pipelineHomes(){
@@ -1574,7 +1579,7 @@ function homePhase(pid){
 
 // Count of homes by phase — the "what phase is everything in" snapshot.
 function phaseBreakdown(){
-  const out={foundation:0,framing:0,dried_in:0,finishing:0,market:0};
+  const out={complete:0,sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0,market:0};
   for(const r of pipelineHomes()){const p=homePhase(r.id); if(p&&out[p]!==undefined)out[p]+=UW(r.id);}
   return out;
 }
@@ -1602,7 +1607,7 @@ function stageName(s){ return state.tags[s]?state.tags[s].name:s;}
 function txtOn(hex){const c=(hex||'#888').replace('#','');const r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#1a1a1a':'#fff';}
 function buildOverview(){
   const bd=phaseBreakdown();
-  const uc=(bd.foundation||0)+(bd.framing||0)+(bd.dried_in||0)+(bd.finishing||0);
+  const uc=BUILD_PHASES.reduce((n,p)=>n+(bd[p]||0),0);
   const ready=bd.market||0;
   const within12=comingOnline(12).count;
   const permitN=DATA.filter(r=>r.kind==='permit'&&!isPromotedPermit(r)).length;
@@ -1624,9 +1629,9 @@ function buildOverview(){
   h+='</div></div>';
 
   // CONSTRUCTION PIPELINE: 5 phase circles
-  h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>FOUNDATION → READY · '+(uc+ready)+' HOMES</span></div>';
+  h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>SITEWORK → READY · '+(uc+ready)+' HOMES</span></div>';
   h+='<div class="ovx-pipe">';
-  const pipeDefs=[['foundation','FOUNDATION','inspection-based ETA'],['framing','FRAMING','inspection-based ETA'],['dried_in','DRIED-IN','inspection-based ETA'],['finishing','FINISHING','inspection-based ETA'],['market','READY','on market']];
+  const pipeDefs=[['sitework','SITEWORK / PRE-POUR','inspection-based ETA'],['foundation','FOUNDATION','inspection-based ETA'],['framing','FRAMING','inspection-based ETA'],['dried_in','FRAMED / DRYING-IN','inspection-based ETA'],['exterior','EXTERIOR CLOSE-IN','inspection-based ETA'],['finishing','INTERIOR FINISHING','inspection-based ETA'],['market','READY','on market']];
   pipeDefs.forEach(([k,lbl,sub],i)=>{
     h+='<div class="ovx-node'+(i<pipeDefs.length-1?' line':'')+'"><div class="dot" style="background:'+PH_C[k]+'">'+(bd[k]||0)+'</div><div class="nl">'+lbl+'</div><div class="ns">'+sub+'</div></div>';
   });
@@ -1747,7 +1752,7 @@ function switchTab(t){
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.t)));
 // ---- ASK: AI layer ----
 function askContext(){
-  const PH=['market','finishing','dried_in','framing','foundation'];
+  const PH=['complete','market','finishing','exterior','dried_in','framing','foundation','sitework'];
   const now=new Date();
   // addresses (project-normalized) that have ANY permit / construction activity
   const activeKeys=new Set();
@@ -1764,7 +1769,8 @@ function askContext(){
       continue;
     }
     let grp;const listed=isListedR(r);
-    if(listed){grp=ph==='market'?'active_on_market_READY':'active_on_market_UNDER_CONSTRUCTION';agg.active_on_market++;const pd=r.prod||prodKeyR(r)||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;if(ph==='market')agg.active_ready=(agg.active_ready||0)+1;else agg.active_still_building=(agg.active_still_building||0)+1;}
+    if(listed){grp=['market','complete'].includes(ph)?'active_on_market_READY':'active_on_market_UNDER_CONSTRUCTION';agg.active_on_market++;const pd=r.prod||prodKeyR(r)||'Unknown';agg.market_by_product[pd]=(agg.market_by_product[pd]||0)+1;if(['market','complete'].includes(ph))agg.active_ready=(agg.active_ready||0)+1;else agg.active_still_building=(agg.active_still_building||0)+1;}
+    else if(ph==='complete'){grp='complete';agg.complete=(agg.complete||0)+1;}
     else if(t.includes('built')){grp='built_not_listed';agg.built_not_listed=(agg.built_not_listed||0)+1;}
     else if(ph&&ph!=='market'){grp='under_construction';agg.under_construction++;const pd=r.prod||prodKeyR(r)||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
     else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
@@ -1775,23 +1781,23 @@ function askContext(){
   }
   // cross-tabs matching the sidebar exactly (tag-based grouping)
   const active_breakdown={'Single Lot':{move_in_ready:0,still_building:0},'Split Lot':{move_in_ready:0,still_building:0},'Common Driveway':{move_in_ready:0,still_building:0}};
-  const uc_breakdown={'Single Lot':{foundation:0,framing:0,dried_in:0,finishing:0},'Split Lot':{foundation:0,framing:0,dried_in:0,finishing:0},'Common Driveway':{foundation:0,framing:0,dried_in:0,finishing:0}};
+  const uc_breakdown={'Single Lot':{sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0},'Split Lot':{sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0},'Common Driveway':{sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0}};
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     const key=prodKeyR(r);
     if(!key)continue;
-    const phx=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
-    if(t.includes('listed')){if(t.includes('market'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
+    const phx=['finishing','exterior','dried_in','framing','foundation','sitework'].find(p=>t.includes(p));
+    if(t.includes('listed')){if(t.includes('market')||t.includes('complete'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
     else if(phx)uc_breakdown[key][phx]++;}
   agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
   // Phase cohorts describe present construction evidence. Completion estimates use
   // inspection-date anchors; overdue homes have unknown remaining time, never ready-now.
-  const COHORT_RANGE={finishing:'0-3mo',dried_in:'3-5mo',framing:'5-7mo',foundation:'7-9mo'};
-  const mk=()=>({ready_now:0,by_phase_cohort:{finishing:0,dried_in:0,framing:0,foundation:0},cohort_ranges:COHORT_RANGE,done_within:{}});
+  const COHORT_RANGE={finishing:'anchor-dependent',exterior:'anchor-dependent',dried_in:'anchor-dependent',framing:'anchor-dependent',foundation:'anchor-dependent',sitework:'anchor-dependent'};
+  const mk=()=>({ready_now:0,by_phase_cohort:{finishing:0,exterior:0,dried_in:0,framing:0,foundation:0,sitework:0},cohort_ranges:COHORT_RANGE,done_within:{}});
   const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'Common Driveway':mk(), 'ALL':mk() };
   for(const r of DATA){const t=(state.points[r.id]||{}).tags||[];
     if(t.includes('deed'))continue;
     const ml=monthsLeft(r.id);if(ml===null||ml===undefined)continue;
-    const ph=['finishing','dried_in','framing','foundation'].find(p=>t.includes(p));
+    const ph=['finishing','exterior','dried_in','framing','foundation','sitework'].find(p=>t.includes(p));
     const key=prodKeyR(r);
     for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
       if(ml<=0||t.includes('market'))f.ready_now+=UW(r.id);
@@ -1866,8 +1872,8 @@ document.getElementById('askGo').addEventListener('click',askSend);
 document.getElementById('askIn').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();askSend();}});
 
 // ===== Supply snapshot card + Ready-within toggle (real data) =====
-const PH_C={complete:'#2f9e44',foundation:'#e8590c',framing:'#f59f00',dried_in:'#d7b13a',finishing:'#3a9d8f',market:'#2f9e44'};
-const PH_ABBR=[['foundation','FDN'],['framing','FRM'],['dried_in','DRY'],['finishing','FIN'],['market','RDY']];
+const PH_C={sitework:'#b77936',exterior:'#a6b83a',complete:'#2f9e44',foundation:'#e8590c',framing:'#f59f00',dried_in:'#d7b13a',finishing:'#3a9d8f',market:'#2f9e44'};
+const PH_ABBR=[['sitework','SITE'],['foundation','FDN'],['framing','FRM'],['dried_in','DRY'],['exterior','EXT'],['finishing','FIN'],['market','RDY'],['complete','DONE']];
 let readyMonths=0; // 0 = off (show all)
 function renderSupplyCard(){
   if(typeof phaseBreakdown!=='function')return;
