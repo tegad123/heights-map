@@ -32,6 +32,9 @@ REAL FLOW (per project number)
        - empty group:        cell0 = "No Inspections To Date"
 
 ACTUAL STATUS WORDING (from the live site)
+  Raw status and permit-type grouping are preserved on each inspection.
+  The page-level outstanding-final banner is preserved on each project.
+
   Approved              -> Passed
   Partial Approval      -> Passed (counts for phase) but flips roll-up to Partial
   Action Required       -> Failed (-> roll-up Partial)
@@ -73,13 +76,13 @@ def normalize_result(raw: str, has_date: bool) -> str:
     s = (raw or "").strip().lower()
     if not s:
         return "Pending"
-    if "approv" in s:           # "Approved" or "Partial Approval"
-        return "Passed"
     if "action required" in s or "correction" in s or "fail" in s or "disapprov" in s:
         return "Failed"
+    if s in ("approved", "partial approval"):
+        return "Passed"
     if "schedul" in s or "request" in s or "pending" in s or not has_date:
         return "Pending"
-    return "Passed" if has_date else "Pending"
+    return "Pending"  # Unknown city statuses must never certify a stage.
 
 
 def is_partial(raw: str) -> bool:
@@ -207,6 +210,7 @@ def _grid_present(page):
 
 def parse_inspections(page):
     rows_out = []
+    permit_type = ""
     body = page.query_selector("table.k-grid-table")
     if not body:
         return rows_out
@@ -219,8 +223,10 @@ def parse_inspections(page):
         c0, c1, c2, c3 = cells[0], cells[1], cells[2], cells[3]
 
         if "display project" in (c3 or "").lower():
+            permit_type = (c0 or "").strip()
             continue
         if "inspection comments" in (c3 or "").lower():
+            permit_type = (c0 or "").strip()
             continue
         if "no inspections to date" in (c0 or "").lower():
             continue
@@ -241,6 +247,7 @@ def parse_inspections(page):
         has_date = bool(parse_date(idate_raw))
         rows_out.append({
             "type": itype,
+            "permit_type": permit_type,
             "date": parse_date(idate_raw),
             "result": normalize_result(status_raw, has_date),
             "raw": status_raw,
@@ -276,14 +283,15 @@ def scrape(permits, delay, headless, limit):
                     page.wait_for_timeout(int(delay * 1000))
                     continue
                 rows = parse_inspections(page)
+                outstanding = bool(re.search(r"Final\s+Project\s+Inspection\s+is\s+Outstanding", page.inner_text("body"), re.I))
                 if rows:
-                    clean = [{k: v for k, v in r.items() if k != "raw"} for r in rows]
                     out[proj] = {
                         "status": roll_up_status(rows),
                         "updated": date.today().isoformat(),
                         "scraped_at": date.today().isoformat(),
                         "address": addr,
-                        "inspections": clean,
+                        "final_project_inspection_outstanding": outstanding,
+                        "inspections": rows,
                     }
                     print(f"[{i}/{len(todo)}] {proj}  {out[proj]['status']:8} "
                           f"{len(rows)} insp  ({addr})")
@@ -296,6 +304,7 @@ def scrape(permits, delay, headless, limit):
                         "updated": date.today().isoformat(),
                         "scraped_at": date.today().isoformat(),
                         "address": addr,
+                        "final_project_inspection_outstanding": outstanding,
                         "inspections": [],
                     }
                     print(f"[{i}/{len(todo)}] {proj}  no inspections yet  ({addr})")
