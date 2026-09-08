@@ -1,8 +1,13 @@
-() => {
+fixtures => {
   const results=[];
   const check=(name,actual,expected)=>{results.push({name,actual,expected,pass:JSON.stringify(actual)===JSON.stringify(expected)});};
   const row=(type,raw='Approved',date='2026-08-01',permit_type='Building Pmt')=>({type,raw,date,permit_type,result:raw==='Approved'||raw==='Partial Approval'?'Passed':'Failed'});
   const phase=rows=>inspToPhase({inspections:rows});
+  for(const fixture of fixtures.synthetic||[]){
+    const actual=phase(fixture.inspections);
+    check(fixture.name,!fixture.forbidden.includes(actual),true);
+    check(fixture.name+' expected stage',actual,fixture.expected);
+  }
   const cases=[['SAWPOLE FINAL','sitework'],['WATER SERVICE','sitework'],['P1 FINAL','sitework'],['2nd EC','sitework'],['STORM SEWER','sitework'],['Precon','sitework'],['GROUND IN','foundation'],['FORM','foundation'],['FRM','foundation'],['MAKEUP FOUNDATION','foundation'],['MAKEUP FDN','foundation'],['FDN-WOOD/INSUL','framing'],['WINDSTORM','dried_in'],['Nail Pattern','exterior'],['FIRE WALL','exterior'],['1035-Frame','finishing'],['ROUGH IN','finishing'],['INSULATION','finishing'],['BRICK TIE',null],['BRICK TIES',null],['TCI',null],['COVER',null],['Electrical Visit',null]];
   for(const [type,expected] of cases){check(type,phase([row(type)]),expected);check(type+' failed',phase([row(type,'Disapproved')]),null);}
   check('Partial FDN',phase([row('1031-FDN PM','Partial Approval')]),'foundation');

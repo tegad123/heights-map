@@ -5,11 +5,11 @@ import argparse, json, pathlib, threading, http.server, functools, sys, datetime
 from playwright.sync_api import sync_playwright
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--output',required=True);ap.add_argument('--baseline',action='store_true');ap.add_argument('--all-markets',action='store_true');ap.add_argument('--url');ap.add_argument('--html-ref');ap.add_argument('--feed-ref');ap.add_argument('--mutant',choices=['completion','eta','exterior']);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--output',required=True);ap.add_argument('--baseline',action='store_true');ap.add_argument('--all-markets',action='store_true');ap.add_argument('--url');ap.add_argument('--html-ref');ap.add_argument('--expect-old',action='store_true');ap.add_argument('--feed-ref');ap.add_argument('--mutant',choices=['completion','eta','exterior','water-service']);args=ap.parse_args()
     handler=functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(ROOT))
     server=http.server.ThreadingHTTPServer(('127.0.0.1',0),handler);threading.Thread(target=server.serve_forever,daemon=True).start()
     fixtures=json.loads((ROOT/'fixtures.json').read_text()); results={}; errors=[]
-    if args.html_ref or args.baseline:
+    if args.expect_old or args.baseline:
         for f in fixtures['properties']:
             f['new_expected']=f['old_expected']
             if 'old_forbidden' in f:f['forbidden']=f['old_forbidden']
@@ -42,7 +42,8 @@ def main():
             expected_hash=hashlib.sha256(expected_body).hexdigest() if expected_body else None
             scripts_match=re.findall(rb'<script\b[^>]*>(.*?)</script>',response.body(),re.S)==re.findall(rb'<script\b[^>]*>(.*?)</script>',expected_body,re.S) if expected_body else None
             if args.mutant:
-                code={'completion':"const original=inspToPhase; inspToPhase=ins=>{const p=original(ins);return p==='complete'?'finishing':p;};",
+                code={'water-service':"const original=inspPhase; inspPhase=(type,row)=>/water service/i.test(type||'')?'framing':original(type,row);",
+                      'completion':"const original=inspToPhase; inspToPhase=ins=>{const p=original(ins);return p==='complete'?'finishing':p;};",
                       'eta':"inspectionEta=r=>({anchor:'bucket default',target:null,months:null,complete:false,overdue:false});",
                       'exterior':"const original=inspPhase; inspPhase=(type,row)=>original(type,row)==='exterior'?'dried_in':original(type,row);"}[args.mutant]
                 page.evaluate('()=>{'+code+'}')
@@ -57,17 +58,17 @@ def main():
                 if(expected==='complete')pass=pass&&html.includes('COMPLETE')&&!html.includes('months to completion')&&!BUILD_PHASES.some(x=>pt(r.id).tags.includes(x));
                 if(f.eta&&expected!=='complete')pass=pass&&html.includes('to completion')&&eta.anchor!=='bucket default';
                 return {...f,actual,eta,months:monthsLeft(r.id),pass};});
-              const counts={};for(const r of DATA){const ph=homePhase(r.id)||'no stage';counts[ph]=(counts[ph]||0)+1;}
+              const counts={},homeCounts={};for(const r of DATA){const ph=homePhase(r.id)||'no stage';counts[ph]=(counts[ph]||0)+1;homeCounts[ph]=(homeCounts[ph]||0)+UW(r.id);}
               const candidates=DATA.filter(r=>BUILD_PHASES.some(x=>pt(r.id).tags.includes(x))).sort((a,b)=>String(a.id).localeCompare(String(b.id)));
               const sample=[];let seed=20260908;const pool=candidates.slice();while(pool.length&&sample.length<10){seed=(seed*1664525+1013904223)>>>0;const r=pool.splice(seed%pool.length,1)[0];sample.push({id:r.id,address:r.a,phase:homePhase(r.id),months:monthsLeft(r.id),eta:typeof inspectionEta==='function'?inspectionEta(r):null});}
               const all_etas=Object.fromEntries(DATA.map(r=>[r.id,{months:monthsLeft(r.id),phase:homePhase(r.id)}]));
-              return {checks,counts,sample,all_etas,uc:ucCount(),deed:deedCount(),phaseBreakdown:phaseBreakdown(),legend:document.getElementById('legend').innerText};
+              return {checks,counts,homeCounts,sample,all_etas,uc:ucCount(),deed:deedCount(),phaseBreakdown:phaseBreakdown(),legend:document.getElementById('legend').innerText};
             }''',fixtures if file.name=='index.html' else {'properties':[]})
             if file.name=='index.html':
                 page.evaluate("window.Date=window.__calibrationRealDate;openPin('2131437296')");page.wait_for_timeout(1000)
                 page.screenshot(path=str(pathlib.Path(args.output).with_suffix('.png')))
             if not args.baseline and 'sitework' in page.evaluate('PHASE_RANK'):
-                result['taxonomy_tests']=page.evaluate((ROOT/'tests/taxonomy_cases.js').read_text())
+                result['taxonomy_tests']=page.evaluate((ROOT/'tests/taxonomy_cases.js').read_text(),fixtures)
                 print('taxonomy tests',sum(x['pass'] for x in result['taxonomy_tests']),'/',len(result['taxonomy_tests']),flush=True)
             result['taxonomy_pins']=page.evaluate("DATA.filter(r=>['sitework','exterior'].includes(homePhase(r.id))).map(r=>({id:r.id,address:r.a,phase:homePhase(r.id),inspections:inspForPin(r)}))")
             result['source_hash']=source_hash

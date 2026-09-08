@@ -1,6 +1,6 @@
 # Calibration Round 2 — 2026-09-08
 
-Shipped to origin main: scraper `f1a2f79`, G1–G4 `4456299`, inspection refresh `eaa5055`. G6 is implemented and tested but held from main: the retained 832 E 27th must-NOT-Framing assertion conflicts with its newly available full FDN approval. No fixture expectation has been silently changed.
+Shipped to origin main: scraper `f1a2f79`, G1–G4 `4456299`, inspection refresh `eaa5055`. G6 is approved for release: the user updated 832 E 27th to Framing on its full FDN approval and replaced the historical prohibition with a durable synthetic WATER SERVICE-only guard.
 
 ## Phase 0: source audit and scraper correction
 
@@ -54,11 +54,11 @@ Inspection vocabulary audit: every observed FINAL-containing type already matche
 
 The user confirmed the historical 22-property list has no file and authorized reconstruction from the named Phase 2 properties and retained assertions. `fixtures.json` contains 12 unit/property assertions, including separate Waverly A/B/C and Voight 1033/1035 checks. This is not a claimed 20/22 reproduction. Merged pins resolve to their rendered project and individual permit evidence is checked too.
 
-Executed `tests/browser_calibration.py --html-ref 4456299 --output /tmp/heights-round2/pass1-refreshed.json`: **12/12**, `page errors: []`. The live site also scored **12/12**.
+Executed `tests/browser_calibration.py --html-ref 4456299 --expect-old --output /tmp/heights-round2/pass1-refreshed.json`: **12/12**, `page errors: []`. The live site also scored **12/12**.
 
-Executed `tests/browser_calibration.py --all-markets --output /tmp/heights-round2/pass2-all.json`: **81/81 taxonomy cases on each of 8 pages**, `page errors: []`; source fixtures **11/12**, with only the explicit 832 expectation conflict below.
+Executed `tests/browser_calibration.py --all-markets --output /tmp/heights-round2/g6-approved.json`: **83/83 taxonomy cases on each of 8 pages**, source fixtures **12/12**, `page errors: []`. All eight markets use the unchanged, previously verified G6 implementation.
 
-| Property | Old expected | G6 expected (not silently remapped) | G6 actual | Result |
+| Property | Old expected | G6 expected | G6 actual | Result |
 |---|---|---|---|---|
 | 112 E 27th | Complete | Complete | Complete | PASS |
 | 609 E 25th | Complete | Complete | Complete | PASS |
@@ -70,14 +70,14 @@ Executed `tests/browser_calibration.py --all-markets --output /tmp/heights-round
 | 710 Waverly A | NOT Interior Finishing, Market, Complete | NOT Interior Finishing, Market, Complete | Foundation | PASS |
 | 710 Waverly B | NOT Interior Finishing, Market, Complete | NOT Interior Finishing, Market, Complete | Foundation | PASS |
 | 710 Waverly C | NOT Interior Finishing, Market, Complete | NOT Interior Finishing, Market, Complete | Foundation | PASS |
-| 832 E 27th | NOT Framing | NOT Framing | Framing | CONFLICT |
+| 832 E 27th | NOT Framing | Framing (user-approved full FDN evidence) | Framing | PASS |
 | 835 Lawrence | NOT Interior Finishing, Market, Complete | NOT Interior Finishing, Market, Complete | Foundation | PASS |
 
-**832 E 27th (#26027027):** refreshed COH evidence is `1031-FDN PM`, `Building Pmt`, `Approved`, `2026-08-28`. The authorized full-G6 rule requires Framing; the retained assertion prohibits Framing. Awaiting the user’s expectation decision. The independent WATER SERVICE-only case remains Sitework and never Framing. There are no supplied street-audit siding descriptions from which to invent additional remaps; exterior coverage uses explicit inspection fixtures.
+**832 E 27th (#26027027):** refreshed COH evidence is `1031-FDN PM`, `Building Pmt`, `Approved`, `2026-08-28`. The user approved Framing under full G6: the September 1 street audit saw foundation four days after pour, and the historical prohibition targeted WATER SERVICE rather than full FDN approval. The replacement synthetic fixture in `fixtures.json` contains only an Approved Building Pmt / WATER SERVICE inspection and asserts both NOT Framing and Sitework. It is independent of 832’s evolving real data. There are no supplied street-audit siding descriptions from which to invent additional remaps; exterior coverage uses explicit inspection fixtures.
 
 ## Mutation results
 
-Executed the same browser harness with `--mutant completion`, `--mutant eta`, and `--mutant exterior`. All mutations were caught by their targeted assertions (not merely by the pre-existing 832 conflict).
+Executed the same browser harness with `--mutant completion`, `--mutant eta`, and `--mutant exterior`. All mutations were caught by their targeted assertions. A fourth mutation, `--mutant water-service`, restores WATER SERVICE → Framing: property fixtures still pass 12/12, while the taxonomy suite drops to 80/83 and both new synthetic assertions fail, alongside the existing WATER SERVICE case.
 
 | Mutant | Targeted observed failures | Taxonomy score |
 |---|---|---|
@@ -108,7 +108,7 @@ Source sanity: Munford insulation July 28 → December 28, 2026 (~3.5 months rem
 
 ## All-market stage counts
 
-Each cell is original → staged G6. Counts are rendered map records after pairing/exclusions, not unit-weighted homes. Unit-weighted `phaseBreakdown`, `ucCount`, and deed counts are retained in `evidence.json`; product grouping was not changed. This table includes inspection refresh effects and taxonomy changes.
+Each cell is original → G6. Counts are rendered map records after pairing/exclusions, not unit-weighted homes. Unit-weighted `phaseBreakdown`, `ucCount`, and deed counts are retained in `evidence.json`; product grouping was not changed. This table includes inspection refresh effects and taxonomy changes.
 
 | Market | Sitework | Foundation | Framing | Framed / Drying-In | Exterior | Interior | Market | Complete | No stage |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -121,7 +121,22 @@ Each cell is original → staged G6. Counts are rendered map records after pairi
 | timbergrove.html | 0 → 1 | 7 → 1 | 0 → 3 | 4 → 3 | 0 → 1 | 19 → 12 | 7 → 7 | 0 → 10 | 1 → 0 |
 | westu.html | 0 → 0 | 5 → 3 | 0 → 3 | 8 → 0 | 0 → 4 | 11 → 11 | 9 → 9 | 0 → 4 | 64 → 63 |
 
-G6 Heights Framing is populated: **10 rendered pins / 14 unit-weighted homes**. Sitework: 8 pins. Exterior Close-In: 25 pins. These staged labels are not yet on main.
+G6 Heights Framing is populated: **10 rendered pins / 11 unit-weighted homes**. Sitework: 8 pins. Exterior Close-In: 25 pins. The final unit-weighted stage counts from the approved release check are below.
+
+
+| Market | Sitework | Foundation | Framing | Framed / Drying-In | Exterior Close-In | Interior Finishing | Market | Complete |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Heights | 8 | 17 | 11 | 4 | 25 | 87 | 31 | 57 |
+| Montrose | 2 | 19 | 14 | 1 | 6 | 37 | 37 | 21 |
+| River Oaks | 0 | 1 | 0 | 1 | 3 | 4 | 5 | 0 |
+| Spring Branch | 0 | 17 | 5 | 1 | 13 | 66 | 56 | 47 |
+| Spring Valley Village | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 0 |
+| Timbergrove / Lazybrook | 1 | 1 | 3 | 3 | 1 | 12 | 7 | 10 |
+| West University | 0 | 4 | 3 | 0 | 4 | 11 | 9 | 6 |
+| Garden Oaks / Oak Forest | 0 | 2 | 3 | 0 | 0 | 10 | 38 | 52 |
+| **Total** | 11 | 61 | 39 | 10 | 52 | 227 | 189 | 193 |
+
+These are unit-weighted homes, matching the map’s stage counts; a paired pin can represent more than one home. Stage counts include listed homes still building. Complete is excluded from under-construction supply.
 
 ## G5 — skipped as instructed
 
@@ -141,11 +156,10 @@ Executed `/Users/nemoclaw/insp-venv/bin/python -B sold_staleness.py`:
 
 `git push origin main` returned `768a1d8..eaa5055 main -> main`. Live source fixtures returned `12 / 12`, `page errors: []`. Netlify rewrites navigation links, so whole-response HTML hashes differ from Git; inline-script equivalence was verified for all eight pages: `live inline script match: True` for every market, including the hand-authored DATA blocks. No direct Netlify deployment API was used.
 
-- Resolve 832’s fixture contradiction before G6 goes to main. The staged G6 implementation and failing assertion are preserved for review; do not weaken the full-approval rule or silently special-case this address.
 - Ambiguous final variants remain unverified and unchanged.
 - Historical mis-normalized statuses cannot be reconstructed from old feeds lacking raw fields; the current fresh audit found no Disapproved rows.
 - `No Action Required` remains the pre-existing Failed normalization; its city semantics need separate verification before changing it.
 - Wire up a separate deed source and provide the missing HAR CSVs for a future G5 run.
 - Spring Valley has no permit input; its inspection refresh remains intentionally disabled.
 
-![Staged G6 preview](g6-preview.png)
+![G6 preview](g6-preview.png)

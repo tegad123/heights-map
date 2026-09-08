@@ -128,11 +128,12 @@
       "property": "832 E 27th",
       "id": "pmt_832-e-27th-st-77009",
       "old_expected": null,
-      "new_expected": null,
-      "source": "User retained must-NOT assertion",
-      "forbidden": [
+      "new_expected": "framing",
+      "source": "User-approved G6 remap: fully Approved Building Pmt / 1031-FDN PM on 2026-08-28, no passed Windstorm. Sep 1 street audit showed foundation four days after pour; the retired prohibition protected against WATER SERVICE promotion.",
+      "old_forbidden": [
         "framing"
-      ]
+      ],
+      "permit": "26027027"
     },
     {
       "property": "835 Lawrence",
@@ -145,6 +146,25 @@
         "market",
         "complete"
       ]
+    }
+  ],
+  "synthetic": [
+    {
+      "name": "WATER SERVICE-only building signal cannot produce Framing",
+      "source": "User replacement for retired 832 E 27th must-NOT assertion",
+      "inspections": [
+        {
+          "type": "WATER SERVICE",
+          "permit_type": "Building Pmt",
+          "date": "2026-09-01",
+          "result": "Passed",
+          "raw": "Approved"
+        }
+      ],
+      "forbidden": [
+        "framing"
+      ],
+      "expected": "sitework"
     }
   ]
 }
