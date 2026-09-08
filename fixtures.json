@@ -1,0 +1,150 @@
+{
+  "provenance": "Reconstructed from user Phase 2 source fixtures and retained must-NOT assertions; not the unavailable historical 22-property set.",
+  "as_of": "2026-09-08",
+  "properties": [
+    {
+      "property": "112 E 27th",
+      "id": "pmt_112-e-27th-st-a-77008",
+      "old_expected": "complete",
+      "new_expected": "complete",
+      "source": "User Phase 2 table",
+      "eta": {
+        "anchor": "Struct Final",
+        "target": "2026-07-07",
+        "months": null
+      }
+    },
+    {
+      "property": "609 E 25th",
+      "id": "act_609-e-25",
+      "old_expected": "complete",
+      "new_expected": "complete",
+      "source": "User Phase 2 table",
+      "eta": {
+        "anchor": "Struct Final",
+        "target": "2026-06-18",
+        "months": null
+      }
+    },
+    {
+      "property": "118 Munford",
+      "id": "2131437296",
+      "old_expected": "finishing",
+      "new_expected": "finishing",
+      "source": "User Phase 2 table",
+      "eta": {
+        "anchor": "INSULATION",
+        "target": "2026-12-28"
+      }
+    },
+    {
+      "property": "711 E 25th A",
+      "id": "pmt_711-e-25th-st-a-77008",
+      "old_expected": "finishing",
+      "new_expected": "finishing",
+      "source": "User Phase 2 table",
+      "eta": {
+        "anchor": "INSULATION",
+        "target": "2027-01-17",
+        "builder_plan": "2026-12-02"
+      }
+    },
+    {
+      "property": "1033 Voight",
+      "id": "pmt_1033-voight-st-77009",
+      "old_expected": "finishing",
+      "new_expected": "finishing",
+      "source": "User Phase 2 table"
+    },
+    {
+      "property": "1035 Voight",
+      "id": "pmt_1035-voight-st-77009",
+      "old_expected": "finishing",
+      "new_expected": "finishing",
+      "source": "User Phase 2 table",
+      "rendered_id": "pmt_1033-voight-st-77009",
+      "permit": "22030748"
+    },
+    {
+      "property": "830 E 26th",
+      "id": "2131194125",
+      "old_expected": null,
+      "new_expected": null,
+      "source": "User retained must-NOT assertion",
+      "forbidden": [
+        "sitework",
+        "foundation",
+        "framing",
+        "dried_in",
+        "exterior",
+        "finishing",
+        "market",
+        "complete"
+      ]
+    },
+    {
+      "property": "710 Waverly A",
+      "id": "pmt_710-waverly-st-a-77007",
+      "old_expected": null,
+      "new_expected": null,
+      "source": "User retained must-NOT assertion",
+      "forbidden": [
+        "finishing",
+        "market",
+        "complete"
+      ],
+      "rendered_id": "pmt_710-waverly-st-a-77007",
+      "permit": "25074213"
+    },
+    {
+      "property": "710 Waverly B",
+      "id": "pmt_710-waverly-st-b-77007",
+      "old_expected": null,
+      "new_expected": null,
+      "source": "User retained must-NOT assertion",
+      "forbidden": [
+        "finishing",
+        "market",
+        "complete"
+      ],
+      "rendered_id": "pmt_710-waverly-st-a-77007",
+      "permit": "25074212"
+    },
+    {
+      "property": "710 Waverly C",
+      "id": "pmt_710-waverly-st-c-77007",
+      "old_expected": null,
+      "new_expected": null,
+      "source": "User retained must-NOT assertion",
+      "forbidden": [
+        "finishing",
+        "market",
+        "complete"
+      ],
+      "rendered_id": "pmt_710-waverly-st-a-77007",
+      "permit": "25074031"
+    },
+    {
+      "property": "832 E 27th",
+      "id": "pmt_832-e-27th-st-77009",
+      "old_expected": null,
+      "new_expected": null,
+      "source": "User retained must-NOT assertion",
+      "forbidden": [
+        "framing"
+      ]
+    },
+    {
+      "property": "835 Lawrence",
+      "id": "pmt_835-lawrence-st-77007",
+      "old_expected": null,
+      "new_expected": null,
+      "source": "User retained must-NOT assertion",
+      "forbidden": [
+        "finishing",
+        "market",
+        "complete"
+      ]
+    }
+  ]
+}
