@@ -1,3750 +1,4950 @@
 {
   "25020503": {
     "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "3779 SYRACUSE ST 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
         "date": "2026-05-14",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "TCI",
+        "permit_type": "Electrical Pmt",
         "date": "2026-05-13",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
         "date": "2025-08-01",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2025-08-01",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-06-18",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1035-Frame",
+        "permit_type": "Building Pmt",
         "date": "2026-07-15",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
         "date": "2026-01-28",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
         "date": "2026-02-27",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
         "date": "2026-01-28",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Piers PM",
+        "permit_type": "Building Pmt",
         "date": "2026-01-28",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
         "date": "2026-02-20",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
+        "permit_type": "HVAC Permit",
         "date": "2026-05-21",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
         "date": "2026-07-15",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
+        "permit_type": "CENTRAL VAC",
         "date": "2026-04-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
         "date": "2025-10-29",
         "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25038586": {
-    "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2404 QUENBY ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2025-12-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-01-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-03-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-03-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-09-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-03-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-02-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-02-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-10-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-02-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-02-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-07-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-07-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-11-14",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FDN-WOOD/INSUL",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-05-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-05-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-02-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway PM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk PM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "15 Final",
-        "date": "2026-07-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-04-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2025-08-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2025-11-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TREE/SHRUB FNL",
-        "date": "2026-07-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P1 FINAL",
-        "date": "2026-06-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-03-24",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25038587": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2406 QUENBY ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-02-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-04-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-09-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-03-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-02-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-02-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-08-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-10-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-02-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-02-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-12-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FDN-WOOD/INSUL",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-07-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-03-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway PM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk PM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-07-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-10-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2025-08-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2025-11-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "STORM SEWER",
-        "date": "2025-09-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P2 FINAL",
-        "date": "2026-06-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-04-17",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25037683": {
-    "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "1803 BOLSOVER ST 77005",
-    "inspections": [
-      {
-        "type": "ROUGH",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-09-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-05-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-05-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-06-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-06-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-08-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-09-10",
-        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "25037686": {
     "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "1807 BOLSOVER ST 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
         "date": "2026-04-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2025-09-29",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-05-07",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
         "date": "2025-10-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Piers AM",
+        "permit_type": "Building Pmt",
         "date": "2025-10-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1035-Frame",
+        "permit_type": "Building Pmt",
         "date": "2026-07-15",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Brick Tie",
+        "permit_type": "Building Pmt",
         "date": "2026-05-12",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
         "date": "2026-06-09",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "INSULATION",
+        "permit_type": "Building Pmt",
         "date": "2026-07-15",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
         "date": "2025-12-03",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
+        "permit_type": "HVAC Permit",
         "date": "2026-08-06",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
         "date": "2025-09-15",
         "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25037688": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "1811 BOLSOVER ST 77005",
-    "inspections": [
-      {
-        "type": "ROUGH",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-09-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-05-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-10-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-06-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-11-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-08-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-09-15",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25078146": {
-    "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "5329 DORA ST 77005",
-    "inspections": [
-      {
-        "type": "ROUGH",
-        "date": "2026-02-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-06-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-03-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-06-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-01-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-04-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-06-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Wall Cover",
-        "date": "2026-02-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-03-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ceiling Cover",
-        "date": "2026-02-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-07-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "LATH",
-        "date": "2026-06-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-03-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2025-12-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-06-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-12-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-06-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-04-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-05-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-02-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ADD EL FINAL 1",
-        "date": "2026-07-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-11-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-07-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TREE/SHRUB FNL",
-        "date": "2026-07-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25082414": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2428 NOTTINGHAM ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2026-07-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-04-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2025-12-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-12-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-04-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-04-02",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2025-12-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-11-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-07-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-12-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "LATH",
-        "date": "2026-07-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-02-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2025-12-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-06-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-02-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-04-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-11-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2026-02-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-02-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-02-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2025-09-24",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2025-09-24",
-        "result": "Failed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "25117126": {
     "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "2426 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-04-07",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-04-07",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
         "date": "2026-04-24",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
         "date": "2026-04-24",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
         "date": "2026-04-24",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
         "date": "2026-08-26",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Precon",
+        "permit_type": "SFR New",
         "date": "2026-08-06",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Prefill",
+        "permit_type": "SFR New",
         "date": "2026-08-06",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "2nd EC",
+        "permit_type": "SFR New",
         "date": "2026-08-05",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "3rd EC",
+        "permit_type": "SFR New",
         "date": "2026-08-05",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "Site Final",
+        "permit_type": "SFR New",
         "date": "2026-08-05",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "STORM SEWER",
+        "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-09-02",
         "result": "Failed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25117127": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2424 QUENBY ST 77005",
-    "inspections": [
-      {
-        "type": "SEWER",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2026-04-24",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-06-09",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2026-08-06",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-08-06",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-08-05",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2026-08-05",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2026-08-05",
-        "result": "Failed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25072450": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "5303 CHEROKEE ST 77005",
-    "inspections": [
-      {
-        "type": "ROUGH",
-        "date": "2026-02-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-05-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2025-09-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-07-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-09-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-03-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-05-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-09-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-02-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-09-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "LATH",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-04-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2025-09-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-11-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-05-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-09-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-07-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-07-10",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25076577": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "3802 WESTERMAN ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2026-03-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-06-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-06-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-03-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-06-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2025-10-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-06-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-10-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-01-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-03-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-06-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-10-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-10-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2025-12-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2025-12-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2025-10-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-12-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-06-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway PM",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk PM",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "15 Final",
-        "date": "2026-06-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-01-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-06-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SITE VISIT",
-        "date": "2026-06-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-06-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "CC FINAL",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ADD EL FINAL 1",
-        "date": "2026-06-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-10-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GO BY",
-        "date": "2026-06-16",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "TREE/SHRUB FNL",
-        "date": "2026-06-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P1 FINAL",
-        "date": "2026-05-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-06-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P2 FINAL",
-        "date": "2026-06-03",
-        "result": "Passed",
+        "raw": "Correction Necessary",
         "inspector": ""
       }
     ]
   },
   "25083081": {
     "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "2357 BOLSOVER ST 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-03-31",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-04-02",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-03-31",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "STORM SEWER",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-03-31",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
         "date": "2026-04-28",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
         "date": "2026-09-04",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
         "date": "2026-04-27",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Piers PM",
+        "permit_type": "Building Pmt",
         "date": "2026-01-29",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
         "date": "2026-08-28",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "FDN-WOOD/INSUL",
+        "permit_type": "Building Pmt",
         "date": "2026-06-04",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
         "date": "2025-12-23",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Precon",
+        "permit_type": "SFR New",
         "date": "2025-12-16",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Prefill",
+        "permit_type": "SFR New",
         "date": "2025-12-16",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "2nd EC",
+        "permit_type": "SFR New",
         "date": "2026-06-25",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "3rd EC",
+        "permit_type": "SFR New",
         "date": "2025-09-25",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "Site Final",
+        "permit_type": "SFR New",
         "date": "2025-09-25",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "STORM SEWER",
+        "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-03-31",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-03-31",
         "result": "Failed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25052444": {
-    "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "3746 CHILDRESS ST 77005",
-    "inspections": [
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-03-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2025-09-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-09-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2025-11-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2025-11-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-09-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2025-12-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-02-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-09-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "LATH",
-        "date": "2026-01-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2025-10-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2025-09-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-09-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2025-10-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2025-11-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-08-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-02-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway AM",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk AM",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "15 Final",
-        "date": "2026-04-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2025-11-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DITCH COVER",
-        "date": "2026-03-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-03-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ADD EL FINAL 1",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ADD EL FINAL 2",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-08-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-08-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TREE/SHRUB FNL",
-        "date": "2026-08-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25068930": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2325 WROXTON RD 77005",
-    "inspections": [
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-06-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-10-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-02-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-02-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-06-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2025-10-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-04-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ceiling Cover",
-        "date": "2026-03-03",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-02-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-07-06",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-04-17",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-03-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2025-10-30",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-07-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-07-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-02-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-05-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway AM",
-        "date": "2026-04-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk AM",
-        "date": "2026-04-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "15 Final",
-        "date": "2026-06-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-06-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-06-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WALL COVER",
-        "date": "2026-03-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "CEILING",
-        "date": "2026-03-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-03-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-06-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-03-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ADD EL FINAL 1",
-        "date": "2026-06-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-11-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2026-01-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-01-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-01-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2025-08-12",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2025-08-12",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-07-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TREE/SHRUB FNL",
-        "date": "2026-07-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P1 FINAL",
-        "date": "2026-05-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P2 FINAL",
-        "date": "2026-04-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25077921": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "3782 WESTERMAN ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2026-05-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-05-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2026-04-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-11-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-03-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-09-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2025-12-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-04-08",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-04-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2025-12-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-04-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-02-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SFR Kitchen",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway AM",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk AM",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-04-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-11-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "STORM SEWER",
-        "date": "2026-05-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P1 FINAL",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P2 FINAL",
-        "date": "2026-09-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-08-10",
-        "result": "Passed",
+        "raw": "Correction Necessary",
         "inspector": ""
       }
     ]
   },
   "25101670": {
     "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "5312 CHEROKEE ST 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
         "date": "2026-08-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-02-13",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-07-30",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
         "date": "2026-02-27",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Piers AM",
+        "permit_type": "Building Pmt",
         "date": "2026-02-27",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
         "date": "2026-04-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
         "date": "2026-04-07",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
+        "permit_type": "HVAC Permit",
         "date": "2026-08-13",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
         "date": "2026-03-03",
         "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25106029": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2334 DUNSTAN RD 77005",
-    "inspections": [
-      {
-        "type": "SEWER",
-        "date": "2026-06-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-06-30",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-06-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "FDN-WOOD/INSUL",
-        "date": "2026-08-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-06-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-07-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-07-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2025-11-13",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2025-11-13",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-07-17",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25076059": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2410 QUENBY ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2025-12-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-03-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2025-11-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-11-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-03-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-04-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-08-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-03-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-11-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "LATH",
-        "date": "2026-06-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-01-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-04-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Duct Seal",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway AM",
-        "date": "2026-06-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk AM",
-        "date": "2026-06-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "15 Final",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-07-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2025-11-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2025-12-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TREE/SHRUB FNL",
-        "date": "2026-08-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P1 FINAL",
-        "date": "2026-05-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P2 FINAL",
-        "date": "2026-05-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-07-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P4 FINAL",
-        "date": "2026-07-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "25076060": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2412 QUENBY ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2025-12-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-03-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "MLS",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TCI",
-        "date": "2026-04-01",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ELECT FINAL",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2025-11-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Gas Test",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2025-11-07",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-02-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SHOWER PAN",
-        "date": "2026-04-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "PLUMBING FINAL",
-        "date": "2026-08-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WATER SERVICE",
-        "date": "2026-08-25",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-03-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Struct Final",
-        "date": "2026-08-27",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2025-11-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "LATH",
-        "date": "2026-06-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-02-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "INSULATION",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-01-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "AC FINAL",
-        "date": "2026-09-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GRILLE SEAL",
-        "date": "2026-04-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Driveway PM",
-        "date": "2026-06-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Sidewalk PM",
-        "date": "2026-06-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "15 Final",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-03-30",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "DECOR AD FINAL",
-        "date": "2026-07-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-06-03",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2025-12-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "FINAL",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P2 FINAL",
-        "date": "2026-05-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-07-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "P3 FINAL",
-        "date": "2026-07-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS INSP",
-        "date": "2026-05-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "TEMP GAS FINAL",
-        "date": "2026-05-27",
-        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "25053572": {
     "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "3753 DRAKE ST 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
         "date": "2026-05-01",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
         "date": "2025-10-15",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2025-10-15",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-04-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
         "date": "2025-10-24",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Piers AM",
+        "permit_type": "Building Pmt",
         "date": "2025-10-24",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1035-Frame",
+        "permit_type": "Building Pmt",
         "date": "2026-06-16",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Brick Tie",
+        "permit_type": "Building Pmt",
         "date": "2026-06-05",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Fire Wall",
+        "permit_type": "Building Pmt",
         "date": "2026-02-23",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
         "date": "2026-01-23",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "INSULATION",
+        "permit_type": "Building Pmt",
         "date": "2026-06-23",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
         "date": "2025-12-22",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
+        "permit_type": "HVAC Permit",
         "date": "2026-05-20",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Duct Seal",
+        "permit_type": "HVAC Permit",
         "date": "2026-04-06",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
         "date": "2025-11-19",
         "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "26038687": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2405 NOTTINGHAM ST 77005",
-    "inspections": [
-      {
-        "type": "SEWER",
-        "date": "2026-07-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-07-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN AM",
-        "date": "2026-07-29",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-08-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-07-28",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-08-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-07-08",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "26019294": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2328 QUENBY ST 77005",
-    "inspections": [
-      {
-        "type": "DITCH COVER",
-        "date": "2026-08-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SEWER",
-        "date": "2026-05-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-05-12",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-08-18",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2026-05-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1035-Frame",
-        "date": "2026-09-03",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Brick Tie",
-        "date": "2026-08-19",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-09-03",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-07-15",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-05-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-07-10",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "COVER",
-        "date": "2026-08-20",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Cover",
-        "date": "2026-08-26",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-04-24",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Precon",
-        "date": "2026-08-31",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Prefill",
-        "date": "2026-08-31",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "2nd EC",
-        "date": "2026-09-02",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "3rd EC",
-        "date": "2026-03-11",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "Site Final",
-        "date": "2026-03-11",
-        "result": "Failed",
-        "inspector": ""
-      }
-    ]
-  },
-  "26017678": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "5335 MANDELL ST 77005",
-    "inspections": [
-      {
-        "type": "SEWER",
-        "date": "2026-07-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-07-09",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2026-07-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2026-07-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-09-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-07-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-08-27",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-06-11",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "26027179": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "3771 PURDUE ST 77005",
-    "inspections": [
-      {
-        "type": "SEWER",
-        "date": "2026-06-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-06-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "ROUGH IN",
-        "date": "2026-08-28",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Fire Wall",
-        "date": "2026-08-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-08-11",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-06-23",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-08-06",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-06-11",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "26030757": {
-    "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "3743 WESTERMAN ST 77005",
-    "inspections": [
-      {
-        "type": "GROUND IN",
-        "date": "2026-06-04",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Piers AM",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Nail Pattern",
-        "date": "2026-08-14",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-06-22",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-08-05",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-06-11",
-        "result": "Passed",
-        "inspector": ""
-      }
-    ]
-  },
-  "26031875": {
-    "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
-    "address": "2337 WROXTON RD 77005",
-    "inspections": [
-      {
-        "type": "SEWER",
-        "date": "2026-07-16",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "GROUND IN",
-        "date": "2026-07-13",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "Ele Grnd Insp",
-        "date": "2026-07-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "1031-FDN PM",
-        "date": "2026-07-21",
-        "result": "Passed",
-        "inspector": ""
-      },
-      {
-        "type": "WINDSTORM",
-        "date": "2026-09-04",
-        "result": "Failed",
-        "inspector": ""
-      },
-      {
-        "type": "SAWPOLE FINAL",
-        "date": "2026-07-31",
-        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "26042600": {
     "status": "Passed",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "2341 WROXTON RD 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-07-29",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
         "date": "2026-07-29",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
         "date": "2026-08-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
         "date": "2026-08-10",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
         "date": "2026-07-15",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "26033181": {
     "status": "Partial",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "2336 Dunstan Rd, Houston, TX 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
         "date": "2026-08-07",
         "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Piers AM",
+        "permit_type": "Building Pmt",
         "date": "2026-08-07",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
         "date": "2026-08-27",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
         "date": "2026-08-27",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Precon",
+        "permit_type": "SFR New",
         "date": "2026-08-06",
         "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Prefill",
+        "permit_type": "SFR New",
         "date": "2026-08-06",
         "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "2nd EC",
+        "permit_type": "SFR New",
         "date": "2026-05-07",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "3rd EC",
+        "permit_type": "SFR New",
         "date": "2026-05-07",
         "result": "Failed",
+        "raw": "Action Required",
         "inspector": ""
       },
       {
         "type": "Site Final",
+        "permit_type": "SFR New",
         "date": "2026-05-07",
         "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      }
+    ]
+  },
+  "25038586": {
+    "status": "Pending",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2404 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-01-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-11-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FDN-WOOD/INSUL",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-05-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-05-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-02-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-04-20",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2025-08-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2025-11-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-06-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-03-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25037688": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "1811 BOLSOVER ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-11-25",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-09-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25117127": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2424 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-24",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-09",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-08-06",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-08-06",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-05",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-05",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-08-05",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      }
+    ]
+  },
+  "25052444": {
+    "status": "Pending",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "3746 CHILDRESS ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-20",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-09-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-01-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2025-09-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2025-11-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-02-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-04-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2025-11-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DITCH COVER",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-03-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-03-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 2",
+        "permit_type": "E2,ADDL-ELECT",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-08-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-08-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25106029": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2334 DUNSTAN RD 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-30",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "FDN-WOOD/INSUL",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-03",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-06-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2025-11-13",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2025-11-13",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-07-17",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      }
+    ]
+  },
+  "26031875": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2337 WROXTON RD 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-21",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-09",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "26017678": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "5335 MANDELL ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-06-11",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "26033243": {
-    "status": "Pending",
-    "updated": "2026-09-07",
-    "scraped_at": "2026-09-07",
+    "status": "Passed",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
     "address": "3711 Purdue St, Houston, TX 77005",
+    "final_project_inspection_outstanding": true,
     "inspections": [
       {
         "type": "Piers AM",
+        "permit_type": "Building Pmt",
         "date": "2026-09-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25038587": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2406 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-02-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FDN-WOOD/INSUL",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-02-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-07-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-03-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-07-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2025-08-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2025-11-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2025-09-08",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-06-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-04-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25078146": {
+    "status": "Passed",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "5329 DORA ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-02-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-06-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-06-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-01-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Wall Cover",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-03-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ceiling Cover",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-03-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-02-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-06-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-04-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-02-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-05-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-02-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-07-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-11-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-07-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25072450": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "5303 CHEROKEE ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-05-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-09-10",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-09-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2025-09-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-11-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-03-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-05-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-02-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-09-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25068930": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2325 WROXTON RD 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-06-04",
         "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-02-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ceiling Cover",
+        "permit_type": "Building Pmt",
+        "date": "2026-03-03",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-06",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-03-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-30",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-02-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-05-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-04-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-04-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-06-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-06-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-06-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WALL COVER",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-03-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "CEILING",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-03-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-03-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-03-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-11-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-01-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-01-08",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-01-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2025-08-12",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2025-08-12",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-07-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-07-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-05-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-04-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25076059": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2410 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2025-12-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-03-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-11-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-01-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-03-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-04-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Duct Seal",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-06-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-06-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-03-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-11-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2025-12-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-10",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-08-10",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-08-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-05-06",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-05-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "ADDL PL PMT #4",
+        "date": "2026-07-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P4 FINAL",
+        "permit_type": "ADDL PL PMT #4",
+        "date": "2026-07-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "26038687": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2405 NOTTINGHAM ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-07-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-29",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-28",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "26027179": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "3771 PURDUE ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-28",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-13",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-06-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25037683": {
+    "status": "Passed",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "1803 BOLSOVER ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-09-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-05-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-09-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25082414": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2428 NOTTINGHAM ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-07-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-12-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-12-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-02",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-11-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-23",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-04-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-11-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-02-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2025-09-24",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2025-09-24",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      }
+    ]
+  },
+  "25076577": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "3802 WESTERMAN ST 77005",
+    "final_project_inspection_outstanding": false,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-10-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-10-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-01-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2025-10-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-02-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-06-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-01-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-06-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-06-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-06-18",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-06-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-10-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GO BY",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-06-16",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-06-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-05-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-06-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-06-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25077921": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "3782 WESTERMAN ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-05-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-05-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-03-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2025-12-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-04-13",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-03-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SFR Kitchen",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-03-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-04-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2025-11-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "STORM SEWER",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-05-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-09-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "25076060": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2412 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2025-12-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-03-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-04-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2025-11-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-02-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-04-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-03-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-27",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2025-11-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-02-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-01-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-03-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-09-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-04-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-06-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-06-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-03-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-07-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-06-03",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2025-12-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-08-10",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-08-10",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-05-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "*P3*ADD-PL-PMT",
+        "date": "2026-07-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P3 FINAL",
+        "permit_type": "*P3*ADD-PL-PMT",
+        "date": "2026-07-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-05-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "26019294": {
+    "status": "Partial",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "2328 QUENBY ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-08-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-05-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-08-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-05-04",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-03",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-09",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-05-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-07-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-08-20",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Cover",
+        "permit_type": "Refrigeration",
+        "date": "2026-08-26",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-08-31",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-08-31",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-09-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-03-11",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-03-11",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      }
+    ]
+  },
+  "26030757": {
+    "status": "Passed",
+    "updated": "2026-09-08",
+    "scraped_at": "2026-09-08",
+    "address": "3743 WESTERMAN ST 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-06-04",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-08-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-06-11",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
