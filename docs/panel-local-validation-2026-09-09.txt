@@ -1,0 +1,151 @@
+127.0.0.1 - - [09/Sep/2026 13:01:01] "GET /index.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:01] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:01] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:01] "GET /inspections.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:01] "GET /heights_market_status.data.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:07] "GET /montrose.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:07] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:07] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:07] "GET /inspections_montrose.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:09] "GET /riveroaks.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:09] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:09] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:09] "GET /inspections_riveroaks.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:11] "GET /springbranch.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:11] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:11] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:11] "GET /inspections_springbranch.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:12] "GET /springvalley.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:12] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:12] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:12] "GET /inspections_springvalley.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:13] "GET /timbergrove.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:13] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:13] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:13] "GET /inspections_timbergrove.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:14] "GET /westu.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:14] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:14] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:14] "GET /inspections_westu.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:16] "GET /gardenoaksoakforest.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:16] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:16] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:16] "GET /inspections_gardenoaksoakforest.json HTTP/1.1" 200 -
+PASS normalization, unit/fraction separation, MLS/address/proximity conflicts, status/date precedence
+PASS --apply: zero changes; 284 rows; 165/165 new lot classifications; all file hashes identical
+PASS all eight DATA/RECONCILE regions and inline construction/timeline scripts byte-identical to 2bb69f5
+SPOT act_715-merrill active ["88557637", "8 days", "50361472", "174 DOM", "COMPLETE"]
+SPOT act_1520-w-21st-st-unit-b terminated ["Terminated / Expired", "COMPLETE"]
+SPOT act_902-e-25 active ["Active", "COMPLETE"]
+SPOT pmt_931-merrill-st-77009 no_record ["No Market Record", "COMPLETE"]
+PANEL Under Construction 213; missing phase IDs []; invalid phase-tag IDs []; Other on-market overlap 14
+MARKET index {"categories": {"custom": 19, "sold_off_market": 1}, "columns": {"complete": 49, "exterior": 28, "foundation": 37, "framing": 10, "insulation": 12, "interior": 53, "mep_finals": 19, "mep_roughs": 5}, "complete": {"active": 13, "no_record": 24, "pending": 5, "sold": 4, "terminated": 3}, "deeds": 139, "forecast": 131, "marketCounts": {"active": 58, "no_record": 304, "pending": 12, "sold": 15, "terminated": 11}, "snapshot": {"available": 128, "construction": 131, "terminated": 3}, "sold": 767}
+MARKET montrose {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 21, "exterior": 7, "foundation": 27, "framing": 14, "insulation": 0, "interior": 31, "mep_finals": 7, "mep_roughs": 4}, "complete": {"no_record": 21}, "deeds": 83, "forecast": 80, "marketCounts": {"no_record": 226}, "snapshot": {"available": 80, "construction": 80, "terminated": 0}, "sold": null}
+MARKET riveroaks {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 0, "exterior": 4, "foundation": 5, "framing": 0, "insulation": 0, "interior": 3, "mep_finals": 0, "mep_roughs": 1}, "complete": {}, "deeds": 22, "forecast": 9, "marketCounts": {"no_record": 40}, "snapshot": {"available": 9, "construction": 9, "terminated": 0}, "sold": null}
+MARKET springbranch {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 33, "exterior": 14, "foundation": 27, "framing": 5, "insulation": 6, "interior": 48, "mep_finals": 26, "mep_roughs": 4}, "complete": {"no_record": 33}, "deeds": 204, "forecast": 120, "marketCounts": {"no_record": 420}, "snapshot": {"available": 120, "construction": 120, "terminated": 0}, "sold": null}
+MARKET springvalley {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 0, "exterior": 0, "foundation": 0, "framing": 0, "insulation": 0, "interior": 0, "mep_finals": 0, "mep_roughs": 0}, "complete": {}, "deeds": 0, "forecast": 0, "marketCounts": {"no_record": 6}, "snapshot": {"available": 0, "construction": 0, "terminated": 0}, "sold": null}
+MARKET timbergrove {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 10, "exterior": 4, "foundation": 2, "framing": 3, "insulation": 1, "interior": 6, "mep_finals": 2, "mep_roughs": 3}, "complete": {"no_record": 10}, "deeds": 3, "forecast": 19, "marketCounts": {"no_record": 41}, "snapshot": {"available": 19, "construction": 19, "terminated": 0}, "sold": null}
+MARKET westu {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 3, "exterior": 4, "foundation": 4, "framing": 3, "insulation": 1, "interior": 7, "mep_finals": 4, "mep_roughs": 3}, "complete": {"no_record": 3}, "deeds": 63, "forecast": 26, "marketCounts": {"no_record": 100}, "snapshot": {"available": 26, "construction": 26, "terminated": 0}, "sold": null}
+MARKET gardenoaksoakforest {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 34, "exterior": 0, "foundation": 8, "framing": 3, "insulation": 0, "interior": 8, "mep_finals": 25, "mep_roughs": 2}, "complete": {"no_record": 34}, "deeds": 36, "forecast": 14, "marketCounts": {"no_record": 152}, "snapshot": {"available": 14, "construction": 14, "terminated": 0}, "sold": null}
+RUN 1 SHA256 e4d9bf4ccec8ad1a60659c35ec1b6cc52d4f229e1e518425cf502b1f366e4f74
+127.0.0.1 - - [09/Sep/2026 13:01:19] "GET /index.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:19] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:19] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:20] "GET /inspections.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:20] "GET /heights_market_status.data.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:25] "GET /montrose.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:25] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:25] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:25] "GET /inspections_montrose.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:27] "GET /riveroaks.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:27] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:27] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:27] "GET /inspections_riveroaks.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:29] "GET /springbranch.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:29] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:29] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:29] "GET /inspections_springbranch.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:31] "GET /springvalley.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:31] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:31] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:31] "GET /inspections_springvalley.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:32] "GET /timbergrove.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:32] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:32] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:32] "GET /inspections_timbergrove.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:33] "GET /westu.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:33] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:33] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:33] "GET /inspections_westu.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:34] "GET /gardenoaksoakforest.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:34] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:34] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:35] "GET /inspections_gardenoaksoakforest.json HTTP/1.1" 200 -
+PASS normalization, unit/fraction separation, MLS/address/proximity conflicts, status/date precedence
+PASS --apply: zero changes; 284 rows; 165/165 new lot classifications; all file hashes identical
+PASS all eight DATA/RECONCILE regions and inline construction/timeline scripts byte-identical to 2bb69f5
+SPOT act_715-merrill active ["88557637", "8 days", "50361472", "174 DOM", "COMPLETE"]
+SPOT act_1520-w-21st-st-unit-b terminated ["Terminated / Expired", "COMPLETE"]
+SPOT act_902-e-25 active ["Active", "COMPLETE"]
+SPOT pmt_931-merrill-st-77009 no_record ["No Market Record", "COMPLETE"]
+PANEL Under Construction 213; missing phase IDs []; invalid phase-tag IDs []; Other on-market overlap 14
+MARKET index {"categories": {"custom": 19, "sold_off_market": 1}, "columns": {"complete": 49, "exterior": 28, "foundation": 37, "framing": 10, "insulation": 12, "interior": 53, "mep_finals": 19, "mep_roughs": 5}, "complete": {"active": 13, "no_record": 24, "pending": 5, "sold": 4, "terminated": 3}, "deeds": 139, "forecast": 131, "marketCounts": {"active": 58, "no_record": 304, "pending": 12, "sold": 15, "terminated": 11}, "snapshot": {"available": 128, "construction": 131, "terminated": 3}, "sold": 767}
+MARKET montrose {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 21, "exterior": 7, "foundation": 27, "framing": 14, "insulation": 0, "interior": 31, "mep_finals": 7, "mep_roughs": 4}, "complete": {"no_record": 21}, "deeds": 83, "forecast": 80, "marketCounts": {"no_record": 226}, "snapshot": {"available": 80, "construction": 80, "terminated": 0}, "sold": null}
+MARKET riveroaks {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 0, "exterior": 4, "foundation": 5, "framing": 0, "insulation": 0, "interior": 3, "mep_finals": 0, "mep_roughs": 1}, "complete": {}, "deeds": 22, "forecast": 9, "marketCounts": {"no_record": 40}, "snapshot": {"available": 9, "construction": 9, "terminated": 0}, "sold": null}
+MARKET springbranch {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 33, "exterior": 14, "foundation": 27, "framing": 5, "insulation": 6, "interior": 48, "mep_finals": 26, "mep_roughs": 4}, "complete": {"no_record": 33}, "deeds": 204, "forecast": 120, "marketCounts": {"no_record": 420}, "snapshot": {"available": 120, "construction": 120, "terminated": 0}, "sold": null}
+MARKET springvalley {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 0, "exterior": 0, "foundation": 0, "framing": 0, "insulation": 0, "interior": 0, "mep_finals": 0, "mep_roughs": 0}, "complete": {}, "deeds": 0, "forecast": 0, "marketCounts": {"no_record": 6}, "snapshot": {"available": 0, "construction": 0, "terminated": 0}, "sold": null}
+MARKET timbergrove {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 10, "exterior": 4, "foundation": 2, "framing": 3, "insulation": 1, "interior": 6, "mep_finals": 2, "mep_roughs": 3}, "complete": {"no_record": 10}, "deeds": 3, "forecast": 19, "marketCounts": {"no_record": 41}, "snapshot": {"available": 19, "construction": 19, "terminated": 0}, "sold": null}
+MARKET westu {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 3, "exterior": 4, "foundation": 4, "framing": 3, "insulation": 1, "interior": 7, "mep_finals": 4, "mep_roughs": 3}, "complete": {"no_record": 3}, "deeds": 63, "forecast": 26, "marketCounts": {"no_record": 100}, "snapshot": {"available": 26, "construction": 26, "terminated": 0}, "sold": null}
+MARKET gardenoaksoakforest {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 34, "exterior": 0, "foundation": 8, "framing": 3, "insulation": 0, "interior": 8, "mep_finals": 25, "mep_roughs": 2}, "complete": {"no_record": 34}, "deeds": 36, "forecast": 14, "marketCounts": {"no_record": 152}, "snapshot": {"available": 14, "construction": 14, "terminated": 0}, "sold": null}
+RUN 2 SHA256 e4d9bf4ccec8ad1a60659c35ec1b6cc52d4f229e1e518425cf502b1f366e4f74
+127.0.0.1 - - [09/Sep/2026 13:01:38] "GET /index.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:38] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:38] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:39] "GET /inspections.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:39] "GET /heights_market_status.data.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:44] "GET /montrose.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:44] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:44] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:44] "GET /inspections_montrose.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:47] "GET /riveroaks.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:47] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:47] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:47] "GET /inspections_riveroaks.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:48] "GET /springbranch.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:48] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:48] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:48] "GET /inspections_springbranch.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:49] "GET /springvalley.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:49] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:49] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:50] "GET /inspections_springvalley.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:50] "GET /timbergrove.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:50] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:50] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:51] "GET /inspections_timbergrove.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:52] "GET /westu.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:52] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:52] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:52] "GET /inspections_westu.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:53] "GET /gardenoaksoakforest.html?linkage=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:53] "GET /inventory_classifications.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:53] "GET /market_status.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Sep/2026 13:01:53] "GET /inspections_gardenoaksoakforest.json HTTP/1.1" 200 -
+PASS normalization, unit/fraction separation, MLS/address/proximity conflicts, status/date precedence
+PASS --apply: zero changes; 284 rows; 165/165 new lot classifications; all file hashes identical
+PASS all eight DATA/RECONCILE regions and inline construction/timeline scripts byte-identical to 2bb69f5
+SPOT act_715-merrill active ["88557637", "8 days", "50361472", "174 DOM", "COMPLETE"]
+SPOT act_1520-w-21st-st-unit-b terminated ["Terminated / Expired", "COMPLETE"]
+SPOT act_902-e-25 active ["Active", "COMPLETE"]
+SPOT pmt_931-merrill-st-77009 no_record ["No Market Record", "COMPLETE"]
+PANEL Under Construction 213; missing phase IDs []; invalid phase-tag IDs []; Other on-market overlap 14
+MARKET index {"categories": {"custom": 19, "sold_off_market": 1}, "columns": {"complete": 49, "exterior": 28, "foundation": 37, "framing": 10, "insulation": 12, "interior": 53, "mep_finals": 19, "mep_roughs": 5}, "complete": {"active": 13, "no_record": 24, "pending": 5, "sold": 4, "terminated": 3}, "deeds": 139, "forecast": 131, "marketCounts": {"active": 58, "no_record": 304, "pending": 12, "sold": 15, "terminated": 11}, "snapshot": {"available": 128, "construction": 131, "terminated": 3}, "sold": 767}
+MARKET montrose {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 21, "exterior": 7, "foundation": 27, "framing": 14, "insulation": 0, "interior": 31, "mep_finals": 7, "mep_roughs": 4}, "complete": {"no_record": 21}, "deeds": 83, "forecast": 80, "marketCounts": {"no_record": 226}, "snapshot": {"available": 80, "construction": 80, "terminated": 0}, "sold": null}
+MARKET riveroaks {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 0, "exterior": 4, "foundation": 5, "framing": 0, "insulation": 0, "interior": 3, "mep_finals": 0, "mep_roughs": 1}, "complete": {}, "deeds": 22, "forecast": 9, "marketCounts": {"no_record": 40}, "snapshot": {"available": 9, "construction": 9, "terminated": 0}, "sold": null}
+MARKET springbranch {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 33, "exterior": 14, "foundation": 27, "framing": 5, "insulation": 6, "interior": 48, "mep_finals": 26, "mep_roughs": 4}, "complete": {"no_record": 33}, "deeds": 204, "forecast": 120, "marketCounts": {"no_record": 420}, "snapshot": {"available": 120, "construction": 120, "terminated": 0}, "sold": null}
+MARKET springvalley {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 0, "exterior": 0, "foundation": 0, "framing": 0, "insulation": 0, "interior": 0, "mep_finals": 0, "mep_roughs": 0}, "complete": {}, "deeds": 0, "forecast": 0, "marketCounts": {"no_record": 6}, "snapshot": {"available": 0, "construction": 0, "terminated": 0}, "sold": null}
+MARKET timbergrove {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 10, "exterior": 4, "foundation": 2, "framing": 3, "insulation": 1, "interior": 6, "mep_finals": 2, "mep_roughs": 3}, "complete": {"no_record": 10}, "deeds": 3, "forecast": 19, "marketCounts": {"no_record": 41}, "snapshot": {"available": 19, "construction": 19, "terminated": 0}, "sold": null}
+MARKET westu {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 3, "exterior": 4, "foundation": 4, "framing": 3, "insulation": 1, "interior": 7, "mep_finals": 4, "mep_roughs": 3}, "complete": {"no_record": 3}, "deeds": 63, "forecast": 26, "marketCounts": {"no_record": 100}, "snapshot": {"available": 26, "construction": 26, "terminated": 0}, "sold": null}
+MARKET gardenoaksoakforest {"categories": {"custom": 0, "sold_off_market": 0}, "columns": {"complete": 34, "exterior": 0, "foundation": 8, "framing": 3, "insulation": 0, "interior": 8, "mep_finals": 25, "mep_roughs": 2}, "complete": {"no_record": 34}, "deeds": 36, "forecast": 14, "marketCounts": {"no_record": 152}, "snapshot": {"available": 14, "construction": 14, "terminated": 0}, "sold": null}
+RUN 3 SHA256 e4d9bf4ccec8ad1a60659c35ec1b6cc52d4f229e1e518425cf502b1f366e4f74
+PASS all runs identical

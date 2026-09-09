@@ -1,0 +1,4 @@
+RUN 1: phase 20706/20706; browser 183/183; base pairs 7283, violations 0; page errors []; SHA256 01f7858ff12e7956125492e8c177eb377f79b421ee5e15cc63c8a4c34aa8bd7a
+RUN 2: phase 20706/20706; browser 183/183; base pairs 7283, violations 0; page errors []; SHA256 01f7858ff12e7956125492e8c177eb377f79b421ee5e15cc63c8a4c34aa8bd7a
+RUN 3: phase 20706/20706; browser 183/183; base pairs 7283, violations 0; page errors []; SHA256 01f7858ff12e7956125492e8c177eb377f79b421ee5e15cc63c8a4c34aa8bd7a
+PASS: all three full results byte-identical
