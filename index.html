@@ -1503,7 +1503,7 @@ function refresh(){
     const isPermit=tags.includes('permit');
     let show;
     if(nothing){ show=okText; }                                   // no filters -> show all (subject to search)
-    else if(isPermit){ show=permitOn&&okText; }                   // permit pins only when New Construction is checked
+    else if(isPermit&&!baseSels.some(k=>k.startsWith('AL:')&&matchSel(tags,k,m._rec.id))){ show=permitOn&&okText; }                   // permit pins only when New Construction is checked
     else { show=okText && baseSels.length>0 && baseSels.some(k=>matchSel(tags,k,m._rec.id)); } // non-permit pins need a matching non-permit filter
     if(show){layer.addLayer(m);n+=(m._rec.units||1);} else if(okText&&q) hiddenByFilter++;}
   // sold-comps pins are a real visible layer: count them in the header, and widen
@@ -2274,5 +2274,6 @@ function soldAskContext(){
 </script>
 
 
+<script src="active_listings.js"></script>
 </body>
 </html>
