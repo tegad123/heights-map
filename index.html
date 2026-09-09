@@ -1948,7 +1948,7 @@ function askContext(){
    '\nCOMPLETION_FORECAST (PHASE-COHORT model. ready_now = complete/listed now, EXCLUDED from all other numbers. by_phase_cohort = count of under-construction homes at each build stage; cohort_ranges gives the ROUGH month window for each stage. These are STAGE COHORTS, not monthly completion counts — e.g. a foundation count of 36 means 36 homes are AT foundation stage (~7-9 months out), NOT 36 homes finishing in a single month. done_within[N] = approximate cumulative count expected done within N months, from inspection-date anchors with bucket defaults when no anchor exists; treat as directional, use verbatim, never restate as a single-month figure): '+JSON.stringify(forecast)+
    '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
    '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
-   '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
+   '\n\n=== LEGACY MARKET METRICS (historical 2026-07-05 snapshot, NOT current totals; use SOLD_COMP_METRICS for current closed sales. HAR trailing-12mo SOLD vs then-current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
 }
 // ---- ASK: changelog event stream (changes/*.json) for change-over-time questions ----
 let _CHG=null;
@@ -2026,7 +2026,7 @@ function renderSupplyCard(){
   if(ph){ph.innerHTML=PH_ABBR.map(([k,l])=>'<div class="sc-ph"><div class="n" style="color:'+PH_C[k]+'">'+(bd[k]||0)+'</div><div class="l">'+l+'</div></div>').join('');}
   // footer counts
   const foot=document.getElementById('sc-foot');
-  if(foot){const permits=DATA.reduce((a,r)=>a+(r.kind==='permit'?(r.units||1):0),0);const sold=SOLD.length;
+  if(foot){const permits=DATA.reduce((a,r)=>a+(r.kind==='permit'?(r.units||1):0),0);const sold=SOLD_DATA.length;
     foot.textContent=DATA.reduce((a,r)=>a+(r.units||1),0)+' homes · '+permits+' permits · '+sold+' closed sales';}
 }
 // Ready-within toggle: filter map pins to homes reaching market within N months
@@ -2057,15 +2057,15 @@ renderSupplyCard();
 // map layer, shared filter state, ASK context. Data = SOLD_DATA /
 // SOLD_METRICS single-line emits from sold_ingest.py (spliced above).
 // ============================================================
-const SOLD_WINS=['0-30','30-60','60-90','90-180','180-365'];
-const SOLD_WIN_C={'0-30':'#c92a2a','30-60':'#e8590c','60-90':'#f59f00','90-180':'#a5845c','180-365':'#8c857a'};
-const SOLD_BANDS=['500-600K','600-700K','700-800K','800-900K','900K-1M','1M-1.1M','1.1M-1.2M','1.2M-1.3M','1.3M-1.6M','1.6M-1.8M','1.8M-2M','2M-2.2M','2.2M+'];
+const SOLD_WINS=['0-30','30-60','60-90','90-180','180-365','365+'];
+const SOLD_WIN_C={'0-30':'#c92a2a','30-60':'#e8590c','60-90':'#f59f00','90-180':'#a5845c','180-365':'#8c857a','365+':'#68645f'};
+const SOLD_BANDS=['<600K','600-700K','700-800K','800-900K','900K-1M','1M-1.1M','1.1M-1.2M','1.2M-1.3M','1.3M-1.6M','1.6M-1.8M','1.8M-2M','2M-2.2M','2.2M+'];
 const SOLD_BAND_MAX=[600000,700000,800000,900000,1000000,1100000,1200000,1300000,1600000,1800000,2000000,2200000,Infinity];
 // r.band arrives pre-bucketed from sold_ingest.py on the OLD 4-band scheme;
 // re-bucket from close price here so the emit format never has to change.
 function soldBand(cp){for(let i=0;i<SOLD_BAND_MAX.length;i++)if(cp<SOLD_BAND_MAX[i])return SOLD_BANDS[i];return SOLD_BANDS[SOLD_BANDS.length-1];}
 SOLD_DATA.forEach(r=>{r.band=soldBand(r.cp);});
-const SOLD_PROD_C={'Single Lot':'#3f6cd1','Split Lot':'#8e5bd0','Unclassified':'#8c857a'};
+const SOLD_PROD_C={'Single Lot':'#3f6cd1','Split Lot':'#8e5bd0','Unclassified':'#8c857a','Unknown':'#68645f'};
 const SOLD_FILTER={on:false,win:'all',mo:null,band:'all',prod:'all',coh:'all',sort:null};
 const soldById={};SOLD_DATA.forEach(r=>soldById[r.id]=r);
 const soldLayer=L.layerGroup();const soldMk={};
@@ -2086,8 +2086,8 @@ const soldSvlCol=v=>v>0?'#e03131':'#2f9e44'; // green under list / red over list
 function soldCardHTML(r,pop){
   const bc=SOLD_PROD_C[r.prod]||'#8c857a';
   let h='<div class="sx-card'+(pop?' sx-pop':'')+'" style="border-left-color:'+bc+'"'+(pop?'':' data-sgo="'+esc(r.id)+'"')+'>';
-  h+='<div class="a">'+esc(r.a)+'</div>';
-  h+='<div class="sx-r1"><span class="cp">$'+r.cp.toLocaleString()+'</span><span>'+r.sq.toLocaleString()+' sqft</span><span>$'+r.psf+'/sqft</span><span>'+(r.lot?r.lot.toLocaleString()+' lot':'lot n/a')+'</span></div>';
+  h+='<div class="a">'+esc(r.a)+'</div><div class="sx-r2">'+esc(r.prod||'Unknown')+'</div>';
+  h+='<div class="sx-r1"><span class="cp">$'+r.cp.toLocaleString()+'</span><span>'+r.sq.toLocaleString()+' sqft</span><span>$'+r.psf+'/sqft</span><span>'+(r.lot?r.lot.toLocaleString()+' sqft lot':'lot size unknown')+'</span></div>';
   h+='<div class="sx-r1"><span>'+esc(r.cd)+'</span>'+(r.p?'<span class="sx-presold">PRE-SOLD</span>':'<span>'+(r.dom!=null?r.dom+' DOM':'')+'</span>');
   if(r.svl!==undefined)h+='<span class="sx-svl" style="color:'+soldSvlCol(r.svl)+'">'+soldSvlTxt(r)+' vs list</span>';
   h+='</div>';
@@ -2109,16 +2109,16 @@ function buildSoldDash(){
   const avgSvl=svl.length?svl.reduce((a,b)=>a+b,0)/svl.length:null;
   const WMO={'0-30':1,'30-60':1,'60-90':1,'90-180':3,'180-365':6.1};
   const months=F.mo?1:(F.win==='all'?12:WMO[F.win]);
-  const absorb=rows.length/months;
-  const winLbl=F.mo?F.mo:(F.win==='all'?'365D':F.win+'D');
+  const absorb=months?(F.win==='all'&&!F.mo?rows.filter(r=>r.win!=='365+').length:rows.length)/months:null;
+  const winLbl=F.mo?F.mo:(F.win==='all'?'ARCHIVE':F.win+'D');
   let h='<div class="ovx-top"><span class="ovx-kicker">34DEV · SOLD COMPS</span><span class="ovx-live">● HAR CLOSED SALES · AS OF '+esc(SOLD_METRICS.as_of||'')+'</span></div>';
   h+='<h2>Sold Comps</h2>';
-  h+='<p class="sub">Trailing 365 days · $500k+ · 1500+ sqft · in-zone. Tap a card to open its pin. $/sqft and vs-list tiles sort the cards.</p>';
+  h+='<p class="sub">Closed-sales archive · in-zone · source export coverage varies. Counts are sales; repeat sales share one map pin. Tap a card to open its pin. $/sqft and vs-list tiles sort the cards.</p>';
   h+='<div class="sx-tiles">';
   h+='<div class="sx-tile"><div class="n">'+rows.length+'</div><div class="l">SOLD · '+esc(winLbl)+'</div></div>';
   h+='<div class="sx-tile tap'+(F.sort==='psf'?' on':'')+'" data-ssort="psf"><div class="n">'+(medPsf?'$'+Math.round(medPsf):'—')+'</div><div class="l">MEDIAN $/SQFT</div></div>';
   h+='<div class="sx-tile tap'+(F.sort==='svl'?' on':'')+'" data-ssort="svl"><div class="n" style="color:'+(avgSvl===null?'#f1ede6':soldSvlCol(avgSvl))+'">'+(avgSvl===null?'—':((avgSvl>0?'+':'')+(avgSvl*100).toFixed(1)+'%'))+'</div><div class="l">AVG SOLD VS LIST</div></div>';
-  h+='<div class="sx-tile"><div class="n">'+absorb.toFixed(1)+'</div><div class="l">ABSORPTION / MO</div></div>';
+  h+='<div class="sx-tile"><div class="n">'+(absorb===null?'—':absorb.toFixed(1))+'</div><div class="l">'+(F.win==='all'&&!F.mo?'365D SAMPLE / MO':'SAMPLE SALES / MO')+'</div></div>';
   h+='<div class="sx-tile"><div class="n">'+(medDom===null?'—':Math.round(medDom))+'</div><div class="l">MEDIAN DOM</div></div>';
   h+='</div>';
   // Sales volume by month — band/product/cohort filters apply; recency is
@@ -2128,7 +2128,7 @@ function buildSoldDash(){
   const volMos=[...new Set(SOLD_DATA.map(r=>r.mo))].sort();
   const volN={};volRows.forEach(r=>{volN[r.mo]=(volN[r.mo]||0)+1;});
   const volMax=Math.max(1,...volMos.map(m=>volN[m]||0));
-  h+='<div class="sx-vol"><div class="sx-volh"><span>SALES VOLUME BY MONTH</span><span>'+volRows.length+' SALES · TRAILING 365D</span></div><div class="sx-volbars">';
+  h+='<div class="sx-vol"><div class="sx-volh"><span>SALES VOLUME BY MONTH</span><span>'+volRows.length+' SALES · ARCHIVE</span></div><div class="sx-volbars">';
   for(const m of volMos){
     const n=volN[m]||0,[yy,mm]=m.split('-');
     const lbl=MMM[+mm-1]+((mm==='01'||m===volMos[0])?'’'+yy.slice(2):'');
@@ -2140,7 +2140,7 @@ function buildSoldDash(){
   for(const w of SOLD_WINS)h+=soldChip('win',w,w,F.win===w&&!F.mo);
   h+='<select class="sxmo" id="sxmo"><option value="">MONTH…</option>'+mos.map(m=>'<option value="'+m+'"'+(F.mo===m?' selected':'')+'>'+m+'</option>').join('')+'</select></div>';
   h+='<div class="sxc-row"><span class="cl">Band</span>'+soldChip('band','all','ALL',F.band==='all')+SOLD_BANDS.map(b=>soldChip('band',b,b,F.band===b)).join('')+'</div>';
-  h+='<div class="sxc-row"><span class="cl">Product</span>'+soldChip('prod','all','ALL',F.prod==='all')+soldChip('prod','Single Lot','SINGLE',F.prod==='Single Lot')+soldChip('prod','Split Lot','SPLIT',F.prod==='Split Lot')+soldChip('prod','Unclassified','UNCLASSIFIED',F.prod==='Unclassified')+'</div>';
+  h+='<div class="sxc-row"><span class="cl">Product</span>'+soldChip('prod','all','ALL',F.prod==='all')+soldChip('prod','Single Lot','SINGLE',F.prod==='Single Lot')+soldChip('prod','Split Lot','SPLIT',F.prod==='Split Lot')+soldChip('prod','Unclassified','UNCLASSIFIED',F.prod==='Unclassified')+soldChip('prod','Unknown','UNKNOWN',F.prod==='Unknown')+'</div>';
   h+='<div class="sxc-row"><span class="cl">Cohort</span>'+soldChip('coh','all','ALL',F.coh==='all')+soldChip('coh','nc','NEW CON',F.coh==='nc')+soldChip('coh','resale','RESALE',F.coh==='resale')+'</div>';
   if(!rows.length)h+='<div class="sx-none">No sales match the current filter.</div>';
   else if(F.sort){
@@ -2174,12 +2174,15 @@ function buildSoldDash(){
 function renderSoldPins(){
   soldLayer.clearLayers();for(const k in soldMk)delete soldMk[k];
   if(!SOLD_FILTER.on)return;
-  for(const r of soldFiltered()){
+  const propertyMarkers=new Map();
+  for(const r of soldFiltered().slice().sort((a,b)=>b.cd.localeCompare(a.cd))){
+    const key=r.ak||r.a.toLowerCase();
+    if(propertyMarkers.has(key)){soldMk[r.id]=propertyMarkers.get(key);continue;}
     const m=L.circleMarker([r.lat,r.lng],{radius:5,color:'#fff',weight:1,fillColor:SOLD_WIN_C[r.win]||'#8c857a',fillOpacity:.85});
     m.bindPopup(()=>soldCardHTML(r,true),{maxWidth:304,minWidth:290,autoPan:true});
     m.on('mouseover',function(){this.setStyle({radius:8,weight:1.6})});
     m.on('mouseout',function(){this.setStyle({radius:5,weight:1})});
-    soldMk[r.id]=m;soldLayer.addLayer(m);
+    soldMk[r.id]=m;propertyMarkers.set(key,m);soldLayer.addLayer(m);
   }
 }
 function syncSoldSel(){
@@ -2202,6 +2205,7 @@ function openSoldPin(id){
   if(!activeF.has('G:sold')){activeF.add('G:sold');renderSoldAll();refresh();}
   switchTab('map');
   const m=soldMk[id];if(!m)return;
+  m.bindPopup(()=>soldCardHTML(soldById[id],true),{maxWidth:304,minWidth:290,autoPan:true});
   const small=window.matchMedia('(max-width:560px)').matches;
   if(small&&panel)panel.classList.add('collapsed');
   setTimeout(()=>{
@@ -2222,7 +2226,10 @@ function appendSoldLegend(){
   const bucketRows=soldFiltered(false);
   F.win=_w;F.mo=_m;
   const byWin={};bucketRows.forEach(r=>byWin[r.win]=(byWin[r.win]||0)+1);
+  const _p=F.prod;F.prod='all';const productRows=soldFiltered();F.prod=_p;
+  const byProduct={};productRows.forEach(r=>byProduct[r.prod]=(byProduct[r.prod]||0)+1);
   let h='<div class="grp'+(collapsed.has('soldc')?' col':'')+'" data-grp="soldc"><div class="grp-h'+(F.on?' on':'')+'" data-scol="1"><span class="chev2">▼</span><span class="mbox'+(F.on?' on':'')+'" data-stoggle="1"></span><span class="gn">Sold Comps</span><span class="ct2">'+rows.length+'</span></div><div class="grp-body">';
+  for(const product of ['Single Lot','Split Lot','Unclassified','Unknown'])h+='<div class="leafrow'+(F.prod===product?' on':'')+'" data-sprod="'+product+'"><span class="sw" style="background:'+SOLD_PROD_C[product]+'"></span><span class="nm">'+product+'</span><span class="ct2">'+(byProduct[product]||0)+'</span></div>';
   for(const w of SOLD_WINS)h+='<div class="leafrow'+((F.win===w&&!F.mo)?' on':'')+'" data-swin="'+w+'"><span class="sw" style="background:'+SOLD_WIN_C[w]+'"></span><span class="nm">Sold '+w+' days</span><span class="ct2">'+(byWin[w]||0)+'</span></div>';
   h+='</div></div>';
   const d=document.createElement('div');d.innerHTML=h;const g=d.firstChild;el.appendChild(g);
@@ -2231,10 +2238,15 @@ function appendSoldLegend(){
     turnOn?activeF.add('G:sold'):activeF.delete('G:sold');
     // group toggle shows ALL sold pins — a recency window applies only via an explicit
     // leaf/chip click AFTER enabling. Without this reset a stale win leaks back in.
-    if(turnOn){SOLD_FILTER.win='all';SOLD_FILTER.mo=null;}
+    if(turnOn){SOLD_FILTER.win='all';SOLD_FILTER.mo=null;SOLD_FILTER.prod='all';}
     renderSoldAll();});
   g.querySelector('[data-scol]').addEventListener('click',ev=>{if(ev.target.closest('.mbox'))return;
     collapsed.has('soldc')?collapsed.delete('soldc'):collapsed.add('soldc');renderLegend();});
+  g.querySelectorAll('[data-sprod]').forEach(lf=>lf.addEventListener('click',()=>{
+    const product=lf.getAttribute('data-sprod');
+    SOLD_FILTER.prod=SOLD_FILTER.prod===product?'all':product;
+    activeF.add('G:sold');renderSoldAll();
+  }));
   g.querySelectorAll('[data-swin]').forEach(lf=>lf.addEventListener('click',()=>{
     const w=lf.getAttribute('data-swin');
     SOLD_FILTER.mo=null;SOLD_FILTER.win=(SOLD_FILTER.win===w?'all':w);
@@ -2246,7 +2258,7 @@ renderLegend();
 function soldAskContext(){
   const F=SOLD_FILTER;const rows=soldFiltered();
   const desc='recency='+(F.mo?('month '+F.mo):F.win)+', band='+F.band+', product='+F.prod+', cohort='+F.coh;
-  let out='\n\n=== SOLD COMPS (HAR closed sales, trailing 365 days, $500k+, 1500+ sqft, in-zone. cohort nc = new construction (built 2025+), resale = built 2024 or earlier. presold_n counts DOM=0 sales that went under contract before completion — a demand signal. SOLD_COMP_METRICS below is PRECOMPUTED GROUND TRUTH: quote its figures verbatim for any count / median $psf / DOM / absorption / sold-vs-list question it covers, and NEVER recompute an aggregate from row lines when a matching precomputed figure exists. med_psf = CLOSED $/sqft (recomputed close/sqft, not the HAR export column). avg_svl_pct = mean (close-list)/list x100; negative = sold under list. by_window_product keys = recency_window|product. cells keys = recency_window|price_band|product|cohort. Product: Split Lot = lot under 3500 sqft, Single Lot = 3500+, Unclassified = lot size missing.) ===\nSOLD_COMP_METRICS: '+JSON.stringify(SOLD_METRICS);
+  let out='\n\n=== SOLD COMPS (HAR closed-sales archive, in-zone; source export coverage varies. See basis and as_of in metrics; trailing_365 contains the current trailing-year sample. cohort nc = new construction (built 2025+), resale = built 2024 or earlier. presold_n counts DOM=0 sales that went under contract before completion — a demand signal. SOLD_COMP_METRICS below is PRECOMPUTED GROUND TRUTH: quote its figures verbatim for any count / median $psf / DOM / absorption / sold-vs-list question it covers, and NEVER recompute an aggregate from row lines when a matching precomputed figure exists. med_psf = CLOSED $/sqft (recomputed close/sqft, not the HAR export column). avg_svl_pct = mean (close-list)/list x100; negative = sold under list. by_window_product keys = recency_window|product. cells keys = recency_window|price_band|product|cohort. Product: Single Lot = lot >=4000 sqft; Split Lot = 2000 to <4000; Unclassified = nonzero lot <2000; Unknown = missing, zero or unparseable lot.) ===\nSOLD_COMP_METRICS: '+JSON.stringify(SOLD_METRICS);
   out+='\nCURRENT SOLD FILTER (what the user is looking at right now): '+desc+' — matches '+rows.length+' of '+SOLD_DATA.length+' sales.';
   if(rows.length&&rows.length<SOLD_DATA.length&&rows.length<=120){
     out+='\nFILTERED SOLD ROWS (the current on-screen slice only)\nFIELDS: address | close_date | sold_price | sqft | $psf_closed | lot | product | cohort | dom | sold_vs_list | builder | elementary\n';
