@@ -92,8 +92,8 @@ def run(live=None):
             assert panel['groups']==expected_groups,(name,panel['groups'])
             assert panel['missingPhaseIds']==[] and panel['invalidPhaseTagIds']==[],panel
             for product in panel['productRows']:
-                assert [r['key'].split('|')[1] for r in product['rows']]==['foundation','framing','exterior','mep_roughs','insulation','interior','mep_finals','complete']
-                assert sum(r['count'] for r in product['rows'])==product['count']
+                assert [r['key'].split('|')[1] for r in product['rows']]==['foundation','framing','exterior','mep_roughs','insulation','interior','mep_finals','complete','finished_on_market']
+                assert sum(r['count'] for r in product['rows'][:-1])==product['count']
             assert page.locator('[data-grp="uc"] .leafrow[data-sel$="|onmkt"]').count()==0
             assert page.locator('[data-grp="other"] .leafrow[data-sel="active_single|onmkt"]').count()==1
             assert page.locator('[data-grp="other"] .grp-h > .ct2').inner_text()==str(len(panel['other']))
@@ -106,6 +106,23 @@ def run(live=None):
                 assert current['deeds']==139 and current['sold']==767
                 assert current['columns']==baseline['columns']
                 assert current['complete']==dict(no_record=24,pending=5,sold=4,terminated=3,active=13)
+                finished={p['product']:p['rows'][-1]['count'] for p in panel['productRows']}
+                assert finished=={'Single Lot':4,'Split Lot':9,'Common Driveway':0},finished
+                members=page.evaluate("()=>DATA.flatMap(r=>finishedOnMarketMembers(r.id).map(m=>({id:m.id,pin:r.id,product:typeKeyOf(r.id)})))")
+                expected_members=page.evaluate("()=>marketRows().filter(r=>r.phase==='complete'&&r.status==='active').map(r=>r.member).sort()")
+                assert sorted(m['id'] for m in members)==expected_members and len(members)==13
+                current['finishedOnMarket']=members
+                page.evaluate("()=>{collapsed.delete('uc');for(const [ty] of TYPES)collapsed.delete('uc:'+ty);renderLegend();}")
+                for product in panel['productRows']:
+                    key=product['rows'][-1]['key']
+                    page.locator('[data-sel="'+key+'"] .nm').click(force=True)
+                    assert page.evaluate('(k)=>activeF.has(k)',key)
+                    selected=page.evaluate("(k)=>DATA.filter(r=>matchSel(pt(r.id).tags,k,r.id)).map(r=>r.id)",key)
+                    assert sorted(selected)==sorted(set(m['pin'] for m in members if m['product']==product['product']))
+                    page.locator('[data-sel="'+key+'"] .mbox').click(force=True)
+                    assert not page.evaluate('(k)=>activeF.has(k)',key)
+                print('FINISHED ON MARKET Single Lot 4; Split Lot 9; Common Driveway 0; total 13; row and checkbox filters PASS')
+                page.locator('[data-grp="uc"]').screenshot(path='/tmp/finished-on-market-'+('live' if live else 'local')+'.png')
                 assert page.locator('#sc-big').inner_text()=='128'
                 spots=[('act_715-merrill','active',['88557637','8 days','50361472','174 DOM','COMPLETE']),('act_1520-w-21st-st-unit-b','terminated',['Terminated / Expired','COMPLETE']),('act_902-e-25','active',['Active','COMPLETE']),('pmt_931-merrill-st-77009','no_record',['No Market Record','COMPLETE'])]
                 for identifier,status,texts in spots:

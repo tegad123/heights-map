@@ -53,12 +53,35 @@ popupHTML=function(r){
   if(anchor)anchor.insertAdjacentHTML('beforebegin',marketFacts(r));else card.insertAdjacentHTML('beforeend',marketFacts(r));
   return doc.innerHTML;
 };
-// Layers hierarchy changes require explicit user approval. Market status stays on popups.
+// Only the explicitly approved Complete-and-Active subset belongs in the phase list.
+function finishedOnMarketMembers(id){
+  const pin=byId[id];
+  return pin&&!inventoryCategory(id)&&homePhase(id)==='complete'
+    ?marketMembers(pin).filter(member=>marketEvidence(member).status==='active'):[];
+}
+const marketOriginalMatch=matchSel;
+matchSel=function(tags,key,id){
+  if(key.endsWith('|finished_on_market'))return typeKeyOf(id)===TY2K[key.split('|')[0]]&&finishedOnMarketMembers(id).length>0;
+  return marketOriginalMatch(tags,key,id);
+};
+// Further Layers hierarchy changes require explicit user approval.
 const marketOriginalLegend=renderLegend;
 renderLegend=function(){
   marketOriginalLegend();
   const legend=document.getElementById('legend');
   legend.querySelector('[data-grp="mkt"]')?.remove();
+  for(const [ty] of TYPES){
+    const complete=legend.querySelector('.leafrow[data-sel="'+ty+'|complete"]');
+    if(!complete)continue;
+    const key=ty+'|finished_on_market';
+    const count=DATA.filter(r=>typeKeyOf(r.id)===TY2K[ty]).reduce((n,r)=>n+finishedOnMarketMembers(r.id).length,0);
+    const row=document.createElement('div');
+    row.className='leafrow'+sOn(key);row.dataset.sel=key;
+    row.title='Complete construction and currently Active; included in Complete above';
+    row.innerHTML='<span class="mbox'+sOn(key)+'"></span><span class="sw" style="background:'+GROUP_C.act+'"></span><span class="nm">Finished on Market</span><span class="ct2">'+count+'</span>';
+    row.addEventListener('click',ev=>{ev.stopPropagation();activeF.has(key)?activeF.delete(key):activeF.add(key);renderLegend();refresh();});
+    complete.after(row);
+  }
   // Preserve the existing 14-home Single Lot overlapping filter, in Other.
   // Move its original node so its existing selection handlers remain intact.
   const onMarket=legend.querySelector('.leafrow[data-sel="active_single|onmkt"]');
