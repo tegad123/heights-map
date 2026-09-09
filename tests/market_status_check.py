@@ -73,12 +73,31 @@ def run(live=None):
                 assert re.findall(r'<script\b[^>]*>(.*?)</script>',body,re.S)==re.findall(r'<script\b[^>]*>(.*?)</script>',(ROOT/(name+'.html')).read_text(),re.S)
                 assert 'market_status.js' in body
             current=page.evaluate('''()=>({deeds:deedCount(),sold:typeof SOLD_DATA==='undefined'?null:SOLD_DATA.length,forecast:comingOnline(12).count,snapshot:marketSnapshot(),columns:phaseBreakdown(),categories:{custom:categoryCount('custom'),sold_off_market:categoryCount('sold_off_market')},rows:DATA.map(r=>({id:r.id,phase:homePhase(r.id),eta:inspectionEta(r),weight:UW(r.id)})),complete:marketRows().filter(r=>r.phase==='complete').reduce((o,r)=>(o[r.status]=(o[r.status]||0)+1,o),{}),marketCounts:marketRows().reduce((o,r)=>(o[r.status]=(o[r.status]||0)+1,o),{})})''')
-            assert page.locator('[data-market-axis]').count()==1
+            assert page.locator('[data-market-axis], [data-market-complete], [data-market-filter]').count()==0
             assert page.locator('[data-grp="mkt"]').count()==0
-            assert page.evaluate('''()=>[...document.querySelectorAll('.leafrow[data-sel$="|complete"]')].every(leaf=>Number(leaf.querySelector('.ct2').textContent)===[...leaf.nextElementSibling.querySelectorAll('.ct2')].reduce((n,e)=>n+Number(e.textContent),0))'''), 'Complete subcounts disagree with construction product group'
-            # Invoke every popup and every filter; compare each filter with its evidence rows.
-            assert page.evaluate('''()=>DATA.every(r=>popupHTML(r).includes('market-facts'))''')
-            assert page.evaluate('''()=>Object.keys(MARKET_LABELS).every(s=>DATA.every(p=>matchSel(pt(p.id).tags,'MS:'+s+':all',p.id)===marketRows().some(r=>r.pin===p.id&&r.status===s)))''')
+            assert page.evaluate("()=>DATA.every(r=>popupHTML(r).includes('market-facts'))")
+            panel=page.evaluate('''()=>{
+              const legend=document.getElementById('legend');
+              const uc=DATA.filter(r=>matchSel(pt(r.id).tags,'G:uc',r.id));
+              return {groups:[...legend.querySelectorAll(':scope > .grp')].map(g=>g.dataset.grp),
+                text:legend.innerText,
+                productRows:[...legend.querySelectorAll('[data-grp="uc"] .subg')].map(g=>({product:g.querySelector('.sn').textContent,count:Number(g.querySelector('.subg-h .ct2').textContent),rows:[...g.querySelectorAll('.leafrow')].map(row=>({key:row.dataset.sel,label:row.querySelector('.nm').textContent,count:Number(row.querySelector('.ct2').textContent)}))})),
+                other:[...legend.querySelectorAll('[data-grp="other"] .leafrow')].map(row=>({key:row.dataset.sel,label:row.querySelector('.nm').textContent,count:Number(row.querySelector('.ct2').textContent)})),
+                underConstructionHomes:uc.reduce((n,r)=>n+UW(r.id),0),
+                missingPhaseIds:uc.filter(r=>!homePhase(r.id)).map(r=>r.id),
+                invalidPhaseTagIds:uc.filter(r=>CONSTRUCTION_PHASES.filter(ph=>pt(r.id).tags.includes(ph)).length!==1).map(r=>r.id),
+                onMarketIds:DATA.filter(r=>matchSel(pt(r.id).tags,'active_single|onmkt',r.id)).map(r=>({id:r.id,phase:homePhase(r.id),weight:UW(r.id)}))};
+            }''')
+            expected_groups=['deed','intel','uc','custom','sold_off_market','other']+(['soldc'] if name=='index' else [])
+            assert panel['groups']==expected_groups,(name,panel['groups'])
+            assert panel['missingPhaseIds']==[] and panel['invalidPhaseTagIds']==[],panel
+            for product in panel['productRows']:
+                assert [r['key'].split('|')[1] for r in product['rows']]==['foundation','framing','exterior','mep_roughs','insulation','interior','mep_finals','complete']
+                assert sum(r['count'] for r in product['rows'])==product['count']
+            assert page.locator('[data-grp="uc"] .leafrow[data-sel$="|onmkt"]').count()==0
+            assert page.locator('[data-grp="other"] .leafrow[data-sel="active_single|onmkt"]').count()==1
+            assert page.locator('[data-grp="other"] .grp-h > .ct2').inner_text()==str(len(panel['other']))
+            current['panel']=panel
             if name=='index':
                 expected=[{k:r[k] for k in ['id','phase','eta','weight']} for r in baseline['rows']]
                 assert current['rows']==expected,'Phase/ETA/weight changed'
@@ -97,16 +116,24 @@ def run(live=None):
                     print('SPOT',identifier,status,json.dumps(texts))
                     page.locator('.leaflet-popup-content').screenshot(path='/tmp/linkage-'+('live-' if live else 'local-')+identifier+'.png')
                     page.evaluate('()=>{map.closePopup();}')
-                # Real filter button interaction shows the Complete-and-active Merrill pin.
-                page.locator('[data-market-axis] [data-market-filter="MS:active:Single Lot"]').click()
-                assert page.locator('[data-market-axis] [data-market-filter="MS:active:Single Lot"]').get_attribute('aria-pressed')=='true'
-                assert page.evaluate("matchSel(pt('act_715-merrill').tags,'MS:active:Single Lot','act_715-merrill')")
+                assert panel['underConstructionHomes']==213
+                assert panel['other'][-1]['count']==14
+                # Invoke the relocated row's real, retained event handler.
+                group=page.locator('[data-grp="other"]')
+                if ' col' in (group.get_attribute('class') or ''):
+                    page.locator('[data-grp="other"] .grp-h').click()
+                page.locator('[data-grp="other"] .leafrow[data-sel="active_single|onmkt"] .nm').click()
+                assert page.evaluate("activeF.has('active_single|onmkt')")
+                assert page.evaluate("DATA.filter(r=>matchSel(pt(r.id).tags,'active_single|onmkt',r.id)).reduce((n,r)=>n+UW(r.id),0)")==14
+                page.locator('[data-grp="other"]').screenshot(path='/tmp/panel-restored-'+('live' if live else 'local')+'.png')
+                page.locator('[data-grp="other"] .leafrow[data-sel="active_single|onmkt"] .nm').click()
+                assert not page.evaluate("activeF.has('active_single|onmkt')")
+                print('PANEL Under Construction 213; missing phase IDs []; invalid phase-tag IDs []; Other on-market overlap 14')
             else:
-                assert page.locator('[data-market-axis]').inner_text().count('No market-status export supplied')==1
                 assert set(current['marketCounts'])=={'no_record'}
             assert errors==[],errors
             outputs[name]={k:v for k,v in current.items() if k!='rows'}
-            print('MARKET',name,json.dumps(outputs[name],sort_keys=True))
+            print('MARKET',name,json.dumps({k:v for k,v in outputs[name].items() if k!='panel'},sort_keys=True))
             page.close()
         if live:
             for filename in ['market_status.js','heights_market_status.data.json']:
@@ -114,6 +141,7 @@ def run(live=None):
             print('PASS live market scripts and snapshot byte-identical')
         browser.close()
     server.shutdown()
+    pathlib.Path('/tmp/panel-restored-'+('live' if live else 'local')+'-results.json').write_text(json.dumps(outputs,indent=2)+'\n')
     return outputs
 
 

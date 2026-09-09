@@ -53,44 +53,23 @@ popupHTML=function(r){
   if(anchor)anchor.insertAdjacentHTML('beforebegin',marketFacts(r));else card.insertAdjacentHTML('beforeend',marketFacts(r));
   return doc.innerHTML;
 };
-const marketOriginalMatch=matchSel;
-matchSel=function(tags,key,id){
-  if(!key.startsWith('MS:'))return marketOriginalMatch(tags,key,id);
-  const [,status,product,phase]=key.split(':');
-  return marketRows().some(r=>r.pin===id&&r.status===status&&(product==='all'||(phase?typeKeyOf(r.pin):r.product)===product)&&(!phase||r.phase===phase));
-};
-function marketButtons(rows,phase,scopeProduct){
-  let h='';
-  for(const [status,label] of Object.entries(MARKET_LABELS)){
-    const group=rows.filter(r=>r.status===status),key='MS:'+status+':'+(scopeProduct||'all')+(phase?':'+phase:'');
-    h+='<button type="button" data-market-filter="'+key+'" aria-pressed="'+activeF.has(key)+'" class="leafrow" style="width:100%;border:0;background:transparent;color:inherit;text-align:left"><span class="nm">'+label+'</span><span class="ct2">'+group.length+'</span></button>';
-    for(const product of (phase?[]:['Single Lot','Split Lot','Common Driveway','Unknown'])){
-      const count=group.filter(r=>r.product===product).length;if(!count&&!['Single Lot','Split Lot'].includes(product))continue;
-      const k='MS:'+status+':'+product+(phase?':'+phase:'');
-      h+='<button type="button" data-market-filter="'+k+'" aria-pressed="'+activeF.has(k)+'" class="leafrow" style="width:100%;padding-left:28px;border:0;background:transparent;color:inherit;text-align:left;font-size:11px"><span class="nm">'+product+'</span><span class="ct2">'+count+'</span></button>';
-    }
-  }
-  return h;
-}
-function renderMarketLegend(){
-  const el=document.getElementById('legend');if(!el)return;
-  el.querySelectorAll('[data-market-axis],[data-market-complete]').forEach(e=>e.remove());
-  // Supersede legacy market summaries based on stored tags, preserving construction rows.
-  el.querySelector('[data-grp="mkt"]')?.remove();
-  el.querySelectorAll('.leafrow[data-sel$="|onmkt"]').forEach(e=>e.remove());
-  const rows=marketRows();
-  let h='<div class="grp" data-market-axis><div class="grp-h"><span class="gn">Market Status</span><span class="ct2">'+rows.length+'</span></div>';
-  if(!MARKET_VIEW.ready)h+='<div class="pmeta">'+esc(MARKET_VIEW.error||'Loading market evidence…')+'</div>';
-  else h+=marketButtons(rows)+'<div class="pmeta" style="padding:8px 12px;font-size:10px;line-height:1.4;color:var(--muted)">'+(MARKET_VIEW.available?'HAR '+esc(MARKET_VIEW.asOf)+' · Counts are represented homes. Paired pins may overlap. Export coverage is limited; No Market Record is unverified.':'No market-status export supplied. No Market Record does not mean unlisted.')+'</div>';
-  el.insertAdjacentHTML('afterbegin',h+'</div>');
-  el.querySelectorAll('.leafrow[data-sel$="|complete"]').forEach(leaf=>{
-    const ty=leaf.dataset.sel.split('|')[0],product=TY2K[ty];
-    leaf.insertAdjacentHTML('afterend','<div data-market-complete>'+marketButtons(rows.filter(r=>r.phase==='complete'&&typeKeyOf(r.pin)===product),'complete',product)+'</div>');
-  });
-  el.querySelectorAll('[data-market-filter]').forEach(button=>button.addEventListener('click',()=>{const k=button.dataset.marketFilter;activeF.has(k)?activeF.delete(k):activeF.add(k);renderLegend();refresh();}));
-}
+// Layers hierarchy changes require explicit user approval. Market status stays on popups.
 const marketOriginalLegend=renderLegend;
-renderLegend=function(){marketOriginalLegend();renderMarketLegend();};
+renderLegend=function(){
+  marketOriginalLegend();
+  const legend=document.getElementById('legend');
+  legend.querySelector('[data-grp="mkt"]')?.remove();
+  // Preserve the existing 14-home Single Lot overlapping filter, in Other.
+  // Move its original node so its existing selection handlers remain intact.
+  const onMarket=legend.querySelector('.leafrow[data-sel="active_single|onmkt"]');
+  const other=legend.querySelector('[data-grp="other"]');
+  legend.querySelectorAll('.leafrow[data-sel$="|onmkt"]').forEach(row=>row.remove());
+  if(onMarket&&other){
+    onMarket.title='Existing Single Lot on-market/building filter; overlaps construction phases';
+    other.querySelector('.grp-body').appendChild(onMarket);
+    other.querySelector('.grp-h > .ct2').textContent=other.querySelectorAll('.grp-body > .leafrow').length;
+  }
+};
 function marketSnapshot(){
   const forecast=comingOnline(12),ids=new Set(forecast.homes.map(r=>r.id));
   const excluded=marketRows().filter(r=>ids.has(r.pin)&&r.status==='terminated');
