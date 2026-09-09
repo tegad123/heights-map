@@ -1,0 +1,1428 @@
+{
+  "index": {
+    "supply": 144,
+    "columns": {
+      "foundation": 46,
+      "framing": 11,
+      "exterior": 29,
+      "mep_roughs": 7,
+      "insulation": 13,
+      "interior": 55,
+      "mep_finals": 20,
+      "complete": 52
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 1969,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real fixture 26022264",
+        "pass": true,
+        "detail": {
+          "phase": "framing",
+          "eta": {
+            "anchor": "1031-FDN PM",
+            "anchorDate": "2026-07-29",
+            "target": "2027-05-14",
+            "months": 8,
+            "complete": false,
+            "overdue": true,
+            "overdueDays": 21,
+            "baseDays": 226,
+            "remainingDays": 247,
+            "nextDays": 0,
+            "nextPhase": "exterior",
+            "duration": 21,
+            "elapsed": 42,
+            "anchorTarget": "2027-03-12",
+            "baseTarget": "2027-04-23",
+            "phase": "framing",
+            "anchorProject": "26022264"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 26009059",
+        "pass": true,
+        "detail": {
+          "phase": "exterior",
+          "eta": {
+            "anchor": "WINDSTORM",
+            "anchorDate": "2026-09-04",
+            "target": "2027-03-28",
+            "months": 6.5,
+            "complete": false,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": 200,
+            "remainingDays": 200,
+            "nextDays": 23,
+            "nextPhase": "mep_roughs",
+            "duration": 28,
+            "elapsed": 5,
+            "anchorTarget": "2027-03-28",
+            "baseTarget": "2027-03-28",
+            "phase": "exterior",
+            "anchorProject": "26009059"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 25118994",
+        "pass": true,
+        "detail": {
+          "phase": "exterior",
+          "eta": {
+            "anchor": "WINDSTORM",
+            "anchorDate": "2026-07-22",
+            "target": "2027-04-23",
+            "months": 7.5,
+            "complete": false,
+            "overdue": true,
+            "overdueDays": 21,
+            "baseDays": 205,
+            "remainingDays": 226,
+            "nextDays": 0,
+            "nextPhase": "mep_roughs",
+            "duration": 28,
+            "elapsed": 49,
+            "anchorTarget": "2027-02-12",
+            "baseTarget": "2027-04-02",
+            "phase": "exterior",
+            "anchorProject": "25118994"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 26012829",
+        "pass": true,
+        "detail": {
+          "phase": "interior",
+          "eta": {
+            "anchor": "INSULATION",
+            "anchorDate": "2026-07-28",
+            "target": "2026-12-10",
+            "months": 3,
+            "complete": false,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": 92,
+            "remainingDays": 92,
+            "nextDays": 71,
+            "nextPhase": "mep_finals",
+            "duration": 114,
+            "elapsed": 43,
+            "anchorTarget": "2026-12-10",
+            "baseTarget": "2026-12-10",
+            "phase": "interior",
+            "anchorProject": "26012829"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 26011885",
+        "pass": true,
+        "detail": {
+          "phase": "interior",
+          "eta": {
+            "anchor": "INSULATION",
+            "anchorDate": "2026-08-17",
+            "target": "2026-12-30",
+            "months": 3.5,
+            "complete": false,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": 112,
+            "remainingDays": 112,
+            "nextDays": 91,
+            "nextPhase": "mep_finals",
+            "duration": 114,
+            "elapsed": 23,
+            "anchorTarget": "2026-12-30",
+            "baseTarget": "2026-12-30",
+            "phase": "interior",
+            "anchorProject": "26011885"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 25071971",
+        "pass": true,
+        "detail": {
+          "phase": "complete",
+          "eta": {
+            "anchor": "All five finals",
+            "anchorDate": "2026-07-07",
+            "target": "2026-07-07",
+            "months": null,
+            "complete": true,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": null,
+            "remainingDays": null,
+            "nextDays": null,
+            "nextPhase": null,
+            "phase": "complete"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 25059398",
+        "pass": true,
+        "detail": {
+          "phase": "complete",
+          "eta": {
+            "anchor": "All five finals",
+            "anchorDate": "2026-06-18",
+            "target": "2026-06-18",
+            "months": null,
+            "complete": true,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": null,
+            "remainingDays": null,
+            "nextDays": null,
+            "nextPhase": null,
+            "phase": "complete"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 25092767",
+        "pass": true,
+        "detail": {
+          "phase": "complete",
+          "eta": {
+            "anchor": "All five finals",
+            "anchorDate": "2026-08-25",
+            "target": "2026-08-25",
+            "months": null,
+            "complete": true,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": null,
+            "remainingDays": null,
+            "nextDays": null,
+            "nextPhase": null,
+            "phase": "complete"
+          }
+        }
+      },
+      {
+        "name": "Real fixture 22030746",
+        "pass": true,
+        "detail": {
+          "phase": "interior",
+          "eta": {
+            "anchor": "INSULATION",
+            "anchorDate": "2026-08-04",
+            "target": "2026-12-17",
+            "months": 3.5,
+            "complete": false,
+            "overdue": false,
+            "overdueDays": 0,
+            "baseDays": 99,
+            "remainingDays": 99,
+            "nextDays": 78,
+            "nextPhase": "mep_finals",
+            "duration": 114,
+            "elapsed": 36,
+            "anchorTarget": "2026-12-17",
+            "baseTarget": "2026-12-17",
+            "phase": "interior",
+            "anchorProject": "22030746"
+          }
+        }
+      },
+      {
+        "name": "Harvard: three weeks overdue, later than 629",
+        "pass": true,
+        "detail": {
+          "harvard": "2027-05-14",
+          "windstorm": "2027-03-28"
+        }
+      },
+      {
+        "name": "629: Partial windstorm is exterior and about 6.5 months",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "822: overdue for roughs and later than 629",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "711: 135 days from insulation is approximately January 2027",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "830 E 26th no permit/no phase/no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Mutant: full-approval-only stickiness is caught on Munford",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Mutant: old flat-offset rule is caught on Harvard/629",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Mutant: Struct-only completion is caught",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Retained fixture 112 E 27th",
+        "pass": true,
+        "detail": {
+          "actual": "complete"
+        }
+      },
+      {
+        "name": "Retained fixture 609 E 25th",
+        "pass": true,
+        "detail": {
+          "actual": "complete"
+        }
+      },
+      {
+        "name": "Retained fixture 118 Munford",
+        "pass": true,
+        "detail": {
+          "actual": "interior"
+        }
+      },
+      {
+        "name": "Retained fixture 711 E 25th A",
+        "pass": true,
+        "detail": {
+          "actual": "interior"
+        }
+      },
+      {
+        "name": "Retained fixture 1033 Voight",
+        "pass": true,
+        "detail": {
+          "actual": "interior"
+        }
+      },
+      {
+        "name": "Retained fixture 1035 Voight",
+        "pass": true,
+        "detail": {
+          "actual": "interior"
+        }
+      },
+      {
+        "name": "Retained fixture 830 E 26th",
+        "pass": true,
+        "detail": {
+          "actual": null
+        }
+      },
+      {
+        "name": "Retained fixture 710 Waverly A",
+        "pass": true,
+        "detail": {
+          "actual": "foundation"
+        }
+      },
+      {
+        "name": "Retained fixture 710 Waverly B",
+        "pass": true,
+        "detail": {
+          "actual": "foundation"
+        }
+      },
+      {
+        "name": "Retained fixture 710 Waverly C",
+        "pass": true,
+        "detail": {
+          "actual": "foundation"
+        }
+      },
+      {
+        "name": "Retained fixture 832 E 27th",
+        "pass": true,
+        "detail": {
+          "actual": "framing"
+        }
+      },
+      {
+        "name": "Retained fixture 835 Lawrence",
+        "pass": true,
+        "detail": {
+          "actual": "foundation"
+        }
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "montrose": {
+    "supply": 80,
+    "columns": {
+      "foundation": 27,
+      "framing": 14,
+      "exterior": 7,
+      "mep_roughs": 4,
+      "insulation": 0,
+      "interior": 31,
+      "mep_finals": 7,
+      "complete": 21
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 730,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "riveroaks": {
+    "supply": 9,
+    "columns": {
+      "foundation": 5,
+      "framing": 0,
+      "exterior": 4,
+      "mep_roughs": 1,
+      "insulation": 0,
+      "interior": 3,
+      "mep_finals": 0,
+      "complete": 0
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 27,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "springbranch": {
+    "supply": 120,
+    "columns": {
+      "foundation": 27,
+      "framing": 5,
+      "exterior": 14,
+      "mep_roughs": 4,
+      "insulation": 6,
+      "interior": 48,
+      "mep_finals": 26,
+      "complete": 33
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 3897,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "springvalley": {
+    "supply": 0,
+    "columns": {
+      "foundation": 0,
+      "framing": 0,
+      "exterior": 0,
+      "mep_roughs": 0,
+      "insulation": 0,
+      "interior": 0,
+      "mep_finals": 0,
+      "complete": 0
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 0,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "timbergrove": {
+    "supply": 19,
+    "columns": {
+      "foundation": 2,
+      "framing": 3,
+      "exterior": 4,
+      "mep_roughs": 3,
+      "insulation": 1,
+      "interior": 6,
+      "mep_finals": 2,
+      "complete": 10
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 162,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "westu": {
+    "supply": 26,
+    "columns": {
+      "foundation": 4,
+      "framing": 3,
+      "exterior": 4,
+      "mep_roughs": 3,
+      "insulation": 1,
+      "interior": 7,
+      "mep_finals": 4,
+      "complete": 3
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 160,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  },
+  "gardenoaksoakforest": {
+    "supply": 14,
+    "columns": {
+      "foundation": 8,
+      "framing": 3,
+      "exterior": 0,
+      "mep_roughs": 2,
+      "insulation": 0,
+      "interior": 8,
+      "mep_finals": 25,
+      "complete": 34
+    },
+    "checks": [
+      {
+        "name": "Every same-product phase pair: base timeline monotonic",
+        "pass": true,
+        "detail": {
+          "pairs": 338,
+          "violations": []
+        }
+      },
+      {
+        "name": "Displayed forecasts = property base + overdue only",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "No-permit records have no phase or ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete requires all five finals and no ETA",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Stage counts are finite",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Five-week Framing is two weeks later than fresh Framing",
+        "pass": true,
+        "detail": {
+          "oldFraming": {
+            "duration": 21,
+            "elapsed": 35,
+            "nextDays": 0,
+            "overdueDays": 14,
+            "baseDays": 226,
+            "remainingDays": 240,
+            "anchorTarget": "2027-03-19",
+            "baseTarget": "2027-04-23",
+            "target": "2027-05-07",
+            "nextPhase": "exterior",
+            "months": 8
+          },
+          "freshFraming": {
+            "duration": 21,
+            "elapsed": 0,
+            "nextDays": 21,
+            "overdueDays": 0,
+            "baseDays": 226,
+            "remainingDays": 226,
+            "anchorTarget": "2027-04-23",
+            "baseTarget": "2027-04-23",
+            "target": "2027-04-23",
+            "nextPhase": "exterior",
+            "months": 7.5
+          }
+        }
+      },
+      {
+        "name": "Overdue can legitimately reorder phases",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "INT.CAB through Complete is exactly 135 days",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Invalid anchor refused",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Supply counts homes including pairs",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Eight snapshot columns and Complete checkboxes",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Category exclusions visible in snapshot footer",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Complete popups display every final",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Struct passed, grading missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Four finals passed, Struct missing is MEP Finals",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "custom excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "sold_off_market excludes inventory, preserves phase, filters alone",
+        "pass": true,
+        "detail": null
+      },
+      {
+        "name": "Real popup and ETA rendering",
+        "pass": true,
+        "detail": null
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "provenance": "Reconstructed from user Phase 2 source fixtures and retained must-NOT assertions; not the unavailable historical 22-property set.",
-  "as_of": "2026-09-08",
+  "provenance": "Reconstructed from user Phase 2 source fixtures and retained must-NOT assertions; not the unavailable historical 22-property set. Updated for approved eight-phase partial-or-approved taxonomy; historical expectations retained.",
+  "as_of": "2026-09-09",
   "properties": [
     {
       "property": "112 E 27th",
@@ -9,6 +9,11 @@
       "new_expected": "complete",
       "source": "User Phase 2 table",
       "eta": {
+        "anchor": "All five finals",
+        "target": "2026-07-07",
+        "months": null
+      },
+      "previous_eta": {
         "anchor": "Struct Final",
         "target": "2026-07-07",
         "months": null
@@ -21,6 +26,11 @@
       "new_expected": "complete",
       "source": "User Phase 2 table",
       "eta": {
+        "anchor": "All five finals",
+        "target": "2026-06-18",
+        "months": null
+      },
+      "previous_eta": {
         "anchor": "Struct Final",
         "target": "2026-06-18",
         "months": null
@@ -30,9 +40,13 @@
       "property": "118 Munford",
       "id": "2131437296",
       "old_expected": "finishing",
-      "new_expected": "finishing",
+      "new_expected": "interior",
       "source": "User Phase 2 table",
       "eta": {
+        "anchor": "INSULATION",
+        "target": "2026-12-10"
+      },
+      "previous_eta": {
         "anchor": "INSULATION",
         "target": "2026-12-28"
       }
@@ -41,9 +55,14 @@
       "property": "711 E 25th A",
       "id": "pmt_711-e-25th-st-a-77008",
       "old_expected": "finishing",
-      "new_expected": "finishing",
+      "new_expected": "interior",
       "source": "User Phase 2 table",
       "eta": {
+        "anchor": "INSULATION",
+        "target": "2026-12-30",
+        "builder_plan": "2026-12-02"
+      },
+      "previous_eta": {
         "anchor": "INSULATION",
         "target": "2027-01-17",
         "builder_plan": "2026-12-02"
@@ -53,14 +72,14 @@
       "property": "1033 Voight",
       "id": "pmt_1033-voight-st-77009",
       "old_expected": "finishing",
-      "new_expected": "finishing",
+      "new_expected": "interior",
       "source": "User Phase 2 table"
     },
     {
       "property": "1035 Voight",
       "id": "pmt_1035-voight-st-77009",
       "old_expected": "finishing",
-      "new_expected": "finishing",
+      "new_expected": "interior",
       "source": "User Phase 2 table",
       "rendered_id": "pmt_1033-voight-st-77009",
       "permit": "22030748"
@@ -72,12 +91,13 @@
       "new_expected": null,
       "source": "User retained must-NOT assertion",
       "forbidden": [
-        "sitework",
         "foundation",
         "framing",
-        "dried_in",
         "exterior",
-        "finishing",
+        "mep_roughs",
+        "insulation",
+        "interior",
+        "mep_finals",
         "market",
         "complete"
       ]
@@ -89,7 +109,7 @@
       "new_expected": null,
       "source": "User retained must-NOT assertion",
       "forbidden": [
-        "finishing",
+        "interior",
         "market",
         "complete"
       ],
@@ -103,7 +123,7 @@
       "new_expected": null,
       "source": "User retained must-NOT assertion",
       "forbidden": [
-        "finishing",
+        "interior",
         "market",
         "complete"
       ],
@@ -117,7 +137,7 @@
       "new_expected": null,
       "source": "User retained must-NOT assertion",
       "forbidden": [
-        "finishing",
+        "interior",
         "market",
         "complete"
       ],
@@ -142,7 +162,7 @@
       "new_expected": null,
       "source": "User retained must-NOT assertion",
       "forbidden": [
-        "finishing",
+        "interior",
         "market",
         "complete"
       ]
@@ -164,7 +184,7 @@
       "forbidden": [
         "framing"
       ],
-      "expected": "sitework"
+      "expected": "foundation"
     }
   ]
 }

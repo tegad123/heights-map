@@ -44,8 +44,22 @@ options=>{
    check('Mutant: Struct-only completion is caught',inspToPhase({inspections:[{type:'Struct Final',date:'2026-09-01',raw:'Approved',result:'Passed'}]})==='complete');
   }finally{inspPhase=oldPhase;inspectionEta=oldEta;completionFinal=oldComplete;}
  }
+ if(options.fixtures){for(const f of options.fixtures.properties){
+  const r=byId[f.rendered_id||f.id],actual=r?homePhase(r.id):'missing';
+  const pass=phase=>f.forbidden?!f.forbidden.includes(phase):phase===f.new_expected;
+  check('Retained fixture '+f.property,!!r&&pass(actual)&&(!f.permit||!INSPECTIONS[f.permit]||pass(inspToPhase(INSPECTIONS[f.permit]))),{actual});
+ }}
+ check('Supply counts homes including pairs',comingOnline(12).count===comingOnline(12).homes.reduce((n,r)=>n+UW(r.id),0));
+ readyMonths=12;applyReadyFilter();readyMonths=0;applyReadyFilter();
+ const legend=document.getElementById('legend');
+ check('Eight snapshot columns and Complete checkboxes',PH_ABBR.length===8&&PH_ABBR.every(([k])=>CONSTRUCTION_PHASES.includes(k))&&!!legend.querySelector('[data-sel="active_single|complete"] .mbox')&&!legend.querySelector('[data-sel="L:complete"]'));
+ check('Category exclusions visible in snapshot footer',document.getElementById('sc-foot').textContent.includes('Excluded: 0 Custom / 0 Sold Off Market'));
+ check('Complete popups display every final',rows.filter(x=>x.phase==='complete').every(x=>{const h=popupHTML(x.r);return ['plumbing: Passed','hvac: Passed','electrical: Passed','grading: Passed','structural: Passed'].every(t=>h.includes(t))&&!h.includes('Completion: ~');}));
+ const finals=['PLUMBING FINAL','AC FINAL','ELECT FINAL','GRADING FINAL','Struct Final'].map(type=>({type,raw:'Approved',result:'Passed',date:'2026-09-01'}));
+ check('Struct passed, grading missing is MEP Finals',inspToPhase({inspections:finals.filter(r=>r.type!=='GRADING FINAL')})==='mep_finals');
+ check('Four finals passed, Struct missing is MEP Finals',inspToPhase({inspections:finals.filter(r=>r.type!=='Struct Final')})==='mep_finals');
  // Temporarily tag a real supply home; restore state without persisting it.
- const sample=comingOnline(12).homes[0]||DATA.find(r=>r.permits?.length)||DATA[0];
+ const sample=comingOnline(12).homes.find(r=>UW(r.id)>1)||comingOnline(12).homes[0]||DATA.find(r=>r.permits?.length)||DATA[0];
  if(sample){const saved=[...pt(sample.id).tags],before=comingOnline(12).count,wasSupply=comingOnline(12).homes.includes(sample),phase=homePhase(sample.id);
   try{for(const category of ['custom','sold_off_market']){
     pt(sample.id).tags=[...saved,category];renderLegend();refresh();buildOverview();buildTimeline();renderSupplyCard();

@@ -56,7 +56,7 @@ def main():
                 if(f.permit&&INSPECTIONS[f.permit]){const individual=inspToPhase(INSPECTIONS[f.permit]);pass=pass&&(f.forbidden?!f.forbidden.includes(individual):individual===expected);}
                 if(f.eta)pass=pass&&!!eta&&eta.anchor===f.eta.anchor&&eta.target===f.eta.target&&(!('months' in f.eta)||monthsLeft(r.id)===f.eta.months);
                 if(expected==='complete')pass=pass&&html.includes('COMPLETE')&&!html.includes('months to completion')&&!BUILD_PHASES.some(x=>pt(r.id).tags.includes(x));
-                if(f.eta&&expected!=='complete')pass=pass&&html.includes('to completion')&&eta.anchor!=='bucket default';
+                if(f.eta&&expected!=='complete')pass=pass&&html.includes('Completion:')&&eta.anchor!=='bucket default';
                 return {...f,actual,eta,months:monthsLeft(r.id),pass};});
               const counts={},homeCounts={};for(const r of DATA){const ph=homePhase(r.id)||'no stage';counts[ph]=(counts[ph]||0)+1;homeCounts[ph]=(homeCounts[ph]||0)+UW(r.id);}
               const candidates=DATA.filter(r=>BUILD_PHASES.some(x=>pt(r.id).tags.includes(x))).sort((a,b)=>String(a.id).localeCompare(String(b.id)));

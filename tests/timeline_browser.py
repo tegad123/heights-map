@@ -33,9 +33,10 @@ def run(args):
               return {supply:comingOnline(12).count,supplyIds:comingOnline(12).homes.map(r=>r.id),columns:phaseBreakdown(),uc:ucCount(),deed:deedCount(),sold:typeof SOLD_DATA==='undefined'?null:SOLD_DATA.length,
                 rows:DATA.map(r=>({id:r.id,address:r.a,product:prodKeyR(r),phase:homePhase(r.id),weight:UW(r.id),eta:inspectionEta(r),months:monthsLeft(r.id),projects:(r.permits||[]).map(p=>p.proj)}))};
             }''')
-            if args.checks:result['checks']=p.evaluate((ROOT/'tests/timeline_cases.js').read_text(),{'heights':name=='index'})
+            if args.checks:result['checks']=p.evaluate((ROOT/'tests/timeline_cases.js').read_text(),{'heights':name=='index','fixtures':json.loads((ROOT/'fixtures.json').read_text()) if name=='index' else None})
             if args.spots and name=='index':
-                for proj in ['26022264','26009059','26012829','26011885','25071971']:
+                rough=p.evaluate("DATA.find(r=>homePhase(r.id)==='mep_roughs').permits[0].proj")
+                for proj in ['26022264','26009059',rough,'26012829','26011885','25071971']:
                     identifier=p.evaluate('(proj)=>DATA.find(r=>(r.permits||[]).some(pm=>pm.proj===proj)).id',proj)
                     p.evaluate('(id)=>{openPin(id);}',identifier)
                     p.wait_for_function('(id)=>document.querySelector(".leaflet-popup-content .card")?.dataset.pid===id',arg=identifier)

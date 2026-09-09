@@ -146,7 +146,8 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 #supplycard .sc-phases{display:flex;justify-content:space-between;margin-bottom:12px}
 #supplycard .sc-ph{text-align:center;flex:1}
 #supplycard .sc-ph .n{font-size:16px;font-weight:600}
-#supplycard .sc-ph .l{font-size:8.5px;color:var(--sub);letter-spacing:.08em;margin-top:2px}
+#supplycard .sc-ph .l{font-size:8px;color:var(--sub);letter-spacing:0;margin-top:2px}
+#supplycard .sc-ph{min-width:0;flex:1;text-align:center}
 #supplycard .sc-foot{color:var(--sub);font-size:9.5px;letter-spacing:.05em;border-top:1px solid var(--bd);padding-top:8px}
 .phasehead{display:flex;align-items:center;gap:10px;margin:10px 0 4px;flex-wrap:wrap}
 .phasechip{font-family:var(--lab);font-size:11px;font-weight:600;letter-spacing:.08em;padding:5px 11px;border-radius:6px}
@@ -716,7 +717,7 @@ const pinColor=id=>{const t=pt(id).tags;
   if(t.includes('off_market_single'))return (state.tags.off_market_single||{}).color||'#8a8f98';
   if(t.includes('off_market_split'))return (state.tags.off_market_split||{}).color||'#5f636b';
   if(t.includes('listed')||t.includes('market'))return t.includes('market')?GROUP_C.act:GROUP_C.act_uc;
-  for(const p of ['finishing','exterior','dried_in','framing','foundation','sitework'])if(t.includes(p))return (byId[id]&&byId[id].prod==='Common Driveway')?GROUP_C.cd:(t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single);
+  for(const p of CONSTRUCTION_PHASES.slice().reverse())if(t.includes(p))return (byId[id]&&byId[id].prod==='Common Driveway')?GROUP_C.cd:(t.includes('active_split')?GROUP_C.uc_split:GROUP_C.uc_single);
   if(t.includes('built'))return GROUP_C.pmt;
   if(t.includes('deed'))return GROUP_C.deed;
   if(t.includes('permit'))return GROUP_C.pmt;
@@ -986,7 +987,7 @@ const dispLL={};{const grp={};for(const r of DATA){const k=r.lat.toFixed(6)+','+
 for(const r of DATA){
   const m=L.circleMarker(dispLL[r.id]||[r.lat,r.lng],mkStyle(r.id));
   m._rec=r; m._s=((r.llc||'')+' '+(r.a||'')+(r._twin?' '+(r._twin.a||'')+' '+(r._twin.llc||''):'')).toLowerCase();
-  m.bindPopup(()=>popupHTML(r),{maxWidth:304,minWidth:290,autoPan:true});
+  m.bindPopup(()=>popupHTML(r),{maxWidth:340,minWidth:310,maxHeight:Math.max(180,Math.min(540,window.innerHeight*.42)),autoPan:true});
   m.on('mouseover',function(){this.setStyle({radius:9,weight:1.6})});
   m.on('mouseout',function(){this.setStyle(mkStyle(r.id))});
   mById[r.id]=m; markers.push(m); layer.addLayer(m);
@@ -1110,23 +1111,31 @@ function popupHTML(r){
     if(sa&&sb&&sa!==sb)h+='<div class="addr" style="color:#c9b6ec">'+esc(_lbl(r.a)+' '+sa+' \u00b7 '+_lbl(r._twin.a)+' '+sb)+'</div>';
   }
   else if(r._soloSplit)h+='<div class="addr"><span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">split project \u00b7 2 homes \u00b7 twin not tracked</span></div>';
-  // phase-first header: big phase chip + months-to-completion (matches redesign)
-  {const ph=(typeof homePhase==='function')?homePhase(r.id):null;
-   if(ph){const nm=(state.tags[ph]&&state.tags[ph].name)||PHASE_LABELS&&PHASE_LABELS[ph]||ph;
-     const col=(PH_C&&PH_C[ph])||'#8c857a';
-     const ml=(typeof monthsLeft==='function')?monthsLeft(r.id):null;
-     h+='<div class="phasehead">';
-     h+='<span class="phasechip" style="background:'+col+';color:#0d0c0b">'+esc(String(nm).toUpperCase())+'</span>';
-     if(ph==='complete')h+='<span class="phasetime">Complete</span>';
-     else if(ph==='market')h+='<span class="phasetime">ready / on market</span>';
-     else if(etaText(r))h+='<span class="phasetime">'+esc(etaText(r))+'</span>';
-     for(const s of inspAnnotations(r,inspForPin(r)).notes)h+='<span class="phasetime">('+esc(s)+')</span>';
-     h+='</div>';}
-   else if(INSP_LOADED&&!(p.tags||[]).some(t=>['pending','market','listed','off_market_single','off_market_split','built'].includes(t))){
-     // evidence rule: no passed inspection -> no stage. Say why instead of showing a phase chip.
-     const ins0=inspForPin(r); const hasP=!!(r.permits&&r.permits.length);
-     const why=!hasP?'No permit activity':(ins0&&(ins0.inspections||[]).length?'Permitted \u2014 no passed inspections':'Permitted \u2014 no inspections');
-     h+='<div class="phasehead"><span class="phasechip" style="background:#8c857a;color:#0d0c0b">'+esc(why.toUpperCase())+'</span></div>';}
+  // Construction evidence and timeline are independent of listing status.
+  {const ph=homePhase(r.id),eta=inspectionEta(r);
+   if(ph){
+    h+='<div class="phasehead"><span class="phasechip" style="background:'+PHASE_DEF[ph][1]+';color:#0d0c0b">'+esc(PHASE_DEF[ph][0].toUpperCase())+'</span>';
+    if(eta.complete)h+='<div class="phasetime">Complete · '+esc(eta.anchorDate)+'</div>';
+    else if(eta.missingAnchor)h+='<div class="phasetime">Next / completion: unavailable — no dated phase evidence</div>';
+    else{
+      h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+(eta.overdueDays?' — overdue':' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks')+'</div>';
+      h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.target)+'</div>';
+      if(eta.overdueDays)h+='<div class="phasetime">'+Math.round(eta.overdueDays/7)+' weeks overdue for '+esc(NEXT_INSPECTION[ph])+'</div>';
+      h+='<div class="pmeta">Phase anchor: '+esc(eta.anchorDate)+'</div>';
+    }
+    h+='</div>';
+    if(ph==='mep_finals'||ph==='complete'){
+      const ins=inspForPin(r),groups={};
+      for(const row of ins?.inspections||[])(groups[row.proj||ins.proj||'project']??=[]).push(row);
+      h+='<div class="permit finals-checklist"><div class="lbl">Five finals</div>';
+      for(const [proj,rows] of Object.entries(groups)){
+        const list=finalChecklist({inspections:rows});
+        h+='<div class="pmeta">#'+esc(proj)+'</div>';
+        for(const key of ['plumbing','hvac','electrical','grading','structural'])h+='<div>'+esc(key)+': '+(list.passed[key]?'Passed · '+esc(list.passed[key].date):'Outstanding')+'</div>';
+      }
+      h+='</div>';
+    }
+   }else h+='<div class="phasehead"><span class="phasechip">No permit activity</span></div>';
   }
   const A=r.kind==='active';
   const cells=[];
@@ -1184,7 +1193,7 @@ function popupHTML(r){
     // false market status. The tag stays (drives grouping + pin color) — only the chip hides.
     if((tid==='active_single'||tid==='active_split')&&!(p.tags.includes('listed')||p.tags.includes('market')))continue;
     h+='<span class="pchip" style="background:'+t.color+'">'+esc(t.name)+(VIEWER?'':'<span class="x" data-rm="'+esc(tid)+'">&times;</span>')+'</span>';}
-  if(!VIEWER){const avail=Object.keys(state.tags).filter(tid=>!p.tags.includes(tid));
+  if(!VIEWER){const avail=Object.keys(state.tags).filter(tid=>!p.tags.includes(tid)&&!['sitework','dried_in','finishing'].includes(tid));
    const PHX=['complete','mep_finals','interior','insulation','mep_roughs','exterior','framing','foundation','market'];const grp={type:[],phase:[],intel:[],other:[]};
    avail.forEach(tid=>{if(tid==='active_single'||tid==='active_split')grp.type.push(tid);else if(PHX.includes(tid))grp.phase.push(tid);else if(tid==='permit')grp.intel.push(tid);else grp.other.push(tid);});
    const og=(lbl,arr)=>arr.length?'<optgroup label="'+lbl+'">'+arr.map(tid=>'<option value="'+esc(tid)+'">'+esc(state.tags[tid].name)+'</option>').join('')+'</optgroup>':'';
@@ -1210,7 +1219,7 @@ function popupHTML(r){
    h+='</select></div>';
    h+='<div class="cell"><div class="lbl">Edit \u00b7 Stage</div><select class="addtag" style="width:100%" data-setstage>';
    const curS=(pt(r.id).tags||[]).find(t=>PHASE_SEQ.indexOf(t)>=0)||'';
-   [['','(none)'],['sitework','Sitework / Pre-Pour'],['foundation','Foundation'],['framing','Framing'],['dried_in','Framed / Drying-In'],['exterior','Exterior Close-In'],['finishing','Interior Finishing'],['market','On Market'],['complete','Complete']].forEach(o=>{h+='<option value="'+o[0]+'"'+(curS===o[0]?' selected':'')+'>'+o[1]+'</option>';});
+   [['','(none)'],...CONSTRUCTION_PHASES.map(k=>[k,PHASE_DEF[k][0]]),['market','On Market']].forEach(o=>{h+='<option value="'+o[0]+'"'+(curS===o[0]?' selected':'')+'>'+o[1]+'</option>';});
    h+='</select></div>';
    if(r._pairKey)h+='<button class="btn" data-unpair="'+esc(r._pairKey)+'">Unpair \u00b7 show as 2 pins</button>';
    h+='<div class="lbl" style="letter-spacing:.08em">drag pin to move \u00b7 <span class="qnote-lk" data-exportedits>copy all edits (send to Tega)</span></div>';
@@ -1257,12 +1266,12 @@ function tagCount(tid){let n=0;for(const id in state.points){if(!mById[id]||(inv
   n+=UW(id);}return n;}
 const TY2K={active_single:'Single Lot',active_split:'Split Lot',active_cd:'Common Driveway',off_market_single:'Single Lot (Off Market)',off_market_split:'Split Lot (Off Market)'};
 function typeKeyOf(id){const r=byId[id];return r?prodKeyR(r):null;}
-function comboCount(a,b){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(typeKeyOf(id)!==TY2K[a])continue;const bld=BUILD_PHASES.some(p=>t.includes(p));if(!bld)continue;if(b==='onmkt'){if(_mkted(t))n+=UW(id);}else{if(t.includes(b)&&!_mkted(t))n+=UW(id);}}return n;}
+function comboCount(a,b){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(typeKeyOf(id)!==TY2K[a])continue;const bld=CONSTRUCTION_PHASES.some(p=>t.includes(p));if(!bld)continue;if(b==='onmkt'){if(_mkted(t)&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}else{if(t.includes(b))n+=UW(id);}}return n;}
 const BUILD_PHASES=['foundation','framing','exterior','mep_roughs','insulation','interior','mep_finals'];
 const _mkted=t=>t.includes('listed')||t.includes('market');
-function ucCount(){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
-function ucTypeCount(ty){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(typeKeyOf(id)===TY2K[ty]&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
-function ucNCCount(){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(!typeKeyOf(id)&&BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucCount(){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(CONSTRUCTION_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucTypeCount(ty){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(typeKeyOf(id)===TY2K[ty]&&CONSTRUCTION_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
+function ucNCCount(){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(!typeKeyOf(id)&&CONSTRUCTION_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
 function mktCount(){return tagCount('market');}
 function listedCount(){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p)))n+=UW(id);}return n;}
 function listedTypeCount(k){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(_mkted(t)&&!BUILD_PHASES.some(p=>t.includes(p))&&typeKeyOf(id)===k)n+=UW(id);}return n;}
@@ -1274,18 +1283,19 @@ function matchSel(tags,k,id){
   const category=inventoryCategory(id);
   if(k==='G:custom'||k==='G:sold_off_market')return category===k.slice(2);
   if(category)return false;
-  const bld=BUILD_PHASES.some(p=>tags.includes(p));
+  const bld=CONSTRUCTION_PHASES.some(p=>tags.includes(p));
+  const building=BUILD_PHASES.some(p=>tags.includes(p));
   if(k==='G:deed')return tags.includes('deed');
   if(k==='G:uc')return bld;
-  if(k==='G:mkt')return _mkted(tags)&&!bld;
+  if(k==='G:mkt')return _mkted(tags)&&!building;
   if(k==='UCT:nc')return bld&&!typeKeyOf(id);
   if(k.slice(0,4)==='UCT:'){const ty=k.slice(4);return typeKeyOf(id)===TY2K[ty]&&bld;}
-  if(k.slice(0,3)==='RT:'){const kk={single:'Single Lot',split:'Split Lot',cd:'Common Driveway'}[k.slice(3)];return _mkted(tags)&&!bld&&typeKeyOf(id)===kk;}
+  if(k.slice(0,3)==='RT:'){const kk={single:'Single Lot',split:'Split Lot',cd:'Common Driveway'}[k.slice(3)];return _mkted(tags)&&!building&&typeKeyOf(id)===kk;}
   if(k.slice(0,3)==='RF:'){const pr=k.slice(3).split(':');const kk={single:'Single Lot',split:'Split Lot',cd:'Common Driveway'}[pr[0]];const ready=tags.includes('market')||tags.includes('complete');return tags.includes('listed')&&typeKeyOf(id)===kk&&((pr[1]==='ready')===ready);}
   if(k.slice(0,2)==='T:'||k.slice(0,2)==='L:'){const tid=k.slice(2);
     if(tid.indexOf('off_market')===0&&tags.includes('pending'))return false; // pending never filters as Off Market
     return tags.includes(tid);}
-  const i=k.indexOf('|');if(i>=0){if(typeKeyOf(id)!==TY2K[k.slice(0,i)]||!bld)return false;const ph=k.slice(i+1);return ph==='onmkt'?_mkted(tags):(tags.includes(ph)&&!_mkted(tags));}
+  const i=k.indexOf('|');if(i>=0){if(typeKeyOf(id)!==TY2K[k.slice(0,i)]||!bld)return false;const ph=k.slice(i+1);return ph==='onmkt'?(_mkted(tags)&&building):tags.includes(ph);}
   return tags.includes(k);}
 const TYPES=[['active_single','Single Lot'],['active_split','Split Lot'],['active_cd','Common Driveway']];
 function cSw(tid){return '<input type="color" class="sw sw-edit" data-color="'+tid+'" value="'+(state.tags[tid]?state.tags[tid].color:'#8c857a')+'" title="Edit color">';}
@@ -1301,13 +1311,13 @@ function renderLegend(){
   // Market Intel (permit toggle layer)
   if(state.tags.permit){
     h+='<div class="grp'+(collapsed.has('intel')?' col':'')+'" data-grp="intel"><div class="grp-h'+sOn('L:permit')+'" data-col="intel"><span class="chev2">▼</span><span class="mbox'+(activeF.has('L:permit')?' on':'')+'" data-sel="L:permit"></span><span class="gn">Market Intel</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="grp-body"><div class="leafrow'+sOn('L:permit')+'" data-sel="L:permit">'+cSw('permit')+'<span class="nm">'+esc(state.tags.permit.name)+'</span><span class="ct2">'+tagCount('permit')+'</span></div><div class="leafrow'+sOn('L:built')+'" data-sel="L:built"><span class="sw" style="background:'+GROUP_C.pmt+'"></span><span class="nm">Built (not listed)</span><span class="ct2">'+tagCount('built')+'</span></div></div></div>';}
-  h+='<div class="leafrow" data-sel="L:complete">'+cSw('complete')+'<span class="nm">Complete</span><span class="ct2">'+tagCount('complete')+'</span></div>';
+
   // Under Construction
   h+='<div class="grp'+(collapsed.has('uc')?' col':'')+'" data-grp="uc"><div class="grp-h'+sOn('G:uc')+'" data-col="uc"><span class="chev2">▼</span><span class="mbox'+(activeF.has('G:uc')?' on':'')+'" data-sel="G:uc"></span><span class="gn">Under Construction</span><span class="ct2">'+ucCount()+'</span></div><div class="grp-body">';
   for(const [ty,tlabel] of TYPES){ if(ty==='active_cd'){if(!ucTypeCount(ty))continue;}else if(!state.tags[ty])continue;
     h+='<div class="subg'+(collapsed.has('uc:'+ty)?' col':'')+'"><div class="subg-h'+sOn('UCT:'+ty)+'" data-col="uc:'+ty+'"><span class="chev2">▼</span><span class="mbox'+(activeF.has('UCT:'+ty)?' on':'')+'" data-sel="UCT:'+ty+'"></span><span class="sw" style="background:'+(ty==='active_cd'?GROUP_C.cd:ty==='active_split'?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="sn">'+esc(tlabel)+'</span><span class="ct2">'+ucTypeCount(ty)+'</span></div><div class="subg-body">';
-    for(const ph of BUILD_PHASES.concat(['onmkt'])){const k=ty+'|'+ph;const phn=ph==='onmkt'?'On the Market (building)':state.tags[ph].name;
-      h+='<div class="leafrow'+sOn(k)+'" data-sel="'+k+'"><span class="sw" style="background:'+(ty==='active_cd'?GROUP_C.cd:ty==='active_split'?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="nm">'+esc(phn)+'</span><span class="ct2">'+comboCount(ty,ph)+'</span></div>';}
+    for(const ph of BUILD_PHASES.concat(['onmkt','complete'])){const k=ty+'|'+ph;const phn=ph==='onmkt'?'On the Market (building)':state.tags[ph].name;
+      h+='<div class="leafrow'+sOn(k)+'" data-sel="'+k+'"><span class="mbox'+sOn(k)+'" data-sel="'+k+'"></span><span class="sw" style="background:'+(ty==='active_cd'?GROUP_C.cd:ty==='active_split'?GROUP_C.uc_split:GROUP_C.uc_single)+'"></span><span class="nm">'+esc(phn)+'</span><span class="ct2">'+comboCount(ty,ph)+'</span></div>';}
     h+='</div></div>';}
   if(ucNCCount())h+='<div class="leafrow'+sOn('UCT:nc')+'" data-sel="UCT:nc"><span class="sw" style="background:#f03e3e"></span><span class="nm">Needs Clarification</span><span class="ct2">'+ucNCCount()+'</span></div>';
   h+='</div></div>';
@@ -1325,7 +1335,7 @@ function renderLegend(){
     h+='<div class="grp" data-grp="'+category+'"><div class="grp-h"><span class="mbox'+sOn(key)+'" data-sel="'+key+'"></span><span class="gn">'+esc(state.tags[category].name)+'</span><span class="ct2">'+categoryCount(category)+'</span></div></div>';
   }
   // Other / custom
-  const known=new Set(['active_single','active_split','permit','deed','punch','custom','sold_off_market'].concat(PHASE_TAGS));
+  const known=new Set(['active_single','active_split','permit','deed','punch','custom','sold_off_market','sitework','dried_in','finishing'].concat(PHASE_TAGS));
   const others=Object.keys(state.tags).filter(t=>!known.has(t));
   if(others.length){
     h+='<div class="grp'+(collapsed.has('other')?' col':'')+'" data-grp="other"><div class="grp-h" data-col="other"><span class="chev2">▼</span><span class="gn">Other</span><span class="ct2">'+others.length+'</span></div><div class="grp-body">';
@@ -1617,7 +1627,7 @@ function comingOnline(months,prodTag){
     if(_T){const k=prodKeyR(r);if(k){if(k!==_T)continue;}else if(!((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;}
     else if(prodTag && !((state.points[r.id]||{}).tags||[]).includes(prodTag))continue;
     const ml=monthsLeft(r.id);
-    if(ml!==null && ml!==undefined && ml<=months){n++; list.push(r);}
+    if(ml!==null && ml!==undefined && ml<=months){n+=UW(r.id); list.push(r);}
   }
   return {count:n, homes:list};
 }
@@ -1632,14 +1642,14 @@ function txtOn(hex){const c=(hex||'#888').replace('#','');const r=parseInt(c.sub
 function buildOverview(){
   const bd=phaseBreakdown();
   const uc=BUILD_PHASES.reduce((n,p)=>n+(bd[p]||0),0);
-  const ready=bd.market||0;
+  const ready=bd.complete||0;
   const within12=comingOnline(12).count;
   const permitN=DATA.filter(r=>!inventoryCategory(r.id)&&r.kind==='permit'&&!isPromotedPermit(r)).length;
   const deedN=DATA.filter(r=>!inventoryCategory(r.id)&&primaryStage(r.id)==='deed').length;
   const upd=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 
   let h='<div class="ovx-top"><span class="ovx-kicker">34DEV · SUPPLY FORECAST</span><span class="ovx-live">● LIVE · UPDATED '+upd.toUpperCase()+'</span></div>';
-  h+='<h2>Pipeline Overview</h2>';
+  h+='<h2>Pipeline Overview</h2><p>Inventory excludes '+categoryCount('custom')+' Custom and '+categoryCount('sold_off_market')+' Sold Off Market homes.</p>';
 
   // HERO: big number + side stats
   h+='<div class="ovx-hero">';
@@ -1653,9 +1663,9 @@ function buildOverview(){
   h+='</div></div>';
 
   // CONSTRUCTION PIPELINE: 5 phase circles
-  h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>SITEWORK → READY · '+(uc+ready)+' HOMES</span></div>';
+  h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>FOUNDATION → COMPLETE · '+(uc+ready)+' HOMES</span></div>';
   h+='<div class="ovx-pipe">';
-  const pipeDefs=[['sitework','SITEWORK / PRE-POUR','inspection-based ETA'],['foundation','FOUNDATION','inspection-based ETA'],['framing','FRAMING','inspection-based ETA'],['dried_in','FRAMED / DRYING-IN','inspection-based ETA'],['exterior','EXTERIOR CLOSE-IN','inspection-based ETA'],['finishing','INTERIOR FINISHING','inspection-based ETA'],['market','READY','on market']];
+  const pipeDefs=CONSTRUCTION_PHASES.map(k=>[k,PHASE_DEF[k][0],k==='complete'?'all five finals passed':'inspection-anchored ETA']);
   pipeDefs.forEach(([k,lbl,sub],i)=>{
     h+='<div class="ovx-node'+(i<pipeDefs.length-1?' line':'')+'"><div class="dot" style="background:'+PH_C[k]+'">'+(bd[k]||0)+'</div><div class="nl">'+lbl+'</div><div class="ns">'+sub+'</div></div>';
   });
@@ -1776,7 +1786,7 @@ function switchTab(t){
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.t)));
 // ---- ASK: AI layer ----
 function askContext(){
-  const PH=['complete','market','finishing','exterior','dried_in','framing','foundation','sitework'];
+  const PH=PHASE_ORDER;
   const now=new Date();
   // addresses (project-normalized) that have ANY permit / construction activity
   const activeKeys=new Set();
@@ -1805,35 +1815,35 @@ function askContext(){
   }
   // cross-tabs matching the sidebar exactly (tag-based grouping)
   const active_breakdown={'Single Lot':{move_in_ready:0,still_building:0},'Split Lot':{move_in_ready:0,still_building:0},'Common Driveway':{move_in_ready:0,still_building:0}};
-  const uc_breakdown={'Single Lot':{sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0},'Split Lot':{sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0},'Common Driveway':{sitework:0,foundation:0,framing:0,dried_in:0,exterior:0,finishing:0}};
+  const uc_breakdown={'Single Lot':Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0])),'Split Lot':Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0])),'Common Driveway':Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0]))};
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];
     const key=prodKeyR(r);
     if(!key)continue;
-    const phx=['finishing','exterior','dried_in','framing','foundation','sitework'].find(p=>t.includes(p));
+    const phx=BUILD_PHASES.slice().reverse().find(p=>t.includes(p));
     if(t.includes('listed')){if(t.includes('market')||t.includes('complete'))active_breakdown[key].move_in_ready++;else if(phx)active_breakdown[key].still_building++;}
     else if(phx)uc_breakdown[key][phx]++;}
   agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
   // Phase cohorts describe present construction evidence. Completion estimates use
-  // inspection-date anchors; overdue homes have unknown remaining time, never ready-now.
-  const COHORT_RANGE={finishing:'anchor-dependent',exterior:'anchor-dependent',dried_in:'anchor-dependent',framing:'anchor-dependent',foundation:'anchor-dependent',sitework:'anchor-dependent'};
-  const mk=()=>({ready_now:0,by_phase_cohort:{finishing:0,exterior:0,dried_in:0,framing:0,foundation:0,sitework:0},cohort_ranges:COHORT_RANGE,done_within:{}});
+  // inspection-date anchors; overdue homes retain their phase and add the overdue delay.
+  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + standard remaining durations + overdue']));
+  const mk=()=>({ready_now:0,by_phase_cohort:Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0])),cohort_ranges:COHORT_RANGE,done_within:{}});
   const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'Common Driveway':mk(), 'ALL':mk() };
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];
     if(t.includes('deed'))continue;
     const ml=monthsLeft(r.id);if(ml===null||ml===undefined)continue;
-    const ph=['finishing','exterior','dried_in','framing','foundation','sitework'].find(p=>t.includes(p));
+    const ph=BUILD_PHASES.slice().reverse().find(p=>t.includes(p));
     const key=prodKeyR(r);
     for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
       if(ml<=0||t.includes('market'))f.ready_now+=UW(r.id);
       else if(ph)f.by_phase_cohort[ph]+=UW(r.id);}}
-  // done_within stays as a cumulative count using the flat estimate — but labeled as an approximation.
+  // done_within stays as a cumulative count using the anchored estimate — but labeled as an approximation.
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];
     if(t.includes('deed'))continue;const ml=monthsLeft(r.id);if(ml===null||ml===undefined||ml<=0)continue;
     const key=prodKeyR(r);
     for(const k of key?[key,'ALL']:['ALL']){const f=forecast[k];
       for(let m=Math.max(1,Math.ceil(ml));m<=12;m++)f.done_within[m]=(f.done_within[m]||0)+1;}}
   return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
-   '\nCOMPLETION_FORECAST (PHASE-COHORT model. ready_now = complete/listed now, EXCLUDED from all other numbers. by_phase_cohort = count of under-construction homes at each build stage; cohort_ranges gives the ROUGH month window for each stage. These are STAGE COHORTS, not monthly completion counts — e.g. a foundation count of 36 means 36 homes are AT foundation stage (~7-9 months out), NOT 36 homes finishing in a single month. done_within[N] = approximate cumulative count expected done within N months, from inspection-date anchors with bucket defaults when no anchor exists; treat as directional, use verbatim, never restate as a single-month figure): '+JSON.stringify(forecast)+
+   '\nCOMPLETION_FORECAST (PHASE-COHORT model. ready_now = complete/listed now, EXCLUDED from all other numbers. by_phase_cohort = count of under-construction homes at each build stage; cohort_ranges gives the ROUGH month window for each stage. These are STAGE COHORTS, not monthly completion counts — e.g. a foundation count of 36 means 36 homes are AT foundation stage (~7-9 months out), NOT 36 homes finishing in a single month. done_within[N] = approximate cumulative count expected done within N months, from inspection-date anchors with no forecast when a dated phase anchor is missing; treat as directional, use verbatim, never restate as a single-month figure): '+JSON.stringify(forecast)+
    '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
    '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
    '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
@@ -1896,8 +1906,8 @@ document.getElementById('askGo').addEventListener('click',askSend);
 document.getElementById('askIn').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();askSend();}});
 
 // ===== Supply snapshot card + Ready-within toggle (real data) =====
-const PH_C={sitework:'#b77936',exterior:'#a6b83a',complete:'#2f9e44',foundation:'#e8590c',framing:'#f59f00',dried_in:'#d7b13a',finishing:'#3a9d8f',market:'#2f9e44'};
-const PH_ABBR=[['sitework','SITE'],['foundation','FDN'],['framing','FRM'],['dried_in','DRY'],['exterior','EXT'],['finishing','FIN'],['market','RDY'],['complete','DONE']];
+const PH_C=Object.fromEntries(Object.entries(PHASE_DEF).map(([key,value])=>[key,value[1]]));
+const PH_ABBR=[['foundation','FDN'],['framing','FRM'],['exterior','EXT'],['mep_roughs','ROUGH'],['insulation','INSUL'],['interior','INT.CAB'],['mep_finals','FINALS'],['complete','DONE']];
 let readyMonths=0; // 0 = off (show all)
 function renderSupplyCard(){
   if(typeof phaseBreakdown!=='function')return;
@@ -1924,7 +1934,7 @@ function applyReadyFilter(){
   const _qn=document.getElementById('qnote');if(_qn)_qn.hidden=true; // ready-within path bypasses refresh(); clear the hidden-match note
   const set=new Set((comingOnline(readyMonths).homes||[]).map(r=>r.id));
   let n=0; layer.clearLayers();
-  for(const m of markers){ if(set.has(m._rec.id)){layer.addLayer(m);n++;} }
+  for(const m of markers){ if(set.has(m._rec.id)){layer.addLayer(m);n+=UW(m._rec.id);} }
   if(show)show.innerHTML='showing <b>'+n+'</b>';
   const sh=document.getElementById('shown'); if(sh)sh.textContent=n.toLocaleString();
 }
