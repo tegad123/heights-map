@@ -1,0 +1,50 @@
+options=>{
+ const results=[];
+ const check=(name,condition,detail=null)=>results.push({name,pass:!!condition,detail});
+ const today=timelineDay(new Date().toISOString().slice(0,10));
+ const rows=DATA.map(r=>({r,phase:homePhase(r.id),product:prodKeyR(r)||'Unknown',eta:inspectionEta(r)}));
+ let pairs=0,violations=[];
+ for(const a of rows)for(const b of rows){
+  if(a.product!==b.product||!(PHASE_RANK[a.phase]>PHASE_RANK[b.phase])||a.eta.baseDays===null||b.eta.baseDays===null)continue;
+  pairs++;
+  if(a.eta.baseDays>b.eta.baseDays+1e-8)violations.push({later:a.r.a,earlier:b.r.a,laterBase:a.eta.baseDays,earlierBase:b.eta.baseDays});
+ }
+ check('Every same-product phase pair: base timeline monotonic',!violations.length,{pairs,violations});
+ check('Displayed forecasts = property base + overdue only',rows.every(x=>x.eta.remainingDays===null||x.eta.remainingDays===x.eta.baseDays+x.eta.overdueDays));
+ check('No-permit records have no phase or ETA',rows.filter(x=>!x.r.permits?.length).every(x=>x.phase===null&&x.eta.target===null));
+ check('Complete requires all five finals and no ETA',rows.filter(x=>x.phase==='complete').every(x=>completionFinal(inspForPin(x.r))&&x.eta.complete&&monthsLeft(x.r.id)===null));
+ check('Stage counts are finite',Object.values(phaseBreakdown()).every(Number.isFinite));
+ const oldFraming=phaseTimeline('framing',timelineDate(today-35));
+ const freshFraming=phaseTimeline('framing',timelineDate(today));
+ check('Five-week Framing is two weeks later than fresh Framing',oldFraming.remainingDays-freshFraming.remainingDays===14,{oldFraming,freshFraming});
+ const oldExterior=phaseTimeline('exterior',timelineDate(today-200));
+ check('Overdue can legitimately reorder phases',oldExterior.remainingDays>freshFraming.remainingDays);
+ check('INT.CAB through Complete is exactly 135 days',PHASE_DAYS.interior+PHASE_DAYS.mep_finals===135);
+ check('Invalid anchor refused',phaseTimeline('framing',null)===null);
+ if(options.heights){
+  const get=proj=>rows.find(x=>x.r.permits?.some(pm=>pm.proj===proj));
+  const specs=[['26022264','framing','2026-07-29'],['26009059','exterior','2026-09-04'],['25118994','exterior','2026-07-22'],['26012829','interior','2026-07-28'],['26011885','interior','2026-08-17'],['25071971','complete','2026-07-07'],['25059398','complete','2026-06-18'],['25092767','complete','2026-08-25'],['22030746','interior','2026-08-04']];
+  for(const [proj,phase,anchor] of specs){const x=get(proj);check('Real fixture '+proj,x?.phase===phase&&x.eta.anchorDate===anchor,{phase:x?.phase,eta:x?.eta});}
+  const h=get('26022264'),w=get('26009059'),n=get('25118994');
+  check('Harvard: three weeks overdue, later than 629',h.eta.overdueDays===21&&h.eta.target>w.eta.target,{harvard:h.eta.target,windstorm:w.eta.target});
+  check('629: Partial windstorm is exterior and about 6.5 months',w.phase==='exterior'&&w.eta.months===6.5);
+  check('822: overdue for roughs and later than 629',n.eta.overdueDays>0&&n.eta.target>w.eta.target);
+  check('711: 135 days from insulation is approximately January 2027',get('26011885').eta.target==='2026-12-30');
+  const no=rows.find(x=>x.r.id==='2131194125');check('830 E 26th no permit/no phase/no ETA',no?.phase===null&&no.eta.target===null);
+  const oldPhase=inspPhase,oldEta=inspectionEta,oldComplete=completionFinal;
+  try{
+   inspPhase=(type,row)=>/1035[ -]*frame|^insulation$/i.test(type||'')&&row?.raw==='Partial Approval'?null:oldPhase(type,row);
+   check('Mutant: full-approval-only stickiness is caught on Munford',inspToPhase(INSPECTIONS['26012829'])!=='interior');
+   inspPhase=oldPhase;
+   // Actual former ground-in + 8-month countdown reverses the primary fixture.
+   inspectionEta=(r)=>{const ins=inspForPin(r);const wind=ins?.inspections.find(it=>/windstorm/i.test(it.type)&&inspectionPassed(it));const ground=ins?.inspections.find(it=>/^ground in$/i.test(it.type)&&inspectionPassed(it));const anchor=wind||ground;return {target:anchor?timelineDate(timelineDay(anchor.date)+(wind?195:240)):null};};
+   check('Mutant: old flat-offset rule is caught on Harvard/629',inspectionEta(h.r).target<inspectionEta(w.r).target);
+   inspectionEta=oldEta;
+   completionFinal=structuralFinal;
+   check('Mutant: Struct-only completion is caught',inspToPhase({inspections:[{type:'Struct Final',date:'2026-09-01',raw:'Approved',result:'Passed'}]})==='complete');
+  }finally{inspPhase=oldPhase;inspectionEta=oldEta;completionFinal=oldComplete;}
+ }
+ // Exercise the timeline display helpers on real records (no data writes).
+ check('Real popup and ETA rendering',rows.every(x=>typeof popupHTML(x.r)==='string'&&typeof etaText(x.r)==='string'));
+ return results;
+}

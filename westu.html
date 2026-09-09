@@ -788,30 +788,56 @@ function structuralFinal(ins){
   return (ins&&ins.inspections||[]).filter(it=>inspectionPassed(it)&&finalKind(it)==='structural')
     .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))[0]||null;
 }
+// INT.CAB through Complete totals 135 days: 114 interior + 21 finals, not 156.
+const PHASE_DAYS={foundation:14,framing:21,exterior:28,mep_roughs:21,insulation:21,interior:114,mep_finals:21,complete:0};
+const NEXT_INSPECTION={foundation:'approved 1031-FDN',framing:'windstorm',exterior:'roughs',mep_roughs:'1035-Frame',insulation:'insulation',interior:'first final',mep_finals:'remaining finals'};
+function timelineDay(value){
+  const match=/^\d{4}-\d{2}-\d{2}$/.test(value||'');if(!match)return null;
+  const n=Date.parse(value+'T00:00:00Z');return Number.isFinite(n)?n/864e5:null;
+}
+function timelineDate(day){return new Date(day*864e5).toISOString().slice(0,10);}
+function phaseAnchor(r,phase){
+  const ins=inspForPin(r);if(!ins)return null;
+  let rows=(ins.inspections||[]).filter(it=>inspPhase(it.type,it)===phase&&timelineDay(it.date)!==null);
+  // First final starts the finals window. Additional finals do not restart its clock.
+  rows.sort((a,b)=>phase==='mep_finals'?a.date.localeCompare(b.date):b.date.localeCompare(a.date));
+  return rows[0]||null;
+}
+function phaseTimeline(phase,anchorDate,now=new Date()){
+  const day=timelineDay(anchorDate),today=timelineDay(now.toISOString().slice(0,10));
+  const index=CONSTRUCTION_PHASES.indexOf(phase);
+  if(day===null||index<0||phase==='complete')return null;
+  const duration=PHASE_DAYS[phase],elapsed=Math.max(0,today-day);
+  const following=CONSTRUCTION_PHASES.slice(index+1).reduce((n,k)=>n+PHASE_DAYS[k],0);
+  const nextDays=Math.max(0,duration-elapsed),overdueDays=Math.max(0,elapsed-duration);
+  // Base remaining time never spends unobserved future phases. Only the explicit
+  // overdue term can reorder same-product forecasts; no comparisons/clamps to other homes.
+  const baseDays=(overdueDays>0?duration:nextDays)+following,remainingDays=baseDays+overdueDays;
+  return {duration,elapsed,nextDays,overdueDays,baseDays,remainingDays,
+    anchorTarget:timelineDate(day+duration+following),baseTarget:timelineDate(today+baseDays),
+    target:timelineDate(today+remainingDays),nextPhase:CONSTRUCTION_PHASES[index+1],
+    months:Math.max(0.5,Math.round(remainingDays/30*2)/2)};
+}
 function inspectionEta(r,now=new Date()){
+  const empty={anchor:null,anchorDate:null,target:null,months:null,complete:false,overdue:false,overdueDays:0,baseDays:null,remainingDays:null,nextDays:null,nextPhase:null};
+  if(!r||!r.permits||!r.permits.length)return {...empty,phase:null};
   const ins=inspForPin(r),done=completionFinal(ins);
-  if(done)return {anchor:'All five finals',target:done.date||null,months:null,complete:true,overdue:false};
-  const passed=(ins&&ins.inspections||[]).filter(it=>it.date&&/pass/i.test(it.result||''));
-  for(const [pattern,anchor,months] of [[/^insulation$/i,'INSULATION',5],[/windstorm|windstrom/i,'WINDSTORM',6.5],[/^ground[ -]*in$/i,'GROUND IN',8]]){
-    const row=passed.filter(it=>pattern.test(it.type)).sort((a,b)=>String(a.date).localeCompare(String(b.date)))[0];
-    if(!row)continue;
-    const d=new Date(row.date+'T00:00:00');if(!Number.isFinite(+d))continue;
-    // Calendar months, clamped at month end; a half-month is 15.22 days.
-    const day=d.getDate();d.setDate(1);d.setMonth(d.getMonth()+Math.floor(months));
-    d.setDate(Math.min(day,new Date(d.getFullYear(),d.getMonth()+1,0).getDate()));
-    d.setTime(+d+(months%1)*30.44*864e5);
-    const remaining=(d-now)/(30.44*864e5),overdue=remaining<0;
-    const target=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-    return {anchor,target,months:overdue?null:Math.max(0.5,Math.round(remaining*2)/2),complete:false,overdue};
-  }
-  return {anchor:'bucket default',target:null,months:null,complete:false,overdue:false};
+  if(done)return {...empty,phase:'complete',anchor:'All five finals',anchorDate:done.date||null,target:done.date||null,complete:true};
+  const phase=homePhase(r.id)||inspToPhase(ins)||'foundation',anchor=phaseAnchor(r,phase);
+  if(!anchor)return {...empty,phase,missingAnchor:true};
+  const timeline=phaseTimeline(phase,anchor.date,now);
+  return {...empty,...timeline,phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
+}
+function timelineDuration(days){
+  if(days<60)return '~'+Math.max(1,Math.round(days/7))+' weeks';
+  return '~'+(Math.round(days/30*2)/2)+' months';
 }
 function etaText(r){
   const eta=inspectionEta(r);
-  if(eta.complete)return 'Complete';
-  if(eta.overdue)return 'overdue vs typical pace';
-  const months=monthsLeft(r.id);
-  return months==null?'':'~'+months+' month'+(months===1?'':'s')+' to completion';
+  if(eta.complete)return 'Complete'+(eta.target?' · '+eta.target:'');
+  if(!eta.phase)return '';
+  if(eta.missingAnchor)return 'Timeline unavailable — no dated phase anchor';
+  return timelineDuration(eta.remainingDays)+' to completion';
 }
 // Popup order: newest first. The feed stores rows in COH grid order (grouped by sub-permit, not by
 // date), so a plain reverse() surfaced pre-con civil rows and hid the recent ones behind '+N earlier'.
@@ -896,7 +922,7 @@ function applyInspectionPromotions(){
       const shared=PROJ[projectBaseKey(r)];
       // Shared non-final progress is retained, but five finals must belong to this pin's permits.
       if(shared&&shared!=='complete'&&PHASE_RANK[shared]>PHASE_RANK[ph])ph=shared;
-      p.tags=[ph].concat(retained.filter(t=>t!=='permit'&&t!=='market'));
+      p.tags=[ph].concat(retained.filter(t=>t!=='permit'&&t!=='market'&&t!=='deed'));
       p.inspPromoted=true;
     }else{
       p.tags=retained;
@@ -1513,7 +1539,7 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{omF
 
 // ---- dashboards (Overview + Timeline) ----
 const PHASE_ORDER=['complete','mep_finals','interior','insulation','mep_roughs','exterior','framing','foundation','market'];
-const PHASE_MONTHS={sitework:9,foundation:8,framing:6,dried_in:4,exterior:4,finishing:2,market:0};
+const PHASE_MONTHS=Object.fromEntries(CONSTRUCTION_PHASES.map((p,i)=>[p,CONSTRUCTION_PHASES.slice(i).reduce((n,k)=>n+PHASE_DAYS[k],0)/30]));
 // A permit pin that inspections promoted carries a real phase tag; treat it like a tracked pin.
 function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['complete','mep_finals','interior','insulation','mep_roughs','exterior','framing','foundation','market'].includes(x));}
 function inPipeline(r){return r.kind!=='permit'||isPromotedPermit(r);}
@@ -1523,19 +1549,10 @@ function primaryStage(pid){const t=(state.points[pid]||{}).tags||[];
   if(t.includes('active_single')) return 'active_single';
   if(t.includes('active_split')) return 'active_split';
   if(t.includes('deed')) return 'deed'; return null;}
-function monthsLeft(pid){const r=byId[pid]||{};
-  const s=primaryStage(pid); if(s===null||s==='deed'||s==='complete') return null;
-  const eta=inspectionEta(r);if(eta.complete||eta.overdue)return null;if(eta.anchor!=='bucket default')return eta.months;
-  const t=(state.points[pid]||{}).tags||[];
-  const compM=r.comp?(function(){const d=new Date(r.comp+'T00:00:00'),n=new Date();return (d.getFullYear()-n.getFullYear())*12+(d.getMonth()-n.getMonth());})():null;
-  // ready homes: 0 (punch list: 1)
-  if(t.includes('market')) return t.includes('punch')?1:0;
-  // under construction: NEVER "available now" — future comp date wins, overdue comp falls back to phase estimate
-  const ph=['finishing','exterior','dried_in','framing','foundation','sitework'].find(p=>t.includes(p));
-  if(ph){ if(compM!==null&&compM>0) return compM; return Math.max(1,(PHASE_MONTHS[ph]!==undefined?PHASE_MONTHS[ph]:1)); }
-  if(s==='active_single'||s==='active_split') return (compM!==null&&compM>0)?compM:0;
-  if(compM!==null) return Math.max(0,compM);
-  const tm=(((state.points[pid]||{}).notes)||'').match(/timeline:\s*(\d+)\s*month/i); return tm?parseInt(tm[1],10):null;}
+function monthsLeft(pid){
+  const r=byId[pid];if(!r)return null;
+  const eta=inspectionEta(r);return eta.complete?null:eta.months;
+}
 function stageColor(s){ return state.tags[s]?state.tags[s].color:'#8c857a';}
 // ============================================================
 // SUPPLY FORECAST — Spencer's core question: how many homes come
