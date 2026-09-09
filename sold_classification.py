@@ -7,10 +7,8 @@ def classify_lot(value):
         lot = float(str(value).replace(',', '').strip())
     except (TypeError, ValueError):
         return 'Unknown'
-    if not math.isfinite(lot) or lot == 0:
+    if not math.isfinite(lot) or lot <= 0:
         return 'Unknown'
     if lot >= 4000:
         return 'Single Lot'
-    if lot >= 2000:
-        return 'Split Lot'
-    return 'Unclassified'
+    return 'Split Lot'

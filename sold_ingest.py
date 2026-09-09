@@ -28,7 +28,7 @@ TEXT = {'bl': 'Builder Name', 'sch': 'School Elementary',
         'la': 'List Agent Full Name', 'ba': 'Selling Agent Full Name'}
 BANDS = ['<800k', '800k-1.3M', '1.3M-2M', '2M+']
 WINS = ['0-30', '30-60', '60-90', '90-180', '180-365', '365+']
-PRODUCTS = ['Single Lot', 'Split Lot', 'Unclassified', 'Unknown']
+PRODUCTS = ['Single Lot', 'Split Lot', 'Unknown']
 
 
 def money(value):
@@ -109,7 +109,7 @@ def refresh_derived(rows, today):
         r['prod'] = classify_lot(r.get('lot'))
         r['ak'] = normalize_address(r['a'])
         r.pop('nr', None)
-        if r['prod'] in ('Unclassified', 'Unknown'): r['nr'] = 1
+        if r['prod'] == 'Unknown': r['nr'] = 1
         days = max(0, (today - date.fromisoformat(r['cd'])).days)
         r['win'] = next((w for w, upper in zip(WINS, [30,60,90,180,365,math.inf]) if days <= upper), '365+')
         r['band'] = BANDS[sum(r['cp'] >= b for b in [800000,1300000,2000000])]
@@ -205,7 +205,7 @@ def run(args):
     rows = refresh_derived(rows, today)
     metrics = metrics_for(rows, today)
     counts = {p: sum(r['prod'] == p for r in rows) for p in PRODUCTS}
-    flagged = [{'id':r['id'],'address':r['a'],'lot':r.get('lot'),'product':r['prod']} for r in rows if r['prod'] in ('Unknown','Unclassified')]
+    flagged = [{'id':r['id'],'address':r['a'],'lot':r.get('lot'),'product':r['prod']} for r in rows if r['prod'] == 'Unknown']
     replacements = {'SOLD_DATA':rows,'SOLD_METRICS':metrics}
     candidate = html
     for name, value in replacements.items():
