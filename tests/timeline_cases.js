@@ -52,7 +52,7 @@ options=>{
  check('Supply counts homes including pairs',comingOnline(12).count===comingOnline(12).homes.reduce((n,r)=>n+UW(r.id),0));
  readyMonths=12;applyReadyFilter();readyMonths=0;applyReadyFilter();
  const legend=document.getElementById('legend');
- check('Eight snapshot columns and Complete checkboxes',PH_ABBR.length===8&&PH_ABBR.every(([k])=>CONSTRUCTION_PHASES.includes(k))&&!!legend.querySelector('[data-sel="active_single|complete"] .mbox')&&!legend.querySelector('[data-sel="L:complete"]'));
+ check('Eight snapshot columns; Finished separate from Under Construction',PH_ABBR.length===8&&PH_ABBR.every(([k])=>CONSTRUCTION_PHASES.includes(k))&&!!legend.querySelector('[data-grp="finished"] [data-sel="G:finished"]')&&!legend.querySelector('[data-grp="uc"] [data-sel$="|complete"]'));
  check('Category exclusions visible in snapshot footer',document.getElementById('sc-foot').textContent.includes('Excluded: '+categoryCount('custom')+' Custom / '+categoryCount('sold_off_market')+' Sold Off Market'));
  check('Complete popups display every final',rows.filter(x=>x.phase==='complete').every(x=>{const h=popupHTML(x.r);return ['plumbing: Passed','hvac: Passed','electrical: Passed','grading: Passed','structural: Passed'].every(t=>h.includes(t))&&!h.includes('Completion: ~');}));
  const finals=['PLUMBING FINAL','AC FINAL','ELECT FINAL','GRADING FINAL','Struct Final'].map(type=>({type,raw:'Approved',result:'Passed',date:'2026-09-01'}));

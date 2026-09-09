@@ -82,21 +82,52 @@ def run(live=None):
               return {groups:[...legend.querySelectorAll(':scope > .grp')].map(g=>g.dataset.grp),
                 text:legend.innerText,
                 productRows:[...legend.querySelectorAll('[data-grp="uc"] .subg')].map(g=>({product:g.querySelector('.sn').textContent,count:Number(g.querySelector('.subg-h .ct2').textContent),rows:[...g.querySelectorAll('.leafrow')].map(row=>({key:row.dataset.sel,label:row.querySelector('.nm').textContent,count:Number(row.querySelector('.ct2').textContent)}))})),
+                finishedTotal:Number(legend.querySelector('[data-grp="finished"] .grp-h > .ct2').textContent),
+                finished:[...legend.querySelectorAll('[data-grp="finished"] .subg')].map(g=>({status:g.querySelector('.subg-h .mbox').dataset.sel.split(':')[1],total:Number(g.querySelector('.subg-h .ct2').textContent),products:Object.fromEntries([...g.querySelectorAll('.leafrow')].map(r=>[r.dataset.sel.split(':')[2],Number(r.querySelector('.ct2').textContent)]))})),
                 other:[...legend.querySelectorAll('[data-grp="other"] .leafrow')].map(row=>({key:row.dataset.sel,label:row.querySelector('.nm').textContent,count:Number(row.querySelector('.ct2').textContent)})),
                 underConstructionHomes:uc.reduce((n,r)=>n+UW(r.id),0),
                 missingPhaseIds:uc.filter(r=>!homePhase(r.id)).map(r=>r.id),
                 invalidPhaseTagIds:uc.filter(r=>CONSTRUCTION_PHASES.filter(ph=>pt(r.id).tags.includes(ph)).length!==1).map(r=>r.id),
                 onMarketIds:DATA.filter(r=>matchSel(pt(r.id).tags,'active_single|onmkt',r.id)).map(r=>({id:r.id,phase:homePhase(r.id),weight:UW(r.id)}))};
             }''')
-            expected_groups=['deed','intel','uc','custom','sold_off_market','other']+(['soldc'] if name=='index' else [])
+            expected_groups=['deed','intel','uc','finished','custom','sold_off_market','other']+(['soldc'] if name=='index' else [])
             assert panel['groups']==expected_groups,(name,panel['groups'])
             assert panel['missingPhaseIds']==[] and panel['invalidPhaseTagIds']==[],panel
             for product in panel['productRows']:
-                assert [r['key'].split('|')[1] for r in product['rows']]==['foundation','framing','exterior','mep_roughs','insulation','interior','mep_finals','complete','finished_on_market']
-                assert sum(r['count'] for r in product['rows'][:-1])==product['count']
+                assert [r['key'].split('|')[1] for r in product['rows']]==['foundation','framing','exterior','mep_roughs','insulation','interior','mep_finals']
+                assert sum(r['count'] for r in product['rows'])==product['count']
             assert page.locator('[data-grp="uc"] .leafrow[data-sel$="|onmkt"]').count()==0
             assert page.locator('[data-grp="other"] .leafrow[data-sel="active_single|onmkt"]').count()==1
             assert page.locator('[data-grp="other"] .grp-h > .ct2').inner_text()==str(len(panel['other']))
+            assert len(panel['finished'])==5
+            assert sum(row['total'] for row in panel['finished'])==panel['finishedTotal']
+            assert all(sum(row['products'].values())==row['total'] for row in panel['finished'])
+            assert page.evaluate("()=>DATA.every(r=>!matchSel(pt(r.id).tags,'G:uc',r.id)||homePhase(r.id)!=='complete')")
+            finished=page.evaluate('finishedRows()')
+            assert len(finished)==panel['finishedTotal']
+            assert all(r['status'] in ['active','pending','sold','terminated','no_record'] for r in finished)
+            assert len([r['member'] for r in finished if r['member']])==len(set(r['member'] for r in finished if r['member']))
+            # Invoke real controls and check the actual map layer.
+            page.evaluate("()=>{activeF.clear();collapsed.delete('finished');for(const status of Object.keys(FINISHED_LABELS))collapsed.delete('finished:'+status);renderLegend();refresh();}")
+            keys=page.locator('[data-grp="finished"] [data-sel]').evaluate_all('(els)=>els.map(e=>e.dataset.sel)')
+            for key in keys:
+                if key=='G:finished': eligible=finished
+                else:
+                    parts=key.split(':')
+                    eligible=[r for r in finished if r['status']==parts[1] and (len(parts)==2 or r['product']==parts[2])]
+                expected_pins=sorted(set(r['pin'] for r in eligible))
+                page.locator('[data-sel="'+key+'"]').click(force=True)
+                assert page.evaluate('(k)=>activeF.has(k)',key)
+                actual=page.evaluate('()=>layer.getLayers().map(m=>m._rec.id).sort()')
+                assert actual==expected_pins,(name,key,actual,expected_pins)
+                page.locator('[data-sel="'+key+'"]').click(force=True)
+                assert not page.evaluate('(k)=>activeF.has(k)',key)
+            page.locator('[data-grp="uc"] .grp-h .mbox').click(force=True)
+            assert page.evaluate("()=>layer.getLayers().every(m=>BUILD_PHASES.includes(homePhase(m._rec.id)))")
+            assert page.evaluate('()=>layer.getLayers().reduce((n,m)=>n+UW(m._rec.id),0)')==panel['underConstructionHomes']
+            page.locator('[data-grp="uc"] .grp-h .mbox').click(force=True)
+            current['finishedMembers']=[{k:r.get(k) for k in ['member','pin','product','status']} for r in finished]
+            print('PASS',name,'Finished status/product sums, unique named homes, actual map filters, and construction/finished partition')
             current['panel']=panel
             if name=='index':
                 expected=[{k:r[k] for k in ['id','phase','eta','weight']} for r in baseline['rows']]
@@ -106,34 +137,29 @@ def run(live=None):
                 assert current['deeds']==139 and current['sold']==767
                 assert current['columns']==baseline['columns']
                 assert current['complete']==dict(no_record=24,pending=5,sold=4,terminated=3,active=13)
-                finished={p['product']:p['rows'][-1]['count'] for p in panel['productRows']}
-                assert finished=={'Single Lot':4,'Split Lot':9,'Common Driveway':0},finished
-                members=page.evaluate("()=>DATA.flatMap(r=>finishedOnMarketMembers(r.id).map(m=>({id:m.id,pin:r.id,product:typeKeyOf(r.id)})))")
-                expected_members=page.evaluate("()=>marketRows().filter(r=>r.phase==='complete'&&r.status==='active').map(r=>r.member).sort()")
-                assert sorted(m['id'] for m in members)==expected_members and len(members)==13
-                current['finishedOnMarket']=members
-                page.evaluate("()=>{collapsed.delete('uc');for(const [ty] of TYPES)collapsed.delete('uc:'+ty);renderLegend();}")
-                for product in panel['productRows']:
-                    key=product['rows'][-1]['key']
-                    page.locator('[data-sel="'+key+'"] .nm').click(force=True)
-                    assert page.evaluate('(k)=>activeF.has(k)',key)
-                    selected=page.evaluate("(k)=>DATA.filter(r=>matchSel(pt(r.id).tags,k,r.id)).map(r=>r.id)",key)
-                    assert sorted(selected)==sorted(set(m['pin'] for m in members if m['product']==product['product']))
-                    page.locator('[data-sel="'+key+'"] .mbox').click(force=True)
-                    assert not page.evaluate('(k)=>activeF.has(k)',key)
-                print('FINISHED ON MARKET Single Lot 4; Split Lot 9; Common Driveway 0; total 13; row and checkbox filters PASS')
-                page.locator('[data-grp="uc"]').screenshot(path='/tmp/finished-on-market-'+('live' if live else 'local')+'.png')
+                assert panel['finished']==[
+                    {'status':'active','total':13,'products':{'Single Lot':4,'Split Lot':9,'Common Driveway':0}},
+                    {'status':'pending','total':5,'products':{'Single Lot':2,'Split Lot':3,'Common Driveway':0}},
+                    {'status':'sold','total':4,'products':{'Single Lot':2,'Split Lot':2,'Common Driveway':0}},
+                    {'status':'terminated','total':3,'products':{'Single Lot':0,'Split Lot':3,'Common Driveway':0}},
+                    {'status':'no_record','total':24,'products':{'Single Lot':4,'Split Lot':11,'Common Driveway':9}}]
+                assert panel['finishedTotal']==49
+                assert page.evaluate("DATA.filter(r=>marketOriginalMatch(pt(r.id).tags,'G:uc',r.id)).reduce((n,r)=>n+UW(r.id),0)")==213
+                assert [p['count'] for p in panel['productRows']]==[52,44,44]
+                print('FINISHED',json.dumps(panel['finished'],sort_keys=True),'TOTAL 49; Under Construction 213 -> 164')
+                page.locator('[data-grp="finished"]').screenshot(path='/tmp/finished-section-'+('live' if live else 'local')+'.png')
                 assert page.locator('#sc-big').inner_text()=='128'
-                spots=[('act_715-merrill','active',['88557637','8 days','50361472','174 DOM','COMPLETE']),('act_1520-w-21st-st-unit-b','terminated',['Terminated / Expired','COMPLETE']),('act_902-e-25','active',['Active','COMPLETE']),('pmt_931-merrill-st-77009','no_record',['No Market Record','COMPLETE'])]
+                spots=[('2131432164','sold',['2026-08-24','1,755,000','COMPLETE']),('act_212-e-24','active',['29120139','COMPLETE']),('act_609-e-25','active',['53672595','COMPLETE']),('act_1126-e-7-12','pending',['95336494','COMPLETE']),('pmt_1623-blount-st-77008','no_record',['No Market Record','COMPLETE']),('act_715-merrill','active',['88557637','8 days','50361472','174 DOM','COMPLETE']),('act_1520-w-21st-st-unit-b','terminated',['Terminated / Expired','COMPLETE']),('act_902-e-25','active',['Active','COMPLETE']),('pmt_931-merrill-st-77009','no_record',['No Market Record','COMPLETE'])]
                 for identifier,status,texts in spots:
                     assert page.evaluate('(id)=>marketEvidence(byId[id]).status',identifier)==status
+                    assert page.evaluate('(x)=>homePhase(x.id)==="complete"&&matchSel(pt(x.id).tags,"F:"+x.status,x.id)&&!matchSel(pt(x.id).tags,"G:uc",x.id)',{'id':identifier,'status':status})
                     page.evaluate('(id)=>openPin(id)',identifier)
                     page.wait_for_function('(id)=>document.querySelector(".leaflet-popup-content .card")?.dataset.pid===id',arg=identifier)
                     content=page.locator('.leaflet-popup-content').inner_text();assert all(t in content for t in texts),content
                     print('SPOT',identifier,status,json.dumps(texts))
                     page.locator('.leaflet-popup-content').screenshot(path='/tmp/linkage-'+('live-' if live else 'local-')+identifier+'.png')
                     page.evaluate('()=>{map.closePopup();}')
-                assert panel['underConstructionHomes']==213
+                assert panel['underConstructionHomes']==164
                 assert panel['other'][-1]['count']==14
                 # Invoke the relocated row's real, retained event handler.
                 group=page.locator('[data-grp="other"]')
@@ -145,7 +171,7 @@ def run(live=None):
                 page.locator('[data-grp="other"]').screenshot(path='/tmp/panel-restored-'+('live' if live else 'local')+'.png')
                 page.locator('[data-grp="other"] .leafrow[data-sel="active_single|onmkt"] .nm').click()
                 assert not page.evaluate("activeF.has('active_single|onmkt')")
-                print('PANEL Under Construction 213; missing phase IDs []; invalid phase-tag IDs []; Other on-market overlap 14')
+                print('PANEL Under Construction 164; missing phase IDs []; invalid phase-tag IDs []; Other on-market overlap 14')
             else:
                 assert set(current['marketCounts'])=={'no_record'}
             assert errors==[],errors

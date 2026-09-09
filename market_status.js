@@ -53,35 +53,62 @@ popupHTML=function(r){
   if(anchor)anchor.insertAdjacentHTML('beforebegin',marketFacts(r));else card.insertAdjacentHTML('beforeend',marketFacts(r));
   return doc.innerHTML;
 };
-// Only the explicitly approved Complete-and-Active subset belongs in the phase list.
-function finishedOnMarketMembers(id){
-  const pin=byId[id];
-  return pin&&!inventoryCategory(id)&&homePhase(id)==='complete'
-    ?marketMembers(pin).filter(member=>marketEvidence(member).status==='active'):[];
+// Finished is a display partition; construction certification and forecasts are unchanged.
+const FINISHED_LABELS={active:'Finished on Market',pending:'Finished Pending',sold:'Finished Sold',terminated:'Finished Terminated',no_record:'Finished, No Market Record'};
+function finishedRows(){
+  return marketRows().filter(r=>r.phase==='complete').map(r=>({...r,product:typeKeyOf(r.pin)||'Unknown'}));
 }
 const marketOriginalMatch=matchSel;
 matchSel=function(tags,key,id){
-  if(key.endsWith('|finished_on_market'))return typeKeyOf(id)===TY2K[key.split('|')[0]]&&finishedOnMarketMembers(id).length>0;
+  const complete=!inventoryCategory(id)&&homePhase(id)==='complete';
+  if(key==='G:finished')return complete;
+  if(key.startsWith('F:')){
+    if(!complete)return false;
+    const [,status,product]=key.split(':');
+    if(product&&(typeKeyOf(id)||'Unknown')!==product)return false;
+    const members=marketMembers(byId[id]);
+    return members.some(m=>marketEvidence(m).status===status)||(status==='no_record'&&UW(id)>members.length);
+  }
+  if(key==='G:uc'||key.startsWith('UCT:'))return !complete&&marketOriginalMatch(tags,key,id);
   return marketOriginalMatch(tags,key,id);
 };
+function constructionPanelCount(key){
+  return DATA.reduce((n,r)=>n+(mById[r.id]&&matchSel(pt(r.id).tags,key,r.id)?UW(r.id):0),0);
+}
+ucCount=function(){return constructionPanelCount('G:uc');};
+ucTypeCount=function(ty){return constructionPanelCount('UCT:'+ty);};
+ucNCCount=function(){return constructionPanelCount('UCT:nc');};
+function renderFinishedSection(){
+  const rows=finishedRows(),root=document.createElement('div');
+  root.className='grp'+(collapsed.has('finished')?' col':'');root.dataset.grp='finished';
+  let html='<div class="grp-h'+sOn('G:finished')+'" data-col="finished"><span class="chev2">▼</span><span class="mbox'+sOn('G:finished')+'" data-sel="G:finished"></span><span class="gn">Finished</span><span class="ct2">'+rows.length+'</span></div><div class="grp-body">';
+  for(const [status,label] of Object.entries(FINISHED_LABELS)){
+    const statusRows=rows.filter(r=>r.status===status),key='F:'+status,col='finished:'+status;
+    html+='<div class="subg'+(collapsed.has(col)?' col':'')+'"><div class="subg-h'+sOn(key)+'" data-col="'+col+'"><span class="chev2">▼</span><span class="mbox'+sOn(key)+'" data-sel="'+key+'"></span><span class="sn">'+esc(label)+'</span><span class="ct2">'+statusRows.length+'</span></div><div class="subg-body">';
+    const products=TYPES.map(([,label])=>label);
+    if(statusRows.some(r=>r.product==='Unknown'))products.push('Unknown');
+    for(const product of products){
+      const child=key+':'+product,count=statusRows.filter(r=>r.product===product).length;
+      html+='<div class="leafrow'+sOn(child)+'" data-sel="'+child+'"><span class="mbox'+sOn(child)+'"></span><span class="nm">'+esc(product==='Unknown'?'Needs Clarification':product)+'</span><span class="ct2">'+count+'</span></div>';
+    }
+    html+='</div></div>';
+  }
+  root.innerHTML=html+'</div>';
+  root.addEventListener('click',ev=>{
+    const select=ev.target.closest('[data-sel]'),header=ev.target.closest('[data-col]');
+    if(select){const key=select.dataset.sel;activeF.has(key)?activeF.delete(key):activeF.add(key);renderLegend();refresh();}
+    else if(header){const key=header.dataset.col;collapsed.has(key)?collapsed.delete(key):collapsed.add(key);renderLegend();}
+  });
+  return root;
+}
 // Further Layers hierarchy changes require explicit user approval.
 const marketOriginalLegend=renderLegend;
 renderLegend=function(){
   marketOriginalLegend();
   const legend=document.getElementById('legend');
   legend.querySelector('[data-grp="mkt"]')?.remove();
-  for(const [ty] of TYPES){
-    const complete=legend.querySelector('.leafrow[data-sel="'+ty+'|complete"]');
-    if(!complete)continue;
-    const key=ty+'|finished_on_market';
-    const count=DATA.filter(r=>typeKeyOf(r.id)===TY2K[ty]).reduce((n,r)=>n+finishedOnMarketMembers(r.id).length,0);
-    const row=document.createElement('div');
-    row.className='leafrow'+sOn(key);row.dataset.sel=key;
-    row.title='Complete construction and currently Active; included in Complete above';
-    row.innerHTML='<span class="mbox'+sOn(key)+'"></span><span class="sw" style="background:'+GROUP_C.act+'"></span><span class="nm">Finished on Market</span><span class="ct2">'+count+'</span>';
-    row.addEventListener('click',ev=>{ev.stopPropagation();activeF.has(key)?activeF.delete(key):activeF.add(key);renderLegend();refresh();});
-    complete.after(row);
-  }
+  legend.querySelectorAll('[data-grp="uc"] .leafrow[data-sel$="|complete"]').forEach(row=>row.remove());
+  legend.querySelector('[data-grp="uc"]').after(renderFinishedSection());
   // Preserve the existing 14-home Single Lot overlapping filter, in Other.
   // Move its original node so its existing selection handlers remain intact.
   const onMarket=legend.querySelector('.leafrow[data-sel="active_single|onmkt"]');
