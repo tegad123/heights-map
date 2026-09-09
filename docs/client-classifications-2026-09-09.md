@@ -125,3 +125,17 @@ PASS: all three full results byte-identical
 Harvard/629, Munford, 1033 Voight, 112 E 27th, 609 E 25th and 830 E 26th construction fixtures passed in every run. The unchanged 376 Heights phase/ETA tuples are independently compared against the before-capture.
 
 Actual category panel text: Custom 19; Single Lot 17; Unknown 2; Sold Off Market 1. The two unknown products were not inferred or filled.
+
+## Live verification
+
+Deployed implementation commit: `7e1bdd5` (pushed to origin/main). All eight HTML files and inventory_classifications.js were verified in its tree.
+
+```sh
+/Users/nemoclaw/insp-venv/bin/python -B tests/timeline_browser.py --checks --spots --live https://tangerine-sorbet-eca5f5.netlify.app --output /tmp/custom-live.json
+```
+
+Actual output: Heights `57 / 57 FAILURES []`; other seven markets `18 / 18 FAILURES []`; `ERRORS []`; `PASS live classification JS byte-identical`. A parser comparison asserted the entire live JSON result equals the three-run local result.
+
+Live category panel: Custom **19**, Single Lot **17**, Unknown **2**; Sold Off Market **1**. Live supply **131**, Under Construction **213**, deeds **139**, sold comps **767**.
+
+Custom spot: **1032 Key**, Foundation, permit **25117865**, phase/ETA card retained (ETA remains unavailable because its existing model has no dated anchor). Another exercised Custom popup, **930 Waverly**, retains MEP Roughs and its ETA card. Sold Off Market spot: **728 Euclid**, INT.CAB, permit **26006967**, unchanged completion **~3.5 months / 2026-12-20**. Both retain inspections and dated client classification metadata.
