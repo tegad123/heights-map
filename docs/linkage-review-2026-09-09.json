@@ -1,0 +1,801 @@
+[
+  {
+    "source_file": "heightsactivesinglelots909.csv",
+    "source_row": 21,
+    "mls": "26389093",
+    "address": "1111 E 27th Street",
+    "status": "active",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "2131242651",
+        "address": "1107 E 27th St, Houston, Tx 77009",
+        "meters": 12.27
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 2,
+    "mls": "89124616",
+    "address": "1737 Tabor Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 4,
+    "mls": "50869013",
+    "address": "1023 E 23rd Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 5,
+    "mls": "93127419",
+    "address": "903 Tabor Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 8,
+    "mls": "64831168",
+    "address": "1524 Nicholson St",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "act_1520-nicholson",
+        "address": "1520 Nicholson Street",
+        "meters": 20.7
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 9,
+    "mls": "96094299",
+    "address": "1106 Robbie Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "act_1122-robbie-street",
+        "address": "1122 Robbie Street",
+        "meters": 14.73
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 15,
+    "mls": "33729025",
+    "address": "402 Columbia Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 16,
+    "mls": "78950517",
+    "address": "406 Columbia Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "pmt_408-columbia-st-77007",
+        "address": "408 Columbia St, Houston, TX 77007",
+        "meters": 22.78
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 17,
+    "mls": "90671798",
+    "address": "1119 E 7th 1/2 Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1119-e-7-12",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 18,
+    "mls": "16593438",
+    "address": "726 E 7th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 19,
+    "mls": "65984026",
+    "address": "2612 Greenleaf Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_2612-greenleaf",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsinglelotslast180days.csv",
+    "source_row": 20,
+    "mls": "19950202",
+    "address": "1001 E 7th 1/2 Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 2,
+    "mls": "38995142",
+    "address": "1316 Heslep Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_1316-heslep-st-77009",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 3,
+    "mls": "94906411",
+    "address": "602 Jewett Street Unit#A",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 4,
+    "mls": "66717038",
+    "address": "1438-A Dian Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 5,
+    "mls": "8458741",
+    "address": "1208 E 26th Street Unit#B",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "act_1208-e-26th-street-unit-a",
+        "address": "1208 E 26th Street Unit#A",
+        "meters": 0.02
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 6,
+    "mls": "9530397",
+    "address": "1303 Cordell Street Unit#A",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_1303-cordell-st-a-77009",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 7,
+    "mls": "13147368",
+    "address": "1121 E 24th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_1121-e-24th-st-77009",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 8,
+    "mls": "61559810",
+    "address": "1125 E 24th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_1125-e-24th-st-77009",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 9,
+    "mls": "78621450",
+    "address": "310 E 28th St",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "pmt_308-e-28th-st-77008",
+        "address": "308 E 28th St, Houston, TX 77008",
+        "meters": 4.51
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 10,
+    "mls": "79405032",
+    "address": "224 E 27th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 11,
+    "mls": "76530080",
+    "address": "1524 W 21st St",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1524-w-21st-st",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 14,
+    "mls": "77501317",
+    "address": "406 E 28th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_406-e-28th-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 15,
+    "mls": "5279771",
+    "address": "1436 Alexander St",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1436-alexander-st",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 16,
+    "mls": "87693150",
+    "address": "404 E 28th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_404-e-28th-st-77008",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 17,
+    "mls": "10970361",
+    "address": "1321 Alexander Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1321-alexander-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 18,
+    "mls": "12794628",
+    "address": "1516 Dorothy Street Unit#A",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 19,
+    "mls": "24145604",
+    "address": "1516 Dorothy Street Unit#C",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 22,
+    "mls": "42479147",
+    "address": "827 W 16th Street Unit#B",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "act_827-w-16th-street-unit-a",
+        "address": "827 W 16th Street Unit#A",
+        "meters": 0.02
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 23,
+    "mls": "88804104",
+    "address": "525 W 26th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_525-w-26th-st-77008",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 24,
+    "mls": "10589101",
+    "address": "527 W 26th Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_527-w-26th-st-77008",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 25,
+    "mls": "90312385",
+    "address": "2715 BEAUCHAMP Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_2715-beauchamp-st-77009",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 27,
+    "mls": "60919011",
+    "address": "2713 BEAUCHAMP Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": "address",
+    "member": "pmt_2713-beauchamp-st-77009",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 29,
+    "mls": "69395685",
+    "address": "815B Lawrence Street",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "act_815-lawrence-street-unit-a",
+        "address": "815 Lawrence Street Unit#A",
+        "meters": 0.03
+      }
+    ]
+  },
+  {
+    "source_file": "heightssoldsplitlotslast180days.csv",
+    "source_row": 30,
+    "mls": "94092178",
+    "address": "710 Waverly Street Unit#E",
+    "status": "sold",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "AMBIGUOUS_COORDINATE",
+    "candidates": [
+      {
+        "id": "pmt_710-waverly-st-c-77007",
+        "address": "710 Waverly St C, Houston, TX 77007",
+        "meters": 15.04
+      },
+      {
+        "id": "pmt_710-waverly-st-b-77007",
+        "address": "710 Waverly St B, Houston, TX 77007",
+        "meters": 2.01
+      },
+      {
+        "id": "pmt_710-waverly-st-a-77007",
+        "address": "710 Waverly St A, Houston, TX 77007",
+        "meters": 19.4
+      }
+    ]
+  },
+  {
+    "source_file": "Heightsterminatedsinglelots909.csv",
+    "source_row": 43,
+    "mls": "65855810",
+    "address": "1119 E 7th 1/2 Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1119-e-7-12",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "Heightsterminatedsinglelots909.csv",
+    "source_row": 44,
+    "mls": "52803325",
+    "address": "2612 Greenleaf Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_2612-greenleaf",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 4,
+    "mls": "35483453",
+    "address": "602 Jewett Street Unit#A",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 5,
+    "mls": "17716633",
+    "address": "602 Jewett Street Unit#A",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 6,
+    "mls": "73356574",
+    "address": "602 Jewett Street Unit#A",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 8,
+    "mls": "88928845",
+    "address": "1430 Nashua Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 9,
+    "mls": "6048401",
+    "address": "1430 Nashua Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 10,
+    "mls": "62838228",
+    "address": "1430 Nashua Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 13,
+    "mls": "43902226",
+    "address": "1522 W 21st St",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "AMBIGUOUS_COORDINATE",
+    "candidates": [
+      {
+        "id": "2131331183",
+        "address": "1506 W 21st St, Houston, Tx 77008",
+        "meters": 5.19
+      },
+      {
+        "id": "act_1520-w-21st-st-unit-b",
+        "address": "1520 W 21st St Unit#B",
+        "meters": 18.6
+      },
+      {
+        "id": "act_1502-w-21",
+        "address": "1502 W 21st Street",
+        "meters": 22.17
+      },
+      {
+        "id": "act_1504-w-21st-street",
+        "address": "1504 W 21st Street",
+        "meters": 22.03
+      }
+    ]
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 24,
+    "mls": "64033189",
+    "address": "1522 W 21st St",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "act_1524-w-21st-st",
+        "address": "1524 W 21st St",
+        "meters": 13.06
+      }
+    ]
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 26,
+    "mls": "14025097",
+    "address": "406 E 28th Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_406-e-28th-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 28,
+    "mls": "82112276",
+    "address": "406 E 28th Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_406-e-28th-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 29,
+    "mls": "26432594",
+    "address": "517 E 4th Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 35,
+    "mls": "87559883",
+    "address": "1321 Alexander Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1321-alexander-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 36,
+    "mls": "87481424",
+    "address": "1321 Alexander Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1321-alexander-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 38,
+    "mls": "87531713",
+    "address": "2320 Lawrence Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 39,
+    "mls": "58081787",
+    "address": "1321 Alexander Street",
+    "status": "terminated",
+    "exclusion": null,
+    "method": "address",
+    "member": "act_1321-alexander-street",
+    "pin": null,
+    "issue": "HIDDEN_LEGACY_SOLD",
+    "candidates": []
+  },
+  {
+    "source_file": "heightsterminatedsplitlots909.csv",
+    "source_row": 40,
+    "mls": "76565424",
+    "address": "1516 Dorothy Street Unit#A",
+    "status": "terminated",
+    "exclusion": null,
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "NOT_TRACKED",
+    "candidates": []
+  },
+  {
+    "source_file": "HeightsActiveLast365dayssinglelots.csv",
+    "source_row": 21,
+    "mls": "26389093",
+    "address": "1111 E 27th Street",
+    "status": "active",
+    "exclusion": "DUP_INPUT",
+    "method": null,
+    "member": null,
+    "pin": null,
+    "issue": "COORDINATE_IDENTITY_CONFLICT",
+    "candidates": [
+      {
+        "id": "2131242651",
+        "address": "1107 E 27th St, Houston, Tx 77009",
+        "meters": 12.27
+      }
+    ]
+  }
+]

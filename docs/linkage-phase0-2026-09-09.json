@@ -1,0 +1,7466 @@
+{
+  "summary": {
+    "rows": 284,
+    "new_lot_matches": 165,
+    "taxonomy": {
+      "LINKED": 230,
+      "CONFLICTING_NEARBY_IDENTITY": 10,
+      "NOT_TRACKED": 22,
+      "HIDDEN_LEGACY_SOLD": 22
+    },
+    "prior": {
+      "rows": 119,
+      "linked": 84,
+      "with_phase": 51
+    },
+    "source_records": 430,
+    "runtime_pins": 376,
+    "runtime_members": 407,
+    "mls_records": 0,
+    "parcel_records": 0,
+    "proximity": {
+      "single": 10,
+      "ambiguous": 4,
+      "nearest_distribution": {
+        "0-25m": 14,
+        ">100m": 22,
+        "50-100m": 9,
+        "25-50m": 9
+      }
+    },
+    "active_mls_sets_equal": true,
+    "terminated_active_overlap": 0,
+    "terminated_years": {
+      "2026.0": 75,
+      "2025.0": 29,
+      "2024.0": 1,
+      "2027.0": 1
+    },
+    "terminated_median_dom": 38.0
+  },
+  "rows": [
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 2,
+      "mls": "17612330",
+      "address": "845-A West 23rd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_845-w-23rd-st-a-77008",
+          "member": "pmt_845-w-23rd-st-a-77008",
+          "phase": "foundation"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.0,
+          "pin": "act_845-w-23",
+          "member": "act_845-w-23",
+          "address": "845 West 23rd Street"
+        },
+        {
+          "meters": 11.28,
+          "pin": "pmt_845-w-23rd-st-a-77008",
+          "member": "pmt_845-w-23rd-st-a-77008",
+          "address": "845 W 23rd St A, Houston, TX 77008"
+        },
+        {
+          "meters": 11.28,
+          "pin": "pmt_845-w-23rd-st-b-77008",
+          "member": "pmt_845-w-23rd-st-b-77008",
+          "address": "845 W 23rd St B, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 2.0,
+      "source_matches": [
+        "pmt_845-w-23rd-st-a-77008"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 3,
+      "mls": "31557430",
+      "address": "615 Wendel Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_615-wendel-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 4,
+      "mls": "6296220",
+      "address": "613 Wendel Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_613-wendel"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 5,
+      "mls": "72762085",
+      "address": "1002 E 25th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1002-e-25th-street",
+          "member": "act_1002-e-25th-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 15.0,
+          "pin": "act_1002-e-25th-street",
+          "member": "act_1002-e-25th-street",
+          "address": "1002 E 25th Street"
+        }
+      ],
+      "nearest_meters": 15.0,
+      "source_matches": [
+        "act_1002-e-25th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 6,
+      "mls": "32496070",
+      "address": "902 E 25TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "address": "902 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_902-e-25"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 7,
+      "mls": "94349442",
+      "address": "830 E 27th Street Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_830-e-27",
+          "member": "act_830-e-27",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 20.34,
+          "pin": "pmt_826-e-27th-st-77009",
+          "member": "pmt_826-e-27th-st-77009",
+          "address": "826 E 27th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 20.34,
+      "source_matches": [
+        "act_830-e-27"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 8,
+      "mls": "35798306",
+      "address": "920 E 25TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_920-e-25",
+          "member": "act_920-e-25",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.12,
+          "pin": "act_920-e-25",
+          "member": "act_920-e-25",
+          "address": "920 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 2.12,
+      "source_matches": [
+        "act_920-e-25"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 9,
+      "mls": "90552057",
+      "address": "122 E 4th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        },
+        {
+          "meters": 18.47,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_122-e-4"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 10,
+      "mls": "46031576",
+      "address": "834 WAVERLY Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_834-waverly-street",
+          "member": "act_834-waverly-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 18.45,
+          "pin": "2131044801",
+          "member": "2131044801",
+          "address": "838 Waverly St, Houston, Tx 77007"
+        }
+      ],
+      "nearest_meters": 18.45,
+      "source_matches": [
+        "act_834-waverly-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 11,
+      "mls": "5383346",
+      "address": "2011 Singleton Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131129832",
+          "member": "2131129832",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 10.83,
+          "pin": "2131129832",
+          "member": "2131129832",
+          "address": "2011 Singleton St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 10.83,
+      "source_matches": [
+        "2131129832"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 12,
+      "mls": "22973800",
+      "address": "1502 W 21st Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.54,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 12.83,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 12.95,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 4.54,
+      "source_matches": [
+        "act_1502-w-21"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 13,
+      "mls": "6584972",
+      "address": "705 Walton Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_705-walton-street",
+          "member": "act_705-walton-street",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 39.58,
+      "source_matches": [
+        "act_705-walton-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 14,
+      "mls": "54037481",
+      "address": "3115 Beauchamp Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_3115-beauchamp",
+          "member": "act_3115-beauchamp",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 66.99,
+      "source_matches": [
+        "act_3115-beauchamp"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 15,
+      "mls": "97695610",
+      "address": "830 WAVERLY Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_830-waverly-street",
+          "member": "act_830-waverly-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 21.0,
+          "pin": "2131044801",
+          "member": "2131044801",
+          "address": "838 Waverly St, Houston, Tx 77007"
+        }
+      ],
+      "nearest_meters": 21.0,
+      "source_matches": [
+        "act_830-waverly-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 16,
+      "mls": "87208794",
+      "address": "2603 JULIAN Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2603-julian",
+          "member": "act_2603-julian",
+          "phase": "mep_roughs"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.04,
+          "pin": "act_2603-julian",
+          "member": "act_2603-julian",
+          "address": "2603 JULIAN Street"
+        }
+      ],
+      "nearest_meters": 2.04,
+      "source_matches": [
+        "act_2603-julian"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 17,
+      "mls": "64823156",
+      "address": "1138 Fugate Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1138-fugate-st-77009",
+          "member": "pmt_1138-fugate-st-77009",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 17.19,
+          "pin": "pmt_1138-fugate-st-77009",
+          "member": "pmt_1138-fugate-st-77009",
+          "address": "1138 Fugate St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 17.19,
+      "source_matches": [
+        "pmt_1138-fugate-st-77009"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 18,
+      "mls": "70087101",
+      "address": "603 E 23rd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_603-e-23",
+          "member": "act_603-e-23",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.75,
+          "pin": "act_603-e-23",
+          "member": "act_603-e-23",
+          "address": "603 E 23rd Street"
+        }
+      ],
+      "nearest_meters": 1.75,
+      "source_matches": [
+        "act_603-e-23"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 19,
+      "mls": "89411837",
+      "address": "623 E 13th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_623-e-13",
+          "member": "act_623-e-13",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_623-e-13",
+          "member": "act_623-e-13",
+          "address": "623 E 13th Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_623-e-13"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 20,
+      "mls": "90107924",
+      "address": "614 Ridge Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_614-ridge-street",
+          "member": "act_614-ridge-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 23.87,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        }
+      ],
+      "nearest_meters": 23.87,
+      "source_matches": [
+        "act_614-ridge-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 21,
+      "mls": "26389093",
+      "address": "1111 E 27th Street",
+      "status": "active",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 12.27,
+          "pin": "2131242651",
+          "member": "2131242651",
+          "address": "1107 E 27th St, Houston, Tx 77009"
+        }
+      ],
+      "nearest_meters": 12.27,
+      "source_matches": []
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 22,
+      "mls": "87300082",
+      "address": "2218 Gostick Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2218-gostick-street",
+          "member": "act_2218-gostick-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 14.52,
+          "pin": "act_2218-gostick-street",
+          "member": "act_2218-gostick-street",
+          "address": "2218 Gostick Street"
+        }
+      ],
+      "nearest_meters": 14.52,
+      "source_matches": [
+        "act_2218-gostick-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 23,
+      "mls": "53672595",
+      "address": "609 E 25th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.07,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        },
+        {
+          "meters": 15.6,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 24.26,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.07,
+      "source_matches": [
+        "act_609-e-25"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 24,
+      "mls": "29120139",
+      "address": "212 E 24th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_212-e-24",
+          "member": "act_212-e-24",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 18.11,
+          "pin": "2131437247",
+          "member": "2131437247",
+          "address": "205 E 24th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 18.11,
+      "source_matches": [
+        "act_212-e-24"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 25,
+      "mls": "56747960",
+      "address": "906 Bayland Avenue",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_906-bayland-ave-77009",
+          "member": "pmt_906-bayland-ave-77009",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "pmt_906-bayland-ave-77009",
+          "member": "pmt_906-bayland-ave-77009",
+          "address": "906 Bayland Ave, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "pmt_906-bayland-ave-77009"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 26,
+      "mls": "88557637",
+      "address": "715 Merrill Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_715-merrill",
+          "member": "act_715-merrill",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 3.08,
+          "pin": "act_715-merrill",
+          "member": "act_715-merrill",
+          "address": "715 Merrill Street"
+        }
+      ],
+      "nearest_meters": 3.08,
+      "source_matches": [
+        "act_715-merrill"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 27,
+      "mls": "7670973",
+      "address": "2015 Harvard Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2015-harvard",
+          "member": "act_2015-harvard",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 28.61,
+      "source_matches": [
+        "act_2015-harvard"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 28,
+      "mls": "31444523",
+      "address": "410 Merrill Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131421176",
+          "member": "2131421176",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131421176",
+          "member": "2131421176",
+          "address": "410 Merrill St, Houston, Tx 77009"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "2131421176"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 29,
+      "mls": "70723638",
+      "address": "2924 Watson Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2924-watson-street",
+          "member": "act_2924-watson-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 20.22,
+          "pin": "pmt_728-euclid-st-77009",
+          "member": "pmt_728-euclid-st-77009",
+          "address": "728 Euclid St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 20.22,
+      "source_matches": [
+        "act_2924-watson-street"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 30,
+      "mls": "5069786",
+      "address": "735 E 8TH 1/2 Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_735-e-8-12",
+          "member": "act_735-e-8-12",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.95,
+          "pin": "act_731-e-8-12",
+          "member": "act_731-e-8-12",
+          "address": "731 E 8TH 1/2 Street"
+        },
+        {
+          "meters": 18.54,
+          "pin": "act_735-e-8-12",
+          "member": "act_735-e-8-12",
+          "address": "735 E 8TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 1.95,
+      "source_matches": [
+        "act_735-e-8-12"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 31,
+      "mls": "40836939",
+      "address": "731 E 8TH 1/2 Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_731-e-8-12",
+          "member": "act_731-e-8-12",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.95,
+          "pin": "act_731-e-8-12",
+          "member": "act_731-e-8-12",
+          "address": "731 E 8TH 1/2 Street"
+        },
+        {
+          "meters": 18.54,
+          "pin": "act_735-e-8-12",
+          "member": "act_735-e-8-12",
+          "address": "735 E 8TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 1.95,
+      "source_matches": [
+        "act_731-e-8-12"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 32,
+      "mls": "89221155",
+      "address": "248 W 22nd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_248-w-22",
+          "member": "act_248-w-22",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.73,
+          "pin": "act_248-w-22",
+          "member": "act_248-w-22",
+          "address": "248 W 22nd Street"
+        }
+      ],
+      "nearest_meters": 0.73,
+      "source_matches": [
+        "act_248-w-22"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 33,
+      "mls": "9001753",
+      "address": "2434 White Oak Drive",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2434-white-oak",
+          "member": "act_2434-white-oak",
+          "phase": "framing"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 22.39,
+          "pin": "act_2434-white-oak",
+          "member": "act_2434-white-oak",
+          "address": "2434 White Oak Drive"
+        },
+        {
+          "meters": 23.11,
+          "pin": "act_2436-white-oak",
+          "member": "act_2436-white-oak",
+          "address": "2436 White Oak"
+        }
+      ],
+      "nearest_meters": 22.39,
+      "source_matches": [
+        "act_2434-white-oak"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 34,
+      "mls": "57009282",
+      "address": "1140 Waverly Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1140-waverly",
+          "member": "act_1140-waverly",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.28,
+          "pin": "act_1140-waverly",
+          "member": "act_1140-waverly",
+          "address": "1140 Waverly Street"
+        }
+      ],
+      "nearest_meters": 2.28,
+      "source_matches": [
+        "act_1140-waverly"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 35,
+      "mls": "68235642",
+      "address": "2436 White Oak",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2436-white-oak",
+          "member": "act_2436-white-oak",
+          "phase": "framing"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 9.94,
+          "pin": "act_2436-white-oak",
+          "member": "act_2436-white-oak",
+          "address": "2436 White Oak"
+        },
+        {
+          "meters": 16.69,
+          "pin": "act_2434-white-oak",
+          "member": "act_2434-white-oak",
+          "address": "2434 White Oak Drive"
+        }
+      ],
+      "nearest_meters": 9.94,
+      "source_matches": [
+        "act_2436-white-oak"
+      ]
+    },
+    {
+      "file": "heightsactivesinglelots909.csv",
+      "row": 36,
+      "mls": "93562410",
+      "address": "1002 E 6TH 1/2 Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1002-e-6-12",
+          "member": "act_1002-e-6-12",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_1002-e-6-12",
+          "member": "act_1002-e-6-12",
+          "address": "1002 E 6TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_1002-e-6-12"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 2,
+      "mls": "64036585",
+      "address": "1303 Cordell Street Unit#B",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1303-cordell-street-unit-b",
+          "member": "act_1303-cordell-street-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 86.37,
+      "source_matches": [
+        "act_1303-cordell-street-unit-b"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 3,
+      "mls": "7485788",
+      "address": "1032 W 17th Street Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1032-w-17th-street-unit-a",
+          "member": "act_1032-w-17th-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 126.94,
+      "source_matches": [
+        "act_1032-w-17th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 4,
+      "mls": "54747421",
+      "address": "409 Walton Street Unit#B",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_409-walton-st-a-77009",
+          "member": "act_409-walton-street-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 34.89,
+      "source_matches": [
+        "act_409-walton-street-unit-b"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 5,
+      "mls": "71690573",
+      "address": "1122 E 27TH ST Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-a"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 6,
+      "mls": "95958213",
+      "address": "1520 W 21st St Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-w-21st-st-unit-b",
+          "member": "act_1520-w-21st-st-unit-a",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 22.03,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 22.09,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "act_1520-w-21st-st-unit-a"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 7,
+      "mls": "57925491",
+      "address": "1218 Prince Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1218-prince-street",
+          "member": "act_1218-prince-street",
+          "phase": "exterior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1218-prince-street",
+          "member": "act_1218-prince-street",
+          "address": "1218 Prince Street"
+        },
+        {
+          "meters": 9.48,
+          "pin": "pmt_1220-prince-st-77008",
+          "member": "pmt_1220-prince-st-77008",
+          "address": "1220 Prince St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1218-prince-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 8,
+      "mls": "7364673",
+      "address": "741 W 21st Street Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_741-w-21st-street-unit-a",
+          "member": "act_741-w-21st-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.21,
+          "pin": "2131042481",
+          "member": "2131042481",
+          "address": "741 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 17.71,
+          "pin": "pmt_737-w-21st-st-c-77008",
+          "member": "pmt_737-w-21st-st-c-77008",
+          "address": "737 W 21st St C, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 1.21,
+      "source_matches": [
+        "act_741-w-21st-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 9,
+      "mls": "22766797",
+      "address": "1227 Prince Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        },
+        {
+          "meters": 5.09,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1227-prince-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 10,
+      "mls": "29146166",
+      "address": "1120 E 26th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131318242",
+          "member": "2131318242",
+          "phase": "interior"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 41.72,
+      "source_matches": [
+        "2131318242"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 11,
+      "mls": "87747647",
+      "address": "835 W 25th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_835-w-25th-street",
+          "member": "act_835-w-25th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.91,
+          "pin": "2131282520",
+          "member": "2131282520",
+          "address": "837 W 25th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 8.91,
+      "source_matches": [
+        "act_835-w-25th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 12,
+      "mls": "4182331",
+      "address": "805 W 22nd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_805-w-22nd-street",
+          "member": "act_805-w-22nd-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.09,
+          "pin": "act_805-w-22nd-street",
+          "member": "act_805-w-22nd-street",
+          "address": "805 W 22nd Street"
+        },
+        {
+          "meters": 16.46,
+          "pin": "act_805-w-22nd-street",
+          "member": "pmt_807-w-22nd-st-77008",
+          "address": "807 W 22nd St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 16.09,
+      "source_matches": [
+        "act_805-w-22nd-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 13,
+      "mls": "89794015",
+      "address": "1122 Robbie Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1124-robbie-st-77009",
+          "member": "act_1122-robbie-street",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.47,
+          "pin": "pmt_1124-robbie-st-77009",
+          "member": "pmt_1124-robbie-st-77009",
+          "address": "1124 Robbie St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 16.47,
+      "source_matches": [
+        "act_1122-robbie-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 14,
+      "mls": "13912427",
+      "address": "1322 Lawrence Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1322-lawrence-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 7.34,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.11,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 7.34,
+      "source_matches": [
+        "act_1322-lawrence-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 15,
+      "mls": "54722254",
+      "address": "1012 E 26TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "act_1012-e-26th-street",
+          "phase": "insulation"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "act_1012-e-26th-street",
+          "address": "1012 E 26TH Street"
+        },
+        {
+          "meters": 4.35,
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "pmt_1010-e-26th-st-77009",
+          "address": "1010 E 26th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_1012-e-26th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 16,
+      "mls": "36627624",
+      "address": "711 E 26TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131192874",
+          "member": "act_711-e-26th-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 3.96,
+          "pin": "2131192874",
+          "member": "2131192874",
+          "address": "713 E 26th St, Houston, Tx 77009"
+        },
+        {
+          "meters": 8.9,
+          "pin": "2131192874",
+          "member": "act_711-e-26th-street",
+          "address": "711 E 26TH Street"
+        }
+      ],
+      "nearest_meters": 3.96,
+      "source_matches": [
+        "act_711-e-26th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 17,
+      "mls": "69573145",
+      "address": "318 W 21st Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.76,
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "address": "318 W 21st Street"
+        },
+        {
+          "meters": 5.54,
+          "pin": "act_318-w-21st-street",
+          "member": "pmt_318b-w-21st-st-77008",
+          "address": "318 W 21st St B (est), Houston, TX 77008"
+        },
+        {
+          "meters": 10.81,
+          "pin": "2131186599",
+          "member": "2131186599",
+          "address": "314 W 21st St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 2.76,
+      "source_matches": [
+        "act_318-w-21st-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 18,
+      "mls": "98658584",
+      "address": "609 W 27th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-w-27th-street",
+          "member": "act_609-w-27th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.15,
+          "pin": "act_609-w-27th-street",
+          "member": "act_609-w-27th-street",
+          "address": "609 W 27th Street"
+        },
+        {
+          "meters": 8.32,
+          "pin": "act_609-w-27th-street",
+          "member": "pmt_607-w-27th-st-77008",
+          "address": "607 W 27th St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 4.15,
+      "source_matches": [
+        "act_609-w-27th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 19,
+      "mls": "34333707",
+      "address": "112 E 27th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "act_112-e-27th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.11,
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "pmt_112-e-27th-st-a-77008",
+          "address": "112 E 27th St A, Houston, TX 77008"
+        },
+        {
+          "meters": 16.79,
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "act_112-e-27th-street",
+          "address": "112 E 27th Street"
+        }
+      ],
+      "nearest_meters": 8.11,
+      "source_matches": [
+        "act_112-e-27th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 20,
+      "mls": "57910089",
+      "address": "611 E 25th Street Unit#B",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.07,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 7.62,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        },
+        {
+          "meters": 16.6,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        }
+      ],
+      "nearest_meters": 1.07,
+      "source_matches": [
+        "act_611-e-25th-street-unit-b"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 21,
+      "mls": "10210884",
+      "address": "407 E 27TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_407-e-27th-street",
+          "member": "act_407-e-27th-street",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 9.33,
+          "pin": "act_407-e-27th-street",
+          "member": "pmt_409-e-27th-st-77008",
+          "address": "409 E 27th St, Houston, TX 77008"
+        },
+        {
+          "meters": 13.6,
+          "pin": "act_407-e-27th-street",
+          "member": "act_407-e-27th-street",
+          "address": "407 E 27TH Street"
+        }
+      ],
+      "nearest_meters": 9.33,
+      "source_matches": [
+        "act_407-e-27th-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 22,
+      "mls": "32352560",
+      "address": "710 Waverly Street Unit#D",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_710-waverly-street-unit-d",
+          "member": "act_710-waverly-street-unit-d",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 10.48,
+          "pin": "pmt_710-waverly-st-a-77007",
+          "member": "pmt_710-waverly-st-a-77007",
+          "address": "710 Waverly St A / B / C, Houston, TX 77007"
+        }
+      ],
+      "nearest_meters": 10.48,
+      "source_matches": [
+        "act_710-waverly-street-unit-d"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 23,
+      "mls": "65070979",
+      "address": "335 Harvard Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        },
+        {
+          "meters": 18.41,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_335-harvard-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 24,
+      "mls": "14206939",
+      "address": "1504 W 21st Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 6.77,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 7.11,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        },
+        {
+          "meters": 12.37,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 6.77,
+      "source_matches": [
+        "act_1504-w-21st-street"
+      ]
+    },
+    {
+      "file": "heightsactivesplitlots909.csv",
+      "row": 25,
+      "mls": "16999317",
+      "address": "312 w 9th St",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_310-w-9th-st-77007",
+          "member": "act_312-w-9th-st",
+          "phase": "interior"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 62.65,
+      "source_matches": [
+        "act_312-w-9th-st"
+      ]
+    },
+    {
+      "file": "heightspendingsinglelots909.csv",
+      "row": 2,
+      "mls": "62006938",
+      "address": "1315 Waverly Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1315-waverly",
+          "member": "act_1315-waverly",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 70.06,
+      "source_matches": [
+        "act_1315-waverly"
+      ]
+    },
+    {
+      "file": "heightspendingsinglelots909.csv",
+      "row": 3,
+      "mls": "42468659",
+      "address": "1116 Highland Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1116-highland",
+          "member": "act_1116-highland",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.06,
+          "pin": "act_1116-highland",
+          "member": "act_1116-highland",
+          "address": "1116 Highland Street"
+        }
+      ],
+      "nearest_meters": 0.06,
+      "source_matches": [
+        "act_1116-highland"
+      ]
+    },
+    {
+      "file": "heightspendingsinglelots909.csv",
+      "row": 4,
+      "mls": "40388055",
+      "address": "1113 Voight Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.06,
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "address": "1113 Voight Street"
+        },
+        {
+          "meters": 14.77,
+          "pin": "pmt_1109-voight-st-77009",
+          "member": "pmt_1109-voight-st-77009",
+          "address": "1109 Voight St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.06,
+      "source_matches": [
+        "act_1113-voight"
+      ]
+    },
+    {
+      "file": "heightspendingsinglelots909.csv",
+      "row": 5,
+      "mls": "95336494",
+      "address": "1126 E 7th 1/2 Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1126-e-7-12",
+          "member": "act_1126-e-7-12",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.01,
+          "pin": "act_1126-e-7-12",
+          "member": "act_1126-e-7-12",
+          "address": "1126 E 7th 1/2 Street"
+        }
+      ],
+      "nearest_meters": 0.01,
+      "source_matches": [
+        "act_1126-e-7-12"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 2,
+      "mls": "58591599",
+      "address": "1208 E 26th Street Unit#A",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1208-e-26th-street-unit-a",
+          "member": "act_1208-e-26th-street-unit-a",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_1208-e-26th-street-unit-a",
+          "member": "act_1208-e-26th-street-unit-a",
+          "address": "1208 E 26th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": [
+        "act_1208-e-26th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 3,
+      "mls": "44304073",
+      "address": "807 W 22nd Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_805-w-22nd-street",
+          "member": "pmt_807-w-22nd-st-77008",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_805-w-22nd-street",
+          "member": "pmt_807-w-22nd-st-77008",
+          "address": "807 W 22nd St, Houston, TX 77008"
+        },
+        {
+          "meters": 0.8,
+          "pin": "act_805-w-22nd-street",
+          "member": "act_805-w-22nd-street",
+          "address": "805 W 22nd Street"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": [
+        "pmt_807-w-22nd-st-77008"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 4,
+      "mls": "61282363",
+      "address": "1434 Alexander Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "address": "1434 Alexander Street"
+        },
+        {
+          "meters": 2.25,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "pmt_1432-alexander-st-77008",
+          "address": "1432 Alexander St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_1434-alexander-street"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 5,
+      "mls": "81354398",
+      "address": "816 W 17TH Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_814-w-17th-street",
+          "member": "act_816-w-17th-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.01,
+          "pin": "act_814-w-17th-street",
+          "member": "act_814-w-17th-street",
+          "address": "814 W 17TH Street"
+        },
+        {
+          "meters": 9.99,
+          "pin": "act_814-w-17th-street",
+          "member": "act_816-w-17th-street",
+          "address": "816 W 17TH Street"
+        }
+      ],
+      "nearest_meters": 5.01,
+      "source_matches": [
+        "act_816-w-17th-street"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 6,
+      "mls": "62144090",
+      "address": "814 W 17TH Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_814-w-17th-street",
+          "member": "act_814-w-17th-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.01,
+          "pin": "act_814-w-17th-street",
+          "member": "act_814-w-17th-street",
+          "address": "814 W 17TH Street"
+        },
+        {
+          "meters": 9.99,
+          "pin": "act_814-w-17th-street",
+          "member": "act_816-w-17th-street",
+          "address": "816 W 17TH Street"
+        }
+      ],
+      "nearest_meters": 5.01,
+      "source_matches": [
+        "act_814-w-17th-street"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 7,
+      "mls": "89555500",
+      "address": "827 W 16th Street Unit#A",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "address": "827 W 16th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": [
+        "act_827-w-16th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 8,
+      "mls": "32141788",
+      "address": "314 W 21st Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131186599",
+          "member": "2131186599",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.18,
+          "pin": "2131186599",
+          "member": "2131186599",
+          "address": "314 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 13.32,
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "address": "318 W 21st Street"
+        },
+        {
+          "meters": 14.92,
+          "pin": "act_318-w-21st-street",
+          "member": "pmt_318b-w-21st-st-77008",
+          "address": "318 W 21st St B (est), Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 5.18,
+      "source_matches": [
+        "2131186599"
+      ]
+    },
+    {
+      "file": "heightspendingsplitlots909.csv",
+      "row": 9,
+      "mls": "81689864",
+      "address": "116 E 23RD Street",
+      "status": "pending",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131144961",
+          "member": "act_116-e-23rd-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "2131144961",
+          "member": "act_116-e-23rd-street",
+          "address": "116 E 23RD Street"
+        },
+        {
+          "meters": 6.24,
+          "pin": "2131144961",
+          "member": "2131144961",
+          "address": "118 E 23rd St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_116-e-23rd-street"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 2,
+      "mls": "89124616",
+      "address": "1737 Tabor Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 145.87,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 3,
+      "mls": "85478626",
+      "address": "1207 Tabor Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1207-tabor",
+          "member": "act_1207-tabor",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 31.8,
+      "source_matches": [
+        "act_1207-tabor"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 4,
+      "mls": "50869013",
+      "address": "1023 E 23rd Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 95.86,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 5,
+      "mls": "93127419",
+      "address": "903 Tabor Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 93.51,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 6,
+      "mls": "95407673",
+      "address": "107 E 24th Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_107-e-24",
+          "member": "act_107-e-24",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 89.02,
+      "source_matches": [
+        "act_107-e-24"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 7,
+      "mls": "33839156",
+      "address": "1520 Nicholson Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.0,
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "address": "1520 Nicholson Street"
+        }
+      ],
+      "nearest_meters": 0.0,
+      "source_matches": [
+        "act_1520-nicholson"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 8,
+      "mls": "64831168",
+      "address": "1524 Nicholson St",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 20.7,
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "address": "1520 Nicholson Street"
+        }
+      ],
+      "nearest_meters": 20.7,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 9,
+      "mls": "96094299",
+      "address": "1106 Robbie Street",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 14.73,
+          "pin": "pmt_1124-robbie-st-77009",
+          "member": "act_1122-robbie-street",
+          "address": "1122 Robbie Street"
+        }
+      ],
+      "nearest_meters": 14.73,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 10,
+      "mls": "71056150",
+      "address": "710 E 18th Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_710-e-18",
+          "member": "act_710-e-18",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 116.5,
+      "source_matches": [
+        "act_710-e-18"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 11,
+      "mls": "88173016",
+      "address": "826 Ralfallen Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_826-ralfallen",
+          "member": "act_826-ralfallen",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.47,
+          "pin": "act_826-ralfallen",
+          "member": "act_826-ralfallen",
+          "address": "826 Ralfallen Street"
+        }
+      ],
+      "nearest_meters": 4.47,
+      "source_matches": [
+        "act_826-ralfallen"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 12,
+      "mls": "26903565",
+      "address": "709 Ridge Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_709-ridge",
+          "member": "act_709-ridge",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.64,
+          "pin": "act_709-ridge",
+          "member": "act_709-ridge",
+          "address": "709 Ridge Street"
+        }
+      ],
+      "nearest_meters": 2.64,
+      "source_matches": [
+        "act_709-ridge"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 13,
+      "mls": "72560168",
+      "address": "709 E 17th Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131432164",
+          "member": "2131432164",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.98,
+          "pin": "2131432164",
+          "member": "2131432164",
+          "address": "709 E 17th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 1.98,
+      "source_matches": [
+        "2131432164"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 14,
+      "mls": "35621139",
+      "address": "1023 Euclid Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1023-euclid",
+          "member": "act_1023-euclid",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 56.2,
+      "source_matches": [
+        "act_1023-euclid"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 15,
+      "mls": "33729025",
+      "address": "402 Columbia Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 29.7,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 16,
+      "mls": "78950517",
+      "address": "406 Columbia Street",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 22.78,
+          "pin": "pmt_408-columbia-st-77007",
+          "member": "pmt_408-columbia-st-77007",
+          "address": "408 Columbia St, Houston, TX 77007"
+        }
+      ],
+      "nearest_meters": 22.78,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 17,
+      "mls": "90671798",
+      "address": "1119 E 7th 1/2 Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 57.55,
+      "source_matches": [
+        "act_1119-e-7-12"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 18,
+      "mls": "16593438",
+      "address": "726 E 7th Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 29.94,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 19,
+      "mls": "65984026",
+      "address": "2612 Greenleaf Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 145.07,
+      "source_matches": [
+        "act_2612-greenleaf"
+      ]
+    },
+    {
+      "file": "heightssoldsinglelotslast180days.csv",
+      "row": 20,
+      "mls": "19950202",
+      "address": "1001 E 7th 1/2 Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 115.12,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 2,
+      "mls": "38995142",
+      "address": "1316 Heslep Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 216.68,
+      "source_matches": [
+        "pmt_1316-heslep-st-77009"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 3,
+      "mls": "94906411",
+      "address": "602 Jewett Street Unit#A",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 114.69,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 4,
+      "mls": "66717038",
+      "address": "1438-A Dian Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 123.46,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 5,
+      "mls": "8458741",
+      "address": "1208 E 26th Street Unit#B",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_1208-e-26th-street-unit-a",
+          "member": "act_1208-e-26th-street-unit-a",
+          "address": "1208 E 26th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 6,
+      "mls": "9530397",
+      "address": "1303 Cordell Street Unit#A",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 17.37,
+          "pin": "act_1303-cordell-street-unit-b",
+          "member": "act_1303-cordell-street-unit-b",
+          "address": "1303 Cordell Street Unit#B"
+        }
+      ],
+      "nearest_meters": 17.37,
+      "source_matches": [
+        "pmt_1303-cordell-st-a-77009"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 7,
+      "mls": "13147368",
+      "address": "1121 E 24th Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 8.8,
+          "pin": "pmt_1107-e-24th-st-77009",
+          "member": "pmt_1109-e-24th-st-77009",
+          "address": "1109 E 24th St, Houston, TX 77009"
+        },
+        {
+          "meters": 9.3,
+          "pin": "pmt_1107-e-24th-st-77009",
+          "member": "pmt_1107-e-24th-st-77009",
+          "address": "1107 E 24th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 8.8,
+      "source_matches": [
+        "pmt_1121-e-24th-st-77009"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 8,
+      "mls": "61559810",
+      "address": "1125 E 24th Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 7.37,
+          "pin": "pmt_1107-e-24th-st-77009",
+          "member": "pmt_1109-e-24th-st-77009",
+          "address": "1109 E 24th St, Houston, TX 77009"
+        },
+        {
+          "meters": 7.91,
+          "pin": "pmt_1107-e-24th-st-77009",
+          "member": "pmt_1107-e-24th-st-77009",
+          "address": "1107 E 24th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 7.37,
+      "source_matches": [
+        "pmt_1125-e-24th-st-77009"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 9,
+      "mls": "78621450",
+      "address": "310 E 28th St",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 128.17,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 10,
+      "mls": "79405032",
+      "address": "224 E 27th Street",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 101.28,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 11,
+      "mls": "76530080",
+      "address": "1524 W 21st St",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 30.51,
+      "source_matches": [
+        "act_1524-w-21st-st"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 12,
+      "mls": "92767147",
+      "address": "1122 E 27TH ST Unit#B",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-b",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-b"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 13,
+      "mls": "97105255",
+      "address": "1229 Prince Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.05,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        },
+        {
+          "meters": 10.12,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        }
+      ],
+      "nearest_meters": 5.05,
+      "source_matches": [
+        "act_1229-prince-street"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 14,
+      "mls": "77501317",
+      "address": "406 E 28th Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 51.66,
+      "source_matches": [
+        "act_406-e-28th-street"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 15,
+      "mls": "5279771",
+      "address": "1436 Alexander St",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 7.87,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "address": "1434 Alexander Street"
+        },
+        {
+          "meters": 9.5,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "pmt_1432-alexander-st-77008",
+          "address": "1432 Alexander St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 7.87,
+      "source_matches": [
+        "act_1436-alexander-st"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 16,
+      "mls": "87693150",
+      "address": "404 E 28th Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 54.39,
+      "source_matches": [
+        "pmt_404-e-28th-st-77008"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 17,
+      "mls": "10970361",
+      "address": "1321 Alexander Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 48.08,
+      "source_matches": [
+        "act_1321-alexander-street"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 18,
+      "mls": "12794628",
+      "address": "1516 Dorothy Street Unit#A",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 121.5,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 19,
+      "mls": "24145604",
+      "address": "1516 Dorothy Street Unit#C",
+      "status": "sold",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 121.5,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 20,
+      "mls": "10396812",
+      "address": "1324 Lawrence Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.77,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_1324-lawrence-street"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 21,
+      "mls": "16373769",
+      "address": "1326 Lawrence Street",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 7.34,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.11,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 7.34,
+      "source_matches": [
+        "act_1326-lawrence-street"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 22,
+      "mls": "42479147",
+      "address": "827 W 16th Street Unit#B",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "address": "827 W 16th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 23,
+      "mls": "88804104",
+      "address": "525 W 26th Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 112.12,
+      "source_matches": [
+        "pmt_525-w-26th-st-77008"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 24,
+      "mls": "10589101",
+      "address": "527 W 26th Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 109.15,
+      "source_matches": [
+        "pmt_527-w-26th-st-77008"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 25,
+      "mls": "90312385",
+      "address": "2715 BEAUCHAMP Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 177.91,
+      "source_matches": [
+        "pmt_2715-beauchamp-st-77009"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 26,
+      "mls": "30142567",
+      "address": "611 E 25th Street Unit#A",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.07,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 7.62,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        },
+        {
+          "meters": 16.6,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        }
+      ],
+      "nearest_meters": 1.07,
+      "source_matches": [
+        "act_611-e-25th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 27,
+      "mls": "60919011",
+      "address": "2713 BEAUCHAMP Street",
+      "status": "sold",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 182.72,
+      "source_matches": [
+        "pmt_2713-beauchamp-st-77009"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 28,
+      "mls": "93385395",
+      "address": "815 Lawrence Street Unit#A",
+      "status": "sold",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_815-lawrence-street-unit-a",
+          "member": "act_815-lawrence-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_815-lawrence-street-unit-a",
+          "member": "act_815-lawrence-street-unit-a",
+          "address": "815 Lawrence Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_815-lawrence-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 29,
+      "mls": "69395685",
+      "address": "815B Lawrence Street",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_815-lawrence-street-unit-a",
+          "member": "act_815-lawrence-street-unit-a",
+          "address": "815 Lawrence Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": []
+    },
+    {
+      "file": "heightssoldsplitlotslast180days.csv",
+      "row": 30,
+      "mls": "94092178",
+      "address": "710 Waverly Street Unit#E",
+      "status": "sold",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 10.48,
+          "pin": "pmt_710-waverly-st-a-77007",
+          "member": "pmt_710-waverly-st-a-77007",
+          "address": "710 Waverly St A / B / C, Houston, TX 77007"
+        }
+      ],
+      "nearest_meters": 10.48,
+      "source_matches": []
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 2,
+      "mls": "77307641",
+      "address": "1109 Tabor Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1109-tabor",
+          "member": "act_1109-tabor",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1109-tabor",
+          "member": "act_1109-tabor",
+          "address": "1109 Tabor Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1109-tabor"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 3,
+      "mls": "90815842",
+      "address": "1207 Tabor Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1207-tabor",
+          "member": "act_1207-tabor",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 31.8,
+      "source_matches": [
+        "act_1207-tabor"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 4,
+      "mls": "13242358",
+      "address": "1315 Waverly Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1315-waverly",
+          "member": "act_1315-waverly",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 70.06,
+      "source_matches": [
+        "act_1315-waverly"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 5,
+      "mls": "66551117",
+      "address": "613 Wendel Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_613-wendel"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 6,
+      "mls": "55016263",
+      "address": "615 Wendel Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_615-wendel-street"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 7,
+      "mls": "64955758",
+      "address": "613 Wendel Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_613-wendel"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 8,
+      "mls": "93906672",
+      "address": "1011 E 25th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1011-e-25",
+          "member": "act_1011-e-25",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 46.1,
+      "source_matches": [
+        "act_1011-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 9,
+      "mls": "16708729",
+      "address": "1315 Waverly Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1315-waverly",
+          "member": "act_1315-waverly",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 70.06,
+      "source_matches": [
+        "act_1315-waverly"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 10,
+      "mls": "64725189",
+      "address": "1016 E 27 th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1016-e-27",
+          "member": "act_1016-e-27",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 52.18,
+      "source_matches": [
+        "act_1016-e-27"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 11,
+      "mls": "8089263",
+      "address": "613 Wendel Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_613-wendel"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 12,
+      "mls": "37965261",
+      "address": "830 E 27th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_830-e-27",
+          "member": "act_830-e-27",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 23.29,
+          "pin": "pmt_826-e-27th-st-77009",
+          "member": "pmt_826-e-27th-st-77009",
+          "address": "826 E 27th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 23.29,
+      "source_matches": [
+        "act_830-e-27"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 13,
+      "mls": "45051250",
+      "address": "902 E 25TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "address": "902 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_902-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 14,
+      "mls": "86996641",
+      "address": "613 Wendel Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_613-wendel"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 15,
+      "mls": "68810228",
+      "address": "902 E 25TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "address": "902 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_902-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 16,
+      "mls": "21311115",
+      "address": "920 E 25TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_920-e-25",
+          "member": "act_920-e-25",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.12,
+          "pin": "act_920-e-25",
+          "member": "act_920-e-25",
+          "address": "920 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 2.12,
+      "source_matches": [
+        "act_920-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 17,
+      "mls": "66273667",
+      "address": "615 Wendel Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_615-wendel-street"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 18,
+      "mls": "59859282",
+      "address": "107 E 24th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_107-e-24",
+          "member": "act_107-e-24",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 89.02,
+      "source_matches": [
+        "act_107-e-24"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 19,
+      "mls": "59555776",
+      "address": "902 E 25TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "address": "902 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_902-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 20,
+      "mls": "59548492",
+      "address": "902 E 25TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "address": "902 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_902-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 21,
+      "mls": "53204482",
+      "address": "1520 Nicholson Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.0,
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "address": "1520 Nicholson Street"
+        }
+      ],
+      "nearest_meters": 0.0,
+      "source_matches": [
+        "act_1520-nicholson"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 22,
+      "mls": "12674614",
+      "address": "1520 Nicholson Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.22,
+          "pin": "act_1520-nicholson",
+          "member": "act_1520-nicholson",
+          "address": "1520 Nicholson Street"
+        }
+      ],
+      "nearest_meters": 0.22,
+      "source_matches": [
+        "act_1520-nicholson"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 23,
+      "mls": "39622259",
+      "address": "231 E 26th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_231-e-26",
+          "member": "act_231-e-26",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 119.26,
+      "source_matches": [
+        "act_231-e-26"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 24,
+      "mls": "70755010",
+      "address": "710 E 18th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_710-e-18",
+          "member": "act_710-e-18",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 116.5,
+      "source_matches": [
+        "act_710-e-18"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 25,
+      "mls": "92832618",
+      "address": "826 Ralfallen Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_826-ralfallen",
+          "member": "act_826-ralfallen",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.47,
+          "pin": "act_826-ralfallen",
+          "member": "act_826-ralfallen",
+          "address": "826 Ralfallen Street"
+        }
+      ],
+      "nearest_meters": 4.47,
+      "source_matches": [
+        "act_826-ralfallen"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 26,
+      "mls": "47921392",
+      "address": "826 Ralfallen Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_826-ralfallen",
+          "member": "act_826-ralfallen",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.47,
+          "pin": "act_826-ralfallen",
+          "member": "act_826-ralfallen",
+          "address": "826 Ralfallen Street"
+        }
+      ],
+      "nearest_meters": 4.47,
+      "source_matches": [
+        "act_826-ralfallen"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 27,
+      "mls": "90882036",
+      "address": "709 Ridge Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_709-ridge",
+          "member": "act_709-ridge",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.64,
+          "pin": "act_709-ridge",
+          "member": "act_709-ridge",
+          "address": "709 Ridge Street"
+        }
+      ],
+      "nearest_meters": 2.64,
+      "source_matches": [
+        "act_709-ridge"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 28,
+      "mls": "4236605",
+      "address": "709 Ridge Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_709-ridge",
+          "member": "act_709-ridge",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.64,
+          "pin": "act_709-ridge",
+          "member": "act_709-ridge",
+          "address": "709 Ridge Street"
+        }
+      ],
+      "nearest_meters": 2.64,
+      "source_matches": [
+        "act_709-ridge"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 29,
+      "mls": "10202246",
+      "address": "3115 Beauchamp Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_3115-beauchamp",
+          "member": "act_3115-beauchamp",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 66.99,
+      "source_matches": [
+        "act_3115-beauchamp"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 30,
+      "mls": "51069776",
+      "address": "122 E 4th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        },
+        {
+          "meters": 18.47,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_122-e-4"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 31,
+      "mls": "36214225",
+      "address": "1023 Euclid Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1023-euclid",
+          "member": "act_1023-euclid",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 56.2,
+      "source_matches": [
+        "act_1023-euclid"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 32,
+      "mls": "65552680",
+      "address": "609 E 25th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.07,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        },
+        {
+          "meters": 15.6,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 24.26,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.07,
+      "source_matches": [
+        "act_609-e-25"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 33,
+      "mls": "37477045",
+      "address": "122 E 4th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        },
+        {
+          "meters": 18.47,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_122-e-4"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 34,
+      "mls": "2795149",
+      "address": "1116 Highland Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1116-highland",
+          "member": "act_1116-highland",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.06,
+          "pin": "act_1116-highland",
+          "member": "act_1116-highland",
+          "address": "1116 Highland Street"
+        }
+      ],
+      "nearest_meters": 0.06,
+      "source_matches": [
+        "act_1116-highland"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 35,
+      "mls": "62454787",
+      "address": "1023 Euclid Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1023-euclid",
+          "member": "act_1023-euclid",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 56.2,
+      "source_matches": [
+        "act_1023-euclid"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 36,
+      "mls": "65631542",
+      "address": "603 E 23rd Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_603-e-23",
+          "member": "act_603-e-23",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.75,
+          "pin": "act_603-e-23",
+          "member": "act_603-e-23",
+          "address": "603 E 23rd Street"
+        }
+      ],
+      "nearest_meters": 1.75,
+      "source_matches": [
+        "act_603-e-23"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 37,
+      "mls": "55078924",
+      "address": "949 Ridge Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_949-ridge-st-77009",
+          "member": "pmt_949-ridge-st-77009",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "pmt_949-ridge-st-77009",
+          "member": "pmt_949-ridge-st-77009",
+          "address": "949 Ridge St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "pmt_949-ridge-st-77009"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 38,
+      "mls": "88084816",
+      "address": "2218 Gostick Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2218-gostick-street",
+          "member": "act_2218-gostick-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 14.52,
+          "pin": "act_2218-gostick-street",
+          "member": "act_2218-gostick-street",
+          "address": "2218 Gostick Street"
+        }
+      ],
+      "nearest_meters": 14.52,
+      "source_matches": [
+        "act_2218-gostick-street"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 39,
+      "mls": "48796850",
+      "address": "1109 Voight Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1109-voight-st-77009",
+          "member": "pmt_1109-voight-st-77009",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "pmt_1109-voight-st-77009",
+          "member": "pmt_1109-voight-st-77009",
+          "address": "1109 Voight St, Houston, TX 77009"
+        },
+        {
+          "meters": 14.76,
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "address": "1113 Voight Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "pmt_1109-voight-st-77009"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 40,
+      "mls": "50361472",
+      "address": "715 Merrill Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_715-merrill",
+          "member": "act_715-merrill",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 3.08,
+          "pin": "act_715-merrill",
+          "member": "act_715-merrill",
+          "address": "715 Merrill Street"
+        }
+      ],
+      "nearest_meters": 3.08,
+      "source_matches": [
+        "act_715-merrill"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 41,
+      "mls": "63832613",
+      "address": "2015 Harvard Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2015-harvard",
+          "member": "act_2015-harvard",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 28.61,
+      "source_matches": [
+        "act_2015-harvard"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 42,
+      "mls": "20879508",
+      "address": "2015 Harvard Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2015-harvard",
+          "member": "act_2015-harvard",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 28.61,
+      "source_matches": [
+        "act_2015-harvard"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 43,
+      "mls": "65855810",
+      "address": "1119 E 7th 1/2 Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 57.55,
+      "source_matches": [
+        "act_1119-e-7-12"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 44,
+      "mls": "52803325",
+      "address": "2612 Greenleaf Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 145.07,
+      "source_matches": [
+        "act_2612-greenleaf"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 45,
+      "mls": "31729523",
+      "address": "1113 Voight Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.06,
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "address": "1113 Voight Street"
+        },
+        {
+          "meters": 14.77,
+          "pin": "pmt_1109-voight-st-77009",
+          "member": "pmt_1109-voight-st-77009",
+          "address": "1109 Voight St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.06,
+      "source_matches": [
+        "act_1113-voight"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 46,
+      "mls": "32138540",
+      "address": "1113 Voight Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.06,
+          "pin": "act_1113-voight",
+          "member": "act_1113-voight",
+          "address": "1113 Voight Street"
+        },
+        {
+          "meters": 14.77,
+          "pin": "pmt_1109-voight-st-77009",
+          "member": "pmt_1109-voight-st-77009",
+          "address": "1109 Voight St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.06,
+      "source_matches": [
+        "act_1113-voight"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 47,
+      "mls": "21060291",
+      "address": "1002 E 6TH 1/2 Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1002-e-6-12",
+          "member": "act_1002-e-6-12",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_1002-e-6-12",
+          "member": "act_1002-e-6-12",
+          "address": "1002 E 6TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_1002-e-6-12"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 48,
+      "mls": "76962587",
+      "address": "1126 E 7th 1/2 Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1126-e-7-12",
+          "member": "act_1126-e-7-12",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.01,
+          "pin": "act_1126-e-7-12",
+          "member": "act_1126-e-7-12",
+          "address": "1126 E 7th 1/2 Street"
+        }
+      ],
+      "nearest_meters": 0.01,
+      "source_matches": [
+        "act_1126-e-7-12"
+      ]
+    },
+    {
+      "file": "Heightsterminatedsinglelots909.csv",
+      "row": 49,
+      "mls": "10706322",
+      "address": "1126 E 7th 1/2 Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1126-e-7-12",
+          "member": "act_1126-e-7-12",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.01,
+          "pin": "act_1126-e-7-12",
+          "member": "act_1126-e-7-12",
+          "address": "1126 E 7th 1/2 Street"
+        }
+      ],
+      "nearest_meters": 0.01,
+      "source_matches": [
+        "act_1126-e-7-12"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 2,
+      "mls": "84506969",
+      "address": "1208 E 26th Street Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1208-e-26th-street-unit-a",
+          "member": "act_1208-e-26th-street-unit-a",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_1208-e-26th-street-unit-a",
+          "member": "act_1208-e-26th-street-unit-a",
+          "address": "1208 E 26th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": [
+        "act_1208-e-26th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 3,
+      "mls": "97835260",
+      "address": "1032 W 17th Street Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1032-w-17th-street-unit-a",
+          "member": "act_1032-w-17th-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 126.94,
+      "source_matches": [
+        "act_1032-w-17th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 4,
+      "mls": "35483453",
+      "address": "602 Jewett Street Unit#A",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 114.69,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 5,
+      "mls": "17716633",
+      "address": "602 Jewett Street Unit#A",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 114.69,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 6,
+      "mls": "73356574",
+      "address": "602 Jewett Street Unit#A",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 114.69,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 7,
+      "mls": "69154610",
+      "address": "409 Walton Street Unit#B",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_409-walton-st-a-77009",
+          "member": "act_409-walton-street-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 34.89,
+      "source_matches": [
+        "act_409-walton-street-unit-b"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 8,
+      "mls": "88928845",
+      "address": "1430 Nashua Street",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 122.73,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 9,
+      "mls": "6048401",
+      "address": "1430 Nashua Street",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 123.49,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 10,
+      "mls": "62838228",
+      "address": "1430 Nashua Street",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 123.49,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 11,
+      "mls": "91497078",
+      "address": "1520 W 21st St Unit#B",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-w-21st-st-unit-b",
+          "member": "act_1520-w-21st-st-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 22.03,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 22.09,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "act_1520-w-21st-st-unit-b"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 12,
+      "mls": "86649886",
+      "address": "1520 W 21st St Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-w-21st-st-unit-b",
+          "member": "act_1520-w-21st-st-unit-a",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 22.03,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 22.09,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "act_1520-w-21st-st-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 13,
+      "mls": "43902226",
+      "address": "1522 W 21st St",
+      "status": "terminated",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 22.03,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 22.09,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 14,
+      "mls": "85750781",
+      "address": "1520 W 21st St Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-w-21st-st-unit-b",
+          "member": "act_1520-w-21st-st-unit-a",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 30.51,
+      "source_matches": [
+        "act_1520-w-21st-st-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 15,
+      "mls": "41354100",
+      "address": "1122 E 27TH ST Unit#B",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-b",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-b"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 16,
+      "mls": "78755453",
+      "address": "1122 E 27TH ST Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 17,
+      "mls": "90506107",
+      "address": "1122 E 27TH ST Unit#B",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-b",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-b"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 18,
+      "mls": "43339857",
+      "address": "1122 E 27TH ST Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 19,
+      "mls": "15848750",
+      "address": "1227 Prince Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        },
+        {
+          "meters": 5.09,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1227-prince-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 20,
+      "mls": "49753849",
+      "address": "1227 Prince Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        },
+        {
+          "meters": 5.09,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1227-prince-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 21,
+      "mls": "53880556",
+      "address": "1520 W 21st St Unit#B",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-w-21st-st-unit-b",
+          "member": "act_1520-w-21st-st-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 22.03,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 22.09,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "act_1520-w-21st-st-unit-b"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 22,
+      "mls": "23703156",
+      "address": "1227 Prince Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        },
+        {
+          "meters": 5.09,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1227-prince-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 23,
+      "mls": "18510460",
+      "address": "1227 Prince Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        },
+        {
+          "meters": 5.09,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1227-prince-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 24,
+      "mls": "64033189",
+      "address": "1522 W 21st St",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 30.51,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 25,
+      "mls": "54410462",
+      "address": "1229 Prince Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.05,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        },
+        {
+          "meters": 10.12,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        }
+      ],
+      "nearest_meters": 5.05,
+      "source_matches": [
+        "act_1229-prince-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 26,
+      "mls": "14025097",
+      "address": "406 E 28th Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 51.66,
+      "source_matches": [
+        "act_406-e-28th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 27,
+      "mls": "67625116",
+      "address": "835 W 25th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_835-w-25th-street",
+          "member": "act_835-w-25th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.91,
+          "pin": "2131282520",
+          "member": "2131282520",
+          "address": "837 W 25th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 8.91,
+      "source_matches": [
+        "act_835-w-25th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 28,
+      "mls": "82112276",
+      "address": "406 E 28th Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 51.66,
+      "source_matches": [
+        "act_406-e-28th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 29,
+      "mls": "26432594",
+      "address": "517 E 4th Street",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 37.7,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 30,
+      "mls": "59009055",
+      "address": "1434 Alexander Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "address": "1434 Alexander Street"
+        },
+        {
+          "meters": 2.25,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "pmt_1432-alexander-st-77008",
+          "address": "1432 Alexander St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_1434-alexander-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 31,
+      "mls": "71036780",
+      "address": "1434 Alexander Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "act_1434-alexander-street",
+          "address": "1434 Alexander Street"
+        },
+        {
+          "meters": 2.25,
+          "pin": "pmt_1432-alexander-st-77008",
+          "member": "pmt_1432-alexander-st-77008",
+          "address": "1432 Alexander St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_1434-alexander-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 32,
+      "mls": "37211542",
+      "address": "837 W 25th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131282520",
+          "member": "2131282520",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.98,
+          "pin": "2131282520",
+          "member": "2131282520",
+          "address": "837 W 25th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 16.98,
+      "source_matches": [
+        "2131282520"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 33,
+      "mls": "86826256",
+      "address": "833 W 25th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_835-w-25th-street",
+          "member": "act_833-w-25th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.91,
+          "pin": "2131282520",
+          "member": "2131282520",
+          "address": "837 W 25th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 8.91,
+      "source_matches": [
+        "act_833-w-25th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 34,
+      "mls": "63041922",
+      "address": "816 W 17TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_814-w-17th-street",
+          "member": "act_816-w-17th-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.01,
+          "pin": "act_814-w-17th-street",
+          "member": "act_814-w-17th-street",
+          "address": "814 W 17TH Street"
+        },
+        {
+          "meters": 9.99,
+          "pin": "act_814-w-17th-street",
+          "member": "act_816-w-17th-street",
+          "address": "816 W 17TH Street"
+        }
+      ],
+      "nearest_meters": 5.01,
+      "source_matches": [
+        "act_816-w-17th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 35,
+      "mls": "87559883",
+      "address": "1321 Alexander Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 48.08,
+      "source_matches": [
+        "act_1321-alexander-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 36,
+      "mls": "87481424",
+      "address": "1321 Alexander Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 48.08,
+      "source_matches": [
+        "act_1321-alexander-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 37,
+      "mls": "18510291",
+      "address": "227 E 26th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_227-e-26th-street",
+          "member": "act_227-e-26th-street",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 109.1,
+      "source_matches": [
+        "act_227-e-26th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 38,
+      "mls": "87531713",
+      "address": "2320 Lawrence Street",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 81.63,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 39,
+      "mls": "58081787",
+      "address": "1321 Alexander Street",
+      "status": "terminated",
+      "category": "HIDDEN_LEGACY_SOLD",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 48.08,
+      "source_matches": [
+        "act_1321-alexander-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 40,
+      "mls": "76565424",
+      "address": "1516 Dorothy Street Unit#A",
+      "status": "terminated",
+      "category": "NOT_TRACKED",
+      "matches": [],
+      "within25": [],
+      "nearest_meters": 121.5,
+      "source_matches": []
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 41,
+      "mls": "18728554",
+      "address": "1322 Lawrence Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1322-lawrence-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 7.34,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.11,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 7.34,
+      "source_matches": [
+        "act_1322-lawrence-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 42,
+      "mls": "31747262",
+      "address": "1322 Lawrence Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1322-lawrence-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 7.34,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.11,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 7.34,
+      "source_matches": [
+        "act_1322-lawrence-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 43,
+      "mls": "54056393",
+      "address": "827 W 16th Street Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "address": "827 W 16th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": [
+        "act_827-w-16th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 44,
+      "mls": "88837203",
+      "address": "1324 Lawrence Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 7.34,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.11,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 7.34,
+      "source_matches": [
+        "act_1324-lawrence-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 45,
+      "mls": "57328622",
+      "address": "1012 E 26TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "act_1012-e-26th-street",
+          "phase": "insulation"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "act_1012-e-26th-street",
+          "address": "1012 E 26TH Street"
+        },
+        {
+          "meters": 4.35,
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "pmt_1010-e-26th-st-77009",
+          "address": "1010 E 26th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_1012-e-26th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 46,
+      "mls": "96621177",
+      "address": "711 E 26TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131192874",
+          "member": "act_711-e-26th-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 3.96,
+          "pin": "2131192874",
+          "member": "2131192874",
+          "address": "713 E 26th St, Houston, Tx 77009"
+        },
+        {
+          "meters": 8.9,
+          "pin": "2131192874",
+          "member": "act_711-e-26th-street",
+          "address": "711 E 26TH Street"
+        }
+      ],
+      "nearest_meters": 3.96,
+      "source_matches": [
+        "act_711-e-26th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 47,
+      "mls": "19518836",
+      "address": "318 W 21st Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.76,
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "address": "318 W 21st Street"
+        },
+        {
+          "meters": 5.54,
+          "pin": "act_318-w-21st-street",
+          "member": "pmt_318b-w-21st-st-77008",
+          "address": "318 W 21st St B (est), Houston, TX 77008"
+        },
+        {
+          "meters": 10.81,
+          "pin": "2131186599",
+          "member": "2131186599",
+          "address": "314 W 21st St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 2.76,
+      "source_matches": [
+        "act_318-w-21st-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 48,
+      "mls": "87269720",
+      "address": "827 W 16th Street Unit#A",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.02,
+          "pin": "act_827-w-16th-street-unit-a",
+          "member": "act_827-w-16th-street-unit-a",
+          "address": "827 W 16th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.02,
+      "source_matches": [
+        "act_827-w-16th-street-unit-a"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 49,
+      "mls": "83833918",
+      "address": "609 W 27th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-w-27th-street",
+          "member": "act_609-w-27th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.15,
+          "pin": "act_609-w-27th-street",
+          "member": "act_609-w-27th-street",
+          "address": "609 W 27th Street"
+        },
+        {
+          "meters": 8.32,
+          "pin": "act_609-w-27th-street",
+          "member": "pmt_607-w-27th-st-77008",
+          "address": "607 W 27th St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 4.15,
+      "source_matches": [
+        "act_609-w-27th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 50,
+      "mls": "14019792",
+      "address": "607 W 27th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-w-27th-street",
+          "member": "pmt_607-w-27th-st-77008",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 109.15,
+      "source_matches": [
+        "pmt_607-w-27th-st-77008"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 51,
+      "mls": "24673295",
+      "address": "112 E 27th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "act_112-e-27th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.11,
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "pmt_112-e-27th-st-a-77008",
+          "address": "112 E 27th St A, Houston, TX 77008"
+        },
+        {
+          "meters": 16.79,
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "act_112-e-27th-street",
+          "address": "112 E 27th Street"
+        }
+      ],
+      "nearest_meters": 8.11,
+      "source_matches": [
+        "act_112-e-27th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 52,
+      "mls": "13650720",
+      "address": "116 E 23RD Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131144961",
+          "member": "act_116-e-23rd-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "2131144961",
+          "member": "act_116-e-23rd-street",
+          "address": "116 E 23RD Street"
+        },
+        {
+          "meters": 6.24,
+          "pin": "2131144961",
+          "member": "2131144961",
+          "address": "118 E 23rd St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_116-e-23rd-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 53,
+      "mls": "5717921",
+      "address": "116 E 23RD Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131144961",
+          "member": "act_116-e-23rd-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "2131144961",
+          "member": "act_116-e-23rd-street",
+          "address": "116 E 23RD Street"
+        },
+        {
+          "meters": 6.24,
+          "pin": "2131144961",
+          "member": "2131144961",
+          "address": "118 E 23rd St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_116-e-23rd-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 54,
+      "mls": "75214249",
+      "address": "611B E 25th Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.07,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 7.62,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        },
+        {
+          "meters": 16.6,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        }
+      ],
+      "nearest_meters": 1.07,
+      "source_matches": [
+        "act_611-e-25th-street-unit-b"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 55,
+      "mls": "68267187",
+      "address": "407 E 27TH Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_407-e-27th-street",
+          "member": "act_407-e-27th-street",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 9.33,
+          "pin": "act_407-e-27th-street",
+          "member": "pmt_409-e-27th-st-77008",
+          "address": "409 E 27th St, Houston, TX 77008"
+        },
+        {
+          "meters": 13.6,
+          "pin": "act_407-e-27th-street",
+          "member": "act_407-e-27th-street",
+          "address": "407 E 27TH Street"
+        }
+      ],
+      "nearest_meters": 9.33,
+      "source_matches": [
+        "act_407-e-27th-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 56,
+      "mls": "84714321",
+      "address": "710 Waverly Street Unit#D",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_710-waverly-street-unit-d",
+          "member": "act_710-waverly-street-unit-d",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 10.48,
+          "pin": "pmt_710-waverly-st-a-77007",
+          "member": "pmt_710-waverly-st-a-77007",
+          "address": "710 Waverly St A / B / C, Houston, TX 77007"
+        }
+      ],
+      "nearest_meters": 10.48,
+      "source_matches": [
+        "act_710-waverly-street-unit-d"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 57,
+      "mls": "44460494",
+      "address": "335 Harvard Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        },
+        {
+          "meters": 18.41,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_335-harvard-street"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 58,
+      "mls": "34671343",
+      "address": "312 w 9th St",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_310-w-9th-st-77007",
+          "member": "act_312-w-9th-st",
+          "phase": "interior"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 62.65,
+      "source_matches": [
+        "act_312-w-9th-st"
+      ]
+    },
+    {
+      "file": "heightsterminatedsplitlots909.csv",
+      "row": 59,
+      "mls": "38558168",
+      "address": "335 Harvard Street",
+      "status": "terminated",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        },
+        {
+          "meters": 18.41,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_335-harvard-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 2,
+      "mls": "17612330",
+      "address": "845-A West 23rd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_845-w-23rd-st-a-77008",
+          "member": "pmt_845-w-23rd-st-a-77008",
+          "phase": "foundation"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.0,
+          "pin": "act_845-w-23",
+          "member": "act_845-w-23",
+          "address": "845 West 23rd Street"
+        },
+        {
+          "meters": 11.28,
+          "pin": "pmt_845-w-23rd-st-a-77008",
+          "member": "pmt_845-w-23rd-st-a-77008",
+          "address": "845 W 23rd St A, Houston, TX 77008"
+        },
+        {
+          "meters": 11.28,
+          "pin": "pmt_845-w-23rd-st-b-77008",
+          "member": "pmt_845-w-23rd-st-b-77008",
+          "address": "845 W 23rd St B, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 2.0,
+      "source_matches": [
+        "pmt_845-w-23rd-st-a-77008"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 3,
+      "mls": "31557430",
+      "address": "615 Wendel Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_615-wendel-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 4,
+      "mls": "6296220",
+      "address": "613 Wendel Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.43,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        },
+        {
+          "meters": 21.61,
+          "pin": "act_615-wendel-street",
+          "member": "act_615-wendel-street",
+          "address": "615 Wendel Street"
+        }
+      ],
+      "nearest_meters": 16.43,
+      "source_matches": [
+        "act_613-wendel"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 5,
+      "mls": "72762085",
+      "address": "1002 E 25th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1002-e-25th-street",
+          "member": "act_1002-e-25th-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 15.0,
+          "pin": "act_1002-e-25th-street",
+          "member": "act_1002-e-25th-street",
+          "address": "1002 E 25th Street"
+        }
+      ],
+      "nearest_meters": 15.0,
+      "source_matches": [
+        "act_1002-e-25th-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 6,
+      "mls": "32496070",
+      "address": "902 E 25TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_902-e-25",
+          "member": "act_902-e-25",
+          "address": "902 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_902-e-25"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 7,
+      "mls": "94349442",
+      "address": "830 E 27th Street Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_830-e-27",
+          "member": "act_830-e-27",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 20.34,
+          "pin": "pmt_826-e-27th-st-77009",
+          "member": "pmt_826-e-27th-st-77009",
+          "address": "826 E 27th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 20.34,
+      "source_matches": [
+        "act_830-e-27"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 8,
+      "mls": "35798306",
+      "address": "920 E 25TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_920-e-25",
+          "member": "act_920-e-25",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.12,
+          "pin": "act_920-e-25",
+          "member": "act_920-e-25",
+          "address": "920 E 25TH Street"
+        }
+      ],
+      "nearest_meters": 2.12,
+      "source_matches": [
+        "act_920-e-25"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 9,
+      "mls": "90552057",
+      "address": "122 E 4th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        },
+        {
+          "meters": 18.47,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_122-e-4"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 10,
+      "mls": "46031576",
+      "address": "834 WAVERLY Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_834-waverly-street",
+          "member": "act_834-waverly-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 18.45,
+          "pin": "2131044801",
+          "member": "2131044801",
+          "address": "838 Waverly St, Houston, Tx 77007"
+        }
+      ],
+      "nearest_meters": 18.45,
+      "source_matches": [
+        "act_834-waverly-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 11,
+      "mls": "5383346",
+      "address": "2011 Singleton Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131129832",
+          "member": "2131129832",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 10.83,
+          "pin": "2131129832",
+          "member": "2131129832",
+          "address": "2011 Singleton St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 10.83,
+      "source_matches": [
+        "2131129832"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 12,
+      "mls": "22973800",
+      "address": "1502 W 21st Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.54,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 12.83,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 12.95,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 4.54,
+      "source_matches": [
+        "act_1502-w-21"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 13,
+      "mls": "6584972",
+      "address": "705 Walton Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_705-walton-street",
+          "member": "act_705-walton-street",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 39.58,
+      "source_matches": [
+        "act_705-walton-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 14,
+      "mls": "54037481",
+      "address": "3115 Beauchamp Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_3115-beauchamp",
+          "member": "act_3115-beauchamp",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 66.99,
+      "source_matches": [
+        "act_3115-beauchamp"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 15,
+      "mls": "97695610",
+      "address": "830 WAVERLY Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_830-waverly-street",
+          "member": "act_830-waverly-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 21.0,
+          "pin": "2131044801",
+          "member": "2131044801",
+          "address": "838 Waverly St, Houston, Tx 77007"
+        }
+      ],
+      "nearest_meters": 21.0,
+      "source_matches": [
+        "act_830-waverly-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 16,
+      "mls": "87208794",
+      "address": "2603 JULIAN Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2603-julian",
+          "member": "act_2603-julian",
+          "phase": "mep_roughs"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.04,
+          "pin": "act_2603-julian",
+          "member": "act_2603-julian",
+          "address": "2603 JULIAN Street"
+        }
+      ],
+      "nearest_meters": 2.04,
+      "source_matches": [
+        "act_2603-julian"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 17,
+      "mls": "64823156",
+      "address": "1138 Fugate Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1138-fugate-st-77009",
+          "member": "pmt_1138-fugate-st-77009",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 17.19,
+          "pin": "pmt_1138-fugate-st-77009",
+          "member": "pmt_1138-fugate-st-77009",
+          "address": "1138 Fugate St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 17.19,
+      "source_matches": [
+        "pmt_1138-fugate-st-77009"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 18,
+      "mls": "70087101",
+      "address": "603 E 23rd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_603-e-23",
+          "member": "act_603-e-23",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.75,
+          "pin": "act_603-e-23",
+          "member": "act_603-e-23",
+          "address": "603 E 23rd Street"
+        }
+      ],
+      "nearest_meters": 1.75,
+      "source_matches": [
+        "act_603-e-23"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 19,
+      "mls": "89411837",
+      "address": "623 E 13th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_623-e-13",
+          "member": "act_623-e-13",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_623-e-13",
+          "member": "act_623-e-13",
+          "address": "623 E 13th Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_623-e-13"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 20,
+      "mls": "90107924",
+      "address": "614 Ridge Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_614-ridge-street",
+          "member": "act_614-ridge-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 23.87,
+          "pin": "act_613-wendel",
+          "member": "act_613-wendel",
+          "address": "613 Wendel Street"
+        }
+      ],
+      "nearest_meters": 23.87,
+      "source_matches": [
+        "act_614-ridge-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 21,
+      "mls": "26389093",
+      "address": "1111 E 27th Street",
+      "status": "active",
+      "category": "CONFLICTING_NEARBY_IDENTITY",
+      "matches": [],
+      "within25": [
+        {
+          "meters": 12.27,
+          "pin": "2131242651",
+          "member": "2131242651",
+          "address": "1107 E 27th St, Houston, Tx 77009"
+        }
+      ],
+      "nearest_meters": 12.27,
+      "source_matches": []
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 22,
+      "mls": "87300082",
+      "address": "2218 Gostick Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2218-gostick-street",
+          "member": "act_2218-gostick-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 14.52,
+          "pin": "act_2218-gostick-street",
+          "member": "act_2218-gostick-street",
+          "address": "2218 Gostick Street"
+        }
+      ],
+      "nearest_meters": 14.52,
+      "source_matches": [
+        "act_2218-gostick-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 23,
+      "mls": "53672595",
+      "address": "609 E 25th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.07,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        },
+        {
+          "meters": 15.6,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 24.26,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        }
+      ],
+      "nearest_meters": 0.07,
+      "source_matches": [
+        "act_609-e-25"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 24,
+      "mls": "29120139",
+      "address": "212 E 24th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_212-e-24",
+          "member": "act_212-e-24",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 18.11,
+          "pin": "2131437247",
+          "member": "2131437247",
+          "address": "205 E 24th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 18.11,
+      "source_matches": [
+        "act_212-e-24"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 25,
+      "mls": "56747960",
+      "address": "906 Bayland Avenue",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_906-bayland-ave-77009",
+          "member": "pmt_906-bayland-ave-77009",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "pmt_906-bayland-ave-77009",
+          "member": "pmt_906-bayland-ave-77009",
+          "address": "906 Bayland Ave, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "pmt_906-bayland-ave-77009"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 26,
+      "mls": "88557637",
+      "address": "715 Merrill Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_715-merrill",
+          "member": "act_715-merrill",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 3.08,
+          "pin": "act_715-merrill",
+          "member": "act_715-merrill",
+          "address": "715 Merrill Street"
+        }
+      ],
+      "nearest_meters": 3.08,
+      "source_matches": [
+        "act_715-merrill"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 27,
+      "mls": "7670973",
+      "address": "2015 Harvard Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2015-harvard",
+          "member": "act_2015-harvard",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 28.61,
+      "source_matches": [
+        "act_2015-harvard"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 28,
+      "mls": "31444523",
+      "address": "410 Merrill Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131421176",
+          "member": "2131421176",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131421176",
+          "member": "2131421176",
+          "address": "410 Merrill St, Houston, Tx 77009"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "2131421176"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 29,
+      "mls": "70723638",
+      "address": "2924 Watson Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2924-watson-street",
+          "member": "act_2924-watson-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 20.22,
+          "pin": "pmt_728-euclid-st-77009",
+          "member": "pmt_728-euclid-st-77009",
+          "address": "728 Euclid St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 20.22,
+      "source_matches": [
+        "act_2924-watson-street"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 30,
+      "mls": "5069786",
+      "address": "735 E 8TH 1/2 Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_735-e-8-12",
+          "member": "act_735-e-8-12",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.95,
+          "pin": "act_731-e-8-12",
+          "member": "act_731-e-8-12",
+          "address": "731 E 8TH 1/2 Street"
+        },
+        {
+          "meters": 18.54,
+          "pin": "act_735-e-8-12",
+          "member": "act_735-e-8-12",
+          "address": "735 E 8TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 1.95,
+      "source_matches": [
+        "act_735-e-8-12"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 31,
+      "mls": "40836939",
+      "address": "731 E 8TH 1/2 Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_731-e-8-12",
+          "member": "act_731-e-8-12",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.95,
+          "pin": "act_731-e-8-12",
+          "member": "act_731-e-8-12",
+          "address": "731 E 8TH 1/2 Street"
+        },
+        {
+          "meters": 18.54,
+          "pin": "act_735-e-8-12",
+          "member": "act_735-e-8-12",
+          "address": "735 E 8TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 1.95,
+      "source_matches": [
+        "act_731-e-8-12"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 32,
+      "mls": "89221155",
+      "address": "248 W 22nd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_248-w-22",
+          "member": "act_248-w-22",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.73,
+          "pin": "act_248-w-22",
+          "member": "act_248-w-22",
+          "address": "248 W 22nd Street"
+        }
+      ],
+      "nearest_meters": 0.73,
+      "source_matches": [
+        "act_248-w-22"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 33,
+      "mls": "9001753",
+      "address": "2434 White Oak Drive",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2434-white-oak",
+          "member": "act_2434-white-oak",
+          "phase": "framing"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 22.39,
+          "pin": "act_2434-white-oak",
+          "member": "act_2434-white-oak",
+          "address": "2434 White Oak Drive"
+        },
+        {
+          "meters": 23.11,
+          "pin": "act_2436-white-oak",
+          "member": "act_2436-white-oak",
+          "address": "2436 White Oak"
+        }
+      ],
+      "nearest_meters": 22.39,
+      "source_matches": [
+        "act_2434-white-oak"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 34,
+      "mls": "57009282",
+      "address": "1140 Waverly Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1140-waverly",
+          "member": "act_1140-waverly",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.28,
+          "pin": "act_1140-waverly",
+          "member": "act_1140-waverly",
+          "address": "1140 Waverly Street"
+        }
+      ],
+      "nearest_meters": 2.28,
+      "source_matches": [
+        "act_1140-waverly"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 35,
+      "mls": "68235642",
+      "address": "2436 White Oak",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_2436-white-oak",
+          "member": "act_2436-white-oak",
+          "phase": "framing"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 9.94,
+          "pin": "act_2436-white-oak",
+          "member": "act_2436-white-oak",
+          "address": "2436 White Oak"
+        },
+        {
+          "meters": 16.69,
+          "pin": "act_2434-white-oak",
+          "member": "act_2434-white-oak",
+          "address": "2434 White Oak Drive"
+        }
+      ],
+      "nearest_meters": 9.94,
+      "source_matches": [
+        "act_2436-white-oak"
+      ]
+    },
+    {
+      "file": "HeightsActiveLast365dayssinglelots.csv",
+      "row": 36,
+      "mls": "93562410",
+      "address": "1002 E 6TH 1/2 Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1002-e-6-12",
+          "member": "act_1002-e-6-12",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.04,
+          "pin": "act_1002-e-6-12",
+          "member": "act_1002-e-6-12",
+          "address": "1002 E 6TH 1/2 Street"
+        }
+      ],
+      "nearest_meters": 0.04,
+      "source_matches": [
+        "act_1002-e-6-12"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 2,
+      "mls": "64036585",
+      "address": "1303 Cordell Street Unit#B",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1303-cordell-street-unit-b",
+          "member": "act_1303-cordell-street-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 86.37,
+      "source_matches": [
+        "act_1303-cordell-street-unit-b"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 3,
+      "mls": "7485788",
+      "address": "1032 W 17th Street Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1032-w-17th-street-unit-a",
+          "member": "act_1032-w-17th-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 126.94,
+      "source_matches": [
+        "act_1032-w-17th-street-unit-a"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 4,
+      "mls": "54747421",
+      "address": "409 Walton Street Unit#B",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_409-walton-st-a-77009",
+          "member": "act_409-walton-street-unit-b",
+          "phase": "complete"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 34.89,
+      "source_matches": [
+        "act_409-walton-street-unit-b"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 5,
+      "mls": "71690573",
+      "address": "1122 E 27TH ST Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1122-e-27th-st-unit-b",
+          "member": "act_1122-e-27th-st-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 35.83,
+      "source_matches": [
+        "act_1122-e-27th-st-unit-a"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 6,
+      "mls": "95958213",
+      "address": "1520 W 21st St Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1520-w-21st-st-unit-b",
+          "member": "act_1520-w-21st-st-unit-a",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 5.19,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 22.03,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 22.09,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        }
+      ],
+      "nearest_meters": 5.19,
+      "source_matches": [
+        "act_1520-w-21st-st-unit-a"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 7,
+      "mls": "57925491",
+      "address": "1218 Prince Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1218-prince-street",
+          "member": "act_1218-prince-street",
+          "phase": "exterior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1218-prince-street",
+          "member": "act_1218-prince-street",
+          "address": "1218 Prince Street"
+        },
+        {
+          "meters": 9.48,
+          "pin": "pmt_1220-prince-st-77008",
+          "member": "pmt_1220-prince-st-77008",
+          "address": "1220 Prince St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1218-prince-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 8,
+      "mls": "7364673",
+      "address": "741 W 21st Street Unit#A",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_741-w-21st-street-unit-a",
+          "member": "act_741-w-21st-street-unit-a",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.21,
+          "pin": "2131042481",
+          "member": "2131042481",
+          "address": "741 W 21st St, Houston, Tx 77008"
+        },
+        {
+          "meters": 17.71,
+          "pin": "pmt_737-w-21st-st-c-77008",
+          "member": "pmt_737-w-21st-st-c-77008",
+          "address": "737 W 21st St C, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 1.21,
+      "source_matches": [
+        "act_741-w-21st-street-unit-a"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 9,
+      "mls": "22766797",
+      "address": "1227 Prince Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.03,
+          "pin": "act_1229-prince-street",
+          "member": "act_1227-prince-street",
+          "address": "1227 Prince Street"
+        },
+        {
+          "meters": 5.09,
+          "pin": "act_1229-prince-street",
+          "member": "act_1229-prince-street",
+          "address": "1229 Prince Street"
+        }
+      ],
+      "nearest_meters": 0.03,
+      "source_matches": [
+        "act_1227-prince-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 10,
+      "mls": "29146166",
+      "address": "1120 E 26th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131318242",
+          "member": "2131318242",
+          "phase": "interior"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 41.72,
+      "source_matches": [
+        "2131318242"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 11,
+      "mls": "87747647",
+      "address": "835 W 25th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_835-w-25th-street",
+          "member": "act_835-w-25th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.91,
+          "pin": "2131282520",
+          "member": "2131282520",
+          "address": "837 W 25th St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 8.91,
+      "source_matches": [
+        "act_835-w-25th-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 12,
+      "mls": "4182331",
+      "address": "805 W 22nd Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_805-w-22nd-street",
+          "member": "act_805-w-22nd-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.09,
+          "pin": "act_805-w-22nd-street",
+          "member": "act_805-w-22nd-street",
+          "address": "805 W 22nd Street"
+        },
+        {
+          "meters": 16.46,
+          "pin": "act_805-w-22nd-street",
+          "member": "pmt_807-w-22nd-st-77008",
+          "address": "807 W 22nd St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 16.09,
+      "source_matches": [
+        "act_805-w-22nd-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 13,
+      "mls": "89794015",
+      "address": "1122 Robbie Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1124-robbie-st-77009",
+          "member": "act_1122-robbie-street",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 16.47,
+          "pin": "pmt_1124-robbie-st-77009",
+          "member": "pmt_1124-robbie-st-77009",
+          "address": "1124 Robbie St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 16.47,
+      "source_matches": [
+        "act_1122-robbie-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 14,
+      "mls": "13912427",
+      "address": "1322 Lawrence Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1322-lawrence-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 7.34,
+          "pin": "act_1322-lawrence-street",
+          "member": "act_1324-lawrence-street",
+          "address": "1324 Lawrence Street"
+        },
+        {
+          "meters": 19.11,
+          "pin": "act_1326-lawrence-street",
+          "member": "act_1326-lawrence-street",
+          "address": "1326 Lawrence Street"
+        }
+      ],
+      "nearest_meters": 7.34,
+      "source_matches": [
+        "act_1322-lawrence-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 15,
+      "mls": "54722254",
+      "address": "1012 E 26TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "act_1012-e-26th-street",
+          "phase": "insulation"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "act_1012-e-26th-street",
+          "address": "1012 E 26TH Street"
+        },
+        {
+          "meters": 4.35,
+          "pin": "pmt_1010-e-26th-st-77009",
+          "member": "pmt_1010-e-26th-st-77009",
+          "address": "1010 E 26th St, Houston, TX 77009"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_1012-e-26th-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 16,
+      "mls": "36627624",
+      "address": "711 E 26TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "2131192874",
+          "member": "act_711-e-26th-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 3.96,
+          "pin": "2131192874",
+          "member": "2131192874",
+          "address": "713 E 26th St, Houston, Tx 77009"
+        },
+        {
+          "meters": 8.9,
+          "pin": "2131192874",
+          "member": "act_711-e-26th-street",
+          "address": "711 E 26TH Street"
+        }
+      ],
+      "nearest_meters": 3.96,
+      "source_matches": [
+        "act_711-e-26th-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 17,
+      "mls": "69573145",
+      "address": "318 W 21st Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "phase": "interior"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 2.76,
+          "pin": "act_318-w-21st-street",
+          "member": "act_318-w-21st-street",
+          "address": "318 W 21st Street"
+        },
+        {
+          "meters": 5.54,
+          "pin": "act_318-w-21st-street",
+          "member": "pmt_318b-w-21st-st-77008",
+          "address": "318 W 21st St B (est), Houston, TX 77008"
+        },
+        {
+          "meters": 10.81,
+          "pin": "2131186599",
+          "member": "2131186599",
+          "address": "314 W 21st St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 2.76,
+      "source_matches": [
+        "act_318-w-21st-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 18,
+      "mls": "98658584",
+      "address": "609 W 27th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_609-w-27th-street",
+          "member": "act_609-w-27th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 4.15,
+          "pin": "act_609-w-27th-street",
+          "member": "act_609-w-27th-street",
+          "address": "609 W 27th Street"
+        },
+        {
+          "meters": 8.32,
+          "pin": "act_609-w-27th-street",
+          "member": "pmt_607-w-27th-st-77008",
+          "address": "607 W 27th St, Houston, TX 77008"
+        }
+      ],
+      "nearest_meters": 4.15,
+      "source_matches": [
+        "act_609-w-27th-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 19,
+      "mls": "34333707",
+      "address": "112 E 27th Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "act_112-e-27th-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 8.11,
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "pmt_112-e-27th-st-a-77008",
+          "address": "112 E 27th St A, Houston, TX 77008"
+        },
+        {
+          "meters": 16.79,
+          "pin": "pmt_112-e-27th-st-a-77008",
+          "member": "act_112-e-27th-street",
+          "address": "112 E 27th Street"
+        }
+      ],
+      "nearest_meters": 8.11,
+      "source_matches": [
+        "act_112-e-27th-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 20,
+      "mls": "57910089",
+      "address": "611 E 25th Street Unit#B",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 1.07,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-b",
+          "address": "611 E 25th Street Unit#B"
+        },
+        {
+          "meters": 7.62,
+          "pin": "act_611-e-25th-street-unit-a",
+          "member": "act_611-e-25th-street-unit-a",
+          "address": "611 E 25th Street Unit#A"
+        },
+        {
+          "meters": 16.6,
+          "pin": "act_609-e-25",
+          "member": "act_609-e-25",
+          "address": "609 E 25th Street"
+        }
+      ],
+      "nearest_meters": 1.07,
+      "source_matches": [
+        "act_611-e-25th-street-unit-b"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 21,
+      "mls": "10210884",
+      "address": "407 E 27TH Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_407-e-27th-street",
+          "member": "act_407-e-27th-street",
+          "phase": "mep_finals"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 9.33,
+          "pin": "act_407-e-27th-street",
+          "member": "pmt_409-e-27th-st-77008",
+          "address": "409 E 27th St, Houston, TX 77008"
+        },
+        {
+          "meters": 13.6,
+          "pin": "act_407-e-27th-street",
+          "member": "act_407-e-27th-street",
+          "address": "407 E 27TH Street"
+        }
+      ],
+      "nearest_meters": 9.33,
+      "source_matches": [
+        "act_407-e-27th-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 22,
+      "mls": "32352560",
+      "address": "710 Waverly Street Unit#D",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_710-waverly-street-unit-d",
+          "member": "act_710-waverly-street-unit-d",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 10.48,
+          "pin": "pmt_710-waverly-st-a-77007",
+          "member": "pmt_710-waverly-st-a-77007",
+          "address": "710 Waverly St A / B / C, Houston, TX 77007"
+        }
+      ],
+      "nearest_meters": 10.48,
+      "source_matches": [
+        "act_710-waverly-street-unit-d"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 23,
+      "mls": "65070979",
+      "address": "335 Harvard Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "phase": "complete"
+        }
+      ],
+      "within25": [
+        {
+          "meters": 0.05,
+          "pin": "act_335-harvard-street",
+          "member": "act_335-harvard-street",
+          "address": "335 Harvard Street"
+        },
+        {
+          "meters": 18.41,
+          "pin": "act_122-e-4",
+          "member": "act_122-e-4",
+          "address": "122 E 4th Street"
+        }
+      ],
+      "nearest_meters": 0.05,
+      "source_matches": [
+        "act_335-harvard-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 24,
+      "mls": "14206939",
+      "address": "1504 W 21st Street",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "phase": null
+        }
+      ],
+      "within25": [
+        {
+          "meters": 6.77,
+          "pin": "act_1502-w-21",
+          "member": "act_1504-w-21st-street",
+          "address": "1504 W 21st Street"
+        },
+        {
+          "meters": 7.11,
+          "pin": "act_1502-w-21",
+          "member": "act_1502-w-21",
+          "address": "1502 W 21st Street"
+        },
+        {
+          "meters": 12.37,
+          "pin": "2131331183",
+          "member": "2131331183",
+          "address": "1506 W 21st St, Houston, Tx 77008"
+        }
+      ],
+      "nearest_meters": 6.77,
+      "source_matches": [
+        "act_1504-w-21st-street"
+      ]
+    },
+    {
+      "file": "HeightsActivelast365dayssplitlots.csv",
+      "row": 25,
+      "mls": "16999317",
+      "address": "312 w 9th St",
+      "status": "active",
+      "category": "LINKED",
+      "matches": [
+        {
+          "pin": "pmt_310-w-9th-st-77007",
+          "member": "act_312-w-9th-st",
+          "phase": "interior"
+        }
+      ],
+      "within25": [],
+      "nearest_meters": 62.65,
+      "source_matches": [
+        "act_312-w-9th-st"
+      ]
+    }
+  ],
+  "old_normalizer": "def address_key(address):\n    \"\"\"Keep unit/fraction identity; canonicalize directional placement on numbered streets.\"\"\"\n    s = str(address).lower().split(',')[0]\n    s = re.sub(r'\\b(?:houston|tx|texas|77\\d{3})\\b.*', '', s)\n    s = re.sub(r'\\b(?:unit|apt)\\s*#?\\s*|#', ' ', s)\n    s = re.sub(r'(?<=\\d)-?([a-f])\\b', r' \\1', s)\n    s = re.sub(r'\\b(\\d+)\\s+(st|nd|rd|th)\\b', r'\\1\\2', s)\n    s = re.sub(r'[^a-z0-9/ ]', ' ', s)\n    aliases = dict(street='st',avenue='ave',lane='ln',drive='dr',road='rd',court='ct',place='pl',boulevard='blvd',east='e',west='w',north='n',south='s')\n    w = [aliases.get(x,x) for x in s.split()]\n    if len(w)>2 and w[0].isdigit() and w[1] in 'abcdef' and len(w[1])==1 and w[1] not in ('e','w'):\n        w.append(w.pop(1))\n    if len(w)>3 and w[1] in ('e','w','n','s') and re.match(r'^\\d',w[2]):\n        w.append(w.pop(1))\n    w = [x for i,x in enumerate(w) if not (i and x == w[i-1] and x in ('st','ave','ln','dr','rd','ct','pl','blvd'))]\n    return ' '.join(w)\n",
+  "old_join": "lookup[address_key(member['a'])].append((pin, member))\nmatches = lookup[rec['address_key']]"
+}
