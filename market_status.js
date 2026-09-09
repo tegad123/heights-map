@@ -57,7 +57,7 @@ const marketOriginalMatch=matchSel;
 matchSel=function(tags,key,id){
   if(!key.startsWith('MS:'))return marketOriginalMatch(tags,key,id);
   const [,status,product,phase]=key.split(':');
-  return marketRows().some(r=>r.pin===id&&r.status===status&&(product==='all'||r.product===product)&&(!phase||r.phase===phase));
+  return marketRows().some(r=>r.pin===id&&r.status===status&&(product==='all'||(phase?typeKeyOf(r.pin):r.product)===product)&&(!phase||r.phase===phase));
 };
 function marketButtons(rows,phase,scopeProduct){
   let h='';
@@ -85,7 +85,7 @@ function renderMarketLegend(){
   el.insertAdjacentHTML('afterbegin',h+'</div>');
   el.querySelectorAll('.leafrow[data-sel$="|complete"]').forEach(leaf=>{
     const ty=leaf.dataset.sel.split('|')[0],product=TY2K[ty];
-    leaf.insertAdjacentHTML('afterend','<div data-market-complete>'+marketButtons(rows.filter(r=>r.phase==='complete'&&r.product===product),'complete',product)+'</div>');
+    leaf.insertAdjacentHTML('afterend','<div data-market-complete>'+marketButtons(rows.filter(r=>r.phase==='complete'&&typeKeyOf(r.pin)===product),'complete',product)+'</div>');
   });
   el.querySelectorAll('[data-market-filter]').forEach(button=>button.addEventListener('click',()=>{const k=button.dataset.marketFilter;activeF.has(k)?activeF.delete(k):activeF.add(k);renderLegend();refresh();}));
 }

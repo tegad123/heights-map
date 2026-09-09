@@ -75,6 +75,7 @@ def run(live=None):
             current=page.evaluate('''()=>({deeds:deedCount(),sold:typeof SOLD_DATA==='undefined'?null:SOLD_DATA.length,forecast:comingOnline(12).count,snapshot:marketSnapshot(),columns:phaseBreakdown(),categories:{custom:categoryCount('custom'),sold_off_market:categoryCount('sold_off_market')},rows:DATA.map(r=>({id:r.id,phase:homePhase(r.id),eta:inspectionEta(r),weight:UW(r.id)})),complete:marketRows().filter(r=>r.phase==='complete').reduce((o,r)=>(o[r.status]=(o[r.status]||0)+1,o),{}),marketCounts:marketRows().reduce((o,r)=>(o[r.status]=(o[r.status]||0)+1,o),{})})''')
             assert page.locator('[data-market-axis]').count()==1
             assert page.locator('[data-grp="mkt"]').count()==0
+            assert page.evaluate('''()=>[...document.querySelectorAll('.leafrow[data-sel$="|complete"]')].every(leaf=>Number(leaf.querySelector('.ct2').textContent)===[...leaf.nextElementSibling.querySelectorAll('.ct2')].reduce((n,e)=>n+Number(e.textContent),0))'''), 'Complete subcounts disagree with construction product group'
             # Invoke every popup and every filter; compare each filter with its evidence rows.
             assert page.evaluate('''()=>DATA.every(r=>popupHTML(r).includes('market-facts'))''')
             assert page.evaluate('''()=>Object.keys(MARKET_LABELS).every(s=>DATA.every(p=>matchSel(pt(p.id).tags,'MS:'+s+':all',p.id)===marketRows().some(r=>r.pin===p.id&&r.status===s)))''')
