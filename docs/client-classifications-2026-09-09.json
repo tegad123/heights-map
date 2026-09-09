@@ -1,0 +1,1266 @@
+{
+  "before": {
+    "supply": 144,
+    "columns": {
+      "foundation": 46,
+      "framing": 11,
+      "exterior": 29,
+      "mep_roughs": 7,
+      "insulation": 13,
+      "interior": 55,
+      "mep_finals": 20,
+      "complete": 52
+    },
+    "uc": 233,
+    "deed": 139,
+    "sold": 767
+  },
+  "after": {
+    "supply": 131,
+    "columns": {
+      "foundation": 37,
+      "framing": 10,
+      "exterior": 28,
+      "mep_roughs": 5,
+      "insulation": 12,
+      "interior": 53,
+      "mep_finals": 19,
+      "complete": 49
+    },
+    "uc": 213,
+    "deed": 139,
+    "sold": 767,
+    "categories": {
+      "custom": 19,
+      "sold_off_market": 1
+    }
+  },
+  "table": [
+    {
+      "id": "pmt_1032-key-st-77009",
+      "address": "1032 Key St, Houston, TX 77009",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": null,
+        "anchorDate": null,
+        "target": null,
+        "months": null,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "foundation",
+        "missingAnchor": true
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_1225-ashland-st-a-77008",
+      "address": "1225 Ashland St A, Houston, TX 77008",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": null,
+        "anchorDate": null,
+        "target": null,
+        "months": null,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "foundation",
+        "missingAnchor": true
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_1336-herkimer-st-77008",
+      "address": "1336 Herkimer St, Houston, TX 77008",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": null,
+        "anchorDate": null,
+        "target": null,
+        "months": null,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "foundation",
+        "missingAnchor": true
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_1434-herkimer-st-77008",
+      "address": "1434 Herkimer St, Houston, TX 77008",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": null,
+        "anchorDate": null,
+        "target": null,
+        "months": null,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "foundation",
+        "missingAnchor": true
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "permit",
+        "needs_clarification"
+      ]
+    },
+    {
+      "id": "pmt_1132-e-6th-1-2-st-77009",
+      "address": "1132 E 6th 1/2 St, Houston, TX 77009",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": "1031-FDN PM",
+        "anchorDate": "2026-08-04",
+        "target": "2027-05-29",
+        "months": 8.5,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 22,
+        "baseDays": 240,
+        "remainingDays": 262,
+        "nextDays": 0,
+        "nextPhase": "framing",
+        "duration": 14,
+        "elapsed": 36,
+        "anchorTarget": "2027-04-01",
+        "baseTarget": "2027-05-07",
+        "phase": "foundation",
+        "anchorProject": "25020438"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_625-merrill-st-77009",
+      "address": "625 Merrill St, Houston, TX 77009",
+      "prior_category": "Under Construction / Framing",
+      "new_category": "custom",
+      "phase": "Framing",
+      "eta": {
+        "anchor": "1031-FDN PM",
+        "anchorDate": "2026-08-04",
+        "target": "2027-05-08",
+        "months": 8,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 15,
+        "baseDays": 226,
+        "remainingDays": 241,
+        "nextDays": 0,
+        "nextPhase": "exterior",
+        "duration": 21,
+        "elapsed": 36,
+        "anchorTarget": "2027-03-18",
+        "baseTarget": "2027-04-23",
+        "phase": "framing",
+        "anchorProject": "26026525"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_705-e-13th-st-77008",
+      "address": "705 E 13th St, Houston, TX 77008",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": "1031-FDN AM",
+        "anchorDate": "2026-07-08",
+        "target": "2027-06-25",
+        "months": 9.5,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 49,
+        "baseDays": 240,
+        "remainingDays": 289,
+        "nextDays": 0,
+        "nextPhase": "framing",
+        "duration": 14,
+        "elapsed": 63,
+        "anchorTarget": "2027-03-05",
+        "baseTarget": "2027-05-07",
+        "phase": "foundation",
+        "anchorProject": "26012607"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "active_single"
+      ]
+    },
+    {
+      "id": "pmt_745-e-16th-st-77008",
+      "address": "745 E 16th St, Houston, TX 77008",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": "Ele Grnd Insp",
+        "anchorDate": "2026-08-07",
+        "target": "2027-05-26",
+        "months": 8.5,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 19,
+        "baseDays": 240,
+        "remainingDays": 259,
+        "nextDays": 0,
+        "nextPhase": "framing",
+        "duration": 14,
+        "elapsed": 33,
+        "anchorTarget": "2027-04-04",
+        "baseTarget": "2027-05-07",
+        "phase": "foundation",
+        "anchorProject": "25117489"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_806-peddie-st-77008",
+      "address": "806 Peddie St, Houston, TX 77008",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": "1031-FDN AM",
+        "anchorDate": "2026-08-24",
+        "target": "2027-05-09",
+        "months": 8,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 2,
+        "baseDays": 240,
+        "remainingDays": 242,
+        "nextDays": 0,
+        "nextPhase": "framing",
+        "duration": 14,
+        "elapsed": 16,
+        "anchorTarget": "2027-04-21",
+        "baseTarget": "2027-05-07",
+        "phase": "foundation",
+        "anchorProject": "26007533"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_839-allston-st-77007",
+      "address": "839 Allston St, Houston, TX 77007",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "custom",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": "Piers AM",
+        "anchorDate": "2026-09-03",
+        "target": "2027-05-01",
+        "months": 8,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": 234,
+        "remainingDays": 234,
+        "nextDays": 8,
+        "nextPhase": "framing",
+        "duration": 14,
+        "elapsed": 6,
+        "anchorTarget": "2027-05-01",
+        "baseTarget": "2027-05-01",
+        "phase": "foundation",
+        "anchorProject": "26055391"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_1314-e-28th-st-77009",
+      "address": "1314 E 28th St, Houston, TX 77009",
+      "prior_category": "Under Construction / MEP Roughs",
+      "new_category": "custom",
+      "phase": "MEP Roughs",
+      "eta": {
+        "anchor": "ROUGH IN",
+        "anchorDate": "2026-09-02",
+        "target": "2027-02-26",
+        "months": 5.5,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": 170,
+        "remainingDays": 170,
+        "nextDays": 14,
+        "nextPhase": "insulation",
+        "duration": 21,
+        "elapsed": 7,
+        "anchorTarget": "2027-02-26",
+        "baseTarget": "2027-02-26",
+        "phase": "mep_roughs",
+        "anchorProject": "25118077"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "permit",
+        "needs_clarification"
+      ]
+    },
+    {
+      "id": "pmt_734-e-7th-1-2-st-77007",
+      "address": "734 E 7th 1/2 St, Houston, TX 77007",
+      "prior_category": "Under Construction / Framed / Exterior Close-In",
+      "new_category": "custom",
+      "phase": "Framed / Exterior Close-In",
+      "eta": {
+        "anchor": "Fire Wall",
+        "anchorDate": "2026-08-04",
+        "target": "2027-04-10",
+        "months": 7,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 8,
+        "baseDays": 205,
+        "remainingDays": 213,
+        "nextDays": 0,
+        "nextPhase": "mep_roughs",
+        "duration": 28,
+        "elapsed": 36,
+        "anchorTarget": "2027-02-25",
+        "baseTarget": "2027-04-02",
+        "phase": "exterior",
+        "anchorProject": "26010007"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_918-dorothy-st-77008",
+      "address": "918 Dorothy St, Houston, TX 77008",
+      "prior_category": "Under Construction / Insulation",
+      "new_category": "custom",
+      "phase": "Insulation",
+      "eta": {
+        "anchor": "1035-Frame",
+        "anchorDate": "2026-08-31",
+        "target": "2027-02-03",
+        "months": 5,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": 147,
+        "remainingDays": 147,
+        "nextDays": 12,
+        "nextPhase": "interior",
+        "duration": 21,
+        "elapsed": 9,
+        "anchorTarget": "2027-02-03",
+        "baseTarget": "2027-02-03",
+        "phase": "insulation",
+        "anchorProject": "26012473"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "permit",
+        "needs_clarification"
+      ]
+    },
+    {
+      "id": "pmt_930-waverly-st-77008",
+      "address": "930 Waverly St, Houston, TX 77008",
+      "prior_category": "Under Construction / MEP Roughs",
+      "new_category": "custom",
+      "phase": "MEP Roughs",
+      "eta": {
+        "anchor": "ROUGH IN",
+        "anchorDate": "2026-06-05",
+        "target": "2027-05-19",
+        "months": 8.5,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 75,
+        "baseDays": 177,
+        "remainingDays": 252,
+        "nextDays": 0,
+        "nextPhase": "insulation",
+        "duration": 21,
+        "elapsed": 96,
+        "anchorTarget": "2026-11-29",
+        "baseTarget": "2027-03-05",
+        "phase": "mep_roughs",
+        "anchorProject": "26005892"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_1602-turnpike-rd-77008",
+      "address": "1602 Turnpike Rd, Houston, TX 77008",
+      "prior_category": "Under Construction / Complete",
+      "new_category": "custom",
+      "phase": "Complete",
+      "eta": {
+        "anchor": "All five finals",
+        "anchorDate": "2026-04-08",
+        "target": "2026-04-08",
+        "months": null,
+        "complete": true,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "complete"
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "permit",
+        "needs_clarification"
+      ]
+    },
+    {
+      "id": "pmt_410-columbia-st-77007",
+      "address": "410 Columbia St, Houston, TX 77007",
+      "prior_category": "Under Construction / MEP Finals",
+      "new_category": "custom",
+      "phase": "MEP Finals",
+      "eta": {
+        "anchor": "PLUMBING FINAL",
+        "anchorDate": "2026-08-11",
+        "target": "2026-10-08",
+        "months": 1,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 8,
+        "baseDays": 21,
+        "remainingDays": 29,
+        "nextDays": 0,
+        "nextPhase": "complete",
+        "duration": 21,
+        "elapsed": 29,
+        "anchorTarget": "2026-09-01",
+        "baseTarget": "2026-09-30",
+        "phase": "mep_finals",
+        "anchorProject": "25022162"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_715-e-12th-st-77008",
+      "address": "715 E 12th St, Houston, TX 77008",
+      "prior_category": "Under Construction / Complete",
+      "new_category": "custom",
+      "phase": "Complete",
+      "eta": {
+        "anchor": "All five finals",
+        "anchorDate": "2026-06-26",
+        "target": "2026-06-26",
+        "months": null,
+        "complete": true,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "complete"
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "finishing",
+        "active_single"
+      ]
+    },
+    {
+      "id": "pmt_826-e-27th-st-77009",
+      "address": "826 E 27th St, Houston, TX 77009",
+      "prior_category": "Under Construction / Complete",
+      "new_category": "custom",
+      "phase": "Complete",
+      "eta": {
+        "anchor": "All five finals",
+        "anchorDate": "2026-04-10",
+        "target": "2026-04-10",
+        "months": null,
+        "complete": true,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "complete"
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "2131284475",
+      "address": "1518 Herkimer St, Houston, Tx 77008",
+      "prior_category": "Under Construction / INT.CAB, Tile, ETC",
+      "new_category": "custom",
+      "phase": "INT.CAB, Tile, ETC",
+      "eta": {
+        "anchor": "INSULATION",
+        "anchorDate": "2026-06-29",
+        "target": "2026-11-11",
+        "months": 2,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": 63,
+        "remainingDays": 63,
+        "nextDays": 42,
+        "nextPhase": "mep_finals",
+        "duration": 114,
+        "elapsed": 72,
+        "anchorTarget": "2026-11-11",
+        "baseTarget": "2026-11-11",
+        "phase": "interior",
+        "anchorProject": "26003024"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "deed",
+        "needs_clarification"
+      ]
+    },
+    {
+      "id": "pmt_728-euclid-st-77009",
+      "address": "728 Euclid St, Houston, TX 77009",
+      "prior_category": "Under Construction / INT.CAB, Tile, ETC",
+      "new_category": "sold_off_market",
+      "phase": "INT.CAB, Tile, ETC",
+      "eta": {
+        "anchor": "INSULATION",
+        "anchorDate": "2026-08-07",
+        "target": "2026-12-20",
+        "months": 3.5,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": 102,
+        "remainingDays": 102,
+        "nextDays": 81,
+        "nextPhase": "mep_finals",
+        "duration": 114,
+        "elapsed": 33,
+        "anchorTarget": "2026-12-20",
+        "baseTarget": "2026-12-20",
+        "phase": "interior",
+        "anchorProject": "26006967"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_1019-e-7th-st-77009",
+      "address": "1019 E 7th St, Houston, TX 77009",
+      "prior_category": "Under Construction / Foundation",
+      "new_category": "needs_clarification",
+      "phase": "Foundation",
+      "eta": {
+        "anchor": null,
+        "anchorDate": null,
+        "target": null,
+        "months": null,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": null,
+        "remainingDays": null,
+        "nextDays": null,
+        "nextPhase": null,
+        "phase": "foundation",
+        "missingAnchor": true
+      },
+      "previously_in_supply": false,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_822-nashua-st-77008",
+      "address": "822 Nashua St, Houston, TX 77008",
+      "prior_category": "Under Construction / Framed / Exterior Close-In",
+      "new_category": "needs_clarification",
+      "phase": "Framed / Exterior Close-In",
+      "eta": {
+        "anchor": "WINDSTORM",
+        "anchorDate": "2026-07-22",
+        "target": "2027-04-23",
+        "months": 7.5,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 21,
+        "baseDays": 205,
+        "remainingDays": 226,
+        "nextDays": 0,
+        "nextPhase": "mep_roughs",
+        "duration": 28,
+        "elapsed": 49,
+        "anchorTarget": "2027-02-12",
+        "baseTarget": "2027-04-02",
+        "phase": "exterior",
+        "anchorProject": "25118994"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "permit",
+        "needs_clarification"
+      ]
+    },
+    {
+      "id": "pmt_1109-voight-st-77009",
+      "address": "1109 Voight St, Houston, TX 77009",
+      "prior_category": "Under Construction / MEP Finals",
+      "new_category": "needs_clarification",
+      "phase": "MEP Finals",
+      "eta": {
+        "anchor": "AC FINAL",
+        "anchorDate": "2026-07-29",
+        "target": "2026-10-21",
+        "months": 1.5,
+        "complete": false,
+        "overdue": true,
+        "overdueDays": 21,
+        "baseDays": 21,
+        "remainingDays": 42,
+        "nextDays": 0,
+        "nextPhase": "complete",
+        "duration": 21,
+        "elapsed": 42,
+        "anchorTarget": "2026-08-19",
+        "baseTarget": "2026-09-30",
+        "phase": "mep_finals",
+        "anchorProject": "25069481"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": false,
+      "prior_tags": [
+        "permit"
+      ]
+    },
+    {
+      "id": "pmt_433-w-23rd-st-77008",
+      "address": "433 W 23rd St, Houston, TX 77008",
+      "prior_category": "Under Construction / INT.CAB, Tile, ETC",
+      "new_category": "needs_clarification",
+      "phase": "INT.CAB, Tile, ETC",
+      "eta": {
+        "anchor": "INSULATION",
+        "anchorDate": "2026-07-13",
+        "target": "2026-11-25",
+        "months": 2.5,
+        "complete": false,
+        "overdue": false,
+        "overdueDays": 0,
+        "baseDays": 77,
+        "remainingDays": 77,
+        "nextDays": 56,
+        "nextPhase": "mep_finals",
+        "duration": 114,
+        "elapsed": 58,
+        "anchorTarget": "2026-11-25",
+        "baseTarget": "2026-11-25",
+        "phase": "interior",
+        "anchorProject": "25064988"
+      },
+      "previously_in_supply": true,
+      "already_needs_clarification": true,
+      "prior_tags": [
+        "permit",
+        "needs_clarification"
+      ]
+    }
+  ],
+  "intersection": [
+    {
+      "address": "715 E 12th St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete",
+        "active_single"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_715-e-12th-st-77008",
+      "member": "pmt_715-e-12th-st-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "826 E 27th St, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_826-e-27th-st-77009",
+      "member": "pmt_826-e-27th-st-77009",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1602 Turnpike Rd, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete",
+        "needs_clarification"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1602-turnpike-rd-77008",
+      "member": "pmt_1602-turnpike-rd-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    }
+  ],
+  "residual": [
+    {
+      "address": "118 E 23rd St, Houston, Tx 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "2131144961",
+      "member": "2131144961",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1520 W 21st St Unit#B",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete",
+        "active_split",
+        "listed"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "act_1520-w-21st-st-unit-b",
+      "member": "act_1520-w-21st-st-unit-b",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1623 Blount St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1623-blount-st-77008",
+      "member": "pmt_1623-blount-st-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1343 Nashua St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1343-nashua-st-77008",
+      "member": "pmt_1343-nashua-st-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "2013 Sheldon St B, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_2013-sheldon-st-a-77008",
+      "member": "pmt_2013-sheldon-st-b-77008",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "737 W 21st St C, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_737-w-21st-st-c-77008",
+      "member": "pmt_737-w-21st-st-c-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "737 W 21st St B, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_737-w-21st-st-b-77008",
+      "member": "pmt_737-w-21st-st-b-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "737 W 21st St A, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_737-w-21st-st-a-77008",
+      "member": "pmt_737-w-21st-st-a-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "737 W 21st St D, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_737-w-21st-st-d-77008",
+      "member": "pmt_737-w-21st-st-d-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "729 W 21st St A, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_729-w-21st-st-a-77008",
+      "member": "pmt_729-w-21st-st-a-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "723 W 21st St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_723-w-21st-st-77008",
+      "member": "pmt_723-w-21st-st-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "725 W 21st St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_725-w-21st-st-77008",
+      "member": "pmt_725-w-21st-st-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "729 W 21st St B, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_729-w-21st-st-b-77008",
+      "member": "pmt_729-w-21st-st-b-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1432 Alexander St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1432-alexander-st-77008",
+      "member": "pmt_1432-alexander-st-77008",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "112 E 27th St A, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_112-e-27th-st-a-77008",
+      "member": "pmt_112-e-27th-st-a-77008",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "729 W 21st St C, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_729-w-21st-st-c-77008",
+      "member": "pmt_729-w-21st-st-c-77008",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "2811 Ave, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_2811-ave-77009",
+      "member": "pmt_2811-ave-77009",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1301 Tabor St, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1301-tabor-st-77009",
+      "member": "pmt_1301-tabor-st-77009",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1107 E 24th St, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1107-e-24th-st-77009",
+      "member": "pmt_1107-e-24th-st-77009",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "1109 E 24th St, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_1107-e-24th-st-77009",
+      "member": "pmt_1109-e-24th-st-77009",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "409 Walton St A, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_409-walton-st-a-77009",
+      "member": "pmt_409-walton-st-a-77009",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "931 Merrill St, Houston, TX 77009",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [
+        "complete"
+      ],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "pmt_931-merrill-st-77009",
+      "member": "pmt_931-merrill-st-77009",
+      "phase_scope": "property",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "833 W 25th Street",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "act_835-w-25th-street",
+      "member": "act_833-w-25th-street",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "607 W 27th St, Houston, TX 77008",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "act_609-w-27th-street",
+      "member": "pmt_607-w-27th-st-77008",
+      "phase_scope": "paired project",
+      "historical_sales": [],
+      "in_current_supply": false
+    },
+    {
+      "address": "Unidentified represented home 1 at 122 E 4th Street",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "act_122-e-4",
+      "member": null,
+      "inferred_weight": true
+    },
+    {
+      "address": "Unidentified represented home 1 at 1208 E 26th Street Unit#A",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "act_1208-e-26th-street-unit-a",
+      "member": null,
+      "inferred_weight": true
+    },
+    {
+      "address": "Unidentified represented home 1 at 335 Harvard Street",
+      "MLS": "",
+      "construction_phase": "complete",
+      "current_market_status": "no market record",
+      "prior_stored_tag": [],
+      "conflict_class": [
+        "D"
+      ],
+      "pin": "act_335-harvard-street",
+      "member": null,
+      "inferred_weight": true
+    }
+  ],
+  "DATA_hashes": {
+    "index.html": "95d0052836052ab830ba2286dc65c945b85228131bd3b036f1ae9f95c95c2f92",
+    "montrose.html": "d2efd5e89c68cb8429073719169c69c48eed6f128ddc1f158418f41eac03a876",
+    "riveroaks.html": "1411a14b066b0876c2e05a9f9ec1af6620eda6d84ac712b67a3b4911e735de6d",
+    "springbranch.html": "4b8ab12ef5e9f18dd747422bf88d7a997bb1de4ffc750a32687ca9b12e3239a7",
+    "springvalley.html": "06560f4972250d7a6547a0ed8d4c7484e6e57f26b50c5b4c33e194db323a4c92",
+    "timbergrove.html": "359ad7c55d98492a5b1ee39b35ca675243891e97e99d3330734798eebf8f82ae",
+    "westu.html": "09ea81339a245846be64a741af4f001ed70b830c9d8204e40a02095590da719a",
+    "gardenoaksoakforest.html": "46dbcf8d1bd5108c85b905b5199c9addf403c70cd5b0078eb9e6d5eba579dd96"
+  },
+  "all_markets_property_values_unchanged": true
+}

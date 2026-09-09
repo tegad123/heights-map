@@ -30,7 +30,7 @@ def run(args):
                 assert re.findall(rb'<script\b[^>]*>(.*?)</script>',body,re.S)==re.findall(rb'<script\b[^>]*>(.*?)</script>',response.body(),re.S)
             result=p.evaluate('''()=>{
               applyInspectionPromotions();renderLegend();buildOverview();buildTimeline();renderSupplyCard();askContext();
-              return {supply:comingOnline(12).count,supplyIds:comingOnline(12).homes.map(r=>r.id),columns:phaseBreakdown(),uc:ucCount(),deed:deedCount(),sold:typeof SOLD_DATA==='undefined'?null:SOLD_DATA.length,
+              return {categories:{custom:categoryCount('custom'),sold_off_market:categoryCount('sold_off_market')},classifications:typeof CLIENT_CLASSIFICATIONS==='undefined'?[]:Object.entries(CLIENT_CLASSIFICATIONS).flatMap(([category,ids])=>ids.map(id=>({id,category,prior:CLIENT_PRIOR[id],tags:pt(id).tags,classification:pt(id).classification}))),supply:comingOnline(12).count,supplyIds:comingOnline(12).homes.map(r=>r.id),columns:phaseBreakdown(),uc:ucCount(),deed:deedCount(),sold:typeof SOLD_DATA==='undefined'?null:SOLD_DATA.length,
                 rows:DATA.map(r=>({id:r.id,address:r.a,product:prodKeyR(r),phase:homePhase(r.id),weight:UW(r.id),eta:inspectionEta(r),months:monthsLeft(r.id),projects:(r.permits||[]).map(p=>p.proj)}))};
             }''')
             if args.checks:result['checks']=p.evaluate((ROOT/'tests/timeline_cases.js').read_text(),{'heights':name=='index','fixtures':json.loads((ROOT/'fixtures.json').read_text()) if name=='index' else None})
@@ -44,6 +44,22 @@ def run(args):
                     text=p.locator('.leaflet-popup-content').inner_text();print('SPOT',proj,text[:1400],flush=True)
                     p.screenshot(path=str(pathlib.Path(args.output).with_name(('live-' if args.live else 'local-')+proj+'.png')))
                     p.evaluate('()=>{map.closePopup();}')
+            if args.spots and name=='index':
+                for identifier in ['pmt_1032-key-st-77009','pmt_728-euclid-st-77009']:
+                    p.evaluate('(id)=>{openPin(id);}',identifier)
+                    p.wait_for_function('(id)=>document.querySelector(".leaflet-popup-content .card")?.dataset.pid===id',arg=identifier)
+                    text=p.locator('.leaflet-popup-content').inner_text()
+                    facts=p.evaluate('(id)=>({category:inventoryCategory(id),phase:homePhase(id),eta:inspectionEta(byId[id]),projects:byId[id].permits.map(pm=>pm.proj)})',identifier)
+                    assert 'excluded from inventory' in text and 'Client research' in text
+                    assert all(proj in text for proj in facts['projects'])
+                    assert p.evaluate('(id)=>popupHTML(byId[id]).includes(PHASE_DEF[homePhase(id)][0])',identifier)
+                    print('CATEGORY SPOT',identifier,json.dumps(facts),text[:2200],flush=True)
+                    p.screenshot(path=str(pathlib.Path(args.output).with_name(('live-' if args.live else 'local-')+identifier+'.png')))
+                    p.evaluate('()=>{map.closePopup();}')
+                print('CATEGORY LAYERS',p.locator('#legend > [data-grp="custom"]').inner_text(),p.locator('#legend > [data-grp="sold_off_market"]').inner_text(),flush=True)
+                if args.live:
+                    assert p.request.get(args.live.rstrip('/')+'/inventory_classifications.js?verify=20260909').body()==(ROOT/'inventory_classifications.js').read_bytes()
+                    print('PASS live classification JS byte-identical',flush=True)
             results[name]=result
             print(name,json.dumps({k:result[k] for k in ['supply','columns','uc','deed','sold']}),flush=True)
             if args.checks:

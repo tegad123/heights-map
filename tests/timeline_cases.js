@@ -53,7 +53,7 @@ options=>{
  readyMonths=12;applyReadyFilter();readyMonths=0;applyReadyFilter();
  const legend=document.getElementById('legend');
  check('Eight snapshot columns and Complete checkboxes',PH_ABBR.length===8&&PH_ABBR.every(([k])=>CONSTRUCTION_PHASES.includes(k))&&!!legend.querySelector('[data-sel="active_single|complete"] .mbox')&&!legend.querySelector('[data-sel="L:complete"]'));
- check('Category exclusions visible in snapshot footer',document.getElementById('sc-foot').textContent.includes('Excluded: 0 Custom / 0 Sold Off Market'));
+ check('Category exclusions visible in snapshot footer',document.getElementById('sc-foot').textContent.includes('Excluded: '+categoryCount('custom')+' Custom / '+categoryCount('sold_off_market')+' Sold Off Market'));
  check('Complete popups display every final',rows.filter(x=>x.phase==='complete').every(x=>{const h=popupHTML(x.r);return ['plumbing: Passed','hvac: Passed','electrical: Passed','grading: Passed','structural: Passed'].every(t=>h.includes(t))&&!h.includes('Completion: ~');}));
  const finals=['PLUMBING FINAL','AC FINAL','ELECT FINAL','GRADING FINAL','Struct Final'].map(type=>({type,raw:'Approved',result:'Passed',date:'2026-09-01'}));
  check('Struct passed, grading missing is MEP Finals',inspToPhase({inspections:finals.filter(r=>r.type!=='GRADING FINAL')})==='mep_finals');
@@ -68,6 +68,26 @@ options=>{
     for(const ty of Object.keys(TY2K)){comboCount(ty,'foundation');ucTypeCount(ty);}
     ucCount();ucNCCount();listedCount();listedTypeCount('Single Lot');listedReadyCount('Single Lot',true);readyTypeCount(false);readyFinCount(false,false);pinColor(sample.id);
   }}finally{pt(sample.id).tags=saved;renderLegend();refresh();renderSupplyCard();}
+ }
+ // Execute researched classifications and category controls; never persist browser edits.
+ if(typeof CLIENT_CLASSIFICATIONS!=='undefined'){
+  for(const [category,ids] of Object.entries(CLIENT_CLASSIFICATIONS)){
+   check('Client '+category+' exact IDs tagged',ids.every(id=>byId[id]&&pt(id).tags.includes(category)));
+   if(category==='needs_clarification')continue;
+   check('Client '+category+' excluded from all pipeline buckets',ids.every(id=>!inPipeline(byId[id])&&!comingOnline(12).homes.some(r=>r.id===id)&&!matchSel(pt(id).tags,'G:uc',id)));
+   const control=document.querySelector('#legend > [data-grp="'+category+'"] [data-sel="G:'+category+'"]');
+   control.click();
+   check('Client '+category+' actual checkbox filters pins',layer.getLayers().length===ids.length&&layer.getLayers().every(m=>ids.includes(m._rec.id)));
+   document.querySelector('#legend > [data-grp="'+category+'"] [data-sel="G:'+category+'"]').click();
+  }
+  for(const key of [...document.querySelectorAll('[data-category-product]')].map(b=>b.dataset.categoryProduct)){
+   document.querySelector('[data-category-product="'+key+'"]').click();
+   const expected=DATA.filter(r=>matchSel(pt(r.id).tags,key,r.id)).map(r=>r.id);
+   check('Category product filter '+key,layer.getLayers().length===expected.length&&layer.getLayers().every(m=>expected.includes(m._rec.id)));
+   document.querySelector('[data-category-product="'+key+'"]').click();
+  }
+  const id=CLIENT_CLASSIFICATIONS.custom?.[0];
+  if(id){const tags=[...pt(id).tags];pt(id).tags=tags.filter(t=>t!=='custom');renderLegend();check('Stale shared tags restored without phase mutation',pt(id).tags.includes('custom')&&homePhase(id)===rows.find(x=>x.r.id===id).phase);}
  }
  // Exercise the timeline display helpers on real records (no data writes).
  check('Real popup and ETA rendering',rows.every(x=>typeof popupHTML(x.r)==='string'&&typeof etaText(x.r)==='string'));
