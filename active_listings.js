@@ -57,16 +57,18 @@ popupHTML=function(r){
 };
 const activeOriginalMatch=matchSel;
 matchSel=function(tags,k,id){
+  if(k.startsWith('AL:')&&inventoryCategory(id))return false;
   if(k.startsWith('AL:'))return (ACTIVE_VIEW.byPin.get(id)||[]).some(r=>k==='AL:all'||r.product===k.slice(3));
   return activeOriginalMatch(tags,k,id);
 };
 function renderActiveLegend(){
+  const eligible=ACTIVE_VIEW.listings.filter(r=>![...ACTIVE_VIEW.byPin].some(([id,rows])=>inventoryCategory(id)&&rows.includes(r)));
   const el=document.getElementById('legend');el.querySelector('[data-active-listings]')?.remove();
-  let h='<div data-active-listings class="grp"><div class="grp-h"><span class="gn">Active Listings</span><span class="ct2">'+ACTIVE_VIEW.listings.length+'</span></div>';
+  let h='<div data-active-listings class="grp"><div class="grp-h"><span class="gn">Active Listings</span><span class="ct2">'+eligible.length+'</span></div>';
   if(!ACTIVE_VIEW.ready)h+='<div class="pmeta">'+esc(ACTIVE_VIEW.error||'Loading HAR snapshot…')+'</div>';
   else {
     for(const prod of ['Single Lot','Split Lot']){
-      const key='AL:'+prod,count=ACTIVE_VIEW.listings.filter(r=>r.product===prod).length;
+      const key='AL:'+prod,count=eligible.filter(r=>r.product===prod).length;
       h+='<button type="button" class="leafrow'+sOn(key)+'" data-active-product="'+prod+'" aria-pressed="'+activeF.has(key)+'" style="width:100%;border:0;font:inherit;color:inherit;background:transparent;text-align:left"><span class="sw" style="background:#2f9e44"></span><span class="nm">'+prod+'</span><span class="ct2">'+count+'</span></button>';
     }
     h+='<div class="pmeta" style="padding:6px 12px;font-size:10px;color:var(--muted)">HAR '+esc(ACTIVE_VIEW.asOf)+' · listing counts, paired pins may overlap</div>';

@@ -44,6 +44,17 @@ options=>{
    check('Mutant: Struct-only completion is caught',inspToPhase({inspections:[{type:'Struct Final',date:'2026-09-01',raw:'Approved',result:'Passed'}]})==='complete');
   }finally{inspPhase=oldPhase;inspectionEta=oldEta;completionFinal=oldComplete;}
  }
+ // Temporarily tag a real supply home; restore state without persisting it.
+ const sample=comingOnline(12).homes[0]||DATA.find(r=>r.permits?.length)||DATA[0];
+ if(sample){const saved=[...pt(sample.id).tags],before=comingOnline(12).count,wasSupply=comingOnline(12).homes.includes(sample),phase=homePhase(sample.id);
+  try{for(const category of ['custom','sold_off_market']){
+    pt(sample.id).tags=[...saved,category];renderLegend();refresh();buildOverview();buildTimeline();renderSupplyCard();
+    const excluded=comingOnline(12).count;
+    check(category+' excludes inventory, preserves phase, filters alone',!inPipeline(sample)&&homePhase(sample.id)===phase&&excluded===before-(wasSupply?UW(sample.id):0)&&matchSel(pt(sample.id).tags,'G:'+category,sample.id)&&!matchSel(pt(sample.id).tags,'G:uc',sample.id)&&!matchSel(pt(sample.id).tags,'L:permit',sample.id)&&categoryCount(category)>=UW(sample.id)&&popupHTML(sample).includes('excluded from inventory'));
+    for(const ty of Object.keys(TY2K)){comboCount(ty,'foundation');ucTypeCount(ty);}
+    ucCount();ucNCCount();listedCount();listedTypeCount('Single Lot');listedReadyCount('Single Lot',true);readyTypeCount(false);readyFinCount(false,false);pinColor(sample.id);
+  }}finally{pt(sample.id).tags=saved;renderLegend();refresh();renderSupplyCard();}
+ }
  // Exercise the timeline display helpers on real records (no data writes).
  check('Real popup and ETA rendering',rows.every(x=>typeof popupHTML(x.r)==='string'&&typeof etaText(x.r)==='string'));
  return results;
