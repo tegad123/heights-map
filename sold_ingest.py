@@ -1,288 +1,252 @@
 #!/usr/bin/env python3
-"""
-sold_ingest.py — HAR Matrix sold-comps CSVs -> single-line JS emit (sold_emit.txt).
-=====================================================================
-Market-parameterized like permit_pull.py; Heights first. Reads the two
-pre-filtered HAR exports (sold, trailing 365d, $500k+, 1500sqft+, Heights
-polygon), merges + dedupes on MLS Number, tags cohort (nc = 2025 file,
-resale = 2024 file), applies the market zone guard (OUT_OF_ZONE regex
-lifted from the market HTML + lng east cutoff), computes per-row derived
-fields and precomputed aggregates, and emits:
+"""Merge Heights HAR closed sales. Dry run by default; --apply writes sold constants only.
 
-    const SOLD_DATA=[...];      (one line, compact short-key row objects)
-    const SOLD_METRICS={...};   (one line, precomputed aggregates)
-
-NO geocoding — HAR Longitude/Latitude used directly.
-This script NEVER touches index.html. Splicing is a separate manual step.
-
-USAGE
-  python3 sold_ingest.py                 # heights, writes sold_emit.txt
-  python3 sold_ingest.py --market heights
-=====================================================================
+MLS identifies a transaction. Address + close date is the fallback identity;
+repeat sales on other dates remain separate transactions. No geocoding or deploy.
 """
 import argparse
 import csv
+import hashlib
+import io
 import json
+import math
 import re
-import sys
+from collections import Counter, defaultdict
 from datetime import date, datetime
+from pathlib import Path
 from statistics import median
 
-MARKETS = {
-    'heights': {
-        'html': 'index.html',
-        'out': 'sold_emit.txt',
-        # (path, cohort) — nc file listed first so an MLS in both keeps nc
-        'csvs': [('HAR_Export_2025_heights.csv', 'nc'),
-                 ('HAR_Export_2024-heights.csv', 'resale')],
-        'lng_east_max': -95.370,   # east of I-45 North Fwy corridor = out of zone
-        'boundary': 'heights_boundary.geojson',
-    },
-}
-
-
-def load_boundary_ring(path):
-    try:
-        g = json.load(open(path))
-        return g['features'][0]['geometry']['coordinates'][0]
-    except Exception as e:
-        print(f'WARN: boundary polygon unavailable ({e}) — polygon zone check disabled')
-        return None
-
-
-def in_zone_poly(ring, lng, lat):
-    """Ray-cast point-in-polygon against the market boundary ring."""
-    if ring is None:
-        return True
-    inside = False
-    j = len(ring) - 1
-    for i in range(len(ring)):
-        xi, yi = ring[i]
-        xj, yj = ring[j]
-        if (yi > lat) != (yj > lat) and lng < (xj - xi) * (lat - yi) / (yj - yi) + xi:
-            inside = not inside
-        j = i
-    return inside
-
+ROOT = Path(__file__).resolve().parent
+INPUTS = [('Heightssoldsinglelotslast30days.csv', 'Single Lot'),
+          ('Heightssoldsplitlotslast30days.csv', 'Split Lot')]
+REQUIRED = ['MLS Number', 'Address', 'Latitude', 'Longitude', 'Close Price',
+            'Building SqFt', 'Close Date']
+OPTIONAL = {'lp': 'Original List Price', 'lot': 'Lot Size', 'dom': 'DOM',
+            'yb': 'Year Built', 'har_psf': 'Price Sq Ft Sold'}
+TEXT = {'bl': 'Builder Name', 'sch': 'School Elementary',
+        'la': 'List Agent Full Name', 'ba': 'Selling Agent Full Name'}
 BANDS = ['<800k', '800k-1.3M', '1.3M-2M', '2M+']
-WINS = ['0-30', '30-60', '60-90', '90-180', '180-365']
-# Heights lot reality (confirmed 2026-08-12): original lots ~6,600 (50x132) with a
-# 5,000-7,000 single cluster; splits are halves (~3,300 = 25x132) clustering
-# 1,500-4,000. The 4,000-5,000 gap is ambiguous -> Unclassified + needs_review.
-SPLIT_MAX = 4000
-SINGLE_MIN = 5000
-# unit-letter address (611B / #A / Unit#A / trailing " A") = near-certain shared-lot
-# product; deliberately does NOT match the E/W street directional ("107 E 24th")
-UNIT_LETTER_RE = re.compile(r'(\d+[A-F]\b|#\s*[A-F]\b|\bUnit\s*#?\s*[A-F]\b|\s[A-F]$)', re.I)
+WINS = ['0-30', '30-60', '60-90', '90-180', '180-365', '365+']
+PRODUCTS = ['Single Lot', 'Split Lot', 'Unclassified', 'Unknown']
 
 
-def load_zone_regex(html_path):
-    """Single source of truth: lift the OUT_OF_ZONE regex from the market HTML."""
-    with open(html_path, encoding='utf-8') as f:
-        html = f.read()
-    m = re.search(r'const OUT_OF_ZONE=/(.+?)/i;', html)
-    if not m:
-        sys.exit('FATAL: OUT_OF_ZONE regex not found in ' + html_path)
-    return re.compile(m.group(1), re.I)
-
-
-def money(s):
-    s = str(s or '').replace('$', '').replace(',', '').strip()
-    if not s:
-        return None
+def money(value):
     try:
-        return float(s)
+        n = float(str(value or '').replace(',', '').replace('$', '').strip())
+        return n if math.isfinite(n) else None
     except ValueError:
         return None
 
 
-def intval(s):
-    v = money(s)
-    return int(round(v)) if v is not None else None
-
-
-def parse_close(s):
-    s = str(s or '').strip()
+def parse_close(value):
     for fmt in ('%m/%d/%Y', '%Y-%m-%d', '%m/%d/%y'):
         try:
-            return datetime.strptime(s, fmt).date()
+            return datetime.strptime(str(value or '').strip(), fmt).date()
         except ValueError:
-            continue
+            pass
     return None
 
 
-def band_of(cp):
-    if cp < 800_000: return '<800k'
-    if cp < 1_300_000: return '800k-1.3M'
-    if cp < 2_000_000: return '1.3M-2M'
-    return '2M+'
+def normalize_address(value):
+    s = value.split(',')[0].lower().strip()
+    s = re.sub(r'\b(?:unit|apt|suite)\s*#?\s*', ' ', s)
+    s = re.sub(r'(?<=\d)([a-f])\b', r' \1', s)
+    s = re.sub(r'[^a-z0-9 ]', ' ', s)
+    aliases = dict(street='st', avenue='ave', road='rd', lane='ln', drive='dr',
+                   boulevard='blvd', court='ct', place='pl', north='n', south='s',
+                   east='e', west='w', terrace='ter')
+    return ' '.join(aliases.get(w, w) for w in s.split())
 
 
-def win_of(days):
-    if days <= 30: return '0-30'
-    if days <= 60: return '30-60'
-    if days <= 90: return '60-90'
-    if days <= 180: return '90-180'
-    return '180-365'
+def classify_lot(value):
+    lot = money(value)
+    if not lot: return 'Unclassified'
+    if lot <= 4000: return 'Split Lot'
+    if lot >= 5000: return 'Single Lot'
+    return 'Unclassified'
+
+
+def constant(html, name):
+    matches = list(re.finditer(r'\bconst ' + name + r'=', html))
+    if len(matches) != 1:
+        raise ValueError(f'{name}: expected exactly one declaration')
+    start = matches[0].end()
+    value, length = json.JSONDecoder().raw_decode(html[start:])
+    if html[start + length] != ';':
+        raise ValueError(f'{name}: missing terminator')
+    return value, start, start + length
 
 
 def stats(rows):
-    """Aggregate stat block for a list of processed rows."""
-    if not rows:
-        return {'n': 0}
-    psf = [r['psf'] for r in rows if r.get('psf')]
-    dom = [r['dom'] for r in rows if r.get('dom') is not None and not r.get('p')]
-    svl = [r['svl'] for r in rows if r.get('svl') is not None]
-    cp = [r['cp'] for r in rows]
     out = {'n': len(rows)}
-    if psf: out['med_psf'] = round(median(psf), 1)
-    if dom: out['med_dom'] = round(median(dom), 1)
-    if svl: out['avg_svl_pct'] = round(sum(svl) / len(svl) * 100, 2)
-    if cp: out['med_price'] = int(median(cp))
-    pre = sum(1 for r in rows if r.get('p'))
-    if pre: out['presold_n'] = pre
+    for key, target in [('psf', 'med_psf'), ('cp', 'med_price'), ('dom', 'med_dom')]:
+        values = [r[key] for r in rows if r.get(key) is not None and not (key == 'dom' and r.get('p'))]
+        if values: out[target] = round(median(values), 1)
+    values = [r['svl'] for r in rows if r.get('svl') is not None]
+    if values: out['avg_svl_pct'] = round(sum(values) / len(values) * 100, 2)
+    if any(r.get('p') for r in rows): out['presold_n'] = sum(bool(r.get('p')) for r in rows)
     return out
 
 
+def metrics_for(rows, today):
+    result = {'as_of': today.isoformat(),
+              'basis': 'HAR closed-sales archive: original 2025-08-12 to 2026-08-12 $500k+/1500sqft+ exports, plus incremental exports with their source filters; not a complete rolling-year census. nc = year built 2025+; resale = earlier.',
+              'overall': stats(rows)}
+    trailing = [r for r in rows if 0 <= (today - date.fromisoformat(r['cd'])).days <= 365]
+    result['trailing_365'] = {**stats(trailing), 'absorption_per_month': round(len(trailing)/12, 1)}
+    for name, keys in [('by_window', ['win']), ('by_band', ['band']),
+                       ('by_product', ['prod']), ('by_cohort', ['coh']),
+                       ('by_month', ['mo']), ('by_window_product', ['win', 'prod']),
+                       ('cells', ['win', 'band', 'prod', 'coh'])]:
+        groups = defaultdict(list)
+        for r in rows: groups['|'.join(str(r[k]) for k in keys)].append(r)
+        result[name] = {k: stats(v) for k, v in sorted(groups.items())}
+    return result
+
+
+def refresh_derived(rows, today):
+    for r in rows:
+        r['prod'] = classify_lot(r.get('lot'))
+        r.pop('nr', None)
+        if r['prod'] in ('Unclassified', 'Unknown'): r['nr'] = 1
+        days = max(0, (today - date.fromisoformat(r['cd'])).days)
+        r['win'] = next((w for w, upper in zip(WINS, [30,60,90,180,365,math.inf]) if days <= upper), '365+')
+        r['band'] = BANDS[sum(r['cp'] >= b for b in [800000,1300000,2000000])]
+        r['mo'] = r['cd'][:7]
+    return sorted(rows, key=lambda r: (r['cd'], r['id']), reverse=True)
+
+
+def in_ring(ring, lng, lat):
+    inside = False
+    for (x1,y1),(x2,y2) in zip(ring,ring[1:]):
+        if (y1 > lat) != (y2 > lat) and lng < (x2-x1)*(lat-y1)/(y2-y1)+x1:
+            inside = not inside
+    return inside
+
+
+def run(args):
+    html_path = ROOT / 'index.html'
+    html = html_path.read_text()
+    existing, _, _ = constant(html, 'SOLD_DATA')
+    rows = json.loads(json.dumps(existing))
+    if not rows: raise ValueError('existing sold input is empty')
+    today = date.fromisoformat(args.as_of) if args.as_of else date.today()
+    zone_match = re.search(r'const OUT_OF_ZONE=/(.+?)/i;', html)
+    if not zone_match: raise ValueError('missing OUT_OF_ZONE')
+    zone_re = re.compile(zone_match[1], re.I)
+    boundary = json.loads((ROOT / 'heights_boundary.geojson').read_text())
+    polygons = []
+    for feature in boundary['features']:
+        geometry = feature['geometry']
+        if geometry['type'] == 'Polygon': polygons.append(geometry['coordinates'])
+        elif geometry['type'] == 'MultiPolygon': polygons.extend(geometry['coordinates'])
+        else: raise ValueError('unsupported boundary geometry')
+    if not polygons or any(not rings or any(len(ring) < 4 or ring[0] != ring[-1] for ring in rings) for rings in polygons): raise ValueError('invalid boundary')
+    ids = {r['id']: r for r in rows}
+    addresses = defaultdict(list)
+    for r in rows: addresses[normalize_address(r['a'])].append(r)
+    ledger, summaries, mismatches = [], [], []
+    seen_ids, seen_closings = set(), set()
+    for path, expected in INPUTS:
+        source = ROOT / path
+        digest = hashlib.sha256(source.read_bytes()).hexdigest()
+        with source.open(encoding='utf-8-sig', newline='') as stream:
+            reader = csv.DictReader(stream)
+            missing = set(REQUIRED + ['Lot Size', 'Year Built']) - set(reader.fieldnames or [])
+            if missing: raise ValueError(f'{path}: missing columns {sorted(missing)}')
+            inputs = list(reader)
+        if not inputs: raise ValueError(f'{path}: empty input')
+        summary = {'file': path, 'read': len(inputs), 'added': 0, 'updated': 0, 'excluded': Counter(), 'crosscheck_matches': 0}
+        for line, rec in enumerate(inputs, 2):
+            reason = None
+            prod = classify_lot(rec.get('Lot Size'))
+            if prod != expected: mismatches.append({'file':path, 'line':line, 'address':rec.get('Address'), 'lot':rec.get('Lot Size'), 'derived':prod, 'expected':expected})
+            else: summary['crosscheck_matches'] += 1
+            mls, addr = (rec.get('MLS Number') or '').strip(), (rec.get('Address') or '').strip()
+            cd = parse_close(rec.get('Close Date'))
+            lat, lng = money(rec.get('Latitude')), money(rec.get('Longitude'))
+            cp, sq = money(rec.get('Close Price')), money(rec.get('Building SqFt'))
+            if not mls or not addr or cp is None or cp <= 0 or sq is None or sq <= 0: reason = 'MISSING_REQUIRED_FIELD'
+            elif cd is None: reason = 'MALFORMED_DATE'
+            elif cd > today: reason = 'FUTURE_DATE'
+            elif lat is None or lng is None or not (-90 <= lat <= 90 and -180 <= lng <= 180) or not lat or not lng: reason = 'MISSING_GEOCODE'
+            elif zone_re.search(addr) or lng > -95.370 or not any(in_ring(rings[0],lng,lat) and not any(in_ring(hole,lng,lat) for hole in rings[1:]) for rings in polygons): reason = 'OUT_OF_MARKET'
+            rid = 's' + mls
+            closing = (normalize_address(addr), cd.isoformat() if cd else '')
+            if not reason and (rid in seen_ids or closing in seen_closings): reason = 'DUP_INPUT'
+            if not reason:
+                seen_ids.add(rid); seen_closings.add(closing)
+                prior = ids.get(rid)
+                if prior is None:
+                    matches = [r for r in addresses[closing[0]] if r['cd'] == closing[1]]
+                    if len(matches) > 1: reason = 'AMBIGUOUS_ADDRESS_MATCH'
+                    elif matches: prior = matches[0]
+                if not reason:
+                    row = dict(prior or {})
+                    row.update(id=prior['id'] if prior else rid, a=addr, lat=round(lat,7), lng=round(lng,7), cp=cp, sq=sq, cd=cd.isoformat(), psf=round(cp/sq,1))
+                    for key, col in OPTIONAL.items(): row[key] = money(rec.get(col))
+                    for key, col in TEXT.items(): row[key] = (rec.get(col) or '').strip()
+                    row['coh'] = 'nc' if row.get('yb') is not None and row['yb'] >= 2025 else 'resale'
+                    row.pop('p', None); row.pop('svl', None)
+                    if row.get('dom') == 0: row['p'] = 1
+                    if row.get('lp'): row['svl'] = round((cp-row['lp'])/row['lp'],4)
+                    row = refresh_derived([row], today)[0]
+                    if prior:
+                        compare = refresh_derived([dict(prior)], today)[0]
+                        if row == compare: reason = 'DUP_EXISTING'
+                        else: prior.clear(); prior.update(row); summary['updated'] += 1
+                    else:
+                        rows.append(row); ids[rid] = row; addresses[closing[0]].append(row); summary['added'] += 1
+            if reason:
+                summary['excluded'][reason] += 1
+                ledger.append({'SOURCE':'HAR sold','MARKET':'heights','FILE':path,'SHA256':digest,'ROW':str(line),'MLS':mls,'ADDRESS':addr,'REASON':reason,'RAW_JSON':json.dumps(rec,sort_keys=True)})
+        summaries.append(summary)
+    rows = refresh_derived(rows, today)
+    metrics = metrics_for(rows, today)
+    counts = {p: sum(r['prod'] == p for r in rows) for p in PRODUCTS}
+    flagged = [{'id':r['id'],'address':r['a'],'lot':r.get('lot'),'product':r['prod']} for r in rows if r['prod'] in ('Unknown','Unclassified')]
+    replacements = {'SOLD_DATA':rows,'SOLD_METRICS':metrics}
+    candidate = html
+    for name, value in replacements.items():
+        _, start, end = constant(candidate, name)
+        candidate = candidate[:start] + json.dumps(value,separators=(',',':'),ensure_ascii=True) + candidate[end:]
+    for name, value in replacements.items(): assert constant(candidate,name)[0] == value
+    # Only the two constant payloads can differ; DATA and RECONCILE stay byte-identical.
+    skeletons = []
+    for source in [html,candidate]:
+        for name in replacements:
+            _, start,end = constant(source,name);source = source[:start]+'null'+source[end:]
+        skeletons.append(source)
+    assert skeletons[0] == skeletons[1]
+    report = {'mode':'APPLY' if args.apply else 'DRY RUN','as_of':today.isoformat(),'files':summaries,
+              'old_total':len(existing),'new_total':len(rows),'products':counts,
+              'crosscheck_mismatches':mismatches,'flagged':flagged,
+              'html_changed':candidate != html,'ledger_rows':len(ledger)}
+    print(json.dumps(report,indent=2))
+    if mismatches: raise ValueError('export classification mismatch; refusing apply')
+    if args.apply:
+        # Dedicated sold ledger cannot overwrite permit/deed ledgers; unique keys make reruns stable.
+        ledger_path = ROOT/'pulls'/f'dropped_sold_{today.isoformat()}.csv'
+        ledger_path.parent.mkdir(exist_ok=True)
+        old = list(csv.DictReader(ledger_path.open(newline=''))) if ledger_path.exists() else []
+        keys = {(r['SHA256'],r['ROW'],r['REASON']) for r in old}
+        additions = [r for r in ledger if (r['SHA256'],r['ROW'],r['REASON']) not in keys]
+        if additions:
+            buffer = io.StringIO(newline=''); writer = csv.DictWriter(buffer,fieldnames=list(additions[0]));writer.writeheader();writer.writerows(old+additions)
+            ledger_path.write_text(buffer.getvalue())
+        if candidate != html: html_path.write_text(candidate)
+        emit = ''.join('const '+name+'='+json.dumps(value,separators=(',',':'))+';\n' for name,value in replacements.items())
+        out = ROOT/'sold_emit.txt'
+        if not out.exists() or out.read_text() != emit: out.write_text(emit)
+    return report
+
+
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--market', default='heights', choices=sorted(MARKETS))
-    args = ap.parse_args()
-    cfg = MARKETS[args.market]
-    today = date.today()
-
-    zone_re = load_zone_regex(cfg['html'])
-    lng_max = cfg['lng_east_max']
-    ring = load_boundary_ring(cfg['boundary'])
-
-    rows, seen, dupes = [], set(), 0
-    excl_zone, excl_lng, excl_poly, bad = [], [], [], []
-    for path, cohort in cfg['csvs']:
-        with open(path, encoding='utf-8-sig', newline='') as f:
-            for rec in csv.DictReader(f):
-                mls = (rec.get('MLS Number') or '').strip()
-                if not mls:
-                    continue
-                if mls in seen:
-                    dupes += 1
-                    continue
-                seen.add(mls)
-                addr = (rec.get('Address') or '').strip()
-                lat = money(rec.get('Latitude'))
-                lng = money(rec.get('Longitude'))
-                cp = intval(rec.get('Close Price'))
-                lp = intval(rec.get('Original List Price'))
-                sq = intval(rec.get('Building SqFt'))
-                cd = parse_close(rec.get('Close Date'))
-                if not (addr and lat and lng and cp and sq and cd):
-                    bad.append((mls, addr))
-                    continue
-                # zone guard, pipeline level (same as permit_pull.py)
-                if zone_re.search(addr):
-                    excl_zone.append(addr)
-                    continue
-                if lng > lng_max:
-                    excl_lng.append(addr)
-                    continue
-                if not in_zone_poly(ring, lng, lat):
-                    excl_poly.append(addr)
-                    continue
-                lot = intval(rec.get('Lot Size'))
-                dom = intval(rec.get('DOM'))
-                days = (today - cd).days
-                if days < 0:
-                    days = 0
-                unit_letter = bool(UNIT_LETTER_RE.search(addr))
-                if not lot:
-                    prod, review = 'Unclassified', True
-                elif lot <= SPLIT_MAX:
-                    prod, review = 'Split Lot', False
-                elif lot >= SINGLE_MIN:
-                    # unit-letter address on a full-size lot: HAR likely reports the
-                    # PARENT lot on a shared-lot unit — keep Single but flag for review
-                    prod, review = 'Single Lot', unit_letter
-                else:
-                    prod, review = 'Unclassified', True  # 4,000-5,000 ambiguity gap
-                row = {
-                    'id': 's' + mls,
-                    'a': addr,
-                    'lat': round(lat, 7), 'lng': round(lng, 7),
-                    'cp': cp, 'lp': lp, 'sq': sq,
-                    'psf': round(cp / sq, 1),
-                    'cd': cd.isoformat(), 'mo': cd.strftime('%Y-%m'),
-                    'dom': dom, 'yb': intval(rec.get('Year Built')),
-                    'coh': cohort, 'band': band_of(cp), 'win': win_of(days),
-                    'prod': prod,
-                }
-                if lot: row['lot'] = lot
-                if lp: row['svl'] = round((cp - lp) / lp, 4)
-                if dom == 0: row['p'] = 1          # presold new construction — signal, not junk
-                if review: row['nr'] = 1            # needs_review: null/gap lot, or letter-address Single
-                for k, col in (('bl', 'Builder Name'), ('sch', 'School Elementary'),
-                               ('la', 'List Agent Full Name'), ('ba', 'Selling Agent Full Name')):
-                    v = (rec.get(col) or '').strip()
-                    if v: row[k] = v
-                rows.append(row)
-
-    rows.sort(key=lambda r: r['cd'], reverse=True)
-
-    # ---- metrics ----
-    def group(key):
-        g = {}
-        for r in rows:
-            g.setdefault(r[key], []).append(r)
-        return g
-
-    metrics = {
-        'as_of': today.isoformat(),
-        'basis': 'HAR closed sales, trailing 365d, $500k+, 1500sqft+, in-zone; '
-                 'nc = year-built 2025+ new construction, resale = 2024-and-earlier',
-        'overall': {**stats(rows), 'absorption_per_month': round(len(rows) / 12, 1)},
-        'by_window': {w: stats(g) for w, g in sorted(group('win').items(), key=lambda kv: WINS.index(kv[0]))},
-        'by_band': {b: {**stats(g), 'absorption_per_month': round(len(g) / 12, 1)}
-                    for b, g in sorted(group('band').items(), key=lambda kv: BANDS.index(kv[0]))},
-        'by_product': {p: {**stats(g), 'absorption_per_month': round(len(g) / 12, 1)}
-                       for p, g in sorted(group('prod').items())},
-        'by_cohort': {c: {**stats(g), 'absorption_per_month': round(len(g) / 12, 1)}
-                      for c, g in sorted(group('coh').items())},
-        'by_month': {m: stats(g) for m, g in sorted(group('mo').items())},
-    }
-    # window x product marginal (answers e.g. "split lots sold last 30 days, median $/sqft")
-    wp = {}
-    for r in rows:
-        wp.setdefault(r['win'] + '|' + r['prod'], []).append(r)
-    metrics['by_window_product'] = {k: stats(g) for k, g in sorted(wp.items())}
-    # full cells: window|band|product|cohort (non-empty only)
-    cells = {}
-    for r in rows:
-        cells.setdefault('|'.join([r['win'], r['band'], r['prod'], r['coh']]), []).append(r)
-    metrics['cells'] = {k: stats(g) for k, g in sorted(cells.items())}
-
-    js = ('const SOLD_DATA=' + json.dumps(rows, separators=(',', ':'), ensure_ascii=True) + ';\n'
-          + 'const SOLD_METRICS=' + json.dumps(metrics, separators=(',', ':'), ensure_ascii=True)
-          + '; // generated by sold_ingest.py ' + today.isoformat() + '\n')
-    # sanity: both lines must round-trip as JSON
-    for line in js.strip().split('\n'):
-        json.loads(re.sub(r'^const \w+=', '', line).rstrip(';').split('; //')[0].rstrip(';'))
-    with open(cfg['out'], 'w', encoding='utf-8') as f:
-        f.write(js)
-
-    coh_n = {c: len(g) for c, g in group('coh').items()}
-    prod_n = {p: len(g) for p, g in group('prod').items()}
-    win_n = {w: len(g) for w, g in group('win').items()}
-    print(f"rows emitted:     {len(rows)}")
-    print(f"dupes dropped:    {dupes}")
-    print(f"bad/incomplete:   {len(bad)} {bad[:5]}")
-    print(f"zone-regex excl:  {len(excl_zone)} {excl_zone[:5]}")
-    print(f"east-lng excl:    {len(excl_lng)} {excl_lng[:5]}")
-    print(f"polygon excl:     {len(excl_poly)} {excl_poly[:5]}")
-    print(f"cohorts:          {coh_n}")
-    print(f"products:         {prod_n}  (Unclassified = lot null or 4-5k gap, needs_review)")
-    nr_single = sum(1 for r in rows if r.get('nr') and r['prod'] == 'Single Lot')
-    print(f"needs_review:     {sum(1 for r in rows if r.get('nr'))} total ({nr_single} letter-address Singles)")
-    print(f"windows:          { {w: win_n.get(w, 0) for w in WINS} }")
-    print(f"presold (DOM=0):  {sum(1 for r in rows if r.get('p'))}")
-    print(f"emitted -> {cfg['out']} ({len(js)} bytes, {js.count(chr(10))} lines)")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--market', choices=['heights'], default='heights')
+    mode = parser.add_mutually_exclusive_group(); mode.add_argument('--apply',action='store_true');mode.add_argument('--dry-run',action='store_true')
+    parser.add_argument('--as-of',help='YYYY-MM-DD (defaults to local date)')
+    run(parser.parse_args())
 
 
 if __name__ == '__main__':
