@@ -99,7 +99,7 @@ Deployment uses committed main and Netlify CI only. Live validation command:
 /Users/nemoclaw/insp-venv/bin/python -B tests/market_status_check.py --live https://tangerine-sorbet-eca5f5.netlify.app
 ```
 
-It verifies exact live HTML/snapshot bytes and Tabor, 902 E 25th (Complete/active), 826 Ralfallen (Complete/sold), and 1623 Blount (Complete/no market record). See session response for deployment result.
+It verifies exact live inline scripts, external active JS and snapshot bytes (Netlify rewrites navigation URLs) and Tabor, 902 E 25th (Complete/active), 826 Ralfallen (Complete/sold), and 1623 Blount (Complete/no market record). All three live runs passed with identical SHA256 `532f683313eecbd679dd7da6105747f8c43e270a26d66f3afbdbbbbe267a03ee`; full output is recorded in the validation report.
 
 ## Open review items
 

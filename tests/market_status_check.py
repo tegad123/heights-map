@@ -5,6 +5,7 @@ import hashlib
 import http.server
 import json
 import pathlib
+import re
 import subprocess
 import sys
 import threading
@@ -45,9 +46,13 @@ def run(live=None):
         page.goto(base + '/index.html?market-status-audit=20260909', wait_until='networkidle')
         page.wait_for_function('INSP_LOADED && ACTIVE_VIEW.ready')
         if live:
-            for name in ['index.html', 'heights_market_status.data.json']:
+            # Netlify rewrites navigation URLs; executable scripts must still match exactly.
+            live_html = page.request.get(base + '/index.html?market-verify=20260909').body()
+            local_html = (ROOT/'index.html').read_bytes()
+            assert re.findall(rb'<script\b[^>]*>(.*?)</script>', live_html, re.S) == re.findall(rb'<script\b[^>]*>(.*?)</script>', local_html, re.S)
+            for name in ['heights_market_status.data.json', 'active_listings.js']:
                 assert page.request.get(base + '/' + name + '?market-verify=20260909').body() == (ROOT/name).read_bytes(), name
-            print('PASS: live HTML and market snapshot byte-identical to committed local files')
+            print('PASS: live HTML scripts, active JS and market snapshot byte-identical to local files; Netlify navigation rewriting allowed')
         baseline = json.loads((ROOT/'docs/market-status-baseline-2026-09-09.json').read_text())['runtime']
         current = page.evaluate('''()=>({deed:deedCount(),sold:SOLD_DATA.length,supply:comingOnline(12).count,columns:phaseBreakdown(),
           rows:DATA.map(r=>({id:r.id,phase:homePhase(r.id),eta:inspectionEta(r),weight:UW(r.id)})),

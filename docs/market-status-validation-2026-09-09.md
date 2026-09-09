@@ -1241,3 +1241,32 @@ Preserved sold IDs 764 / 764 new IDs ['s26903565', 's88173016', 's89124616']
  1 file changed, 3 insertions(+), 3 deletions(-)
 ```
 `git diff --check` returned no output (exit 0). The three lines are SOLD_DATA, SOLD_METRICS and the null-safe sold-card size display. No construction functions changed.
+
+## Live deployment verification
+
+Executed after pushing cd1a07c, 72beecd and empty rebuild trigger b7717d3:
+
+```sh
+/Users/nemoclaw/insp-venv/bin/python -B tests/market_status_check.py --live https://tangerine-sorbet-eca5f5.netlify.app --three
+```
+
+Initial whole-HTML comparisons failed because Netlify rewrites navigation links. Inspection confirmed all inline scripts already matched and live SOLD_DATA contained 767 rows. The corrected check compares scripts, external active JS and market snapshot exactly; it allows navigation URL rewriting. The empty rebuild trigger was pushed before this distinction was confirmed.
+
+Live run 1: PASS; SHA256 `532f683313eecbd679dd7da6105747f8c43e270a26d66f3afbdbbbbe267a03ee`.
+
+Live run 2: PASS; SHA256 `532f683313eecbd679dd7da6105747f8c43e270a26d66f3afbdbbbbe267a03ee`.
+
+Live run 3: PASS; SHA256 `532f683313eecbd679dd7da6105747f8c43e270a26d66f3afbdbbbbe267a03ee`.
+
+Actual identical output:
+```text
+PASS: invoked --apply; zero changes; 119/119 classifications; all artifact SHA256 hashes unchanged
+PASS: live HTML scripts, active JS and market snapshot byte-identical to local files; Netlify navigation rewriting allowed
+LEGACY_COUNTS {"finishedOnMarket": 54, "needsClarification": 26, "onMarketBuilding": {"active_cd": 0, "active_single": 14, "active_split": 13}}
+PASS: 376 property phase/ETA/weight tuples unchanged; deeds 139; sold 767; supply 144; all 767 sold cards invoked
+SPOT act_1207-tabor phase None evidence ['Sold record: 2026-08-31', '949,000']
+SPOT act_902-e-25 phase complete evidence ['Active in HAR export', 'COMPLETE']
+SPOT act_826-ralfallen phase complete evidence ['Sold record: 2026-08-26', '1,655,000', 'COMPLETE']
+SPOT pmt_1623-blount-st-77008 phase complete evidence ['Not in this active export', 'COMPLETE']
+PASS: page errors []; Phase 4 remains deferred; no construction or supply mutation
+```
