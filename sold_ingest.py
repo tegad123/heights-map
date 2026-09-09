@@ -15,6 +15,7 @@ from collections import Counter, defaultdict
 from datetime import date, datetime
 from pathlib import Path
 from statistics import median
+from sold_classification import classify_lot
 
 ROOT = Path(__file__).resolve().parent
 INPUTS = [('Heightssoldsinglelotslast30days.csv', 'Single Lot'),
@@ -55,15 +56,10 @@ def normalize_address(value):
     aliases = dict(street='st', avenue='ave', road='rd', lane='ln', drive='dr',
                    boulevard='blvd', court='ct', place='pl', north='n', south='s',
                    east='e', west='w', terrace='ter')
-    return ' '.join(aliases.get(w, w) for w in s.split())
-
-
-def classify_lot(value):
-    lot = money(value)
-    if not lot: return 'Unclassified'
-    if lot <= 4000: return 'Split Lot'
-    if lot >= 5000: return 'Single Lot'
-    return 'Unclassified'
+    words = [aliases.get(w, w) for w in s.split()]
+    if len(words) > 2 and words[0].isdigit() and words[1] in list('abcdef'):
+        words.append(words.pop(1))
+    return ' '.join(words)
 
 
 def constant(html, name):
@@ -94,6 +90,7 @@ def metrics_for(rows, today):
               'overall': stats(rows)}
     trailing = [r for r in rows if 0 <= (today - date.fromisoformat(r['cd'])).days <= 365]
     result['trailing_365'] = {**stats(trailing), 'absorption_per_month': round(len(trailing)/12, 1)}
+    result['overall']['absorption_per_month'] = round(len(trailing)/12, 1)
     for name, keys in [('by_window', ['win']), ('by_band', ['band']),
                        ('by_product', ['prod']), ('by_cohort', ['coh']),
                        ('by_month', ['mo']), ('by_window_product', ['win', 'prod']),
@@ -101,12 +98,16 @@ def metrics_for(rows, today):
         groups = defaultdict(list)
         for r in rows: groups['|'.join(str(r[k]) for k in keys)].append(r)
         result[name] = {k: stats(v) for k, v in sorted(groups.items())}
+        if name in ('by_band', 'by_product'):
+            for key, group in groups.items():
+                result[name][key]['absorption_per_month'] = round(sum(r in trailing for r in group)/12, 1)
     return result
 
 
 def refresh_derived(rows, today):
     for r in rows:
         r['prod'] = classify_lot(r.get('lot'))
+        r['ak'] = normalize_address(r['a'])
         r.pop('nr', None)
         if r['prod'] in ('Unclassified', 'Unknown'): r['nr'] = 1
         days = max(0, (today - date.fromisoformat(r['cd'])).days)
