@@ -17,5 +17,9 @@ with sync_playwright() as pw:
  assert active['finished']==active['counts']['finished']==active['finishedPanel']
  assert active['construction']==active['counts']['construction']==active['constructionMembers']
  j['activeMarket']=active
+ identity=p.evaluate('''()=>{const a=byId['pmt_112-e-27th-st-a-77008'],b=marketMembers(a).find(m=>m.id!==a.id);applyClientMarketIdentities();return {product:a.prod,review:a.review_note||null,aStatus:marketEvidence(a).status,aMls:marketEvidence(a).current?.mls,bStatus:marketEvidence(b).status,bMls:marketEvidence(b).current?.mls||null,matches:[...MARKET_VIEW.byMember.values()].filter(e=>e.current?.mls==='34333707').length};}''')
+ assert identity=={'product':'Split Lot','review':None,'aStatus':'active','aMls':'34333707','bStatus':'no_record','bMls':None,'matches':1},identity
+ j['unitIdentity']=identity
+
  assert j['map']==j['overview']==j['snapshot']['available'];assert j['overviewNote'] in j['mapNote'];assert j['stats'][0]['value']==j['panelUC'];assert j['mapPhases']==j['overviewPhases'];assert j['chart']==j['expectedCurve']
  print(('LIVE ' if live else '')+'PASS',json.dumps(j));Path('/tmp/supply-views-validation.json').write_text(json.dumps(j,indent=2));b.close()

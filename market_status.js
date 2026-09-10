@@ -33,6 +33,7 @@ function marketFacts(r){
       else h+='<br>Observed '+esc(c.as_of)+' · status-change date not supplied';
     }else if(e.archive_current)h+='<br>Closed '+esc(e.archive_current.cd)+' · $'+Number(e.archive_current.cp).toLocaleString()+' · MLS '+esc(e.archive_current.id.slice(1));
     else h+='<br>'+(MARKET_VIEW.available?'No matching evidence in the supplied exports; availability unverified.':'No market-status export supplied for this market.');
+    if(e.identity_note)h+='<div class="pmeta">'+esc(e.identity_note)+'</div>';
     if(e.history?.length){
       h+='<details open class="listing-history"><summary>'+(e.ordering_issue?'Listing history · order unverified':'Prior listing history')+' · '+e.history.length+'</summary>';
       for(const old of e.history)h+='<div>'+esc(old.har_status||MARKET_LABELS[old.status])+' · MLS '+esc(old.mls)+' · '+old.dom+' DOM'+(old.close_date?' · closed '+esc(old.close_date):' · event date unavailable')+'</div>';
@@ -216,6 +217,24 @@ if(PANEL_RESTRUCTURED){
   };
 }
 
+// Authoritative MLS identity determinations move evidence, never duplicate it.
+function applyClientMarketIdentities(){
+  for(const pin of DATA)for(const member of marketMembers(pin)){
+    const decision=member.market_identity;
+    if(!decision||decision.source!=='client')continue;
+    const target=MARKET_VIEW.byMember.get(member.id);
+    const donors=[...MARKET_VIEW.byMember.values()].filter(e=>e.current?.mls===decision.mls);
+    if(!target||donors.length!==1||donors[0]===target)continue;
+    const donor=donors[0];
+    if(target.current)continue; // Conflicting evidence requires explicit review.
+    const current=donor.current;
+    donor.current=null;donor.status='no_record';
+    donor.identity_note='Current MLS '+decision.mls+' belongs to unit A by client determination. Any unsuffixed historical listing remains identity-unverified.';
+    target.current=current;target.status=current.status;
+    target.identity_note=decision.reason;
+  }
+}
+
 async function loadMarketStatus(){
   try{
     if(MARKET_PAGE==='heights'){
@@ -223,6 +242,7 @@ async function loadMarketStatus(){
       const data=await response.json();if(!data.tracked||!data.properties)throw Error('Invalid market snapshot');
       Object.assign(MARKET_VIEW,{available:true,asOf:data.as_of,properties:data.properties,tracked:data.tracked,coverage:data.coverage,byMember:new Map(data.tracked.map(r=>[r.member,r]))});
     }
+    if(PANEL_RESTRUCTURED)applyClientMarketIdentities();
     MARKET_VIEW.ready=true;
   }catch(e){MARKET_VIEW.error='Market evidence unavailable: '+e.message;}
   renderLegend();refresh();renderSupplyCard();
