@@ -71,6 +71,7 @@ def run(args):
                     masters=[r for r in result['rows'] if r['id'] in pair]
                     assert len(masters)==1 and masters[0]['weight']==2 and masters[0]['twins']==[next(i for i in pair if i!=masters[0]['id'])]
                     assert masters[0]['product']=='Split Lot' and masters[0]['client'] and masters[0]['twinClient'] and masters[0]['twinProduct']=='Split Lot'
+                assert p.evaluate("(()=>{const html=popupHTML(byId['pmt_845-w-23rd-st-a-77008']);return html.includes('Product: Split Lot · client determination')&&!html.includes('MLS 17612330 · Single Lot')&&marketEvidence(byId['pmt_845-w-23rd-st-a-77008']).current.product==='Single Lot';})()")
                 assert p.evaluate('markers.every(m=>inZonePoly(m.getLatLng().lng,m.getLatLng().lat)&&m.getLatLng().lng<=-95.370)')
                 assert p.evaluate('SOLD_DATA.every(r=>inZonePoly(r.lng,r.lat)&&r.lng<=-95.370)')
                 assert p.evaluate('''()=>{const id='pmt_845-w-23rd-st-a-77008',saved=state.fieldEdits[id];state.fieldEdits[id]={prod:'Common Driveway'};applyFieldEdits();const ok=byId[id].prod==='Split Lot';if(saved)state.fieldEdits[id]=saved;else delete state.fieldEdits[id];return ok;}''')

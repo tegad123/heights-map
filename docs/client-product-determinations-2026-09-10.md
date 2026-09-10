@@ -1,6 +1,6 @@
 # Client product determinations and Heights boundary audit — 2026-09-10
 
-Client determinations are authoritative. Nine addresses match eleven saved records because White Oak and 1016 E 27th each have separate listing and permit records. All are annotated with source=client, reason_code=CLIENT_DETERMINATION, and the review date. Stale shared product edits cannot override them. No other product assignments were persisted.
+Client determinations are authoritative. Nine addresses match eleven saved records because White Oak and 1016 E 27th each have separate listing and permit records. All are annotated with source=client, reason_code=CLIENT_DETERMINATION, and the review date. Stale shared product edits cannot override them. Cards display the client product and its source instead of the HAR-derived product label; raw HAR values and market statuses remain unchanged. No other product assignments were persisted.
 
 ## Determinations
 
