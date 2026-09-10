@@ -2,9 +2,9 @@
  * Applied by exact DATA id only. Other markets use the same category display.
  */
 const CLIENT_CLASSIFICATIONS = document.currentScript.dataset.market==='heights' ? {
-  custom: ['pmt_1032-key-st-77009','pmt_1225-ashland-st-a-77008','pmt_1336-herkimer-st-77008','pmt_1434-herkimer-st-77008','pmt_1132-e-6th-1-2-st-77009','pmt_625-merrill-st-77009','pmt_705-e-13th-st-77008','pmt_745-e-16th-st-77008','pmt_806-peddie-st-77008','pmt_839-allston-st-77007','pmt_1314-e-28th-st-77009','pmt_734-e-7th-1-2-st-77007','pmt_918-dorothy-st-77008','pmt_930-waverly-st-77008','pmt_1602-turnpike-rd-77008','pmt_410-columbia-st-77007','pmt_715-e-12th-st-77008','pmt_826-e-27th-st-77009','2131284475'],
+  custom: ['pmt_1032-key-st-77009','pmt_1225-ashland-st-a-77008','pmt_1336-herkimer-st-77008','pmt_1434-herkimer-st-77008','pmt_1132-e-6th-1-2-st-77009','pmt_625-merrill-st-77009','pmt_705-e-13th-st-77008','pmt_745-e-16th-st-77008','pmt_806-peddie-st-77008','pmt_839-allston-st-77007','pmt_1314-e-28th-st-77009','pmt_734-e-7th-1-2-st-77007','pmt_918-dorothy-st-77008','pmt_930-waverly-st-77008','pmt_1602-turnpike-rd-77008','pmt_410-columbia-st-77007','pmt_715-e-12th-st-77008','pmt_826-e-27th-st-77009','2131284475','act_1109-tabor','pmt_115-northwood-st-77009'],
   sold_off_market: ['pmt_728-euclid-st-77009'],
-  needs_clarification: ['pmt_1019-e-7th-st-77009','pmt_822-nashua-st-77008','pmt_1109-voight-st-77009','pmt_433-w-23rd-st-77008']
+  needs_clarification: ['pmt_1019-e-7th-st-77009','pmt_822-nashua-st-77008','pmt_1109-voight-st-77009','pmt_433-w-23rd-st-77008','pmt_1110-jerome-st-77009']
 } : {};
 const CLIENT_PRIOR = {};
 for(const ids of Object.values(CLIENT_CLASSIFICATIONS))for(const id of ids){
@@ -17,6 +17,7 @@ function applyClientClassifications(){
     if(!point.tags.includes(tag))point.tags.push(tag);
     point.classification={source:'Client research',date:'2026-09-09',category:tag};
     if(id==='pmt_745-e-16th-st-77008')point.classification.subtype='remodel';
+    if(['act_1109-tabor','pmt_115-northwood-st-77009','pmt_1110-jerome-st-77009'].includes(id)){point.classification.source='Client determination';point.classification.date='2026-09-10';point.classification.exclude_inventory=true;}
   }
 }
 // ensureTags runs after remote merge and on every legend rebuild. Preserve

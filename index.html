@@ -1129,6 +1129,17 @@ function phaseTimeline(phase,anchorDate,now=new Date()){
     target:timelineDate(today+remainingDays),nextPhase:CONSTRUCTION_PHASES[index+1],
     months:Math.max(0.5,Math.round(remainingDays/30*2)/2)};
 }
+function rollingCompletionTarget(target,now=new Date()){
+  if(!target)return {target,rolled:false};
+  const today=now.toISOString().slice(0,10),original=target;
+  while(target<today){
+    const d=new Date(target+'T00:00:00Z'),day=d.getUTCDate();
+    d.setUTCDate(1);d.setUTCMonth(d.getUTCMonth()+1);
+    const last=new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,0)).getUTCDate();
+    d.setUTCDate(Math.min(day,last));target=d.toISOString().slice(0,10);
+  }
+  return {target,rolled:target!==original};
+}
 function inspectionEta(r,now=new Date()){
   const empty={anchor:null,anchorDate:null,target:null,months:null,complete:false,overdue:false,overdueDays:0,overdueAdjustmentDays:0,baseDays:null,remainingDays:null,nextDays:null,nextPhase:null};
   if(!r||!r.permits||!r.permits.length)return {...empty,phase:null};
@@ -1139,7 +1150,11 @@ function inspectionEta(r,now=new Date()){
   const anchor=phaseAnchor(r,phase);
   if(!anchor)return {...empty,phase,missingAnchor:true};
   const timeline=phaseTimeline(phase,anchor.date,now);
-  return {...empty,...timeline,phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
+  const client=r.client_completion,rolling=rollingCompletionTarget(client?.target||timeline.target,now);
+  const remainingDays=timelineDay(rolling.target)-timelineDay(now.toISOString().slice(0,10));
+  return {...empty,...timeline,...rolling,targetMonth:rolling.target.slice(0,7),remainingDays,
+    months:Math.max(0.5,Math.round(remainingDays/30*2)/2),clientCompletion:client||null,
+    phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
 }
 function timelineDuration(days){
   if(days<60)return '~'+Math.max(1,Math.round(days/7))+' weeks';
@@ -1463,7 +1478,7 @@ function popupHTML(r){
   let h='<div class="card" data-pid="'+esc(r.id)+'">';
   h+='<div class="llc">'+(esc(r.llc)||'Unknown entity')+'</div>';
   h+='<div class="addr">'+esc(r.a)+'</div>';
-  if(inventoryCategory(r.id))h+='<div class="pmeta">'+esc(inventoryCategory(r.id)==='custom'?'Custom':'Sold Off Market')+' · excluded from inventory</div>';
+  if(inventoryCategory(r.id))h+='<div class="pmeta">'+esc(inventoryCategory(r.id)==='custom'?'Custom':inventoryCategory(r.id)==='needs_clarification'?'Needs Clarification':'Sold Off Market')+' · excluded from inventory</div>';
   if(r._chip)h+='<div class="addr"><span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">'+esc(r._chip)+'</span></div>';
   if(r._twin)h+='<div class="addr">'+esc(r._twin.a)+' <span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">paired \u00b7 2 homes</span></div>';
   if(r._twin){ // per-twin status badge: only rendered when the twins' statuses diverge
@@ -1484,9 +1499,9 @@ function popupHTML(r){
     if(eta.complete)h+='<div class="phasetime">Complete · '+esc(eta.anchorDate)+'</div>';
     else if(eta.missingAnchor)h+='<div class="phasetime">Next / completion: unavailable — no dated phase evidence</div>';
     else{
-      h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+(eta.overdueDays?' — overdue':' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks')+'</div>';
-      h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.target)+'</div>';
-      if(eta.overdueDays)h+='<div class="phasetime">Stalled: '+Math.round(eta.elapsed/7)+' weeks in '+esc(PHASE_DEF[ph][0])+' ('+Math.round(eta.overdueDays/7)+' weeks overdue for '+esc(NEXT_INSPECTION[ph])+')</div>';
+      h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks'+'</div>';
+      h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.targetMonth)+(eta.clientCompletion?' · client estimate':'')+'</div>';
+      if(eta.elapsed>eta.duration)h+='<div class="phasetime">Stalled: '+Math.round(eta.elapsed/7)+' weeks in '+esc(PHASE_DEF[ph][0])+'</div>';
       h+='<div class="pmeta">Phase anchor: '+esc(eta.anchorDate)+'</div>';
     }
     h+='</div>';
@@ -1622,7 +1637,7 @@ let VIEWER=true; // read-only by default; EDIT button (top right) flips this liv
 const collapsed=new Set();
 const PHASE_TAGS=['complete','mep_finals','interior','insulation','mep_roughs','exterior','framing','foundation','market'];
 const PHASE_DEF={foundation:['Foundation','#e8590c'],framing:['Framing','#f59f00'],exterior:['Framed / Exterior Close-In','#d7b13a'],mep_roughs:['MEP Roughs','#a6b83a'],insulation:['Insulation','#79a66b'],interior:['INT.CAB, Tile, ETC','#0ca678'],mep_finals:['MEP Finals','#3a9d8f'],complete:['Complete','#2f9e44'],market:['Active (Finished)','#2f9e44']};
-function inventoryCategory(id){const t=(state.points[id]||{}).tags||[];return t.includes('sold_off_market')?'sold_off_market':t.includes('custom')?'custom':null;}
+function inventoryCategory(id){const t=(state.points[id]||{}).tags||[];return t.includes('sold_off_market')?'sold_off_market':t.includes('custom')?'custom':t.includes('needs_clarification')&&state.points[id]?.classification?.exclude_inventory?'needs_clarification':null;}
 function categoryCount(category){return DATA.reduce((n,r)=>n+(inventoryCategory(r.id)===category?UW(r.id):0),0);}
 function ensureTags(){let ch=false;
   for(const [key,name,color] of [['custom','Custom','#9b72cf'],['sold_off_market','Sold Off Market','#777777']]){
@@ -1651,7 +1666,7 @@ function readyFinCount(sp,pu){let n=0;for(const id in state.points){if(!mById[id
 function matchSel(tags,k,id){
   const category=inventoryCategory(id);
   if(k==='G:custom'||k==='G:sold_off_market')return category===k.slice(2);
-  if(category)return false;
+  if(category)return category==='needs_clarification'&&(k==='L:needs_clarification'||k==='T:needs_clarification');
   const bld=CONSTRUCTION_PHASES.some(p=>tags.includes(p));
   const building=BUILD_PHASES.some(p=>tags.includes(p));
   if(k==='G:deed')return tags.includes('deed');
@@ -2035,12 +2050,11 @@ function buildTimeline(){
   DATA.filter(inPipeline).forEach(r=>{const s=primaryStage(r.id);
     if(s==='deed'){deedN++;return;}
     if(!tlMatch(r.id))return;
-    const ml=monthsLeft(r.id),eta=inspectionEta(r); if((ml===null||ml===undefined)&&!eta.overdue){noStage++;return;}
+    const ml=monthsLeft(r.id),eta=inspectionEta(r); if(ml===null||ml===undefined){noStage++;return;}
     let key,label,ord;
-    if(eta.overdue){key='overdue';label='OVERDUE VS TYPICAL PACE';ord=998;}
-    else if(ml<=0){key='now';label='AVAILABLE NOW';ord=10000;}
+    if(ml<=0){key='now';label='AVAILABLE NOW';ord=10000;}
     else if(ml>12){key='p12';label='12+ MONTHS OUT';ord=999;}
-    else{const d=eta.target?new Date(eta.target+'T00:00:00'):new Date(base.getFullYear(),base.getMonth()+Math.ceil(ml),1);key='m'+d.getFullYear()+'-'+d.getMonth();label=d.toLocaleString('en-US',{month:'short',year:'numeric'}).toUpperCase();ord=ml;}
+    else{const d=eta.target?new Date(eta.target+'T00:00:00'):new Date(base.getFullYear(),base.getMonth()+Math.ceil(ml),1);key='m'+d.getFullYear()+'-'+d.getMonth();label=d.toLocaleString('en-US',{month:'short',year:'numeric'}).toUpperCase();ord=d.getFullYear()*12+d.getMonth()-(base.getFullYear()*12+base.getMonth());}
     (buckets[key]=buckets[key]||{label:label,ord:ord,ml:ml,items:[]}).items.push(r);});
   const arr=Object.values(buckets).sort((a,b)=>a.ord-b.ord);
 
@@ -2260,7 +2274,7 @@ function renderSupplyCard(){
   const foot=document.getElementById('sc-foot');
   if(foot){const permits=DATA.reduce((a,r)=>a+(r.kind==='permit'?(r.units||1):0),0);const sold=SOLD_DATA.length;
     foot.textContent=DATA.reduce((a,r)=>a+(r.units||1),0)+' homes · '+permits+' permits · '+sold+' closed sales';}
-  if(foot)foot.textContent+=' · Excluded: '+categoryCount('custom')+' Custom / '+categoryCount('sold_off_market')+' Sold Off Market';
+  if(foot)foot.textContent+=' · Excluded: '+categoryCount('custom')+' Custom / '+categoryCount('sold_off_market')+' Sold Off Market / '+categoryCount('needs_clarification')+' Needs Clarification';
 }
 // Ready-within toggle: filter map pins to homes reaching market within N months
 function applyReadyFilter(){
