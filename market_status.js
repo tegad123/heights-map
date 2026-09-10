@@ -23,6 +23,7 @@ function marketFacts(r){
     const e=marketEvidence(member), c=e.current;
     h+='<div data-market-member="'+esc(member.id)+'" style="margin-top:8px"><b>'+esc(member.a)+'</b><br><strong>'+MARKET_LABELS[e.status]+'</strong>';
     if(c){
+      if(c.har_status)h+='<br>HAR status: '+esc(c.har_status);
       h+='<br>MLS '+esc(c.mls)+' · '+esc(c.product);
       h+='<br>Original list price: $'+Number(c.original_list_price).toLocaleString()+' · DOM: '+c.dom+' days';
       if(c.close_date)h+='<br>Closed '+esc(c.close_date)+' · $'+Number(c.close_price).toLocaleString();
@@ -31,7 +32,7 @@ function marketFacts(r){
     else h+='<br>'+(MARKET_VIEW.available?'No matching evidence in the supplied exports; availability unverified.':'No market-status export supplied for this market.');
     if(e.history?.length){
       h+='<details open class="listing-history"><summary>'+(e.ordering_issue?'Listing history · order unverified':'Prior listing history')+' · '+e.history.length+'</summary>';
-      for(const old of e.history)h+='<div>'+MARKET_LABELS[old.status]+' · MLS '+esc(old.mls)+' · '+old.dom+' DOM'+(old.close_date?' · closed '+esc(old.close_date):' · event date unavailable')+'</div>';
+      for(const old of e.history)h+='<div>'+esc(old.har_status||MARKET_LABELS[old.status])+' · MLS '+esc(old.mls)+' · '+old.dom+' DOM'+(old.close_date?' · closed '+esc(old.close_date):' · event date unavailable')+'</div>';
       h+='</details>';
     }
     if(e.ordering_issue)h+='<div class="pmeta">Multiple '+esc(MARKET_LABELS[e.status])+' listings lack event dates. Latest MLS order requires review; displayed MLS is a reference.</div>';
@@ -55,11 +56,29 @@ popupHTML=function(r){
 };
 // Finished is a display partition; construction certification and forecasts are unchanged.
 const FINISHED_LABELS={active:'Finished on Market',pending:'Finished Pending',sold:'Finished Sold',terminated:'Finished Terminated',no_record:'Finished, No Market Record'};
+const FINISHED_COLORS={active:'#006B4F',pending:'#26A269',sold:'#74C69D',terminated:'#456B58',no_record:'#B7E4C7'};
+function finishedPinColor(id){
+  if(!MARKET_VIEW.ready||inventoryCategory(id)||homePhase(id)!=='complete')return null;
+  const statuses=marketMembers(byId[id]).map(m=>marketEvidence(m).status);
+  if(UW(id)>statuses.length)statuses.push('no_record');
+  const selected=[...activeF].filter(k=>k.startsWith('F:')).map(k=>k.split(':')[1]);
+  const status=selected.find(s=>statuses.includes(s))||['sold','pending','active','terminated','no_record'].find(s=>statuses.includes(s));
+  return FINISHED_COLORS[status||'no_record'];
+}
+function otherMarketMatch(tags,key,id){
+  if(inventoryCategory(id))return false;
+  const phase=homePhase(id),statuses=marketMembers(byId[id]).map(m=>marketEvidence(m).status);
+  if(key==='O:pending')return phase!=='complete'&&(statuses.includes('pending')||(tags.includes('pending')&&statuses.includes('no_record')));
+  if(key==='O:unverified')return tags.some(t=>t==='off_market_single'||t==='off_market_split')&&statuses.includes('no_record');
+  if(key==='O:unphased')return !phase&&statuses.some(s=>s!=='no_record');
+  return false;
+}
 function finishedRows(){
   return marketRows().filter(r=>r.phase==='complete').map(r=>({...r,product:typeKeyOf(r.pin)||'Unknown'}));
 }
 const marketOriginalMatch=matchSel;
 matchSel=function(tags,key,id){
+  if(key.startsWith('O:'))return otherMarketMatch(tags,key,id);
   const complete=!inventoryCategory(id)&&homePhase(id)==='complete';
   if(key==='G:finished')return complete;
   if(key.startsWith('F:')){
@@ -84,12 +103,12 @@ function renderFinishedSection(){
   let html='<div class="grp-h'+sOn('G:finished')+'" data-col="finished"><span class="chev2">▼</span><span class="mbox'+sOn('G:finished')+'" data-sel="G:finished"></span><span class="gn">Finished</span><span class="ct2">'+rows.length+'</span></div><div class="grp-body">';
   for(const [status,label] of Object.entries(FINISHED_LABELS)){
     const statusRows=rows.filter(r=>r.status===status),key='F:'+status,col='finished:'+status;
-    html+='<div class="subg'+(collapsed.has(col)?' col':'')+'"><div class="subg-h'+sOn(key)+'" data-col="'+col+'"><span class="chev2">▼</span><span class="mbox'+sOn(key)+'" data-sel="'+key+'"></span><span class="sn">'+esc(label)+'</span><span class="ct2">'+statusRows.length+'</span></div><div class="subg-body">';
+    html+='<div class="subg'+(collapsed.has(col)?' col':'')+'"><div class="subg-h'+sOn(key)+'" data-col="'+col+'"><span class="chev2">▼</span><span class="mbox'+sOn(key)+'" data-sel="'+key+'"></span><span class="sw" style="background:'+FINISHED_COLORS[status]+'"></span><span class="sn">'+esc(label)+'</span><span class="ct2">'+statusRows.length+'</span></div><div class="subg-body">';
     const products=TYPES.map(([,label])=>label);
     if(statusRows.some(r=>r.product==='Unknown'))products.push('Unknown');
     for(const product of products){
       const child=key+':'+product,count=statusRows.filter(r=>r.product===product).length;
-      html+='<div class="leafrow'+sOn(child)+'" data-sel="'+child+'"><span class="mbox'+sOn(child)+'"></span><span class="nm">'+esc(product==='Unknown'?'Needs Clarification':product)+'</span><span class="ct2">'+count+'</span></div>';
+      html+='<div class="leafrow'+sOn(child)+'" data-sel="'+child+'"><span class="mbox'+sOn(child)+'"></span><span class="sw" style="background:'+FINISHED_COLORS[status]+'"></span><span class="nm">'+esc(product==='Unknown'?'Product type unknown':product)+'</span><span class="ct2">'+count+'</span></div>';
     }
     html+='</div></div>';
   }
@@ -101,7 +120,7 @@ function renderFinishedSection(){
   });
   return root;
 }
-// Further Layers hierarchy changes require explicit user approval.
+// Other cleanup approved with the 2026-09-10 market/backfill audit.
 const marketOriginalLegend=renderLegend;
 renderLegend=function(){
   marketOriginalLegend();
@@ -117,8 +136,27 @@ renderLegend=function(){
   if(onMarket&&other){
     onMarket.title='Existing Single Lot on-market/building filter; overlaps construction phases';
     other.querySelector('.grp-body').appendChild(onMarket);
-    other.querySelector('.grp-h > .ct2').textContent=other.querySelectorAll('.grp-body > .leafrow').length;
+
   }
+  if(other){
+    other.querySelectorAll('[data-sel="L:pending"],[data-sel="L:off_market_single"],[data-sel="L:off_market_split"]').forEach(e=>e.remove());
+    const review=other.querySelector('[data-sel="L:needs_clarification"] .nm');
+    if(review)review.textContent='Flagged for review';
+    const rows=[['O:pending','Pending, not Complete','#d6336c'],['O:unverified','Off market, status unverified','#8a8f98'],['O:unphased','Market evidence, no construction phase','#67826a']];
+    for(const [key,label,color] of rows){
+      const row=document.createElement('div');row.className='leafrow'+sOn(key);row.dataset.sel=key;
+      row.innerHTML='<span class="mbox'+sOn(key)+'"></span><span class="sw" style="background:'+color+'"></span><span class="nm">'+esc(label)+'</span><span class="ct2">'+constructionPanelCount(key)+'</span>';
+      row.addEventListener('click',()=>{activeF.has(key)?activeF.delete(key):activeF.add(key);renderLegend();refresh();});
+      other.querySelector('.grp-body').appendChild(row);
+    }
+    const keys=[...other.querySelectorAll('.leafrow')].map(r=>r.dataset.sel);
+    const count=DATA.reduce((n,r)=>n+(mById[r.id]&&keys.some(k=>matchSel(pt(r.id).tags,k,r.id))?UW(r.id):0),0);
+    other.querySelector('.grp-h > .ct2').textContent=count;
+    other.querySelector('.grp-h').title='Distinct represented homes; overlapping rows count once';
+  }
+  const unknown=legend.querySelector('[data-sel="UCT:nc"] .nm');if(unknown)unknown.textContent='Product type unknown';
+  // Repaint after evidence arrives, shared edits merge, or a Finished filter changes.
+  for(const marker of markers)marker.setStyle(mkStyle(marker._rec.id));
 };
 function marketSnapshot(){
   const forecast=comingOnline(12),ids=new Set(forecast.homes.map(r=>r.id));

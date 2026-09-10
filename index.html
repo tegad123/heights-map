@@ -1000,6 +1000,7 @@ function fmtPhone(n){const d=(n||'').replace(/[^\d]/g,'').replace(/^1/,'');retur
 const GROUP_C={uc_single:'#e8590c',uc_split:'#8e5bd0',act:'#2f9e44',act_uc:'#eab308',deed:'#1971c2',pmt:'#868e96',cd:'#be4bdb'};
 const pinColor=id=>{const t=pt(id).tags;
   if(inventoryCategory(id))return inventoryCategory(id)==='custom'?'#9b72cf':'#777777';
+  if(typeof finishedPinColor==='function'){const finished=finishedPinColor(id);if(finished)return finished;}
   if(t.includes('pending'))return '#d6336c';
   if(t.includes('needs_clarification'))return '#f03e3e';
   // off-market outranks any residual listed/market/phase tag (those are preserved
