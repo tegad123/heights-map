@@ -137,4 +137,26 @@ Timeline fixtures pass unchanged: Harvard 21 days overdue (~8 months 3 weeks tot
 - Non-sold event dates are absent; same-status chronology cannot be established from DOM or MLS number.
 - DUP_ADDR merge remains deferred; no merge design or duplicate-pin insertion attempted.
 - Market coverage is limited to this supplied export; No Market Record is not proof of unsold inventory.
-- Live CI and spot verification results will be appended after push.
+
+
+## Deployment and live verification
+
+Pushed `3b59c73..2024706` to `origin main`; Netlify CI deployed the full tree. Commits: `d906de2` ingest code, `951aa08` market data, `75a0686` permit data, `e3220da` display code, `2024706` audit. Every intended application/data file was checked against the committed blob. No API deploy or empty rebuild commit was needed.
+
+`python -B tests/backfill_browser.py --checks --live https://tangerine-sorbet-eca5f5.netlify.app --output pulls/market_backfill_20260910/live.json` exited 0. Actual popup output in `pulls/market_backfill_20260910/live.log`:
+
+```text
+LIVE SPOT act_715-merrill
+Active; MLS 88557637; Prior listing history: Terminated MLS 50361472
+LIVE SPOT pmt_742-allston-st-77007
+No Market Record; project 26018730; Exterior
+LIVE SPOT pmt_406-columbia-st-77007
+Sold; COMPLETE
+LIVE SPOT pmt_4327-center-st-77007
+No Market Record; COMPLETE
+errors []
+```
+
+Live JS, market snapshot, and inspection feed are byte-identical. Netlify rewrites HTML navigation URLs (`index.html` → `/`, etc.); all embedded application scripts are identical, so an exact whole-HTML byte comparison is inappropriate. Screenshots were captured and inspected. Live checks use the same fixed clock and empty shared-edit response as deterministic tests; actual shared-edit counts are separately reported above. All non-GET browser requests are blocked during verification.
+
+Final reapplication of both importers returned `changed_files: []`; SHA256 hashes of index.html, heights_market_status.data.json, heights_permits.json, and inspections.json stayed identical (`pulls/market_backfill_20260910/idempotency.log`).

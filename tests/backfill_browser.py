@@ -60,9 +60,11 @@ def run(args):
    ids=['act_715-merrill',result['allston'][0]['id']]
    ids += [next(r['id'] for r in arrivals if r['runtime_phase']=='complete' and (r['status']=='no_record')==unknown) for unknown in (False,True)]
    for identifier in ids:
-    p.evaluate('(id)=>openPin(id)',identifier);p.wait_for_timeout(300)
+    p.evaluate('(id)=>{openPin(id);}',identifier)
+    p.wait_for_function('(id)=>document.querySelector(".leaflet-popup-content .card")?.dataset.pid===id',arg=identifier)
+    p.wait_for_timeout(300)
     text=p.locator('.leaflet-popup-content').inner_text();print('LIVE SPOT',identifier,text[:1900],flush=True)
-    p.screenshot(path='/tmp/backfill-'+identifier+'.png');p.evaluate('map.closePopup()')
+    p.screenshot(path='/tmp/backfill-'+identifier+'.png');p.evaluate('()=>{map.closePopup();}')
   browser.close()
  server.shutdown();result['errors']=errors;assert not errors
  pathlib.Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
