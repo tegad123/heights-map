@@ -217,6 +217,12 @@ master size). Street-number adjacency alone is NOT verified unit evidence.
         code = 'UNVERIFIED_PLAT'
     if code is None and candidate == 'Single Lot' and proven_split:
         code = 'PARCEL_HISTORY_CONFLICT'
+    # Near the decision boundary, projection/coordinate quantization must not
+    # choose between development forms. Exact legacy semantics remain above.
+    depth_decides = units < 3 and (master_size or 0) < 3 and (units == 2 or master_size == 2 or fam == 'Split')
+    if code is None and depth_decides and parcel.get('depth_method') and abs(depth - FULL_DEPTH) <= 0.01:
+        code = 'DEPTH_BOUNDARY_UNCERTAIN'
+        detail += '; measured depth within 0.01 ft of 100-ft boundary'
     if code is None and candidate == 'Single Lot' and units != 1:
         code = 'CONFLICTING_UNITS'
     return dict(product='Unknown' if code else candidate,

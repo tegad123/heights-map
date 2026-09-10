@@ -58,6 +58,7 @@ def run(args):
                 if row['key'] in result['panelExpected']:assert row['count']==result['panelExpected'][row['key']],row
             assert sum(result['panelExpected'].values())+result['ucUnknown']==result['uc']
             assert sum(result['finishedCounts'])==result['finishedHeader']
+            assert p.evaluate("""()=>{const rows=finishedRows();return [...document.querySelectorAll('[data-grp="finished"] .leafrow[data-sel]')].every(el=>{const [,status,product]=el.dataset.sel.split(':');return Number(el.querySelector('.ct2').textContent)===rows.filter(r=>r.status===status&&r.product===product).length;})&&rows.every(r=>r.product===(typeKeyOf(r.pin)||'Unknown'));}""")
             if name=='index':
                 assert (result['deeds'],result['sold'],result['custom'],result['sold_off_market'])==(139,791,19,1),{k:result[k] for k in ('deeds','sold','custom','sold_off_market')}
             if args.live:
@@ -65,7 +66,7 @@ def run(args):
                 actual=p.request.get(url+'?product-check=20260910').body()
                 assert re.findall(rb'<script\b[^>]*>(.*?)</script>',actual,re.S)==re.findall(rb'<script\b[^>]*>(.*?)</script>',(ROOT/(name+'.html')).read_bytes(),re.S),name
                 if name=='index':
-                    ids=['pmt_606-link-rd-f-77009','pmt_1308-edwards-st-a-77007','pmt_742-allston-st-77007','2131252760']
+                    ids=['pmt_606-link-rd-f-77009','pmt_809-w-18th-st-77008','pmt_742-allston-st-77007','2131252760']
                     # Fixture ID is selected from observed runtime address.
                     ids[-1]=next(r['id'] for r in result['rows'] if r['address'].startswith('837 W 25th'))
                     for rid in ids:
@@ -75,7 +76,7 @@ def run(args):
                         record=next(r for r in result['rows'] if r['id']==rid)
                         print('LIVE SPOT',json.dumps(record),text[:700],flush=True)
                         p.screenshot(path=str(Path(args.output).with_name('live-product-'+rid+'.png')))
-                        p.evaluate('()=>map.closePopup()')
+                        p.evaluate('()=>{map.closePopup();}')
             result['errors']=errors;assert not errors
             output[name]=result
             print(name,json.dumps({k:result[k] for k in ('products','homes','uc','ucUnknown','deeds','sold','finishedHeader')}),flush=True)

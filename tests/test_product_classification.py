@@ -52,6 +52,9 @@ class ProductTest(unittest.TestCase):
         self.assertEqual(product.classify('LT 7 BLK 18|SUNSET HEIGHTS',parcel=parcel)['product'],'Single Lot')
         self.assertEqual(product.classify('LT 1 BLK 1 UNKNOWN SUBDIVISION',parcel=parcel)['product'],'Unknown')
         self.assertEqual(product.classify('LT 7 BLK 18 SUNSET HEIGHTS',parcel=parcel,hold='plat risk')['reason_code'],'HELD_TRIAGE')
+        for depth in (99.9999,100,100.0001):
+            measured=dict(parcel,depth_ft=depth,depth_method='minimum rotated rectangle, longest side')
+            self.assertEqual(product.classify('TR 7A BLK 18 SUNSET HEIGHTS',parcel=measured)['reason_code'],'DEPTH_BOUNDARY_UNCERTAIN')
 
     def test_rotated_projected_depth_not_area_or_centroid(self):
         from pyproj import Transformer
