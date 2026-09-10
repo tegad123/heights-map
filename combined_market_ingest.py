@@ -32,7 +32,7 @@ def load(path, html, as_of):
         status=STATUS[raw['Status'].strip()]; mls=raw['MLS Number'].strip(); address=raw['Address'].strip()
         lat,lng=money(raw['Latitude']),money(raw['Longitude']); lot=money(raw['Lot Size'])
         close=parse_close(raw['Close Date']); reason=None
-        if not mls or not address or lat is None or lng is None or lot is None: raise ValueError(f'Invalid identity at {line}')
+        if not mls or not address or lat is None or lng is None: raise ValueError(f'Invalid identity at {line}')
         if status=='sold' and (not close or close>date.fromisoformat(as_of) or not money(raw['Close Price'])): raise ValueError(f'Invalid close at {line}')
         if status!='sold' and close: raise ValueError(f'Unexpected close at {line}')
         if mls in seen: reason='DUP_INPUT_MLS'
@@ -92,6 +92,17 @@ def run(args):
     # Existing resale comps are archival evidence, preserved byte-for-byte as objects.
     protected={r['id']:r for r in sold if r.get('coh')=='resale'}
     sales_input=[r for r in incoming if 's'+r['mls'] not in protected and not any(address_key(s['a'])==r['address_key'] and s['cd']==r['close_date'] for s in protected.values())]
+    # Cleanup refreshes may retain unmatched sales as evidence without new comps.
+    policy=getattr(args,'sale_policy','all'); deferred_sales=[]
+    if policy!='all':
+        matcher=Matcher(source,runtime)
+        kept=[]
+        for rec in sales_input:
+            existing=any(s['id']=='s'+rec['mls'] or (address_key(s['a'])==rec['address_key'] and s['cd']==rec['close_date']) for s in sold)
+            linked=matcher.match(rec)['member'] in matcher.members
+            if rec['status']!='sold' or rec['exclusion'] or existing or linked:kept.append(rec)
+            else:deferred_sales.append(dict(mls=rec['mls'],address=rec['address'],reason='COMP_NOT_ADDED_POLICY',detail='Retained as market evidence; no new comp under '+policy,raw=rec['raw']))
+        sales_input=kept
     merged,sale_report=legacy.merge_sales(sold,sales_input)
     if sale_report['conflicts']: raise ValueError(sale_report['conflicts'])
     assert all(next(s for s in merged if s['id']==k)==v for k,v in protected.items())
@@ -109,15 +120,15 @@ def run(args):
     before={address_key(p['current']['address']):p['status'] for p in old['properties'].values()}
     multi={address_key(r['address']) for r in incoming if sum(address_key(s['address'])==address_key(r['address']) for s in incoming)>1}
     changes=[dict(address=p['current']['address'],before=before.get(address_key(p['current']['address'])),after=p['status']) for p in snap['properties'].values() if address_key(p['current']['address']) in multi and before.get(address_key(p['current']['address']))!=p['status']]
-    report=dict(profile=profile,counts=dict(counts),exclusions=dict(Counter(r['REASON'] for r in ledger)),sold_before=len(sold),sold_after=len(merged),resale_preserved=len(protected),sales=sale_report,market_records=len(records),normalized_multilisting=len(multi),multilisting_status_changes=changes,finished=dict(Counter(r['status'] for r in snap['complete'])),changed_files=changed,actions=actions)
+    report=dict(sale_policy=policy,deferred_sales=deferred_sales,profile=profile,counts=dict(counts),exclusions=dict(Counter(r['REASON'] for r in ledger)),sold_before=len(sold),sold_after=len(merged),resale_preserved=len(protected),sales=sale_report,market_records=len(records),normalized_multilisting=len(multi),multilisting_status_changes=changes,finished=dict(Counter(r['status'] for r in snap['complete'])),changed_files=changed,actions=actions)
     if args.output:
         out=Path(args.output); out.mkdir(parents=True,exist_ok=True); (out/'report.json').write_text(legacy.jsontxt(report))
     if args.apply:
         for p,t in outputs.items():
             if str(p.relative_to(ROOT)) in changed: p.write_text(t)
-    print(legacy.jsontxt({k:v for k,v in report.items() if k not in ('actions','multilisting_status_changes','sales')}))
+    print(legacy.jsontxt({k:v for k,v in report.items() if k not in ('actions','multilisting_status_changes','sales','deferred_sales')}))
     return report
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser(); ap.add_argument('--input',default='bigexportofallhouses.csv'); ap.add_argument('--runtime',required=True)
-    ap.add_argument('--as-of',default='2026-09-10'); ap.add_argument('--output'); ap.add_argument('--apply',action='store_true'); run(ap.parse_args())
+    ap.add_argument('--as-of',default='2026-09-10'); ap.add_argument('--output'); ap.add_argument('--apply',action='store_true'); ap.add_argument('--sale-policy',choices=['all','tracked'],default='all'); run(ap.parse_args())
