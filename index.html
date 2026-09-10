@@ -1561,6 +1561,7 @@ function popupHTML(r){
   h+='</div></div>';
   // notes — split into structured field boxes + free-text remainder
   h+='<div style="margin-top:12px"><div class="lbl">Notes</div>';
+  if(r.review_note)h+='<div class="notebox"><strong>Flagged for review</strong><br>'+esc(r.review_note)+'</div>';
   h+=noteFields(p.notes);
   {const ft=noteFreeText(p.notes);
    if(VIEWER){ if(ft) h+='<div class="notebox">'+esc(ft)+'</div>'; h+='</div>'; }
