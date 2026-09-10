@@ -2,7 +2,7 @@
 import sys,json,re
 from pathlib import Path
 from playwright.sync_api import sync_playwright
-ROOT=Path(__file__).resolve().parents[1];W=ROOT/'pulls/unfiltered_20260910';stage=W/'stage';live='--live' in sys.argv;shared=json.load(open(W/'shared.json'))
+ROOT=Path(__file__).resolve().parents[1];W=ROOT/'pulls/unfiltered_20260910';stage=W/'stage';live='--live' in sys.argv;once='--once' in sys.argv;shared=json.load(open(W/'shared.json'))
 from collections import Counter
 html=(ROOT/'index.html').read_text();candidate=(stage/'index.html').read_text()
 def data(s):
@@ -11,13 +11,13 @@ assert data(html)==data(candidate)
 results=[]
 with sync_playwright() as pw:
  b=pw.chromium.launch()
- for run in range(3):
+ for run in range(1 if once else 3):
   p=b.new_page()
   def route(r):
    name=r.request.url.split('?')[0].split('/')[-1]
    if r.request.method!='GET':r.abort()
    elif 'script.google' in r.request.url:r.fulfill(json=shared)
-   elif not live and name in ['index.html','heights_market_status.data.json']:r.fulfill(body=(stage/name).read_text(),content_type='text/html' if name.endswith('.html') else 'application/json')
+   elif not live and name in ['index.html','heights_market_status.data.json']:r.fulfill(body=((ROOT if once and name=='index.html' else stage)/name).read_text(),content_type='text/html' if name.endswith('.html') else 'application/json')
    elif not live and name=='market_status.js':r.fulfill(body=(ROOT/name).read_text(),content_type='application/javascript')
    else:r.continue_()
   p.route('**/*',route);p.add_init_script("{const D=Date;window.Date=class extends D{constructor(...a){super(...(a.length?a:['2026-09-09T12:00:00-05:00']));}static now(){return new D('2026-09-09T12:00:00-05:00').getTime();}};}")
@@ -29,7 +29,7 @@ with sync_playwright() as pw:
   assert j['merrill']['status']=='active' and any(x['mls']=='50361472' for x in j['merrill']['history']);assert j['unitA']['status']=='active' and j['unitA']['current']['mls']=='34333707';assert j['allston'];assert j['geometryCheck'];assert j['map']==j['overview'];assert sum(j['finishedCount'].values())==j['finishedHeader'];assert (j['custom'],j['soldOff'],j['deeds'])==(19,1,138)
   assert [r['status'] for r in j['spots']]==['active','no_record','active'];j['checks']=checks;results.append(j);p.close()
  b.close()
-assert results[0]==results[1]==results[2]
+assert all(r==results[0] for r in results)
 baseline=json.load(open(W/'runtime.json'))['index'];a={r['id']:r['phase'] for r in baseline['rows']};assert all(a[r['id']]==r['phase'] for r in results[0]['rows']);assert baseline['homes']==results[0]['homes'] and baseline['pins']==results[0]['pins']
 (W/('live-validation.json' if live else 'preview-validation.json')).write_text(json.dumps(results[0],indent=2))
-print(('LIVE ' if live else 'PREVIEW ')+'PASS THREE IDENTICAL CHECKS',json.dumps({k:v for k,v in results[0].items() if k not in ['rows','market','finished','merrill','unitA','spots','checks']}));print('MONOTONICITY',results[0]['checks'][0]['detail'])
+print(('LIVE ' if live else 'PREVIEW ')+('PASS ONE HEIGHTS CHECK' if once else 'PASS THREE IDENTICAL CHECKS'),json.dumps({k:v for k,v in results[0].items() if k not in ['rows','market','finished','merrill','unitA','spots','checks']}));print('MONOTONICITY',results[0]['checks'][0]['detail'])

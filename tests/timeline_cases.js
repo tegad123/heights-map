@@ -16,11 +16,12 @@ options=>{
  check('Stage counts are finite',Object.values(phaseBreakdown()).every(Number.isFinite));
  const oldFraming=phaseTimeline('framing',timelineDate(today-35));
  const freshFraming=phaseTimeline('framing',timelineDate(today));
- check('Five-week Framing is two weeks later than fresh Framing',oldFraming.remainingDays-freshFraming.remainingDays===14,{oldFraming,freshFraming});
+ check('Framing elapsed-time arithmetic',options.heights?oldFraming.remainingDays===freshFraming.remainingDays-14:oldFraming.remainingDays-freshFraming.remainingDays===14,{oldFraming,freshFraming});
  const oldExterior=phaseTimeline('exterior',timelineDate(today-200));
- check('Overdue can legitimately reorder phases',oldExterior.remainingDays>freshFraming.remainingDays);
+ check('Overdue phase ordering',options.heights?oldExterior.remainingDays<freshFraming.remainingDays:oldExterior.remainingDays>freshFraming.remainingDays);
  const stalledFinals=phaseTimeline('mep_finals',timelineDate(today-154));
- check('22-week MEP Finals stall stays at six weeks remaining',stalledFinals.remainingDays===42&&stalledFinals.overdueDays===133&&stalledFinals.overdueAdjustmentDays===21);
+ check('22-week MEP Finals stall remains bounded',stalledFinals.remainingDays===(options.heights?7:42)&&stalledFinals.overdueDays===133&&stalledFinals.overdueAdjustmentDays===(options.heights?0:21));
+ if(options.heights){let violations=0;for(const phase of CONSTRUCTION_PHASES.filter(p=>p!=='complete')){let prior=Infinity;for(let elapsed=0;elapsed<=730;elapsed++){const t=phaseTimeline(phase,timelineDate(today-elapsed));if(t.remainingDays>prior)violations++;prior=t.remainingDays;}}check('Earlier phase entry never gives a later completion: 5,117 samples',violations===0,{violations});}
  check('Overdue contribution never exceeds current phase duration',rows.every(x=>x.eta.remainingDays===null||x.eta.overdueAdjustmentDays<=x.eta.duration));
  check('INT.CAB through Complete is exactly 135 days',PHASE_DAYS.interior+PHASE_DAYS.mep_finals===135);
  check('Invalid anchor refused',phaseTimeline('framing',null)===null);
@@ -31,7 +32,7 @@ options=>{
   const h=get('26022264'),w=get('26009059'),n=get('25118994');
   check('Harvard: three weeks overdue, later than 629',h.eta.overdueDays===21&&h.eta.target>w.eta.target,{harvard:h.eta.target,windstorm:w.eta.target});
   check('629: Partial windstorm is exterior and about 6.5 months',w.phase==='exterior'&&w.eta.months===6.5);
-  check('822: overdue for roughs and later than 629',n.eta.overdueDays>0&&n.eta.target>w.eta.target);
+  check('822: overdue for roughs and no later than fresh 629',n.eta.overdueDays>0&&n.eta.target<=w.eta.target);
   check('711: 135 days from insulation is approximately January 2027',get('26011885').eta.target==='2026-12-30');
   const no=rows.find(x=>x.r.id==='2131194125');check('830 E 26th no permit/no phase/no ETA',no?.phase===null&&no.eta.target===null);
   const oldPhase=inspPhase,oldEta=inspectionEta,oldComplete=completionFinal;

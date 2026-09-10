@@ -1120,11 +1120,10 @@ function phaseTimeline(phase,anchorDate,now=new Date()){
   if(day===null||index<0||phase==='complete')return null;
   const duration=PHASE_DAYS[phase],elapsed=Math.max(0,today-day);
   const following=CONSTRUCTION_PHASES.slice(index+1).reduce((n,k)=>n+PHASE_DAYS[k],0);
-  const nextDays=Math.max(0,duration-elapsed),overdueDays=Math.max(0,elapsed-duration);
-  // Elapsed idle time is evidence of a stall, not additional construction work.
-  // Keep the full overdue signal, but bound its ETA contribution to one phase.
-  const overdueAdjustmentDays=Math.min(overdueDays,duration);
-  const baseDays=(overdueDays>0?duration:nextDays)+following,remainingDays=baseDays+overdueAdjustmentDays;
+  const nextDays=Math.max(7,duration-elapsed),overdueDays=Math.max(0,elapsed-duration);
+  // Unfinished phase work has a one-week floor; idle time adds no construction work.
+  const overdueAdjustmentDays=0;
+  const baseDays=nextDays+following,remainingDays=baseDays;
   return {duration,elapsed,nextDays,overdueDays,overdueAdjustmentDays,baseDays,remainingDays,
     anchorTarget:timelineDate(day+duration+following),baseTarget:timelineDate(today+baseDays),
     target:timelineDate(today+remainingDays),nextPhase:CONSTRUCTION_PHASES[index+1],
@@ -2152,8 +2151,8 @@ function askContext(){
     else if(phx)uc_breakdown[key][phx]++;}
   agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
   // Phase cohorts describe present construction evidence. Completion estimates use
-  // inspection-date anchors; overdue homes retain their phase; ETA delay is capped at one phase duration.
-  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + standard remaining durations + capped overdue']));
+  // inspection-date anchors; overdue homes retain their phase; elapsed time reduces remaining phase work.
+  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + elapsed-adjusted remaining durations']));
   const mk=()=>({ready_now:0,by_phase_cohort:Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0])),cohort_ranges:COHORT_RANGE,done_within:{}});
   const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'Common Driveway':mk(), 'ALL':mk() };
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];
