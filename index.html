@@ -761,6 +761,16 @@ window._DROPPED=new Set();
   const unitOf=a=>{const m=String(a).toLowerCase().match(/\b(?:unit#?\s*|#\s*)?([a-f])(?:\s*\(est\))?(?:\s*(?:,|$)|\s+\d{5}\b)/);return m?m[1]:null;};
   const near=(a,b)=>{const dx=(a.lat-b.lat)*111320,dy=(a.lng-b.lng)*111320*Math.cos(a.lat*Math.PI/180);return Math.hypot(dx,dy)<90;};
   const splits=DATA.filter(isSplit), used=new Set(), pairs=[];
+  // Client-specified pairs use this same twin merge, without heuristic inference.
+  const clientPairKeys=new Set();
+  for(const r of DATA){
+    const ids=r.product_classification?.source==='client'&&r.product_classification.client_pair;
+    if(!Array.isArray(ids)||ids.length!==2||ids[0]!==r.id)continue;
+    const sibling=DATA.find(x=>x.id===ids[1]);
+    if(!sibling){console.warn('[client pair] missing sibling',ids);continue;}
+    pairs.push([r,sibling]);used.add(r.id);used.add(sibling.id);
+    clientPairKeys.add(ids.slice().sort().join('|'));
+  }
   const byProj={}; splits.forEach(r=>{const p=projOf(r); if(p)byProj[p]=r;});
   for(const r of splits){ if(used.has(r.id)||r._noPair)continue; const ref=masterRef(r); if(!ref)continue;
     const m=byProj[ref]; if(!m||m.id===r.id||used.has(m.id)||!near(r,m))continue;
@@ -772,7 +782,7 @@ window._DROPPED=new Set();
       const ok=(na===nb&&ua&&ub&&ua!==ub)||(Math.abs(na-nb)===2&&(na%2)===(nb%2)&&!ua&&!ub);
       if(ok){pairs.push([a,b]);used.add(a.id);used.add(b.id);break;}}}
   for(const pr of pairs){
-    const key=[pr[0].id,pr[1].id].sort().join('|'); if(off.has(key))continue;
+    const key=[pr[0].id,pr[1].id].sort().join('|'); if(off.has(key)&&!clientPairKeys.has(key))continue;
     const isM=r=>/M(?:ST)?\s+OF\s+\d/i.test((r.permits&&r.permits[0]&&r.permits[0].desc)||'');
     let m=pr[0],s=pr[1];
     if(!isM(m)&&isM(s)){m=pr[1];s=pr[0];}
@@ -1292,7 +1302,7 @@ const recolor=id=>{const m=mById[id]; if(m) m.setStyle(mkStyle(id));};
 // ---- EDIT MODE (Spencer 2026-07-23): flip VIEWER, drag pins, product/stage edits, export ----
 if(!state.fieldEdits)state.fieldEdits={};
 if(!state.posEdits)state.posEdits={};
-function applyFieldEdits(){for(const id in state.fieldEdits){const r=byId[id];if(!r)continue;const e=state.fieldEdits[id];
+function applyFieldEdits(){for(const id in state.fieldEdits){const r=byId[id];if(!r||r.product_classification?.source==='client')continue;const e=state.fieldEdits[id];
   if('prod' in e){if(e.prod){r.prod=e.prod;if(e.prod==='Split Lot')r.ty='active_split';else if(e.prod==='Single Lot')r.ty='active_single';else delete r.ty;}else{delete r.prod;delete r.ty;}}}}
 function applyPosEdits(){for(const id in state.posEdits){const p=state.posEdits[id];
   // zone guard for drag edits: an accidental drag can fling a pin outside the boundary
