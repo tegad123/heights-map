@@ -64,7 +64,8 @@ const FINISHED_COLORS={active:'#006B4F',pending:'#26A269',sold:'#74C69D',termina
 function finishedPinColor(id){
   if(!MARKET_VIEW.ready||inventoryCategory(id)||!finishedPlacement(byId[id]))return null;
   const statuses=marketMembers(byId[id]).map(m=>marketEvidence(m).status).filter(s=>!PANEL_RESTRUCTURED||s!=='sold');
-  if(UW(id)>statuses.length)statuses.push('no_record');
+  if(!PANEL_RESTRUCTURED&&UW(id)>statuses.length)statuses.push('no_record');
+  if(!statuses.length)return null;
   const selected=[...activeF].filter(k=>k.startsWith('F:')).map(k=>k.split(':')[1]);
   const status=selected.find(s=>statuses.includes(s))||['sold','pending','active','terminated','no_record'].find(s=>statuses.includes(s));
   return FINISHED_COLORS[status||'no_record'];
@@ -88,20 +89,20 @@ function soldInventoryPin(id){
   return members.length>=UW(id)&&members.every(m=>marketEvidence(m).status==='sold');
 }
 function finishedRows(){
-  return marketRows().filter(r=>finishedPlacement(byId[r.pin])&&(!PANEL_RESTRUCTURED||r.status!=='sold')).map(r=>({...r,product:typeKeyOf(r.pin)||'Unknown'}));
+  return marketRows().filter(r=>finishedPlacement(byId[r.pin])&&(!PANEL_RESTRUCTURED||(r.member!=null&&r.status!=='sold'))).map(r=>({...r,product:typeKeyOf(r.pin)||'Unknown'}));
 }
 
 const marketOriginalMatch=matchSel;
 matchSel=function(tags,key,id){
   if(key.startsWith('O:'))return otherMarketMatch(tags,key,id);
-  const complete=finishedPlacement(byId[id])&&(!PANEL_RESTRUCTURED||!soldInventoryPin(id));
+  const complete=finishedPlacement(byId[id])&&(!PANEL_RESTRUCTURED||marketMembers(byId[id]).some(m=>marketEvidence(m).status!=='sold'));
   if(key==='G:finished')return complete;
   if(key.startsWith('F:')){
     if(!complete)return false;
     const [,status,product]=key.split(':');
     if(product&&(typeKeyOf(id)||'Unknown')!==product)return false;
     const members=marketMembers(byId[id]);
-    return members.some(m=>marketEvidence(m).status===status)||(status==='no_record'&&UW(id)>members.length);
+    return members.some(m=>marketEvidence(m).status===status)||(!PANEL_RESTRUCTURED&&status==='no_record'&&UW(id)>members.length);
   }
   if(PANEL_RESTRUCTURED&&soldInventoryPin(id))return false;
   if(key==='G:uc'||key.startsWith('UCT:')||(PANEL_RESTRUCTURED&&key.includes('|')))return !complete&&marketOriginalMatch(tags,key,id);
