@@ -1,0 +1,39 @@
+address,product,member,project_evidence,needs
+"737 W 21st St C, Houston, TX 77008",Common Driveway,pmt_737-w-21st-st-c-77008,Permits 25075678; master 25075677; siblings: 737 W 21st St B (active); 737 W 21st St A (no_record); 737 W 21st St D (no_record),Unit-specific listing or closing evidence
+"737 W 21st St A, Houston, TX 77008",Common Driveway,pmt_737-w-21st-st-a-77008,Permits 25075680; master 25075677; siblings: 737 W 21st St C (no_record); 737 W 21st St B (active); 737 W 21st St D (no_record),Unit-specific listing or closing evidence
+"737 W 21st St D, Houston, TX 77008",Common Driveway,pmt_737-w-21st-st-d-77008,Permits 25075677; master 25075677; siblings: 737 W 21st St C (no_record); 737 W 21st St B (active); 737 W 21st St A (no_record),Unit-specific listing or closing evidence
+"723 W 21st St, Houston, TX 77008",Common Driveway,pmt_723-w-21st-st-77008,Permits 25045802; master 25045800; siblings: 729 W 21st St A (active); 725 W 21st St (no_record); 729 W 21st St B (terminated),Unit-specific listing or closing evidence
+"725 W 21st St, Houston, TX 77008",Common Driveway,pmt_725-w-21st-st-77008,Permits 25045803; master 25045800; siblings: 729 W 21st St A (active); 723 W 21st St (no_record); 729 W 21st St B (terminated),Unit-specific listing or closing evidence
+"729 W 21st St C, Houston, TX 77008",Common Driveway,pmt_729-w-21st-st-c-77008,Permits 25045806; master 25045806; siblings: 727 W 21st St (active),Unit-specific listing or closing evidence
+"4133 Kolb St A, Houston, TX 77007",Common Driveway,pmt_4133-kolb-st-a-77007,Permits 25003422; master 25003422; siblings: 4133 Kolb St B (no_record),Unit-specific listing or closing evidence
+"4133 Kolb St B, Houston, TX 77007",Common Driveway,pmt_4133-kolb-st-b-77007,Permits 25003423; master 25003422; siblings: 4133 Kolb St A (no_record),Unit-specific listing or closing evidence
+"910 W 24th St, Houston, TX 77008",Common Driveway,pmt_910-w-24th-st-77008,Permits 24060982,Unit-specific listing or closing evidence
+"610 Skyland Terrace Way, Houston, TX 77009",Common Driveway,pmt_610-skyland-terrace-way-77009,Permits 25046234; CHATEAUX AT NORTHWOOD development (no shared master reference),Unit-specific listing or closing evidence
+"614 Skyland Terrace Way, Houston, TX 77009",Common Driveway,pmt_614-skyland-terrace-way-77009,Permits 25046899; CHATEAUX AT NORTHWOOD development (no shared master reference),Unit-specific listing or closing evidence
+"1432 Alexander St, Houston, TX 77008",Split Lot,pmt_1432-alexander-st-77008,Permits 25068840; paired with 1434 Alexander (Pending); no shared master reference,Unit-specific listing or closing evidence
+112 E 27th Street,Split Lot,act_112-e-27th-street,Permits 25071972; master 25071971; siblings: 112 E 27th St A (active),Identify other unit and its MLS; 34333707 belongs to A
+"409 Walton St A, Houston, TX 77009",Split Lot,pmt_409-walton-st-a-77009,Permits 25119945; master 25119945; siblings: 409 Walton Street Unit#B (active),Unit-specific listing or closing evidence
+"809 W 18th St, Houston, TX 77008",Split Lot,pmt_809-w-18th-st-77008,Permits 24114420; master 24114419; siblings: 811 W 18th St (sold),Unit-specific listing or closing evidence
+"1237 Waverly St, Houston, TX 77008",Split Lot,pmt_1237-waverly-st-77008,Permits 24085625,Unit-specific listing or closing evidence
+"226 E 27th St, Houston, TX 77008",Split Lot,pmt_226-e-27th-st-77008,Permits 24120121,Unit-specific listing or closing evidence
+"1207 Tulane St, Houston, TX 77008",Split Lot,pmt_1207-tulane-st-77008,Permits 25058736; master 25058736,Unit-specific listing or closing evidence
+"1115 E 26th St, Houston, TX 77009",Split Lot,pmt_1115-e-26th-st-77009,Permits 24016425,Unit-specific listing or closing evidence
+"2811 Ave, Houston, TX 77009",Single Lot,pmt_2811-ave-77009,Permits 24111379,Correct full street identity first; stored address is incomplete
+"1301 Tabor St, Houston, TX 77009",Single Lot,pmt_1301-tabor-st-77009,Permits 25042637,Unit-specific listing or closing evidence
+"702 E 8th St, Houston, TX 77007",Single Lot,pmt_702-e-8th-st-77007,Permits 24112048,Unit-specific listing or closing evidence
+"213 E 23rd St, Houston, TX 77008",Single Lot,pmt_213-e-23rd-st-77008,Permits 25010151,Unit-specific listing or closing evidence
+"710 E 12th St, Houston, TX 77008",Single Lot,pmt_710-e-12th-st-77008,Permits 24123489,Unit-specific listing or closing evidence
+"605 Cordell St, Houston, TX 77009",Single Lot,pmt_605-cordell-st-77009,Permits 24029896,Unit-specific listing or closing evidence
+"121 Northwood St, Houston, TX 77009",Single Lot,pmt_121-northwood-st-77009,Permits 24097045,Unit-specific listing or closing evidence
+"1127 Robbie St, Houston, TX 77009",Single Lot,pmt_1127-robbie-st-77009,Permits 25037366,Unit-specific listing or closing evidence
+"818 Lawrence St, Houston, TX 77007",Unknown,pmt_818-lawrence-st-77007,Permits 24100465,Unit-specific listing or closing evidence
+"1115 Nashua St, Houston, TX 77008",Unknown,pmt_1115-nashua-st-77008,Permits 25016077,Unit-specific listing or closing evidence
+"302 W 23rd St, Houston, TX 77008",Unknown,pmt_302-w-23rd-st-77008,Permits 25015277,Unit-specific listing or closing evidence
+"1011 Worthshire St, Houston, TX 77008",Unknown,pmt_1011-worthshire-st-77008,Permits 24117967,Unit-specific listing or closing evidence
+"319 E 24th St, Houston, TX 77008",Unknown,pmt_319-e-24th-st-77008,Permits 24097273,Unit-specific listing or closing evidence
+"1519 Glen Oaks St, Houston, TX 77008",Unknown,pmt_1519-glen-oaks-st-77008,Permits 24086171,Unit-specific listing or closing evidence
+"1006 Nashua St, Houston, TX 77008",Unknown,pmt_1006-nashua-st-77008,Permits 24096668,Unit-specific listing or closing evidence
+"730 E 13th 1/2 St, Houston, TX 77008",Unknown,pmt_730-e-13th-1-2-st-77008,Permits 24114602,Unit-specific listing or closing evidence
+"1312 E 28th St A, Houston, TX 77009",Unknown,pmt_1312-e-28th-st-a-77009,Permits 24072642,Unit-specific listing or closing evidence
+"2701 Julian St, Houston, TX 77009",Unknown,pmt_2701-julian-st-77009,Permits 24097596,Unit-specific listing or closing evidence
+"1040 Voight St, Houston, TX 77009",Unknown,pmt_1040-voight-st-77009,Permits 24120301; master 24120301; siblings: 1042 Voight St (sold),Unit-specific listing or closing evidence

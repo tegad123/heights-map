@@ -1,0 +1,58 @@
+address,member,product,status,mls,lot,source_row,sub2000
+"118 E 23rd St, Houston, Tx 77008",2131144961,Split Lot,active,5930421,3500.0,67,False
+"737 W 21st St C, Houston, TX 77008",pmt_737-w-21st-st-c-77008,Common Driveway,no_record,,,,False
+"737 W 21st St B, Houston, TX 77008",pmt_737-w-21st-st-b-77008,Common Driveway,active,31329647,1638.0,19,True
+"737 W 21st St A, Houston, TX 77008",pmt_737-w-21st-st-a-77008,Common Driveway,no_record,,,,False
+"737 W 21st St D, Houston, TX 77008",pmt_737-w-21st-st-d-77008,Common Driveway,no_record,,,,False
+"729 W 21st St A, Houston, TX 77008",pmt_729-w-21st-st-a-77008,Common Driveway,active,31414914,1556.0,38,True
+"723 W 21st St, Houston, TX 77008",pmt_723-w-21st-st-77008,Common Driveway,no_record,,,,False
+"725 W 21st St, Houston, TX 77008",pmt_725-w-21st-st-77008,Common Driveway,no_record,,,,False
+"729 W 21st St B, Houston, TX 77008",pmt_729-w-21st-st-b-77008,Common Driveway,terminated,97207025,1556.0,924,True
+"1432 Alexander St, Houston, TX 77008",pmt_1432-alexander-st-77008,Split Lot,no_record,,,,False
+112 E 27th Street,act_112-e-27th-street,Split Lot,no_record,,,,False
+"729 W 21st St C, Houston, TX 77008",pmt_729-w-21st-st-c-77008,Common Driveway,no_record,,,,False
+"2811 Ave, Houston, TX 77009",pmt_2811-ave-77009,Single Lot,no_record,,,,False
+"1301 Tabor St, Houston, TX 77009",pmt_1301-tabor-st-77009,Single Lot,no_record,,,,False
+"1107 E 24th St, Houston, TX 77009",pmt_1107-e-24th-st-77009,Split Lot,active,70991955,1627.0,43,True
+"1109 E 24th St, Houston, TX 77009",pmt_1109-e-24th-st-77009,Split Lot,active,11824678,1627.0,44,True
+"409 Walton St A, Houston, TX 77009",pmt_409-walton-st-a-77009,Split Lot,no_record,,,,False
+"931 Merrill St, Houston, TX 77009",pmt_931-merrill-st-77009,Single Lot,sold,16650968,,443,False
+"706 E 7th St, Houston, TX 77007",pmt_706-e-7th-st-77007,Unknown,terminated,36132509,9375.0,1322,False
+"818 Lawrence St, Houston, TX 77007",pmt_818-lawrence-st-77007,Unknown,no_record,,,,False
+"702 E 8th St, Houston, TX 77007",pmt_702-e-8th-st-77007,Single Lot,no_record,,,,False
+"4133 Kolb St A, Houston, TX 77007",pmt_4133-kolb-st-a-77007,Common Driveway,no_record,,,,False
+"4133 Kolb St B, Houston, TX 77007",pmt_4133-kolb-st-b-77007,Common Driveway,no_record,,,,False
+"1023 Grovewood Ln, Houston, TX 77008",pmt_1023-grovewood-ln-77008,Unknown,terminated,80549945,7200.0,1225,False
+"910 W 24th St, Houston, TX 77008",pmt_910-w-24th-st-77008,Common Driveway,no_record,,,,False
+"1115 Nashua St, Houston, TX 77008",pmt_1115-nashua-st-77008,Unknown,no_record,,,,False
+"302 W 23rd St, Houston, TX 77008",pmt_302-w-23rd-st-77008,Unknown,no_record,,,,False
+"213 E 23rd St, Houston, TX 77008",pmt_213-e-23rd-st-77008,Single Lot,no_record,,,,False
+"1011 Worthshire St, Houston, TX 77008",pmt_1011-worthshire-st-77008,Unknown,no_record,,,,False
+"809 W 18th St, Houston, TX 77008",pmt_809-w-18th-st-77008,Split Lot,no_record,,,,False
+"1424 W 23rd St B, Houston, TX 77008",pmt_1424-w-23rd-st-b-77008,Common Driveway,active,48429544,1742.0,7,True
+"1237 Waverly St, Houston, TX 77008",pmt_1237-waverly-st-77008,Split Lot,no_record,,,,False
+"226 E 27th St, Houston, TX 77008",pmt_226-e-27th-st-77008,Split Lot,no_record,,,,False
+"1405 W 21st St C, Houston, TX 77008",pmt_1405-w-21st-st-c-77008,Common Driveway,terminated,23099716,1925.0,814,True
+"1405 W 21st St B, Houston, TX 77008",pmt_1405-w-21st-st-b-77008,Common Driveway,sold,31950581,1589.0,166,True
+"1405 W 21st St A, Houston, TX 77008",pmt_1405-w-21st-st-a-77008,Common Driveway,terminated,9963614,1589.0,788,True
+"1403 W 21st St D, Houston, TX 77008",pmt_1403-w-21st-st-d-77008,Common Driveway,terminated,92944075,1589.0,725,True
+"1403 W 21st St C, Houston, TX 77008",pmt_1403-w-21st-st-c-77008,Common Driveway,terminated,94909002,1589.0,762,True
+"319 E 24th St, Houston, TX 77008",pmt_319-e-24th-st-77008,Unknown,no_record,,,,False
+"1519 Glen Oaks St, Houston, TX 77008",pmt_1519-glen-oaks-st-77008,Unknown,no_record,,,,False
+"1006 Nashua St, Houston, TX 77008",pmt_1006-nashua-st-77008,Unknown,no_record,,,,False
+"710 E 12th St, Houston, TX 77008",pmt_710-e-12th-st-77008,Single Lot,no_record,,,,False
+"730 E 13th 1/2 St, Houston, TX 77008",pmt_730-e-13th-1-2-st-77008,Unknown,no_record,,,,False
+"832 W 19th St, Houston, TX 77008",pmt_832-w-19th-st-77008,Split Lot,terminated,20884835,3275.0,1013,False
+"1207 Tulane St, Houston, TX 77008",pmt_1207-tulane-st-77008,Split Lot,no_record,,,,False
+"1312 E 28th St A, Houston, TX 77009",pmt_1312-e-28th-st-a-77009,Unknown,no_record,,,,False
+"1115 E 26th St, Houston, TX 77009",pmt_1115-e-26th-st-77009,Split Lot,no_record,,,,False
+"605 Cordell St, Houston, TX 77009",pmt_605-cordell-st-77009,Single Lot,no_record,,,,False
+"121 Northwood St, Houston, TX 77009",pmt_121-northwood-st-77009,Single Lot,no_record,,,,False
+"1805 Palmetto Landing Dr, Houston, TX 77009",pmt_1805-palmetto-landing-dr-77009,Unknown,active,73440928,1943.0,5,True
+"2928 Michaux St, Houston, TX 77009",pmt_2928-michaux-st-77009,Common Driveway,active,11138011,,60,False
+"2926 Michaux St, Houston, TX 77009",pmt_2926-michaux-st-77009,Common Driveway,active,46686786,,61,False
+"2701 Julian St, Houston, TX 77009",pmt_2701-julian-st-77009,Unknown,no_record,,,,False
+"1040 Voight St, Houston, TX 77009",pmt_1040-voight-st-77009,Unknown,no_record,,,,False
+"1127 Robbie St, Houston, TX 77009",pmt_1127-robbie-st-77009,Single Lot,no_record,,,,False
+"610 Skyland Terrace Way, Houston, TX 77009",pmt_610-skyland-terrace-way-77009,Common Driveway,no_record,,,,False
+"614 Skyland Terrace Way, Houston, TX 77009",pmt_614-skyland-terrace-way-77009,Common Driveway,no_record,,,,False
