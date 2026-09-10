@@ -1156,6 +1156,17 @@ function inspectionEta(r,now=new Date()){
     months:Math.max(0.5,Math.round(remainingDays/30*2)/2),clientCompletion:client||null,
     phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
 }
+// Display-only comparison with the original anchored/client completion month.
+function missedCompletionTarget(r,eta=inspectionEta(r),now=new Date()){
+  if(eta.complete||!eta.target||(r.id&&typeof soldInventoryPin==='function'&&soldInventoryPin(r.id)))return null;
+  const original=eta.clientCompletion?.target||eta.anchorTarget;
+  if(!original)return null;
+  const monthIndex=s=>Number(s.slice(0,4))*12+Number(s.slice(5,7));
+  const months=monthIndex(now.toISOString())-monthIndex(original);
+  if(months<1||monthIndex(eta.target)<=monthIndex(original))return null;
+  return {originalMonth:original.slice(0,7),months,
+    label:'Overdue · '+months+' month'+(months===1?'':'s')+' past original target ('+original.slice(0,7)+')'};
+}
 function timelineDuration(days){
   if(days<60)return '~'+Math.max(1,Math.round(days/7))+' weeks';
   return '~'+(Math.round(days/30*2)/2)+' months';
@@ -1501,6 +1512,8 @@ function popupHTML(r){
     else{
       h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks'+'</div>';
       h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.targetMonth)+(eta.clientCompletion?' · client estimate':'')+'</div>';
+      const missed=missedCompletionTarget(r,eta);
+      if(missed)h+='<div class="pmeta missed-target">'+esc(missed.label)+'</div>';
       if(eta.elapsed>eta.duration)h+='<div class="phasetime">Stalled: '+Math.round(eta.elapsed/7)+' weeks in '+esc(PHASE_DEF[ph][0])+'</div>';
       h+='<div class="pmeta">Phase anchor: '+esc(eta.anchorDate)+'</div>';
     }
@@ -1664,6 +1677,7 @@ function deedCount(){return tagCount('deed');}
 function readyTypeCount(sp){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
 function readyFinCount(sp,pu){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp)&&(t.includes('punch')===pu))n+=UW(id);}return n;}
 function matchSel(tags,k,id){
+  if(k==='T:missed_completion')return !!byId[id]&&!!missedCompletionTarget(byId[id]);
   const category=inventoryCategory(id);
   if(k==='G:custom'||k==='G:sold_off_market')return category===k.slice(2);
   if(category)return category==='needs_clarification'&&(k==='L:needs_clarification'||k==='T:needs_clarification');
@@ -1724,6 +1738,8 @@ function renderLegend(){
   if(others.length){
     h+='<div class="grp'+(collapsed.has('other')?' col':'')+'" data-grp="other"><div class="grp-h" data-col="other"><span class="chev2">▼</span><span class="gn">Other</span><span class="ct2">'+others.length+'</span></div><div class="grp-body">';
     for(const tid of others)h+='<div class="leafrow'+sOn('L:'+tid)+'" data-sel="L:'+tid+'">'+cSw(tid)+'<span class="nm">'+esc(state.tags[tid].name)+'</span><span class="ct2">'+tagCount(tid)+'</span><span class="del" data-del="'+tid+'" title="Delete tag">×</span></div>';
+    const missedCount=DATA.reduce((n,r)=>n+(mById[r.id]&&missedCompletionTarget(r)?UW(r.id):0),0);
+    h+='<div class="leafrow'+sOn('T:missed_completion')+'" data-sel="T:missed_completion" title="Missed original completion month; includes excluded categories without adding them to inventory"><span class="mbox'+sOn('T:missed_completion')+'" data-sel="T:missed_completion"></span><span class="nm">Overdue — missed target</span><span class="ct2">'+missedCount+'</span></div>';
     h+='</div></div>';}
   el.innerHTML=h;
   wireLegend(el);
@@ -2088,6 +2104,7 @@ function buildTimeline(){
       let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
       if(p==='market'){const pk=prodKeyR(r),pu=t.includes('punch');
         lbl=(pk==='Common Driveway'?'Common Drwy':pk==='Split Lot'?'Split':'Single')+(pu?' · Punch List':' · Finished');}
+      const missed=missedCompletionTarget(r);if(missed)lbl+=' · Overdue ('+missed.months+'mo past target)';
       h+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
     if(b.items.length>3)h+='<div class="tlx-more" data-more="'+esc(b.label)+'">+ '+(b.items.length-3)+' more homes</div>';
     h+='</div></div>';}
@@ -2104,6 +2121,7 @@ function buildTimeline(){
     for(const r of bkt.items.slice(3)){const p=homePhase(r.id);const t=pt(r.id).tags||[];
       let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
       if(p==='market'){const pk=prodKeyR(r),pu=t.includes('punch');lbl=(pk==='Common Driveway'?'Common Drwy':pk==='Split Lot'?'Split':'Single')+(pu?' · Punch List':' · Finished');}
+      const missed=missedCompletionTarget(r);if(missed)lbl+=' · Overdue ('+missed.months+'mo past target)';
       hh+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
     this.outerHTML=hh;
     el.querySelectorAll('[data-go]').forEach(y=>y.addEventListener('click',()=>openPin(y.getAttribute('data-go'))));
