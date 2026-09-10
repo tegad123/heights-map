@@ -206,3 +206,7 @@ Deeds 139 in prompt predates the authorized I-10 cleanup; actual protected basel
 Open: exact cause of the two missing-address clusters and 38 unresolved homes. Live verification is recorded after deployment.
 
 All nine newly Active former No Market Record members were individually checked in finishedRows(). Active totals rise by ten because 2918 Michaux additionally changes Terminated→Active. Pending falls by one (1116 Highland→Sold); Terminated gains eight former unknowns and loses 2918/2932 Michaux to Active/Sold respectively. Four Finished homes move to Sold overall.
+
+## Deployment verification
+
+Market refresh pushed in b726ac3 (code acf3e8a). `/Users/nemoclaw/insp-venv/bin/python -B tests/unfiltered_market_check.py --live` returned `LIVE PASS THREE IDENTICAL CHECKS`: Finished active 44, pending 8, terminated 25, no_record 38; total 115; homes 567; pins 521; sold 793; deeds 138; Custom 19; Sold Off Market 1; map and Overview 156; geometryCheck true. Monotonicity: 3,257 pairs, zero violations.
