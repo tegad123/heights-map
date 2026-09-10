@@ -1134,7 +1134,9 @@ function inspectionEta(r,now=new Date()){
   if(!r||!r.permits||!r.permits.length)return {...empty,phase:null};
   const ins=inspForPin(r),done=completionFinal(ins);
   if(done)return {...empty,phase:'complete',anchor:'All five finals',anchorDate:done.date||null,target:done.date||null,complete:true};
-  const phase=homePhase(r.id)||inspToPhase(ins)||'foundation',anchor=phaseAnchor(r,phase);
+  const phase=homePhase(r.id)||inspToPhase(ins);
+  if(!phase)return empty;
+  const anchor=phaseAnchor(r,phase);
   if(!anchor)return {...empty,phase,missingAnchor:true};
   const timeline=phaseTimeline(phase,anchor.date,now);
   return {...empty,...timeline,phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
@@ -1181,8 +1183,8 @@ function inspAnnotations(r,ins){
 function inspToPhase(ins){
   if(!ins)return null;
   if(completionFinal(ins))return 'complete';
-  let best='foundation'; // A permit alone establishes Foundation, never a later phase.
-  for(const it of ins.inspections||[]){const ph=inspPhase(it.type,it);if(ph&&PHASE_RANK[ph]>PHASE_RANK[best])best=ph;}
+  let best=null; // Only a passed construction inspection establishes a phase.
+  for(const it of ins.inspections||[]){const ph=inspPhase(it.type,it);if(ph&&(!best||PHASE_RANK[ph]>PHASE_RANK[best]))best=ph;}
   return best;
 }
 // Project-level rollup: units built together (same base address / shared master
@@ -1232,9 +1234,14 @@ function applyInspectionPromotions(){
       let ph=inspToPhase(inspForPin(r)||{inspections:[]});
       const shared=PROJ[projectBaseKey(r)];
       // Shared non-final progress is retained, but five finals must belong to this pin's permits.
-      if(shared&&shared!=='complete'&&PHASE_RANK[shared]>PHASE_RANK[ph])ph=shared;
-      p.tags=[ph].concat(retained.filter(t=>t!=='permit'&&t!=='market'&&t!=='deed'));
-      p.inspPromoted=true;
+      if(shared&&shared!=='complete'&&(!ph||PHASE_RANK[shared]>PHASE_RANK[ph]))ph=shared;
+      if(ph){
+        p.tags=[ph].concat(retained.filter(t=>t!=='permit'&&t!=='market'&&t!=='deed'));
+        p.inspPromoted=true;
+      }else{
+        p.tags=retained;
+        stripUnevidencedStage(r);
+      }
     }else{
       p.tags=retained;
       if(p.inspPromoted)delete p.inspPromoted;
@@ -1494,7 +1501,7 @@ function popupHTML(r){
       }
       h+='</div>';
     }
-   }else h+='<div class="phasehead"><span class="phasechip">No permit activity</span></div>';
+   }else h+='<div class="phasehead"><span class="phasechip">'+(r.permits?.length?'Permitted, no passed construction inspections':'No permit activity')+'</span></div>';
   }
   const A=r.kind==='active';
   const cells=[];

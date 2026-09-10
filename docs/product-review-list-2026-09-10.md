@@ -1276,3 +1276,7 @@ Twelve boundary cases retain their ±0.01 ft abstention. Ten have observed split
 - Land value: Unavailable; improvement value: Unavailable. Observed parcel history: `[]`.
 - Unverified alternative/parent context (never used for assignment): `[{"history": [], "improvement_value": 33534, "land_value": 205550, "parcel": {"account": "0690710020003", "area_sf": 4111.81, "depth_ft": 123.3298, "depth_method": "minimum rotated rectangle, longest side", "geometry_crs": "EPSG:2278", "legal": "LT 3 BLK 1|MCFARLAND COURT 3RD PAR R/P", "matched": "0 ENID ST", "parcel_history": [], "source": "HCAD unverified contextual parcel", "width_ft": 33.34}}]`.
 - Recommendation: Not evaluated: human hold; GENUINELY-AMBIGUOUS. Blocking reason: Prior human hold: requires explicit re-review; no classification authorized this session. 4,112 sf = 63% of plat median 6,479
+
+## Construction-evidence discrepancy — 1019 E 7th (2026-09-10)
+
+Retain the existing `needs_clarification` flag and stored Single Lot classification. The earlier review said “no build permit,” with a May 2026 purchase and the 1926 house still standing. The saved record actually carries Building Pmt **26064937**, valuation **$821,702**, description “QS2 S.F. RES W/ATT. GARAGE (1-2-5-R3-B) 21 IRC/21 IECC.” Its September 10 inspection feed is empty. Verify the permit identity/scope and the earlier note; do not resolve the contradiction by assuming construction has started. Removal of its unsupported Foundation label does not adjudicate this review.

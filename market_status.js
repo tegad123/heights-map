@@ -77,7 +77,7 @@ popupHTML=function(r){
   card.querySelectorAll('.lbl').forEach(el=>{const replacements={'Tags':'Prior stored tags · may be stale','Notes':'Stored notes · historical','List price':'Prior stored list price','Listed':'Prior stored listing date'};if(replacements[el.textContent])el.textContent=replacements[el.textContent];});
   const llc=card.querySelector('.llc');if(llc&&/active listing/i.test(llc.textContent))llc.textContent='Property record';
   card.querySelectorAll('.addr').forEach(el=>{if(el.style.color&&/active|pending|off market/i.test(el.textContent))el.remove();});
-  if(PANEL_RESTRUCTURED&&!homePhase(r.id)){const badge=card.querySelector('.phasechip');if(badge)badge.textContent='No permit record';}
+  if(PANEL_RESTRUCTURED&&!homePhase(r.id)&&!r.permits?.length){const badge=card.querySelector('.phasechip');if(badge)badge.textContent='No permit record';}
   const anchor=card.querySelector('.phasehead')||card.querySelector('.grid');
   if(anchor)anchor.insertAdjacentHTML('beforebegin',marketFacts(r));else card.insertAdjacentHTML('beforeend',marketFacts(r));
   return doc.innerHTML;
