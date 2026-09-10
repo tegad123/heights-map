@@ -812,16 +812,17 @@ function phaseTimeline(phase,anchorDate,now=new Date()){
   const duration=PHASE_DAYS[phase],elapsed=Math.max(0,today-day);
   const following=CONSTRUCTION_PHASES.slice(index+1).reduce((n,k)=>n+PHASE_DAYS[k],0);
   const nextDays=Math.max(0,duration-elapsed),overdueDays=Math.max(0,elapsed-duration);
-  // Base remaining time never spends unobserved future phases. Only the explicit
-  // overdue term can reorder same-product forecasts; no comparisons/clamps to other homes.
-  const baseDays=(overdueDays>0?duration:nextDays)+following,remainingDays=baseDays+overdueDays;
-  return {duration,elapsed,nextDays,overdueDays,baseDays,remainingDays,
+  // Elapsed idle time is evidence of a stall, not additional construction work.
+  // Keep the full overdue signal, but bound its ETA contribution to one phase.
+  const overdueAdjustmentDays=Math.min(overdueDays,duration);
+  const baseDays=(overdueDays>0?duration:nextDays)+following,remainingDays=baseDays+overdueAdjustmentDays;
+  return {duration,elapsed,nextDays,overdueDays,overdueAdjustmentDays,baseDays,remainingDays,
     anchorTarget:timelineDate(day+duration+following),baseTarget:timelineDate(today+baseDays),
     target:timelineDate(today+remainingDays),nextPhase:CONSTRUCTION_PHASES[index+1],
     months:Math.max(0.5,Math.round(remainingDays/30*2)/2)};
 }
 function inspectionEta(r,now=new Date()){
-  const empty={anchor:null,anchorDate:null,target:null,months:null,complete:false,overdue:false,overdueDays:0,baseDays:null,remainingDays:null,nextDays:null,nextPhase:null};
+  const empty={anchor:null,anchorDate:null,target:null,months:null,complete:false,overdue:false,overdueDays:0,overdueAdjustmentDays:0,baseDays:null,remainingDays:null,nextDays:null,nextPhase:null};
   if(!r||!r.permits||!r.permits.length)return {...empty,phase:null};
   const ins=inspForPin(r),done=completionFinal(ins);
   if(done)return {...empty,phase:'complete',anchor:'All five finals',anchorDate:done.date||null,target:done.date||null,complete:true};
@@ -1113,7 +1114,7 @@ function popupHTML(r){
     else{
       h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+(eta.overdueDays?' — overdue':' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks')+'</div>';
       h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.target)+'</div>';
-      if(eta.overdueDays)h+='<div class="phasetime">'+Math.round(eta.overdueDays/7)+' weeks overdue for '+esc(NEXT_INSPECTION[ph])+'</div>';
+      if(eta.overdueDays)h+='<div class="phasetime">Stalled: '+Math.round(eta.elapsed/7)+' weeks in '+esc(PHASE_DEF[ph][0])+' ('+Math.round(eta.overdueDays/7)+' weeks overdue for '+esc(NEXT_INSPECTION[ph])+')</div>';
       h+='<div class="pmeta">Phase anchor: '+esc(eta.anchorDate)+'</div>';
     }
     h+='</div>';
@@ -1817,8 +1818,8 @@ function askContext(){
     else if(phx)uc_breakdown[key][phx]++;}
   agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
   // Phase cohorts describe present construction evidence. Completion estimates use
-  // inspection-date anchors; overdue homes retain their phase and add the overdue delay.
-  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + standard remaining durations + overdue']));
+  // inspection-date anchors; overdue homes retain their phase; ETA delay is capped at one phase duration.
+  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + standard remaining durations + capped overdue']));
   const mk=()=>({ready_now:0,by_phase_cohort:Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0])),cohort_ranges:COHORT_RANGE,done_within:{}});
   const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'Common Driveway':mk(), 'ALL':mk() };
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];

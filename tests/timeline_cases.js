@@ -10,7 +10,7 @@ options=>{
   if(a.eta.baseDays>b.eta.baseDays+1e-8)violations.push({later:a.r.a,earlier:b.r.a,laterBase:a.eta.baseDays,earlierBase:b.eta.baseDays});
  }
  check('Every same-product phase pair: base timeline monotonic',!violations.length,{pairs,violations});
- check('Displayed forecasts = property base + overdue only',rows.every(x=>x.eta.remainingDays===null||x.eta.remainingDays===x.eta.baseDays+x.eta.overdueDays));
+ check('Displayed forecasts = property base + bounded overdue',rows.every(x=>x.eta.remainingDays===null||x.eta.remainingDays===x.eta.baseDays+x.eta.overdueAdjustmentDays));
  check('No-permit records have no phase or ETA',rows.filter(x=>!x.r.permits?.length).every(x=>x.phase===null&&x.eta.target===null));
  check('Complete requires all five finals and no ETA',rows.filter(x=>x.phase==='complete').every(x=>completionFinal(inspForPin(x.r))&&x.eta.complete&&monthsLeft(x.r.id)===null));
  check('Stage counts are finite',Object.values(phaseBreakdown()).every(Number.isFinite));
@@ -19,6 +19,9 @@ options=>{
  check('Five-week Framing is two weeks later than fresh Framing',oldFraming.remainingDays-freshFraming.remainingDays===14,{oldFraming,freshFraming});
  const oldExterior=phaseTimeline('exterior',timelineDate(today-200));
  check('Overdue can legitimately reorder phases',oldExterior.remainingDays>freshFraming.remainingDays);
+ const stalledFinals=phaseTimeline('mep_finals',timelineDate(today-154));
+ check('22-week MEP Finals stall stays at six weeks remaining',stalledFinals.remainingDays===42&&stalledFinals.overdueDays===133&&stalledFinals.overdueAdjustmentDays===21);
+ check('Overdue contribution never exceeds current phase duration',rows.every(x=>x.eta.remainingDays===null||x.eta.overdueAdjustmentDays<=x.eta.duration));
  check('INT.CAB through Complete is exactly 135 days',PHASE_DAYS.interior+PHASE_DAYS.mep_finals===135);
  check('Invalid anchor refused',phaseTimeline('framing',null)===null);
  if(options.heights){
