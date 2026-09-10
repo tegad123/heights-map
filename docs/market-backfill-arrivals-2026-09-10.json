@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "pmt_4327-center-st-77007",
+    "project": "24053698",
+    "address": "4327 Center St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4325-center-st-77007",
+    "project": "24053699",
+    "address": "4325 Center St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4323-center-st-77007",
+    "project": "24053700",
+    "address": "4323 Center St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4105-allen-st-77007",
+    "project": "24047987",
+    "address": "4105 Allen St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4107-allen-st-77007",
+    "project": "24047988",
+    "address": "4107 Allen St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4103-allen-st-77007",
+    "project": "24047986",
+    "address": "4103 Allen St, Houston, TX 77007",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1918-johnson-st-77007",
+    "project": "24075117",
+    "address": "1918 Johnson St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1520-winter-st-77007",
+    "project": "24049010",
+    "address": "1520 Winter St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_706-e-7th-st-77007",
+    "project": "25033773",
+    "address": "706 E 7th St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_818-lawrence-st-77007",
+    "project": "24100465",
+    "address": "818 Lawrence St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_406-columbia-st-77007",
+    "project": "25021359",
+    "address": "406 Columbia St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_5111-allen-st-77007",
+    "project": "24124941",
+    "address": "5111 Allen St, Houston, TX 77007",
+    "evidence_phase": "foundation",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_5113-allen-st-77007",
+    "project": "24124942",
+    "address": "5113 Allen St, Houston, TX 77007",
+    "evidence_phase": "exterior",
+    "runtime_phase": "exterior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_717-e-5th-1-2-st-77007",
+    "project": "24116214",
+    "address": "717 E 5th 1/2 St, Houston, TX 77007",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_702-e-8th-st-77007",
+    "project": "24112048",
+    "address": "702 E 8th St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1521-ovid-st-77007",
+    "project": "24108196",
+    "address": "1521 Ovid St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_5109-allen-st-77007",
+    "project": "24124940",
+    "address": "5109 Allen St, Houston, TX 77007",
+    "evidence_phase": "foundation",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_513-w-8th-st-77007",
+    "project": "25018606",
+    "address": "513 W 8th St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1522-winter-st-77007",
+    "project": "24115201",
+    "address": "1522 Winter St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1610-johnson-st-77007",
+    "project": "24115206",
+    "address": "1610 Johnson St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_404-columbia-st-77007",
+    "project": "24102312",
+    "address": "404 Columbia St, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_4605-nolda-st-77007",
+    "project": "25018313",
+    "address": "4605 Nolda St, Houston, TX 77007",
+    "evidence_phase": "foundation",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4133-kolb-st-a-77007",
+    "project": "25003422",
+    "address": "4133 Kolb St A, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4133-kolb-st-b-77007",
+    "project": "25003423",
+    "address": "4133 Kolb St B, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_5114-eigel-st-77007",
+    "project": "26010466",
+    "address": "5114 Eigel St, Houston, TX 77007",
+    "evidence_phase": "no_passed_construction_stage",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1308-edwards-st-b-77007",
+    "project": "25048881",
+    "address": "1308 Edwards St B, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1308-edwards-st-a-77007",
+    "project": "25048882",
+    "address": "1308 Edwards St A, Houston, TX 77007",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4612-eli-st-c-77007",
+    "project": "26014118",
+    "address": "4612 Eli St C, Houston, TX 77007",
+    "evidence_phase": "foundation",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4616-eli-st-b-77007",
+    "project": "26014120",
+    "address": "4616 Eli St B, Houston, TX 77007",
+    "evidence_phase": "foundation",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_4612-eli-st-a-77007",
+    "project": "26014116",
+    "address": "4612 Eli St A, Houston, TX 77007",
+    "evidence_phase": "foundation",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_5016-schuler-st-77007",
+    "project": "25099765",
+    "address": "5016 Schuler St, Houston, TX 77007",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_5018-schuler-st-77007",
+    "project": "25099768",
+    "address": "5018 Schuler St, Houston, TX 77007",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_5212-kansas-st-77007",
+    "project": "26048120",
+    "address": "5212 Kansas St, Houston, TX 77007",
+    "evidence_phase": "no_passed_construction_stage",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_742-allston-st-77007",
+    "project": "26018730",
+    "address": "742 Allston St, Houston, TX 77007",
+    "evidence_phase": "exterior",
+    "runtime_phase": "exterior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_2008-w-14th-1-2-st-77008",
+    "project": "24052768",
+    "address": "2008 W 14th 1/2 St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1023-grovewood-ln-77008",
+    "project": "24072768",
+    "address": "1023 Grovewood Ln, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1030-w-24th-st-b-77008",
+    "project": "24015638",
+    "address": "1030 W 24th St B, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1030-w-24th-st-c-77008",
+    "project": "24015639",
+    "address": "1030 W 24th St C, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1030-w-24th-st-a-77008",
+    "project": "24015640",
+    "address": "1030 W 24th St A, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-e-77008",
+    "project": "24068787",
+    "address": "1443 W 25th St E, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-f-77008",
+    "project": "24068788",
+    "address": "1443 W 25th St F, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-g-77008",
+    "project": "24068789",
+    "address": "1443 W 25th St G, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-h-77008",
+    "project": "24068790",
+    "address": "1443 W 25th St H, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-a-77008",
+    "project": "24068783",
+    "address": "1443 W 25th St A, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-b-77008",
+    "project": "24068784",
+    "address": "1443 W 25th St B, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-c-77008",
+    "project": "24068785",
+    "address": "1443 W 25th St C, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1443-w-25th-st-d-77008",
+    "project": "24068786",
+    "address": "1443 W 25th St D, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1122-w-17th-st-d-77008",
+    "project": "24047451",
+    "address": "1122 W 17th St D, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1122-w-17th-st-c-77008",
+    "project": "24047452",
+    "address": "1122 W 17th St C, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1122-w-17th-st-b-77008",
+    "project": "24047453",
+    "address": "1122 W 17th St B, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1122-w-17th-st-a-77008",
+    "project": "24047454",
+    "address": "1122 W 17th St A, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1122-w-17th-st-f-77008",
+    "project": "24047449",
+    "address": "1122 W 17th St F, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1122-w-17th-st-e-77008",
+    "project": "24047450",
+    "address": "1122 W 17th St E, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_916-w-24th-st-77008",
+    "project": "24060974",
+    "address": "916 W 24th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1910-w-14th-1-2-st-77008",
+    "project": "24065659",
+    "address": "1910 W 14th 1/2 St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_910-w-24th-st-77008",
+    "project": "24060982",
+    "address": "910 W 24th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1522-w-21st-st-77008",
+    "project": "24125308",
+    "address": "1522 W 21st St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "terminated"
+  },
+  {
+    "id": "pmt_1034-w-17th-st-d-77008",
+    "project": "24081991",
+    "address": "1034 W 17th St D, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1034-w-17th-st-c-77008",
+    "project": "24081992",
+    "address": "1034 W 17th St C, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1034-w-17th-st-e-77008",
+    "project": "24081990",
+    "address": "1034 W 17th St E, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1034-w-17th-st-b-77008",
+    "project": "24081993",
+    "address": "1034 W 17th St B, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1034-w-17th-st-a-77008",
+    "project": "24081994",
+    "address": "1034 W 17th St A, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1032-w-17th-st-c-77008",
+    "project": "24081995",
+    "address": "1032 W 17th St C, Houston, TX 77008",
+    "evidence_phase": "no_passed_construction_stage",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1032-w-17th-st-b-77008",
+    "project": "24081996",
+    "address": "1032 W 17th St B, Houston, TX 77008",
+    "evidence_phase": "no_passed_construction_stage",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1438-dian-st-a-77008",
+    "project": "24094026",
+    "address": "1438 Dian St A, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1115-nashua-st-77008",
+    "project": "25016077",
+    "address": "1115 Nashua St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1239-waverly-st-77008",
+    "project": "24085620",
+    "address": "1239 Waverly St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_310-e-28th-st-77008",
+    "project": "25032007",
+    "address": "310 E 28th St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_614-algregg-st-77008",
+    "project": "24100591",
+    "address": "614 Algregg St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "terminated"
+  },
+  {
+    "id": "pmt_1039-alexander-st-77008",
+    "project": "25015508",
+    "address": "1039 Alexander St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "terminated"
+  },
+  {
+    "id": "pmt_323-w-23rd-st-77008",
+    "project": "24097524",
+    "address": "323 W 23rd St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_243-w-26th-st-77008",
+    "project": "25018666",
+    "address": "243 W 26th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_302-w-23rd-st-77008",
+    "project": "25015277",
+    "address": "302 W 23rd St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_501-e-26th-st-77008",
+    "project": "25010616",
+    "address": "501 E 26th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_213-e-23rd-st-77008",
+    "project": "25010151",
+    "address": "213 E 23rd St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_608-e-26th-st-77008",
+    "project": "24110235",
+    "address": "608 E 26th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1011-worthshire-st-77008",
+    "project": "24117967",
+    "address": "1011 Worthshire St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1507-w-23rd-st-e-77008",
+    "project": "24094765",
+    "address": "1507 W 23rd St E, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1516-dorothy-st-a-77008",
+    "project": "25040624",
+    "address": "1516 Dorothy St A, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1516-dorothy-st-b-77008",
+    "project": "25040625",
+    "address": "1516 Dorothy St B, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1516-dorothy-st-c-77008",
+    "project": "25040626",
+    "address": "1516 Dorothy St C, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1507-w-23rd-st-d-77008",
+    "project": "24094766",
+    "address": "1507 W 23rd St D, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1507-w-23rd-st-c-77008",
+    "project": "24094767",
+    "address": "1507 W 23rd St C, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1507-w-23rd-st-b-77008",
+    "project": "24094768",
+    "address": "1507 W 23rd St B, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1507-w-23rd-st-a-77008",
+    "project": "24094769",
+    "address": "1507 W 23rd St A, Houston, TX 77008",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_827-w-16th-st-b-77008",
+    "project": "25042404",
+    "address": "827 W 16th St B, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_310-e-27th-st-77008",
+    "project": "24112079",
+    "address": "310 E 27th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_811-w-18th-st-77008",
+    "project": "24114419",
+    "address": "811 W 18th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_809-w-18th-st-77008",
+    "project": "24114420",
+    "address": "809 W 18th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1424-w-23rd-st-c-77008",
+    "project": "25011275",
+    "address": "1424 W 23rd St C, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1424-w-23rd-st-b-77008",
+    "project": "25011276",
+    "address": "1424 W 23rd St B, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1021-ashland-st-77008",
+    "project": "24120638",
+    "address": "1021 Ashland St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1237-waverly-st-77008",
+    "project": "24085625",
+    "address": "1237 Waverly St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_222-e-27th-st-77008",
+    "project": "24120123",
+    "address": "222 E 27th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_226-e-27th-st-77008",
+    "project": "24120121",
+    "address": "226 E 27th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_224-e-27th-st-77008",
+    "project": "24120122",
+    "address": "224 E 27th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1405-w-21st-st-c-77008",
+    "project": "24106612",
+    "address": "1405 W 21st St C, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1405-w-21st-st-b-77008",
+    "project": "24106613",
+    "address": "1405 W 21st St B, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1405-w-21st-st-a-77008",
+    "project": "24106614",
+    "address": "1405 W 21st St A, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1403-w-21st-st-d-77008",
+    "project": "24106615",
+    "address": "1403 W 21st St D, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1403-w-21st-st-c-77008",
+    "project": "24106616",
+    "address": "1403 W 21st St C, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1403-w-21st-st-b-77008",
+    "project": "24106617",
+    "address": "1403 W 21st St B, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1403-w-21st-st-a-77008",
+    "project": "24106618",
+    "address": "1403 W 21st St A, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_319-e-24th-st-77008",
+    "project": "24097273",
+    "address": "319 E 24th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1519-glen-oaks-st-77008",
+    "project": "24086171",
+    "address": "1519 Glen Oaks St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1221-prince-st-77008",
+    "project": "24114515",
+    "address": "1221 Prince St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1223-prince-st-77008",
+    "project": "24114516",
+    "address": "1223 Prince St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1006-nashua-st-77008",
+    "project": "24096668",
+    "address": "1006 Nashua St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_325-w-23rd-st-77008",
+    "project": "24094099",
+    "address": "325 W 23rd St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_710-e-12th-st-77008",
+    "project": "24123489",
+    "address": "710 E 12th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_708-ralfallen-st-77008",
+    "project": "24094308",
+    "address": "708 Ralfallen St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1438-dian-st-b-77008",
+    "project": "24092045",
+    "address": "1438 Dian St B, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_730-e-13th-1-2-st-77008",
+    "project": "24114602",
+    "address": "730 E 13th 1/2 St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_832-w-19th-st-77008",
+    "project": "24124851",
+    "address": "832 W 19th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_834-w-19th-st-77008",
+    "project": "24124852",
+    "address": "834 W 19th St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_326-w-27th-st-77008",
+    "project": "25001059",
+    "address": "326 W 27th St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_324-w-27th-st-77008",
+    "project": "25001060",
+    "address": "324 W 27th St, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1211-bay-oaks-rd-77008",
+    "project": "24106563",
+    "address": "1211 Bay Oaks Rd, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1424-w-23rd-st-a-77008",
+    "project": "25011274",
+    "address": "1424 W 23rd St A, Houston, TX 77008",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_320-e-18th-st-77008",
+    "project": "25084912",
+    "address": "320 E 18th St, Houston, TX 77008",
+    "evidence_phase": "exterior",
+    "runtime_phase": "framing",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1207-tulane-st-77008",
+    "project": "25058736",
+    "address": "1207 Tulane St, Houston, TX 77008",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1813-w-14th-st-77008",
+    "project": "26046061",
+    "address": "1813 W 14th St, Houston, TX 77008",
+    "evidence_phase": "no_passed_construction_stage",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_305-w-17th-st-77008",
+    "project": "26063353",
+    "address": "305 W 17th St, Houston, TX 77008",
+    "evidence_phase": "no_inspections",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_321-e-24th-st-77008",
+    "project": "26049226",
+    "address": "321 E 24th St, Houston, TX 77008",
+    "evidence_phase": "no_inspections",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1312-e-28th-st-a-77009",
+    "project": "24072642",
+    "address": "1312 E 28th St A, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1101-usener-st-77009",
+    "project": "24061078",
+    "address": "1101 Usener St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1115-e-26th-st-77009",
+    "project": "24016425",
+    "address": "1115 E 26th St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1809-palmetto-landing-dr-77009",
+    "project": "24049112",
+    "address": "1809 Palmetto Landing Dr, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1807-palmetto-landing-dr-77009",
+    "project": "24049108",
+    "address": "1807 Palmetto Landing Dr, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_721-usener-st-77009",
+    "project": "24021718",
+    "address": "721 Usener St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_605-cordell-st-77009",
+    "project": "24029896",
+    "address": "605 Cordell St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1106-robbie-st-77009",
+    "project": "25028398",
+    "address": "1106 Robbie St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_115-northwood-st-77009",
+    "project": "24097740",
+    "address": "115 Northwood St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1132-adele-st-77009",
+    "project": "25039338",
+    "address": "1132 Adele St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1125-euclid-st-77009",
+    "project": "24125292",
+    "address": "1125 Euclid St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1134-adele-st-77009",
+    "project": "25039339",
+    "address": "1134 Adele St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_707-teetshorn-st-77009",
+    "project": "24124794",
+    "address": "707 Teetshorn St, Houston, TX 77009",
+    "evidence_phase": "no_inspections",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_121-northwood-st-77009",
+    "project": "24097045",
+    "address": "121 Northwood St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1805-palmetto-landing-dr-77009",
+    "project": "24108346",
+    "address": "1805 Palmetto Landing Dr, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1023-e-23rd-st-77009",
+    "project": "25029530",
+    "address": "1023 E 23rd St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2922-michaux-st-77009",
+    "project": "24079057",
+    "address": "2922 Michaux St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_2932-michaux-st-77009",
+    "project": "24079058",
+    "address": "2932 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "terminated"
+  },
+  {
+    "id": "pmt_2912-michaux-st-77009",
+    "project": "24079067",
+    "address": "2912 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2930-michaux-st-77009",
+    "project": "24079059",
+    "address": "2930 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2928-michaux-st-77009",
+    "project": "24079060",
+    "address": "2928 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_2926-michaux-st-77009",
+    "project": "24079061",
+    "address": "2926 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_2924-michaux-st-77009",
+    "project": "24079062",
+    "address": "2924 Michaux St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_2920-michaux-st-77009",
+    "project": "24079063",
+    "address": "2920 Michaux St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_2918-michaux-st-77009",
+    "project": "24079064",
+    "address": "2918 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "terminated"
+  },
+  {
+    "id": "pmt_2916-michaux-st-77009",
+    "project": "24079065",
+    "address": "2916 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2914-michaux-st-77009",
+    "project": "24079066",
+    "address": "2914 Michaux St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_602-jewett-st-a-77009",
+    "project": "25007490",
+    "address": "602 Jewett St A, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2504-baylor-st-77009",
+    "project": "24102307",
+    "address": "2504 Baylor St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "terminated"
+  },
+  {
+    "id": "pmt_2506-baylor-st-77009",
+    "project": "24102308",
+    "address": "2506 Baylor St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2508-baylor-st-77009",
+    "project": "24102309",
+    "address": "2508 Baylor St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_2701-julian-st-77009",
+    "project": "24097596",
+    "address": "2701 Julian St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1110-jerome-st-77009",
+    "project": "25001899",
+    "address": "1110 Jerome St, Houston, TX 77009",
+    "evidence_phase": "mep_roughs",
+    "runtime_phase": "mep_roughs",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_829-e-25th-st-77009",
+    "project": "25021407",
+    "address": "829 E 25th St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_827-e-25th-st-77009",
+    "project": "25021408",
+    "address": "827 E 25th St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1001-e-7th-1-2-st-77009",
+    "project": "24106815",
+    "address": "1001 E 7th 1/2 St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1040-voight-st-77009",
+    "project": "24120301",
+    "address": "1040 Voight St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1042-voight-st-77009",
+    "project": "24120302",
+    "address": "1042 Voight St, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1001-e-27th-st-77009",
+    "project": "25006835",
+    "address": "1001 E 27th St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_1016-e-27th-st-77009",
+    "project": "25027339",
+    "address": "1016 E 27th St, Houston, TX 77009",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1127-robbie-st-77009",
+    "project": "25037366",
+    "address": "1127 Robbie St, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_610-skyland-terrace-way-77009",
+    "project": "25046234",
+    "address": "610 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_606-skyland-terrace-way-77009",
+    "project": "25046245",
+    "address": "606 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_602-skyland-terrace-way-77009",
+    "project": "25046248",
+    "address": "602 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_603-skyland-terrace-way-77009",
+    "project": "25046251",
+    "address": "603 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_1208-e-26th-st-b-77009",
+    "project": "25091277",
+    "address": "1208 E 26th St B, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "sold"
+  },
+  {
+    "id": "pmt_614-skyland-terrace-way-77009",
+    "project": "25046899",
+    "address": "614 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "complete",
+    "runtime_phase": "complete",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_606-link-rd-g-77009",
+    "project": "26012766",
+    "address": "606 Link Rd G, Houston, TX 77009",
+    "evidence_phase": "no_passed_construction_stage",
+    "runtime_phase": "foundation",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_615-skyland-terrace-way-77009",
+    "project": "25046233",
+    "address": "615 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_611-skyland-terrace-way-77009",
+    "project": "25046239",
+    "address": "611 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "interior",
+    "runtime_phase": "interior",
+    "status": "no_record"
+  },
+  {
+    "id": "pmt_607-skyland-terrace-way-77009",
+    "project": "25046241",
+    "address": "607 Skyland Terrace Way, Houston, TX 77009",
+    "evidence_phase": "mep_finals",
+    "runtime_phase": "mep_finals",
+    "status": "no_record"
+  }
+]
