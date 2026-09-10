@@ -1,0 +1,29 @@
+source,id,address,kind,phase,lat,lng,rendered_project,permits
+DATA,pmt_4616-eli-st-c-77007,"4616 Eli St C, Houston, TX 77007",permit,foundation,29.7735328,-95.4079459,pmt_4616-eli-st-c-77007,26014121
+DATA,pmt_4612-eli-st-b-77007,"4612 Eli St B, Houston, TX 77007",permit,foundation,29.7735054,-95.4074178,pmt_4612-eli-st-b-77007,26014117
+DATA,pmt_4616-eli-st-a-77007,"4616 Eli St A, Houston, TX 77007",permit,foundation,29.7739068,-95.4085833,pmt_4616-eli-st-a-77007,26014119
+DATA,2131271381,"1604 Spring St, Houston, Tx 77007",deed,,29.775384,-95.374036,2131271381,
+DATA,pmt_4327-center-st-77007,"4327 Center St, Houston, TX 77007",permit,complete,29.7708676,-95.4050481,pmt_4327-center-st-77007,24053698
+DATA,pmt_4325-center-st-77007,"4325 Center St, Houston, TX 77007",permit,complete,29.7709404,-95.4050537,pmt_4325-center-st-77007,24053699
+DATA,pmt_4323-center-st-77007,"4323 Center St, Houston, TX 77007",permit,complete,29.7710105,-95.4050549,pmt_4323-center-st-77007,24053700
+DATA,pmt_4105-allen-st-77007,"4105 Allen St, Houston, TX 77007",permit,complete,29.7715778,-95.4026248,pmt_4105-allen-st-77007,24047987
+DATA,pmt_4107-allen-st-77007,"4107 Allen St, Houston, TX 77007",permit,complete,29.7716539,-95.4026259,pmt_4107-allen-st-77007,24047988
+DATA,pmt_4103-allen-st-77007,"4103 Allen St, Houston, TX 77007",permit,mep_finals,29.7715031,-95.4026237,pmt_4103-allen-st-77007,24047986
+DATA,pmt_1918-johnson-st-77007,"1918 Johnson St, Houston, TX 77007",permit,complete,29.774913,-95.373384,pmt_1918-johnson-st-77007,24075117
+DATA,pmt_1520-winter-st-77007,"1520 Winter St, Houston, TX 77007",permit,complete,29.7724291,-95.3733714,pmt_1520-winter-st-77007,24049010
+DATA,pmt_5111-allen-st-77007,"5111 Allen St, Houston, TX 77007",permit,foundation,29.7731317,-95.4131098,pmt_5111-allen-st-77007,24124941
+DATA,pmt_5113-allen-st-77007,"5113 Allen St, Houston, TX 77007",permit,exterior,29.7732421,-95.413116,pmt_5113-allen-st-77007,24124942
+DATA,pmt_1521-ovid-st-77007,"1521 Ovid St, Houston, TX 77007",permit,complete,29.7757274,-95.373483,pmt_1521-ovid-st-77007,24108196
+DATA,pmt_5109-allen-st-77007,"5109 Allen St, Houston, TX 77007",permit,foundation,29.773041,-95.4131085,pmt_5109-allen-st-77007,24124940
+DATA,pmt_1522-winter-st-77007,"1522 Winter St, Houston, TX 77007",permit,complete,29.7724347,-95.3734524,pmt_1522-winter-st-77007,24115201
+DATA,pmt_1610-johnson-st-77007,"1610 Johnson St, Houston, TX 77007",permit,complete,29.7725683,-95.3731749,pmt_1610-johnson-st-77007,24115206
+DATA,pmt_4605-nolda-st-77007,"4605 Nolda St, Houston, TX 77007",permit,foundation,29.7761265,-95.4078864,pmt_4605-nolda-st-77007,25018313
+DATA,pmt_5114-eigel-st-77007,"5114 Eigel St, Houston, TX 77007",permit,foundation,29.775,-95.4132467,pmt_5114-eigel-st-77007,26010466
+DATA,pmt_1308-edwards-st-b-77007,"1308 Edwards St B, Houston, TX 77007",permit,complete,29.7710218,-95.3704417,pmt_1308-edwards-st-b-77007,25048881
+DATA,pmt_1308-edwards-st-a-77007,"1308 Edwards St A, Houston, TX 77007",permit,complete,29.7710227,-95.3703629,pmt_1308-edwards-st-a-77007,25048882
+DATA,pmt_4612-eli-st-c-77007,"4612 Eli St C, Houston, TX 77007",permit,foundation,29.7737139,-95.4078,pmt_4612-eli-st-c-77007,26014118
+DATA,pmt_4616-eli-st-b-77007,"4616 Eli St B, Houston, TX 77007",permit,foundation,29.7736217,-95.4079558,pmt_4616-eli-st-b-77007,26014120
+DATA,pmt_4612-eli-st-a-77007,"4612 Eli St A, Houston, TX 77007",permit,foundation,29.7735343,-95.4077964,pmt_4612-eli-st-a-77007,26014116
+DATA,pmt_5016-schuler-st-77007,"5016 Schuler St, Houston, TX 77007",permit,mep_finals,29.7728294,-95.4121856,pmt_5016-schuler-st-77007,25099765
+DATA,pmt_5018-schuler-st-77007,"5018 Schuler St, Houston, TX 77007",permit,mep_finals,29.7728286,-95.4122644,pmt_5018-schuler-st-77007,25099768
+SOLD_DATA,s24912976,4310 Koehler Street Unit#A,sold comp,,29.77432,-95.40479,,
