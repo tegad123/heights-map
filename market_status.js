@@ -176,17 +176,20 @@ renderLegend=function(){
   // Repaint after evidence arrives, shared edits merge, or a Finished filter changes.
   for(const marker of markers)marker.setStyle(mkStyle(marker._rec.id));
 };
-function marketSnapshot(){
-  const forecast=comingOnline(12),ids=new Set(forecast.homes.map(r=>r.id));
+function marketSnapshot(months=12){
+  const forecast=comingOnline(months),ids=new Set(forecast.homes.map(r=>r.id));
   const excluded=marketRows().filter(r=>ids.has(r.pin)&&r.status==='terminated');
   return {construction:forecast.count,terminated:excluded.length,available:forecast.count-excluded.length};
+}
+function marketSnapshotNote(snapshot){
+  return snapshot.terminated+' terminated homes excluded from snapshot ('+snapshot.construction+' in construction forecast)';
 }
 const marketOriginalSupply=renderSupplyCard;
 renderSupplyCard=function(){
   marketOriginalSupply();if(!MARKET_VIEW.ready||!MARKET_VIEW.available)return;
   const snapshot=marketSnapshot(),big=document.getElementById('sc-big'),foot=document.getElementById('sc-foot');
   if(big)big.textContent=snapshot.available;
-  if(foot)foot.textContent+=' · '+snapshot.terminated+' terminated homes excluded from snapshot ('+snapshot.construction+' in construction forecast)';
+  if(foot)foot.textContent+=' · '+marketSnapshotNote(snapshot);
 };
 
 if(PANEL_RESTRUCTURED){

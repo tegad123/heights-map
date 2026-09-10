@@ -1959,7 +1959,9 @@ function buildOverview(){
   const bd=phaseBreakdown();
   const uc=BUILD_PHASES.reduce((n,p)=>n+(bd[p]||0),0);
   const ready=bd.complete||0;
-  const within12=comingOnline(12).count;
+  const marketAdjusted=typeof PANEL_RESTRUCTURED!=='undefined'&&PANEL_RESTRUCTURED&&MARKET_VIEW.ready&&MARKET_VIEW.available;
+  const snapshot=marketAdjusted?marketSnapshot():null;
+  const within12=snapshot?snapshot.available:comingOnline(12).count;
   const permitN=DATA.filter(r=>!inventoryCategory(r.id)&&r.kind==='permit'&&!isPromotedPermit(r)).length;
   const deedN=DATA.filter(r=>!inventoryCategory(r.id)&&primaryStage(r.id)==='deed').length;
   const upd=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
@@ -1977,6 +1979,7 @@ function buildOverview(){
   h+='<div class="ovx-stat"><span class="k">PERMITS QUEUED</span><span class="v" style="color:#f1ede6">'+permitN+'</span></div>';
   h+='<div class="ovx-stat"><span class="k">LOTS BOUGHT · PRE-CON</span><span class="v" style="color:#3f6cd1">'+deedN+'</span></div>';
   h+='</div></div>';
+  if(snapshot)h+='<p class="note-foot ovx-snapshot-note">'+esc(marketSnapshotNote(snapshot))+'</p>';
 
   // CONSTRUCTION PIPELINE: 5 phase circles
   h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>FOUNDATION → COMPLETE · '+(uc+ready)+' HOMES</span></div>';
@@ -1988,13 +1991,13 @@ function buildOverview(){
   h+='</div>';
 
   // SUPPLY CURVE: SVG chart of comingOnline at checkpoints
-  const curve=supplyCurve();
+  const curve=supplyCurve().map(c=>marketAdjusted?{...c,count:marketSnapshot(c.months).available}:c);
   const maxN=Math.max(1,...curve.map(c=>c.count));
   const W=640,H=180,PX=44,PY=18;
   const xs=m=>PX+( [3,6,9,12,18,24].indexOf(m) )*( (W-PX-14)/5 );
   const ys=n=>H-PY-(n/maxN)*(H-PY*2);
   let pts=curve.map(c=>xs(c.months)+','+ys(c.count)).join(' ');
-  const twelveX=xs(12),twelveY=ys(comingOnline(12).count);
+  const twelveX=xs(12),twelveY=ys(within12);
   h+='<div class="ovx-secH"><span>HOMES REACHING MARKET</span><span>CUMULATIVE · FROM TODAY</span></div>';
   h+='<div class="ovx-chart"><svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet">';
   // area fill
