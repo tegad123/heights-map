@@ -176,6 +176,10 @@ renderLegend=function(){
   // Repaint after evidence arrives, shared edits merge, or a Finished filter changes.
   for(const marker of markers)marker.setStyle(mkStyle(marker._rec.id));
 };
+function activeMarketCounts(){
+  const active=marketRows().filter(r=>r.member!=null&&r.status==='active');
+  return {finished:active.filter(r=>finishedPlacement(byId[r.pin])).length,construction:active.filter(r=>!finishedPlacement(byId[r.pin])).length};
+}
 function marketSnapshot(months=12){
   const forecast=comingOnline(months),ids=new Set(forecast.homes.map(r=>r.id));
   const excluded=marketRows().filter(r=>ids.has(r.pin)&&r.status==='terminated');

@@ -1975,7 +1975,15 @@ function buildOverview(){
   h+='<div class="ovx-herosub">'+(within12===uc+ready?'Every home now under construction reaches market inside a year. ':'')+permitN+' permits are queued behind them.</div></div>';
   h+='<div class="ovx-heroR">';
   h+='<div class="ovx-stat"><span class="k">UNDER CONSTRUCTION</span><span class="v" style="color:#e8590c">'+ucCount()+'</span></div>';
+  if(marketAdjusted){
+    const active=activeMarketCounts();
+    h+='<div class="ovx-stat" data-active-market="finished"><span class="k">FINISHED ON MARKET</span><span class="v" style="color:#2f9e44">'+active.finished+'</span></div>';
+    h+='<div class="ovx-stat" data-active-market="construction"><span class="k">UNDER CONSTRUCTION ON MARKET</span><span class="v" style="color:#2f9e44">'+active.construction+'</span></div>';
+  }else if(typeof PANEL_RESTRUCTURED!=='undefined'&&PANEL_RESTRUCTURED){
+    h+='<div class="ovx-stat"><span class="k">ACTIVE MARKET EVIDENCE</span><span class="v">Unavailable</span></div>';
+  }else{
   h+='<div class="ovx-stat"><span class="k">ACTIVE ON MARKET</span><span class="v" style="color:#2f9e44">'+listedCount()+'</span></div>';
+  }
   h+='<div class="ovx-stat"><span class="k">PERMITS QUEUED</span><span class="v" style="color:#f1ede6">'+permitN+'</span></div>';
   h+='<div class="ovx-stat"><span class="k">LOTS BOUGHT · PRE-CON</span><span class="v" style="color:#3f6cd1">'+deedN+'</span></div>';
   h+='</div></div>';
