@@ -36,6 +36,7 @@ import argparse
 import csv
 import html as htmllib
 import json
+import math
 import os
 import re
 import ssl
@@ -266,7 +267,6 @@ def in_zone_poly(lng, lat):
 HCAD_URL = 'https://arcweb.hcad.org/server/rest/services/public/public_query/MapServer/0'
 # arcweb.hcad.org serves an incomplete SSL chain; public read-only data
 _HCAD_CTX = ssl._create_unverified_context()
-UNIT_RE = re.compile(r'\s*#?\s*(?:[A-F]|A&B|1/2)$')
 
 
 def extract_data(html):
@@ -330,67 +330,127 @@ def title_addr(street):
 
 
 def _hcad_query(where):
-    qs = urllib.parse.urlencode({'f': 'json', 'where': where,
-                                 'outFields': 'address,legal_lines',
-                                 'returnGeometry': 'true', 'outSR': '4326'})
-    with urllib.request.urlopen(HCAD_URL + '/query?' + qs, timeout=30, context=_HCAD_CTX) as r:
-        return json.load(r).get('features', [])
+    features, offset = [], 0
+    while True:
+        qs = urllib.parse.urlencode({'f': 'json', 'where': where,
+                                     'outFields': 'address,legal_lines,HCAD_NUM',
+                                     'returnGeometry': 'true', 'outSR': '4326',
+                                     'resultOffset': offset, 'resultRecordCount': 1000})
+        with urllib.request.urlopen(HCAD_URL + '/query?' + qs, timeout=30, context=_HCAD_CTX) as response:
+            payload = json.load(response)
+        if 'error' in payload or 'features' not in payload:
+            raise RuntimeError(f'HCAD query failed: {payload}')
+        batch = payload['features']
+        features.extend(batch)
+        if not payload.get('exceededTransferLimit'):
+            return features
+        if not batch:
+            raise RuntimeError('HCAD pagination returned an empty truncated page')
+        offset += len(batch)
 
 
 def _centroid(rings):
+    # Translate before the shoelace products: tiny parcels at lon=-95/lat=30
+    # otherwise lose significant digits when nearly equal products cancel.
     ring = max(rings, key=len)
-    a = cx = cy = 0.0
-    for i in range(len(ring) - 1):
-        x0, y0 = ring[i]; x1, y1 = ring[i + 1]
-        cr = x0 * y1 - x1 * y0
-        a += cr; cx += (x0 + x1) * cr; cy += (y0 + y1) * cr
-    if abs(a) < 1e-12:
-        xs = [p[0] for p in ring]; ys = [p[1] for p in ring]
-        return sum(ys) / len(ys), sum(xs) / len(xs)
-    a *= 0.5
-    return cy / (6 * a), cx / (6 * a)
+    origin_x, origin_y = ring[0]
+    local = [(x - origin_x, y - origin_y) for x, y in ring]
+    if local[-1] != local[0]:
+        local.append(local[0])
+    crosses, xs, ys = [], [], []
+    for (x0, y0), (x1, y1) in zip(local, local[1:]):
+        cross = x0 * y1 - x1 * y0
+        crosses.append(cross)
+        xs.append((x0 + x1) * cross)
+        ys.append((y0 + y1) * cross)
+    twice_area = math.fsum(crosses)
+    if abs(twice_area) < 1e-12:
+        return (origin_y + math.fsum(y for x, y in local) / len(local),
+                origin_x + math.fsum(x for x, y in local) / len(local))
+    return (origin_y + math.fsum(ys) / (3 * twice_area),
+            origin_x + math.fsum(xs) / (3 * twice_area))
 
 
-def _norm_ret(s):
-    # HCAD stores units as "1103 ERIN ST # B" — collapse '#' before comparing
-    return re.sub(r'\s+', ' ', s.strip().upper().replace('#', ' ')).strip()
+_HCAD_SUFFIXES = {
+    'STREET': 'ST', 'AVENUE': 'AVE', 'DRIVE': 'DR', 'BOULEVARD': 'BLVD',
+    'LANE': 'LN', 'ROAD': 'RD', 'COURT': 'CT', 'PLACE': 'PL',
+    'TERRACE': 'TER', 'TRAIL': 'TRL', 'CIRCLE': 'CIR', 'PARKWAY': 'PKWY',
+}
+_HCAD_SUFFIX_RE = r'(?:ST|AVE|DR|BLVD|LN|RD|CT|PL|WAY|TER|TRL|CIR|PKWY)'
+
+
+def hcad_address(address):
+    """Normalize spelling/format only; preserve fractions, direction and unit."""
+    address = address.upper().replace('\u2019', "'").replace('\u2018', "'")
+    address = address.replace('\u00bd', ' 1/2').replace('(PVT)', ' ').replace('.', '')
+    address = re.sub(r'\s+', ' ', address).strip()
+    address = re.sub(r'\s+77\d{3}$', '', address)
+    # The export truncates some ZIPs to 77/7700. Only remove after a road
+    # suffix, never from a road name/number such as FM 77.
+    address = re.sub(r'(' + _HCAD_SUFFIX_RE + r')\s+(?:77|7700)$', r'\1', address)
+    address = re.sub(r'\b(?:UNIT|APT)\s*#?\s*([A-Z])$', r'# \1', address)
+    for word, short in _HCAD_SUFFIXES.items():
+        address = re.sub(r'\b' + word + r'(?=\s*(?:#?\s*[A-Z])?$)', short, address)
+    directions = {'NORTH': 'N', 'SOUTH': 'S', 'EAST': 'E', 'WEST': 'W'}
+    address = re.sub(r'^(\d+\s+)(NORTH|SOUTH|EAST|WEST)\b',
+                     lambda m: m[1] + directions[m[2]], address)
+    return re.sub(r'\s+', ' ', address).strip()
+
+
+def _norm_ret(address):
+    return re.sub(r'\s+', ' ', hcad_address(address).replace('#', ' ')).strip()
+
+
+def _hcad_variants(address):
+    clean = _norm_ret(address)
+    variants = {clean}
+    # Explicitly preserve the same unit while trying HCAD's prefix placement.
+    # In "1034 E W 17TH ST", E is the requested unit and W stays directional.
+    match = re.fullmatch(r'(\d+(?:\s+1/2)?)\s+(.+\b' + _HCAD_SUFFIX_RE + r')\s+([A-Z])', clean)
+    if match:
+        number, street, unit = match.groups()
+        variants.update({f'{number} {street} # {unit}',
+                         f'{number} {unit} {street}', f'{number}{unit} {street}'})
+    return variants
 
 
 def hcad_geocode(street_upper):
-    """Parcel-centroid geocode. Returns dict with status OK/FAIL/AMBIG/MISMATCH.
-    Unit-aware: '2412 TERRY ST B' also tried as HCAD's '2412 TERRY ST # B'."""
-    clean = re.sub(r'\s+', ' ', street_upper.replace('(PVT)', ' ')).strip()
-    base = UNIT_RE.sub('', clean)
-    um = re.search(r'\s([A-F])$', clean)
-    unit = um.group(1) if um else None
-    esc = lambda s: s.replace("'", "''")
-    feats = _hcad_query(f"address = '{esc(clean)}'")
+    """Return only a unique parcel agreeing on full normalized address/unit."""
+    clean = hcad_address(street_upper)
+    variants = _hcad_variants(clean)
+    accepted = {_norm_ret(value) for value in variants}
+    esc = lambda value: value.replace("'", "''")
+    where = 'address IN (' + ','.join("'" + esc(value) + "'" for value in sorted(variants)) + ')'
+    feats = _hcad_query(where)
     time.sleep(0.25)
-    if not feats and unit:
-        feats = _hcad_query(f"address = '{esc(base)} # {unit}'")
-        time.sleep(0.25)
     if not feats:
-        feats = _hcad_query(f"address LIKE '{esc(base)}%'")
+        number = re.match(r'^\d+', clean)
+        if not number:
+            return {'status': 'FAIL'}
+        # Fetch spelling variants for this house number, then require exact
+        # normalized identity. Never drop a unit or swap E/W to force a hit.
+        prefix = number.group()
+        clauses = [f"address LIKE '{prefix} %'"]
+        unit = re.search(r'\s([A-Z])$', _norm_ret(clean))
+        if unit:
+            clauses.append(f"address LIKE '{prefix}{unit[1]} %'")
+        feats = _hcad_query(' OR '.join(clauses))
         time.sleep(0.25)
-        feats = [f for f in feats
-                 if _norm_ret(f['attributes']['address']) == _norm_ret(clean)
-                 or UNIT_RE.sub('', _norm_ret(f['attributes']['address'])) == base]
-    if not feats:
+    exact = [f for f in feats if _norm_ret(f['attributes']['address']) in accepted]
+    if not exact:
         return {'status': 'FAIL'}
-    num, rest = base.split(' ', 1)
-    good = [f for f in feats if _norm_ret(f['attributes']['address']).startswith(num + ' ')
-            and rest.split(' ')[0] in _norm_ret(f['attributes']['address'])]
-    if not good:
-        return {'status': 'MISMATCH', 'matched': feats[0]['attributes']['address']}
-    exact = [f for f in good if _norm_ret(f['attributes']['address']) == _norm_ret(clean)]
-    pick = exact or good
-    if len({_norm_ret(f['attributes']['address']) for f in pick}) > 1:
-        return {'status': 'AMBIG',
-                'matched': sorted({_norm_ret(f['attributes']['address']) for f in good})[:4]}
-    f0 = pick[0]
-    lat, lng = _centroid(f0['geometry']['rings'])
-    return {'status': 'OK', 'matched': f0['attributes']['address'].strip(),
-            'legal': (f0['attributes'].get('legal_lines') or ''),
+    # Multiple parcel accounts at one address require a merge/parcel decision,
+    # not whichever feature the service happens to return first.
+    parcels = {}
+    for feature in exact:
+        identity = feature['attributes'].get('HCAD_NUM') or json.dumps(feature.get('geometry'), sort_keys=True)
+        parcels.setdefault(identity, feature)
+    if len(parcels) != 1:
+        return {'status': 'AMBIG', 'matched': sorted(parcels)}
+    feature = next(iter(parcels.values()))
+    lat, lng = _centroid(feature['geometry']['rings'])
+    return {'status': 'OK', 'matched': feature['attributes']['address'].strip(),
+            'legal': feature['attributes'].get('legal_lines') or '',
             'lat': round(lat, 7), 'lng': round(lng, 7)}
 
 
@@ -407,21 +467,25 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
     LAST_DROPPED.clear()
     seen = set()
     for cp in csv_paths:
+        source_zip = re.search(r'(?:permits|backfill)_(7\d{4})(?:_|\.)', os.path.basename(cp))
         for row in csv.DictReader(open(cp)):
             proj = row['PROJECT_NO'].strip()
-            if not proj or proj in seen:
-                continue
-            seen.add(proj)
             addr_raw = row['Address'].strip()
             if row['PERMIT_DESC'].strip() != 'Building Pmt' or 'S.F. RES' not in row['PROJECT_DESC'].upper():
                 skipped['not_sfres'] += 1
                 dropped.append((proj, addr_raw, 'NOT_SFRES', f"{row['PERMIT_DESC'].strip()} / {row['PROJECT_DESC'].strip()[:60]}")); continue
+            # Only qualifying building rows claim a project. A fee/trade row
+            # earlier in the export must not suppress its Building Pmt.
+            if not proj or proj in seen:
+                dropped.append((proj, addr_raw, 'DUP_INPUT_PROJ' if proj else 'MISSING_PROJ', 'qualifying project repeated in input' if proj else 'missing project number'))
+                continue
+            seen.add(proj)
             if int(proj[:2]) < min_proj_year:
                 skipped['old_proj'] += 1
                 dropped.append((proj, addr_raw, 'OLD_PROJ', f'proj year {proj[:2]} < {min_proj_year}')); continue
             zm = re.search(r'(7\d{4})\s*$', addr_raw)
-            zipc = zm.group(1) if zm else ''
-            street = re.sub(r'\s*7\d{4}\s*$', '', addr_raw).strip().upper()
+            zipc = zm.group(1) if zm else (source_zip.group(1) if source_zip else '')
+            street = hcad_address(re.sub(r'\s*7\d{4}\s*$', '', addr_raw))
             if proj in projs:
                 skipped['dup_proj'] += 1
                 dropped.append((proj, street, 'DUP_PROJ', 'project already in DATA')); continue

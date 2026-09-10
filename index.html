@@ -543,7 +543,7 @@ let DATA = [{"id": "2131193248", "a": "201 E 26th St, Houston, Tx 77008", "llc":
 // ---- out-of-zone guard: streets Spencer has excluded (Timbergrove/Lazybrook + west Cottage Grove) ----
 // Precise street list, no geometry guesswork. If a legit street ever matches, remove it here.
 // lng > -95.370 = east of the I-45 North Fwy corridor (Near Northside/Northside Village) — easternmost legit pin is -95.3724.
-const OUT_OF_ZONE=/lindyann|golden nectar|lamelia|1011 wynnwood|101[18] grovewood|cranston ct|waltway|abington|pineshade|6111 hurst|timbergrove ln|5339.*larkin|5240 cornish|18(22|24|26|28) w 23rd st|2013 w 14th|2002 w 14th/i;
+const OUT_OF_ZONE=/lindyann|golden nectar|lamelia|1011 wynnwood|101[18] grovewood|cranston ct|waltway|abington|pineshade|6111 hurst|timbergrove ln|5339.*larkin|5240 cornish|18(22|24|26|28) w 23rd st|2013 w 14th|2002 w 14th|\b6808 n main (?:st|street)(?:\s*(?:unit|#)\s*|\s+)a\b|\b102 sylvester (?:rd|road)\b/i;
 // polygon zone guard: heights_boundary.geojson ring (Spencer working zone — 610 N / I-45–N Main E / I-10 S / White Oak Bayou–TC Jester W),
 // embedded so the guard runs before any render. Regex + east-lng checks above stay as cheap pre-filters; the polygon catches every other direction.
 const ZONE_RING=[[-95.4415,29.8155],[-95.42,29.8165],[-95.39,29.817],[-95.366,29.8165],[-95.363,29.802],[-95.36,29.79],[-95.356,29.776],[-95.358,29.769],[-95.39,29.7695],[-95.4135,29.77],[-95.42,29.7905],[-95.4275,29.796],[-95.433,29.806],[-95.4415,29.8155]];
