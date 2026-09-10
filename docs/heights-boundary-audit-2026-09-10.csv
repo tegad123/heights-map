@@ -1,0 +1,1397 @@
+source,id,address,lat,lng,kind,outside,distance_outside_m,disposition
+DATA,2131193248,"201 E 26th St, Houston, Tx 77008",29.810877,-95.397426,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131086163,"1436 Dorothy St, Houston, Tx 77008",29.797398,-95.409001,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131360412,"1141 Alexander St, Houston, Tx 77008",29.792095,-95.408233,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131360894,"934 Dorothy St, Houston, Tx 77008",29.788253,-95.408664,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131437170,"118 E 24th St, Houston, Tx 77008",29.807505,-95.397822,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191409,"1123 Nadine St, Houston, Tx 77009",29.806486,-95.38713,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2130814684,"519 Threlkeld St, Houston, Tx 77007",29.779949,-95.388197,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131018442,"6005 N Main St, Houston, Tx 77009",29.805356,-95.388765,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131129729,"2119 Gostick St, Houston, Tx 77008",29.805786,-95.391335,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131129791,"2225 Singleton St, Houston, Tx 77008",29.80642,-95.390528,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131129832,"2011 Singleton St, Houston, Tx 77008",29.804805,-95.390497,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131129881,"2119 Carter St, Houston, Tx 77008",29.80632,-95.389682,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131144961,"118 E 23rd St, Houston, Tx 77008",29.806813,-95.39831,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131145222,"626 E 22nd St, Houston, Tx 77008",29.805852,-95.391565,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131042481,"741 W 21st St, Houston, Tx 77008",29.804996,-95.41197,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131044677,"813 Herkimer St, Houston, Tx 77007",29.785722,-95.406352,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131044801,"838 Waverly St, Houston, Tx 77007",29.786396,-95.403956,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131143852,"545 W 27th St, Houston, Tx 77008",29.811366,-95.408018,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131143861,"527 W 27th St, Houston, Tx 77008",29.811166,-95.407292,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131144336,"520 W 24th St, Houston, Tx 77008",29.807675,-95.406987,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131144616,"714 W 23rd St, Houston, Tx 77008",29.806638,-95.411114,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131146860,"1300 Waverly St, Houston, Tx 77008",29.794517,-95.404112,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131146866,"1300 Waverly St, Houston, Tx 77008",29.794494,-95.404335,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131149006,"918 Tulane St, Houston, Tx 77008",29.787771,-95.401946,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131149358,"615 Allston St, Houston, Tx 77007",29.78211,-95.40021,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131179219,"1211 N Durham Dr, Houston, Tx 77008",29.793065,-95.412035,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131190507,"616 E 5th St, Houston, Tx 77007",29.779522,-95.391084,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131145380,"2047 Columbia St, Houston, Tx 77008",29.805742,-95.393856,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131151610,"935 Pecore St, Houston, Tx 77009",29.790785,-95.383574,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131152146,"909 Bayland Ave, Houston, Tx 77009",29.786883,-95.382648,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131186599,"314 W 21st St, Houston, Tx 77008",29.804626,-95.402177,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191267,"1021 Nadine St, Houston, Tx 77009",29.806585,-95.385384,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191475,"1128 Adele St, Houston, Tx 77009",29.806211,-95.387308,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191611,"1015 Adele St, Houston, Tx 77009",29.805878,-95.38508,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191920,"1123 Louise St, Houston, Tx 77009",29.805157,-95.387139,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131192777,"839 E 26th St, Houston, Tx 77009",29.810875,-95.38762,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131192874,"713 E 26th St, Houston, Tx 77009",29.81083,-95.389757,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131190693,"344 Harvard St, Houston, Tx 77007",29.777642,-95.395928,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131200820,"1126 W 22nd St, Houston, Tx 77008",29.805424,-95.419697,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131200959,"1124 W 21st St, Houston, Tx 77008",29.804491,-95.419238,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131211370,"618 Wendel St, Houston, Tx 77009",29.782042,-95.378784,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131225773,"1402 W 14th St, Houston, Tx 77008",29.795866,-95.411069,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131226721,"637 E 6th 1/2 St, Houston, Tx 77007",29.782659,-95.390377,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131238884,"901 Dorothy St, Houston, Tx 77008",29.78692,-95.408619,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131241262,"1310 Omar St, Houston, Tx 77008",29.787799,-95.390492,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131282520,"837 W 25th St, Houston, Tx 77008",29.809046,-95.413846,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131284485,"1533 Herkimer St, Houston, Tx 77008",29.799061,-95.406723,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131330121,"1448 W 25th St, Houston, Tx 77008",29.808484,-95.425409,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131330179,"1518 W 25th St, Houston, Tx 77008",29.80825,-95.426646,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131330283,"1330 W 24th St, Houston, Tx 77008",29.807472,-95.423843,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131331131,"1306 W 21st St, Houston, Tx 77008",29.804624,-95.422724,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131331183,"1506 W 21st St, Houston, Tx 77008",29.804585,-95.426127,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131331239,"1610 W 21st St, Houston, Tx 77008",29.804514,-95.428017,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131331686,"1534 Beall St, Houston, Tx 77008",29.799469,-95.417668,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131193931,"614 E 26th St, Houston, Tx 77008",29.81042,-95.391867,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131194068,"704 E 26th St, Houston, Tx 77009",29.810484,-95.390168,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131194125,"830 E 26th St, Houston, Tx 77009",29.810486,-95.388019,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131195093,"205 Northwood St, Houston, Tx 77009",29.792546,-95.378137,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131207363,"602 E 29th St, Houston, Tx 77008",29.812912,-95.392219,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131207382,"608 E 29th St, Houston, Tx 77008",29.812919,-95.392045,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131207530,"423 E 28th St, Houston, Tx 77008",29.812438,-95.393675,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131208326,"704 E 28th St, Houston, Tx 77009",29.812132,-95.390654,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131208376,"731 E 27th St, Houston, Tx 77009",29.81169,-95.389406,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131208502,"1006 E 28th St, Houston, Tx 77009",29.812153,-95.386834,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131226980,"305 Tabor St, Houston, Tx 77009",29.793497,-95.377314,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131227429,"301 Enid St, Houston, Tx 77009",29.793249,-95.375681,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131240072,"711 E 12th St, Houston, Tx 77008",29.792835,-95.389528,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131242651,"1107 E 27th St, Houston, Tx 77009",29.81207,-95.384997,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131282255,"241 W 26th St, Houston, Tx 77008",29.810388,-95.401257,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131283678,"1703 Yale St, Houston, Tx 77008",29.801119,-95.39946,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131284475,"1518 Herkimer St, Houston, Tx 77008",29.798665,-95.406102,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318105,"122 Redan St, Houston, Tx 77009",29.789584,-95.373098,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318242,"1120 E 26th St, Houston, Tx 77009",29.810522,-95.38395,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318619,"500 Aurora St, Houston, Tx 77008",29.80959,-95.393326,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131370103,"512 Threlkeld St, Houston, Tx 77007",29.77995,-95.387752,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131370113,"533 Studewood St, Houston, Tx 77007",29.78044,-95.387526,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131370154,"531 Threlkeld St, Houston, Tx 77007",29.78054,-95.388334,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131374828,"1010 Woodland St, Houston, Tx 77009",29.785745,-95.384853,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131383427,"1030 W 8th St, Houston, Tx 77007",29.784835,-95.408031,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131436719,"1230 W 26th St, Houston, Tx 77008",29.8095,-95.421257,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318733,"310 E 25th St, Houston, Tx 77008",29.80869,-95.395522,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318786,"427 E 24th St, Houston, Tx 77008",29.808294,-95.393635,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318883,"716 E 25th St, Houston, Tx 77008",29.808741,-95.39053,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131347730,"4308 Julian St, Houston, Tx 77009",29.796014,-95.382062,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131370476,"905 Adele St, Houston, Tx 77009",29.805896,-95.383051,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131378379,"110 Harris Ct, Houston, Tx 77009",29.79968,-95.38379,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131421176,"410 Merrill St, Houston, Tx 77009",29.789093,-95.375818,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131428357,"310 Conoly St, Houston, Tx 77009",29.800363,-95.38258,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131432164,"709 E 17th St, Houston, Tx 77008",29.800869,-95.390562,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131437296,"118 Munford St, Houston, Tx 77008",29.808201,-95.39783,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131437359,"117 Munford St, Houston, Tx 77008",29.80855,-95.397825,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131437380,"212 E 25th St, Houston, Tx 77008",29.80889,-95.396665,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131437447,"117 E 25th St, Houston, Tx 77008",29.809269,-95.397871,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2161199012,"710 E 13th St, Houston, Tx 77008",29.794259,-95.389445,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2170723831,"303 Enid St, Houston, Tx 77009",29.793394,-95.375641,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131175661,"611 Mathis St, Houston, Tx 77009",29.801832,-95.373558,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131176668,"1208 Cordell St, Houston, Tx 77009",29.802457,-95.374573,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131176672,"1204 Cordell St, Houston, Tx 77009",29.802191,-95.374395,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131177133,"1201 Cordell St, Houston, Tx 77009",29.802078,-95.37496,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131227565,"507 Cordell St, Houston, Tx 77009",29.795762,-95.374805,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131227567,"511 Cordell St, Houston, Tx 77009",29.795887,-95.37483,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131228154,"607 Melwood St, Houston, Tx 77009",29.793991,-95.373128,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131228576,"805 Tabor St, Houston, Tx 77009",29.798462,-95.377376,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131228942,"1412 Northwood St, Houston, Tx 77009",29.804518,-95.377934,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131312288,"1007 Cordell St, Houston, Tx 77009",29.800558,-95.374927,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131312670,"1003 Enid St, Houston, Tx 77009",29.800274,-95.375795,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131312852,"1506 Tabor St, Houston, Tx 77009",29.805168,-95.377096,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131313166,"805 Walton St, Houston, Tx 77009",29.798423,-95.376593,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131313407,"1631 Walton St, Houston, Tx 77009",29.806754,-95.377162,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2177158676,"Enid St, Houston, Tx 77009",29.809856,-95.375433,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2177158678,"Enid St, Houston, Tx 77009",29.809716,-95.375589,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_820-waverly-st-a-77007,"820 Waverly St A, Houston, TX 77007",29.785975,-95.4041474,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_820-waverly-st-b-77007,"820 Waverly St B, Houston, TX 77007",29.785975,-95.403967,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1811-bonner-st-77007,"1811 Bonner St, Houston, TX 77007",29.777376,-95.401965,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_310-w-9th-st-77007,"310 W 9th St, Houston, TX 77007",29.7869648,-95.4005693,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_408-columbia-st-77007,"408 Columbia St, Houston, TX 77007",29.778443,-95.392554,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_410-columbia-st-77007,"410 Columbia St, Houston, TX 77007",29.77858,-95.392556,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_625-oxford-st-77007,"625 Oxford St, Houston, TX 77007",29.7826824,-95.3920921,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_734-e-7th-1-2-st-77007,"734 E 7th 1/2 St, Houston, TX 77007",29.7841536,-95.3884428,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_710-waverly-st-c-77007,"710 Waverly St C, Houston, TX 77007",29.783778,-95.404033,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_710-waverly-st-b-77007,"710 Waverly St B, Houston, TX 77007",29.783897,-95.4040842,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_710-waverly-st-a-77007,"710 Waverly St A, Houston, TX 77007",29.783897,-95.403904,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_718-e-7th-st-77007,"718 E 7th St, Houston, TX 77007",29.7831976,-95.3890501,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1108-w-17th-st-77008,"1108 W 17th St, Houston, TX 77008",29.8004832,-95.4185222,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1110-w-17th-st-77008,"1110 W 17th St, Houston, TX 77008",29.800362,-95.418589,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1112-w-17th-st-77008,"1112 W 17th St, Houston, TX 77008",29.800231,-95.418586,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1114-w-17th-st-77008,"1114 W 17th St, Houston, TX 77008",29.800231,-95.418701,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1116-w-17th-st-77008,"1116 W 17th St, Houston, TX 77008",29.800361,-95.418704,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1118-w-17th-st-77008,"1118 W 17th St, Houston, TX 77008",29.800491,-95.4187,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_745-w-17th-st-77008,"745 W 17th St, Houston, TX 77008",29.8009315,-95.4119141,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_915-w-18th-st-d-77008,"915 W 18th St D, Houston, TX 77008",29.8021519,-95.4151279,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_915-w-18th-st-c-77008,"915 W 18th St C, Houston, TX 77008",29.8021547,-95.414942,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1520-w-21st-st-unit-b,1520 W 21st St Unit#B,29.8047394,-95.4261597,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_915-w-18th-st-b-77008,"915 W 18th St B, Houston, TX 77008",29.8020028,-95.4149462,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_308-e-28th-st-77008,"308 E 28th St, Houston, TX 77008",29.8120236,-95.3954586,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_915-w-18th-st-a-77008,"915 W 18th St A, Houston, TX 77008",29.8019076,-95.4149457,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1623-blount-st-77008,"1623 Blount St, Houston, TX 77008",29.8008715,-95.3912585,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_915-w-18th-st-e-77008,"915 W 18th St E, Houston, TX 77008",29.8021559,-95.4149233,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_915-w-18th-st-f-77008,"915 W 18th St F, Houston, TX 77008",29.801879,-95.415143,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_409-e-27th-st-77008,"409 E 27th St, Houston, TX 77008",29.8116056,-95.3941724,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2013-cortlandt-st-77008,"2013 Cortlandt St, Houston, TX 77008",29.8044403,-95.3960436,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2052-columbia-st-77008,"2052 Columbia St, Houston, TX 77008",29.8059167,-95.3931618,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_629-e-26th-st-77008,"629 E 26th St, Houston, TX 77008",29.8107923,-95.3912309,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_807-w-22nd-st-77008,"807 W 22nd St, Houston, TX 77008",29.8060842,-95.412664,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1410-herkimer-st-77008,"1410 Herkimer St, Houston, TX 77008",29.7966237,-95.4060724,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1306-w-24th-st-f-77008,"1306 W 24th St F, Houston, TX 77008",29.8074754,-95.4229938,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1306-w-24th-st-e-77008,"1306 W 24th St E, Houston, TX 77008",29.8074754,-95.422814,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1306-w-24th-st-d-77008,"1306 W 24th St D, Houston, TX 77008",29.8074754,-95.422634,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1306-w-24th-st-c-77008,"1306 W 24th St C, Houston, TX 77008",29.8074754,-95.422454,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1306-w-24th-st-b-77008,"1306 W 24th St B, Houston, TX 77008",29.8074754,-95.422274,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1306-w-24th-st-a-77008,"1306 W 24th St A, Houston, TX 77008",29.8074754,-95.422094,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_433-w-23rd-st-77008,"433 W 23rd St, Houston, TX 77008",29.8071975,-95.4050404,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1341-nashua-st-77008,"1341 Nashua St, Houston, TX 77008",29.7957324,-95.4126199,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1343-nashua-st-77008,"1343 Nashua St, Houston, TX 77008",29.7957819,-95.4126693,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2464-nicholson-st-77008,"2464 Nicholson St, Houston, TX 77008",29.809319,-95.4057956,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2462-nicholson-st-77008,"2462 Nicholson St, Houston, TX 77008",29.8093175,-95.4056546,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2450-nicholson-st-77008,"2450 Nicholson St, Houston, TX 77008",29.8091288,-95.4057903,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2452-nicholson-st-77008,"2452 Nicholson St, Houston, TX 77008",29.8091247,-95.4057217,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2013-sheldon-st-a-77008,"2013 Sheldon St A, Houston, TX 77008",29.8050669,-95.3893883,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2013-sheldon-st-b-77008,"2013 Sheldon St B, Houston, TX 77008",29.8050669,-95.389208,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_930-waverly-st-77008,"930 Waverly St, Houston, TX 77008",29.7880796,-95.4042383,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_737-w-21st-st-c-77008,"737 W 21st St C, Houston, TX 77008",29.8050651,-95.4117946,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_737-w-21st-st-b-77008,"737 W 21st St B, Houston, TX 77008",29.8050651,-95.411615,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_737-w-21st-st-a-77008,"737 W 21st St A, Houston, TX 77008",29.8050651,-95.411435,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_737-w-21st-st-d-77008,"737 W 21st St D, Houston, TX 77008",29.8050651,-95.411255,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_729-w-21st-st-a-77008,"729 W 21st St A, Houston, TX 77008",29.8052047,-95.4115117,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_723-w-21st-st-77008,"723 W 21st St, Houston, TX 77008",29.8050291,-95.4113705,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_725-w-21st-st-77008,"725 W 21st St, Houston, TX 77008",29.8049708,-95.4115148,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_529-w-27th-st-77008,"529 W 27th St, Houston, TX 77008",29.8112423,-95.407404,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_729-w-21st-st-b-77008,"729 W 21st St B, Houston, TX 77008",29.8050713,-95.4115098,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1432-alexander-st-77008,"1432 Alexander St, Houston, TX 77008",29.7972412,-95.4081859,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_711-e-25th-st-a-77008,"711 E 25th St A, Houston, TX 77008",29.8091457,-95.3907975,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_711-e-25th-st-b-77008,"711 E 25th St B, Houston, TX 77008",29.8091457,-95.390618,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1320-alexander-st-a-77008,"1320 Alexander St A, Houston, TX 77008",29.7950865,-95.408184,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1320-alexander-st-b-77008,"1320 Alexander St B, Houston, TX 77008",29.7950865,-95.408004,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_918-dorothy-st-77008,"918 Dorothy St, Houston, TX 77008",29.7876981,-95.4086356,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_112-e-27th-st-a-77008,"112 E 27th St A, Houston, TX 77008",29.8111452,-95.398203,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_705-e-13th-st-77008,"705 E 13th St, Houston, TX 77008",29.7947269,-95.3897247,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_607-w-27th-st-77008,"607 W 27th St, Houston, TX 77008",29.8112287,-95.4085021,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_404-e-28th-st-77008,"404 E 28th St, Houston, TX 77008",29.8120653,-95.3943572,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_729-w-21st-st-c-77008,"729 W 21st St C, Houston, TX 77008",29.8049648,-95.4114415,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_727-w-21st-st-77008,"727 W 21st St, Houston, TX 77008",29.8050175,-95.4112343,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_745-e-16th-st-77008,"745 E 16th St, Houston, TX 77008",29.8002057,-95.3891684,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1322-lawrence-street,1322 Lawrence Street,29.7946557,-95.4074923,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_527-w-26th-st-77008,"527 W 26th St, Houston, TX 77008",29.8101751,-95.4072273,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_525-w-26th-st-77008,"525 W 26th St, Houston, TX 77008",29.8101648,-95.4071431,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_715-e-12th-st-77008,"715 E 12th St, Houston, TX 77008",29.7928745,-95.3893824,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1595-w-25th-st-77008,"1595 W 25th St, Houston, TX 77008",29.808995,-95.4279398,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1597-w-25th-st-77008,"1597 W 25th St, Houston, TX 77008",29.808995,-95.427948,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1599-w-25th-st-77008,"1599 W 25th St, Houston, TX 77008",29.8089949,-95.4279559,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1601-w-25th-st-77008,"1601 W 25th St, Houston, TX 77008",29.8090805,-95.4278713,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1603-w-25th-st-77008,"1603 W 25th St, Houston, TX 77008",29.8086938,-95.4279694,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1605-w-25th-st-77008,"1605 W 25th St, Houston, TX 77008",29.8086938,-95.4279773,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1434-herkimer-st-77008,"1434 Herkimer St, Houston, TX 77008",29.7975672,-95.4061139,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_815-w-18th-st-77008,"815 W 18th St, Houston, TX 77008",29.8019975,-95.4129268,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_813-w-18th-st-77008,"813 W 18th St, Houston, TX 77008",29.8018366,-95.412844,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1220-prince-st-77008,"1220 Prince St, Houston, TX 77008",29.7930407,-95.4132729,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2005-harvard-st-77008,"2005 Harvard St, Houston, TX 77008",29.8044358,-95.3969438,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1246-omar-st-77008,"1246 Omar St, Houston, TX 77008",29.7878044,-95.3897648,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1035-voight-st-77009,"1035 Voight St, Houston, TX 77009",29.7798665,-95.3858368,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1033-voight-st-77009,"1033 Voight St, Houston, TX 77009",29.7798196,-95.3858134,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_902-jewett-st-77009,"902 Jewett St, Houston, TX 77009",29.7992004,-95.3758811,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2811-ave-77009,"2811 Ave, Houston, TX 77009",29.7841217,-95.3723972,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1301-tabor-st-77009,"1301 Tabor St, Houston, TX 77009",29.802992,-95.3774758,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1303-cordell-st-a-77009,"1303 Cordell St A, Houston, TX 77009",29.8031771,-95.3749952,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1132-e-6th-1-2-st-77009,"1132 E 6th 1/2 St, Houston, TX 77009",29.78233,-95.3873248,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1008-e-28th-st-77009,"1008 E 28th St, Houston, TX 77009",29.812137,-95.3867755,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-e-26th-st-77009,"1122 E 26th St, Houston, TX 77009",29.8112112,-95.3843709,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1109-voight-st-77009,"1109 Voight St, Houston, TX 77009",29.7799057,-95.3866361,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1121-louise-st-77009,"1121 Louise St, Houston, TX 77009",29.8051263,-95.3871282,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_523-link-rd-77009,"523 Link Rd, Houston, TX 77009",29.8080854,-95.3784292,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_519-link-rd-77009,"519 Link Rd, Houston, TX 77009",29.8080873,-95.378415,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1906-northwood-st-77009,"1906 Northwood St, Houston, TX 77009",29.8080769,-95.3783607,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1910-northwood-st-77009,"1910 Northwood St, Houston, TX 77009",29.8080871,-95.3783607,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1914-northwood-st-77009,"1914 Northwood St, Houston, TX 77009",29.8080973,-95.3783607,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1918-northwood-st-77009,"1918 Northwood St, Houston, TX 77009",29.8081075,-95.3783606,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1125-e-24th-st-77009,"1125 E 24th St, Houston, TX 77009",29.808564,-95.3836225,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1107-e-24th-st-77009,"1107 E 24th St, Houston, TX 77009",29.8085638,-95.3837105,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1109-e-24th-st-77009,"1109 E 24th St, Houston, TX 77009",29.8085638,-95.3836994,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1104-gibbs-st-77009,"1104 Gibbs St, Houston, TX 77009",29.808425,-95.3847634,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_906-bayland-ave-77009,"906 Bayland Ave, Houston, TX 77009",29.7865163,-95.382567,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_826-e-27th-st-77009,"826 E 27th St, Houston, TX 77009",29.8113281,-95.388245,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_949-ridge-st-77009,"949 Ridge St, Houston, TX 77009",29.7828413,-95.3840599,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1010-e-26th-st-77009,"1010 E 26th St, Houston, TX 77009",29.8105307,-95.3857308,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_702-euclid-st-77009,"702 Euclid St, Houston, TX 77009",29.7850364,-95.379557,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1137-adele-st-77009,"1137 Adele St, Houston, TX 77009",29.8058591,-95.3877694,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1314-e-28th-st-77009,"1314 E 28th St, Houston, TX 77009",29.812398,-95.3810706,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_409-walton-st-a-77009,"409 Walton St A, Houston, TX 77009",29.7947681,-95.3765142,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_409-walton-street-unit-b,409 Walton Street Unit#B,29.7941984,-95.3763458,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_931-merrill-st-77009,"931 Merrill St, Houston, TX 77009",29.7891052,-95.3834007,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_635-mazal-pvt-ln-77009,"635 Mazal (Pvt) Ln, Houston, TX 77009",29.8069517,-95.3797381,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1316-heslep-st-77009,"1316 Heslep St, Houston, TX 77009",29.7973035,-95.3803793,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1318-heslep-st-77009,"1318 Heslep St, Houston, TX 77009",29.7973617,-95.3803722,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1124-robbie-st-77009,"1124 Robbie St, Houston, TX 77009",29.8048355,-95.3872269,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1122-robbie-street,1122 Robbie Street,29.8046839,-95.3866155,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1118-adele-st-77009,"1118 Adele St, Houston, TX 77009",29.8062274,-95.3869867,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1135-adele-st-77009,"1135 Adele St, Houston, TX 77009",29.8058334,-95.3876946,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_602-northwood-st-77009,"602 Northwood St, Houston, TX 77009",29.7964086,-95.3778403,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_845-e-26th-st-77009,"845 E 26th St, Houston, TX 77009",29.8108479,-95.3873496,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2715-beauchamp-st-77009,"2715 Beauchamp St, Houston, TX 77009",29.7832283,-95.3745352,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2713-beauchamp-st-77009,"2713 Beauchamp St, Houston, TX 77009",29.783185,-95.3745658,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1121-e-24th-st-77009,"1121 E 24th St, Houston, TX 77009",29.8085358,-95.3836136,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_940-nadine-st-77009,"940 Nadine St, Houston, TX 77009",29.8069697,-95.384313,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_932-algregg-st-77009,"932 Algregg St, Houston, TX 77009",29.7969436,-95.3837157,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_934-algregg-st-77009,"934 Algregg St, Houston, TX 77009",29.7969429,-95.3837809,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131041898,"2036 Cortlandt St, Houston, Tx 77008",29.805376,-95.395317,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_845-w-23,845 West 23rd Street,29.80699,-95.414034,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_231-e-26,231 E 26th Street,29.810997,-95.397426,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1207-tabor,1207 Tabor Street,29.802308,-95.377215,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1109-tabor,1109 Tabor Street,29.8016332,-95.3774378,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1315-waverly,1315 Waverly Street,29.794517,-95.403932,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_613-wendel,613 Wendel Street,29.78255,-95.378522,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_111-e-18,111 E 18th Street,29.799787,-95.392651,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_830-e-27,830 E 27th Street,29.81179,-95.388245,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_902-e-25,902 E 25TH Street,29.8088507,-95.3870008,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_920-e-25,920 E 25TH Street,29.80883,-95.386256,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1520-nicholson,1520 Nicholson Street,29.798457,-95.405299,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1502-w-21,1502 W 21st Street,29.804537,-95.425953,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_122-e-4,122 E 4th Street,29.7775418,-95.3964356,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2603-julian,2603 JULIAN Street,29.78225,-95.38223,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_826-ralfallen,826 Ralfallen Street,29.797606,-95.388649,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_3115-beauchamp,3115 Beauchamp Street,29.784828,-95.374535,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_623-e-13,623 E 13th Street,29.7946992,-95.3910703,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1023-euclid,1023 Euclid Street,29.785478,-95.380563,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_609-e-25,609 E 25th Street,29.8091875,-95.3920685,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_212-e-24,212 E 24th Street,29.8075328,-95.3964828,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1116-highland,1116 Highland Street,29.7871825,-95.3867569,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_603-e-23,603 E 23rd Street,29.807486,-95.392,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1906-w-14,1906 W 14th,29.795866,-95.410889,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_715-merrill,715 Merrill Street,29.78909,-95.380165,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2015-harvard,2015 Harvard Street,29.804476,-95.396944,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_735-e-8-12,735 E 8TH 1/2 Street,29.78643,-95.38844,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_731-e-8-12,731 E 8TH 1/2 Street,29.786416,-95.388614,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_248-w-22,248 W 22nd Street,29.805676,-95.401294,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2434-white-oak,2434 White Oak Drive,29.7818159,-95.3833971,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1113-voight,1113 Voight Street,29.7799505,-95.3867801,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1140-waverly,1140 Waverly Street,29.792255,-95.40429,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1126-e-7-12,1126 E 7th 1/2 Street,29.7841419,-95.387194,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2436-white-oak,2436 White Oak,29.7818885,-95.3834084,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1002-e-6-12,1002 E 6TH 1/2 Street,29.7823667,-95.3844768,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_616-ridge,616 Ridge Street,29.78314,-95.378791,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_107-e-24,107 E 24th Street,29.807505,-95.397642,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_710-e-18,710 E 18th Street,29.802183,-95.392651,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1011-e-25,1011 E 25th Street,29.809194,-95.386256,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1016-e-27,1016 E 27 th Street,29.811706,-95.384997,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_709-ridge,709 Ridge Street,29.783122,-95.380093,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1119-e-7-12,1119 E 7th 1/2 Street,29.784593,-95.386865,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2612-greenleaf,2612 Greenleaf Street,29.7825,-95.381,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1208-e-26th-street-unit-a,1208 E 26th Street Unit#A,29.8110602,-95.3829939,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1303-cordell-street-unit-b,1303 Cordell Street Unit#B,29.8031771,-95.374815,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1032-w-17th-street-unit-a,1032 W 17th Street Unit#A,29.800179,-95.418522,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1218-prince-street,1218 Prince Street,29.7929582,-95.4132488,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1122-e-27th-st-unit-b,1122 E 27TH ST Unit#B,29.81216,-95.38431,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1520-w-21st-st-unit-a,1520 W 21st St Unit#A,29.8046055,-95.426898,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1227-prince-street,1227 Prince Street,29.7933611,-95.4137507,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_835-w-25th-street,835 W 25th Street,29.8091086,-95.4137887,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_805-w-22nd-street,805 W 22nd Street,29.8060786,-95.4126486,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1434-alexander-street,1434 Alexander Street,29.7972824,-95.4081867,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_227-e-26th-street,227 E 26th Street,29.810981,-95.397426,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1324-lawrence-street,1324 Lawrence Street,29.7953672,-95.4073677,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_827-w-16th-street-unit-a,827 W 16th Street Unit#A,29.7998789,-95.4136088,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1012-e-26th-street,1012 E 26TH Street,29.8105066,-95.3856452,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_711-e-26th-street,711 E 26TH Street,29.8108139,-95.3898593,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_318-w-21st-street,318 W 21st Street,29.8046938,-95.4022569,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_609-w-27th-street,609 W 27th Street,29.8111739,-95.4085613,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_112-e-27th-street,112 E 27th Street,29.8111452,-95.398023,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_116-e-23rd-street,116 E 23RD Street,29.8067308,-95.3983993,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_611-e-25th-street-unit-b,611 E 25th Street Unit#B,29.8091743,-95.3919081,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_407-e-27th-street,407 E 27TH Street,29.811566,-95.394068,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_710-waverly-street-unit-d,710 Waverly Street Unit#D,29.783897,-95.403724,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_335-harvard-street,335 Harvard Street,29.7773806,-95.3964812,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1504-w-21st-street,1504 W 21st Street,29.804545,-95.425953,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_312-w-9th-st,312 w 9th St,29.7865475,-95.4006948,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1229-prince-street,1229 Prince Street,29.7934432,-95.4137051,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_816-w-17th-street,816 W 17TH Street,29.8004278,-95.4129598,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_814-w-17th-street,814 W 17TH Street,29.8005068,-95.4129114,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1326-lawrence-street,1326 Lawrence Street,29.795429,-95.407176,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_815-lawrence-street-unit-a,815 Lawrence Street Unit#A,29.7857969,-95.4070897,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_611-e-25th-street-unit-a,611 E 25th Street Unit#A,29.8091743,-95.391728,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_602-jewett-street-unit-b,602 Jewett Street Unit#B,29.798,-95.375881,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1524-w-21st-st,1524 W 21st St,29.804621,-95.427078,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_406-e-28th-street,406 E 28th Street,29.8120645,-95.3942572,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1436-alexander-st,1436 Alexander St,29.797323,-95.408051,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1321-alexander-street,1321 Alexander Street,29.795091,-95.408184,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1922-northwood-st-77009,"1922 Northwood St, Houston, TX 77009",29.8081177,-95.3783606,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1926-northwood-st-77009,"1926 Northwood St, Houston, TX 77009",29.8081279,-95.3783606,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_318b-w-21st-st-77008,"318 W 21st St B (est), Houston, TX 77008",29.8047438,-95.4022569,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131537524,"1219 Bay Oaks Rd, Houston, Tx 77008",29.793357,-95.414778,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131538328,"922 Prince St, Houston, Tx 77008",29.788508,-95.413123,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131538429,"1023 Nashua St, Houston, Tx 77008",29.789507,-95.41265,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131538680,"911 Bay Oaks Rd, Houston, Tx 77008",29.788444,-95.414589,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131538718,"905 Bay Oaks Rd, Houston, Tx 77008",29.788195,-95.414657,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131538725,"1510 Glen Oaks St, Houston, Tx 77008",29.784593,-95.412318,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131538738,"1522 Glen Oaks St, Houston, Tx 77008",29.784542,-95.413019,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1602-turnpike-rd-77008,"1602 Turnpike Rd, Houston, TX 77008",29.7867211,-95.4128494,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_822-nashua-st-77008,"822 Nashua St, Houston, TX 77008",29.7858824,-95.4120928,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1118-worthshire-st-77008,"1118 Worthshire St, Houston, TX 77008",29.7910407,-95.4150106,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_728-euclid-st-77009,"728 Euclid St, Houston, TX 77009",29.7850464,-95.3803941,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1032-key-st-77009,"1032 Key St, Houston, TX 77009",29.7913478,-95.3854831,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1138-fugate-st-77009,"1138 Fugate St, Houston, TX 77009",29.7948438,-95.3879,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1013-woodland-st-77009,"1013 Woodland St, Houston, TX 77009",29.7861808,-95.3849933,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_625-merrill-st-77009,"625 Merrill St, Houston, TX 77009",29.7891467,-95.3788271,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1040-louise-st-77009,"1040 Louise St, Houston, TX 77009",29.8055288,-95.3858811,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2436-white-oak-dr-77009,"2436 White Oak Dr, Houston, TX 77009",29.7813569,-95.3830733,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_832-e-27th-st-77009,"832 E 27th St, Houston, TX 77009",29.8114376,-95.3885398,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_627-mazal-pvt-ln-77009,"627 Mazal (Pvt) Ln, Houston, TX 77009",29.80701,-95.3795,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_631-mazal-pvt-ln-77009,"631 Mazal (Pvt) Ln, Houston, TX 77009",29.80698,-95.37962,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131238842,"905 Dorothy St, Houston, Tx 77008",29.787195,-95.40857,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131044972,"841 Rutland St, Houston, Tx 77007",29.786642,-95.401385,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191542,"1115 Adele St, Houston, Tx 77009",29.805867,-95.386818,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131437247,"205 E 24th St, Houston, Tx 77008",29.807856,-95.396949,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131283630,"1624 Heights Blvd, Houston, Tx 77008",29.800669,-95.397472,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131208578,"303 Bayland Ave, Houston, Tx 77009",29.787056,-95.374373,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131387479,"932 W Temple St, Houston, Tx 77009",29.792729,-95.383997,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131074923,"707 E 6th 1/2 St, Houston, Tx 77007",29.782793,-95.389195,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131156653,"2715 Houston Ave, Houston, Tx 77009",29.781593,-95.37238,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131186526,"404 W 21st St, Houston, Tx 77008",29.804755,-95.403951,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131187480,"1818 N Shepherd Dr, Houston, Tx 77008",29.80258,-95.409873,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131187484,"1808 N Shepherd Dr, Houston, Tx 77008",29.801988,-95.409636,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191607,"1025 Adele St, Houston, Tx 77009",29.80587,-95.385547,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131194086,"726 E 26th St, Houston, Tx 77009",29.810472,-95.389382,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131200768,"902 W 22nd St, Houston, Tx 77008",29.805495,-95.414445,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131201005,"946 W 21st St, Houston, Tx 77008",29.804551,-95.416332,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131207218,"820 E 29th St, Houston, Tx 77009",29.812936,-95.388426,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131218924,"1516 Lawrence St, Houston, Tx 77008",29.798522,-95.407443,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131240334,"745 E 11th 1/2 St, Houston, Tx 77008",29.792029,-95.388111,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131282833,"205 W 24th St, Houston, Tx 77008",29.80830442,-95.39980833,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131318291,"1211 Gibbs St, Houston, Tx 77009",29.80938,-95.382943,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131360701,"1032 Alexander St, Houston, Tx 77008",29.789839,-95.407741,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131360892,"930 Dorothy St, Houston, Tx 77008",29.788119,-95.408641,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2924-watson-street,2924 Watson Street,29.7846559,-95.3806592,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_615-wendel-street,615 Wendel Street,29.7822851,-95.3784948,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_833-w-25th-street,833 W 25th Street,29.808892,-95.413164,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_741-w-21st-street-unit-a,741 W 21st Street Unit#A,29.8048564,-95.4110347,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1122-e-27th-st-unit-a,1122 E 27TH ST Unit#A,29.8118232,-95.3848713,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_710-e-7th-st-77007,"710 E 7th St, Houston, TX 77007",29.7831817,-95.3893354,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_835-lawrence-st-77007,"835 Lawrence St, Houston, TX 77007",29.786403,-95.4070653,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_806-peddie-st-77008,"806 Peddie St, Houston, TX 77008",29.7990089,-95.3894448,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_710-le-green-st-77008,"710 Le Green St, Houston, TX 77008",29.7982601,-95.3904589,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_906-w-20th-st-e-77008,"906 W 20th St E, Houston, TX 77008",29.803457,-95.4149193,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_906-w-20th-st-f-77008,"906 W 20th St F, Houston, TX 77008",29.803457,-95.4149193,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_906-w-20th-st-a-77008,"906 W 20th St A, Houston, TX 77008",29.803457,-95.4149193,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_906-w-20th-st-b-77008,"906 W 20th St B, Houston, TX 77008",29.803457,-95.4149193,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_906-w-20th-st-c-77008,"906 W 20th St C, Houston, TX 77008",29.803457,-95.4149193,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_845-w-23rd-st-a-77008,"845 W 23rd St A, Houston, TX 77008",29.8070721,-95.4140139,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_845-w-23rd-st-b-77008,"845 W 23rd St B, Houston, TX 77008",29.8070721,-95.4140139,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1336-herkimer-st-77008,"1336 Herkimer St, Houston, TX 77008",29.7953765,-95.4060276,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_914-w-16th-st-77008,"914 W 16th St, Houston, TX 77008",29.7994038,-95.4149013,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_214-sylvester-rd-77009,"214 Sylvester Rd, Houston, TX 77009",29.8119872,-95.3722299,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_1002-e-25th-street,1002 E 25th Street,29.808982,-95.3859878,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_834-waverly-street,834 WAVERLY Street,29.7857153,-95.4043154,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_705-walton-street,705 Walton Street,29.7972046,-95.3763917,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_830-waverly-street,830 WAVERLY Street,29.7856454,-95.4043139,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_614-ridge-street,614 Ridge Street,29.7829196,-95.3780513,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,act_2218-gostick-street,2218 Gostick Street,29.806736,-95.3910442,active,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1225-ashland-st-a-77008,"1225 Ashland St A, Houston, TX 77008",29.7933009,-95.4036225,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_839-allston-st-77007,"839 Allston St, Houston, TX 77007",29.7865047,-95.4002707,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1922-bonner-st-77007,"1922 Bonner St, Houston, TX 77007",29.7783027,-95.4015105,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-f-77009,"606 Link Rd F, Houston, TX 77009",29.8088069,-95.3797444,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-e-77009,"606 Link Rd E, Houston, TX 77009",29.8087304,-95.3792583,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-d-77009,"606 Link Rd D, Houston, TX 77009",29.8087848,-95.3791991,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-c-77009,"606 Link Rd C, Houston, TX 77009",29.808823,-95.3790881,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-b-77009,"606 Link Rd B, Houston, TX 77009",29.8091323,-95.3798447,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-a-77009,"606 Link Rd A, Houston, TX 77009",29.8089313,-95.3789676,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4616-eli-st-c-77007,"4616 Eli St C, Houston, TX 77007",29.7735328,-95.4079459,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4612-eli-st-b-77007,"4612 Eli St B, Houston, TX 77007",29.7735054,-95.4074178,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2311-roy-cir-77007,"2311 Roy Cir, Houston, TX 77007",29.7803921,-95.412977,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1019-e-7th-st-77009,"1019 E 7th St, Houston, TX 77009",29.7837471,-95.3850324,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4616-eli-st-a-77007,"4616 Eli St A, Houston, TX 77007",29.7739068,-95.4085833,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131085991,"1439 Laird St, Houston, Tx 77008",29.797503,-95.411029,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191490,"1133 Adele St, Houston, Tx 77009",29.805849,-95.387604,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131043751,"1440 Arlington St, Houston, Tx 77008",29.797699,-95.394074,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131283575,"1619 Cortlandt St, Houston, Tx 77008",29.800804,-95.395806,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131284732,"1424 Ashland St, Houston, Tx 77008",29.79701,-95.40323,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131249205,"813 Bayland Ave, Houston, Tx 77009",29.786897,-95.381347,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131475807,"1811 W 14th 1/2 St, Houston, Tx 77008",29.796478,-95.414458,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131374679,"1129 Highland St, Houston, Tx 77009",29.787519,-95.387362,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191859,"1014 Robbie St, Houston, Tx 77009",29.804959,-95.384986,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131208519,"1005 E 27th St, Houston, Tx 77009",29.811687,-95.385924,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131191265,"1031 Nadine St, Houston, Tx 77009",29.806592,-95.385711,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131227325,"206 Tabor St, Houston, Tx 77009",29.792585,-95.376819,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131271381,"1604 Spring St, Houston, Tx 77007",29.775384,-95.374036,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131285466,"1017 Rutland St, Houston, Tx 77008",29.789373,-95.401437,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131312302,"617 Peddie St, Houston, Tx 77008",29.79935,-95.39131,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131360419,"1144 Dorothy St, Houston, Tx 77008",29.792077,-95.408734,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131370516,"912 Robbie St, Houston, Tx 77009",29.804842,-95.383135,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131374781,"1126 Bayland Ave, Houston, Tx 77009",29.786461,-95.38719,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131377369,"1214 Farwood St, Houston, Tx 77009",29.787336,-95.370069,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131377371,"1317 Oleander St, Houston, Tx 77009",29.78763,-95.370249,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,2131377372,"1315 Oleander St, Houston, Tx 77009",29.787691,-95.370113,lead,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4327-center-st-77007,"4327 Center St, Houston, TX 77007",29.7708676,-95.4050481,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4325-center-st-77007,"4325 Center St, Houston, TX 77007",29.7709404,-95.4050537,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4323-center-st-77007,"4323 Center St, Houston, TX 77007",29.7710105,-95.4050549,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4105-allen-st-77007,"4105 Allen St, Houston, TX 77007",29.7715778,-95.4026248,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4107-allen-st-77007,"4107 Allen St, Houston, TX 77007",29.7716539,-95.4026259,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4103-allen-st-77007,"4103 Allen St, Houston, TX 77007",29.7715031,-95.4026237,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1918-johnson-st-77007,"1918 Johnson St, Houston, TX 77007",29.774913,-95.373384,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1520-winter-st-77007,"1520 Winter St, Houston, TX 77007",29.7724291,-95.3733714,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_706-e-7th-st-77007,"706 E 7th St, Houston, TX 77007",29.7831689,-95.3894595,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_818-lawrence-st-77007,"818 Lawrence St, Houston, TX 77007",29.7860271,-95.4066692,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_406-columbia-st-77007,"406 Columbia St, Houston, TX 77007",29.7783103,-95.392559,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5111-allen-st-77007,"5111 Allen St, Houston, TX 77007",29.7731317,-95.4131098,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5113-allen-st-77007,"5113 Allen St, Houston, TX 77007",29.7732421,-95.413116,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_717-e-5th-1-2-st-77007,"717 E 5th 1/2 St, Houston, TX 77007",29.7804154,-95.3890892,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_702-e-8th-st-77007,"702 E 8th St, Houston, TX 77007",29.7850085,-95.3896781,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1521-ovid-st-77007,"1521 Ovid St, Houston, TX 77007",29.7757274,-95.373483,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5109-allen-st-77007,"5109 Allen St, Houston, TX 77007",29.773041,-95.4131085,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_513-w-8th-st-77007,"513 W 8th St, Houston, TX 77007",29.7853217,-95.402823,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1522-winter-st-77007,"1522 Winter St, Houston, TX 77007",29.7724347,-95.3734524,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1610-johnson-st-77007,"1610 Johnson St, Houston, TX 77007",29.7725683,-95.3731749,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_404-columbia-st-77007,"404 Columbia St, Houston, TX 77007",29.7781728,-95.3925569,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4605-nolda-st-77007,"4605 Nolda St, Houston, TX 77007",29.7761265,-95.4078864,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4133-kolb-st-a-77007,"4133 Kolb St A, Houston, TX 77007",29.7773658,-95.4031305,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4133-kolb-st-b-77007,"4133 Kolb St B, Houston, TX 77007",29.7773643,-95.4032093,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5114-eigel-st-77007,"5114 Eigel St, Houston, TX 77007",29.775,-95.4132467,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1308-edwards-st-b-77007,"1308 Edwards St B, Houston, TX 77007",29.7710218,-95.3704417,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1308-edwards-st-a-77007,"1308 Edwards St A, Houston, TX 77007",29.7710227,-95.3703629,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4612-eli-st-c-77007,"4612 Eli St C, Houston, TX 77007",29.7737139,-95.4078,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4616-eli-st-b-77007,"4616 Eli St B, Houston, TX 77007",29.7736217,-95.4079558,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_4612-eli-st-a-77007,"4612 Eli St A, Houston, TX 77007",29.7735343,-95.4077964,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5016-schuler-st-77007,"5016 Schuler St, Houston, TX 77007",29.7728294,-95.4121856,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5018-schuler-st-77007,"5018 Schuler St, Houston, TX 77007",29.7728286,-95.4122644,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_5212-kansas-st-77007,"5212 Kansas St, Houston, TX 77007",29.7822889,-95.4153769,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_742-allston-st-77007,"742 Allston St, Houston, TX 77007",29.784142313405,-95.399882128768,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2008-w-14th-1-2-st-77008,"2008 W 14th 1/2 St, Houston, TX 77008",29.7962854,-95.4190503,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1023-grovewood-ln-77008,"1023 Grovewood Ln, Houston, TX 77008",29.7939983,-95.4173977,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1030-w-24th-st-b-77008,"1030 W 24th St B, Houston, TX 77008",29.807445,-95.4175231,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1030-w-24th-st-c-77008,"1030 W 24th St C, Houston, TX 77008",29.8076045,-95.417526,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1030-w-24th-st-a-77008,"1030 W 24th St A, Houston, TX 77008",29.8073185,-95.4175208,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-e-77008,"1443 W 25th St E, Houston, TX 77008",29.8092661,-95.4252897,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-f-77008,"1443 W 25th St F, Houston, TX 77008",29.8091372,-95.4252869,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-g-77008,"1443 W 25th St G, Houston, TX 77008",29.8090176,-95.4252844,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-h-77008,"1443 W 25th St H, Houston, TX 77008",29.8088951,-95.4252793,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-a-77008,"1443 W 25th St A, Houston, TX 77008",29.8088865,-95.425167,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-b-77008,"1443 W 25th St B, Houston, TX 77008",29.8090194,-95.4251699,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-c-77008,"1443 W 25th St C, Houston, TX 77008",29.809139,-95.4251725,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1443-w-25th-st-d-77008,"1443 W 25th St D, Houston, TX 77008",29.8092673,-95.4251753,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-w-17th-st-d-77008,"1122 W 17th St D, Houston, TX 77008",29.8003976,-95.4188832,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-w-17th-st-c-77008,"1122 W 17th St C, Houston, TX 77008",29.8003331,-95.4188818,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-w-17th-st-b-77008,"1122 W 17th St B, Houston, TX 77008",29.8002686,-95.4188803,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-w-17th-st-a-77008,"1122 W 17th St A, Houston, TX 77008",29.8002035,-95.4188782,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-w-17th-st-f-77008,"1122 W 17th St F, Houston, TX 77008",29.8005368,-95.4188884,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1122-w-17th-st-e-77008,"1122 W 17th St E, Houston, TX 77008",29.8004633,-95.4188847,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_916-w-24th-st-77008,"916 W 24th St, Houston, TX 77008",29.8076074,-95.4150468,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1910-w-14th-1-2-st-77008,"1910 W 14th 1/2 St, Houston, TX 77008",29.7962816,-95.4176807,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_910-w-24th-st-77008,"910 W 24th St, Houston, TX 77008",29.8076087,-95.4149002,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1522-w-21st-st-77008,"1522 W 21st St, Houston, TX 77008",29.8045228,-95.4272017,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1034-w-17th-st-d-77008,"1034 W 17th St D, Houston, TX 77008",29.8004688,-95.4171563,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1034-w-17th-st-c-77008,"1034 W 17th St C, Houston, TX 77008",29.8003891,-95.4171551,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1034-w-17th-st-e-77008,"1034 W 17th St E, Houston, TX 77008",29.8005499,-95.4171576,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1034-w-17th-st-b-77008,"1034 W 17th St B, Houston, TX 77008",29.8003052,-95.4171537,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1034-w-17th-st-a-77008,"1034 W 17th St A, Houston, TX 77008",29.80022,-95.4171524,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1032-w-17th-st-c-77008,"1032 W 17th St C, Houston, TX 77008",29.8002453,-95.4169921,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1032-w-17th-st-b-77008,"1032 W 17th St B, Houston, TX 77008",29.800369,-95.4169934,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1438-dian-st-a-77008,"1438 Dian St A, Houston, TX 77008",29.7974443,-95.4137793,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1115-nashua-st-77008,"1115 Nashua St, Houston, TX 77008",29.7910085,-95.4127602,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1239-waverly-st-77008,"1239 Waverly St, Houston, TX 77008",29.7938525,-95.4048958,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_310-e-28th-st-77008,"310 E 28th St, Houston, TX 77008",29.8120062,-95.3953986,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_614-algregg-st-77008,"614 Algregg St, Houston, TX 77008",29.7969779,-95.3914216,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1039-alexander-st-77008,"1039 Alexander St, Houston, TX 77008",29.7899595,-95.408253,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_323-w-23rd-st-77008,"323 W 23rd St, Houston, TX 77008",29.8072417,-95.4024603,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_243-w-26th-st-77008,"243 W 26th St, Houston, TX 77008",29.8103166,-95.4012771,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_302-w-23rd-st-77008,"302 W 23rd St, Houston, TX 77008",29.8067025,-95.4016987,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_501-e-26th-st-77008,"501 E 26th St, Houston, TX 77008",29.8108361,-95.3933484,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_213-e-23rd-st-77008,"213 E 23rd St, Houston, TX 77008",29.8072354,-95.3962857,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_608-e-26th-st-77008,"608 E 26th St, Houston, TX 77008",29.8103958,-95.3920024,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1011-worthshire-st-77008,"1011 Worthshire St, Houston, TX 77008",29.7895592,-95.4155596,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1507-w-23rd-st-e-77008,"1507 W 23rd St E, Houston, TX 77008",29.8068115,-95.4264815,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1516-dorothy-st-a-77008,"1516 Dorothy St A, Houston, TX 77008",29.7983476,-95.4090176,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1516-dorothy-st-b-77008,"1516 Dorothy St B, Houston, TX 77008",29.7984163,-95.4090186,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1516-dorothy-st-c-77008,"1516 Dorothy St C, Houston, TX 77008",29.798485,-95.4090196,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1507-w-23rd-st-d-77008,"1507 W 23rd St D, Houston, TX 77008",29.8068971,-95.4264834,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1507-w-23rd-st-c-77008,"1507 W 23rd St C, Houston, TX 77008",29.8069789,-95.4264853,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1507-w-23rd-st-b-77008,"1507 W 23rd St B, Houston, TX 77008",29.8070593,-95.4264871,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1507-w-23rd-st-a-77008,"1507 W 23rd St A, Houston, TX 77008",29.8071398,-95.426489,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_827-w-16th-st-b-77008,"827 W 16th St B, Houston, TX 77008",29.7999677,-95.4136124,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_310-e-27th-st-77008,"310 E 27th St, Houston, TX 77008",29.8111743,-95.3953387,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_811-w-18th-st-77008,"811 W 18th St, Houston, TX 77008",29.8019988,-95.4127981,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_809-w-18th-st-77008,"809 W 18th St, Houston, TX 77008",29.8019991,-95.4127192,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1424-w-23rd-st-c-77008,"1424 W 23rd St C, Houston, TX 77008",29.8062395,-95.4249828,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1424-w-23rd-st-b-77008,"1424 W 23rd St B, Houston, TX 77008",29.8063701,-95.4249856,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1021-ashland-st-77008,"1021 Ashland St, Houston, TX 77008",29.7894456,-95.4036866,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1237-waverly-st-77008,"1237 Waverly St, Houston, TX 77008",29.7937608,-95.4048941,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_222-e-27th-st-77008,"222 E 27th St, Houston, TX 77008",29.8111531,-95.3964772,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_226-e-27th-st-77008,"226 E 27th St, Houston, TX 77008",29.811155,-95.3963195,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_224-e-27th-st-77008,"224 E 27th St, Houston, TX 77008",29.811154,-95.3963984,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1405-w-21st-st-c-77008,"1405 W 21st St C, Houston, TX 77008",29.8049435,-95.4242408,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1405-w-21st-st-b-77008,"1405 W 21st St B, Houston, TX 77008",29.8050519,-95.4242409,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1405-w-21st-st-a-77008,"1405 W 21st St A, Houston, TX 77008",29.8051668,-95.4242438,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1403-w-21st-st-d-77008,"1403 W 21st St D, Houston, TX 77008",29.805183,-95.4240801,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1403-w-21st-st-c-77008,"1403 W 21st St C, Houston, TX 77008",29.8050967,-95.4240777,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1403-w-21st-st-b-77008,"1403 W 21st St B, Houston, TX 77008",29.8050114,-95.4240757,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1403-w-21st-st-a-77008,"1403 W 21st St A, Houston, TX 77008",29.804926,-95.4240734,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_319-e-24th-st-77008,"319 E 24th St, Houston, TX 77008",29.8083232,-95.3951868,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1519-glen-oaks-st-77008,"1519 Glen Oaks St, Houston, TX 77008",29.7852164,-95.4128928,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1221-prince-st-77008,"1221 Prince St, Houston, TX 77008",29.7931185,-95.4137541,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1223-prince-st-77008,"1223 Prince St, Houston, TX 77008",29.7931872,-95.4137554,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1006-nashua-st-77008,"1006 Nashua St, Houston, TX 77008",29.7889084,-95.4120943,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_325-w-23rd-st-77008,"325 W 23rd St, Houston, TX 77008",29.8072405,-95.4025391,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_710-e-12th-st-77008,"710 E 12th St, Houston, TX 77008",29.7923979,-95.3893353,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_708-ralfallen-st-77008,"708 Ralfallen St, Houston, TX 77008",29.7975641,-95.3905093,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1438-dian-st-b-77008,"1438 Dian St B, Houston, TX 77008",29.797513,-95.4137807,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_730-e-13th-1-2-st-77008,"730 E 13th 1/2 St, Houston, TX 77008",29.7951712,-95.3887588,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_832-w-19th-st-77008,"832 W 19th St, Houston, TX 77008",29.8024555,-95.4135792,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_834-w-19th-st-77008,"834 W 19th St, Houston, TX 77008",29.8024548,-95.413658,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_326-w-27th-st-77008,"326 W 27th St, Houston, TX 77008",29.8107589,-95.4026819,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_324-w-27th-st-77008,"324 W 27th St, Houston, TX 77008",29.8107605,-95.402603,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1211-bay-oaks-rd-77008,"1211 Bay Oaks Rd, Houston, TX 77008",29.7930144,-95.4148633,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1424-w-23rd-st-a-77008,"1424 W 23rd St A, Houston, TX 77008",29.8065103,-95.4249886,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_320-e-18th-st-77008,"320 E 18th St, Houston, TX 77008",29.8017511,-95.3946448,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1207-tulane-st-77008,"1207 Tulane St, Houston, TX 77008",29.7928833,-95.4026397,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1813-w-14th-st-77008,"1813 W 14th St, Houston, TX 77008",29.7958423,-95.4158237,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_305-w-17th-st-77008,"305 W 17th St, Houston, TX 77008",29.8011455,-95.4017409,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_321-e-24th-st-77008,"321 E 24th St, Houston, TX 77008",29.8083258,-95.3950291,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1312-e-28th-st-a-77009,"1312 E 28th St A, Houston, TX 77009",29.8123706,-95.3812349,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1101-usener-st-77009,"1101 Usener St, Houston, TX 77009",29.7810741,-95.3861399,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1115-e-26th-st-77009,"1115 E 26th St, Houston, TX 77009",29.8109354,-95.3843438,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1809-palmetto-landing-dr-77009,"1809 Palmetto Landing Dr, Houston, TX 77009",29.8073772,-95.3791511,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1807-palmetto-landing-dr-77009,"1807 Palmetto Landing Dr, Houston, TX 77009",29.8072975,-95.3791503,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_721-usener-st-77009,"721 Usener St, Houston, TX 77009",29.781625,-95.3802166,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_605-cordell-st-77009,"605 Cordell St, Houston, TX 77009",29.7965605,-95.3748872,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1106-robbie-st-77009,"1106 Robbie St, Houston, TX 77009",29.8048493,-95.3864882,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_115-northwood-st-77009,"115 Northwood St, Houston, TX 77009",29.7915838,-95.3781472,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1132-adele-st-77009,"1132 Adele St, Houston, TX 77009",29.8062713,-95.3874107,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1125-euclid-st-77009,"1125 Euclid St, Houston, TX 77009",29.7854394,-95.3871717,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1134-adele-st-77009,"1134 Adele St, Houston, TX 77009",29.8062707,-95.3874895,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_707-teetshorn-st-77009,"707 Teetshorn St, Houston, TX 77009",29.783877,-95.3799278,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_121-northwood-st-77009,"121 Northwood St, Houston, TX 77009",29.7919963,-95.3781529,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1805-palmetto-landing-dr-77009,"1805 Palmetto Landing Dr, Houston, TX 77009",29.8072177,-95.3791494,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1023-e-23rd-st-77009,"1023 E 23rd St, Houston, TX 77009",29.8077827,-95.3853137,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2922-michaux-st-77009,"2922 Michaux St, Houston, TX 77009",29.7845673,-95.3835532,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2932-michaux-st-77009,"2932 Michaux St, Houston, TX 77009",29.7846303,-95.3841197,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2912-michaux-st-77009,"2912 Michaux St, Houston, TX 77009",29.7844928,-95.3841181,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2930-michaux-st-77009,"2930 Michaux St, Houston, TX 77009",29.7846324,-95.3839894,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2928-michaux-st-77009,"2928 Michaux St, Houston, TX 77009",29.7846338,-95.3838464,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2926-michaux-st-77009,"2926 Michaux St, Houston, TX 77009",29.7846344,-95.3837121,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2924-michaux-st-77009,"2924 Michaux St, Houston, TX 77009",29.784659,-95.3835539,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2920-michaux-st-77009,"2920 Michaux St, Houston, TX 77009",29.7844755,-95.3835524,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2918-michaux-st-77009,"2918 Michaux St, Houston, TX 77009",29.7844969,-95.3837103,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2916-michaux-st-77009,"2916 Michaux St, Houston, TX 77009",29.7844949,-95.3838446,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2914-michaux-st-77009,"2914 Michaux St, Houston, TX 77009",29.7844935,-95.3839875,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_602-jewett-st-a-77009,"602 Jewett St A, Houston, TX 77009",29.7993272,-95.3731995,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2504-baylor-st-77009,"2504 Baylor St, Houston, TX 77009",29.8091886,-95.3847737,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2506-baylor-st-77009,"2506 Baylor St, Houston, TX 77009",29.8092986,-95.3847752,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2508-baylor-st-77009,"2508 Baylor St, Houston, TX 77009",29.8094086,-95.3847767,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_2701-julian-st-77009,"2701 Julian St, Houston, TX 77009",29.7829463,-95.3822934,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1110-jerome-st-77009,"1110 Jerome St, Houston, TX 77009",29.8016827,-95.3867267,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_829-e-25th-st-77009,"829 E 25th St, Houston, TX 77009",29.8092425,-95.3885224,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_827-e-25th-st-77009,"827 E 25th St, Houston, TX 77009",29.8092416,-95.3886013,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1001-e-7th-1-2-st-77009,"1001 E 7th 1/2 St, Houston, TX 77009",29.7846801,-95.3844693,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1040-voight-st-77009,"1040 Voight St, Houston, TX 77009",29.7802872,-95.3860281,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1042-voight-st-77009,"1042 Voight St, Houston, TX 77009",29.780291,-95.3861068,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1001-e-27th-st-77009,"1001 E 27th St, Houston, TX 77009",29.8117626,-95.3860962,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1016-e-27th-st-77009,"1016 E 27th St, Houston, TX 77009",29.8113067,-95.3855346,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1127-robbie-st-77009,"1127 Robbie St, Houston, TX 77009",29.8044027,-95.3872717,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_610-skyland-terrace-way-77009,"610 Skyland Terrace Way, Houston, TX 77009",29.8068422,-95.3790411,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-skyland-terrace-way-77009,"606 Skyland Terrace Way, Houston, TX 77009",29.8068445,-95.3789431,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_602-skyland-terrace-way-77009,"602 Skyland Terrace Way, Houston, TX 77009",29.8068552,-95.3788252,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_603-skyland-terrace-way-77009,"603 Skyland Terrace Way, Houston, TX 77009",29.8066349,-95.3788224,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_1208-e-26th-st-b-77009,"1208 E 26th St B, Houston, TX 77009",29.8110388,-95.3829211,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_614-skyland-terrace-way-77009,"614 Skyland Terrace Way, Houston, TX 77009",29.8068399,-95.3791392,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_606-link-rd-g-77009,"606 Link Rd G, Houston, TX 77009",29.8085105,-95.3790776,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_615-skyland-terrace-way-77009,"615 Skyland Terrace Way, Houston, TX 77009",29.8066342,-95.3791433,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_611-skyland-terrace-way-77009,"611 Skyland Terrace Way, Houston, TX 77009",29.8066367,-95.3790428,permit,False,0.0,keep: inside unchanged ZONE_RING
+DATA,pmt_607-skyland-terrace-way-77009,"607 Skyland Terrace Way, Houston, TX 77009",29.8066393,-95.3789423,permit,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28537378,1240 Heights Boulevard,29.7938,-95.397354,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91273988,416 W 18th Street,29.801614,-95.404331,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35621139,1023 Euclid Street,29.785421,-95.3853,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s17841617,1101 Omar Street,29.788284,-95.386274,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85610560,1520 Alexander Street,29.798569,-95.408222,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59023445,925 Heights Boulevard,29.788274,-95.398086,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69359852,828 E 28th Street,29.81209,-95.388126,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60835413,2624 Fountain Key Boulevard,29.809999,-95.415929,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48507690,2028 Columbia Street,29.805087,-95.393131,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38557869,823 W 21st Street,29.805045,-95.413399,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10680252,203 Archer Street,29.792489,-95.373946,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92762224,307 E 8th Street,29.785444,-95.394795,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85478626,1207 Tabor Street,29.802456,-95.377497,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s27233276,1176 Nelson Falls Lane,29.798464,-95.419638,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15138776,1535 Blair Street,29.799099,-95.407087,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85783143,2630 Shady Acres Court,29.810749,-95.421613,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s554050,1507 Blair Street,29.798363,-95.407057,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49943063,340 W 27th Street,29.810839,-95.403289,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23733062,427 W 27th Street,29.811318,-95.405019,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s12738193,2019 Gostick Street,29.804921,-95.391428,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10396812,1324 Lawrence Street,29.795367,-95.407368,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91009805,516 W 24th Street,29.807676,-95.406647,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s66640468,2714 Cornell Street,29.811839,-95.389044,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13917021,514 W 16th Street,29.799549,-95.406686,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68329806,1011 W 14th Street,29.796215,-95.407956,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s51714023,1120 Woodland Street,29.785731,-95.386891,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72655863,2041 W 14th 1/2 Street,29.796083,-95.420448,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63690975,306 E 5th Street,29.779431,-95.394684,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29665338,634 W 17th Street,29.800541,-95.409415,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98445445,1008 E 7th Street,29.783282,-95.384664,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82762123,315 W 15th Street,29.798236,-95.400897,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72560168,709 E 17th Street,29.800884,-95.390573,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s96168637,825 Ralfallen Street,29.798006,-95.388827,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s83744527,1325 W 23rd Street,29.806916,-95.423281,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s40101983,523 W 25th Street,29.809182,-95.407223,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54460078,1144 Dorothy Street,29.792086,-95.408755,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13007560,910 Northwood Street,29.799724,-95.377855,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s66433106,1819 W 24th Street,29.808072,-95.431125,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s46092924,1518 Prince Street,29.798499,-95.413027,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s93812875,806 E 29th Street,29.812934,-95.38898,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77976004,1529 Laird Street,29.798945,-95.411157,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s70853300,621 Wendel Street,29.782461,-95.379116,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55929453,108 E 27th Street,29.811135,-95.398626,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s46492311,1005 W 24th Street,29.808027,-95.416365,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16183688,710 Redan Street,29.789519,-95.379873,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80862732,834 W 18th Street Unit#B,29.801465,-95.413894,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68275712,1510 Columbia Street,29.798584,-95.392994,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61710273,1305 Enid Street,29.803297,-95.375819,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30166212,1201 Tulane Street,29.792595,-95.402577,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78613052,1243 W 15th 1/2 Street,29.798847,-95.421673,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97528053,217 W 10th Street,29.78905,-95.399702,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56551673,1005 E 27th Street,29.811694,-95.385947,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42235659,1205 Temple Street,29.792933,-95.378555,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29967237,1222 Arlington Street,29.793393,-95.393936,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88818539,1315 W 22nd Street,29.805919,-95.423115,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45985101,200 E 26th Street,29.810349,-95.397382,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88703042,926 Nicholson Street,29.787957,-95.405258,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38531074,415 W 16th Street Unit#D,29.799975,-95.404316,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s46113113,1111 Wynnwood Lane,29.794792,-95.418464,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s83992671,411 W 24th Street,29.808188,-95.404213,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33839156,1520 Nicholson Street,29.798457,-95.405299,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16373769,1326 Lawrence Street,29.795433,-95.407374,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10455581,908 East 23rd,29.807386,-95.386811,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55427593,335 W 23rd Street,29.807272,-95.402831,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75980855,102 Vieux Carre Drive,29.783125,-95.372323,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3473318,2611 Harvard Street,29.811099,-95.397726,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s51794552,626 E 6th 1/2 Street,29.782294,-95.390701,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s27711684,1421 Blair Street,29.796975,-95.407041,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s71056150,710 E 18th Street,29.801916,-95.390607,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44865770,820 E 24th Street,29.807924,-95.388509,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92767147,1122 E 27TH ST Unit#B,29.811712,-95.384406,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58351277,1436 Harvard Street,29.797513,-95.396394,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53943558,125 North Street,29.785365,-95.370989,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56577602,823 W 26th Street,29.810087,-95.413343,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94167783,2211 Harvard Street,29.806511,-95.397002,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s20467322,1202 Walton Street,29.802076,-95.376177,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89636495,1011 W Melwood Street,29.794559,-95.384864,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58504241,1215 Ashland Street,29.793037,-95.403686,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95407673,107 E 24th Street,29.807855,-95.398662,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72854297,703 Cordell Street,29.797387,-95.374908,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62247476,218 E 27th Street Unit#C,29.811199,-95.396571,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s51497992,501 Cordell Street,29.795182,-95.374892,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97105255,1229 Prince Street,29.793443,-95.413705,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92874787,1708 Ashland Street,29.801253,-95.403505,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72216964,1307 E 27th Street,29.812063,-95.381362,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57079875,1511 Harvard Street,29.798421,-95.396855,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42392223,235 W 22nd Street,29.806187,-95.400857,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13973985,732 W 17th Street,29.800528,-95.411188,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92102014,125 E 22nd Street,29.806244,-95.397815,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61177197,2222 Oxford Street,29.80696,-95.391949,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44982064,808 Coronado Street,29.800127,-95.375285,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42763532,1022 E 27th Street,29.811296,-95.385348,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95668060,522 W 15th Street,29.797777,-95.403111,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91606116,1825 Arlington Street,29.803012,-95.394746,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58171358,1127 Wynnwood Lane,29.79483,-95.419316,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4582337,1202 W 16th Street Unit#C,29.799205,-95.420182,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23805136,1621 W 23rd Street Unit#B,29.807112,-95.42783,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19875282,609 Rutland Street Unit#A,29.781916,-95.401507,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s93385395,815 Lawrence Street Unit#A,29.785797,-95.40709,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s81515728,1549 Alexander Street,29.799207,-95.408715,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77690227,108 W 10th 1/2 Street,29.789593,-95.398352,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64425181,1332 Cortlandt Street,29.79593,-95.395281,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54247575,201 W 24th Street,29.808239,-95.399642,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3417992,530 W 26th Street,29.809717,-95.40724,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19677901,414 W 13th Street,29.794092,-95.401911,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97109549,638 W 17th Street,29.800531,-95.409572,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78189826,118 Northwood Street,29.791738,-95.377708,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52782469,635 13th Street,29.794732,-95.390486,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42235733,4131 De George Street,29.795105,-95.380315,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3196281,1007 E 28th Street,29.812489,-95.386463,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86356817,700 E 9th Street,29.786871,-95.389727,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72816786,2018 Columbia Street,29.804731,-95.393149,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3488858,1512 Ashland Street,29.798588,-95.403284,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24078179,1527 Oxford Street,29.799294,-95.392427,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82557379,811 Redan Street,29.789913,-95.381474,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7401866,1003 E 25th Street,29.809296,-95.385857,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38965602,706 E 12th Street,29.792421,-95.389577,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80007569,203 W 24th Street,29.80824,-95.399738,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59409723,1223 W 15th 1/2 Street,29.798884,-95.42086,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s9626530,2503 Nicholson Street,29.809102,-95.406265,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92057150,1207 E 24th Street Unit#A,29.808565,-95.383304,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88710300,1512 W 23rd Street,29.806508,-95.426955,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88284995,2416 Couch Street,29.80824,-95.425669,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86180071,1036 Alexander Street,29.790002,-95.407713,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82968775,904 W 25th Street Unit#D,29.808375,-95.414815,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68264598,2612 Morrison Street,29.782131,-95.373238,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53278224,537 Columbia Street,29.78108,-95.393063,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5279771,1436 Alexander St,29.797327,-95.40825,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84434131,718 Ashland Street,29.784039,-95.403019,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77501317,406 E 28th Street,29.812065,-95.394252,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57456393,1235 W 15 1/2 Street,29.798685,-95.415824,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4671342,437 W 27th Street,29.811226,-95.405457,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38864704,734 Yale Street Unit#A,29.78458,-95.398695,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28940105,908 E 26th Street,29.810505,-95.386748,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s76530080,1524 W 21st St,29.804629,-95.427213,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s71177008,838 Ashland Street,29.786569,-95.403022,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44955770,2409 Bevis Street,29.80806,-95.422692,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16778006,1534 Dorothy Street Unit#A,29.798975,-95.409044,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69972057,135 E 23rd Street,29.807237,-95.397637,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61021966,402 E 26th Street,29.810407,-95.394458,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94906411,602 Jewett Street Unit#A,29.799051,-95.374705,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89669312,1202 Archer Street,29.802095,-95.373741,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28465357,606 Rutland Street,29.781636,-95.400796,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68779836,420 W 18th Street,29.80155,-95.404484,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42479147,827 W 16th Street Unit#B,29.799879,-95.413609,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s26657111,1111 Le Green Street,29.798683,-95.386677,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s8458741,1208 E 26th Street Unit#B,29.81106,-95.382994,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3798835,1502 Dian Street,29.798075,-95.413789,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95828356,515 W 25th Street,29.809283,-95.406919,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84875125,948 Ashland Street,29.788546,-95.403032,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75479522,843 W 21st Street Unit#B,29.805033,-95.413951,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10970361,1321 Alexander Street,29.795128,-95.40859,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39989545,1109 Rutland Street,29.790959,-95.401449,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s34705703,1238 W 22nd Street,29.805364,-95.421485,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24435192,1014 Wynnwood Lane,29.794339,-95.417014,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13643489,723 E 7th Street,29.783667,-95.388874,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s93056562,216 W 9th Street,29.786771,-95.399579,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90721643,1310 Tulane Street,29.794776,-95.402047,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63937109,1122 E 23rd Street,29.807331,-95.383981,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52974488,1432 Prince Street Unit#A,29.797059,-95.413003,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90671798,1119 E 7th 1/2 Street,29.784597,-95.38691,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90281172,104 Moss Street,29.791576,-95.378548,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s76703519,527 Oxford Street Unit#C,29.780725,-95.392264,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s40991381,1102 Wynnwood Lane,29.794318,-95.418156,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89661396,411 W 17th Street Unit#C,29.800996,-95.404421,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87886258,607 E 15th Street,29.79845,-95.391787,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85169148,3541 Michaux Street,29.790255,-95.384577,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7962946,1102 E 14th Street,29.796193,-95.386336,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s73656029,733 Ashland Street Unit#C,29.784495,-95.403519,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58937222,816 W Cottage Street,29.792054,-95.381712,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28212945,1624 Heights Boulevard,29.800678,-95.397491,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10220327,943 Columbia Street,29.788618,-95.393324,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97061865,1216 Arlington Street,29.793168,-95.394022,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87891863,1906 W 25th Street,29.808844,-95.43209,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64288894,1231 Waverly Street Unit#A,29.793504,-95.404857,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23675223,1248 Herkimer Street,29.794098,-95.406018,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16624685,1408 W 23rd Street,29.806441,-95.424433,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94092178,710 Waverly Street Unit#E,29.783898,-95.404105,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s6896254,319 E 26th Street,29.810804,-95.39494,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54714746,1503 Herkimer Street,29.798244,-95.406534,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s51365389,2407 Bevis Street,29.807998,-95.422688,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49883700,1314 Harvard Street,29.794975,-95.396172,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s34830033,316 E 5th Street,29.779488,-95.394356,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78441053,205 W 24th Street,29.808292,-95.399808,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98063079,616 W 26th Street,29.809689,-95.408956,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80723482,801 W 13th Street,29.794455,-95.405894,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60876776,758 E 17th Street,29.800491,-95.388717,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43101497,925 Tulane Street Unit#A,29.788169,-95.402574,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65984026,2612 Greenleaf Street,29.781013,-95.379708,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41183759,3709 Reagan Street,29.791,-95.379641,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s96436501,240 W 27th Street,29.810919,-95.401126,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87350290,1412 W 24th Street,29.807474,-95.424671,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52299536,621 W 15th Street,29.798171,-95.404331,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38400412,415 W 16th Street Unit#B,29.799975,-95.404316,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91277648,550 Oxford Street,29.781041,-95.391296,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7574549,508 W 17th Street,29.800585,-95.406275,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s37608974,1213 Ashland Street,29.792892,-95.403711,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32488995,815 W Melwood Street,29.794577,-95.38175,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10541447,732 E 28th Street,29.812117,-95.389704,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88049686,409 W 21st Street,29.805129,-95.4043,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86701818,440 W 18th Street,29.80161,-95.404891,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69452013,118 E 27th Street Unit#A,29.811138,-95.397832,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69079811,110 E 26th Street Unit#B,29.810301,-95.398521,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64757029,931 Alexander Street,29.787828,-95.408162,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56515043,621 Rutland Street Unit#D,29.782194,-95.401325,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4783282,916 Arlington Street,29.787672,-95.39383,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s17827819,1706 Northwood Street,29.806619,-95.378413,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15873888,1034 W 17th Street Unit#E,29.800463,-95.417048,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92691955,1913 W 15th Street,29.79804,-95.416672,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61794126,617 Harvard Street,29.782154,-95.396624,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53161409,1828 Arlington Street,29.803027,-95.3942,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48017196,905 Gibbs Street,29.807906,-95.386676,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42409260,920 W 25th Street Unit#C,29.808558,-95.416228,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91034951,836 Allston Street,29.78639,-95.399738,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69395685,815B Lawrence Street,29.785797,-95.40709,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s66717038,1438-A Dian Street,29.797426,-95.413792,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s71455529,1420 W 26th Street,29.809475,-95.424958,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67034520,1016 Rutland Street,29.789405,-95.400867,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7839752,1437 Cortlandt Street,29.797674,-95.395737,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45930165,1646 Harvard Street,29.801649,-95.396371,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4436936,413 Woodland Street,29.786287,-95.375743,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39550662,316 W 17th Street,29.800608,-95.402265,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s31038021,1236 Columbia Street,29.793872,-95.392913,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43910788,3535 Michaux Street,29.790128,-95.384524,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41813835,521 W 22nd Street,29.806119,-95.406934,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35174310,2020 Columbia Street,29.804847,-95.393129,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30142567,611 E 25th Street Unit#A,29.809175,-95.391897,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86833589,2013 Sheldon Street Unit#A,29.805067,-95.389388,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60919011,2713 BEAUCHAMP Street,29.783185,-95.374566,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10825083,1248 W 22nd Street,29.805491,-95.422016,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48522046,1228 Herkimer Street,29.793748,-95.40601,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s50869013,1023 E 23rd Street,29.807718,-95.385332,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s96094299,1106 Robbie Street,29.804798,-95.386538,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88606966,3012 Beauchamp Street,29.785816,-95.373896,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29096052,1418 Columbia Street,29.796894,-95.392912,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s14414524,606 Allston Street,29.781723,-95.399651,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84476590,1403 W 21st St Unit#B,29.804798,-95.424265,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s73168747,1026 Allston Street,29.789862,-95.399833,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53824585,1102 Winston Street,29.800991,-95.386409,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98028179,1122 W 17th Street Unit#E,29.80048,-95.418901,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97166261,517 E 25th Street,29.809172,-95.392758,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87356355,925 Waverly Street Unit#B,29.787779,-95.404745,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84922219,610 E 7th Street,29.783192,-95.391379,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65708439,2216 Arlington Street,29.806657,-95.394204,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57714605,621 Rutland Street Unit#A,29.782194,-95.401325,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77046795,916 Nicholson Street,29.787685,-95.405414,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s47899099,509 Euclid Street,29.785511,-95.376842,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44618766,716 E 18th Street,29.801897,-95.390286,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s36617811,903 E 25th Street,29.809377,-95.38694,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23946093,517 Harvard Street,29.780381,-95.396519,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s17052910,844 E 26th Street,29.810495,-95.387458,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s81663024,1833 Tabor Street,29.811205,-95.377248,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69956766,508 E 25th Street,29.808776,-95.392851,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43683152,1523 Oxford Street,29.799081,-95.392443,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3763963,2424 Couch Street,29.80856,-95.425677,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30567135,929 Wynnwood Lane,29.794785,-95.415804,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29090594,540 W 24th Street Unit#B,29.807686,-95.407671,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25058599,1184 Nelson Falls Lane,29.798474,-95.419784,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89906929,1005 Walton Street,29.800401,-95.376651,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69140513,629 W 8th Street,29.785253,-95.404225,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64117338,440 W 21st Street,29.804656,-95.405404,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62093441,518 E 27th Street,29.811193,-95.392687,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97512116,411 Bayland Avenue,29.787014,-95.375477,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90792866,802 Ralfallen Street,29.797597,-95.389592,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72569109,805 Ralfallen Street,29.798034,-95.389456,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63452137,542 Oxford Street,29.780769,-95.391319,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38166412,217 W 24th Street,29.808263,-95.400191,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43313416,2508 Baylor Street,29.809462,-95.384944,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s9530397,1303 Cordell Street Unit#A,29.803177,-95.374995,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s8477381,741 E 16th Street,29.800211,-95.389478,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56620105,724 Ashland Street,29.784244,-95.403019,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44307734,1633 Arlington Street,29.801119,-95.3947,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s27714410,1023 Nashua Street,29.789518,-95.412684,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24085876,1116 Waverly Street,29.791066,-95.404175,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92054993,509 Vincent Street,29.795794,-95.373217,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91549854,638 Harvard Street,29.782932,-95.396037,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91454250,1206 W 24th Street,29.80729,-95.420705,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s79405032,224 E 27th Street,29.811149,-95.396391,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72552965,912 W 19th Street Unit#C,29.802523,-95.414923,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60508962,711 Tulane Street,29.783798,-95.402425,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54927275,1129 Oxford Street Unit#B,29.791958,-95.392279,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45861274,518 Byrne Street,29.784353,-95.377235,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33866323,313 E 25th Street,29.8091,-95.395427,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16074813,826 E 24th Street,29.807964,-95.388349,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10486436,1136 Woodland Street,29.785685,-95.387518,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s31001293,705 W 9th Street,29.787097,-95.404885,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82276251,1007 Grovewood Lane,29.793934,-95.416657,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72855437,1135 Jerome Street,29.802096,-95.387703,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5668350,912 Teetshorn Street,29.783192,-95.382533,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s96836524,821 E 25th Street E,29.809186,-95.38888,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s73233338,1128 Euclid Street,29.784989,-95.387199,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32713723,608 E 19th Street,29.80278,-95.391724,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19950202,1001 E 7th 1/2 Street,29.784653,-95.384455,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13147368,1121 E 24th Street,29.808536,-95.383614,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s12794628,1516 Dorothy Street Unit#A,29.798489,-95.40907,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10988981,4133 De George Street,29.795105,-95.380315,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58223923,920 W 25th Street Unit#B,29.808566,-95.41623,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90312385,2715 BEAUCHAMP Street,29.783228,-95.374535,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s50162810,1111 Ashland Street,29.791206,-95.403679,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24625392,405 W 27th Street Unit#A,29.81124,-95.404194,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90037309,918 E 14th Street,29.796227,-95.383072,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84806618,1321 W 21st Street,29.80504,-95.423292,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78554872,814 Omar Street,29.787906,-95.381473,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68968275,1822 Cortlandt Street,29.802884,-95.395208,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48572382,1020 W 22nd Street Unit#B,29.805478,-95.416958,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45081940,1027 Peddie Street,29.799345,-95.385548,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s36874983,840 Alexander Street,29.78666,-95.4075,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10096400,924 Allston Street,29.787978,-95.399806,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97562037,1030 W 24th Street Unit#A,29.807492,-95.417516,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78418508,1135 W 21st Street,29.805134,-95.419678,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56324043,221 E 12th Street,29.792835,-95.395813,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95542054,422 W 26th Street,29.809747,-95.40464,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s9453155,209 W 24th Street,29.80826,-95.400053,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91236442,902 E 27th Street,29.811377,-95.387034,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7559726,1011 W Cottage Street,29.792446,-95.384834,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69396840,523 Highland Street,29.787641,-95.377503,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61559810,1125 E 24th Street,29.808564,-95.383623,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48793853,1012 W 23rd Street,29.806507,-95.416709,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16011603,1540 Lawrence Street,29.799268,-95.407438,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85586320,1227 Waverly Street,29.7933,-95.404855,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64678248,432 Arlington Street,29.77912,-95.393705,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92910379,729 E 9th Street,29.787344,-95.388608,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87693150,404 E 28th Street,29.812069,-95.394353,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s21784630,3006 Houston Avenue,29.785571,-95.371915,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16020843,811 Redan Street,29.789913,-95.381474,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87078948,620 W 25th Street,29.808659,-95.409169,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30809114,601 W 17th Street,29.801033,-95.408192,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49109874,1404 W 25th Street,29.808259,-95.424461,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10696966,2519 White Oak Drive,29.781451,-95.385119,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98392193,1534 Nicholson Street,29.798954,-95.405507,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78621450,310 E 28th St,29.81202,-95.395412,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57916930,1122 W 17th Street Unit#D,29.80048,-95.418901,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82979575,504 Oxford Street,29.779977,-95.39152,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s73759073,1324 Tulane Street,29.795316,-95.402076,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72144714,1342 Allston Street,29.795921,-95.399917,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s70700852,1241 Prince Street,29.793902,-95.413724,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30454888,1111 Highland Street,29.787526,-95.386631,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98567626,922 Bayland Avenue,29.786451,-95.383036,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82368903,1108 W Cottage Street,29.792076,-95.386426,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94088486,401 W 21 st Street,29.805136,-95.403888,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86906320,814 W 21st Street,29.804546,-95.412929,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67038981,414 Woodland Street,29.785781,-95.375655,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59911518,719 E 6th 1/2 Street,29.782788,-95.389001,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48267610,1121 Key Street,29.791779,-95.38706,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28474446,811 W Melwood Street,29.794588,-95.381604,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54029371,714 Wilken Street,29.801169,-95.390423,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s51165038,1022 Arlington Street,29.789759,-95.393938,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16593438,726 E 7th Street,29.783221,-95.388741,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s71522503,2916 Michaux Street,29.784626,-95.384095,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35542959,1236 Omar Street,29.787814,-95.389435,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s31465853,618 E 28th Street,29.812058,-95.391695,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25084620,1106 W 12th Street,29.79221,-95.408301,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s14166412,516 Arlington Street,29.780294,-95.393781,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s2068157,338 W 18th Street,29.801729,-95.402938,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s93127419,903 Tabor Street,29.799302,-95.377422,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78950517,406 Columbia Street,29.778249,-95.39263,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58666848,311 W 6th Street,29.781577,-95.40059,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s36967996,1810 Cortlandt Street,29.802404,-95.395261,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25425589,1321 Laird Street,29.794819,-95.411054,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16376993,1506 Tabor Street,29.805193,-95.377031,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38995142,1316 Heslep Street,29.797304,-95.380379,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15373738,316 Aurora Street,29.809561,-95.395427,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57839343,2047 Harvard Street,29.805869,-95.397001,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49302794,1517 Lawrence Street,29.798509,-95.407905,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33729025,402 Columbia Street,29.778179,-95.392601,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88804104,525 W 26th Street,29.810166,-95.407143,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88507430,827 Sledge Street,29.781687,-95.38186,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62638176,525 Teetshorn Street,29.783851,-95.377658,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25834381,1114 W 15th Street,29.797753,-95.408886,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s17160597,1802 W 14th 1/2 Street,29.796244,-95.41485,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s83619577,1430 Dorothy Street,29.797185,-95.408988,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80484897,1215 Rutland Street,29.792994,-95.401523,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s66593040,950 Omar Street,29.787874,-95.384151,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63742440,435 W 23rd Street,29.807203,-95.405253,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30213229,1003 E 28th Street,29.812502,-95.387051,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24145604,1516 Dorothy Street Unit#C,29.798489,-95.40907,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15528456,523 W 26th Street,29.810167,-95.407085,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7297713,912 Heights Boulevard,29.78747,-95.397203,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64831168,1524 Nicholson St,29.798557,-95.40548,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s6131252,1532 W 24th Street,29.807461,-95.427369,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10589101,527 W 26th Street,29.810186,-95.407228,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58305759,823 Sledge Street,29.781741,-95.38169,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5590923,421 Cortlandt Street Unit#C,29.778712,-95.395385,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s20154265,1525 W 25th Street,29.808943,-95.427319,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42452991,731 Key Street,29.791763,-95.380802,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77927037,308 E 28th Street,29.812024,-95.395459,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77925731,1823 Arlington Street,29.802877,-95.39477,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44972682,1609 Tabor Street,29.80606,-95.378022,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s26548663,823 E 27th Street,29.811733,-95.388332,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43969046,1213 Northwood,29.802584,-95.378258,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28470380,1512 Hatcher Spring Lane,29.798085,-95.418144,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85742426,1031 Nashua Street,29.789905,-95.412769,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s8197661,1135 Walling Street,29.800691,-95.387688,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57278241,1001 E 27th Street,29.811712,-95.38609,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s50002699,1325 Ashland Street,29.795545,-95.403777,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41074128,1036 Kern Street,29.803429,-95.385898,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s37848068,608 E 26th Street,29.810454,-95.392026,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24987314,826 W 26th Street Unit#A,29.80963,-95.413471,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23986451,805 Columbia Street,29.785571,-95.393274,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s26231511,1124 Ashland Street,29.791398,-95.403106,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95393115,603 Vincent Street,29.796477,-95.373202,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3324267,1117 W 26th Street,29.810057,-95.418649,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84332930,333 W 22nd Street,29.806159,-95.402906,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64590341,425 Byrne Street,29.784848,-95.376078,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82525142,643 E 10th Street,29.789163,-95.390149,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s70120584,1020 W 15th 1/2 Street Unit#A,29.798449,-95.416727,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s66148669,1438 Prince Street,29.797534,-95.413005,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19719440,343 W 21st Street,29.80514,-95.40325,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98861437,719 Woodland Street,29.786196,-95.38032,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92380143,1042 VOIGHT Street,29.780242,-95.386106,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48722340,920 Key Street,29.791221,-95.383458,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33529570,1106 Timbergrove Lane,29.791763,-95.417111,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42415080,1014 Ashland Street,29.789353,-95.403084,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41218337,1811 Harvard Street,29.80285,-95.396991,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4108589,222 E 27th Street,29.81119,-95.396589,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97376499,1334 Alexander Street,29.795415,-95.40817,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s8506478,1403 W 21st St Unit#A,29.804798,-95.424265,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61632840,1223 Waverly Street,29.793162,-95.4048,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56161285,516 Highland Street,29.787269,-95.377269,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52059332,1127 Tulane Street,29.791898,-95.402473,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41515322,2621 Morrison Street,29.782394,-95.373724,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s37701575,4601 Oak Ridge Street,29.797216,-95.387365,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29875263,1639 Arlington Street,29.801382,-95.394714,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s2058942,304 Enid Street,29.793541,-95.375226,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89138020,805 Heights Boulevard,29.785606,-95.39805,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10981225,810 Nashua Street,29.785357,-95.412006,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85286664,1022 Dorothy Street,29.789512,-95.408657,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19205728,2213 Bevis Street,29.80633,-95.422666,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s74486246,4135 De George Street,29.795105,-95.380315,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41103207,1109 Rutland Street,29.790959,-95.401449,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s40105975,203 E 24th Street,29.80787,-95.397136,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3695241,931 Louise Street,29.805161,-95.383986,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s21418626,1021 Ashland Street,29.789378,-95.403679,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49069860,305 E 5th Street,29.779892,-95.39469,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92268350,2502 Lawrence Street,29.809088,-95.407978,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62731483,1730 White Oak Drive,29.782065,-95.375001,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60230787,1341 Nashua Street,29.795732,-95.41262,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57714439,1229 Waverly Street,29.793367,-95.404858,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38194733,1318 Heslep Street,29.797334,-95.380415,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91315697,2506 Baylor Street,29.809452,-95.384943,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45797139,108 Munford Street,29.80814,-95.398614,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4337423,925 E 26th Street,29.810921,-95.3861,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19748650,1002 E 27th Street,29.811329,-95.386082,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52867507,117 E 25th Street,29.809269,-95.397902,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s9043663,1214 Heights Boulevard,29.793142,-95.397324,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98846654,327 W 23rd Street Unit#A,29.807157,-95.402695,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19036516,1337 Alexander Street,29.795541,-95.40862,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95039365,208 Aurora Street Unit#B,29.809535,-95.39688,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23873440,424 E 24th Street,29.80786,-95.393771,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62495093,2124 Gostick Street,29.806012,-95.390856,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59083207,1236 W 21st Street,29.804478,-95.421613,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87795675,1020 W 22nd Street Unit#A,29.805478,-95.416958,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86295715,916 Columbia Street,29.787659,-95.392735,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16916143,1030 W 24th Street Unit#C,29.807492,-95.417516,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15845051,935 Pecore Street,29.790782,-95.383547,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77187592,815 W 18th Street,29.801998,-95.412927,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s34307492,510 E 7th Street,29.783214,-95.392538,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s79692210,607 Harvard Street,29.781762,-95.396502,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s81823442,901 W 21st Street,29.805011,-95.414291,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94673963,318 W 17th Street,29.800602,-95.40233,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78870771,926 Redan Street,29.789488,-95.383243,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3727551,429 W 22nd Street,29.806202,-95.404975,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13164479,211 E 24th Street,29.807939,-95.396654,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59743710,501 E 26th Street,29.810836,-95.393361,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49446956,1030 W 24th Street Unit#B,29.807492,-95.417516,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92079771,1516 Dorothy Street Unit#B,29.798489,-95.40907,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44276839,1442 Nashua St,29.797553,-95.412224,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s40459140,844 Cortlandt Street,29.786779,-95.39499,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58862925,404 Columbia Street,29.778179,-95.392601,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38200699,710 E 28th Street,29.812117,-95.390501,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30033691,1528 Allston Street,29.799039,-95.400029,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67455121,704 W 8th Street,29.784893,-95.404617,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33867400,1211 Bay Oaks Road,29.793023,-95.414771,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82899217,818 E 24th Street,29.807964,-95.388577,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80325816,1026 Allston Street,29.789862,-95.399833,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80099883,521 W 23rd Street,29.80713,-95.406943,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s79546546,1030 Voight Street,29.780249,-95.385614,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49009978,1033 Highland Street,29.787553,-95.385804,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75943753,1516 W 23rd Street,29.806357,-95.426958,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s9749656,717 E 5th 1/2 Street,29.780398,-95.389283,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53786323,416 Highland Street,29.787259,-95.375735,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s11463912,1223 Prince Street,29.79323,-95.413746,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91360179,913 Tulane Street,29.787669,-95.402473,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38527340,602 E 10th 1/2 Street,29.789619,-95.391808,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s31858561,318 W 24th Street,29.807757,-95.402301,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s83542920,1408 W 25th Street,29.808531,-95.424574,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68405603,329 E 25th Street,29.809082,-95.394753,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57731869,423 Pecore Street,29.790859,-95.375997,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7496202,449 W 23rd Street,29.807019,-95.405727,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55834496,1819 Studewood Street,29.802806,-95.388332,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48685787,324 W 27th Street,29.810781,-95.402582,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32780196,2505 Couch Street Unit#A,29.809117,-95.426117,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24586074,619 E 10th 1/2 Street,29.790101,-95.391168,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42438287,716 E 10th Street,29.78872,-95.389239,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13818948,806 Waverly Street,29.785668,-95.404128,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10305053,2120 White Oak Drive,29.780133,-95.380212,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s71061269,1203 Tulane Street,29.792732,-95.40264,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49055488,1009 W 16th Street,29.800069,-95.416378,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s22486802,922 Prince Street,29.788565,-95.413076,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54129447,1101 Tabor Street,29.801083,-95.377428,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80132711,1226 Heights Boulevard,29.793522,-95.39734,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52074126,344 W 22nd Street,29.805675,-95.403176,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4127382,506 E 24th Street,29.807885,-95.393158,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3023629,2524 Brinkman Street Unit#B,29.809441,-95.414565,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29940278,519 Threlkeld Street,29.779956,-95.388223,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s87310567,513 W 8th Street,29.785307,-95.402852,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63714604,516 West 9th St,29.786726,-95.402893,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39083243,710 E 13th Street,29.794307,-95.389454,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s29907219,1445 Hall Place,29.797872,-95.391198,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10958573,121 E 22nd Street,29.80623,-95.398053,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s31728182,714 E 21st Street,29.805376,-95.389718,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88338062,310 E 25th Street,29.808677,-95.395529,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68591974,523 W 15th Street,29.798229,-95.403141,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85912719,1903 W 14th Street,29.795815,-95.417064,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86001790,1221 Prince Street,29.793161,-95.413741,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75832327,2710 Nicholson Street,29.811318,-95.40578,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23792956,701 E 8th Street,29.785533,-95.389655,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23167162,919 Ashland Street Unit#B,29.787689,-95.403638,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s17537413,1122 W 17th Street Unit#F,29.80048,-95.418901,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s69771578,241 W 26th Street,29.810392,-95.401277,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64030135,2219 Arlington Street,29.806778,-95.394875,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90915756,2017 Cortlandt Street,29.804696,-95.39588,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44446175,830 W 17th Street Unit#B,29.800463,-95.413509,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35103513,606 Merrill Street,29.788852,-95.378228,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88882537,1231 W 15th 1/2 Street,29.798879,-95.421176,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s83483831,1522 Glen Oaks Street,29.784735,-95.412895,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s76976509,717 E 23rd Street,29.807555,-95.390536,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97889058,544 W 24th Street,29.807693,-95.407802,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85485592,1111 W Gardner Street,29.795896,-95.386616,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60331099,2416 Bevis Street,29.808207,-95.421999,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5553264,1108 Voight Street,29.7803,-95.386415,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89752648,525 Cortlandt Street,29.780665,-95.395425,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s81668952,3000 Morrison Street,29.785343,-95.372881,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78581678,829 Alexander Street,29.786631,-95.407883,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s6202609,243 W 26th Street,29.810781,-95.402582,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38509743,304 Archer Street,29.793398,-95.373529,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97515055,1425 Tulane Street,29.797209,-95.402706,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54871870,2708 Morrison Street,29.782977,-95.373253,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s96761450,919 W 16th Street Unit#C,29.799872,-95.414962,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95787241,1106 Tulane Street,29.791102,-95.401987,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63496941,2932 Michaux Street,29.784626,-95.384095,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s84709210,2120 Gostick Street,29.805872,-95.390854,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s81852800,1223 Posey Street,29.802924,-95.379033,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77447018,1227 Nicholson Street,29.793354,-95.40585,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s74545044,1718 White Oak Drive,29.782043,-95.374557,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61894487,1149 W 22nd Street,29.805805,-95.420224,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3493938,308 E 26th Street,29.810376,-95.395727,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30594277,1438 Dian Street Unit#B,29.797451,-95.413807,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s27562578,701 Oxford Street,29.783638,-95.39222,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s27138981,1314 Allston Street,29.794945,-95.399939,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43573674,215 Bayland Avenue,29.787019,-95.373903,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32100066,411 Vincent Street,29.794922,-95.373166,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91030101,310 E 27TH Street,29.811178,-95.395325,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64301783,1101 Usener Street,29.781064,-95.38614,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62144049,128 W 17th Street,29.800694,-95.398994,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59542814,816 Dorothy Street Unit#B,29.78611,-95.408192,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s46586929,1021 Allston Street,29.789688,-95.400336,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16530509,1235 Tulane Street,29.793883,-95.402655,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94254988,304 Bayland Avenue,29.786581,-95.374411,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s83315330,326 Aurora Street Unit#A,29.809552,-95.394885,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s74659080,4607 Oak Ridge Street,29.797359,-95.387361,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48052803,719 E 28th Street,29.812544,-95.390237,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39043933,717 Woodland Street,29.786241,-95.380113,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67414301,1134 Adele Street,29.806223,-95.387473,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33171263,326 W 24th Street,29.80775,-95.402779,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16482096,2209 Bevis Street Unit#A,29.806049,-95.422654,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s76609135,441 W 24th Street Unit#A,29.808161,-95.405398,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64931019,714 Rutland Street,29.78378,-95.40083,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45727557,626 E 22nd Street,29.805795,-95.3916,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33942837,118 E 25th Street,29.808894,-95.397836,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15590452,1245 Waverly Street,29.793951,-95.404827,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98441132,638 E 10th Street,29.788797,-95.390431,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5029082,813 W 18th Street,29.801731,-95.412797,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39807172,1516 Waverly Street,29.798456,-95.404365,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30164741,945 Oxford Street,29.788783,-95.392375,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75349198,1108 Highland Street,29.787128,-95.386436,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65463014,1125 Euclid Street,29.785587,-95.387181,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39369334,725 Dorothy Street,29.784185,-95.408821,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35385701,1031 Ashland Street,29.789597,-95.403793,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32859747,1114 Grovewood Lane,29.793494,-95.418276,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92042502,1529 Beall Street Unit#B,29.798984,-95.418277,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62547348,2004 Columbia Street,29.804265,-95.392994,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68369197,1433 Alexander Street,29.797254,-95.408671,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61898096,1224 W 17th Street Unit#B,29.800457,-95.421254,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59113476,810 Allston Street,29.785561,-95.39972,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58126452,717 Herkimer Street Unit#A,29.783879,-95.406292,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55195141,816 W 23rd Street,29.806535,-95.413197,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94328318,626 E 8th Street,29.784981,-95.390382,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90044817,1268 Nelson Falls Lane,29.798467,-95.421355,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43176129,313 E 27th Street,29.811667,-95.395206,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30626126,609 W 20th Street,29.804072,-95.408536,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24027774,326 W 27th Street,29.810781,-95.402582,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s22907493,715 Algregg Street,29.797332,-95.390333,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s12631678,829 E 25th Street,29.809186,-95.388532,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80641927,1132 Oxford Street,29.791981,-95.391778,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30670287,1115 E 27th Street,29.812076,-95.384726,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s18238560,1034 Ashland Street Unit#A,29.78988,-95.403152,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60649491,712 W 22nd Street Unit#B,29.805412,-95.410777,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75026783,729 Merrill Street,29.789141,-95.380643,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59284163,1824 W 25th Street,29.808474,-95.431627,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43008652,1001 Lawrence Street,29.788885,-95.407241,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s33375567,418 Byrne Street,29.784377,-95.37597,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32024673,1310 Dian Street,29.794647,-95.413742,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13341494,907 W 16th Street Unit#A,29.799917,-95.414662,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s12289102,732 Allston Street,29.784362,-95.399885,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s11878184,1004 Enid Street Unit#B,29.800458,-95.375347,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s6133330,1011 Heights Boulevard,29.789608,-95.398085,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25632612,1053 W 15th 1/2 Street,29.798836,-95.417351,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55845584,1415 W 21st Street Unit#A,29.805167,-95.424599,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s47901667,337 W 21st Street,29.805154,-95.403061,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13752199,1016 Alexander Street,29.789288,-95.407738,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s96258638,450 W 16th Street,29.799589,-95.405576,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s8435791,2317 Ashland Street,29.807671,-95.403987,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65578769,811 Herkimer Street,29.785752,-95.406371,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82831353,1014 W 23rd Street,29.806604,-95.416803,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62975431,707 Tulane Street,29.78366,-95.402429,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92400749,811 W 18th Street,29.801969,-95.41274,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s74251844,730 W 17th Street,29.800437,-95.411187,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s76351716,414 W 25th Street,29.808654,-95.404456,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67293941,1035 Waverly Street Unit#B,29.790003,-95.404736,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91793036,113 E 26th Street Unit#B,29.810758,-95.398292,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60390078,1442 Lawrence Street,29.797695,-95.407402,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25468303,1132 Adele Street,29.806223,-95.387473,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s2439744,221 W 26th Street Unit#B,29.810309,-95.400408,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s21439171,1505 W 23rd Street Unit#D,29.80685,-95.426215,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53303731,1110 W 12th Street,29.792204,-95.408416,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42703315,928 Robbie Street Unit#B,29.804856,-95.383834,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60308322,6001 Norhill Boulevard,29.806951,-95.386381,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28426564,1633 Beall Street,29.800277,-95.418139,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s26683609,203 Munford Street,29.808572,-95.397176,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s17672205,633 Oxford Street,29.782825,-95.392007,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45264743,1545 Arlington Street,29.799786,-95.394678,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s91772633,1819 Arlington Street,29.802703,-95.394774,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56137397,636 Pizer Street,29.793503,-95.379239,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4657553,420 W 17th Street,29.800672,-95.40451,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s98022369,940 Columbia Street,29.788547,-95.392799,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35662209,1530 Yale Street Unit#A,29.799309,-95.398784,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s12982778,414 E 28th Street,29.812003,-95.393894,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s22852912,920 W Melwood Street,29.794131,-95.383564,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s94798140,311 E 23rd Street Unit#D,29.807417,-95.392492,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43594569,1022 Allston Street,29.789612,-95.399856,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s40162938,604 W 28th Street Unit#B,29.81138,-95.408384,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s86039767,1905 W 14th Street Unit#B,29.795712,-95.417317,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77503347,523 E 28th Street,29.812514,-95.392474,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s74143702,1021 Harvard Street,29.789735,-95.396678,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s37163800,1139 W 22nd Street,29.806131,-95.420009,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67458529,2601 Bevis Street Unit#A,29.810092,-95.422746,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s22459966,1219 W 25th Street Unit#A,29.809202,-95.420527,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25773971,1239 W 23rd St Unit#A,29.806941,-95.421312,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92049997,2052 Columbia Street,29.805917,-95.393162,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62984622,808 Merrill Street,29.788649,-95.381289,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s61433597,1207 W 25th Street,29.808995,-95.420076,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s40263706,714 E 10th 1/2 Street,29.789657,-95.389312,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28713100,1441 W 25th Street Unit#D,29.809243,-95.425028,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24912976,4310 Koehler Street Unit#A,29.77432,-95.40479,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24758940,1212 Nadine Street,29.807026,-95.388781,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s13647522,916 W 24th Street,29.807795,-95.415203,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44150356,2118 Nicholson Street,29.805526,-95.405675,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s19711167,1331 Omar Street,29.788255,-95.391358,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85798819,1334 Omar Street,29.787781,-95.391434,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s75087330,1239 Waverly Street,29.79385,-95.404809,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s6935719,1136 Allston Street,29.791534,-95.399841,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s60604532,1226 Timbergrove Lane,29.79387,-95.415926,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49525029,619 W 26th Street,29.810162,-95.409048,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s36118513,1107 Adele Street,29.80583,-95.386473,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s27716289,727 Tulane Street,29.784375,-95.402344,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10029656,543 Threlkeld St,29.780741,-95.38847,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82840997,1005 W 7th 1/2 Street,29.784562,-95.407191,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s36891084,1214 Nadine Street,29.807026,-95.388781,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s24127795,1518 Beall Street,29.798866,-95.417726,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95469981,1543 Columbia Street,29.799709,-95.393526,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10305405,811 Byrne Street,29.784633,-95.381232,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s35112033,2111 Beall Street,29.80528,-95.418317,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s14697719,922 Aurora Street,29.809699,-95.386246,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62071950,814 Nicholson Street,29.785697,-95.405223,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39453343,412 W 24th Street,29.807728,-95.404286,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3910335,428 W 26th Street,29.81013,-95.404462,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s38950080,518 Columbia Street,29.78028,-95.392655,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s20166871,919 Worthshire Street,29.789058,-95.415562,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59376489,242 E 28th Street,29.812069,-95.396813,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41687088,914 Nicholson Street,29.787596,-95.405306,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80740476,1343 Allston Street,29.796032,-95.400463,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62696056,221 W 25th Street Unit#A,29.80931,-95.400293,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55821001,323 W 23rd Street,29.807177,-95.402515,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s23997588,639 E 10th Street,29.78922,-95.390289,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s58941017,412 Redan Street,29.789555,-95.375857,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52868819,358 W 26th Street,29.809721,-95.403617,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s43181987,911 W 25th Street Unit#B,29.808985,-95.415517,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42764073,1214 Omar Street,29.787833,-95.388477,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89275477,931 Redan Street,29.789901,-95.3834,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65486222,1101 Heights Boulevard,29.791073,-95.39811,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41834263,505 E 15th Street,29.798313,-95.393011,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s34256069,815 W Cottage Street,29.79241,-95.381712,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s21040862,2219 Bevis Street,29.80633,-95.422666,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88903779,2211 Bevis Street,29.80633,-95.422666,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82485799,523 E 23rd Street,29.807535,-95.392536,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80603286,736 E 7th 1/2 Street,29.784142,-95.38825,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5355135,204 E 26th Street,29.810366,-95.397269,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95811777,924 E 27th Street,29.811352,-95.386228,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56615515,2215 Bevis Street,29.80633,-95.422666,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s30124484,1129 W 21st Street,29.804996,-95.419197,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s2554683,1117 Beall Landing Court,29.810648,-95.41934,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s15221728,1210 W 23rd Street,29.806403,-95.419978,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s10465462,2017 W 14th Street Unit#A,29.795798,-95.420605,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4927335,712 W 22nd Street Unit#D,29.805412,-95.410777,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4197682,325 W 23rd Street,29.807177,-95.402515,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39081009,1801 Ashland Street,29.802068,-95.403795,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25188367,807 Woodland Street,29.78624,-95.38123,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4701969,636 Oxford Street,29.782861,-95.391636,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s31845908,513 E 4th Street,29.778104,-95.392241,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s45997738,608 E 25th Street,29.808757,-95.391901,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s25013806,831 W 17th Street,29.800941,-95.413564,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s97089654,2014 Cortlandt Street,29.804622,-95.39529,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95695597,726 E 13th 1/2 Street,29.795194,-95.388927,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95063023,908 Beverly Street,29.787416,-95.389697,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s72487047,1438 Nashua Street,29.797438,-95.412209,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57902849,712 E 14th Street,29.7961,-95.389529,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s57760687,1111 Robbie Street,29.804463,-95.386617,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54141524,2039 Columbia Street,29.805497,-95.393669,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s52201670,1631 Beall Street,29.800277,-95.418139,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s48460116,1620 Northwood Street,29.806331,-95.378425,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s32364339,834 W 19th Street,29.802546,-95.413649,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16128765,509 E 27th Street Unit#B,29.811656,-95.393031,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s82503550,1010 Prince Street,29.789297,-95.413124,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80605860,1226 W 17th Street Unit#F,29.800332,-95.421345,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s64220975,415 W 23rd Street,29.807261,-95.404398,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s44394356,612 Redan Street,29.789526,-95.378374,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s93520430,710 E 21st Street,29.80532,-95.389829,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4378330,324 Aurora Street,29.80954,-95.39514,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s90273890,831 W 26th Street,29.810085,-95.413738,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78480621,829 Ralfallen Street,29.79802,-95.388495,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s56103232,627 E 11th 1/2 Street,29.791925,-95.390908,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88648269,1037 Rutland Street,29.79019,-95.40142,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68530583,1234 W 25th Street Unit#A,29.808508,-95.421603,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59150310,519 Railey Street,29.791344,-95.377216,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s37867265,810 W 17th Street Unit#B,29.800591,-95.412692,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95417138,1106 Adele Street,29.806272,-95.386537,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89770702,604 W 28th Street Unit#A,29.81138,-95.408384,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89389635,2221 Bevis Street,29.80633,-95.422666,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s77272535,602 W 28th Street Unit#B,29.811545,-95.40839,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s7183195,900 W 14th Street,29.795954,-95.407002,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68488073,608 W 28th Street Unit#C,29.811775,-95.408525,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s67677776,446 Arlington Street,29.779516,-95.393651,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65015342,818 Waverly Street,29.785851,-95.404151,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s63715206,602 W 28th Street Unit#A,29.811545,-95.40839,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s39042779,801 Merrill Street,29.789145,-95.381023,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s47467677,905 W 16TH Street Unit#B,29.799842,-95.414593,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s46544459,519 Bayland Avenue,29.786958,-95.377229,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s28919251,920 Lawrence Street Unit#D,29.787895,-95.40682,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92593995,726 E 10th 1/2 Street,29.789651,-95.388838,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s85676547,741 E 13th 1/2 Street,29.795714,-95.388301,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s71059491,1022 W 22nd Street,29.805507,-95.417171,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68793614,1240 W 16th Street,29.799407,-95.421519,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53264168,613 E 18th Street,29.802282,-95.39156,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s50365822,615 Allston Street,29.782104,-95.400209,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42698034,1316 Cortlandt Street,29.795011,-95.395153,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4254344,734 E 9th Street,29.786902,-95.388486,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s92380742,1331 Waverly Street,29.795337,-95.404858,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65632100,1115 Beall Landing Court,29.810657,-95.419135,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s16275355,1216 W 23rd Street,29.806403,-95.420049,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49131442,833 Tulane Street,29.786365,-95.402468,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s41107214,536 Rutland Place,29.781236,-95.400258,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s78756510,1611 W 22nd Street Unit#C,29.806025,-95.427953,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s3878342,1509-A W 23rd Street,29.806928,-95.426767,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s89124616,1737 Tabor Street,29.80934,-95.377531,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88173016,826 Ralfallen Street,29.797568,-95.388664,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s26903565,709 Ridge Street,29.783126,-95.38012,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s59365275,906 W 21st Street Unit#B,29.804559,-95.414301,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s12027203,1810 Lula Street,29.809995,-95.378357,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s2383532,1109 Robbie Street,29.804463,-95.386617,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s5925428,4121 De George Street,29.795105,-95.380315,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s47832522,4123 De George Street,29.795105,-95.380315,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s81876782,1106 Cordell Street Unit#A,29.801418,-95.374488,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s53387961,914 W 24th Street,29.807528,-95.415146,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s88498899,1435 Laird Street,29.797327,-95.411034,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s49382486,1203 E 26th Street Unit#A,29.811441,-95.383436,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s2154346,822 E 25th Street,29.80884,-95.388873,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s62952049,935 Louise Street,29.805133,-95.384217,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s4679668,224 W 23rd Street Unit#A,29.806747,-95.400387,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s54358474,519 W 27th Street,29.811238,-95.40711,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s55255275,530 W 24th Street,29.80763,-95.407301,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s68091929,2912 Michaux Street,29.784626,-95.384095,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s65147055,2930 Michaux Street,29.784626,-95.384095,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42239753,2914 Michaux Street,29.784626,-95.384095,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s37315555,322 Aurora Street,29.80954,-95.39514,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s6060593,432 W 24th Street,29.807673,-95.404979,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s42198786,626 E 14TH Street,29.796115,-95.39099,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s921017,1311 Waverly Street,29.794776,-95.404816,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s66303071,937 Louise Street,29.805178,-95.384324,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s95548599,1020 Alexander Street,29.789426,-95.407721,sold comp,False,0.0,keep: inside unchanged ZONE_RING
+SOLD_DATA,s80126942,702 E 19th Street,29.802833,-95.390411,sold comp,False,0.0,keep: inside unchanged ZONE_RING

@@ -1,0 +1,287 @@
+{
+  "source": "client",
+  "date": "2026-09-10",
+  "records": [
+    {
+      "id": "act_2436-white-oak",
+      "address": "2436 White Oak",
+      "prior_stored": "Single Lot",
+      "prior_runtime": "Single Lot",
+      "new": "Single Lot",
+      "pair": "",
+      "prior_classification": null
+    },
+    {
+      "id": "pmt_2436-white-oak-dr-77009",
+      "address": "2436 White Oak Dr, Houston, TX 77009",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Single Lot",
+      "new": "Single Lot",
+      "pair": "",
+      "prior_classification": null
+    },
+    {
+      "id": "pmt_1438-dian-st-a-77008",
+      "address": "1438 Dian St A, Houston, TX 77008",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Unknown",
+      "new": "Split Lot",
+      "pair": "1438 Dian",
+      "prior_classification": {
+        "product": "Unknown",
+        "confidence": "unknown",
+        "reason_code": "DEPTH_BOUNDARY_UNCERTAIN",
+        "reason": "one whole lot; units=2 (distinct address unit letters); master_size=None (none); depth_ft=100.0001; geometry=HCAD unique exact-address polygon; parcel=0391150000436; parcel_history={'event': 'SPLIT', 'vintage': '2025_Oct->2026_Jul', 'parents': ['0391150000436'], 'children': ['0391150000436', '0391150000502'], 'source': 'refresh/parcel_events.json'}; measured depth within 0.01 ft of 100-ft boundary",
+        "candidate": "Split Lot",
+        "version": "v9-ingest-1",
+        "evidence": {
+          "parcel": {
+            "source": "HCAD unique exact-address polygon",
+            "account": "0391150000436",
+            "matched": "1438 DIAN ST # A",
+            "legal": "LT 437|HOUSTON HEIGHTS ANNEX",
+            "depth_ft": 100.0001,
+            "width_ft": 25.0,
+            "area_sf": 2500.0,
+            "geometry_crs": "EPSG:2278",
+            "depth_method": "minimum rotated rectangle, longest side",
+            "parcel_history": [
+              {
+                "event": "SPLIT",
+                "vintage": "2025_Oct->2026_Jul",
+                "parents": [
+                  "0391150000436"
+                ],
+                "children": [
+                  "0391150000436",
+                  "0391150000502"
+                ],
+                "source": "refresh/parcel_events.json"
+              }
+            ]
+          },
+          "units": 2,
+          "master_size": null,
+          "unit_source": "distinct address unit letters",
+          "master_source": "none",
+          "family": "Single"
+        }
+      }
+    },
+    {
+      "id": "pmt_1438-dian-st-b-77008",
+      "address": "1438 Dian St B, Houston, TX 77008",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Split Lot",
+      "new": "Split Lot",
+      "pair": "1438 Dian",
+      "prior_classification": {
+        "product": "Unknown",
+        "confidence": "unknown",
+        "reason_code": "DEPTH_BOUNDARY_UNCERTAIN",
+        "reason": "one whole lot; units=2 (distinct address unit letters); master_size=None (none); depth_ft=100.0002; geometry=HCAD unique exact-address polygon; parcel=0391150000502; parcel_history={'event': 'SPLIT', 'vintage': '2025_Oct->2026_Jul', 'parents': ['0391150000436'], 'children': ['0391150000436', '0391150000502'], 'source': 'refresh/parcel_events.json'}; measured depth within 0.01 ft of 100-ft boundary",
+        "candidate": "Split Lot",
+        "version": "v9-ingest-1",
+        "evidence": {
+          "parcel": {
+            "source": "HCAD unique exact-address polygon",
+            "account": "0391150000502",
+            "matched": "1438 DIAN ST # B",
+            "legal": "LT 436|HOUSTON HEIGHTS ANNEX",
+            "depth_ft": 100.0002,
+            "width_ft": 25.0003,
+            "area_sf": 2500.0,
+            "geometry_crs": "EPSG:2278",
+            "depth_method": "minimum rotated rectangle, longest side",
+            "parcel_history": [
+              {
+                "event": "SPLIT",
+                "vintage": "2025_Oct->2026_Jul",
+                "parents": [
+                  "0391150000436"
+                ],
+                "children": [
+                  "0391150000436",
+                  "0391150000502"
+                ],
+                "source": "refresh/parcel_events.json"
+              }
+            ]
+          },
+          "units": 2,
+          "master_size": null,
+          "unit_source": "distinct address unit letters",
+          "master_source": "none",
+          "family": "Single"
+        }
+      }
+    },
+    {
+      "id": "pmt_305-w-17th-st-77008",
+      "address": "305 W 17th St, Houston, TX 77008",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Single Lot",
+      "new": "Single Lot",
+      "pair": "",
+      "prior_classification": {
+        "product": "Unknown",
+        "confidence": "unknown",
+        "reason_code": "ASSEMBLED_REVIEW",
+        "reason": "assembled 2 lots -> needs_review; units=1 (one address); master_size=None (none); depth_ft=132.0012; geometry=HCAD unique exact-address polygon; parcel=0201160000047; parcel_history=none",
+        "candidate": "Unknown",
+        "version": "v9-ingest-1",
+        "evidence": {
+          "parcel": {
+            "source": "HCAD unique exact-address polygon",
+            "account": "0201160000047",
+            "matched": "305 W 17TH ST",
+            "legal": "LTS 47 & 48 BLK 120|HOUSTON HEIGHTS",
+            "depth_ft": 132.0012,
+            "width_ft": 50.0,
+            "area_sf": 6600.02,
+            "geometry_crs": "EPSG:2278",
+            "depth_method": "minimum rotated rectangle, longest side",
+            "parcel_history": []
+          },
+          "units": 1,
+          "master_size": null,
+          "unit_source": "one address",
+          "master_source": "none",
+          "family": "Review"
+        }
+      }
+    },
+    {
+      "id": "pmt_845-w-23rd-st-a-77008",
+      "address": "845 W 23rd St A, Houston, TX 77008",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Unknown",
+      "new": "Split Lot",
+      "pair": "845 W 23rd",
+      "prior_classification": null
+    },
+    {
+      "id": "pmt_845-w-23rd-st-b-77008",
+      "address": "845 W 23rd St B, Houston, TX 77008",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Unknown",
+      "new": "Split Lot",
+      "pair": "845 W 23rd",
+      "prior_classification": null
+    },
+    {
+      "id": "pmt_1807-palmetto-landing-dr-77009",
+      "address": "1807 Palmetto Landing Dr, Houston, TX 77009",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Unknown",
+      "new": "Split Lot",
+      "pair": "Palmetto Landing",
+      "prior_classification": {
+        "product": "Unknown",
+        "confidence": "unknown",
+        "reason_code": "UNVERIFIED_PLAT",
+        "reason": "replat child; units=1 (one address); master_size=None (none); depth_ft=67.0032; geometry=HCAD unique exact-address polygon; parcel=1385300010009; parcel_history=none",
+        "candidate": "Common Driveway",
+        "version": "v9-ingest-1",
+        "evidence": {
+          "parcel": {
+            "source": "HCAD unique exact-address polygon",
+            "account": "1385300010009",
+            "matched": "1807 PALMETTO LANDING DR",
+            "legal": "LT 9 BLK 1|NEWER HEIGHTS VILLAGE",
+            "depth_ft": 67.0032,
+            "width_ft": 29.0001,
+            "area_sf": 1943.06,
+            "geometry_crs": "EPSG:2278",
+            "depth_method": "minimum rotated rectangle, longest side",
+            "parcel_history": []
+          },
+          "units": 1,
+          "master_size": null,
+          "unit_source": "one address",
+          "master_source": "none",
+          "family": "Split"
+        }
+      }
+    },
+    {
+      "id": "pmt_1809-palmetto-landing-dr-77009",
+      "address": "1809 Palmetto Landing Dr, Houston, TX 77009",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Unknown",
+      "new": "Split Lot",
+      "pair": "Palmetto Landing",
+      "prior_classification": {
+        "product": "Unknown",
+        "confidence": "unknown",
+        "reason_code": "UNVERIFIED_PLAT",
+        "reason": "replat child; units=1 (one address); master_size=None (none); depth_ft=67.0035; geometry=HCAD unique exact-address polygon; parcel=1385300010010; parcel_history=none",
+        "candidate": "Common Driveway",
+        "version": "v9-ingest-1",
+        "evidence": {
+          "parcel": {
+            "source": "HCAD unique exact-address polygon",
+            "account": "1385300010010",
+            "matched": "1809 PALMETTO LANDING DR",
+            "legal": "LT 10 BLK 1|NEWER HEIGHTS VILLAGE",
+            "depth_ft": 67.0035,
+            "width_ft": 29.0002,
+            "area_sf": 1943.05,
+            "geometry_crs": "EPSG:2278",
+            "depth_method": "minimum rotated rectangle, longest side",
+            "parcel_history": []
+          },
+          "units": 1,
+          "master_size": null,
+          "unit_source": "one address",
+          "master_source": "none",
+          "family": "Split"
+        }
+      }
+    },
+    {
+      "id": "act_1016-e-27",
+      "address": "1016 E 27 th Street",
+      "prior_stored": "Single Lot",
+      "prior_runtime": "Single Lot",
+      "new": "Split Lot",
+      "pair": "",
+      "prior_classification": null
+    },
+    {
+      "id": "pmt_1016-e-27th-st-77009",
+      "address": "1016 E 27th St, Houston, TX 77009",
+      "prior_stored": "Unknown",
+      "prior_runtime": "Split Lot",
+      "new": "Split Lot",
+      "pair": "",
+      "prior_classification": {
+        "product": "Unknown",
+        "confidence": "unknown",
+        "reason_code": "ASSEMBLED_REVIEW",
+        "reason": "assembled 2 lots -> needs_review; units=1 (one address); master_size=None (none); depth_ft=120.0; geometry=HCAD unique exact-address polygon; parcel=0350830260020; parcel_history=none",
+        "candidate": "Unknown",
+        "version": "v9-ingest-1",
+        "evidence": {
+          "parcel": {
+            "source": "HCAD unique exact-address polygon",
+            "account": "0350830260020",
+            "matched": "1016 E 27TH ST",
+            "legal": "LTS 20 & 21 BLK 26|SUNSET HEIGHTS",
+            "depth_ft": 120.0,
+            "width_ft": 50.0001,
+            "area_sf": 5999.87,
+            "geometry_crs": "EPSG:2278",
+            "depth_method": "minimum rotated rectangle, longest side",
+            "parcel_history": []
+          },
+          "units": 1,
+          "master_size": null,
+          "unit_source": "one address",
+          "master_source": "none",
+          "family": "Review"
+        }
+      }
+    }
+  ]
+}
