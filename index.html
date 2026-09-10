@@ -2313,7 +2313,7 @@ const soldSvlCol=v=>v>0?'#e03131':'#2f9e44'; // green under list / red over list
 function soldCardHTML(r,pop){
   const bc=SOLD_PROD_C[r.prod]||'#8c857a';
   let h='<div class="sx-card'+(pop?' sx-pop':'')+'" style="border-left-color:'+bc+'"'+(pop?'':' data-sgo="'+esc(r.id)+'"')+'>';
-  h+='<div class="a">'+esc(r.a)+'</div><div class="sx-r2">'+esc(r.prod||'Unknown')+'</div>';
+  h+='<div class="a">'+esc(r.a)+'</div><div class="sx-r2">'+esc(typeof soldProductDisplay==='function'?soldProductDisplay(r):(r.prod||'Unknown'))+'</div>';
   h+='<div class="sx-r1"><span class="cp">$'+r.cp.toLocaleString()+'</span><span>'+(r.sq==null?'Building size unavailable':r.sq.toLocaleString()+' sqft')+'</span><span>'+(r.psf==null?'Price per sqft unavailable':'$'+r.psf+'/sqft')+'</span><span>'+(r.lot?r.lot.toLocaleString()+' sqft lot':'lot size unknown')+'</span></div>';
   h+='<div class="sx-r1"><span>'+esc(r.cd)+'</span>'+(r.p?'<span class="sx-presold">PRE-SOLD</span>':'<span>'+(r.dom!=null?r.dom+' DOM':'')+'</span>');
   if(r.svl!==undefined)h+='<span class="sx-svl" style="color:'+soldSvlCol(r.svl)+'">'+soldSvlTxt(r)+' vs list</span>';

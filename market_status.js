@@ -18,16 +18,39 @@ function marketRows(){
   }
   return rows;
 }
+// Presentation only: never replace stored construction or HAR product fields.
+function constructionProductDisplay(member){
+  const c=member.product_classification,p=member.prod;
+  if(!p||p==='Unknown')return null;
+  if(c?.source==='client')return {product:p,source:'client determination'};
+  const parcel=c?.evidence?.parcel;
+  if(c?.confidence==='high'&&c.product===p&&parcel?.account&&parcel?.source&&Number.isFinite(parcel.depth_ft))return {product:p,source:'parcel-backed construction classification'};
+  return null;
+}
+function marketProductDisplay(member,current){
+  const construction=constructionProductDisplay(member);
+  return construction?construction.product+' · '+construction.source:(current?.product||'Unknown')+' · provisional (lot size)';
+}
+function soldProductDisplay(sale){
+  if(!PANEL_RESTRUCTURED)return sale.prod||'Unknown';
+  const matches=[];
+  for(const pin of DATA)for(const member of marketMembers(pin)){
+    const e=marketEvidence(member),c=constructionProductDisplay(member);
+    if(c&&((e.current?.status==='sold'&&'s'+e.current.mls===sale.id)||e.archive_current?.id===sale.id))matches.push(c);
+  }
+  if(matches.length===1)return matches[0].product+' · '+matches[0].source;
+  return (sale.prod||'Unknown')+' · provisional (lot size)';
+}
 function marketFacts(r){
   let h='<section class="market-facts" style="font-size:12px;line-height:1.5;margin:12px 0;padding:10px;border:1px solid #67826a;border-radius:8px"><div class="lbl">Market status'+(MARKET_VIEW.asOf?' · '+esc(MARKET_VIEW.asOf):'')+'</div>';
   for(const member of marketMembers(r)){
     const e=marketEvidence(member), c=e.current;
-    const clientProduct=PANEL_RESTRUCTURED&&member.product_classification?.source==='client'?member.prod:null;
+    const displayProduct=PANEL_RESTRUCTURED?constructionProductDisplay(member):null;
     h+='<div data-market-member="'+esc(member.id)+'" style="margin-top:8px"><b>'+esc(member.a)+'</b><br><strong>'+MARKET_LABELS[e.status]+'</strong>';
-    if(clientProduct)h+='<br>Product: '+esc(clientProduct)+' · client determination';
+    if(displayProduct||c)h+='<br>Product: '+esc(PANEL_RESTRUCTURED?marketProductDisplay(member,c):c.product);
     if(c){
       if(c.har_status)h+='<br>HAR status: '+esc(c.har_status);
-      h+='<br>MLS '+esc(c.mls)+(clientProduct?'':' · '+esc(c.product));
+      h+='<br>MLS '+esc(c.mls)+(PANEL_RESTRUCTURED?'':' · '+esc(c.product));
       h+='<br>Original list price: $'+Number(c.original_list_price).toLocaleString()+' · DOM: '+c.dom+' days';
       if(c.close_date)h+='<br>Closed '+esc(c.close_date)+' · $'+Number(c.close_price).toLocaleString();
       else h+='<br>Observed '+esc(c.as_of)+' · status-change date not supplied';
