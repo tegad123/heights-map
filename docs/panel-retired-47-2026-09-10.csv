@@ -1,0 +1,48 @@
+pin,member,address,status,destination
+2131226721,2131226721,"637 E 6th 1/2 St, Houston, Tx 77007",terminated,Finished terminated
+2131282520,2131282520,"837 W 25th St, Houston, Tx 77008",terminated,Finished terminated
+2131284485,2131284485,"1533 Herkimer St, Houston, Tx 77008",terminated,Finished terminated
+act_231-e-26,act_231-e-26,231 E 26th Street,terminated,Finished terminated
+act_1207-tabor,act_1207-tabor,1207 Tabor Street,sold,Sold Comps
+act_1315-waverly,act_1315-waverly,1315 Waverly Street,pending,Finished pending
+act_613-wendel,act_613-wendel,613 Wendel Street,active,Finished active
+act_111-e-18,act_111-e-18,111 E 18th Street,pending,Finished pending
+act_830-e-27,act_830-e-27,830 E 27th Street,active,Finished active
+act_1520-nicholson,act_1520-nicholson,1520 Nicholson Street,sold,Sold Comps
+act_1520-nicholson,,Unidentified companion of 1520 Nicholson Street,no_record,Finished No Market Record
+act_1502-w-21,act_1502-w-21,1502 W 21st Street,active,Finished active
+act_1502-w-21,act_1504-w-21st-street,1504 W 21st Street,active,Finished active
+act_3115-beauchamp,act_3115-beauchamp,3115 Beauchamp Street,active,Finished active
+act_1023-euclid,act_1023-euclid,1023 Euclid Street,sold,Sold Comps
+act_1906-w-14,act_1906-w-14,1906 W 14th,active,Finished active
+act_2015-harvard,act_2015-harvard,2015 Harvard Street,active,Finished active
+act_107-e-24,act_107-e-24,107 E 24th Street,sold,Sold Comps
+act_710-e-18,act_710-e-18,710 E 18th Street,sold,Sold Comps
+act_1011-e-25,act_1011-e-25,1011 E 25th Street,terminated,Finished terminated
+act_709-ridge,act_709-ridge,709 Ridge Street,sold,Sold Comps
+act_1032-w-17th-street-unit-a,act_1032-w-17th-street-unit-a,1032 W 17th Street Unit#A,active,Finished active
+act_1122-e-27th-st-unit-b,act_1122-e-27th-st-unit-b,1122 E 27TH ST Unit#B,sold,Sold Comps
+act_1122-e-27th-st-unit-b,act_1122-e-27th-st-unit-a,1122 E 27TH ST Unit#A,active,Finished active
+act_227-e-26th-street,act_227-e-26th-street,227 E 26th Street,terminated,Finished terminated
+act_227-e-26th-street,,Unidentified companion of 227 E 26th Street,no_record,Finished No Market Record
+act_710-waverly-street-unit-d,act_710-waverly-street-unit-d,710 Waverly Street Unit#D,active,Finished active
+act_1229-prince-street,act_1229-prince-street,1229 Prince Street,sold,Sold Comps
+act_1229-prince-street,act_1227-prince-street,1227 Prince Street,active,Finished active
+act_814-w-17th-street,act_814-w-17th-street,814 W 17TH Street,pending,Finished pending
+act_814-w-17th-street,act_816-w-17th-street,816 W 17TH Street,pending,Finished pending
+act_1326-lawrence-street,act_1326-lawrence-street,1326 Lawrence Street,sold,Sold Comps
+act_815-lawrence-street-unit-a,act_815-lawrence-street-unit-a,815 Lawrence Street Unit#A,sold,Sold Comps
+act_815-lawrence-street-unit-a,,Unidentified companion of 815 Lawrence Street Unit#A,no_record,Finished No Market Record
+act_611-e-25th-street-unit-a,act_611-e-25th-street-unit-a,611 E 25th Street Unit#A,sold,Sold Comps
+act_611-e-25th-street-unit-a,act_611-e-25th-street-unit-b,611 E 25th Street Unit#B,active,Finished active
+act_602-jewett-street-unit-b,act_602-jewett-street-unit-b,602 Jewett Street Unit#B,active,Finished active
+act_602-jewett-street-unit-b,,Unidentified companion of 602 Jewett Street Unit#B,no_record,Finished No Market Record
+act_615-wendel-street,act_615-wendel-street,615 Wendel Street,active,Finished active
+act_741-w-21st-street-unit-a,act_741-w-21st-street-unit-a,741 W 21st Street Unit#A,active,Finished active
+act_741-w-21st-street-unit-a,,Unidentified companion of 741 W 21st Street Unit#A,no_record,Finished No Market Record
+act_1002-e-25th-street,act_1002-e-25th-street,1002 E 25th Street,active,Finished active
+act_834-waverly-street,act_834-waverly-street,834 WAVERLY Street,active,Finished active
+act_705-walton-street,act_705-walton-street,705 Walton Street,active,Finished active
+act_830-waverly-street,act_830-waverly-street,830 WAVERLY Street,active,Finished active
+act_614-ridge-street,act_614-ridge-street,614 Ridge Street,active,Finished active
+act_2218-gostick-street,act_2218-gostick-street,2218 Gostick Street,active,Finished active

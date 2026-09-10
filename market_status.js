@@ -2,6 +2,7 @@
 const MARKET_VIEW={ready:false,available:false,properties:{},tracked:[],byMember:new Map(),error:null};
 const MARKET_LABELS={active:'Active',pending:'Pending',sold:'Sold',terminated:'Terminated / Expired',no_record:'No Market Record'};
 const MARKET_PAGE=document.currentScript.dataset.market;
+const PANEL_RESTRUCTURED=MARKET_PAGE==='heights';
 function marketMembers(r){return r._twin?[r,r._twin]:[r];}
 function marketEvidence(member){
   const evidence=MARKET_VIEW.byMember.get(member.id);
@@ -50,16 +51,17 @@ popupHTML=function(r){
   card.querySelectorAll('.lbl').forEach(el=>{const replacements={'Tags':'Prior stored tags · may be stale','Notes':'Stored notes · historical','List price':'Prior stored list price','Listed':'Prior stored listing date'};if(replacements[el.textContent])el.textContent=replacements[el.textContent];});
   const llc=card.querySelector('.llc');if(llc&&/active listing/i.test(llc.textContent))llc.textContent='Property record';
   card.querySelectorAll('.addr').forEach(el=>{if(el.style.color&&/active|pending|off market/i.test(el.textContent))el.remove();});
+  if(PANEL_RESTRUCTURED&&!homePhase(r.id)){const badge=card.querySelector('.phasechip');if(badge)badge.textContent='No permit record';}
   const anchor=card.querySelector('.phasehead')||card.querySelector('.grid');
   if(anchor)anchor.insertAdjacentHTML('beforebegin',marketFacts(r));else card.insertAdjacentHTML('beforeend',marketFacts(r));
   return doc.innerHTML;
 };
 // Finished is a display partition; construction certification and forecasts are unchanged.
-const FINISHED_LABELS={active:'Finished on Market',pending:'Finished Pending',sold:'Finished Sold',terminated:'Finished Terminated',no_record:'Finished, No Market Record'};
+const FINISHED_LABELS=PANEL_RESTRUCTURED?{active:'Finished on Market',pending:'Finished Pending',terminated:'Finished Terminated',no_record:'Finished No Market Record'}:{active:'Finished on Market',pending:'Finished Pending',sold:'Finished Sold',terminated:'Finished Terminated',no_record:'Finished, No Market Record'};
 const FINISHED_COLORS={active:'#006B4F',pending:'#26A269',sold:'#74C69D',terminated:'#456B58',no_record:'#B7E4C7'};
 function finishedPinColor(id){
-  if(!MARKET_VIEW.ready||inventoryCategory(id)||homePhase(id)!=='complete')return null;
-  const statuses=marketMembers(byId[id]).map(m=>marketEvidence(m).status);
+  if(!MARKET_VIEW.ready||inventoryCategory(id)||!finishedPlacement(byId[id]))return null;
+  const statuses=marketMembers(byId[id]).map(m=>marketEvidence(m).status).filter(s=>!PANEL_RESTRUCTURED||s!=='sold');
   if(UW(id)>statuses.length)statuses.push('no_record');
   const selected=[...activeF].filter(k=>k.startsWith('F:')).map(k=>k.split(':')[1]);
   const status=selected.find(s=>statuses.includes(s))||['sold','pending','active','terminated','no_record'].find(s=>statuses.includes(s));
@@ -68,18 +70,29 @@ function finishedPinColor(id){
 function otherMarketMatch(tags,key,id){
   if(inventoryCategory(id))return false;
   const phase=homePhase(id),statuses=marketMembers(byId[id]).map(m=>marketEvidence(m).status);
-  if(key==='O:pending')return phase!=='complete'&&(statuses.includes('pending')||(tags.includes('pending')&&statuses.includes('no_record')));
-  if(key==='O:unverified')return tags.some(t=>t==='off_market_single'||t==='off_market_split')&&statuses.includes('no_record');
+  if(key==='O:pending')return (!PANEL_RESTRUCTURED||!!phase)&&phase!=='complete'&&(statuses.includes('pending')||(tags.includes('pending')&&statuses.includes('no_record')));
+  if(key==='O:unverified')return (tags.some(t=>t==='off_market_single'||t==='off_market_split')||(PANEL_RESTRUCTURED&&!phase&&tags.includes('pending')))&&statuses.includes('no_record');
   if(key==='O:unphased')return !phase&&statuses.some(s=>s!=='no_record');
   return false;
 }
-function finishedRows(){
-  return marketRows().filter(r=>r.phase==='complete').map(r=>({...r,product:typeKeyOf(r.pin)||'Unknown'}));
+function finishedPlacement(r){
+  if(!r||inventoryCategory(r.id))return false;
+  const phase=homePhase(r.id);
+  return phase==='complete'||(PANEL_RESTRUCTURED&&!phase&&marketMembers(r).some(m=>marketEvidence(m).status!=='no_record'));
 }
+function soldInventoryPin(id){
+  if(!PANEL_RESTRUCTURED||!MARKET_VIEW.ready||inventoryCategory(id))return false;
+  const members=marketMembers(byId[id]);
+  return members.length>=UW(id)&&members.every(m=>marketEvidence(m).status==='sold');
+}
+function finishedRows(){
+  return marketRows().filter(r=>finishedPlacement(byId[r.pin])&&(!PANEL_RESTRUCTURED||r.status!=='sold')).map(r=>({...r,product:typeKeyOf(r.pin)||'Unknown'}));
+}
+
 const marketOriginalMatch=matchSel;
 matchSel=function(tags,key,id){
   if(key.startsWith('O:'))return otherMarketMatch(tags,key,id);
-  const complete=!inventoryCategory(id)&&homePhase(id)==='complete';
+  const complete=finishedPlacement(byId[id])&&(!PANEL_RESTRUCTURED||!soldInventoryPin(id));
   if(key==='G:finished')return complete;
   if(key.startsWith('F:')){
     if(!complete)return false;
@@ -88,7 +101,8 @@ matchSel=function(tags,key,id){
     const members=marketMembers(byId[id]);
     return members.some(m=>marketEvidence(m).status===status)||(status==='no_record'&&UW(id)>members.length);
   }
-  if(key==='G:uc'||key.startsWith('UCT:'))return !complete&&marketOriginalMatch(tags,key,id);
+  if(PANEL_RESTRUCTURED&&soldInventoryPin(id))return false;
+  if(key==='G:uc'||key.startsWith('UCT:')||(PANEL_RESTRUCTURED&&key.includes('|')))return !complete&&marketOriginalMatch(tags,key,id);
   return marketOriginalMatch(tags,key,id);
 };
 function constructionPanelCount(key){
@@ -105,7 +119,7 @@ function renderFinishedSection(){
     const statusRows=rows.filter(r=>r.status===status),key='F:'+status,col='finished:'+status;
     html+='<div class="subg'+(collapsed.has(col)?' col':'')+'"><div class="subg-h'+sOn(key)+'" data-col="'+col+'"><span class="chev2">▼</span><span class="mbox'+sOn(key)+'" data-sel="'+key+'"></span><span class="sw" style="background:'+FINISHED_COLORS[status]+'"></span><span class="sn">'+esc(label)+'</span><span class="ct2">'+statusRows.length+'</span></div><div class="subg-body">';
     const products=TYPES.map(([,label])=>label);
-    if(statusRows.some(r=>r.product==='Unknown'))products.push('Unknown');
+    if(PANEL_RESTRUCTURED||statusRows.some(r=>r.product==='Unknown'))products.push('Unknown');
     for(const product of products){
       const child=key+':'+product,count=statusRows.filter(r=>r.product===product).length;
       html+='<div class="leafrow'+sOn(child)+'" data-sel="'+child+'"><span class="mbox'+sOn(child)+'"></span><span class="sw" style="background:'+FINISHED_COLORS[status]+'"></span><span class="nm">'+esc(product==='Unknown'?'Product type unknown':product)+'</span><span class="ct2">'+count+'</span></div>';
@@ -120,7 +134,7 @@ function renderFinishedSection(){
   });
   return root;
 }
-// Other cleanup approved with the 2026-09-10 market/backfill audit.
+// Heights inventory placement; other markets retain their existing panel layout.
 const marketOriginalLegend=renderLegend;
 renderLegend=function(){
   marketOriginalLegend();
@@ -128,27 +142,28 @@ renderLegend=function(){
   legend.querySelector('[data-grp="mkt"]')?.remove();
   legend.querySelectorAll('[data-grp="uc"] .leafrow[data-sel$="|complete"]').forEach(row=>row.remove());
   legend.querySelector('[data-grp="uc"]').after(renderFinishedSection());
-  // Preserve the existing 14-home Single Lot overlapping filter, in Other.
+  // Preserve the existing Single Lot overlapping filter; Heights places it under construction.
   // Move its original node so its existing selection handlers remain intact.
   const onMarket=legend.querySelector('.leafrow[data-sel="active_single|onmkt"]');
   const other=legend.querySelector('[data-grp="other"]');
   legend.querySelectorAll('.leafrow[data-sel$="|onmkt"]').forEach(row=>row.remove());
   if(onMarket&&other){
     onMarket.title='Existing Single Lot on-market/building filter; overlaps construction phases';
-    other.querySelector('.grp-body').appendChild(onMarket);
+    (PANEL_RESTRUCTURED?legend.querySelector('[data-grp="uc"]'):other).querySelector('.grp-body').appendChild(onMarket);
 
   }
   if(other){
     other.querySelectorAll('[data-sel="L:pending"],[data-sel="L:off_market_single"],[data-sel="L:off_market_split"]').forEach(e=>e.remove());
     const review=other.querySelector('[data-sel="L:needs_clarification"] .nm');
     if(review)review.textContent='Flagged for review';
-    const rows=[['O:pending','Pending, not Complete','#d6336c'],['O:unverified','Off market, status unverified','#8a8f98'],['O:unphased','Market evidence, no construction phase','#67826a']];
+    const rows=PANEL_RESTRUCTURED?[['O:pending','Pending, not Complete','#d6336c'],['O:unverified','Market status unverified','#8a8f98']]:[['O:pending','Pending, not Complete','#d6336c'],['O:unverified','Off market, status unverified','#8a8f98'],['O:unphased','Market evidence, no construction phase','#67826a']];
     for(const [key,label,color] of rows){
       const row=document.createElement('div');row.className='leafrow'+sOn(key);row.dataset.sel=key;
       row.innerHTML='<span class="mbox'+sOn(key)+'"></span><span class="sw" style="background:'+color+'"></span><span class="nm">'+esc(label)+'</span><span class="ct2">'+constructionPanelCount(key)+'</span>';
       row.addEventListener('click',()=>{activeF.has(key)?activeF.delete(key):activeF.add(key);renderLegend();refresh();});
-      other.querySelector('.grp-body').appendChild(row);
+      (PANEL_RESTRUCTURED&&key==='O:pending'?legend.querySelector('[data-grp="uc"]'):other).querySelector('.grp-body').appendChild(row);
     }
+    if(PANEL_RESTRUCTURED){const foot=document.createElement('div');foot.className='pmeta';foot.style.padding='8px 12px';foot.textContent='Listed and pending rows overlap the construction phases above; do not add these flags to the phase total.';legend.querySelector('[data-grp="uc"] .grp-body').appendChild(foot);}
     const keys=[...other.querySelectorAll('.leafrow')].map(r=>r.dataset.sel);
     const count=DATA.reduce((n,r)=>n+(mById[r.id]&&keys.some(k=>matchSel(pt(r.id).tags,k,r.id))?UW(r.id):0),0);
     other.querySelector('.grp-h > .ct2').textContent=count;
@@ -170,6 +185,27 @@ renderSupplyCard=function(){
   if(big)big.textContent=snapshot.available;
   if(foot)foot.textContent+=' · '+snapshot.terminated+' terminated homes excluded from snapshot ('+snapshot.construction+' in construction forecast)';
 };
+
+if(PANEL_RESTRUCTURED){
+  const originalPipeline=inPipeline;
+  inPipeline=function(r){return !soldInventoryPin(r.id)&&originalPipeline(r);};
+  comboCount=function(a,b){return constructionPanelCount(a+'|'+b);};
+  const originalSoldFiltered=soldFiltered;
+  soldFiltered=function(){
+    const inventorySales=new Set(finishedRows().flatMap(r=>(r.historical_sales||[]).map(s=>s.id)));
+    return originalSoldFiltered().filter(r=>!inventorySales.has(r.id));
+  };
+  const originalRefresh=refresh;
+  refresh=function(){
+    originalRefresh();
+    let removed=0;
+    for(const marker of markers)if(soldInventoryPin(marker._rec.id)&&layer.hasLayer(marker)){
+      removed+=marker._rec.units||1;layer.removeLayer(marker);
+    }
+    if(removed){const shown=document.getElementById('shown');shown.textContent=(Number(shown.textContent.replace(/,/g,''))-removed).toLocaleString();}
+  };
+}
+
 async function loadMarketStatus(){
   try{
     if(MARKET_PAGE==='heights'){

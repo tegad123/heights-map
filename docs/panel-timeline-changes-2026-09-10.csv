@@ -1,0 +1,1503 @@
+market,id,address,homes,phase,elapsed_days,overdue_days,before_days,after_days,before_date,after_date,days_earlier,cap_2x_days
+index,2131193248,"201 E 26th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131086163,"1436 Dorothy St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131360412,"1141 Alexander St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131360894,"934 Dorothy St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131437170,"118 E 24th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131191409,"1123 Nadine St, Houston, Tx 77009",1,,,0,,,,,,
+index,2130814684,"519 Threlkeld St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131018442,"6005 N Main St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131129729,"2119 Gostick St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131129791,"2225 Singleton St, Houston, Tx 77008",1,exterior,15,0,190,190,2027-03-18,2027-03-18,0,190
+index,2131129832,"2011 Singleton St, Houston, Tx 77008",1,mep_finals,5,0,16,16,2026-09-25,2026-09-25,0,16
+index,2131129881,"2119 Carter St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131144961,"118 E 23rd St, Houston, Tx 77008",2,complete,,0,,,2026-07-31,2026-07-31,,
+index,2131145222,"626 E 22nd St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131042481,"741 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131044677,"813 Herkimer St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131044801,"838 Waverly St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131143852,"545 W 27th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131144336,"520 W 24th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131144616,"714 W 23rd St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131146860,"1300 Waverly St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131146866,"1300 Waverly St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131149006,"918 Tulane St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131149358,"615 Allston St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131179219,"1211 N Durham Dr, Houston, Tx 77008",1,,,0,,,,,,
+index,2131190507,"616 E 5th St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131145380,"2047 Columbia St, Houston, Tx 77008",1,exterior,9,0,196,196,2027-03-24,2027-03-24,0,196
+index,2131151610,"935 Pecore St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131152146,"909 Bayland Ave, Houston, Tx 77009",1,,,0,,,,,,
+index,2131186599,"314 W 21st St, Houston, Tx 77008",2,interior,15,0,120,120,2027-01-07,2027-01-07,0,120
+index,2131191267,"1021 Nadine St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131191475,"1128 Adele St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131191611,"1015 Adele St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131191920,"1123 Louise St, Houston, Tx 77009",2,interior,42,0,93,93,2026-12-11,2026-12-11,0,93
+index,2131192777,"839 E 26th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131192874,"713 E 26th St, Houston, Tx 77009",2,interior,110,0,25,25,2026-10-04,2026-10-04,0,25
+index,2131190693,"344 Harvard St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131200820,"1126 W 22nd St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131200959,"1124 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131211370,"618 Wendel St, Houston, Tx 77009",1,insulation,28,7,163,163,2027-02-19,2027-02-19,0,163
+index,2131225773,"1402 W 14th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131226721,"637 E 6th 1/2 St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131238884,"901 Dorothy St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131241262,"1310 Omar St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131282520,"837 W 25th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131284485,"1533 Herkimer St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131330121,"1448 W 25th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131330179,"1518 W 25th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131330283,"1330 W 24th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131331131,"1306 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131331183,"1506 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131331239,"1610 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131331686,"1534 Beall St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131193931,"614 E 26th St, Houston, Tx 77008",1,interior,28,0,107,107,2026-12-25,2026-12-25,0,107
+index,2131194068,"704 E 26th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131194125,"830 E 26th St, Houston, Tx 77009",2,,,0,,,,,,
+index,2131195093,"205 Northwood St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131207363,"602 E 29th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131207382,"608 E 29th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131207530,"423 E 28th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131208326,"704 E 28th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131208376,"731 E 27th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131208502,"1006 E 28th St, Houston, Tx 77009",1,framing,138,117,343,247,2027-08-18,2027-05-14,96,268
+index,2131226980,"305 Tabor St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131227429,"301 Enid St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131240072,"711 E 12th St, Houston, Tx 77008",1,interior,189,75,210,210,2027-04-07,2027-04-07,0,210
+index,2131242651,"1107 E 27th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131283678,"1703 Yale St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131284475,"1518 Herkimer St, Houston, Tx 77008",1,interior,72,0,63,63,2026-11-11,2026-11-11,0,63
+index,2131318105,"122 Redan St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131318242,"1120 E 26th St, Houston, Tx 77009",2,interior,79,0,56,56,2026-11-04,2026-11-04,0,56
+index,2131318619,"500 Aurora St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131370103,"512 Threlkeld St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131370113,"533 Studewood St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131370154,"531 Threlkeld St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131374828,"1010 Woodland St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131383427,"1030 W 8th St, Houston, Tx 77007",1,interior,0,0,135,135,2027-01-22,2027-01-22,0,135
+index,2131436719,"1230 W 26th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131318733,"310 E 25th St, Houston, Tx 77008",1,interior,15,0,120,120,2027-01-07,2027-01-07,0,120
+index,2131318786,"427 E 24th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131318883,"716 E 25th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131347730,"4308 Julian St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131370476,"905 Adele St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131378379,"110 Harris Ct, Houston, Tx 77009",1,,,0,,,,,,
+index,2131421176,"410 Merrill St, Houston, Tx 77009",1,interior,34,0,101,101,2026-12-19,2026-12-19,0,101
+index,2131428357,"310 Conoly St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131432164,"709 E 17th St, Houston, Tx 77008",1,complete,,0,,,2026-07-08,2026-07-08,,
+index,2131437296,"118 Munford St, Houston, Tx 77008",1,interior,43,0,92,92,2026-12-10,2026-12-10,0,92
+index,2131437359,"117 Munford St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131437380,"212 E 25th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131437447,"117 E 25th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2161199012,"710 E 13th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2170723831,"303 Enid St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131175661,"611 Mathis St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131176668,"1208 Cordell St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131176672,"1204 Cordell St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131177133,"1201 Cordell St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131227565,"507 Cordell St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131227567,"511 Cordell St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131228154,"607 Melwood St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131228576,"805 Tabor St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131228942,"1412 Northwood St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131312288,"1007 Cordell St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131312670,"1003 Enid St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131312852,"1506 Tabor St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131313166,"805 Walton St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131313407,"1631 Walton St, Houston, Tx 77009",1,,,0,,,,,,
+index,2177158676,"Enid St, Houston, Tx 77009",1,,,0,,,,,,
+index,2177158678,"Enid St, Houston, Tx 77009",1,,,0,,,,,,
+index,pmt_820-waverly-st-a-77007,"820 Waverly St A, Houston, TX 77007",2,framing,34,13,239,239,2027-05-06,2027-05-06,0,239
+index,pmt_1811-bonner-st-77007,"1811 Bonner St, Houston, TX 77007",1,foundation,,0,,,,,,
+index,pmt_310-w-9th-st-77007,"310 W 9th St, Houston, TX 77007",2,interior,198,84,219,219,2027-04-16,2027-04-16,0,219
+index,pmt_408-columbia-st-77007,"408 Columbia St, Houston, TX 77007",1,interior,63,0,72,72,2026-11-20,2026-11-20,0,72
+index,pmt_410-columbia-st-77007,"410 Columbia St, Houston, TX 77007",1,mep_finals,29,8,29,29,2026-10-08,2026-10-08,0,29
+index,pmt_625-oxford-st-77007,"625 Oxford St, Houston, TX 77007",1,interior,168,54,189,189,2027-03-17,2027-03-17,0,189
+index,pmt_734-e-7th-1-2-st-77007,"734 E 7th 1/2 St, Houston, TX 77007",1,exterior,36,8,213,213,2027-04-10,2027-04-10,0,213
+index,pmt_710-waverly-st-a-77007,"710 Waverly St A / B / C, Houston, TX 77007",3,foundation,376,362,602,254,2028-05-03,2027-05-21,348,268
+index,pmt_718-e-7th-st-77007,"718 E 7th St, Houston, TX 77007",1,interior,196,82,217,217,2027-04-14,2027-04-14,0,217
+index,pmt_1108-w-17th-st-77008,"1108 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1110-w-17th-st-77008,"1110 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1112-w-17th-st-77008,"1112 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1114-w-17th-st-77008,"1114 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1116-w-17th-st-77008,"1116 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1118-w-17th-st-77008,"1118 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_745-w-17th-st-77008,"745 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_915-w-18th-st-d-77008,"915 W 18th St D, Houston, TX 77008",1,insulation,69,48,204,177,2027-04-01,2027-03-05,27,198
+index,pmt_915-w-18th-st-c-77008,"915 W 18th St C, Houston, TX 77008",1,insulation,69,48,204,177,2027-04-01,2027-03-05,27,198
+index,act_1520-w-21st-st-unit-b,1520 W 21st St Unit#B,2,complete,,0,,,2026-04-30,2026-04-30,,
+index,pmt_915-w-18th-st-b-77008,"915 W 18th St B, Houston, TX 77008",1,insulation,69,48,204,177,2027-04-01,2027-03-05,27,198
+index,pmt_915-w-18th-st-a-77008,"915 W 18th St A, Houston, TX 77008",1,insulation,69,48,204,177,2027-04-01,2027-03-05,27,198
+index,pmt_1623-blount-st-77008,"1623 Blount St, Houston, TX 77008",1,complete,,0,,,2025-12-10,2025-12-10,,
+index,pmt_915-w-18th-st-e-77008,"915 W 18th St E, Houston, TX 77008",1,insulation,69,48,204,177,2027-04-01,2027-03-05,27,198
+index,pmt_915-w-18th-st-f-77008,"915 W 18th St F, Houston, TX 77008",1,insulation,69,48,204,177,2027-04-01,2027-03-05,27,198
+index,pmt_2013-cortlandt-st-77008,"2013 Cortlandt St, Houston, TX 77008",2,interior,173,59,194,194,2027-03-22,2027-03-22,0,194
+index,pmt_2052-columbia-st-77008,"2052 Columbia St, Houston, TX 77008",1,interior,98,0,37,37,2026-10-16,2026-10-16,0,37
+index,pmt_629-e-26th-st-77008,"629 E 26th St, Houston, TX 77008",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+index,pmt_1410-herkimer-st-77008,"1410 Herkimer St, Houston, TX 77008",1,exterior,40,12,217,217,2027-04-14,2027-04-14,0,217
+index,pmt_1306-w-24th-st-f-77008,"1306 W 24th St F, Houston, TX 77008",1,exterior,,0,,,,,,
+index,pmt_1306-w-24th-st-e-77008,"1306 W 24th St E, Houston, TX 77008",1,exterior,,0,,,,,,
+index,pmt_1306-w-24th-st-d-77008,"1306 W 24th St D, Houston, TX 77008",1,exterior,,0,,,,,,
+index,pmt_1306-w-24th-st-c-77008,"1306 W 24th St C, Houston, TX 77008",1,exterior,,0,,,,,,
+index,pmt_1306-w-24th-st-b-77008,"1306 W 24th St B, Houston, TX 77008",1,exterior,7,0,198,198,2027-03-26,2027-03-26,0,198
+index,pmt_1306-w-24th-st-a-77008,"1306 W 24th St A, Houston, TX 77008",1,exterior,7,0,198,198,2027-03-26,2027-03-26,0,198
+index,pmt_433-w-23rd-st-77008,"433 W 23rd St, Houston, TX 77008",1,interior,58,0,77,77,2026-11-25,2026-11-25,0,77
+index,pmt_1343-nashua-st-77008,"1343 Nashua St, Houston, TX 77008",1,complete,,0,,,2026-01-22,2026-01-22,,
+index,pmt_2464-nicholson-st-77008,"2464 Nicholson St, Houston, TX 77008",1,exterior,37,9,214,214,2027-04-11,2027-04-11,0,214
+index,pmt_2462-nicholson-st-77008,"2462 Nicholson St, Houston, TX 77008",1,exterior,37,9,214,214,2027-04-11,2027-04-11,0,214
+index,pmt_2450-nicholson-st-77008,"2450 Nicholson St, Houston, TX 77008",1,exterior,41,13,218,218,2027-04-15,2027-04-15,0,218
+index,pmt_2452-nicholson-st-77008,"2452 Nicholson St, Houston, TX 77008",1,exterior,41,13,218,218,2027-04-15,2027-04-15,0,218
+index,pmt_2013-sheldon-st-a-77008,"2013 Sheldon St A, Houston, TX 77008",2,complete,,0,,,2026-04-07,2026-04-07,,
+index,pmt_930-waverly-st-77008,"930 Waverly St, Houston, TX 77008",1,mep_roughs,0,0,177,177,2027-03-05,2027-03-05,0,177
+index,pmt_737-w-21st-st-c-77008,"737 W 21st St C, Houston, TX 77008",1,complete,,0,,,2026-07-28,2026-07-28,,
+index,pmt_737-w-21st-st-b-77008,"737 W 21st St B, Houston, TX 77008",1,complete,,0,,,2026-07-28,2026-07-28,,
+index,pmt_737-w-21st-st-a-77008,"737 W 21st St A, Houston, TX 77008",1,complete,,0,,,2026-07-28,2026-07-28,,
+index,pmt_737-w-21st-st-d-77008,"737 W 21st St D, Houston, TX 77008",1,complete,,0,,,2026-07-28,2026-07-28,,
+index,pmt_729-w-21st-st-a-77008,"729 W 21st St A, Houston, TX 77008",1,complete,,0,,,2026-07-27,2026-07-27,,
+index,pmt_723-w-21st-st-77008,"723 W 21st St, Houston, TX 77008",1,complete,,0,,,2026-07-28,2026-07-28,,
+index,pmt_725-w-21st-st-77008,"725 W 21st St, Houston, TX 77008",1,complete,,0,,,2026-07-28,2026-07-28,,
+index,pmt_529-w-27th-st-77008,"529 W 27th St, Houston, TX 77008",2,interior,93,0,42,42,2026-10-21,2026-10-21,0,42
+index,pmt_729-w-21st-st-b-77008,"729 W 21st St B, Houston, TX 77008",1,complete,,0,,,2026-07-27,2026-07-27,,
+index,pmt_1432-alexander-st-77008,"1432 Alexander St, Houston, TX 77008",2,complete,,0,,,2026-06-12,2026-06-12,,
+index,pmt_711-e-25th-st-a-77008,"711 E 25th St A, Houston, TX 77008",2,interior,23,0,112,112,2026-12-30,2026-12-30,0,112
+index,pmt_1320-alexander-st-a-77008,"1320 Alexander St A, Houston, TX 77008",2,mep_finals,15,0,6,6,2026-09-15,2026-09-15,0,6
+index,pmt_918-dorothy-st-77008,"918 Dorothy St, Houston, TX 77008",1,interior,0,0,135,135,2027-01-22,2027-01-22,0,135
+index,pmt_112-e-27th-st-a-77008,"112 E 27th St A, Houston, TX 77008",2,complete,,0,,,2026-07-07,2026-07-07,,
+index,pmt_705-e-13th-st-77008,"705 E 13th St, Houston, TX 77008",1,foundation,63,49,289,254,2027-06-25,2027-05-21,35,268
+index,pmt_729-w-21st-st-c-77008,"729 W 21st St C, Houston, TX 77008",1,complete,,0,,,2026-07-29,2026-07-29,,
+index,pmt_727-w-21st-st-77008,"727 W 21st St, Houston, TX 77008",1,mep_finals,174,153,174,42,2027-03-02,2026-10-21,132,63
+index,pmt_745-e-16th-st-77008,"745 E 16th St, Houston, TX 77008",1,foundation,33,19,259,254,2027-05-26,2027-05-21,5,259
+index,act_1322-lawrence-street,1322 Lawrence Street,2,complete,,0,,,2026-07-21,2026-07-21,,
+index,pmt_715-e-12th-st-77008,"715 E 12th St, Houston, TX 77008",1,complete,,0,,,2026-06-26,2026-06-26,,
+index,pmt_1595-w-25th-st-77008,"1595 W 25th St, Houston, TX 77008",1,mep_roughs,34,13,190,190,2027-03-18,2027-03-18,0,190
+index,pmt_1597-w-25th-st-77008,"1597 W 25th St, Houston, TX 77008",1,interior,127,13,148,148,2027-02-04,2027-02-04,0,148
+index,pmt_1599-w-25th-st-77008,"1599 W 25th St, Houston, TX 77008",1,interior,127,13,148,148,2027-02-04,2027-02-04,0,148
+index,pmt_1601-w-25th-st-77008,"1601 W 25th St, Houston, TX 77008",1,interior,126,12,147,147,2027-02-03,2027-02-03,0,147
+index,pmt_1603-w-25th-st-77008,"1603 W 25th St, Houston, TX 77008",1,interior,126,12,147,147,2027-02-03,2027-02-03,0,147
+index,pmt_1605-w-25th-st-77008,"1605 W 25th St, Houston, TX 77008",1,interior,29,0,106,106,2026-12-24,2026-12-24,0,106
+index,pmt_1434-herkimer-st-77008,"1434 Herkimer St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_2005-harvard-st-77008,"2005 Harvard St, Houston, TX 77008",1,framing,42,21,247,247,2027-05-14,2027-05-14,0,247
+index,pmt_1246-omar-st-77008,"1246 Omar St, Houston, TX 77008",1,interior,29,0,106,106,2026-12-24,2026-12-24,0,106
+index,pmt_1033-voight-st-77009,"1033 Voight St, Houston, TX 77009",2,interior,36,0,99,99,2026-12-17,2026-12-17,0,99
+index,pmt_902-jewett-st-77009,"902 Jewett St, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_2811-ave-77009,"2811 Ave, Houston, TX 77009",1,complete,,0,,,2026-08-07,2026-08-07,,
+index,pmt_1301-tabor-st-77009,"1301 Tabor St, Houston, TX 77009",1,complete,,0,,,2026-02-12,2026-02-12,,
+index,pmt_1132-e-6th-1-2-st-77009,"1132 E 6th 1/2 St, Houston, TX 77009",1,foundation,36,22,262,254,2027-05-29,2027-05-21,8,262
+index,pmt_1008-e-28th-st-77009,"1008 E 28th St, Houston, TX 77009",1,exterior,7,0,198,198,2027-03-26,2027-03-26,0,198
+index,pmt_1109-voight-st-77009,"1109 Voight St, Houston, TX 77009",1,complete,,0,,,2026-09-09,2026-09-09,,
+index,pmt_523-link-rd-77009,"523 Link Rd, Houston, TX 77009",1,exterior,44,16,221,221,2027-04-18,2027-04-18,0,221
+index,pmt_519-link-rd-77009,"519 Link Rd, Houston, TX 77009",1,exterior,48,20,225,225,2027-04-22,2027-04-22,0,225
+index,pmt_1906-northwood-st-77009,"1906 Northwood St, Houston, TX 77009",1,exterior,14,0,191,191,2027-03-19,2027-03-19,0,191
+index,pmt_1910-northwood-st-77009,"1910 Northwood St, Houston, TX 77009",1,exterior,40,12,217,217,2027-04-14,2027-04-14,0,217
+index,pmt_1914-northwood-st-77009,"1914 Northwood St, Houston, TX 77009",1,exterior,47,19,224,224,2027-04-21,2027-04-21,0,224
+index,pmt_1918-northwood-st-77009,"1918 Northwood St, Houston, TX 77009",1,exterior,48,20,225,225,2027-04-22,2027-04-22,0,225
+index,pmt_1107-e-24th-st-77009,"1107 E 24th St, Houston, TX 77009",2,complete,,0,,,2026-07-31,2026-07-31,,
+index,pmt_1104-gibbs-st-77009,"1104 Gibbs St, Houston, TX 77009",1,mep_finals,58,37,58,42,2026-11-06,2026-10-21,16,58
+index,pmt_906-bayland-ave-77009,"906 Bayland Ave, Houston, TX 77009",1,mep_finals,7,0,14,14,2026-09-23,2026-09-23,0,14
+index,pmt_826-e-27th-st-77009,"826 E 27th St, Houston, TX 77009",1,complete,,0,,,2026-04-10,2026-04-10,,
+index,pmt_949-ridge-st-77009,"949 Ridge St, Houston, TX 77009",1,mep_finals,12,0,9,9,2026-09-18,2026-09-18,0,9
+index,pmt_1010-e-26th-st-77009,"1010 E 26th St, Houston, TX 77009",2,insulation,9,0,147,147,2027-02-03,2027-02-03,0,147
+index,pmt_702-euclid-st-77009,"702 Euclid St, Houston, TX 77009",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+index,pmt_1314-e-28th-st-77009,"1314 E 28th St, Houston, TX 77009",1,mep_roughs,7,0,170,170,2027-02-26,2027-02-26,0,170
+index,pmt_409-walton-st-a-77009,"409 Walton St A, Houston, TX 77009",2,complete,,0,,,2026-07-09,2026-07-09,,
+index,pmt_931-merrill-st-77009,"931 Merrill St, Houston, TX 77009",1,complete,,0,,,2026-02-17,2026-02-17,,
+index,pmt_635-mazal-pvt-ln-77009,"635 Mazal (Pvt) Ln, Houston, TX 77009",1,interior,40,0,95,95,2026-12-13,2026-12-13,0,95
+index,pmt_1124-robbie-st-77009,"1124 Robbie St, Houston, TX 77009",2,mep_finals,8,0,13,13,2026-09-22,2026-09-22,0,13
+index,pmt_1118-adele-st-77009,"1118 Adele St, Houston, TX 77009",1,insulation,9,0,147,147,2027-02-03,2027-02-03,0,147
+index,pmt_1135-adele-st-77009,"1135 Adele St, Houston, TX 77009",2,interior,41,0,94,94,2026-12-12,2026-12-12,0,94
+index,pmt_602-northwood-st-77009,"602 Northwood St, Houston, TX 77009",1,interior,148,34,169,169,2027-02-25,2027-02-25,0,169
+index,pmt_845-e-26th-st-77009,"845 E 26th St, Houston, TX 77009",1,interior,54,0,81,81,2026-11-29,2026-11-29,0,81
+index,pmt_940-nadine-st-77009,"940 Nadine St, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_932-algregg-st-77009,"932 Algregg St, Houston, TX 77009",2,mep_roughs,20,0,157,157,2027-02-13,2027-02-13,0,157
+index,2131041898,"2036 Cortlandt St, Houston, Tx 77008",1,,,0,,,,,,
+index,act_845-w-23,845 West 23rd Street,1,,,0,,,,,,
+index,act_231-e-26,231 E 26th Street,1,,,0,,,,,,
+index,act_1207-tabor,1207 Tabor Street,1,,,0,,,,,,
+index,act_1109-tabor,1109 Tabor Street,1,mep_finals,120,99,120,42,2027-01-07,2026-10-21,78,63
+index,act_1315-waverly,1315 Waverly Street,1,,,0,,,,,,
+index,act_613-wendel,613 Wendel Street,1,,,0,,,,,,
+index,act_111-e-18,111 E 18th Street,1,,,0,,,,,,
+index,act_830-e-27,830 E 27th Street,1,,,0,,,,,,
+index,act_902-e-25,902 E 25TH Street,1,complete,,0,,,2026-06-02,2026-06-02,,
+index,act_920-e-25,920 E 25TH Street,2,interior,99,0,36,36,2026-10-15,2026-10-15,0,36
+index,act_1520-nicholson,1520 Nicholson Street,2,,,0,,,,,,
+index,act_1502-w-21,1502 W 21st Street,2,,,0,,,,,,
+index,act_122-e-4,122 E 4th Street,2,complete,,0,,,2026-06-05,2026-06-05,,
+index,act_2603-julian,2603 JULIAN Street,1,mep_roughs,26,5,182,182,2027-03-10,2027-03-10,0,182
+index,act_826-ralfallen,826 Ralfallen Street,1,complete,,0,,,2026-08-21,2026-08-21,,
+index,act_3115-beauchamp,3115 Beauchamp Street,1,,,0,,,,,,
+index,act_623-e-13,623 E 13th Street,1,mep_finals,65,44,65,42,2026-11-13,2026-10-21,23,63
+index,act_1023-euclid,1023 Euclid Street,1,,,0,,,,,,
+index,act_609-e-25,609 E 25th Street,1,complete,,0,,,2026-06-18,2026-06-18,,
+index,act_212-e-24,212 E 24th Street,1,complete,,0,,,2026-08-25,2026-08-25,,
+index,act_1116-highland,1116 Highland Street,1,complete,,0,,,2026-07-15,2026-07-15,,
+index,act_603-e-23,603 E 23rd Street,1,interior,209,95,230,230,2027-04-27,2027-04-27,0,230
+index,act_1906-w-14,1906 W 14th,1,,,0,,,,,,
+index,act_715-merrill,715 Merrill Street,1,complete,,0,,,2026-08-25,2026-08-25,,
+index,act_2015-harvard,2015 Harvard Street,1,,,0,,,,,,
+index,act_735-e-8-12,735 E 8TH 1/2 Street,1,interior,15,0,120,120,2027-01-07,2027-01-07,0,120
+index,act_731-e-8-12,731 E 8TH 1/2 Street,1,interior,15,0,120,120,2027-01-07,2027-01-07,0,120
+index,act_248-w-22,248 W 22nd Street,1,interior,118,4,139,139,2027-01-26,2027-01-26,0,139
+index,act_2434-white-oak,2434 White Oak Drive,1,framing,44,23,249,247,2027-05-16,2027-05-14,2,249
+index,act_1113-voight,1113 Voight Street,1,mep_finals,112,91,112,42,2026-12-30,2026-10-21,70,63
+index,act_1140-waverly,1140 Waverly Street,1,interior,223,109,244,244,2027-05-11,2027-05-11,0,244
+index,act_1126-e-7-12,1126 E 7th 1/2 Street,1,complete,,0,,,2026-07-01,2026-07-01,,
+index,act_2436-white-oak,2436 White Oak,1,framing,9,0,217,217,2027-04-14,2027-04-14,0,217
+index,act_1002-e-6-12,1002 E 6TH 1/2 Street,1,mep_finals,47,26,47,42,2026-10-26,2026-10-21,5,47
+index,act_616-ridge,616 Ridge Street,1,,,0,,,,,,
+index,act_107-e-24,107 E 24th Street,1,,,0,,,,,,
+index,act_710-e-18,710 E 18th Street,1,,,0,,,,,,
+index,act_1011-e-25,1011 E 25th Street,1,,,0,,,,,,
+index,act_1016-e-27,1016 E 27 th Street,1,,,0,,,,,,
+index,act_709-ridge,709 Ridge Street,1,,,0,,,2026-08-10,2026-08-10,,
+index,act_1208-e-26th-street-unit-a,1208 E 26th Street Unit#A,1,complete,,0,,,2026-06-23,2026-06-23,,
+index,act_1303-cordell-street-unit-b,1303 Cordell Street Unit#B,1,complete,,0,,,2026-03-05,2026-03-05,,
+index,act_1032-w-17th-street-unit-a,1032 W 17th Street Unit#A,1,,,0,,,,,,
+index,act_1218-prince-street,1218 Prince Street,2,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+index,act_1122-e-27th-st-unit-b,1122 E 27TH ST Unit#B,2,,,0,,,,,,
+index,act_835-w-25th-street,835 W 25th Street,2,complete,,0,,,2026-07-28,2026-07-28,,
+index,act_805-w-22nd-street,805 W 22nd Street,2,interior,21,0,114,114,2027-01-01,2027-01-01,0,114
+index,act_227-e-26th-street,227 E 26th Street,2,,,0,,,,,,
+index,act_827-w-16th-street-unit-a,827 W 16th Street Unit#A,2,mep_finals,397,376,397,42,2027-10-11,2026-10-21,355,63
+index,act_318-w-21st-street,318 W 21st Street,2,interior,15,0,120,120,2027-01-07,2027-01-07,0,120
+index,act_609-w-27th-street,609 W 27th Street,2,complete,,0,,,2026-06-03,2026-06-03,,
+index,act_407-e-27th-street,407 E 27TH Street,2,mep_finals,19,0,2,2,2026-09-11,2026-09-11,0,2
+index,act_710-waverly-street-unit-d,710 Waverly Street Unit#D,1,,,0,,,,,,
+index,act_335-harvard-street,335 Harvard Street,2,complete,,0,,,2026-06-05,2026-06-05,,
+index,act_1229-prince-street,1229 Prince Street,2,,,0,,,2026-03-03,2026-03-03,,
+index,act_814-w-17th-street,814 W 17TH Street,2,,1,0,155,155,2027-02-11,2027-02-11,0,155
+index,act_1326-lawrence-street,1326 Lawrence Street,1,,,0,,,2026-07-21,2026-07-21,,
+index,act_815-lawrence-street-unit-a,815 Lawrence Street Unit#A,2,,,0,,,2026-02-17,2026-02-17,,
+index,act_611-e-25th-street-unit-a,611 E 25th Street Unit#A,2,,,0,,,2026-06-11,2026-06-11,,
+index,act_602-jewett-street-unit-b,602 Jewett Street Unit#B,2,,,0,,,,,,
+index,pmt_1922-northwood-st-77009,"1922 Northwood St, Houston, TX 77009",1,exterior,44,16,221,221,2027-04-18,2027-04-18,0,221
+index,pmt_1926-northwood-st-77009,"1926 Northwood St, Houston, TX 77009",1,exterior,48,20,225,225,2027-04-22,2027-04-22,0,225
+index,2131537524,"1219 Bay Oaks Rd, Houston, Tx 77008",1,mep_roughs,22,1,178,178,2027-03-06,2027-03-06,0,178
+index,2131538328,"922 Prince St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131538429,"1023 Nashua St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131538680,"911 Bay Oaks Rd, Houston, Tx 77008",1,,,0,,,,,,
+index,2131538718,"905 Bay Oaks Rd, Houston, Tx 77008",1,,,0,,,,,,
+index,2131538725,"1510 Glen Oaks St, Houston, Tx 77008",1,insulation,120,99,255,177,2027-05-22,2027-03-05,78,198
+index,2131538738,"1522 Glen Oaks St, Houston, Tx 77008",1,,,0,,,,,,
+index,pmt_1602-turnpike-rd-77008,"1602 Turnpike Rd, Houston, TX 77008",1,complete,,0,,,2026-04-08,2026-04-08,,
+index,pmt_822-nashua-st-77008,"822 Nashua St, Houston, TX 77008",1,exterior,49,21,226,226,2027-04-23,2027-04-23,0,226
+index,pmt_1118-worthshire-st-77008,"1118 Worthshire St, Houston, TX 77008",1,exterior,8,0,197,197,2027-03-25,2027-03-25,0,197
+index,pmt_728-euclid-st-77009,"728 Euclid St, Houston, TX 77009",1,interior,33,0,102,102,2026-12-20,2026-12-20,0,102
+index,pmt_1032-key-st-77009,"1032 Key St, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_1138-fugate-st-77009,"1138 Fugate St, Houston, TX 77009",1,mep_finals,12,0,9,9,2026-09-18,2026-09-18,0,9
+index,pmt_1013-woodland-st-77009,"1013 Woodland St, Houston, TX 77009",1,framing,47,26,252,247,2027-05-19,2027-05-14,5,252
+index,pmt_625-merrill-st-77009,"625 Merrill St, Houston, TX 77009",1,framing,36,15,241,241,2027-05-08,2027-05-08,0,241
+index,pmt_1040-louise-st-77009,"1040 Louise St, Houston, TX 77009",1,foundation,23,9,249,249,2027-05-16,2027-05-16,0,249
+index,pmt_2436-white-oak-dr-77009,"2436 White Oak Dr, Houston, TX 77009",1,framing,9,0,217,217,2027-04-14,2027-04-14,0,217
+index,pmt_832-e-27th-st-77009,"832 E 27th St, Houston, TX 77009",1,framing,12,0,214,214,2027-04-11,2027-04-11,0,214
+index,pmt_627-mazal-pvt-ln-77009,"627 Mazal (Pvt) Ln, Houston, TX 77009",1,interior,69,0,66,66,2026-11-14,2026-11-14,0,66
+index,pmt_631-mazal-pvt-ln-77009,"631 Mazal (Pvt) Ln, Houston, TX 77009",1,interior,69,0,66,66,2026-11-14,2026-11-14,0,66
+index,2131238842,"905 Dorothy St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131044972,"841 Rutland St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131191542,"1115 Adele St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131437247,"205 E 24th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131283630,"1624 Heights Blvd, Houston, Tx 77008",1,,,0,,,,,,
+index,2131208578,"303 Bayland Ave, Houston, Tx 77009",1,,,0,,,,,,
+index,2131387479,"932 W Temple St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131074923,"707 E 6th 1/2 St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131156653,"2715 Houston Ave, Houston, Tx 77009",1,,,0,,,,,,
+index,2131186526,"404 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131187480,"1818 N Shepherd Dr, Houston, Tx 77008",1,,,0,,,,,,
+index,2131187484,"1808 N Shepherd Dr, Houston, Tx 77008",1,,,0,,,,,,
+index,2131191607,"1025 Adele St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131194086,"726 E 26th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131200768,"902 W 22nd St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131201005,"946 W 21st St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131207218,"820 E 29th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131218924,"1516 Lawrence St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131240334,"745 E 11th 1/2 St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131282833,"205 W 24th St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131318291,"1211 Gibbs St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131360701,"1032 Alexander St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131360892,"930 Dorothy St, Houston, Tx 77008",1,,,0,,,,,,
+index,act_2924-watson-street,2924 Watson Street,1,interior,29,0,106,106,2026-12-24,2026-12-24,0,106
+index,act_615-wendel-street,615 Wendel Street,1,,,0,,,,,,
+index,act_741-w-21st-street-unit-a,741 W 21st Street Unit#A,2,,,0,,,,,,
+index,pmt_710-e-7th-st-77007,"710 E 7th St, Houston, TX 77007",1,exterior,6,0,199,199,2027-03-27,2027-03-27,0,199
+index,pmt_835-lawrence-st-77007,"835 Lawrence St, Houston, TX 77007",1,foundation,22,8,248,248,2027-05-15,2027-05-15,0,248
+index,pmt_806-peddie-st-77008,"806 Peddie St, Houston, TX 77008",1,foundation,16,2,242,242,2027-05-09,2027-05-09,0,242
+index,pmt_710-le-green-st-77008,"710 Le Green St, Houston, TX 77008",1,framing,23,2,228,228,2027-04-25,2027-04-25,0,228
+index,pmt_906-w-20th-st-e-77008,"906 W 20th St E, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_906-w-20th-st-f-77008,"906 W 20th St F, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_906-w-20th-st-a-77008,"906 W 20th St A, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_906-w-20th-st-b-77008,"906 W 20th St B, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_906-w-20th-st-c-77008,"906 W 20th St C, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_845-w-23rd-st-a-77008,"845 W 23rd St A, Houston, TX 77008",1,foundation,9,0,231,231,2027-04-28,2027-04-28,0,231
+index,pmt_845-w-23rd-st-b-77008,"845 W 23rd St B, Houston, TX 77008",1,foundation,9,0,231,231,2027-04-28,2027-04-28,0,231
+index,pmt_1336-herkimer-st-77008,"1336 Herkimer St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_914-w-16th-st-77008,"914 W 16th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_214-sylvester-rd-77009,"214 Sylvester Rd, Houston, TX 77009",1,foundation,9,0,231,231,2027-04-28,2027-04-28,0,231
+index,act_1002-e-25th-street,1002 E 25th Street,1,,,0,,,,,,
+index,act_834-waverly-street,834 WAVERLY Street,1,,,0,,,,,,
+index,act_705-walton-street,705 Walton Street,1,,,0,,,,,,
+index,act_830-waverly-street,830 WAVERLY Street,1,,,0,,,,,,
+index,act_614-ridge-street,614 Ridge Street,1,,,0,,,,,,
+index,act_2218-gostick-street,2218 Gostick Street,1,,,0,,,,,,
+index,pmt_1225-ashland-st-a-77008,"1225 Ashland St A, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_839-allston-st-77007,"839 Allston St, Houston, TX 77007",1,foundation,0,0,240,240,2027-05-07,2027-05-07,0,240
+index,pmt_1922-bonner-st-77007,"1922 Bonner St, Houston, TX 77007",1,foundation,,0,,,,,,
+index,pmt_606-link-rd-f-77009,"606 Link Rd F, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_606-link-rd-e-77009,"606 Link Rd E, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_606-link-rd-d-77009,"606 Link Rd D, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_606-link-rd-c-77009,"606 Link Rd C, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_606-link-rd-b-77009,"606 Link Rd B, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_606-link-rd-a-77009,"606 Link Rd A, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_4616-eli-st-c-77007,"4616 Eli St C, Houston, TX 77007",1,foundation,5,0,235,235,2027-05-02,2027-05-02,0,235
+index,pmt_4612-eli-st-b-77007,"4612 Eli St B, Houston, TX 77007",1,foundation,5,0,235,235,2027-05-02,2027-05-02,0,235
+index,pmt_2311-roy-cir-77007,"2311 Roy Cir, Houston, TX 77007",1,foundation,,0,,,,,,
+index,pmt_1019-e-7th-st-77009,"1019 E 7th St, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_4616-eli-st-a-77007,"4616 Eli St A, Houston, TX 77007",1,foundation,5,0,235,235,2027-05-02,2027-05-02,0,235
+index,2131085991,"1439 Laird St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131191490,"1133 Adele St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131043751,"1440 Arlington St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131283575,"1619 Cortlandt St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131284732,"1424 Ashland St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131249205,"813 Bayland Ave, Houston, Tx 77009",1,,,0,,,,,,
+index,2131475807,"1811 W 14th 1/2 St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131374679,"1129 Highland St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131191859,"1014 Robbie St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131208519,"1005 E 27th St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131191265,"1031 Nadine St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131227325,"206 Tabor St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131271381,"1604 Spring St, Houston, Tx 77007",1,,,0,,,,,,
+index,2131285466,"1017 Rutland St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131312302,"617 Peddie St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131360419,"1144 Dorothy St, Houston, Tx 77008",1,,,0,,,,,,
+index,2131370516,"912 Robbie St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131374781,"1126 Bayland Ave, Houston, Tx 77009",1,,,0,,,,,,
+index,2131377369,"1214 Farwood St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131377371,"1317 Oleander St, Houston, Tx 77009",1,,,0,,,,,,
+index,2131377372,"1315 Oleander St, Houston, Tx 77009",1,,,0,,,,,,
+index,pmt_4327-center-st-77007,"4327 Center St, Houston, TX 77007",1,complete,,0,,,2026-07-06,2026-07-06,,
+index,pmt_4325-center-st-77007,"4325 Center St, Houston, TX 77007",1,complete,,0,,,2026-07-06,2026-07-06,,
+index,pmt_4323-center-st-77007,"4323 Center St, Houston, TX 77007",1,complete,,0,,,2026-07-06,2026-07-06,,
+index,pmt_4105-allen-st-77007,"4105 Allen St, Houston, TX 77007",1,complete,,0,,,2025-09-16,2025-09-16,,
+index,pmt_4107-allen-st-77007,"4107 Allen St, Houston, TX 77007",1,complete,,0,,,2025-09-16,2025-09-16,,
+index,pmt_4103-allen-st-77007,"4103 Allen St, Houston, TX 77007",1,mep_finals,365,344,365,42,2027-09-09,2026-10-21,323,63
+index,pmt_1918-johnson-st-77007,"1918 Johnson St, Houston, TX 77007",1,complete,,0,,,2025-11-12,2025-11-12,,
+index,pmt_1520-winter-st-77007,"1520 Winter St, Houston, TX 77007",1,complete,,0,,,2026-07-22,2026-07-22,,
+index,pmt_706-e-7th-st-77007,"706 E 7th St, Houston, TX 77007",1,complete,,0,,,2026-03-10,2026-03-10,,
+index,pmt_818-lawrence-st-77007,"818 Lawrence St, Houston, TX 77007",1,complete,,0,,,2025-08-20,2025-08-20,,
+index,pmt_406-columbia-st-77007,"406 Columbia St, Houston, TX 77007",1,complete,,0,,,2026-03-11,2026-03-11,,
+index,pmt_5111-allen-st-77007,"5111 Allen St, Houston, TX 77007",1,foundation,156,142,382,254,2027-09-26,2027-05-21,128,268
+index,pmt_5113-allen-st-77007,"5113 Allen St, Houston, TX 77007",1,exterior,54,26,231,231,2027-04-28,2027-04-28,0,231
+index,pmt_717-e-5th-1-2-st-77007,"717 E 5th 1/2 St, Houston, TX 77007",1,mep_finals,371,350,371,42,2027-09-15,2026-10-21,329,63
+index,pmt_702-e-8th-st-77007,"702 E 8th St, Houston, TX 77007",1,complete,,0,,,2026-03-12,2026-03-12,,
+index,pmt_1521-ovid-st-77007,"1521 Ovid St, Houston, TX 77007",1,complete,,0,,,2025-09-04,2025-09-04,,
+index,pmt_5109-allen-st-77007,"5109 Allen St, Houston, TX 77007",1,foundation,156,142,382,254,2027-09-26,2027-05-21,128,268
+index,pmt_513-w-8th-st-77007,"513 W 8th St, Houston, TX 77007",1,complete,,0,,,2025-12-01,2025-12-01,,
+index,pmt_1522-winter-st-77007,"1522 Winter St, Houston, TX 77007",1,complete,,0,,,2026-07-22,2026-07-22,,
+index,pmt_1610-johnson-st-77007,"1610 Johnson St, Houston, TX 77007",1,complete,,0,,,2026-07-17,2026-07-17,,
+index,pmt_404-columbia-st-77007,"404 Columbia St, Houston, TX 77007",1,complete,,0,,,2025-12-23,2025-12-23,,
+index,pmt_4605-nolda-st-77007,"4605 Nolda St, Houston, TX 77007",1,foundation,118,104,344,254,2027-08-19,2027-05-21,90,268
+index,pmt_4133-kolb-st-a-77007,"4133 Kolb St A, Houston, TX 77007",1,complete,,0,,,2026-08-14,2026-08-14,,
+index,pmt_4133-kolb-st-b-77007,"4133 Kolb St B, Houston, TX 77007",1,complete,,0,,,2026-08-26,2026-08-26,,
+index,pmt_5114-eigel-st-77007,"5114 Eigel St, Houston, TX 77007",1,foundation,,0,,,,,,
+index,pmt_1308-edwards-st-b-77007,"1308 Edwards St B, Houston, TX 77007",1,complete,,0,,,2026-01-23,2026-01-23,,
+index,pmt_1308-edwards-st-a-77007,"1308 Edwards St A, Houston, TX 77007",1,complete,,0,,,2026-01-23,2026-01-23,,
+index,pmt_4612-eli-st-c-77007,"4612 Eli St C, Houston, TX 77007",1,foundation,5,0,235,235,2027-05-02,2027-05-02,0,235
+index,pmt_4616-eli-st-b-77007,"4616 Eli St B, Houston, TX 77007",1,foundation,5,0,235,235,2027-05-02,2027-05-02,0,235
+index,pmt_4612-eli-st-a-77007,"4612 Eli St A, Houston, TX 77007",1,foundation,5,0,235,235,2027-05-02,2027-05-02,0,235
+index,pmt_5016-schuler-st-77007,"5016 Schuler St, Houston, TX 77007",1,mep_finals,5,0,16,16,2026-09-25,2026-09-25,0,16
+index,pmt_5018-schuler-st-77007,"5018 Schuler St, Houston, TX 77007",1,mep_finals,5,0,16,16,2026-09-25,2026-09-25,0,16
+index,pmt_5212-kansas-st-77007,"5212 Kansas St, Houston, TX 77007",1,foundation,,0,,,,,,
+index,pmt_742-allston-st-77007,"742 Allston St, Houston, TX 77007",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+index,pmt_2008-w-14th-1-2-st-77008,"2008 W 14th 1/2 St, Houston, TX 77008",1,mep_finals,364,343,364,42,2027-09-08,2026-10-21,322,63
+index,pmt_1023-grovewood-ln-77008,"1023 Grovewood Ln, Houston, TX 77008",1,complete,,0,,,2025-09-11,2025-09-11,,
+index,pmt_1030-w-24th-st-b-77008,"1030 W 24th St B, Houston, TX 77008",1,complete,,0,,,2025-09-12,2025-09-12,,
+index,pmt_1030-w-24th-st-c-77008,"1030 W 24th St C, Houston, TX 77008",1,complete,,0,,,2025-09-12,2025-09-12,,
+index,pmt_1030-w-24th-st-a-77008,"1030 W 24th St A, Houston, TX 77008",1,complete,,0,,,2026-01-29,2026-01-29,,
+index,pmt_1443-w-25th-st-e-77008,"1443 W 25th St E, Houston, TX 77008",1,mep_finals,,0,,,,,,
+index,pmt_1443-w-25th-st-f-77008,"1443 W 25th St F, Houston, TX 77008",1,mep_finals,,0,,,,,,
+index,pmt_1443-w-25th-st-g-77008,"1443 W 25th St G, Houston, TX 77008",1,mep_finals,12,0,9,9,2026-09-18,2026-09-18,0,9
+index,pmt_1443-w-25th-st-h-77008,"1443 W 25th St H, Houston, TX 77008",1,mep_finals,26,5,26,26,2026-10-05,2026-10-05,0,26
+index,pmt_1443-w-25th-st-a-77008,"1443 W 25th St A, Houston, TX 77008",1,mep_finals,34,13,34,34,2026-10-13,2026-10-13,0,34
+index,pmt_1443-w-25th-st-b-77008,"1443 W 25th St B, Houston, TX 77008",1,mep_finals,12,0,9,9,2026-09-18,2026-09-18,0,9
+index,pmt_1443-w-25th-st-c-77008,"1443 W 25th St C, Houston, TX 77008",1,mep_finals,,0,,,,,,
+index,pmt_1443-w-25th-st-d-77008,"1443 W 25th St D, Houston, TX 77008",1,mep_finals,,0,,,,,,
+index,pmt_1122-w-17th-st-d-77008,"1122 W 17th St D, Houston, TX 77008",1,complete,,0,,,2025-09-02,2025-09-02,,
+index,pmt_1122-w-17th-st-c-77008,"1122 W 17th St C, Houston, TX 77008",1,interior,89,0,46,46,2026-10-25,2026-10-25,0,46
+index,pmt_1122-w-17th-st-b-77008,"1122 W 17th St B, Houston, TX 77008",1,interior,44,0,91,91,2026-12-09,2026-12-09,0,91
+index,pmt_1122-w-17th-st-a-77008,"1122 W 17th St A, Houston, TX 77008",1,interior,47,0,88,88,2026-12-06,2026-12-06,0,88
+index,pmt_1122-w-17th-st-f-77008,"1122 W 17th St F, Houston, TX 77008",1,complete,,0,,,2025-10-16,2025-10-16,,
+index,pmt_1122-w-17th-st-e-77008,"1122 W 17th St E, Houston, TX 77008",1,complete,,0,,,2025-09-02,2025-09-02,,
+index,pmt_916-w-24th-st-77008,"916 W 24th St, Houston, TX 77008",1,complete,,0,,,2025-07-09,2025-07-09,,
+index,pmt_1910-w-14th-1-2-st-77008,"1910 W 14th 1/2 St, Houston, TX 77008",1,mep_finals,404,383,404,42,2027-10-18,2026-10-21,362,63
+index,pmt_910-w-24th-st-77008,"910 W 24th St, Houston, TX 77008",1,complete,,0,,,2025-07-08,2025-07-08,,
+index,pmt_1522-w-21st-st-77008,"1522 W 21st St, Houston, TX 77008",1,complete,,0,,,2026-04-15,2026-04-15,,
+index,pmt_1034-w-17th-st-d-77008,"1034 W 17th St D, Houston, TX 77008",1,mep_finals,110,89,110,42,2026-12-28,2026-10-21,68,63
+index,pmt_1034-w-17th-st-c-77008,"1034 W 17th St C, Houston, TX 77008",1,mep_finals,110,89,110,42,2026-12-28,2026-10-21,68,63
+index,pmt_1034-w-17th-st-e-77008,"1034 W 17th St E, Houston, TX 77008",1,mep_finals,117,96,117,42,2027-01-04,2026-10-21,75,63
+index,pmt_1034-w-17th-st-b-77008,"1034 W 17th St B, Houston, TX 77008",1,mep_finals,91,70,91,42,2026-12-09,2026-10-21,49,63
+index,pmt_1034-w-17th-st-a-77008,"1034 W 17th St A, Houston, TX 77008",1,mep_finals,91,70,91,42,2026-12-09,2026-10-21,49,63
+index,pmt_1032-w-17th-st-c-77008,"1032 W 17th St C, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1032-w-17th-st-b-77008,"1032 W 17th St B, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1438-dian-st-a-77008,"1438 Dian St A, Houston, TX 77008",1,mep_finals,475,454,475,42,2027-12-28,2026-10-21,433,63
+index,pmt_1115-nashua-st-77008,"1115 Nashua St, Houston, TX 77008",1,complete,,0,,,2025-10-30,2025-10-30,,
+index,pmt_1239-waverly-st-77008,"1239 Waverly St, Houston, TX 77008",1,mep_finals,427,406,427,42,2027-11-10,2026-10-21,385,63
+index,pmt_310-e-28th-st-77008,"310 E 28th St, Houston, TX 77008",1,mep_finals,268,247,268,42,2027-06-04,2026-10-21,226,63
+index,pmt_614-algregg-st-77008,"614 Algregg St, Houston, TX 77008",1,complete,,0,,,2025-08-22,2025-08-22,,
+index,pmt_1039-alexander-st-77008,"1039 Alexander St, Houston, TX 77008",1,complete,,0,,,2025-12-05,2025-12-05,,
+index,pmt_323-w-23rd-st-77008,"323 W 23rd St, Houston, TX 77008",1,complete,,0,,,2025-09-03,2025-09-03,,
+index,pmt_243-w-26th-st-77008,"243 W 26th St, Houston, TX 77008",1,complete,,0,,,2025-11-21,2025-11-21,,
+index,pmt_302-w-23rd-st-77008,"302 W 23rd St, Houston, TX 77008",1,complete,,0,,,2026-04-16,2026-04-16,,
+index,pmt_501-e-26th-st-77008,"501 E 26th St, Houston, TX 77008",1,complete,,0,,,2025-11-13,2025-11-13,,
+index,pmt_213-e-23rd-st-77008,"213 E 23rd St, Houston, TX 77008",1,complete,,0,,,2025-12-12,2025-12-12,,
+index,pmt_608-e-26th-st-77008,"608 E 26th St, Houston, TX 77008",1,complete,,0,,,2025-11-06,2025-11-06,,
+index,pmt_1011-worthshire-st-77008,"1011 Worthshire St, Houston, TX 77008",1,complete,,0,,,2025-10-09,2025-10-09,,
+index,pmt_1507-w-23rd-st-e-77008,"1507 W 23rd St E, Houston, TX 77008",1,interior,176,62,197,197,2027-03-25,2027-03-25,0,197
+index,pmt_1516-dorothy-st-a-77008,"1516 Dorothy St A, Houston, TX 77008",1,complete,,0,,,2025-12-08,2025-12-08,,
+index,pmt_1516-dorothy-st-b-77008,"1516 Dorothy St B, Houston, TX 77008",1,complete,,0,,,2025-12-09,2025-12-09,,
+index,pmt_1516-dorothy-st-c-77008,"1516 Dorothy St C, Houston, TX 77008",1,complete,,0,,,2025-12-09,2025-12-09,,
+index,pmt_1507-w-23rd-st-d-77008,"1507 W 23rd St D, Houston, TX 77008",1,interior,176,62,197,197,2027-03-25,2027-03-25,0,197
+index,pmt_1507-w-23rd-st-c-77008,"1507 W 23rd St C, Houston, TX 77008",1,interior,176,62,197,197,2027-03-25,2027-03-25,0,197
+index,pmt_1507-w-23rd-st-b-77008,"1507 W 23rd St B, Houston, TX 77008",1,interior,176,62,197,197,2027-03-25,2027-03-25,0,197
+index,pmt_1507-w-23rd-st-a-77008,"1507 W 23rd St A, Houston, TX 77008",1,interior,176,62,197,197,2027-03-25,2027-03-25,0,197
+index,pmt_827-w-16th-st-b-77008,"827 W 16th St B, Houston, TX 77008",1,mep_finals,126,105,126,42,2027-01-13,2026-10-21,84,63
+index,pmt_310-e-27th-st-77008,"310 E 27th St, Houston, TX 77008",1,complete,,0,,,2025-11-14,2025-11-14,,
+index,pmt_811-w-18th-st-77008,"811 W 18th St, Houston, TX 77008",1,complete,,0,,,2025-07-09,2025-07-09,,
+index,pmt_809-w-18th-st-77008,"809 W 18th St, Houston, TX 77008",1,complete,,0,,,2025-07-09,2025-07-09,,
+index,pmt_1424-w-23rd-st-c-77008,"1424 W 23rd St C, Houston, TX 77008",1,mep_finals,98,77,98,42,2026-12-16,2026-10-21,56,63
+index,pmt_1424-w-23rd-st-b-77008,"1424 W 23rd St B, Houston, TX 77008",1,complete,,0,,,2026-08-19,2026-08-19,,
+index,pmt_1021-ashland-st-77008,"1021 Ashland St, Houston, TX 77008",1,mep_finals,293,272,293,42,2027-06-29,2026-10-21,251,63
+index,pmt_1237-waverly-st-77008,"1237 Waverly St, Houston, TX 77008",1,complete,,0,,,2025-08-15,2025-08-15,,
+index,pmt_222-e-27th-st-77008,"222 E 27th St, Houston, TX 77008",1,complete,,0,,,2025-08-25,2025-08-25,,
+index,pmt_226-e-27th-st-77008,"226 E 27th St, Houston, TX 77008",1,complete,,0,,,2025-08-13,2025-08-13,,
+index,pmt_224-e-27th-st-77008,"224 E 27th St, Houston, TX 77008",1,complete,,0,,,2025-11-19,2025-11-19,,
+index,pmt_1405-w-21st-st-c-77008,"1405 W 21st St C, Houston, TX 77008",1,complete,,0,,,2026-02-10,2026-02-10,,
+index,pmt_1405-w-21st-st-b-77008,"1405 W 21st St B, Houston, TX 77008",1,complete,,0,,,2026-07-08,2026-07-08,,
+index,pmt_1405-w-21st-st-a-77008,"1405 W 21st St A, Houston, TX 77008",1,complete,,0,,,2026-07-08,2026-07-08,,
+index,pmt_1403-w-21st-st-d-77008,"1403 W 21st St D, Houston, TX 77008",1,complete,,0,,,2026-07-08,2026-07-08,,
+index,pmt_1403-w-21st-st-c-77008,"1403 W 21st St C, Houston, TX 77008",1,complete,,0,,,2026-07-08,2026-07-08,,
+index,pmt_1403-w-21st-st-b-77008,"1403 W 21st St B, Houston, TX 77008",1,complete,,0,,,2026-05-06,2026-05-06,,
+index,pmt_1403-w-21st-st-a-77008,"1403 W 21st St A, Houston, TX 77008",1,complete,,0,,,2026-02-17,2026-02-17,,
+index,pmt_319-e-24th-st-77008,"319 E 24th St, Houston, TX 77008",1,complete,,0,,,2025-09-03,2025-09-03,,
+index,pmt_1519-glen-oaks-st-77008,"1519 Glen Oaks St, Houston, TX 77008",1,complete,,0,,,2026-05-07,2026-05-07,,
+index,pmt_1221-prince-st-77008,"1221 Prince St, Houston, TX 77008",1,complete,,0,,,2025-08-26,2025-08-26,,
+index,pmt_1223-prince-st-77008,"1223 Prince St, Houston, TX 77008",1,complete,,0,,,2025-09-04,2025-09-04,,
+index,pmt_1006-nashua-st-77008,"1006 Nashua St, Houston, TX 77008",1,complete,,0,,,2025-08-08,2025-08-08,,
+index,pmt_325-w-23rd-st-77008,"325 W 23rd St, Houston, TX 77008",1,complete,,0,,,2025-08-29,2025-08-29,,
+index,pmt_710-e-12th-st-77008,"710 E 12th St, Houston, TX 77008",1,complete,,0,,,2026-02-23,2026-02-23,,
+index,pmt_708-ralfallen-st-77008,"708 Ralfallen St, Houston, TX 77008",1,mep_finals,344,323,344,42,2027-08-19,2026-10-21,302,63
+index,pmt_1438-dian-st-b-77008,"1438 Dian St B, Houston, TX 77008",1,mep_finals,475,454,475,42,2027-12-28,2026-10-21,433,63
+index,pmt_730-e-13th-1-2-st-77008,"730 E 13th 1/2 St, Houston, TX 77008",1,complete,,0,,,2025-10-16,2025-10-16,,
+index,pmt_832-w-19th-st-77008,"832 W 19th St, Houston, TX 77008",1,complete,,0,,,2025-07-10,2025-07-10,,
+index,pmt_834-w-19th-st-77008,"834 W 19th St, Houston, TX 77008",1,complete,,0,,,2025-07-10,2025-07-10,,
+index,pmt_326-w-27th-st-77008,"326 W 27th St, Houston, TX 77008",1,mep_finals,385,364,385,42,2027-09-29,2026-10-21,343,63
+index,pmt_324-w-27th-st-77008,"324 W 27th St, Houston, TX 77008",1,mep_finals,386,365,386,42,2027-09-30,2026-10-21,344,63
+index,pmt_1211-bay-oaks-rd-77008,"1211 Bay Oaks Rd, Houston, TX 77008",1,complete,,0,,,2026-01-14,2026-01-14,,
+index,pmt_1424-w-23rd-st-a-77008,"1424 W 23rd St A, Houston, TX 77008",1,mep_finals,92,71,92,42,2026-12-10,2026-10-21,50,63
+index,pmt_320-e-18th-st-77008,"320 E 18th St, Houston, TX 77008",1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+index,pmt_1207-tulane-st-77008,"1207 Tulane St, Houston, TX 77008",1,complete,,0,,,2026-08-17,2026-08-17,,
+index,pmt_1813-w-14th-st-77008,"1813 W 14th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_305-w-17th-st-77008,"305 W 17th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_321-e-24th-st-77008,"321 E 24th St, Houston, TX 77008",1,foundation,,0,,,,,,
+index,pmt_1312-e-28th-st-a-77009,"1312 E 28th St A, Houston, TX 77009",1,complete,,0,,,2025-09-30,2025-09-30,,
+index,pmt_1101-usener-st-77009,"1101 Usener St, Houston, TX 77009",1,complete,,0,,,2025-07-23,2025-07-23,,
+index,pmt_1115-e-26th-st-77009,"1115 E 26th St, Houston, TX 77009",1,complete,,0,,,2025-11-06,2025-11-06,,
+index,pmt_1809-palmetto-landing-dr-77009,"1809 Palmetto Landing Dr, Houston, TX 77009",1,mep_finals,457,436,457,42,2027-12-10,2026-10-21,415,63
+index,pmt_1807-palmetto-landing-dr-77009,"1807 Palmetto Landing Dr, Houston, TX 77009",1,mep_finals,433,412,433,42,2027-11-16,2026-10-21,391,63
+index,pmt_721-usener-st-77009,"721 Usener St, Houston, TX 77009",1,mep_finals,330,309,330,42,2027-08-05,2026-10-21,288,63
+index,pmt_605-cordell-st-77009,"605 Cordell St, Houston, TX 77009",1,complete,,0,,,2025-08-04,2025-08-04,,
+index,pmt_1106-robbie-st-77009,"1106 Robbie St, Houston, TX 77009",1,mep_finals,260,239,260,42,2027-05-27,2026-10-21,218,63
+index,pmt_115-northwood-st-77009,"115 Northwood St, Houston, TX 77009",1,mep_finals,181,160,181,42,2027-03-09,2026-10-21,139,63
+index,pmt_1132-adele-st-77009,"1132 Adele St, Houston, TX 77009",1,complete,,0,,,2025-10-03,2025-10-03,,
+index,pmt_1125-euclid-st-77009,"1125 Euclid St, Houston, TX 77009",1,complete,,0,,,2025-11-17,2025-11-17,,
+index,pmt_1134-adele-st-77009,"1134 Adele St, Houston, TX 77009",1,complete,,0,,,2025-10-03,2025-10-03,,
+index,pmt_707-teetshorn-st-77009,"707 Teetshorn St, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_121-northwood-st-77009,"121 Northwood St, Houston, TX 77009",1,complete,,0,,,2025-08-20,2025-08-20,,
+index,pmt_1805-palmetto-landing-dr-77009,"1805 Palmetto Landing Dr, Houston, TX 77009",1,complete,,0,,,2026-06-05,2026-06-05,,
+index,pmt_1023-e-23rd-st-77009,"1023 E 23rd St, Houston, TX 77009",1,complete,,0,,,2026-05-15,2026-05-15,,
+index,pmt_2922-michaux-st-77009,"2922 Michaux St, Houston, TX 77009",1,mep_finals,85,64,85,42,2026-12-03,2026-10-21,43,63
+index,pmt_2932-michaux-st-77009,"2932 Michaux St, Houston, TX 77009",1,complete,,0,,,2025-10-21,2025-10-21,,
+index,pmt_2912-michaux-st-77009,"2912 Michaux St, Houston, TX 77009",1,complete,,0,,,2025-07-23,2025-07-23,,
+index,pmt_2930-michaux-st-77009,"2930 Michaux St, Houston, TX 77009",1,complete,,0,,,2025-07-23,2025-07-23,,
+index,pmt_2928-michaux-st-77009,"2928 Michaux St, Houston, TX 77009",1,complete,,0,,,2026-05-15,2026-05-15,,
+index,pmt_2926-michaux-st-77009,"2926 Michaux St, Houston, TX 77009",1,complete,,0,,,2026-06-09,2026-06-09,,
+index,pmt_2924-michaux-st-77009,"2924 Michaux St, Houston, TX 77009",1,mep_finals,85,64,85,42,2026-12-03,2026-10-21,43,63
+index,pmt_2920-michaux-st-77009,"2920 Michaux St, Houston, TX 77009",1,mep_finals,85,64,85,42,2026-12-03,2026-10-21,43,63
+index,pmt_2918-michaux-st-77009,"2918 Michaux St, Houston, TX 77009",1,complete,,0,,,2026-06-05,2026-06-05,,
+index,pmt_2916-michaux-st-77009,"2916 Michaux St, Houston, TX 77009",1,complete,,0,,,2025-10-21,2025-10-21,,
+index,pmt_2914-michaux-st-77009,"2914 Michaux St, Houston, TX 77009",1,complete,,0,,,2025-07-02,2025-07-02,,
+index,pmt_602-jewett-st-a-77009,"602 Jewett St A, Houston, TX 77009",1,complete,,0,,,2026-01-16,2026-01-16,,
+index,pmt_2504-baylor-st-77009,"2504 Baylor St, Houston, TX 77009",1,complete,,0,,,2025-09-24,2025-09-24,,
+index,pmt_2506-baylor-st-77009,"2506 Baylor St, Houston, TX 77009",1,complete,,0,,,2025-10-15,2025-10-15,,
+index,pmt_2508-baylor-st-77009,"2508 Baylor St, Houston, TX 77009",1,complete,,0,,,2025-11-20,2025-11-20,,
+index,pmt_2701-julian-st-77009,"2701 Julian St, Houston, TX 77009",1,complete,,0,,,2026-02-10,2026-02-10,,
+index,pmt_1110-jerome-st-77009,"1110 Jerome St, Houston, TX 77009",1,mep_roughs,330,309,486,198,2028-01-08,2027-03-26,288,219
+index,pmt_829-e-25th-st-77009,"829 E 25th St, Houston, TX 77009",1,complete,,0,,,2025-10-22,2025-10-22,,
+index,pmt_827-e-25th-st-77009,"827 E 25th St, Houston, TX 77009",1,mep_finals,371,350,371,42,2027-09-15,2026-10-21,329,63
+index,pmt_1001-e-7th-1-2-st-77009,"1001 E 7th 1/2 St, Houston, TX 77009",1,complete,,0,,,2026-03-27,2026-03-27,,
+index,pmt_1040-voight-st-77009,"1040 Voight St, Houston, TX 77009",1,complete,,0,,,2026-03-03,2026-03-03,,
+index,pmt_1042-voight-st-77009,"1042 Voight St, Houston, TX 77009",1,mep_finals,245,224,245,42,2027-05-12,2026-10-21,203,63
+index,pmt_1001-e-27th-st-77009,"1001 E 27th St, Houston, TX 77009",1,complete,,0,,,2026-02-13,2026-02-13,,
+index,pmt_1016-e-27th-st-77009,"1016 E 27th St, Houston, TX 77009",1,interior,363,249,384,249,2027-09-28,2027-05-16,135,363
+index,pmt_1127-robbie-st-77009,"1127 Robbie St, Houston, TX 77009",1,complete,,0,,,2025-12-11,2025-12-11,,
+index,pmt_610-skyland-terrace-way-77009,"610 Skyland Terrace Way, Houston, TX 77009",1,complete,,0,,,2026-07-07,2026-07-07,,
+index,pmt_606-skyland-terrace-way-77009,"606 Skyland Terrace Way, Houston, TX 77009",1,mep_finals,152,131,152,42,2027-02-08,2026-10-21,110,63
+index,pmt_602-skyland-terrace-way-77009,"602 Skyland Terrace Way, Houston, TX 77009",1,mep_finals,77,56,77,42,2026-11-25,2026-10-21,35,63
+index,pmt_603-skyland-terrace-way-77009,"603 Skyland Terrace Way, Houston, TX 77009",1,mep_finals,77,56,77,42,2026-11-25,2026-10-21,35,63
+index,pmt_1208-e-26th-st-b-77009,"1208 E 26th St B, Houston, TX 77009",1,complete,,0,,,2026-06-02,2026-06-02,,
+index,pmt_614-skyland-terrace-way-77009,"614 Skyland Terrace Way, Houston, TX 77009",1,complete,,0,,,2026-07-07,2026-07-07,,
+index,pmt_606-link-rd-g-77009,"606 Link Rd G, Houston, TX 77009",1,foundation,,0,,,,,,
+index,pmt_615-skyland-terrace-way-77009,"615 Skyland Terrace Way, Houston, TX 77009",1,interior,272,158,293,249,2027-06-29,2027-05-16,44,293
+index,pmt_611-skyland-terrace-way-77009,"611 Skyland Terrace Way, Houston, TX 77009",1,interior,272,158,293,249,2027-06-29,2027-05-16,44,293
+index,pmt_607-skyland-terrace-way-77009,"607 Skyland Terrace Way, Houston, TX 77009",1,mep_finals,77,56,77,42,2026-11-25,2026-10-21,35,63
+montrose,act_4522-yoakum-boulevard,"4522 Yoakum Boulevard, Houston, TX 77006",1,interior,55,0,80,80,2026-11-28,2026-11-28,0,80
+montrose,act_1517-vermont-street-b,"1517 Vermont Street #B, Houston, TX 77006",2,,,0,,,,,,
+montrose,act_4317-roseland-street-a,"4317 Roseland Street #A, Houston, TX 77006",2,complete,,0,,,2026-05-07,2026-05-07,,
+montrose,act_1503-vermont-street-d,"1503 Vermont Street #D, Houston, TX 77006",2,,,0,,,,,,
+montrose,act_4526-yoakum-boulevard,"4526 Yoakum Boulevard, Houston, TX 77006",1,interior,23,0,112,112,2026-12-30,2026-12-30,0,112
+montrose,act_1107-wilson-st,"1107 Wilson St, Houston, TX 77019",2,mep_finals,49,28,49,42,2026-10-28,2026-10-21,7,49
+montrose,act_1110-peden-street-b,"1110 Peden Street #B, Houston, TX 77006",2,,,0,,,,,,
+montrose,act_4207-driscoll-street,"4207 Driscoll Street, Houston, TX 77098",1,complete,,0,,,2026-08-26,2026-08-26,,
+montrose,act_1103-wilson-st,"1103 Wilson St, Houston, TX 77019",1,mep_finals,22,1,22,22,2026-10-01,2026-10-01,0,22
+montrose,act_2027-fairview-avenue,"2027 Fairview Avenue, Houston, TX 77019",2,interior,0,0,135,135,2027-01-22,2027-01-22,0,135
+montrose,act_1515-vermont-street-d,"1515 Vermont Street #D, Houston, TX 77006",2,,,0,,,,,,
+montrose,act_2412-elmen-street,"2412 ELMEN Street, Houston, TX 77019",2,interior,114,0,21,21,2026-09-30,2026-09-30,0,21
+montrose,act_1634-castle-court,"1634 CASTLE Court, Houston, TX 77006",2,complete,,0,,,2026-08-28,2026-08-28,,
+montrose,act_2209-crocker,"2209 Crocker, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_617-bomar-street,"617 Bomar Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_1818-branard-street,"1818 BRANARD Street, Houston, TX 77098",1,interior,79,0,56,56,2026-11-04,2026-11-04,0,56
+montrose,act_1521-nevada-street,"1521 NEVADA Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_2413-brun-street-a,"2413 BRUN Street #A, Houston, TX 77019",1,interior,112,0,23,23,2026-10-02,2026-10-02,0,23
+montrose,act_3909-driscoll-street,"3909 DRISCOLL Street, Houston, TX 77098",1,mep_finals,26,5,26,26,2026-10-05,2026-10-05,0,26
+montrose,act_1601-vermont-street,"1601 VERMONT Street, Houston, TX 77006",1,complete,,0,,,2026-08-04,2026-08-04,,
+montrose,act_511-w-polk-street,"511 W Polk Street, Houston, TX 77019",2,,,0,,,,,,
+montrose,act_1907-sul-ross-street,"1907 SUL ROSS Street, Houston, TX 77098",1,,,0,,,,,,
+montrose,act_1822-branard-street-b,"1822 BRANARD Street #B, Houston, TX 77098",1,interior,9,0,126,126,2027-01-13,2027-01-13,0,126
+montrose,act_805-bomar-street,"805 BOMAR Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_508-willard-street,"508 Willard Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_1204-w-drew-street,"1204 W Drew Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_1906-woodhead-street,"1906 WOODHEAD Street, Houston, TX 77019",1,interior,9,0,126,126,2027-01-13,2027-01-13,0,126
+montrose,act_1824-marshall-street,"1824 MARSHALL Street, Houston, TX 77098",1,,,0,,,,,,
+montrose,act_1642-norfolk-street,"1642 Norfolk Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_1511-kipling-street,"1511 KIPLING Street, Houston, TX 77006",1,complete,,0,,,2026-07-28,2026-07-28,,
+montrose,act_2415-elmen-street,"2415 Elmen Street, Houston, TX 77019",1,exterior,34,6,211,211,2027-04-08,2027-04-08,0,211
+montrose,act_1606-hazard-street,"1606 Hazard Street, Houston, TX 77019",1,,,0,,,,,,
+montrose,act_1523-marshall-street,"1523 Marshall Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,act_1641-hawthorne-street,"1641 Hawthorne Street, Houston, TX 77006",1,,,0,,,,,,
+montrose,pmt_1312-castle-ct-a,"1312 CASTLE CT A, Houston, TX 77006",2,complete,,0,,,2026-06-17,2026-06-17,,
+montrose,pmt_1644-bonnie-brae-st,"1644 BONNIE BRAE ST, Houston, TX 77006",2,complete,,0,,,2026-08-28,2026-08-28,,
+montrose,pmt_10-courtlandt-place,"10 COURTLANDT PLACE, Houston, TX 77006",1,interior,162,48,183,183,2027-03-11,2027-03-11,0,183
+montrose,pmt_3412-audubon-place,"3412 AUDUBON PLACE, Houston, TX 77006",1,mep_finals,41,20,41,41,2026-10-20,2026-10-20,0,41
+montrose,pmt_1125-jackson-blvd,"1125 JACKSON BLVD, Houston, TX 77006",2,interior,30,0,105,105,2026-12-23,2026-12-23,0,105
+montrose,pmt_1323-south-blvd,"1323 SOUTH BLVD, Houston, TX 77006",1,foundation,77,63,303,254,2027-07-09,2027-05-21,49,268
+montrose,pmt_1829-maryland-st,"1829 MARYLAND ST, Houston, TX 77006",1,framing,170,149,375,247,2027-09-19,2027-05-14,128,268
+montrose,pmt_4528-yoakum-blvd,"4528 YOAKUM BLVD, Houston, TX 77006",1,interior,23,0,112,112,2026-12-30,2026-12-30,0,112
+montrose,pmt_4534-yoakum-blvd,"4534 YOAKUM BLVD, Houston, TX 77006",1,framing,120,99,325,247,2027-07-31,2027-05-14,78,268
+montrose,pmt_4524-yoakum-blvd,"4524 YOAKUM BLVD, Houston, TX 77006",1,interior,12,0,123,123,2027-01-10,2027-01-10,0,123
+montrose,pmt_1828-fairview-st,"1828 FAIRVIEW ST, Houston, TX 77006",2,foundation,,0,,,,,,
+montrose,pmt_720-peden-st,"720 PEDEN ST, Houston, TX 77006",1,mep_roughs,7,0,170,170,2027-02-26,2027-02-26,0,170
+montrose,pmt_4512-yoakum-blvd,"4512 YOAKUM BLVD, Houston, TX 77006",1,foundation,134,120,360,254,2027-09-04,2027-05-21,106,268
+montrose,pmt_4514-yoakum-blvd,"4514 YOAKUM BLVD, Houston, TX 77006",1,foundation,134,120,360,254,2027-09-04,2027-05-21,106,268
+montrose,pmt_4516-yoakum-blvd,"4516 YOAKUM BLVD, Houston, TX 77006",1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+montrose,pmt_4518-yoakum-blvd,"4518 YOAKUM BLVD, Houston, TX 77006",1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+montrose,pmt_718-peden-st,"718 PEDEN ST, Houston, TX 77006",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+montrose,pmt_1202-w-drew-st,"1202 W DREW ST, Houston, TX 77006",1,complete,,0,,,2026-07-13,2026-07-13,,
+montrose,pmt_1304-welch-st,"1304 WELCH ST, Houston, TX 77006",1,framing,20,0,206,206,2027-04-03,2027-04-03,0,206
+montrose,pmt_419-lovett-blvd,"419 LOVETT BLVD, Houston, TX 77006",1,interior,106,0,29,29,2026-10-08,2026-10-08,0,29
+montrose,pmt_1417-vassar-st,"1417 VASSAR ST, Houston, TX 77006",1,foundation,29,15,255,254,2027-05-22,2027-05-21,1,255
+montrose,pmt_1312-vassar-st,"1312 VASSAR ST, Houston, TX 77006",1,interior,23,0,112,112,2026-12-30,2026-12-30,0,112
+montrose,pmt_1223-w-drew-st,"1223 W DREW ST, Houston, TX 77006",1,mep_finals,55,34,55,42,2026-11-03,2026-10-21,13,55
+montrose,pmt_1501-bonnie-brae-st,"1501 BONNIE BRAE ST, Houston, TX 77006",1,complete,,0,,,2026-05-14,2026-05-14,,
+montrose,pmt_4520-yoakum-blvd,"4520 YOAKUM BLVD, Houston, TX 77006",1,interior,55,0,80,80,2026-11-28,2026-11-28,0,80
+montrose,pmt_1408-indiana-st-a,"1408 INDIANA ST A, Houston, TX 77006",3,framing,22,1,227,227,2027-04-24,2027-04-24,0,227
+montrose,pmt_1604-sul-ross-st,"1604 SUL ROSS ST, Houston, TX 77006",1,interior,103,0,32,32,2026-10-11,2026-10-11,0,32
+montrose,pmt_1603-vermont-st,"1603 VERMONT ST, Houston, TX 77006",1,complete,,0,,,2026-07-29,2026-07-29,,
+montrose,pmt_4530-yoakum-blvd,"4530 YOAKUM BLVD, Houston, TX 77006",1,foundation,126,112,352,254,2027-08-27,2027-05-21,98,268
+montrose,pmt_4532-yoakum-blvd,"4532 YOAKUM BLVD, Houston, TX 77006",1,foundation,126,112,352,254,2027-08-27,2027-05-21,98,268
+montrose,pmt_1246-peden-st-a,"1246 PEDEN ST A, Houston, TX 77006",1,interior,36,0,99,99,2026-12-17,2026-12-17,0,99
+montrose,pmt_1246-peden-st-b,"1246 PEDEN ST B, Houston, TX 77006",1,interior,41,0,94,94,2026-12-12,2026-12-12,0,94
+montrose,pmt_1414-kipling-st,"1414 KIPLING ST, Houston, TX 77006",1,framing,194,173,399,247,2027-10-13,2027-05-14,152,268
+montrose,pmt_4404-yupon-st,"4404 YUPON ST, Houston, TX 77006",1,foundation,,0,,,,,,
+montrose,pmt_1218-bomar-st,"1218 BOMAR ST, Houston, TX 77006",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+montrose,pmt_608-peden-st,"608 PEDEN ST, Houston, TX 77006",1,foundation,,0,,,,,,
+montrose,pmt_1615-vassar-st,"1615 VASSAR ST, Houston, TX 77006",1,interior,69,0,66,66,2026-11-14,2026-11-14,0,66
+montrose,pmt_4400-yupon-st,"4400 YUPON ST, Houston, TX 77006",1,foundation,,0,,,,,,
+montrose,pmt_1916-hawthorne-st,"1916 HAWTHORNE ST, Houston, TX 77098",1,mep_roughs,9,0,168,168,2027-02-24,2027-02-24,0,168
+montrose,pmt_1831-branard-st,"1831 BRANARD ST, Houston, TX 77098",1,foundation,,0,,,,,,
+montrose,pmt_1829-branard-st,"1829 BRANARD ST, Houston, TX 77098",1,foundation,,0,,,,,,
+montrose,pmt_1811-sul-ross-st,"1811 SUL ROSS ST, Houston, TX 77098",1,foundation,21,7,247,247,2027-05-14,2027-05-14,0,247
+montrose,pmt_1744-harold-st,"1744 HAROLD ST, Houston, TX 77098",1,interior,65,0,70,70,2026-11-18,2026-11-18,0,70
+montrose,pmt_1959-richmond-ave,"1959 RICHMOND AVE, Houston, TX 77098",1,framing,161,140,366,247,2027-09-10,2027-05-14,119,268
+montrose,pmt_1819-branard-st,"1819 BRANARD ST, Houston, TX 77098",2,interior,54,0,81,81,2026-11-29,2026-11-29,0,81
+montrose,pmt_3911-driscoll-st,"3911 DRISCOLL ST, Houston, TX 77098",1,mep_finals,26,5,26,26,2026-10-05,2026-10-05,0,26
+montrose,pmt_4203-driscoll-st,"4203 DRISCOLL ST, Houston, TX 77098",2,complete,,0,,,2026-07-29,2026-07-29,,
+montrose,pmt_1822-branard-st-a,"1822 BRANARD ST A, Houston, TX 77098",1,interior,9,0,126,126,2027-01-13,2027-01-13,0,126
+montrose,pmt_1820-branard-st,"1820 BRANARD ST, Houston, TX 77098",1,interior,79,0,56,56,2026-11-04,2026-11-04,0,56
+montrose,pmt_1802-portsmouth-st-d,"1802 PORTSMOUTH ST D, Houston, TX 77098",1,exterior,36,8,213,213,2027-04-10,2027-04-10,0,213
+montrose,pmt_1802-portsmouth-st-c,"1802 PORTSMOUTH ST C, Houston, TX 77098",1,exterior,41,13,218,218,2027-04-15,2027-04-15,0,218
+montrose,pmt_1802-portsmouth-st-b,"1802 PORTSMOUTH ST B, Houston, TX 77098",1,exterior,41,13,218,218,2027-04-15,2027-04-15,0,218
+montrose,pmt_1802-portsmouth-st-a,"1802 PORTSMOUTH ST A, Houston, TX 77098",1,exterior,19,0,186,186,2027-03-14,2027-03-14,0,186
+montrose,pmt_1744-norfolk-st,"1744 NORFOLK ST, Houston, TX 77098",1,framing,54,33,259,247,2027-05-26,2027-05-14,12,259
+montrose,pmt_1720-kipling-st,"1720 KIPLING ST, Houston, TX 77098",1,framing,50,29,255,247,2027-05-22,2027-05-14,8,255
+montrose,pmt_1016-ruthven-st-b,"1016 RUTHVEN ST B, Houston, TX 77019",2,complete,,0,,,2026-01-22,2026-01-22,,
+montrose,pmt_1301-saulnier-st,"1301 SAULNIER ST, Houston, TX 77019",1,complete,,0,,,2025-10-14,2025-10-14,,
+montrose,pmt_2025-fairview-st,"2025 FAIRVIEW ST, Houston, TX 77019",1,interior,0,0,135,135,2027-01-22,2027-01-22,0,135
+montrose,pmt_1606-woodhead-st,"1606 WOODHEAD ST, Houston, TX 77019",1,complete,,0,,,2026-07-23,2026-07-23,,
+montrose,pmt_1918-huldy-st,"1918 HULDY ST, Houston, TX 77019",1,interior,105,0,30,30,2026-10-09,2026-10-09,0,30
+montrose,pmt_1906-driscoll-st,"1906 DRISCOLL ST, Houston, TX 77019",1,complete,,0,,,2026-07-08,2026-07-08,,
+montrose,pmt_2424-elmen-st,"2424 ELMEN ST, Houston, TX 77019",1,mep_roughs,29,8,185,185,2027-03-13,2027-03-13,0,185
+montrose,pmt_2413-brun-st-b,"2413 BRUN ST B, Houston, TX 77019",1,interior,111,0,24,24,2026-10-03,2026-10-03,0,24
+montrose,pmt_2202-huldy-st,"2202 HULDY ST, Houston, TX 77019",2,interior,112,0,23,23,2026-10-02,2026-10-02,0,23
+montrose,pmt_314-w-gray-st,"314 W GRAY ST, Houston, TX 77019",2,framing,54,33,259,247,2027-05-26,2027-05-14,12,259
+montrose,pmt_1514-taft-st,"1514 TAFT ST, Houston, TX 77019",1,framing,54,33,259,247,2027-05-26,2027-05-14,12,259
+montrose,pmt_1510-stanford-st,"1510 STANFORD ST, Houston, TX 77019",1,foundation,,0,,,,,,
+montrose,pmt_2026-morse-st,"2026 MORSE ST, Houston, TX 77019",2,foundation,34,20,260,254,2027-05-27,2027-05-21,6,260
+montrose,act_2221-morse,"2221 Morse Street, Houston, TX 77019",1,,,0,,,,,,
+montrose,act_1918-woodhead,"1918 Woodhead Street, Houston, TX 77019",1,,,0,,,,,,
+montrose,act_2408-driscoll,"2408 Driscoll Street, Houston, TX 77019",2,,,0,,,,,,
+montrose,act_2411-hazard,"2411 Hazard Street, Houston, TX 77019",2,,,0,,,,,,
+montrose,act_1810-hazard-a,"1810 Hazard Street Unit#A, Houston, TX 77019",2,,,0,,,,,,
+montrose,act_409-w-saulnier,"409 W Saulnier Street, Houston, TX 77019",2,,,0,,,,,,
+montrose,acq_1004-missouri-st,1004 Missouri St,1,,,0,,,,,,
+montrose,acq_1120-welch-st,1120 Welch St,1,,,0,,,,,,
+montrose,acq_1125-jackson-blvd,1125 Jackson Blvd,1,,,0,,,,,,
+montrose,acq_1201-bomar-st,1201 Bomar St,1,,,0,,,,,,
+montrose,acq_1209-bomar-st,1209 Bomar St,1,,,0,,,,,,
+montrose,acq_1223-w-drew-st,1223 W Drew St,1,,,0,,,,,,
+montrose,acq_1304-welch-st,1304 Welch St,1,,,0,,,,,,
+montrose,acq_1304-willard-st,1304 Willard St,1,,,0,,,,,,
+montrose,acq_1406-indiana-st,1406 Indiana St,1,,,0,,,,,,
+montrose,acq_1512-w-alabama-st,1512 W Alabama St,1,,,0,,,,,,
+montrose,acq_1516-w-alabama-st,1516 W Alabama St,1,,,0,,,,,,
+montrose,acq_1523-nevada-st,1523 Nevada St,1,,,0,,,,,,
+montrose,acq_1525-welch-st,1525 Welch St,1,,,0,,,,,,
+montrose,acq_1610-harold-st,1610 Harold St,1,,,0,,,,,,
+montrose,acq_1612-w-alabama-st,1612 W Alabama St,1,,,0,,,,,,
+montrose,acq_1614-milford-st,1614 Milford St,1,,,0,,,,,,
+montrose,acq_1621-cherryhurst-st,1621 Cherryhurst St,1,,,0,,,,,,
+montrose,acq_1622-w-alabama-st,1622 W Alabama St,1,,,0,,,,,,
+montrose,acq_1636-milford-st,1636 Milford St,1,,,0,,,,,,
+montrose,acq_1643-richmond-ave,1643 Richmond Ave,1,,,0,,,,,,
+montrose,acq_1647-richmond-ave,1647 Richmond Ave,1,,,0,,,,,,
+montrose,acq_221-emerson-st,221 Emerson St,1,,,0,,,,,,
+montrose,acq_2402-montrose-blvd-apt-2,2402 Montrose Blvd Apt 2,1,,,0,,,,,,
+montrose,acq_3718-mount-vernon-st,3718 Mount Vernon St,1,,,0,,,,,,
+montrose,acq_405-welch-st,405 Welch St,1,,,0,,,,,,
+montrose,acq_4409-greeley-st,4409 Greeley St,1,,,0,,,,,,
+montrose,acq_4510-yoakum-blvd,4510 Yoakum Blvd,1,,,0,,,,,,
+montrose,acq_608-peden-st,608 Peden St,1,,,0,,,,,,
+montrose,acq_614-colquitt-st,614 Colquitt St,1,,,0,,,,,,
+montrose,acq_922-peden-st,922 Peden St,1,,,0,,,,,,
+montrose,acq_1236-w-gray-st,1236 W Gray St,1,,,0,,,,,,
+montrose,acq_1302-waugh-dr,1302 Waugh Dr,1,,,0,,,,,,
+montrose,acq_1501-victor-st,1501 Victor St,1,,,0,,,,,,
+montrose,acq_1511-andrews-st,1511 Andrews St,1,,,0,,,,,,
+montrose,acq_1906-woodhead-st,1906 Woodhead St,1,,,0,,,,,,
+montrose,acq_1907-bellmeade-st,1907 Bellmeade St,1,,,0,,,,,,
+montrose,acq_1918-huldy-st,1918 Huldy St,1,,,0,,,,,,
+montrose,acq_2204-inwood-dr,2204 Inwood Dr,1,,,0,,,,,,
+montrose,acq_2411-stanmore-dr,2411 Stanmore Dr,1,,,0,,,,,,
+montrose,acq_2415-elmen-st,2415 Elmen St,1,,,0,,,,,,
+montrose,acq_2440-inwood-dr,2440 Inwood Dr,1,,,0,,,,,,
+montrose,acq_2509-dickey-pl,2509 Dickey Pl,1,,,0,,,,,,
+montrose,acq_2525-inwood-dr,2525 Inwood Dr,1,,,0,,,,,,
+montrose,acq_3020-ella-lee-ln,3020 Ella Lee Ln,1,,,0,,,,,,
+montrose,acq_3112-locke-ln,3112 Locke Ln,1,,,0,,,,,,
+montrose,acq_318-w-clay-st,318 W Clay St,1,,,0,,,,,,
+montrose,acq_35-tiel-way,35 Tiel Way,1,,,0,,,,,,
+montrose,acq_3665-knollwood-st,3665 Knollwood St,1,,,0,,,,,,
+montrose,acq_3747-chevy-chase-dr,3747 Chevy Chase Dr,1,,,0,,,,,,
+montrose,acq_3831-del-monte-dr,3831 Del Monte Dr,1,,,0,,,,,,
+montrose,acq_3910-willowick-rd,3910 Willowick Rd,1,,,0,,,,,,
+montrose,acq_402-w-bell-st,402 W Bell St,1,,,0,,,,,,
+montrose,acq_516-w-pierce-st,516 W Pierce St,1,,,0,,,,,,
+montrose,acq_614-w-gray-st,614 W Gray St,1,,,0,,,,,,
+montrose,acq_902-s-shepherd-dr,902 S Shepherd Dr,1,,,0,,,,,,
+montrose,acq_1719-kipling-st,1719 Kipling St,1,,,0,,,,,,
+montrose,acq_1720-kipling-st,1720 Kipling St,1,,,0,,,,,,
+montrose,acq_1744-harold-st,1744 Harold St,1,,,0,,,,,,
+montrose,acq_1745-w-alabama-st,1745 W Alabama St,1,,,0,,,,,,
+montrose,acq_1749-w-alabama-st,1749 W Alabama St,1,,,0,,,,,,
+montrose,acq_1802-portsmouth-st,1802 Portsmouth St,1,,,0,,,,,,
+montrose,acq_1907-sul-ross-st,1907 Sul Ross St,1,,,0,,,,,,
+montrose,acq_1911-milford-st,1911 Milford St,1,,,0,,,,,,
+montrose,acq_1916-hawthorne-st,1916 Hawthorne St,1,,,0,,,,,,
+montrose,acq_1956-portsmouth-st,1956 Portsmouth St,1,,,0,,,,,,
+montrose,acq_2016-milford-st,2016 Milford St,1,,,0,,,,,,
+montrose,acq_2021-south-blvd,2021 South Blvd,1,,,0,,,,,,
+montrose,acq_2046-w-main-st,2046 W Main St,1,,,0,,,,,,
+montrose,acq_2122-north-blvd,2122 North Blvd,1,,,0,,,,,,
+montrose,acq_2125-branard-st,2125 Branard St,1,,,0,,,,,,
+montrose,acq_2127-milford-st,2127 Milford St,1,,,0,,,,,,
+montrose,acq_2201-bartlett-st,2201 Bartlett St,1,,,0,,,,,,
+montrose,acq_2244-north-blvd,2244 North Blvd,1,,,0,,,,,,
+montrose,acq_2328-south-blvd,2328 South Blvd,1,,,0,,,,,,
+montrose,acq_2332-bartlett-st,2332 Bartlett St,1,,,0,,,,,,
+montrose,acq_2332-south-blvd,2332 South Blvd,1,,,0,,,,,,
+montrose,acq_2336-bartlett-st,2336 Bartlett St,1,,,0,,,,,,
+montrose,acq_2343-north-blvd,2343 North Blvd,1,,,0,,,,,,
+montrose,acq_2630-persa-st,2630 Persa St,1,,,0,,,,,,
+montrose,acq_2638-persa-st,2638 Persa St,1,,,0,,,,,,
+montrose,acq_3103-ferndale-st,3103 Ferndale St,1,,,0,,,,,,
+montrose,acq_3310-ferndale-st,3310 Ferndale St,1,,,0,,,,,,
+montrose,acq_3319-bammel-ln,3319 Bammel Ln,1,,,0,,,,,,
+montrose,pmt_4813-milam-st-77006,"4813 Milam St, Houston, TX 77006",1,foundation,22,8,248,248,2027-05-15,2027-05-15,0,248
+montrose,pmt_1408-indiana-st-b-77006,"1408 Indiana St B, Houston, TX 77006",1,framing,22,1,227,227,2027-04-24,2027-04-24,0,227
+montrose,pmt_418-w-saulnier-st-77019,"418 W Saulnier St, Houston, TX 77019",1,foundation,15,1,241,241,2027-05-08,2027-05-08,0,241
+montrose,pmt_416-w-saulnier-st-77019,"416 W Saulnier St, Houston, TX 77019",1,foundation,15,1,241,241,2027-05-08,2027-05-08,0,241
+montrose,pmt_608-w-saulnier-st-77019,"608 W Saulnier St, Houston, TX 77019",1,foundation,1,0,239,239,2027-05-06,2027-05-06,0,239
+montrose,pmt_606-w-saulnier-st-77019,"606 W Saulnier St, Houston, TX 77019",1,foundation,1,0,239,239,2027-05-06,2027-05-06,0,239
+montrose,pmt_410-w-saulnier-st-77019,"410 W Saulnier St, Houston, TX 77019",1,foundation,15,1,241,241,2027-05-08,2027-05-08,0,241
+montrose,pmt_412-w-saulnier-st-77019,"412 W Saulnier St, Houston, TX 77019",1,foundation,15,1,241,241,2027-05-08,2027-05-08,0,241
+montrose,pmt_1715-harold-st-77098,"1715 Harold St, Houston, TX 77098",1,foundation,19,5,245,245,2027-05-12,2027-05-12,0,245
+riveroaks,act_2217-pelham,"2217 Pelham Drive, Houston, TX 77019",1,,,0,,,,,,
+riveroaks,act_2247-chilton,"2247 Chilton Road, Houston, TX 77019",1,,,0,,,,,,
+riveroaks,act_3717-chevy-chase,"3717 Chevy Chase Drive, Houston, TX 77019",1,,,0,,,,,,
+riveroaks,act_4-west,"4 West Lane, Houston, TX 77019",1,,,0,,,,,,
+riveroaks,act_2321-claremont,"2321 Claremont Lane, Houston, TX 77019",1,,,0,,,,,,
+riveroaks,pmt_2235-brentwood,"2235 Brentwood Dr, Houston, TX 77019",1,interior,114,0,21,21,2026-09-30,2026-09-30,0,21
+riveroaks,pmt_3438-chevy-chase,"3438 Chevy Chase Dr, Houston, TX 77019",1,foundation,134,120,360,254,2027-09-04,2027-05-21,106,268
+riveroaks,pmt_2260-pine-valley,"2260 Pine Valley Dr, Houston, TX 77019",1,exterior,9,0,196,196,2027-03-24,2027-03-24,0,196
+riveroaks,pmt_3843-del-monte,"3843 Del Monte Dr, Houston, TX 77019",1,exterior,19,0,186,186,2027-03-14,2027-03-14,0,186
+riveroaks,pmt_2505-inwood,"2505 Inwood Dr, Houston, TX 77019",1,interior,9,0,126,126,2027-01-13,2027-01-13,0,126
+riveroaks,pmt_3482-inwood,"3482 Inwood Dr, Houston, TX 77019",1,foundation,,0,,,,,,
+riveroaks,pmt_3713-chevy-chase,"3713 Chevy Chase Dr, Houston, TX 77019",1,interior,92,0,43,43,2026-10-22,2026-10-22,0,43
+riveroaks,pmt_3030-ella-lee,"3030 Ella Lee Ln, Houston, TX 77019",1,mep_roughs,135,114,291,198,2027-06-27,2027-03-26,93,219
+riveroaks,pmt_3729-del-monte,"3729 Del Monte Dr, Houston, TX 77019",1,exterior,28,0,177,177,2027-03-05,2027-03-05,0,177
+riveroaks,pmt_1817-sharp,"1817 Sharp Place, Houston, TX 77019",1,foundation,,0,,,,,,
+riveroaks,pmt_2121-inwood,"2121 Inwood Dr, Houston, TX 77019",1,exterior,12,0,193,193,2027-03-21,2027-03-21,0,193
+riveroaks,acq_3714-inwood-dr,3714 Inwood Dr,1,,,0,,,,,,
+riveroaks,acq_3620-piping-rock-ln,3620 Piping Rock Ln,1,,,0,,,,,,
+riveroaks,acq_1907-bellmeade-st,1907 Bellmeade St,1,,,0,,,,,,
+riveroaks,acq_3112-locke-ln,3112 Locke Ln,1,,,0,,,,,,
+riveroaks,acq_3665-knollwood-st,3665 Knollwood St,1,,,0,,,,,,
+riveroaks,acq_3910-willowick-rd,3910 Willowick Rd,1,,,0,,,,,,
+riveroaks,acq_3747-chevy-chase-dr,3747 Chevy Chase Dr,1,,,0,,,,,,
+riveroaks,acq_3713-chevy-chase-dr,3713 Chevy Chase Dr,1,,,0,,,,,,
+riveroaks,acq_3831-del-monte-dr,3831 Del Monte Dr,1,,,0,,,,,,
+riveroaks,acq_2204-inwood-dr,2204 Inwood Dr,1,,,0,,,,,,
+riveroaks,acq_2440-inwood-dr,2440 Inwood Dr,1,,,0,,,,,,
+riveroaks,acq_2525-inwood-dr,2525 Inwood Dr,1,,,0,,,,,,
+riveroaks,acq_2411-stanmore-dr,2411 Stanmore Dr,1,,,0,,,,,,
+riveroaks,acq_3643-overbrook-ln,3643 Overbrook Ln,1,,,0,,,,,,
+riveroaks,acq_3615-overbrook-ln,3615 Overbrook Ln,1,,,0,,,,,,
+riveroaks,acq_3632-locke-ln,3632 Locke Ln,1,,,0,,,,,,
+riveroaks,acq_2014-timber-ln,2014 Timber Ln,1,,,0,,,,,,
+riveroaks,acq_2401-maconda-ln,2401 Maconda Ln,1,,,0,,,,,,
+riveroaks,acq_3806-wickersham-ln,3806 Wickersham Ln,1,,,0,,,,,,
+riveroaks,acq_3020-ella-lee-ln,3020 Ella Lee Ln,1,,,0,,,,,,
+riveroaks,acq_2509-dickey-pl,2509 Dickey Pl,1,,,0,,,,,,
+riveroaks,acq_4033-piping-rock-ln,4033 Piping Rock Ln,1,,,0,,,,,,
+riveroaks,pmt_3024-chevy-chase-dr-77019,"3024 Chevy Chase Dr, Houston, TX 77019",1,foundation,,0,,,,,,
+riveroaks,pmt_2433-inwood-dr-77019,"2433 Inwood Dr, Houston, TX 77019",1,foundation,,0,,,,,,
+springbranch,act_2211-silverbonnet,"2211 Silverbonnet Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_2207-silverbonnet,"2207 Silverbonnet Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_2139-counter-point,"2139 Counter Point Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_3406-asher-landing,"3406 Asher Landing Ln, Houston, TX",1,,,0,,,,,,
+springbranch,act_9849-mocking-bird-hill,"9849 Mocking Bird Hill Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_8810-carousel-a,"8810 Carousel Lane A, Houston, TX",1,,,0,,,,,,
+springbranch,act_9630-vilven,"9630 Vilven Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_9537-kerrwood,"9537 Kerrwood Lane, Houston, TX",1,complete,,0,,,2026-03-12,2026-03-12,,
+springbranch,act_9603-carousel,"9603 Carousel Lane, Houston, TX",1,complete,,0,,,2026-03-23,2026-03-23,,
+springbranch,act_8006-longridge,"8006 Longridge Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_9541-kerrwood,"9541 Kerrwood Lane, Houston, TX",1,interior,127,13,148,148,2027-02-04,2027-02-04,0,148
+springbranch,act_7938-turquoise,"7938 Turquoise Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_1946-pech,"1946 Pech Road, Houston, TX",1,mep_finals,1,0,20,20,2026-09-29,2026-09-29,0,20
+springbranch,act_8025-cedel,"8025 Cedel Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_8550-montridge,"8550 Montridge Drive, Houston, TX",1,interior,103,0,32,32,2026-10-11,2026-10-11,0,32
+springbranch,act_10418-brinwood,"10418 Brinwood Drive, Houston, TX",1,mep_finals,44,23,44,42,2026-10-23,2026-10-21,2,44
+springbranch,act_1634-antoine,"1634 ANTOINE, Houston, TX",1,mep_finals,128,107,128,42,2027-01-15,2026-10-21,86,63
+springbranch,act_1720-huge-oaks,"1720 Huge Oaks Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_1922-norcrest,"1922 Norcrest Dr Drive, Houston, TX",1,mep_finals,124,103,124,42,2027-01-11,2026-10-21,82,63
+springbranch,act_8021-turquoise,"8021 Turquoise Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_1717-monarch-oaks,"1717 Monarch Oaks Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_7407-janak,"7407 Janak Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_2311-hollister,"2311 Hollister Street, Houston, TX",1,interior,194,80,215,215,2027-04-12,2027-04-12,0,215
+springbranch,act_2309-hollister,"2309 Hollister Street, Houston, TX",1,interior,194,80,215,215,2027-04-12,2027-04-12,0,215
+springbranch,act_1504-story,"1504 Story Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_1302-springrock,"1302 Springrock Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_9909-larston,"9909 Larston Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_7414-schiller,"7414 Schiller Street, Houston, TX",1,mep_finals,236,215,236,42,2027-05-03,2026-10-21,194,63
+springbranch,act_1731-benbow,"1731 Benbow Way, Houston, TX",1,,,0,,,,,,
+springbranch,act_1457-confederate,"1457 Confederate Road, Houston, TX",1,exterior,1,0,204,204,2027-04-01,2027-04-01,0,204
+springbranch,act_9756-westview,"9756 Westview Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_7119-housman,"7119 Housman Street, Houston, TX",1,complete,,0,,,2026-07-21,2026-07-21,,
+springbranch,act_1306-zora,"1306 Zora Street, Houston, TX",1,interior,230,116,251,249,2027-05-18,2027-05-16,2,251
+springbranch,act_7006-schiller,"7006 Schiller Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_1730-parana,"1730 Parana Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_9926-warwana,"9926 Warwana Road, Houston, TX",1,,,0,,,,,,
+springbranch,act_9349-leto,"9349 Leto Road, Houston, TX",1,,,0,,,,,,
+springbranch,act_7218-schiller,"7218 Schiller Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_1116-oak-tree,"1116 Oak Tree Drive, Houston, TX",1,interior,27,0,108,108,2026-12-26,2026-12-26,0,108
+springbranch,act_1730-bayram,"1730 Bayram Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_1734-hollister,"1734 Hollister Street, Houston, TX",1,mep_finals,1,0,20,20,2026-09-29,2026-09-29,0,20
+springbranch,act_1610-lynnview,"1610 Lynnview Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_7905-westwood,"7905 Westwood Drive, Houston, TX",1,interior,152,38,173,173,2027-03-01,2027-03-01,0,173
+springbranch,act_2629-lake-kolbe,"2629 Lake Kolbe Lane, Houston, TX",1,complete,,0,,,2026-09-03,2026-09-03,,
+springbranch,act_2739-lake-kolbe,"2739 Lake Kolbe Lane, Houston, TX",1,framing,8,0,218,218,2027-04-15,2027-04-15,0,218
+springbranch,act_8017-turquoise,"8017 Turquoise Lane, Houston, TX",1,complete,,0,,,2026-08-17,2026-08-17,,
+springbranch,act_8033-ridgeview,"8033 Ridgeview Drive, Houston, TX",1,mep_finals,35,14,35,35,2026-10-14,2026-10-14,0,35
+springbranch,act_1941-coulcrest,"1941 Coulcrest Drive, Houston, TX",1,mep_finals,13,0,8,8,2026-09-17,2026-09-17,0,8
+springbranch,act_8306-western,"8306 Western Drive, Houston, TX",1,interior,128,14,149,149,2027-02-05,2027-02-05,0,149
+springbranch,act_9350-rosstown,"9350 Rosstown Way, Houston, TX",1,interior,135,21,156,156,2027-02-12,2027-02-12,0,156
+springbranch,act_9713-larston,"9713 Larston Street, Houston, TX",1,mep_finals,76,55,76,42,2026-11-24,2026-10-21,34,63
+springbranch,act_1502-story,"1502 Story Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_6533-corbin,"6533 Corbin Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_9626-panola,"9626 Panola Way, Houston, TX",1,interior,16,0,119,119,2027-01-06,2027-01-06,0,119
+springbranch,act_1707-bayram,"1707 Bayram Drive, Houston, TX",1,mep_finals,0,0,21,21,2026-09-30,2026-09-30,0,21
+springbranch,act_2102-red-cedar-ridge,"2102 Red Cedar Ridge Way, Houston, TX",1,,,0,,,,,,
+springbranch,act_1938-laverne,"1938 Laverne Street, Houston, TX",1,,,0,,,,,,
+springbranch,act_9551-neuens-b,"9551 Neuens Rd Road Unit#B, Houston, TX",1,,,0,,,,,,
+springbranch,act_8618-cedar-plains,"8618 Cedar Plains Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_9311-montridge,"9311 Montridge Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_2204-hoskins,"2204 Hoskins Drive, Houston, TX",2,,,0,,,,,,
+springbranch,act_4205-upland-bend,"4205 Upland Bend Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_2508-hollister,"2508 Hollister Road, Houston, TX",1,,,0,,,,,,
+springbranch,act_1952-purswell,"1952 Purswell Road, Houston, TX",1,,,0,,,,,,
+springbranch,act_4206-colony-pines,"4206 Colony Pines Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_2229-blalock,"2229 Blalock Road, Houston, TX",2,,,0,,,,,,
+springbranch,act_1926-hoskins,"1926 Hoskins Drive, Houston, TX",1,,,0,,,,,,
+springbranch,act_9820-mocking-bird-hill,"9820 Mocking Bird Hill Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_3311-cardinal-crest,"3311 Cardinal Crest Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_7208-shadyvilla,"7208 Shadyvilla Lane, Houston, TX",2,mep_finals,105,84,105,42,2026-12-23,2026-10-21,63,63
+springbranch,act_2618-lake-kolbe,"2618 Lake Kolbe Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_2641-lake-kolbe,"2641 Lake Kolbe Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_1422-caywood-b,"1422 Caywood Lane Unit#B, Houston, TX",1,,,0,,,,,,
+springbranch,act_1418-caywood-d,"1418 Caywood Lane Unit#D, Houston, TX",1,,,0,,,,,,
+springbranch,act_2647-lake-kolbe,"2647 Lake Kolbe Lane, Houston, TX",2,,,0,,,,,,
+springbranch,act_1525-caywood-d,"1525 Caywood Lane Unit#D, Houston, TX",1,,,0,,,,,,
+springbranch,act_7535-ciano,"7535 Ciano Lane, Houston, TX",1,,,0,,,,,,
+springbranch,act_2616-lake-kolbe,"2616 Lake Kolbe Lane, Houston, TX",1,,,0,,,,,,
+springbranch,pmt_9710-larston,9710 Larston St 77055,1,complete,,0,,,2026-06-26,2026-06-26,,
+springbranch,pmt_1412-story,1412 Story St 77055,1,interior,62,0,73,73,2026-11-21,2026-11-21,0,73
+springbranch,pmt_6414-teluco,6414 Teluco St 77055,1,mep_finals,170,149,170,42,2027-02-26,2026-10-21,128,63
+springbranch,pmt_1426-huge-oaks,1426 Huge Oaks St 77055,1,complete,,0,,,2026-04-20,2026-04-20,,
+springbranch,pmt_9214-westview,9214 Westview Dr 77055,1,interior,216,102,237,237,2027-05-04,2027-05-04,0,237
+springbranch,pmt_7410-dearborn,7410 Dearborn St 77055,1,mep_finals,8,0,13,13,2026-09-22,2026-09-22,0,13
+springbranch,pmt_7214-hartland,7214 Hartland Ave 77055,1,interior,191,77,212,212,2027-04-09,2027-04-09,0,212
+springbranch,pmt_1918-ridgecrest,1918 Ridgecrest Dr 77055,1,complete,,0,,,2026-06-18,2026-06-18,,
+springbranch,pmt_7118-schiller,7118 Schiller St 77055,1,complete,,0,,,2026-05-22,2026-05-22,,
+springbranch,pmt_1758-bayram,1758 Bayram Dr 77055,1,foundation,,0,,,,,,
+springbranch,pmt_9629-pine-lake,9629 Pine Lake Dr 77055,1,interior,0,0,135,135,2027-01-22,2027-01-22,0,135
+springbranch,pmt_1606-monarch-oaks,1606 Monarch Oaks St 77055,1,insulation,1,0,155,155,2027-02-11,2027-02-11,0,155
+springbranch,pmt_1503-caywood-a,1503 Caywood Ln A 77055,1,complete,,0,,,2026-01-29,2026-01-29,,
+springbranch,pmt_7210-jalna,7210 Jalna St 77055,1,complete,,0,,,2026-02-03,2026-02-03,,
+springbranch,pmt_7210-shadyvilla,7210 Shadyvilla Ln 77055,1,mep_finals,97,76,97,42,2026-12-15,2026-10-21,55,63
+springbranch,pmt_1618-ronson,1618 Ronson Rd 77055,1,mep_finals,20,0,1,1,2026-09-10,2026-09-10,0,1
+springbranch,pmt_1503-caywood-b,1503 Caywood Ln B 77055,1,complete,,0,,,2026-03-11,2026-03-11,,
+springbranch,pmt_6618-sivley,6618 Sivley St 77055,1,interior,72,0,63,63,2026-11-11,2026-11-11,0,63
+springbranch,pmt_7215-shavelson,7215 Shavelson St 77055,1,exterior,30,2,207,207,2027-04-04,2027-04-04,0,207
+springbranch,pmt_1618-huge-oaks,1618 Huge Oaks St 77055,1,complete,,0,,,2026-05-15,2026-05-15,,
+springbranch,pmt_7608-janak-spring,7608 Janak Spring St 77055,1,interior,93,0,42,42,2026-10-21,2026-10-21,0,42
+springbranch,pmt_7610-janak-spring,7610 Janak Spring St 77055,1,interior,93,0,42,42,2026-10-21,2026-10-21,0,42
+springbranch,pmt_7612-janak-spring,7612 Janak Spring St 77055,1,interior,85,0,50,50,2026-10-29,2026-10-29,0,50
+springbranch,pmt_1625-pine-chase,1625 Pine Chase Dr 77055,1,interior,160,46,181,181,2027-03-09,2027-03-09,0,181
+springbranch,pmt_6610-housman,6610 Housman St 77055,1,mep_finals,103,82,103,42,2026-12-21,2026-10-21,61,63
+springbranch,pmt_1415-lynnview,1415 Lynnview Dr 77055,1,mep_finals,5,0,16,16,2026-09-25,2026-09-25,0,16
+springbranch,pmt_7214-blandford,7214 Blandford Ln 77055,1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+springbranch,pmt_1710-ronson,1710 Ronson Rd 77055,1,mep_finals,29,8,29,29,2026-10-08,2026-10-08,0,29
+springbranch,pmt_9814-cedardale,9814 Cedardale Dr 77055,1,interior,110,0,25,25,2026-10-04,2026-10-04,0,25
+springbranch,pmt_1709-cranway,1709 Cranway Dr 77055,1,mep_finals,9,0,12,12,2026-09-21,2026-09-21,0,12
+springbranch,pmt_1719-bayram,1719 Bayram Dr 77055,1,complete,,0,,,2026-03-04,2026-03-04,,
+springbranch,pmt_7719-bryonwood,7719 Bryonwood Dr 77055,1,interior,110,0,25,25,2026-10-04,2026-10-04,0,25
+springbranch,pmt_1621-bayram,1621 Bayram Dr 77055,1,interior,167,53,188,188,2027-03-16,2027-03-16,0,188
+springbranch,pmt_1514-afton,1514 Afton St 77055,1,interior,48,0,87,87,2026-12-05,2026-12-05,0,87
+springbranch,pmt_1305-confederate,1305 Confederate Rd 77055,1,interior,7,0,128,128,2027-01-15,2027-01-15,0,128
+springbranch,pmt_7311-jalna,7311 Jalna St 77055,1,complete,,0,,,2026-03-16,2026-03-16,,
+springbranch,pmt_1609-bayram,1609 Bayram Dr 77055,1,mep_finals,79,58,79,42,2026-11-27,2026-10-21,37,63
+springbranch,pmt_1909-restridge,1909 Restridge Dr 77055,1,exterior,35,7,212,212,2027-04-09,2027-04-09,0,212
+springbranch,pmt_8029-longridge,8029 Longridge Dr 77055,1,complete,,0,,,2026-07-02,2026-07-02,,
+springbranch,pmt_9254-elizabeth,9254 Elizabeth Rd 77055,1,interior,5,0,130,130,2027-01-17,2027-01-17,0,130
+springbranch,pmt_8034-turquoise,8034 Turquoise Ln 77055,1,interior,308,194,329,249,2027-08-04,2027-05-16,80,329
+springbranch,pmt_1713-bayram,1713 Bayram Dr 77055,1,complete,,0,,,2026-05-28,2026-05-28,,
+springbranch,pmt_6502-saxet,6502 Saxet St 77055,1,interior,100,0,35,35,2026-10-14,2026-10-14,0,35
+springbranch,pmt_1517-ronson,1517 Ronson Rd 77055,1,complete,,0,,,2026-08-04,2026-08-04,,
+springbranch,pmt_1949-coulcrest,1949 Coulcrest Dr 77055,1,exterior,9,0,196,196,2027-03-24,2027-03-24,0,196
+springbranch,pmt_6606-clawson,6606 Clawson St 77055,1,complete,,0,,,2026-04-08,2026-04-08,,
+springbranch,pmt_8005-ridgeview,8005 Ridgeview Dr 77055,1,interior,89,0,46,46,2026-10-25,2026-10-25,0,46
+springbranch,pmt_7726-betty-jane,7726 Betty Jane Ln 77055,1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+springbranch,pmt_8510-montridge,8510 Montridge Dr 77055,1,complete,,0,,,2026-08-17,2026-08-17,,
+springbranch,pmt_9741-long-branch,9741 Long Branch Ln 77055,1,interior,117,3,138,138,2027-01-25,2027-01-25,0,138
+springbranch,pmt_1542-antoine,1542 Antoine Dr 77055,1,mep_finals,154,133,154,42,2027-02-10,2026-10-21,112,63
+springbranch,pmt_1510-longacre,1510 Longacre Dr 77055,1,complete,,0,,,2026-04-30,2026-04-30,,
+springbranch,pmt_9621-larston,9621 Larston St 77055,1,interior,169,55,190,190,2027-03-18,2027-03-18,0,190
+springbranch,pmt_8561-forum,8561 Forum Dr 77055,1,mep_roughs,26,5,182,182,2027-03-10,2027-03-10,0,182
+springbranch,pmt_2010-antoine-a,2010 Antoine Dr A 77055,1,foundation,128,114,354,254,2027-08-29,2027-05-21,100,268
+springbranch,pmt_2010-antoine-b,2010 Antoine Dr B 77055,1,foundation,128,114,354,254,2027-08-29,2027-05-21,100,268
+springbranch,pmt_2010-antoine-c,2010 Antoine Dr C 77055,1,foundation,128,114,354,254,2027-08-29,2027-05-21,100,268
+springbranch,pmt_2010-antoine-d,2010 Antoine Dr D 77055,1,foundation,128,114,354,254,2027-08-29,2027-05-21,100,268
+springbranch,pmt_2008-antoine-a,2008 Antoine Dr A 77055,1,foundation,132,118,358,254,2027-09-02,2027-05-21,104,268
+springbranch,pmt_2008-antoine-b,2008 Antoine Dr B 77055,1,foundation,132,118,358,254,2027-09-02,2027-05-21,104,268
+springbranch,pmt_2008-antoine-c,2008 Antoine Dr C 77055,1,foundation,128,114,354,254,2027-08-29,2027-05-21,100,268
+springbranch,pmt_2008-antoine-d,2008 Antoine Dr D 77055,1,foundation,128,114,354,254,2027-08-29,2027-05-21,100,268
+springbranch,pmt_1825-huge-oaks,1825 Huge Oaks St 77055,1,mep_finals,195,174,195,42,2027-03-23,2026-10-21,153,63
+springbranch,pmt_7609-bellewood,7609 Bellewood Dr 77055,1,interior,23,0,112,112,2026-12-30,2026-12-30,0,112
+springbranch,pmt_6618-housman,6618 Housman St 77055,1,interior,155,41,176,176,2027-03-04,2027-03-04,0,176
+springbranch,pmt_9734-cedardale,9734 Cedardale Dr 77055,1,mep_finals,86,65,86,42,2026-12-04,2026-10-21,44,63
+springbranch,pmt_1521-bracher,1521 Bracher St 77055,1,complete,,0,,,2026-06-24,2026-06-24,,
+springbranch,pmt_1603-lynnview,1603 Lynnview Dr 77055,1,interior,8,0,127,127,2027-01-14,2027-01-14,0,127
+springbranch,pmt_9601-cedardale,9601 Cedardale Dr 77055,1,interior,103,0,32,32,2026-10-11,2026-10-11,0,32
+springbranch,pmt_9154-larston,9154 Larston St 77055,1,insulation,14,0,142,142,2027-01-29,2027-01-29,0,142
+springbranch,pmt_9718-tappenbeck,9718 Tappenbeck Dr 77055,1,interior,58,0,77,77,2026-11-25,2026-11-25,0,77
+springbranch,pmt_1402-glourie,1402 Glourie Dr 77055,1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+springbranch,pmt_1337-confederate,1337 Confederate Rd 77055,1,interior,0,0,135,135,2027-01-22,2027-01-22,0,135
+springbranch,pmt_7602-bryonwood,7602 Bryonwood Dr 77055,1,framing,5,0,221,221,2027-04-18,2027-04-18,0,221
+springbranch,pmt_1409-caywood-a,1409 Caywood Ln A 77055,1,framing,9,0,217,217,2027-04-14,2027-04-14,0,217
+springbranch,pmt_1413-caywood-a,1413 Caywood Ln A 77055,1,framing,9,0,217,217,2027-04-14,2027-04-14,0,217
+springbranch,pmt_8046-turquoise,8046 Turquoise Ln 77055,1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+springbranch,pmt_1737-bayram,1737 Bayram Dr 77055,1,foundation,21,7,247,247,2027-05-14,2027-05-14,0,247
+springbranch,pmt_8029-ridgeview,8029 Ridgeview Dr 77055,1,foundation,65,51,291,254,2027-06-27,2027-05-21,37,268
+springbranch,pmt_8209-western,8209 Western Dr 77055,1,foundation,,0,,,,,,
+springbranch,pmt_7106-raton,7106 Raton St 77055,1,interior,22,0,113,113,2026-12-31,2026-12-31,0,113
+springbranch,pmt_6910-schiller,6910 Schiller St 77055,1,mep_roughs,15,0,162,162,2027-02-18,2027-02-18,0,162
+springbranch,pmt_8506-montridge,8506 Montridge Dr 77055,1,exterior,1,0,204,204,2027-04-01,2027-04-01,0,204
+springbranch,pmt_7127-northampton,7127 Northampton Way 77055,1,foundation,20,6,246,246,2027-05-13,2027-05-13,0,246
+springbranch,pmt_1402-pine-chase,1402 Pine Chase Dr 77055,1,interior,5,0,130,130,2027-01-17,2027-01-17,0,130
+springbranch,pmt_1513-story,1513 Story St 77055,1,interior,36,0,99,99,2026-12-17,2026-12-17,0,99
+springbranch,pmt_1606-afton,1606 Afton St 77055,1,interior,57,0,78,78,2026-11-26,2026-11-26,0,78
+springbranch,pmt_1510-lynnview,1510 Lynnview Dr 77055,1,insulation,7,0,149,149,2027-02-05,2027-02-05,0,149
+springbranch,pmt_2121-hoskins-d,2121 Hoskins Dr D 77080,1,foundation,49,35,275,254,2027-06-11,2027-05-21,21,268
+springbranch,pmt_2121-hoskins-e,2121 Hoskins Dr E 77080,1,foundation,49,35,275,254,2027-06-11,2027-05-21,21,268
+springbranch,pmt_2703-lake-kolbe,2703 Lake Kolbe Ln 77080,1,complete,,0,,,2026-06-05,2026-06-05,,
+springbranch,pmt_1419-murray-bay,1419 Murray Bay St 77080,1,mep_roughs,12,0,165,165,2027-02-21,2027-02-21,0,165
+springbranch,pmt_1423-murray-bay,1423 Murray Bay St 77080,1,mep_roughs,12,0,165,165,2027-02-21,2027-02-21,0,165
+springbranch,pmt_3432-stanling-brook,3432 Stanling Brook Ln 77080,1,complete,,0,,,2026-03-31,2026-03-31,,
+springbranch,pmt_3434-stanling-brook,3434 Stanling Brook Ln 77080,1,complete,,0,,,2026-04-13,2026-04-13,,
+springbranch,pmt_3436-stanling-brook,3436 Stanling Brook Ln 77080,1,complete,,0,,,2026-04-13,2026-04-13,,
+springbranch,pmt_3438-stanling-brook,3438 Stanling Brook Ln 77080,1,complete,,0,,,2026-03-31,2026-03-31,,
+springbranch,pmt_2123-hoskins-b,2123 Hoskins Dr B 77080,1,exterior,7,0,198,198,2027-03-26,2027-03-26,0,198
+springbranch,pmt_2123-hoskins-a,2123 Hoskins Dr A 77080,1,exterior,8,0,197,197,2027-03-25,2027-03-25,0,197
+springbranch,pmt_2123-hoskins-c,2123 Hoskins Dr C 77080,1,exterior,7,0,198,198,2027-03-26,2027-03-26,0,198
+springbranch,pmt_9838-briarwild,9838 Briarwild Ln 77080,1,complete,,0,,,2026-01-13,2026-01-13,,
+springbranch,pmt_9306-livernois,9306 Livernois Rd 77080,1,interior,9,0,126,126,2027-01-13,2027-01-13,0,126
+springbranch,pmt_8719-kempwood,8719 Kempwood Dr 77080,1,complete,,0,,,2026-06-05,2026-06-05,,
+springbranch,pmt_9327-willowview,9327 Willowview Ln 77080,1,complete,,0,,,2026-06-11,2026-06-11,,
+springbranch,pmt_9603-bundy,9603 Bundy Ln 77080,1,exterior,21,0,184,184,2027-03-12,2027-03-12,0,184
+springbranch,pmt_9839-warwana,9839 Warwana Rd 77080,1,complete,,0,,,2026-05-22,2026-05-22,,
+springbranch,pmt_1415-murray-bay-b,1415 Murray Bay St B 77080,1,exterior,20,0,185,185,2027-03-13,2027-03-13,0,185
+springbranch,pmt_8819-emnora,8819 Emnora Ln 77080,1,interior,44,0,91,91,2026-12-09,2026-12-09,0,91
+springbranch,pmt_9814-warwana,9814 Warwana Rd 77080,1,interior,15,0,120,120,2027-01-07,2027-01-07,0,120
+springbranch,pmt_2803-lake-kolbe,2803 Lake Kolbe Ln 77080,1,interior,56,0,79,79,2026-11-27,2026-11-27,0,79
+springbranch,pmt_27-rollingwood,27 Rollingwood Dr 77080,1,foundation,,0,,,,,,
+springbranch,pmt_2107-mckean,2107 Mckean Dr 77080,1,interior,62,0,73,73,2026-11-21,2026-11-21,0,73
+springbranch,pmt_2109-mckean,2109 Mckean Dr 77080,1,mep_finals,27,6,27,27,2026-10-06,2026-10-06,0,27
+springbranch,pmt_9733-warwana,9733 Warwana Rd 77080,1,complete,,0,,,2026-08-12,2026-08-12,,
+springbranch,pmt_2816-lake-kolbe,2816 Lake Kolbe Ln 77080,1,complete,,0,,,2026-06-22,2026-06-22,,
+springbranch,pmt_3811-peppermill,3811 Peppermill Rd 77080,1,mep_finals,145,124,145,42,2027-02-01,2026-10-21,103,63
+springbranch,pmt_9626-carousel,9626 Carousel Ln 77080,1,foundation,6,0,234,234,2027-05-01,2027-05-01,0,234
+springbranch,pmt_48-rollingwood,48 Rollingwood Dr 77080,1,interior,9,0,126,126,2027-01-13,2027-01-13,0,126
+springbranch,pmt_9741-warwana,9741 Warwana Rd 77080,1,interior,22,0,113,113,2026-12-31,2026-12-31,0,113
+springbranch,pmt_3405-grace-haven,3405 Grace Haven Ln 77080,1,interior,48,0,87,87,2026-12-05,2026-12-05,0,87
+springbranch,pmt_1930-chaparral,1930 Chaparral Dr 77043,1,insulation,1,0,155,155,2027-02-11,2027-02-11,0,155
+springbranch,pmt_10318-raritan,10318 Raritan Dr 77043,1,complete,,0,,,2026-09-08,2026-09-08,,
+springbranch,pmt_1339-spillers,1339 Spillers Ln 77043,1,exterior,14,0,191,191,2027-03-19,2027-03-19,0,191
+springbranch,pmt_2019-shadow-bend,2019 Shadow Bend Dr 77043,1,interior,28,0,107,107,2026-12-25,2026-12-25,0,107
+springbranch,acq_1120-krist-dr,1120 Krist Dr,1,,,0,,,,,,
+springbranch,acq_1209-confederate-rd,1209 Confederate Rd,1,,,0,,,,,,
+springbranch,acq_1302-westview-garden-ct,1302 Westview Garden Ct,1,,,0,,,,,,
+springbranch,acq_1305-confederate-rd,1305 Confederate Rd,1,,,0,,,,,,
+springbranch,acq_1307-pine-chase-dr,1307 Pine Chase Dr,1,,,0,,,,,,
+springbranch,acq_1317-ridgeley-dr,1317 Ridgeley Dr,1,,,0,,,,,,
+springbranch,acq_1328-bingle-rd,1328 Bingle Rd,1,,,0,,,,,,
+springbranch,acq_14-fries-ct,14 Fries Ct,1,,,0,,,,,,
+springbranch,acq_1402-pine-chase-dr,1402 Pine Chase Dr,1,,,0,,,,,,
+springbranch,acq_1416-aldrich-st,1416 Aldrich St,1,,,0,,,,,,
+springbranch,acq_1421-glenmore-forest-st,1421 Glenmore Forest St,1,,,0,,,,,,
+springbranch,acq_1425-adkins-rd-a,1425 Adkins Rd # A,1,,,0,,,,,,
+springbranch,acq_1425-caywood-ln,1425 Caywood Ln,1,,,0,,,,,,
+springbranch,acq_1457-confederate-rd,1457 Confederate Rd,1,,,0,,,,,,
+springbranch,acq_1521-bracher-st,1521 Bracher St,1,,,0,,,,,,
+springbranch,acq_1521-longacre-dr,1521 Longacre Dr,1,,,0,,,,,,
+springbranch,acq_1524-jacquelyn-dr,1524 Jacquelyn Dr,1,,,0,,,,,,
+springbranch,acq_1526-lynnview-dr,1526 Lynnview Dr,1,,,0,,,,,,
+springbranch,acq_1530-ojeman-rd,1530 Ojeman Rd,1,,,0,,,,,,
+springbranch,acq_1534-caywood-ln,1534 Caywood Ln,1,,,0,,,,,,
+springbranch,acq_1606-afton-st,1606 Afton St,1,,,0,,,,,,
+springbranch,acq_1606-antoine-dr,1606 Antoine Dr,1,,,0,,,,,,
+springbranch,acq_1606-monarch-oaks-st,1606 Monarch Oaks St,1,,,0,,,,,,
+springbranch,acq_1610-hillendahl-blvd,1610 Hillendahl Blvd,1,,,0,,,,,,
+springbranch,acq_1618-ronson-rd,1618 Ronson Rd,1,,,0,,,,,,
+springbranch,acq_1625-longacre-dr,1625 Longacre Dr,1,,,0,,,,,,
+springbranch,acq_1704-ronson-rd,1704 Ronson Rd,1,,,0,,,,,,
+springbranch,acq_1707-bayram-dr,1707 Bayram Dr,1,,,0,,,,,,
+springbranch,acq_1726-monarch-oaks-st,1726 Monarch Oaks St,1,,,0,,,,,,
+springbranch,acq_1836-lynnview-dr,1836 Lynnview Dr,1,,,0,,,,,,
+springbranch,acq_1909-norcrest-dr,1909 Norcrest Dr,1,,,0,,,,,,
+springbranch,acq_1909-restridge-dr,1909 Restridge Dr,1,,,0,,,,,,
+springbranch,acq_1929-norcrest-dr,1929 Norcrest Dr,1,,,0,,,,,,
+springbranch,acq_1933-lynnview-dr,1933 Lynnview Dr,1,,,0,,,,,,
+springbranch,acq_1933-restridge-dr,1933 Restridge Dr,1,,,0,,,,,,
+springbranch,acq_1939-woodvine-dr,1939 Woodvine Dr,1,,,0,,,,,,
+springbranch,acq_1941-coulcrest-dr,1941 Coulcrest Dr,1,,,0,,,,,,
+springbranch,acq_1946-pech-rd,1946 Pech Rd,1,,,0,,,,,,
+springbranch,acq_1949-huge-oaks-st,1949 Huge Oaks St,1,,,0,,,,,,
+springbranch,acq_1958-norcrest-dr,1958 Norcrest Dr,1,,,0,,,,,,
+springbranch,acq_2003-thonig-rd,2003 Thonig Rd,1,,,0,,,,,,
+springbranch,acq_2030-marnel-rd,2030 Marnel Rd,1,,,0,,,,,,
+springbranch,acq_4-inverness-park-cir,4 Inverness Park Cir,1,,,0,,,,,,
+springbranch,acq_6413-remlap-st,6413 Remlap St,1,,,0,,,,,,
+springbranch,acq_6502-schiller-st,6502 Schiller St,1,,,0,,,,,,
+springbranch,acq_6513-teluco-st,6513 Teluco St,1,,,0,,,,,,
+springbranch,acq_6514-westview-dr,6514 Westview Dr,1,,,0,,,,,,
+springbranch,acq_6606-sivley-st,6606 Sivley St,1,,,0,,,,,,
+springbranch,acq_6626-sivley-st,6626 Sivley St,1,,,0,,,,,,
+springbranch,acq_6630-maybank-dr,6630 Maybank Dr,1,,,0,,,,,,
+springbranch,acq_6630-saxet-st,6630 Saxet St,1,,,0,,,,,,
+springbranch,acq_6902-schiller-st,6902 Schiller St,1,,,0,,,,,,
+springbranch,acq_6915-jalna-st,6915 Jalna St,1,,,0,,,,,,
+springbranch,acq_7002-jalna-st,7002 Jalna St,1,,,0,,,,,,
+springbranch,acq_7003-blandford-ln,7003 Blandford Ln,1,,,0,,,,,,
+springbranch,acq_7003-raton-st,7003 Raton St,1,,,0,,,,,,
+springbranch,acq_7027-lawler-rdg,7027 Lawler Rdg,1,,,0,,,,,,
+springbranch,acq_7103-long-point-rd-1,7103 Long Point Rd # 1,1,,,0,,,,,,
+springbranch,acq_7106-raton-st,7106 Raton St,1,,,0,,,,,,
+springbranch,acq_7119-housman-st,7119 Housman St,1,,,0,,,,,,
+springbranch,acq_7119-shavelson-st,7119 Shavelson St,1,,,0,,,,,,
+springbranch,acq_7127-northampton-way,7127 Northampton Way,1,,,0,,,,,,
+springbranch,acq_7214-blandford-ln,7214 Blandford Ln,1,,,0,,,,,,
+springbranch,acq_7218-schiller-st,7218 Schiller St,1,,,0,,,,,,
+springbranch,acq_7302-raton-st,7302 Raton St,1,,,0,,,,,,
+springbranch,acq_7402-dearborn-st,7402 Dearborn St,1,,,0,,,,,,
+springbranch,acq_7402-raton-st,7402 Raton St,1,,,0,,,,,,
+springbranch,acq_7403-dearborn-st,7403 Dearborn St,1,,,0,,,,,,
+springbranch,acq_7410-raton-st,7410 Raton St,1,,,0,,,,,,
+springbranch,acq_7422-schiller-st,7422 Schiller St,1,,,0,,,,,,
+springbranch,acq_7507-janak-dr,7507 Janak Dr,1,,,0,,,,,,
+springbranch,acq_7514-dearborn-st,7514 Dearborn St,1,,,0,,,,,,
+springbranch,acq_7602-bryonwood-dr,7602 Bryonwood Dr,1,,,0,,,,,,
+springbranch,acq_7702-brykerwoods-dr,7702 Brykerwoods Dr,1,,,0,,,,,,
+springbranch,acq_7706-cedel-dr,7706 Cedel Dr,1,,,0,,,,,,
+springbranch,acq_7710-janak-dr,7710 Janak Dr,1,,,0,,,,,,
+springbranch,acq_7712-bobbitt-ln,7712 Bobbitt Ln,1,,,0,,,,,,
+springbranch,acq_7715-betty-jane-ln,7715 Betty Jane Ln,1,,,0,,,,,,
+springbranch,acq_7715-bryonwood-dr,7715 Bryonwood Dr,1,,,0,,,,,,
+springbranch,acq_7719-bryonwood-dr,7719 Bryonwood Dr,1,,,0,,,,,,
+springbranch,acq_7726-betty-jane-ln,7726 Betty Jane Ln,1,,,0,,,,,,
+springbranch,acq_7919-s-wellington-ct,7919 S Wellington Ct,1,,,0,,,,,,
+springbranch,acq_7921-westwood-dr,7921 Westwood Dr,1,,,0,,,,,,
+springbranch,acq_7923-n-wellington-ct,7923 N Wellington Ct,1,,,0,,,,,,
+springbranch,acq_7942-hammerly-blvd,7942 Hammerly Blvd,1,,,0,,,,,,
+springbranch,acq_8029-ridgeview-dr,8029 Ridgeview Dr,1,,,0,,,,,,
+springbranch,acq_8033-ridgeview-dr,8033 Ridgeview Dr,1,,,0,,,,,,
+springbranch,acq_8038-hammerly-blvd,8038 Hammerly Blvd,1,,,0,,,,,,
+springbranch,acq_8046-turquoise-ln,8046 Turquoise Ln,1,,,0,,,,,,
+springbranch,acq_8313-cedarbrake-dr,8313 Cedarbrake Dr,1,,,0,,,,,,
+springbranch,acq_8314-montridge-dr,8314 Montridge Dr,1,,,0,,,,,,
+springbranch,acq_8320-cedarspur-dr,8320 Cedarspur Dr,1,,,0,,,,,,
+springbranch,acq_8402-highcrest-dr,8402 Highcrest Dr,1,,,0,,,,,,
+springbranch,acq_8502-western-dr,8502 Western Dr,1,,,0,,,,,,
+springbranch,acq_8514-montridge-dr,8514 Montridge Dr,1,,,0,,,,,,
+springbranch,acq_8518-montridge-dr,8518 Montridge Dr,1,,,0,,,,,,
+springbranch,acq_8531-vogue-ln,8531 Vogue Ln,1,,,0,,,,,,
+springbranch,acq_8546-western-dr,8546 Western Dr,1,,,0,,,,,,
+springbranch,acq_8549-western-dr,8549 Western Dr,1,,,0,,,,,,
+springbranch,acq_8550-montridge-dr,8550 Montridge Dr,1,,,0,,,,,,
+springbranch,acq_8553-montridge-dr,8553 Montridge Dr,1,,,0,,,,,,
+springbranch,acq_8553-western-dr,8553 Western Dr,1,,,0,,,,,,
+springbranch,acq_8561-forum-dr,8561 Forum Dr,1,,,0,,,,,,
+springbranch,acq_8605-westview-dr,8605 Westview Dr,1,,,0,,,,,,
+springbranch,acq_8623-cedarbrake-dr,8623 Cedarbrake Dr,1,,,0,,,,,,
+springbranch,acq_8639-cedarbrake-dr,8639 Cedarbrake Dr,1,,,0,,,,,,
+springbranch,acq_8725-burkhart-rd,8725 Burkhart Rd,1,,,0,,,,,,
+springbranch,acq_8802-cedarbrake-dr,8802 Cedarbrake Dr,1,,,0,,,,,,
+springbranch,acq_8814-croes-dr,8814 Croes Dr,1,,,0,,,,,,
+springbranch,acq_8825-cedarbrake-dr,8825 Cedarbrake Dr,1,,,0,,,,,,
+springbranch,acq_8826-winningham-ln,8826 Winningham Ln,1,,,0,,,,,,
+springbranch,acq_9052-elizabeth-rd,9052 Elizabeth Rd,1,,,0,,,,,,
+springbranch,acq_9318-pecos-st,9318 Pecos St,1,,,0,,,,,,
+springbranch,acq_9610-westview-dr,9610 Westview Dr,1,,,0,,,,,,
+springbranch,acq_9630-cedardale-dr,9630 Cedardale Dr,1,,,0,,,,,,
+springbranch,acq_9710-cedardale-dr,9710 Cedardale Dr,1,,,0,,,,,,
+springbranch,acq_9772-cedardale-dr,9772 Cedardale Dr,1,,,0,,,,,,
+springbranch,acq_10042-lazy-oaks-st,10042 Lazy Oaks St,1,,,0,,,,,,
+springbranch,acq_10111-kerrwood-ln,10111 Kerrwood Ln,1,,,0,,,,,,
+springbranch,acq_1546-crestdale-dr,1546 Crestdale Dr,1,,,0,,,,,,
+springbranch,acq_1648-gessner-rd,1648 Gessner Rd,1,,,0,,,,,,
+springbranch,acq_1723-campbell-rd,1723 Campbell Rd,1,,,0,,,,,,
+springbranch,acq_1813-campbell-rd,1813 Campbell Rd,1,,,0,,,,,,
+springbranch,acq_1817-benbow-way,1817 Benbow Way,1,,,0,,,,,,
+springbranch,acq_1903-sedgie-dr,1903 Sedgie Dr,1,,,0,,,,,,
+springbranch,acq_1912-sedgie-dr,1912 Sedgie Dr,1,,,0,,,,,,
+springbranch,acq_1918-ojeman-rd,1918 Ojeman Rd,1,,,0,,,,,,
+springbranch,acq_1926-ojeman-rd,1926 Ojeman Rd,1,,,0,,,,,,
+springbranch,acq_1928-campbell-rd,1928 Campbell Rd,1,,,0,,,,,,
+springbranch,acq_1950-laverne-st,1950 Laverne St,1,,,0,,,,,,
+springbranch,acq_1954-laverne-st,1954 Laverne St,1,,,0,,,,,,
+springbranch,acq_2009-sedgie-dr,2009 Sedgie Dr,1,,,0,,,,,,
+springbranch,acq_2014-elmgate-dr,2014 Elmgate Dr,1,,,0,,,,,,
+springbranch,acq_2015-bauer-dr,2015 Bauer Dr,1,,,0,,,,,,
+springbranch,acq_2027-elmview-dr,2027 Elmview Dr,1,,,0,,,,,,
+springbranch,acq_2030-peppermill-rd,2030 Peppermill Rd,1,,,0,,,,,,
+springbranch,acq_2031-peppermill-rd,2031 Peppermill Rd,1,,,0,,,,,,
+springbranch,acq_2106-teague-rd,2106 Teague Rd,1,,,0,,,,,,
+springbranch,acq_2135-bauer-dr,2135 Bauer Dr,1,,,0,,,,,,
+springbranch,acq_2214-hoskins-dr,2214 Hoskins Dr,1,,,0,,,,,,
+springbranch,acq_2218-parana-dr,2218 Parana Dr,1,,,0,,,,,,
+springbranch,acq_2236-campbell-rd,2236 Campbell Rd,1,,,0,,,,,,
+springbranch,acq_2302-parana-dr,2302 Parana Dr,1,,,0,,,,,,
+springbranch,acq_2311-pomeran-dr,2311 Pomeran Dr,1,,,0,,,,,,
+springbranch,acq_2502-talina-way,2502 Talina Way,1,,,0,,,,,,
+springbranch,acq_2503-moss-hill-dr,2503 Moss Hill Dr,1,,,0,,,,,,
+springbranch,acq_2503-valleyfield-dr,2503 Valleyfield Dr,1,,,0,,,,,,
+springbranch,acq_2515-valleyfield-dr,2515 Valleyfield Dr,1,,,0,,,,,,
+springbranch,acq_2519-hollow-hook-rd,2519 Hollow Hook Rd,1,,,0,,,,,,
+springbranch,acq_2610-moss-hill-dr,2610 Moss Hill Dr,1,,,0,,,,,,
+springbranch,acq_2610-rosefield-dr,2610 Rosefield Dr,1,,,0,,,,,,
+springbranch,acq_2614-pomeran-dr,2614 Pomeran Dr,1,,,0,,,,,,
+springbranch,acq_2635-talina-way,2635 Talina Way,1,,,0,,,,,,
+springbranch,acq_3003-ryson-st,3003 Ryson St,1,,,0,,,,,,
+springbranch,acq_3103-maysel-st,3103 Maysel St,1,,,0,,,,,,
+springbranch,acq_3602-mona-lee-ln,3602 Mona Lee Ln,1,,,0,,,,,,
+springbranch,acq_4207-birchton-st,4207 Birchton St,1,,,0,,,,,,
+springbranch,acq_4214-galway-ln,4214 Galway Ln,1,,,0,,,,,,
+springbranch,acq_8423-blankenship-dr,8423 Blankenship Dr,1,,,0,,,,,,
+springbranch,acq_8521-friendship-rd,8521 Friendship Rd,1,,,0,,,,,,
+springbranch,acq_8607-alcott-dr,8607 Alcott Dr,1,,,0,,,,,,
+springbranch,acq_8607-norton-dr,8607 Norton Dr,1,,,0,,,,,,
+springbranch,acq_8635-greiner-dr,8635 Greiner Dr,1,,,0,,,,,,
+springbranch,acq_8646-kempridge-st,8646 Kempridge St,1,,,0,,,,,,
+springbranch,acq_8651-blankenship-dr,8651 Blankenship Dr,1,,,0,,,,,,
+springbranch,acq_8922-carousel-ln,8922 Carousel Ln,1,,,0,,,,,,
+springbranch,acq_8922-carousel-ln-2,8922 Carousel Ln,1,,,0,,,,,,
+springbranch,acq_8927-alcott-dr,8927 Alcott Dr,1,,,0,,,,,,
+springbranch,acq_9006-greiner-dr,9006 Greiner Dr,1,,,0,,,,,,
+springbranch,acq_9010-carousel-ln,9010 Carousel Ln,1,,,0,,,,,,
+springbranch,acq_9017-kerrwood-ln,9017 Kerrwood Ln,1,,,0,,,,,,
+springbranch,acq_9022-kerrwood-ln,9022 Kerrwood Ln,1,,,0,,,,,,
+springbranch,acq_9026-kerrwood-ln,9026 Kerrwood Ln,1,,,0,,,,,,
+springbranch,acq_9119-alcott-dr,9119 Alcott Dr,1,,,0,,,,,,
+springbranch,acq_9223-n-allegro-st,9223 N Allegro St,1,,,0,,,,,,
+springbranch,acq_9238-friendship-rd,9238 Friendship Rd,1,,,0,,,,,,
+springbranch,acq_9242-autauga-st,9242 Autauga St,1,,,0,,,,,,
+springbranch,acq_9263-mcdade-st,9263 Mcdade St,1,,,0,,,,,,
+springbranch,acq_9302-hammerly-blvd-1,9302 Hammerly Blvd # 1,1,,,0,,,,,,
+springbranch,acq_9302-walterville-rd,9302 Walterville Rd,1,,,0,,,,,,
+springbranch,acq_9306-livernois-rd,9306 Livernois Rd,1,,,0,,,,,,
+springbranch,acq_9313-emnora-ln,9313 Emnora Ln,1,,,0,,,,,,
+springbranch,acq_9337-walterville-rd,9337 Walterville Rd,1,,,0,,,,,,
+springbranch,acq_9349-greensward-rd,9349 Greensward Rd,1,,,0,,,,,,
+springbranch,acq_9349-leto-rd,9349 Leto Rd,1,,,0,,,,,,
+springbranch,acq_9524-truscon-dr,9524 Truscon Dr,1,,,0,,,,,,
+springbranch,acq_9526-vogue-ln,9526 Vogue Ln,1,,,0,,,,,,
+springbranch,acq_9541-kerrwood-ln,9541 Kerrwood Ln,1,,,0,,,,,,
+springbranch,acq_9603-philmont-dr,9603 Philmont Dr,1,,,0,,,,,,
+springbranch,acq_9626-carousel-ln,9626 Carousel Ln,1,,,0,,,,,,
+springbranch,acq_9626-vilven-ln,9626 Vilven Ln,1,,,0,,,,,,
+springbranch,acq_9627-vilven-ln,9627 Vilven Ln,1,,,0,,,,,,
+springbranch,acq_9630-bundy-ln,9630 Bundy Ln,1,,,0,,,,,,
+springbranch,acq_9631-vogue-ln,9631 Vogue Ln,1,,,0,,,,,,
+springbranch,acq_9634-rockhurst-dr,9634 Rockhurst Dr,1,,,0,,,,,,
+springbranch,acq_9639-springview-ln,9639 Springview Ln,1,,,0,,,,,,
+springbranch,acq_9646-springview-ln,9646 Springview Ln,1,,,0,,,,,,
+springbranch,acq_9723-moorberry-ln,9723 Moorberry Ln,1,,,0,,,,,,
+springbranch,acq_9734-clanton-st,9734 Clanton St,1,,,0,,,,,,
+springbranch,acq_9741-warwana-rd,9741 Warwana Rd,1,,,0,,,,,,
+springbranch,acq_9803-canoga-ln,9803 Canoga Ln,1,,,0,,,,,,
+springbranch,acq_9805-shadow-wood-dr,9805 Shadow Wood Dr,1,,,0,,,,,,
+springbranch,acq_9814-foxrun-ct,9814 Foxrun Ct,1,,,0,,,,,,
+springbranch,acq_9847-briarwild-ln,9847 Briarwild Ln,1,,,0,,,,,,
+springbranch,pmt_1702-sedola-pvt-ln-77055,"1702 Sedola Ln, Houston, TX 77055",1,foundation,1,0,239,239,2027-05-06,2027-05-06,0,239
+springbranch,pmt_7006-northampton-way-77055,"7006 Northampton Way, Houston, TX 77055",1,foundation,,0,,,,,,
+springbranch,pmt_8525-panatella-dr-77055,"8525 Panatella Dr, Houston, TX 77055",1,foundation,,0,,,,,,
+springbranch,pmt_9253-elizabeth-rd-77055,"9253 Elizabeth Rd, Houston, TX 77055",1,framing,1,0,225,225,2027-04-22,2027-04-22,0,225
+springbranch,pmt_1507-jacquelyn-dr-77055,"1507 Jacquelyn Dr, Houston, TX 77055",1,foundation,0,0,240,240,2027-05-07,2027-05-07,0,240
+springbranch,pmt_1605-pine-chase-dr-77055,"1605 Pine Chase Dr, Houston, TX 77055",1,foundation,23,9,249,249,2027-05-16,2027-05-16,0,249
+springbranch,pmt_9017-kerrwood-ln-c-77080,"9017 Kerrwood Ln C, Houston, TX 77080",1,foundation,,0,,,,,,
+springbranch,pmt_9017-kerrwood-ln-b-77080,"9017 Kerrwood Ln B, Houston, TX 77080",1,foundation,,0,,,,,,
+springbranch,pmt_10407-metronome-dr-77043,"10407 Metronome Dr, Houston, TX 77043",1,foundation,,0,,,,,,
+springbranch,pmt_7203-housman-st-77055,"7203 Housman St, Houston, TX 77055",1,foundation,,0,,,,,,
+springvalley,act_1432-bingle,1432 Bingle Road,1,,,0,,,,,,
+springvalley,act_8919-echo-valley,8919 Echo Valley Drive,1,,,0,,,,,,
+springvalley,act_1328-mickey,1328 Mickey Way,1,,,0,,,,,,
+springvalley,act_8722-lupton,8722 Lupton Lane,1,,,0,,,,,,
+springvalley,act_8412-lofland,8412 Lofland Drive,1,,,0,,,,,,
+springvalley,sv_9050-elizabeth,9050 Elizabeth Road,1,,,0,,,,,,
+timbergrove,tg_6322-wynnwood,6322 Wynnwood Lane,1,,,0,,,,,,
+timbergrove,tg_1110-grovewood,1110 Grovewood Lane,1,,,0,,,,,,
+timbergrove,tg_mig_2131538328,"922 Prince St, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,tg_mig_2131538429,"1023 Nashua St, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,tg_mig_2131538725,"1510 Glen Oaks St, Houston, Tx 77008",1,insulation,120,99,255,177,2027-05-22,2027-03-05,78,198
+timbergrove,tg_mig_2131538738,"1522 Glen Oaks St, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,tg_mig_pmt_1602-turnpike-rd-77008,"1602 Turnpike Rd, Houston, TX 77008",1,complete,,0,,,2026-04-08,2026-04-08,,
+timbergrove,tg_mig_pmt_822-nashua-st-77008,"822 Nashua St, Houston, TX 77008",1,exterior,49,21,226,226,2027-04-23,2027-04-23,0,226
+timbergrove,tg_mig_2131537524,"1219 Bay Oaks Rd, Houston, Tx 77008",1,mep_roughs,22,1,178,178,2027-03-06,2027-03-06,0,178
+timbergrove,tg_mig_2131538680,"911 Bay Oaks Rd, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,tg_mig_2131538718,"905 Bay Oaks Rd, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,tg_mig_pmt_1118-worthshire-st-77008,"1118 Worthshire St, Houston, TX 77008",1,exterior,8,0,197,197,2027-03-25,2027-03-25,0,197
+timbergrove,tgp_6118-abington,6118 Abington Way 77008,1,framing,170,149,375,247,2027-09-19,2027-05-14,128,268
+timbergrove,tgp_2006-cranston,2006 Cranston Ct 77008,1,mep_roughs,23,2,179,179,2027-03-07,2027-03-07,0,179
+timbergrove,tgp_1018-grovewood,1018 Grovewood Ln 77008,1,interior,135,21,156,156,2027-02-12,2027-02-12,0,156
+timbergrove,tgp_6111-hurst,6111 Hurst St 77008,1,foundation,,0,,,,,,
+timbergrove,tgp_2611-lazybrook,2611 Lazybrook Dr 77008,1,complete,,0,,,2026-04-29,2026-04-29,,
+timbergrove,tgp_1202-timbergrove,1202 Timbergrove Ln 77008,1,mep_finals,20,0,1,1,2026-09-10,2026-09-10,0,1
+timbergrove,tgp_2606-droxford,2606 Droxford Dr 77008,1,framing,78,57,283,247,2027-06-19,2027-05-14,36,268
+timbergrove,tgp_6515-lindyann,6515 Lindyann Ln 77008,1,complete,,0,,,2026-08-06,2026-08-06,,
+timbergrove,tgp_1834-crystal,1834 Crystal Ct 77008,1,exterior,1,0,204,204,2027-04-01,2027-04-01,0,204
+timbergrove,tgp_2418-brookmere,2418 Brookmere Dr 77008,1,interior,57,0,78,78,2026-11-26,2026-11-26,0,78
+timbergrove,tgp_1307-foxwood,1307 Foxwood Rd 77008,1,foundation,62,48,288,254,2027-06-24,2027-05-21,34,268
+timbergrove,tgp_6430-lindyann,6430 Lindyann Ln 77008,1,interior,29,0,106,106,2026-12-24,2026-12-24,0,106
+timbergrove,tgp_6227-lindyann,6227 Lindyann Ln 77008,1,exterior,1,0,204,204,2027-04-01,2027-04-01,0,204
+timbergrove,tgp_6607-cindy,6607 Cindy Ln 77008,1,mep_finals,34,13,34,34,2026-10-13,2026-10-13,0,34
+timbergrove,tgp_6107-waltway,6107 Waltway Dr 77008,1,interior,127,13,148,148,2027-02-04,2027-02-04,0,148
+timbergrove,tgp_1126-timbergrove,1126 Timbergrove Ln 77008,1,interior,50,0,85,85,2026-12-03,2026-12-03,0,85
+timbergrove,tgp_1723-tannehill,1723 Tannehill Dr 77008,1,mep_roughs,13,0,164,164,2027-02-20,2027-02-20,0,164
+timbergrove,tgp_1226-timbergrove,1226 Timbergrove Ln 77008,1,framing,30,9,235,235,2027-05-02,2027-05-02,0,235
+timbergrove,tgp_1011-grovewood,1011 Grovewood Ln 77008,1,interior,13,0,122,122,2027-01-09,2027-01-09,0,122
+timbergrove,tgp_3507-harvest-dance,3507 Harvest Dance Dr 77008,1,complete,,0,,,2026-04-01,2026-04-01,,
+timbergrove,tgp_3525-harvest-dance,3525 Harvest Dance Dr 77008,1,complete,,0,,,2026-05-28,2026-05-28,,
+timbergrove,tgp_3523-harvest-dance,3523 Harvest Dance Dr 77008,1,complete,,0,,,2026-05-05,2026-05-05,,
+timbergrove,tgp_3521-harvest-dance,3521 Harvest Dance Dr 77008,1,complete,,0,,,2026-07-15,2026-07-15,,
+timbergrove,tgp_3502-huntsford,3502 Huntsford Dr 77008,1,complete,,0,,,2026-03-12,2026-03-12,,
+timbergrove,tgp_3516-harvest-dance,3516 Harvest Dance Dr 77008,1,complete,,0,,,2026-08-11,2026-08-11,,
+timbergrove,tgp_3511-harvest-dance,3511 Harvest Dance Dr 77008,1,complete,,0,,,2025-12-05,2025-12-05,,
+timbergrove,2130421544,"6727 Grovewood Ln, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,2130573149,"2326 Haverhill Dr, Houston, Tx 77008",1,,,0,,,,,,
+timbergrove,2130573761,"2230 Tannehill Dr, Houston, Tx 77008",1,,,0,,,,,,
+westu,ACT02,"2205 North Boulevard, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT04,"4819 Mandell Street, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT05,"2216 Tangley Street, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT06,"2325 Wroxton Road, Houston, TX 77005",1,mep_finals,85,64,85,42,2026-12-03,2026-10-21,43,63
+westu,ACT07,"2316 North Boulevard, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT08,"4002 Marquette Street, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT09,"3717 Carlon Street, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT10,"2627 Tangley Road, Houston, TX 77005",1,,,0,,,,,,
+westu,ACT11,"3701 Arnold Street, Houston, TX 77005",1,,,0,,,,,,
+westu,pmt_3779-syracuse-st,"3779 SYRACUSE ST 77005, Houston, TX 77005",1,insulation,56,35,191,177,2027-03-19,2027-03-05,14,191
+westu,pmt_2404-quenby-st,"2404 QUENBY ST 77005, Houston, TX 77005",2,complete,,0,,,2026-08-17,2026-08-17,,
+westu,pmt_1803-bolsover-st,"1803 BOLSOVER ST 77005, Houston, TX 77005",1,interior,56,0,79,79,2026-11-27,2026-11-27,0,79
+westu,pmt_1807-bolsover-st,"1807 BOLSOVER ST 77005, Houston, TX 77005",1,interior,56,0,79,79,2026-11-27,2026-11-27,0,79
+westu,pmt_1811-bolsover-st,"1811 BOLSOVER ST 77005, Houston, TX 77005",1,interior,56,0,79,79,2026-11-27,2026-11-27,0,79
+westu,pmt_5329-dora-st,"5329 DORA ST 77005, Houston, TX 77005",1,complete,,0,,,2026-07-02,2026-07-02,,
+westu,pmt_2428-nottingham-st,"2428 NOTTINGHAM ST 77005, Houston, TX 77005",1,interior,75,0,60,60,2026-11-08,2026-11-08,0,60
+westu,pmt_2426-quenby-st,"2426 QUENBY ST 77005, Houston, TX 77005",2,foundation,138,124,364,254,2027-09-08,2027-05-21,110,268
+westu,pmt_5303-cherokee-st,"5303 CHEROKEE ST 77005, Houston, TX 77005",1,interior,155,41,176,176,2027-03-04,2027-03-04,0,176
+westu,pmt_2357-bolsover-st,"2357 BOLSOVER ST 77005, Houston, TX 77005",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+westu,pmt_3746-childress-st,"3746 CHILDRESS ST 77005, Houston, TX 77005",1,mep_finals,33,12,33,33,2026-10-12,2026-10-12,0,33
+westu,pmt_3782-westerman-st,"3782 WESTERMAN ST 77005, Houston, TX 77005",1,interior,149,35,170,170,2027-02-26,2027-02-26,0,170
+westu,pmt_5312-cherokee-st,"5312 CHEROKEE ST 77005, Houston, TX 77005",1,mep_roughs,27,6,183,183,2027-03-11,2027-03-11,0,183
+westu,pmt_2334-dunstan-rd,"2334 DUNSTAN RD 77005, Houston, TX 77005",1,framing,37,16,242,242,2027-05-09,2027-05-09,0,242
+westu,pmt_2410-quenby-st,"2410 QUENBY ST 77005, Houston, TX 77005",2,mep_finals,37,16,37,37,2026-10-16,2026-10-16,0,37
+westu,pmt_3753-drake-st,"3753 DRAKE ST 77005, Houston, TX 77005",1,interior,78,0,57,57,2026-11-05,2026-11-05,0,57
+westu,pmt_2337-wroxton-rd,"2337 WROXTON RD 77005, Houston, TX 77005",1,exterior,0,0,205,205,2027-04-02,2027-04-02,0,205
+westu,pmt_2405-nottingham-st,"2405 NOTTINGHAM ST 77005, Houston, TX 77005",1,exterior,9,0,196,196,2027-03-24,2027-03-24,0,196
+westu,pmt_2328-quenby-st,"2328 QUENBY ST 77005, Houston, TX 77005",1,mep_roughs,20,0,157,157,2027-02-13,2027-02-13,0,157
+westu,pmt_2341-wroxton-rd,"2341 WROXTON RD 77005, Houston, TX 77005",1,framing,30,9,235,235,2027-05-02,2027-05-02,0,235
+westu,pmt_5335-mandell-st,"5335 MANDELL ST 77005, Houston, TX 77005",1,exterior,5,0,200,200,2027-03-28,2027-03-28,0,200
+westu,pmt_3771-purdue-st,"3771 PURDUE ST 77005, Houston, TX 77005",1,mep_roughs,12,0,165,165,2027-02-21,2027-02-21,0,165
+westu,pmt_3743-westerman-st,"3743 WESTERMAN ST 77005, Houston, TX 77005",1,exterior,26,0,179,179,2027-03-07,2027-03-07,0,179
+westu,acq_11-shadow-lawn-st,11 Shadow Lawn St,1,,,0,,,,,,
+westu,acq_1716-bissonnet-st,1716 Bissonnet St,1,,,0,,,,,,
+westu,acq_1720-bissonnet-st-1,1720 Bissonnet St # 1,1,,,0,,,,,,
+westu,acq_1811-sunset-blvd,1811 Sunset Blvd,1,,,0,,,,,,
+westu,acq_2023-quenby-st,2023 Quenby St,1,,,0,,,,,,
+westu,acq_2025-albans-rd,2025 Albans Rd,1,,,0,,,,,,
+westu,acq_2042-bissonnet-st,2042 Bissonnet St,1,,,0,,,,,,
+westu,acq_2119-tangley-st,2119 Tangley St,1,,,0,,,,,,
+westu,acq_2120-wroxton-rd,2120 Wroxton Rd,1,,,0,,,,,,
+westu,acq_2328-quenby-st,2328 Quenby St,1,,,0,,,,,,
+westu,acq_2375-bolsover-st,2375 Bolsover St,1,,,0,,,,,,
+westu,acq_2405-nottingham-st,2405 Nottingham St,1,,,0,,,,,,
+westu,acq_2419-sunset-blvd,2419 Sunset Blvd,1,,,0,,,,,,
+westu,acq_2420-nottingham-st,2420 Nottingham St,1,,,0,,,,,,
+westu,acq_2434-wroxton-rd-6,2434 Wroxton Rd # 6,1,,,0,,,,,,
+westu,acq_2602-arbuckle-st,2602 Arbuckle St,1,,,0,,,,,,
+westu,acq_2632-fenwood-rd,2632 Fenwood Rd,1,,,0,,,,,,
+westu,acq_2720-university-blvd,2720 University Blvd,1,,,0,,,,,,
+westu,acq_2721-fenwood-rd,2721 Fenwood Rd,1,,,0,,,,,,
+westu,acq_2722-pemberton-dr,2722 Pemberton Dr,1,,,0,,,,,,
+westu,acq_2801-albans-rd,2801 Albans Rd,1,,,0,,,,,,
+westu,acq_2816-sunset-blvd,2816 Sunset Blvd,1,,,0,,,,,,
+westu,acq_2912-bellaire-blvd,2912 Bellaire Blvd,1,,,0,,,,,,
+westu,acq_3012-jarrard-st,3012 Jarrard St,1,,,0,,,,,,
+westu,acq_3016-lafayette-st,3016 Lafayette St,1,,,0,,,,,,
+westu,acq_3126-nottingham-st,3126 Nottingham St,1,,,0,,,,,,
+westu,acq_3515-nottingham-st,3515 Nottingham St,1,,,0,,,,,,
+westu,acq_3607-amherst-st,3607 Amherst St,1,,,0,,,,,,
+westu,acq_3710-tangley-rd,3710 Tangley Rd,1,,,0,,,,,,
+westu,acq_3715-rice-blvd,3715 Rice Blvd,1,,,0,,,,,,
+westu,acq_3722-sunset-blvd,3722 Sunset Blvd,1,,,0,,,,,,
+westu,acq_3743-westerman-st,3743 Westerman St,1,,,0,,,,,,
+westu,acq_3747-childress-st,3747 Childress St,1,,,0,,,,,,
+westu,acq_3766-nottingham-st,3766 Nottingham St,1,,,0,,,,,,
+westu,acq_3771-purdue-st,3771 Purdue St,1,,,0,,,,,,
+westu,acq_3778-nottingham-st,3778 Nottingham St,1,,,0,,,,,,
+westu,acq_3784-arnold-st,3784 Arnold St,1,,,0,,,,,,
+westu,acq_3805-byron-st,3805 Byron St,1,,,0,,,,,,
+westu,acq_3809-byron-st,3809 Byron St,1,,,0,,,,,,
+westu,acq_3809-sunset-blvd,3809 Sunset Blvd,1,,,0,,,,,,
+westu,acq_3923-purdue-st,3923 Purdue St,1,,,0,,,,,,
+westu,acq_3930-drake-st,3930 Drake St,1,,,0,,,,,,
+westu,acq_3934-rice-blvd,3934 Rice Blvd,1,,,0,,,,,,
+westu,acq_4002-marquette-st,4002 Marquette St,1,,,0,,,,,,
+westu,acq_4005-university-blvd,4005 University Blvd,1,,,0,,,,,,
+westu,acq_4014-marquette-st,4014 Marquette St,1,,,0,,,,,,
+westu,acq_4015-case-st,4015 Case St,1,,,0,,,,,,
+westu,acq_4025-milton-st,4025 Milton St,1,,,0,,,,,,
+westu,acq_4124-bissonnet-st,4124 Bissonnet St,1,,,0,,,,,,
+westu,acq_4128-judson-ave,4128 Judson Ave,1,,,0,,,,,,
+westu,acq_4220-dartmouth-ave,4220 Dartmouth Ave,1,,,0,,,,,,
+westu,acq_4220-lehigh-ave,4220 Lehigh Ave,1,,,0,,,,,,
+westu,acq_4511-kelvin-dr,4511 Kelvin Dr,1,,,0,,,,,,
+westu,acq_5600-community-dr,5600 Community Dr,1,,,0,,,,,,
+westu,acq_5810-buffalo-speedway,5810 Buffalo Speedway,1,,,0,,,,,,
+westu,acq_5811-lake-st,5811 Lake St,1,,,0,,,,,,
+westu,acq_6010-lake-st,6010 Lake St,1,,,0,,,,,,
+westu,acq_6107-lake-st,6107 Lake St,1,,,0,,,,,,
+westu,acq_6424-buffalo-speedway,6424 Buffalo Speedway,1,,,0,,,,,,
+westu,acq_6523-westchester-ave,6523 Westchester Ave,1,,,0,,,,,,
+westu,acq_6524-vanderbilt-st,6524 Vanderbilt St,1,,,0,,,,,,
+westu,acq_6615-belmont-st,6615 Belmont St,1,,,0,,,,,,
+westu,acq_6623-edloe-st,6623 Edloe St,1,,,0,,,,,,
+westu,pmt_2336-dunstan-rd-77005,"2336 Dunstan Rd, Houston, TX 77005",1,framing,13,0,213,213,2027-04-10,2027-04-10,0,213
+westu,pmt_3711-purdue-st-77005,"3711 Purdue St, Houston, TX 77005",1,foundation,1,0,239,239,2027-05-06,2027-05-06,0,239
+gardenoaksoakforest,act_959-althea-drive,959 Althea Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_1014-gardenia-drive,1014 Gardenia Drive,1,complete,,0,,,2025-09-22,2025-09-22,,
+gardenoaksoakforest,act_431-w-30th-street,431 W 30th Street,1,mep_finals,576,555,576,42,2028-04-07,2026-10-21,534,63
+gardenoaksoakforest,act_955-w-42nd-street,955 W 42nd Street,1,,,0,,,,,,
+gardenoaksoakforest,act_519-w-30th-street,519 W 30th Street,1,,,0,,,,,,
+gardenoaksoakforest,act_934-w-43rd-street,934 W 43rd Street,1,interior,380,266,401,249,2027-10-15,2027-05-16,152,363
+gardenoaksoakforest,act_211-w-34th-street,211 W 34th Street,1,,,0,,,,,,
+gardenoaksoakforest,act_515-w-33rd-street,515 W 33rd Street,1,,,0,,,,,,
+gardenoaksoakforest,act_822-w-31st-street,822 W 31st Street,1,,,0,,,,,,
+gardenoaksoakforest,act_316-w-30th-street,316 W 30th Street,1,,,0,,,,,,
+gardenoaksoakforest,act_891-w-41st-street,891 W 41st Street,1,,,0,,,,,,
+gardenoaksoakforest,act_315-w-32nd-street,315 W 32nd Street,1,,,0,,,,,,
+gardenoaksoakforest,act_713-w-42nd-street,713 W 42nd Street,1,,,0,,,,,,
+gardenoaksoakforest,act_867-w-42nd-street,867 W 42nd Street,1,,,0,,,,,,
+gardenoaksoakforest,act_810-w-41st-street,810 W 41st Street,1,,,0,,,,,,
+gardenoaksoakforest,act_320-w-32nd-street,320 W 32nd Street,1,,,0,,,,,,
+gardenoaksoakforest,act_752-w-43rd-street,752 W 43rd Street,1,,,0,,,,,,
+gardenoaksoakforest,pmt_408-w-30th-st,"408 W 30TH ST, Houston, TX 77018",1,mep_finals,217,196,217,42,2027-04-14,2026-10-21,175,63
+gardenoaksoakforest,pmt_802-w-32nd-st,"802 W 32ND ST, Houston, TX 77018",1,complete,,0,,,2025-08-22,2025-08-22,,
+gardenoaksoakforest,pmt_203-w-34th-st,"203 W 34TH ST, Houston, TX 77018",1,complete,,0,,,2024-06-06,2024-06-06,,
+gardenoaksoakforest,pmt_710-w-41st-st,"710 W 41ST ST, Houston, TX 77018",1,mep_finals,782,761,782,42,2028-10-30,2026-10-21,740,63
+gardenoaksoakforest,pmt_1063-gardenia-dr,"1063 GARDENIA DR, Houston, TX 77018",1,complete,,0,,,2025-03-04,2025-03-04,,
+gardenoaksoakforest,pmt_919-gardenia-dr,"919 GARDENIA DR, Houston, TX 77018",1,complete,,0,,,2025-10-21,2025-10-21,,
+gardenoaksoakforest,pmt_539-w-34th-st,"539 W 34TH ST, Houston, TX 77018",1,complete,,0,,,2026-07-31,2026-07-31,,
+gardenoaksoakforest,pmt_431-w-32nd-st,"431 W 32ND ST, Houston, TX 77018",1,mep_roughs,419,398,575,198,2028-04-06,2027-03-26,377,219
+gardenoaksoakforest,pmt_1003-lamonte-ln,"1003 LAMONTE LN, Houston, TX 77018",1,complete,,0,,,2026-06-12,2026-06-12,,
+gardenoaksoakforest,pmt_1587-sue-barnett-dr,"1587 SUE BARNETT DR, Houston, TX 77018",1,mep_finals,721,700,721,42,2028-08-30,2026-10-21,679,63
+gardenoaksoakforest,pmt_750-sue-barnett-dr,"750 SUE BARNETT DR, Houston, TX 77018",1,complete,,0,,,2025-12-19,2025-12-19,,
+gardenoaksoakforest,pmt_963-w-41st-st,"963 W 41ST ST, Houston, TX 77018",1,complete,,0,,,2026-04-08,2026-04-08,,
+gardenoaksoakforest,pmt_830-azalea-st,"830 AZALEA ST, Houston, TX 77018",1,mep_finals,338,317,338,42,2027-08-13,2026-10-21,296,63
+gardenoaksoakforest,pmt_974-w-43rd-st,"974 W 43RD ST, Houston, TX 77018",1,mep_finals,609,588,609,42,2028-05-10,2026-10-21,567,63
+gardenoaksoakforest,pmt_951-w-41st-st,"951 W 41ST ST, Houston, TX 77018",1,foundation,,0,,,,,,
+gardenoaksoakforest,acq_926-w-42nd-st,926 W 42nd St,1,,,0,,,,,,
+gardenoaksoakforest,acq_955-althea-dr,955 Althea Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1507-sue-barnett-dr,1507 Sue Barnett Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1020-w-42nd-st,1020 W 42nd St,1,,,0,,,,,,
+gardenoaksoakforest,acq_1038-lamonte-ln,1038 Lamonte Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_235-w-31st-st,235 W 31st St,1,,,0,,,,,,
+gardenoaksoakforest,acq_304-w-31st-st,304 W 31st St,1,,,0,,,,,,
+gardenoaksoakforest,act_5109-lido-lane,5109 Lido Lane,1,mep_finals,20,0,1,1,2026-09-10,2026-09-10,0,1
+gardenoaksoakforest,act_1914-viking-drive,1914 Viking Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_2010-hewitt-drive,2010 Hewitt Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_2214-chantilly-lane,2214 Chantilly Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_1710-gardenia-drive,1710 Gardenia Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_2031-saxon-drive,2031 Saxon Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_1414-du-barry-lane,1414 Du Barry Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_1527-thornton,1527 Thornton,1,,,0,,,,,,
+gardenoaksoakforest,act_1431-curtin-street,1431 Curtin Street,1,,,0,,,,,,
+gardenoaksoakforest,act_1316-althea-drive,1316 Althea Drive,1,complete,,0,,,2026-04-28,2026-04-28,,
+gardenoaksoakforest,act_1335-gardenia-drive,1335 Gardenia Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_1326-curtin-street,1326 Curtin Street,1,,,0,,,,,,
+gardenoaksoakforest,act_1411-thornton-road,1411 Thornton Road,1,,,0,,,,,,
+gardenoaksoakforest,act_1223-richelieu-lane,1223 Richelieu Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_1519-candlelight-lane,1519 Candlelight Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_1402-du-barry-lane,1402 Du Barry Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_1237-althea-drive,1237 Althea Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_1226-du-barry-lane,1226 Du Barry Lane,1,complete,,0,,,2026-05-04,2026-05-04,,
+gardenoaksoakforest,act_1225-wakefield-drive,1225 Wakefield Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_1517-wakefield-drive,1517 Wakefield Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_1725-ebony-lane,1725 Ebony Lane,1,interior,407,293,428,249,2027-11-11,2027-05-16,179,363
+gardenoaksoakforest,act_1721-chantilly-lane,1721 Chantilly Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_1522-thornton-road,1522 Thornton Road,1,mep_finals,174,153,174,42,2027-03-02,2026-10-21,132,63
+gardenoaksoakforest,act_1819-cheshire-lane,1819 Cheshire Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_2315-althea-drive,2315 Althea Drive,1,,,0,,,,,,
+gardenoaksoakforest,act_2014-ebony-lane,2014 Ebony Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_2019-chantilly-lane,2019 Chantilly Lane,1,,,0,,,,,,
+gardenoaksoakforest,act_5313-verdome-lane,5313 Verdome Lane,1,interior,252,138,273,249,2027-06-09,2027-05-16,24,273
+gardenoaksoakforest,pmt_1450-gardenia-dr,"1450 GARDENIA DR, Houston, TX 77018",1,mep_finals,758,737,758,42,2028-10-06,2026-10-21,716,63
+gardenoaksoakforest,pmt_1206-lamonte-ln,"1206 LAMONTE LN, Houston, TX 77018",1,mep_finals,635,614,635,42,2028-06-05,2026-10-21,593,63
+gardenoaksoakforest,pmt_1814-libbey-dr,"1814 LIBBEY DR, Houston, TX 77018",1,complete,,0,,,2025-07-21,2025-07-21,,
+gardenoaksoakforest,pmt_1701-du-barry-ln,"1701 DU BARRY LN, Houston, TX 77018",1,mep_finals,692,671,692,42,2028-08-01,2026-10-21,650,63
+gardenoaksoakforest,pmt_1721-ebony-ln,"1721 EBONY LN, Houston, TX 77018",1,complete,,0,,,2025-09-08,2025-09-08,,
+gardenoaksoakforest,pmt_1218-lamonte-ln,"1218 LAMONTE LN, Houston, TX 77018",1,mep_finals,723,702,723,42,2028-09-01,2026-10-21,681,63
+gardenoaksoakforest,pmt_1718-candlelight-ln,"1718 CANDLELIGHT LN, Houston, TX 77018",1,complete,,0,,,2024-05-24,2024-05-24,,
+gardenoaksoakforest,pmt_1721-du-barry-ln,"1721 DU BARRY LN, Houston, TX 77018",1,mep_finals,910,889,910,42,2029-03-07,2026-10-21,868,63
+gardenoaksoakforest,pmt_1846-hewitt-dr,"1846 HEWITT DR, Houston, TX 77018",1,mep_finals,498,477,498,42,2028-01-20,2026-10-21,456,63
+gardenoaksoakforest,pmt_3724-ella-blvd,"3724 ELLA BLVD, Houston, TX 77018",1,mep_roughs,62,41,218,198,2027-04-15,2027-03-26,20,218
+gardenoaksoakforest,pmt_2111-du-barry-ln,"2111 DU BARRY LN, Houston, TX 77018",1,framing,482,461,687,247,2028-07-27,2027-05-14,440,268
+gardenoaksoakforest,pmt_1523-richelieu-ln,"1523 RICHELIEU LN, Houston, TX 77018",1,complete,,0,,,2024-04-29,2024-04-29,,
+gardenoaksoakforest,pmt_1538-althea-dr,"1538 ALTHEA DR, Houston, TX 77018",1,mep_finals,706,685,706,42,2028-08-15,2026-10-21,664,63
+gardenoaksoakforest,pmt_1358-w-43rd-st,"1358 W 43RD ST, Houston, TX 77018",1,mep_finals,838,817,838,42,2028-12-25,2026-10-21,796,63
+gardenoaksoakforest,pmt_1431-woodcrest-dr,"1431 WOODCREST DR, Houston, TX 77018",1,mep_finals,763,742,763,42,2028-10-11,2026-10-21,721,63
+gardenoaksoakforest,pmt_1225-althea-dr,"1225 ALTHEA DR, Houston, TX 77018",1,mep_finals,574,553,574,42,2028-04-05,2026-10-21,532,63
+gardenoaksoakforest,pmt_1218-du-barry-ln,"1218 DU BARRY LN, Houston, TX 77018",1,mep_finals,730,709,730,42,2028-09-08,2026-10-21,688,63
+gardenoaksoakforest,pmt_1717-chantilly-ln,"1717 CHANTILLY LN, Houston, TX 77018",1,complete,,0,,,2025-10-01,2025-10-01,,
+gardenoaksoakforest,pmt_1009-wakefield-dr,"1009 WAKEFIELD DR, Houston, TX 77018",1,mep_finals,511,490,511,42,2028-02-02,2026-10-21,469,63
+gardenoaksoakforest,pmt_1738-woodcrest-dr,"1738 WOODCREST DR, Houston, TX 77018",1,complete,,0,,,2025-08-28,2025-08-28,,
+gardenoaksoakforest,pmt_1107-wakefield-dr,"1107 WAKEFIELD DR, Houston, TX 77018",1,framing,26,5,231,231,2027-04-28,2027-04-28,0,231
+gardenoaksoakforest,pmt_1702-viking-dr,"1702 VIKING DR, Houston, TX 77018",1,complete,,0,,,2024-09-17,2024-09-17,,
+gardenoaksoakforest,pmt_1326-chamboard-ln,"1326 CHAMBOARD LN, Houston, TX 77018",1,mep_finals,587,566,587,42,2028-04-18,2026-10-21,545,63
+gardenoaksoakforest,pmt_1734-de-milo-dr,"1734 DE MILO DR, Houston, TX 77018",1,complete,,0,,,2025-05-09,2025-05-09,,
+gardenoaksoakforest,pmt_1233-kinley-ln,"1233 KINLEY LN, Houston, TX 77018",1,complete,,0,,,2025-05-19,2025-05-19,,
+gardenoaksoakforest,pmt_1542-gardenia-dr,"1542 GARDENIA DR, Houston, TX 77018",1,mep_finals,657,636,657,42,2028-06-27,2026-10-21,615,63
+gardenoaksoakforest,pmt_2014-libbey-dr,"2014 LIBBEY DR, Houston, TX 77018",1,complete,,0,,,2024-11-26,2024-11-26,,
+gardenoaksoakforest,pmt_1530-althea-dr,"1530 ALTHEA DR, Houston, TX 77018",1,complete,,0,,,2025-08-07,2025-08-07,,
+gardenoaksoakforest,pmt_1823-hewitt-dr,"1823 HEWITT DR, Houston, TX 77018",1,complete,,0,,,2025-03-21,2025-03-21,,
+gardenoaksoakforest,pmt_1515-richelieu-ln,"1515 RICHELIEU LN, Houston, TX 77018",1,mep_finals,482,461,482,42,2028-01-04,2026-10-21,440,63
+gardenoaksoakforest,pmt_1601-hewitt-dr,"1601 HEWITT DR, Houston, TX 77018",1,complete,,0,,,2025-05-16,2025-05-16,,
+gardenoaksoakforest,pmt_1355-althea-dr,"1355 ALTHEA DR, Houston, TX 77018",1,complete,,0,,,2025-02-07,2025-02-07,,
+gardenoaksoakforest,pmt_1570-cheshire-ln,"1570 CHESHIRE LN, Houston, TX 77018",1,complete,,0,,,2025-03-27,2025-03-27,,
+gardenoaksoakforest,pmt_1522-latexo-dr,"1522 LATEXO DR, Houston, TX 77018",1,interior,163,49,184,184,2027-03-12,2027-03-12,0,184
+gardenoaksoakforest,pmt_2011-chantilly-ln,"2011 CHANTILLY LN, Houston, TX 77018",1,complete,,0,,,2025-03-25,2025-03-25,,
+gardenoaksoakforest,pmt_3817-ella-blvd,"3817 ELLA BLVD, Houston, TX 77018",1,interior,509,395,530,249,2028-02-21,2027-05-16,281,363
+gardenoaksoakforest,pmt_1248-curtin-st,"1248 CURTIN ST, Houston, TX 77018",1,complete,,0,,,2024-09-10,2024-09-10,,
+gardenoaksoakforest,pmt_4721-watonga-blvd,"4721 WATONGA BLVD, Houston, TX 77092",1,mep_finals,894,873,894,42,2029-02-19,2026-10-21,852,63
+gardenoaksoakforest,pmt_4822-de-milo-dr,"4822 DE MILO DR, Houston, TX 77092",1,complete,,0,,,2024-07-17,2024-07-17,,
+gardenoaksoakforest,pmt_5214-lido-ln,"5214 LIDO LN, Houston, TX 77092",1,mep_finals,901,880,901,42,2029-02-26,2026-10-21,859,63
+gardenoaksoakforest,pmt_4810-de-milo-dr,"4810 DE MILO DR, Houston, TX 77092",1,complete,,0,,,2024-12-18,2024-12-18,,
+gardenoaksoakforest,pmt_5401-libbey-ln,"5401 LIBBEY LN, Houston, TX 77092",1,interior,124,10,145,145,2027-02-01,2027-02-01,0,145
+gardenoaksoakforest,pmt_4606-de-lange-ln,"4606 DE LANGE LN, Houston, TX 77092",1,complete,,0,,,2025-08-22,2025-08-22,,
+gardenoaksoakforest,pmt_4610-viking-dr,"4610 VIKING DR, Houston, TX 77092",1,complete,,0,,,2025-08-11,2025-08-11,,
+gardenoaksoakforest,pmt_5310-de-milo-dr,"5310 DE MILO DR, Houston, TX 77092",1,complete,,0,,,2026-07-31,2026-07-31,,
+gardenoaksoakforest,pmt_5048-lido-ln,"5048 LIDO LN, Houston, TX 77092",1,interior,145,31,166,166,2027-02-22,2027-02-22,0,166
+gardenoaksoakforest,pmt_4606-lido-ln,"4606 LIDO LN, Houston, TX 77092",1,interior,105,0,30,30,2026-10-09,2026-10-09,0,30
+gardenoaksoakforest,pmt_5213-lido-ln,"5213 LIDO LN, Houston, TX 77092",1,complete,,0,,,2026-09-01,2026-09-01,,
+gardenoaksoakforest,acq_1317-richelieu-ln,1317 Richelieu Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1771-de-milo-dr,1771 De Milo Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1249-du-barry-ln,1249 Du Barry Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1442-curtin-st,1442 Curtin St,1,,,0,,,,,,
+gardenoaksoakforest,acq_1422-overhill-st,1422 Overhill St,1,,,0,,,,,,
+gardenoaksoakforest,acq_1725-althea-dr,1725 Althea Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1442-chantilly-ln,1442 Chantilly Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1534-thornton-rd,1534 Thornton Rd,1,,,0,,,,,,
+gardenoaksoakforest,acq_4314-donna-bell-ln,4314 Donna Bell Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1714-viking-dr,1714 Viking Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_4105-ella-blvd,4105 Ella Blvd,1,,,0,,,,,,
+gardenoaksoakforest,acq_2023-lamonte-ln,2023 Lamonte Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1803-woodcrest-dr,1803 Woodcrest Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1415-hewitt-dr,1415 Hewitt Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1212-chantilly-ln,1212 Chantilly Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_2007-hewitt-dr,2007 Hewitt Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1348-althea-dr,1348 Althea Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1108-wakefield-dr,1108 Wakefield Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_1631-chantilly-ln,1631 Chantilly Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1714-lamonte-ln,1714 Lamonte Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1807-cheshire-ln,1807 Cheshire Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_1516-w-43rd-st,1516 W 43rd St,1,,,0,,,,,,
+gardenoaksoakforest,acq_1427-cheshire-ln,1427 Cheshire Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_4314-lido-ln,4314 Lido Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_5325-verdome-ln,5325 Verdome Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_5042-viking-dr,5042 Viking Dr,1,,,0,,,,,,
+gardenoaksoakforest,acq_5623-nina-lee-ln,5623 Nina Lee Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_5603-nina-lee-ln,5603 Nina Lee Ln,1,,,0,,,,,,
+gardenoaksoakforest,acq_4119-lou-anne-ln,4119 Lou Anne Ln,1,,,0,,,,,,
+gardenoaksoakforest,pmt_1918-gardenia-dr-77018,"1918 Gardenia Dr, Houston, TX 77018",1,foundation,,0,,,,,,
+gardenoaksoakforest,pmt_2218-libbey-dr-77018,"2218 Libbey Dr, Houston, TX 77018",1,framing,8,0,218,218,2027-04-15,2027-04-15,0,218
+gardenoaksoakforest,pmt_1415-woodcrest-dr-77018,"1415 Woodcrest Dr, Houston, TX 77018",1,foundation,,0,,,,,,
+gardenoaksoakforest,pmt_312-w-32nd-st-77018,"312 W 32nd St, Houston, TX 77018",1,foundation,19,5,245,245,2027-05-12,2027-05-12,0,245
+gardenoaksoakforest,pmt_5218-lido-ln-77092,"5218 Lido Ln, Houston, TX 77092",1,foundation,,0,,,,,,
+gardenoaksoakforest,pmt_1231-martin-st-77018,"1231 Martin St, Houston, TX 77018",1,foundation,,0,,,,,,
+gardenoaksoakforest,pmt_1220-martin-st-77018,"1220 Martin St, Houston, TX 77018",1,foundation,,0,,,,,,
+gardenoaksoakforest,pmt_2119-althea-dr-77018,"2119 Althea Dr, Houston, TX 77018",1,foundation,6,0,234,234,2027-05-01,2027-05-01,0,234
