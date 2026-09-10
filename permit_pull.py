@@ -449,7 +449,9 @@ def hcad_geocode(street_upper):
         return {'status': 'AMBIG', 'matched': sorted(parcels)}
     feature = next(iter(parcels.values()))
     lat, lng = _centroid(feature['geometry']['rings'])
-    return {'status': 'OK', 'matched': feature['attributes']['address'].strip(),
+    from product_classification import parcel_evidence
+    return {'status': 'OK', 'parcel': parcel_evidence(feature),
+            'matched': feature['attributes']['address'].strip(),
             'legal': feature['attributes'].get('legal_lines') or '',
             'lat': round(lat, 7), 'lng': round(lng, 7)}
 
@@ -504,7 +506,7 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
                           'ptype': row['PERMIT_TYPE'].strip()})
     print(f'candidates after filter+dedupe: {len(cands)}  skipped: {skipped}')
 
-    rows, flagged = [], []
+    rows, flagged, product_parcels = [], [], {}
     for c in cands:
         g = hcad_geocode(c['street'])
         if g['status'] != 'OK':
@@ -532,11 +534,38 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
             flagged.append((c['proj'], c['street'], 'ID_COLLISION', rid))
             dropped.append((c['proj'], c['street'], 'ID_COLLISION', rid)); continue
         ids.add(rid)
+        product_parcels[rid] = g.get('parcel') or {'legal': g.get('legal', ''),
+                                                  'source': 'geocoder without parcel geometry'}
         rows.append({"id": rid, "a": c['a'], "llc": c['owner'], "kind": "permit",
                      "lat": g['lat'], "lng": g['lng'],
                      "permits": [{"owner": c['owner'], "desc": c['desc'], "val": c['val'],
                                   "ptype": c['ptype'], "proj": c['proj'],
                                   "permitDesc": "Building Pmt"}]})
+    # Classify after collection so sibling/master rows share the same context.
+    # Existing DATA is context only: this path never rewrites existing labels.
+    from product_classification import classify, context_signals, record_fields
+    signals = context_signals(data + rows)
+    decisions = []
+    for r in rows:
+        parcel = product_parcels[r['id']]
+        decision = classify(legal=parcel.get('legal', ''), parcel=parcel,
+                            **signals[r['id']])
+        r.update(record_fields(decision))
+        decisions.append({'id': r['id'], 'address': r['a'], **decision})
+        print(f"  PRODUCT {r['id']}: {decision['product']} / {decision['confidence']} "
+              f"/ {decision['reason_code']} / {decision['reason']}")
+    # This is a decision ledger, separate from dropped input rows. Unknown
+    # permits are inserted, not silently excluded or counted as dropped.
+    if apply_changes and decisions:
+        from datetime import date
+        ledger_dir = os.path.join(os.path.dirname(os.path.abspath(html_path)), 'pulls')
+        os.makedirs(ledger_dir, exist_ok=True)
+        market = os.path.basename(html_path).replace('.html', '')
+        ledger = os.path.join(ledger_dir, f'product_{market}_{date.today().isoformat()}.jsonl')
+        with open(ledger, 'a') as f:
+            for decision in decisions:
+                f.write(json.dumps(decision, sort_keys=True) + '\n')
+        print(f'product decision ledger: {len(decisions)} rows -> {ledger}')
     LAST_DROPPED.extend(dropped)
     print(f'insertable: {len(rows)}  geocode-flagged: {len(flagged)}  dropped (all reasons): {len(dropped)}')
     for r in rows:

@@ -453,7 +453,8 @@ window._DROPPED=new Set();
   let _st={}; try{_st=JSON.parse(localStorage.getItem('springvalley_state_v2'))||{};}catch(e){}
   const FE=_st.fieldEdits||{}; window._FE0=JSON.stringify(FE);
   const effProd=r=>(FE[r.id]&&('prod' in FE[r.id]))?FE[r.id].prod:r.prod;
-  const isSplit=r=>{ if(r.st==='sold')return false; const p=effProd(r); if(p==='Split Lot')return true; if(p)return false; return r.ty==='active_split'; };
+  // Ingest classifications describe one tracked address, not an inferred two-home pin.
+  const isSplit=r=>{ if(r.product_classification)return false; if(r.st==='sold')return false; const p=effProd(r); if(p==='Split Lot')return true; if(p)return false; return r.ty==='active_split'; };
   const projOf=r=>r.permits&&r.permits[0]&&String(r.permits[0].proj||'');
   const masterRef=r=>{const d=(r.permits&&r.permits[0]&&r.permits[0].desc)||'';const m=d.match(/(?:M\s*#?|#)\s*(\d{7,9})/);return m?m[1]:null;};
   const num=a=>{const m=String(a).match(/^(\d+)/);return m?+m[1]:null;};

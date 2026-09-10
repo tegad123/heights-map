@@ -1,0 +1,404 @@
+{
+  "index": {
+    "2131437170": {
+      "address": "118 E 24th St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,069 sf full lot"
+    },
+    "2131191409": {
+      "address": "1123 Nadine St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "5,000 sf = 100% of plat median 5,000"
+    },
+    "2130814684": {
+      "address": "519 Threlkeld St, Houston, Tx 77007",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,758 sf in the 4-5k dead zone, no plat median"
+    },
+    "2131129729": {
+      "address": "2119 Gostick St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,600 sf = 81% of plat median 5,700"
+    },
+    "2131145222": {
+      "address": "626 E 22nd St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,510 sf = 90% of plat median 4,987"
+    },
+    "2131042481": {
+      "address": "741 W 21st St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal assembled 2 lots, 6,550 sf >= 2x2400"
+    },
+    "2131044801": {
+      "address": "838 Waverly St, Houston, Tx 77007",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "13,200 sf \u2014 larger than any Heights full lot"
+    },
+    "2131146860": {
+      "address": "1300 Waverly St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,932 sf = 68% of plat median 7,263"
+    },
+    "2131179219": {
+      "address": "1211 N Durham Dr, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "12,400 sf \u2014 larger than any Heights full lot"
+    },
+    "2131152146": {
+      "address": "909 Bayland Ave, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,893 sf = 99% of plat median 4,959"
+    },
+    "2131191267": {
+      "address": "1021 Nadine St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,000 sf full lot"
+    },
+    "2131191475": {
+      "address": "1128 Adele St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,996 sf = 100% of plat median 5,000"
+    },
+    "2131191611": {
+      "address": "1015 Adele St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,981 sf = 100% of plat median 5,000"
+    },
+    "2131192777": {
+      "address": "839 E 26th St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal assembled 2 lots, 6,000 sf >= 2x2400"
+    },
+    "2131200820": {
+      "address": "1126 W 22nd St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "14,500 sf \u2014 larger than any Heights full lot"
+    },
+    "2131200959": {
+      "address": "1124 W 21st St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SPLIT",
+      "reason": "4,294 sf = 59% of plat median 7,250"
+    },
+    "2131282520": {
+      "address": "837 W 25th St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SPLIT",
+      "reason": "parcel SPLIT into half lots (children ~3,275 sf)"
+    },
+    "2131330179": {
+      "address": "1518 W 25th St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "20,117 sf \u2014 larger than any Heights full lot"
+    },
+    "2131331239": {
+      "address": "1610 W 21st St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "12,654 sf \u2014 larger than any Heights full lot"
+    },
+    "2131195093": {
+      "address": "205 Northwood St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,085 sf full lot"
+    },
+    "2131207530": {
+      "address": "423 E 28th St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,448 sf = 77% of plat median 5,754"
+    },
+    "2131208376": {
+      "address": "731 E 27th St, Houston, Tx 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "18,000 sf \u2014 larger than any Heights full lot"
+    },
+    "2131226980": {
+      "address": "305 Tabor St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,090 sf full lot"
+    },
+    "2131227429": {
+      "address": "301 Enid St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,093 sf full lot"
+    },
+    "2131242651": {
+      "address": "1107 E 27th St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,999 sf = 100% of plat median 4,999"
+    },
+    "2131370103": {
+      "address": "512 Threlkeld St, Houston, Tx 77007",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "5,000 sf = 100% of plat median 5,000"
+    },
+    "2131370113": {
+      "address": "533 Studewood St, Houston, Tx 77007",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,750 sf full lot"
+    },
+    "2131370154": {
+      "address": "531 Threlkeld St, Houston, Tx 77007",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal TR only (1 frag) + 6,000 sf full lot"
+    },
+    "2131374828": {
+      "address": "1010 Woodland St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,078 sf full lot"
+    },
+    "2131318786": {
+      "address": "427 E 24th St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "14,670 sf \u2014 larger than any Heights full lot"
+    },
+    "2131347730": {
+      "address": "4308 Julian St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,639 sf = 101% of plat median 4,603"
+    },
+    "2131370476": {
+      "address": "905 Adele St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,500 sf = 90% of plat median 5,000"
+    },
+    "2131437359": {
+      "address": "117 Munford St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,200 sf full lot"
+    },
+    "2131437380": {
+      "address": "212 E 25th St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal assembled 2 lots, 5,908 sf >= 2x2400"
+    },
+    "2131437447": {
+      "address": "117 E 25th St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal assembled 2 lots, 9,464 sf >= 2x2400"
+    },
+    "2161199012": {
+      "address": "710 E 13th St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,785 sf in the 4-5k dead zone, no plat median"
+    },
+    "2170723831": {
+      "address": "303 Enid St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,093 sf full lot"
+    },
+    "2131175661": {
+      "address": "611 Mathis St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "5,000 sf = 100% of plat median 5,000"
+    },
+    "2131176668": {
+      "address": "1208 Cordell St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "5,000 sf = 100% of plat median 5,000"
+    },
+    "2131176672": {
+      "address": "1204 Cordell St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "5,000 sf = 100% of plat median 5,000"
+    },
+    "2131177133": {
+      "address": "1201 Cordell St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,022 sf full lot"
+    },
+    "2131227565": {
+      "address": "507 Cordell St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,940 sf = 100% of plat median 4,940"
+    },
+    "2131227567": {
+      "address": "511 Cordell St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,926 sf = 100% of plat median 4,940"
+    },
+    "2131228154": {
+      "address": "607 Melwood St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,967 sf = 99% of plat median 5,001"
+    },
+    "2131228576": {
+      "address": "805 Tabor St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,013 sf full lot"
+    },
+    "2131228942": {
+      "address": "1412 Northwood St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,215 sf full lot"
+    },
+    "2131312288": {
+      "address": "1007 Cordell St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,000 sf full lot"
+    },
+    "2131312670": {
+      "address": "1003 Enid St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,000 sf full lot"
+    },
+    "2131312852": {
+      "address": "1506 Tabor St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 1 TR + 6,222 sf full lot"
+    },
+    "2131313166": {
+      "address": "805 Walton St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,993 sf = 100% of plat median 5,000"
+    },
+    "2131313407": {
+      "address": "1631 Walton St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,279 sf full lot"
+    },
+    "2177158676": {
+      "address": "Enid St, Houston, Tx 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,111 sf = 63% of plat median 6,479"
+    },
+    "2177158678": {
+      "address": "Enid St, Houston, Tx 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "4,112 sf = 63% of plat median 6,479"
+    },
+    "pmt_745-w-17th-st-77008": {
+      "address": "745 W 17th St, Houston, TX 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "16,983 sf \u2014 larger than any Heights full lot"
+    },
+    "pmt_949-ridge-st-77009": {
+      "address": "949 Ridge St, Houston, TX 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,228 sf full lot"
+    },
+    "2131537524": {
+      "address": "1219 Bay Oaks Rd, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "16,834 sf \u2014 larger than any Heights full lot"
+    },
+    "2131538718": {
+      "address": "905 Bay Oaks Rd, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "13,835 sf \u2014 larger than any Heights full lot"
+    },
+    "2131538738": {
+      "address": "1522 Glen Oaks St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "15,954 sf \u2014 larger than any Heights full lot"
+    },
+    "pmt_1602-turnpike-rd-77008": {
+      "address": "1602 Turnpike Rd, Houston, TX 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "17,339 sf \u2014 larger than any Heights full lot"
+    },
+    "pmt_1032-key-st-77009": {
+      "address": "1032 Key St, Houston, TX 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,000 sf full lot"
+    },
+    "pmt_1138-fugate-st-77009": {
+      "address": "1138 Fugate St, Houston, TX 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "no parcel, no legal"
+    },
+    "pmt_1013-woodland-st-77009": {
+      "address": "1013 Woodland St, Houston, TX 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,091 sf full lot"
+    },
+    "pmt_1040-louise-st-77009": {
+      "address": "1040 Louise St, Houston, TX 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,908 sf = 98% of plat median 5,000"
+    },
+    "pmt_2436-white-oak-dr-77009": {
+      "address": "2436 White Oak Dr, Houston, TX 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "no parcel, no legal"
+    },
+    "pmt_832-e-27th-st-77009": {
+      "address": "832 E 27th St, Houston, TX 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "no parcel, no legal"
+    },
+    "pmt_631-mazal-pvt-ln-77009": {
+      "address": "631 Mazal (Pvt) Ln, Houston, TX 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "legal claims 3 lots but only 4,170 sf"
+    },
+    "2131191542": {
+      "address": "1115 Adele St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "4,999 sf = 100% of plat median 5,000"
+    },
+    "2131437247": {
+      "address": "205 E 24th St, Houston, Tx 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,298 sf full lot"
+    },
+    "2131387479": {
+      "address": "932 W Temple St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,284 sf full lot"
+    },
+    "2131074923": {
+      "address": "707 E 6th 1/2 St, Houston, Tx 77007",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "24,983 sf \u2014 larger than any Heights full lot"
+    },
+    "2131186526": {
+      "address": "404 W 21st St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "29,473 sf \u2014 larger than any Heights full lot"
+    },
+    "2131187484": {
+      "address": "1808 N Shepherd Dr, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "19,650 sf \u2014 larger than any Heights full lot"
+    },
+    "2131191607": {
+      "address": "1025 Adele St, Houston, Tx 77009",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,371 sf full lot"
+    },
+    "2131200768": {
+      "address": "902 W 22nd St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "23,940 sf \u2014 larger than any Heights full lot"
+    },
+    "2131240334": {
+      "address": "745 E 11th 1/2 St, Houston, Tx 77008",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "12,473 sf \u2014 larger than any Heights full lot"
+    },
+    "2131318291": {
+      "address": "1211 Gibbs St, Houston, Tx 77009",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "20,491 sf \u2014 larger than any Heights full lot"
+    },
+    "pmt_835-lawrence-st-77007": {
+      "address": "835 Lawrence St, Houston, TX 77007",
+      "bucket": "GENUINELY-AMBIGUOUS",
+      "reason": "legal claims 3 lots but only 5,700 sf"
+    },
+    "pmt_710-le-green-st-77008": {
+      "address": "710 Le Green St, Houston, TX 77008",
+      "bucket": "RESOLVED-SINGLE",
+      "reason": "legal LT n + 5,043 sf full lot"
+    },
+    "pmt_845-w-23rd-st-a-77008": {
+      "address": "845 W 23rd St A, Houston, TX 77008",
+      "bucket": "RESOLVED-SPLIT",
+      "reason": "2 lettered units on one parcel (6,550 sf)"
+    },
+    "pmt_845-w-23rd-st-b-77008": {
+      "address": "845 W 23rd St B, Houston, TX 77008",
+      "bucket": "RESOLVED-SPLIT",
+      "reason": "2 lettered units on one parcel (6,550 sf)"
+    }
+  }
+}
