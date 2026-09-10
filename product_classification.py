@@ -176,7 +176,7 @@ def parcel_history(account):
 
 
 def classify(legal='', units=1, master_size=None, parcel=None, hold=None,
-             unit_source='one address', master_source='none'):
+             unit_source='one address', master_source='none', observed_split_override=False):
     """Return an auditable decision. Only high-confidence labels are applied.
 
 The ordering of legacy guards is intentional (including Review/None before
@@ -215,8 +215,14 @@ master size). Street-number adjacency alone is NOT verified unit evidence.
     # was subdivided. v9 was written for Heights' named original plats.
     if code is None and why == 'replat child' and not RP.search(legal or '') and units < 2 and not master_size and not proven_split:
         code = 'UNVERIFIED_PLAT'
+    split_override = False
     if code is None and candidate == 'Single Lot' and proven_split:
-        code = 'PARCEL_HISTORY_CONFLICT'
+        if observed_split_override and depth > FULL_DEPTH + 0.01:
+            candidate = 'Split Lot'
+            split_override = True
+            detail += '; observed child-producing SPLIT overrides original-plat lot count'
+        else:
+            code = 'PARCEL_HISTORY_CONFLICT'
     # Near the decision boundary, projection/coordinate quantization must not
     # choose between development forms. Exact legacy semantics remain above.
     depth_decides = units < 3 and (master_size or 0) < 3 and (units == 2 or master_size == 2 or fam == 'Split')
@@ -227,7 +233,7 @@ master size). Street-number adjacency alone is NOT verified unit evidence.
         code = 'CONFLICTING_UNITS'
     return dict(product='Unknown' if code else candidate,
                 confidence='unknown' if code else 'high',
-                reason_code=code or 'V9_VERIFIED', reason=detail,
+                reason_code=code or ('OBSERVED_PARCEL_SPLIT' if split_override else 'V9_VERIFIED'), reason=detail,
                 candidate=candidate or 'Unknown', version='v9-ingest-1',
                 evidence=dict(parcel=parcel, units=units, master_size=master_size,
                               unit_source=unit_source, master_source=master_source, family=fam))

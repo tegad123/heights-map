@@ -549,6 +549,7 @@ def ingest(csv_paths, html_path, min_proj_year, apply_changes):
     for r in rows:
         parcel = product_parcels[r['id']]
         decision = classify(legal=parcel.get('legal', ''), parcel=parcel,
+                            observed_split_override=os.path.basename(html_path) == 'index.html',
                             **signals[r['id']])
         r.update(record_fields(decision))
         decisions.append({'id': r['id'], 'address': r['a'], **decision})
