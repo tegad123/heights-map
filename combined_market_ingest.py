@@ -77,7 +77,7 @@ def snapshot(records, sold, source, runtime, as_of):
 
 def run(args):
     html=(ROOT/'index.html').read_text(); old=json.loads((ROOT/'heights_market_status.data.json').read_text())
-    runtime=json.loads(Path(args.runtime).read_text())['index']; source=span(html,'DATA')[2]; sold=span(html,'SOLD_DATA')[2]
+    runtime=json.loads(Path(args.runtime).read_text())['index']; source=span(html,'DATA')[2]; sale_store='SOLD_EVIDENCE' if 'const SOLD_EVIDENCE=' in html else 'SOLD_DATA'; sold=span(html,sale_store)[2]
     incoming,ledger,profile=load(Path(args.input),html,args.as_of)
     records={r['mls']:r for r in old['records']}; counts=Counter(); actions=[]
     for rec in incoming:
@@ -89,9 +89,9 @@ def run(args):
             action='updated' if prior else 'new'; records[rec['mls']]=rec
         counts[action]+=1; actions.append(dict(mls=rec['mls'],address=rec['address'],action=action,reason=rec['exclusion']))
     legacy.AS_OF=args.as_of
-    # Existing resale comps are archival evidence, preserved byte-for-byte as objects.
-    protected={r['id']:r for r in sold if r.get('coh')=='resale'}
-    sales_input=[r for r in incoming if 's'+r['mls'] not in protected and not any(address_key(s['a'])==r['address_key'] and s['cd']==r['close_date'] for s in protected.values())]
+    # Retain historical resale facts as evidence only; the dedicated comp refresh owns displayed comps.
+    retained_evidence={r['id']:r for r in sold if r.get('coh')=='resale'}
+    sales_input=[r for r in incoming if 's'+r['mls'] not in retained_evidence and not any(address_key(s['a'])==r['address_key'] and s['cd']==r['close_date'] for s in retained_evidence.values())]
     # Cleanup refreshes may retain unmatched sales as evidence without new comps.
     policy=getattr(args,'sale_policy','all'); deferred_sales=[]
     if policy!='all':
@@ -105,11 +105,11 @@ def run(args):
         sales_input=kept
     merged,sale_report=legacy.merge_sales(sold,sales_input)
     if sale_report['conflicts']: raise ValueError(sale_report['conflicts'])
-    assert all(next(s for s in merged if s['id']==k)==v for k,v in protected.items())
+    assert all(next(s for s in merged if s['id']==k)==v for k,v in retained_evidence.items())
     snap=snapshot([records[k] for k in sorted(records)],merged,source,runtime,args.as_of)
     fixture=snap['properties']['act_715-merrill']; assert fixture['status']=='active' and any(r['mls']=='50361472' for r in fixture['history'])
     candidate=html
-    for name,value in [('SOLD_DATA',merged),('SOLD_METRICS',metrics_for(merged,date.fromisoformat(args.as_of)))]:
+    for name,value in ([(sale_store,merged)] if sale_store=='SOLD_EVIDENCE' else [('SOLD_DATA',merged),('SOLD_METRICS',metrics_for(merged,date.fromisoformat(args.as_of)))]):
         a,z,prior=span(candidate,name)
         if prior!=value: candidate=candidate[:a]+encode(value)+candidate[z:]
     for name in ('DATA','RECONCILE'):
@@ -120,7 +120,7 @@ def run(args):
     before={address_key(p['current']['address']):p['status'] for p in old['properties'].values()}
     multi={address_key(r['address']) for r in incoming if sum(address_key(s['address'])==address_key(r['address']) for s in incoming)>1}
     changes=[dict(address=p['current']['address'],before=before.get(address_key(p['current']['address'])),after=p['status']) for p in snap['properties'].values() if address_key(p['current']['address']) in multi and before.get(address_key(p['current']['address']))!=p['status']]
-    report=dict(sale_policy=policy,deferred_sales=deferred_sales,profile=profile,counts=dict(counts),exclusions=dict(Counter(r['REASON'] for r in ledger)),sold_before=len(sold),sold_after=len(merged),resale_preserved=len(protected),sales=sale_report,market_records=len(records),normalized_multilisting=len(multi),multilisting_status_changes=changes,finished=dict(Counter(r['status'] for r in snap['complete'])),changed_files=changed,actions=actions)
+    report=dict(sale_policy=policy,deferred_sales=deferred_sales,profile=profile,counts=dict(counts),exclusions=dict(Counter(r['REASON'] for r in ledger)),sold_before=len(sold),sold_after=len(merged),resale_evidence_preserved=len(retained_evidence),sales=sale_report,market_records=len(records),normalized_multilisting=len(multi),multilisting_status_changes=changes,finished=dict(Counter(r['status'] for r in snap['complete'])),changed_files=changed,actions=actions)
     if args.output:
         out=Path(args.output); out.mkdir(parents=True,exist_ok=True); (out/'report.json').write_text(legacy.jsontxt(report))
     if args.apply:

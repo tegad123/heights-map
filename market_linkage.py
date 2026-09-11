@@ -83,6 +83,8 @@ def run(args):
     from market_status_ingest import ROOT, AS_OF, load_inputs, jsontxt, csvtxt, merge_sales, metrics_for, encode
     from datetime import date
     html = (ROOT/'index.html').read_text()
+    if 'const SOLD_COMP_POLICY=' in html:
+        raise ValueError('Use combined_market_ingest.py for historical evidence; sold_comp_refresh.py owns the displayed comp set')
     runtime_file = json.loads(Path(args.runtime).read_text())
     runtime = runtime_file.get('index', runtime_file.get('runtime'))
     if not runtime or not runtime.get('raw'): raise ValueError('Fresh runtime with raw DATA required')

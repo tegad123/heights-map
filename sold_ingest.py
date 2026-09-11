@@ -128,6 +128,8 @@ def in_ring(ring, lng, lat):
 def run(args):
     html_path = ROOT / 'index.html'
     html = html_path.read_text()
+    if 'const SOLD_COMP_POLICY=' in html:
+        raise ValueError('Heights display policy requires sold_comp_refresh.py; historical sale evidence must not be restored as comps')
     existing, _, _ = constant(html, 'SOLD_DATA')
     rows = json.loads(json.dumps(existing))
     if not rows: raise ValueError('existing sold input is empty')
