@@ -15,8 +15,6 @@ from sold_classification import classify_lot
 from deed_ingest import in_boundary
 
 ROOT = Path(__file__).resolve().parent
-INPUTS = [('heights_active_single_lots0908.csv', 'Single Lot'),
-          ('heights_active_split_lots0908.csv', 'Split Lot')]
 
 
 def address_key(address):
@@ -37,7 +35,13 @@ def address_key(address):
     return ' '.join(w)
 
 
-def run(as_of, apply=False):
+def run(as_of, single_input, split_input, apply=False):
+    from datetime import date
+    date.fromisoformat(as_of)
+    inputs=[(str(single_input),'Single Lot'),
+            (str(split_input),'Split Lot')]
+    if Path(single_input).resolve()==Path(split_input).resolve():
+        raise ValueError('Single and split inputs must be different files')
     html=(ROOT/'index.html').read_text()
     zone=re.compile(re.search(r'const OUT_OF_ZONE=/(.*?)/i;',html).group(1),re.I)
     geo=json.loads((ROOT/'heights_boundary.geojson').read_text())
@@ -45,10 +49,10 @@ def run(as_of, apply=False):
     old=json.loads(path.read_text()) if path.exists() else {'listings':[]}
     existing={r['mls']:r for r in old['listings']}
     listings=[];ledger=[];summaries=[];seen=set();seen_addresses=set();mismatches=[]
-    for name,expected in INPUTS:
+    for name,expected in inputs:
         payload=(ROOT/name).read_bytes();digest=hashlib.sha256(payload).hexdigest()
         reader=csv.DictReader(io.StringIO(payload.decode('utf-8-sig')))
-        required={'MLS Number','Address','Latitude','Longitude','Lot Size','DOM','Original List Price','Year Built','Builder Name','List Agent Full Name','Close Price','Close Date'}
+        required={'MLS Number','Address','Latitude','Longitude','Lot Size','DOM','Original List Price','Year Built','Builder Name','List Agent Full Name','Close Price','Close Date','Status'}
         if not required.issubset(reader.fieldnames or []):raise ValueError('Missing columns: '+name)
         rows=list(reader)
         if not rows:raise ValueError('Empty export: '+name)
@@ -61,7 +65,7 @@ def run(as_of, apply=False):
             lat=money(row.get('Latitude'));lng=money(row.get('Longitude'));price=money(row.get('Original List Price'));dom=money(row.get('DOM'));yb=money(row.get('Year Built'))
             reason=None;k=address_key(a)
             if not mls or not a or any(v is None for v in (lot,price,dom,yb)) or lot<=0 or price<=0 or dom<0:reason='INVALID_REQUIRED_FIELD'
-            elif row.get('Close Price') or row.get('Close Date'):reason='NOT_ACTIVE_EXPORT'
+            elif row.get('Status','').strip()!='Active' or row.get('Close Price') or row.get('Close Date'):reason='NOT_ACTIVE_EXPORT'
             elif lat is None or lng is None or not (-90<=lat<=90 and -180<=lng<=180):reason='INVALID_COORDINATES'
             elif zone.search(a):reason='OOZ_REGEX'
             elif lng> -95.370:reason='OOZ_EAST'
@@ -94,4 +98,10 @@ def run(as_of, apply=False):
 
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--as-of',default='2026-09-08');ap.add_argument('--apply',action='store_true');args=ap.parse_args();run(args.as_of,args.apply)
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--single-input',required=True)
+    ap.add_argument('--split-input',required=True)
+    ap.add_argument('--as-of',required=True)
+    ap.add_argument('--apply',action='store_true')
+    args=ap.parse_args()
+    run(args.as_of,args.single_input,args.split_input,args.apply)

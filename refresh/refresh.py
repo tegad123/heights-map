@@ -24,12 +24,15 @@ the staged snapshot; they never enter the changelog.
 Without --write it prints the classification and touches nothing.
 HUMAN-INVOKED ONLY — never run from cron (CLAUDE.md hard rule).
 """
-import argparse, csv, json, os, re, sys
+import argparse, csv, hashlib, io, json, os, re, subprocess, sys
+from datetime import date
+from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from norm import key
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0,ROOT)
 
 # Per-market file layout. Heights predates the generalization and keeps the
 # root-level changes/ + staging/ dirs (no history churn); other markets nest.
@@ -339,21 +342,24 @@ CSV_HDR = ['id', 'address', 'lot_type', 'last_list_price', 'builder', 'agent',
            'disposition', 'lat', 'lng', 'notes']
 
 
-def fold_events():
+def fold_events(changes=None):
     """Full fold: off/relist/pending state plus newest-wins dispositions and
     drop dates. 'under contract' ids move from off to pending (they are not
     Off Market until they resolve to sold or terminated)."""
     idx_path = os.path.join(CHANGES_DIR, 'index.json')
-    if not os.path.exists(idx_path):
+    if changes is None and not os.path.exists(idx_path):
         # a market with no changelog yet (pre-first-refresh port) folds to empty
         print(f'note: {os.path.relpath(idx_path, ROOT)} absent — empty reconcile state')
         return {}, {}, {}, {}, {}
-    with open(idx_path, encoding='utf-8') as f:
-        idx = json.load(f)
+    if changes is None:
+        with open(idx_path, encoding='utf-8') as f:
+            idx=json.load(f)
+        changes=[]
+        for entry in idx['files']:
+            with open(os.path.join(CHANGES_DIR,entry['file']),encoding='utf-8') as f:
+                changes.append(json.load(f))
     off, rel, disp, ddate = {}, {}, {}, {}
-    for entry in idx['files']:
-        with open(os.path.join(CHANGES_DIR, entry['file']), encoding='utf-8') as f:
-            c = json.load(f)
+    for c in changes:
         for d in c.get('dropped', []):
             off[d['id']] = {'t': d['ty'], 'd': c['date']}
             rel.pop(d['id'], None)
@@ -370,11 +376,12 @@ def fold_events():
     return off, rel, pend, disp, ddate
 
 
-def cmd_csv(html_path):
+def cmd_csv(html_path, folded=None, write=True):
     src = load_html(html_path)
     data = {d['id']: d for d in extract_data(src)}
     sp = json.loads(re.search(r'SEED_POINTS=(\{.*?\});\nif\(Object', src, re.S).group(1))
-    off, rel, pend, disp, ddate = fold_events()
+    off, rel, pend, disp, ddate = (
+        fold_events() if folded is None else folded)
     # manual note corrections from the Off Market table (pull-edits snapshot):
     # an overlay note, when present, outranks seed/carried notes — it is the
     # newest explicit human statement about the row
@@ -392,6 +399,9 @@ def cmd_csv(html_path):
     out = []
     for i in ordered:
         d, p = data.get(i, {}), prev.get(i, {})
+        if CSV_NAME=='heights_off_market.csv' and p.get('disposition')=='unconfirmed':
+            out.append(dict(p))
+            continue
         out.append({
             'id': i,
             'address': p.get('address') or d.get('a', ''),
@@ -410,11 +420,15 @@ def cmd_csv(html_path):
                       if (om.get(i) or {}).get('note') is not None
                       else ((sp.get(i) or {}).get('notes') or p.get('notes', ''))),
         })
-    with open(path, 'w', encoding='utf-8', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=CSV_HDR, lineterminator='\n')
-        w.writeheader()
-        w.writerows(out)
-    print(f'wrote {CSV_NAME}: {len(out)} rows')
+    buffer=io.StringIO(newline='')
+    w=csv.DictWriter(buffer,fieldnames=CSV_HDR,lineterminator='\n')
+    w.writeheader()
+    w.writerows(out)
+    text=buffer.getvalue()
+    if write:
+        Path(path).write_text(text)
+        print(f'wrote {CSV_NAME}: {len(out)} rows')
+    return text
 
 
 LIFE_NOTES = {
@@ -668,6 +682,197 @@ def stage_new(chg, csv_paths, html_path):
 
 # ---------- cli ----------
 
+
+def csv_record_bytes(text):
+    lines=text.splitlines(keepends=True)
+    reader=csv.DictReader(io.StringIO(text))
+    if reader.fieldnames!=CSV_HDR:
+        raise ValueError('Unexpected off-market CSV header')
+    start=reader.line_num
+    result={}
+    for row in reader:
+        if row['id'] in result:
+            raise ValueError('Duplicate off-market CSV id')
+        result[row['id']]=(row,''.join(lines[start:reader.line_num]).encode())
+        start=reader.line_num
+    return result
+
+
+def cmd_dispositions(args,html_path):
+    from combined_market_ingest import load_many
+    from market_address import address_key
+    from market_linkage import resolve
+    from deed_ingest import span
+    from market_status_ingest import csvtxt
+
+    if args.market!='heights' or Path(html_path).resolve()!=Path(ROOT,'index.html'):
+        raise ValueError('This disposition refresh is Heights only')
+    date.fromisoformat(args.date)
+    if args.apply:
+        subprocess.run(
+            ['git','-C',ROOT,'pull','--ff-only','-q'],
+            check=True,stdout=sys.stderr)
+
+    html=Path(html_path).read_text()
+    index_path=Path(CHANGES_DIR,'index.json')
+    index=json.loads(index_path.read_text())
+    if any(e['date']>args.date for e in index['files']):
+        raise ValueError('Later changelog exists; refusing historical overwrite')
+    filename=f'changes_{args.date}.json'
+    event_path=Path(CHANGES_DIR,filename)
+    if event_path.exists():
+        prior=json.loads(event_path.read_text())
+        if prior.get('kind')!='pending_disposition_refresh':
+            raise ValueError('Run-date changelog belongs to another operation')
+
+    # Always compare against the pre-run history, including on pass two.
+    earlier=[
+        json.loads(Path(CHANGES_DIR,e['file']).read_text())
+        for e in index['files'] if e['date']<args.date]
+    baseline=fold_events(earlier)
+    pending=baseline[2]
+    data={r['id']:r for r in extract_data(html)}
+    targets={}
+    for rid in pending:
+        if rid not in data:
+            raise ValueError('Pending identity absent from DATA: '+rid)
+        key_=address_key(data[rid]['a'])
+        if key_ in targets:
+            raise ValueError('Ambiguous pending address: '+key_)
+        targets[key_]=rid
+
+    incoming,excluded,profile=load_many(args.input,html,args.date)
+    groups={}
+    for rec in incoming:
+        if not rec['exclusion'] and rec['address_key'] in targets:
+            groups.setdefault(targets[rec['address_key']],[]).append(rec)
+
+    chg=dict(
+        date=args.date,kind='pending_disposition_refresh',
+        sources=[str(Path(p)) for p in args.input],
+        source_hashes={
+            str(Path(p)):hashlib.sha256(Path(p).read_bytes()).hexdigest()
+            for p in args.input},
+        matchedIds=[],dropped=[],relisted=[],new=[],excluded=[],
+        dispositionUpdates={})
+    transitions=[];holds=[];chosen={}
+    for rid in sorted(pending):
+        if rid not in groups:
+            holds.append(dict(id=rid,address=data[rid]['a'],reason='NO_SOURCE_EVIDENCE'))
+            continue
+        result=resolve(groups[rid])
+        if result['ordering_issue']:
+            raise ValueError('Unresolved listing order: '+data[rid]['a'])
+        current=result['current']
+        chosen[rid]=current['mls']
+        status=current['status']
+        if status=='pending':
+            chg['matchedIds'].append(rid)
+            holds.append(dict(id=rid,address=data[rid]['a'],reason='STILL_PENDING'))
+        elif status=='active':
+            chg['relisted'].append(dict(
+                id=rid,a=data[rid]['a'],ty=pending[rid]['t'],
+                mls=current['mls']))
+            transitions.append(dict(id=rid,address=data[rid]['a'],
+                                    before='pending',after='active'))
+        elif status in ('sold','terminated'):
+            chg['dropped'].append(dict(
+                id=rid,a=data[rid]['a'],ty=pending[rid]['t'],
+                disposition=status,mls=current['mls'],
+                close_date=current['close_date']))
+            transitions.append(dict(id=rid,address=data[rid]['a'],
+                                    before='pending',after=status))
+        else:
+            raise ValueError('Unsupported disposition: '+status)
+
+    audit=[]
+    for rec in incoming:
+        rid=targets.get(rec['address_key'])
+        decision=rec['exclusion']
+        if not decision:
+            decision=(
+                'OUTSIDE_PENDING_REFRESH_SCOPE' if rid is None else
+                'SELECTED_CURRENT_STATUS' if chosen.get(rid)==rec['mls'] else
+                'RETAINED_LISTING_HISTORY')
+        audit.append(dict(
+            FILE=rec['source_file'],SHA256=rec['source_sha256'],
+            ROW=rec['source_row'],MLS=rec['mls'],ADDRESS=rec['address'],
+            REASON=decision,RAW_JSON=json.dumps(rec['raw'],sort_keys=True)))
+    chg['excluded']=excluded
+    chg['counts']=dict(
+        matched=len(chg['matchedIds']),dropped=len(chg['dropped']),
+        relisted=len(chg['relisted']),new=0,excluded=len(excluded))
+    folded=fold_events(earlier+[chg])
+    off,rel,pend=folded[:3]
+    rec=dict(off=off,relist=rel,pending=pend)
+    block=(
+        MARK_BEGIN+'\nconst RECONCILE='+
+        json.dumps(rec,ensure_ascii=False,separators=(',',':'))+
+        ';\n'+MARK_END)
+    if html.count(MARK_BEGIN)!=1 or html.count(MARK_END)!=1:
+        raise ValueError('RECONCILE markers missing or ambiguous')
+    a=html.index(MARK_BEGIN);b=html.index(MARK_END)+len(MARK_END)
+    candidate=html[:a]+block+html[b:]
+
+    # Clear pending only for authoritative off/relist state.
+    a=candidate.index('function applyReconcile(pts){')
+    b=candidate.index('applyReconcile(state.points);',a)
+    function=candidate[a:b]
+    for old,new in [
+        ("t!=='active_single'&&t!=='active_split'",
+         "t!=='active_single'&&t!=='active_split'&&t!=='pending'"),
+        ("t!=='off_market_single'&&t!=='off_market_split'",
+         "t!=='off_market_single'&&t!=='off_market_split'&&t!=='pending'")]:
+        # Only the first off-market filter is the relist branch.
+        if new not in function:
+            if old not in function:
+                raise ValueError('Reconcile tag-filter anchor missing')
+            function=function.replace(old,new,1)
+    candidate=candidate[:a]+function+candidate[b:]
+    validate_spliced(candidate)
+    a,b,_=span(html,'DATA');c,d,_=span(candidate,'DATA')
+    if html[a:b].encode()!=candidate[c:d].encode():
+        raise ValueError('DATA bytes changed')
+
+    csv_path=Path(ROOT,CSV_NAME)
+    old_csv=csv_record_bytes(csv_path.read_text())
+    csv_text=cmd_csv(html_path,folded=folded,write=False)
+    new_csv=csv_record_bytes(csv_text)
+    protected={
+        rid:raw for rid,(row,raw) in old_csv.items()
+        if row['disposition']=='unconfirmed'}
+    for rid,raw in protected.items():
+        if rid not in new_csv or new_csv[rid][1]!=raw:
+            raise ValueError('Unconfirmed CSV row changed: '+rid)
+    if set(pend)&set(new_csv):
+        raise ValueError('Pending record present in off-market CSV')
+
+    entries=[e for e in index['files'] if e['file']!=filename]
+    entries.append(dict(file=filename,date=args.date,counts=chg['counts']))
+    entries.sort(key=lambda e:(e['date'],e['file']))
+    encode_json=lambda value:json.dumps(value,ensure_ascii=False,indent=1)+'\n'
+    outputs={
+        event_path:encode_json(chg),
+        index_path:encode_json(dict(files=entries,updated=entries[-1]['date'])),
+        Path(html_path):candidate,
+        csv_path:csv_text,
+        Path(ROOT,f'pulls/dispositions_{args.date}.csv'):csvtxt(
+            audit,['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON'])}
+    changed=[
+        str(p.relative_to(ROOT)) for p,text in outputs.items()
+        if not p.exists() or p.read_bytes()!=text.encode()]
+    report=dict(
+        profile=profile,transitions=transitions,holds=holds,
+        preserved_unconfirmed=len(protected),ledger_rows=len(audit),
+        changed_files=changed)
+    if args.apply:
+        for path,text in outputs.items():
+            if str(path.relative_to(ROOT)) in changed:
+                path.parent.mkdir(parents=True,exist_ok=True)
+                path.write_bytes(text.encode())
+    print(json.dumps(report,indent=2))
+
+
 def main():
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument('--market', default='heights', choices=sorted(MARKETS),
@@ -676,6 +881,10 @@ def main():
                         help="override the market's html file (default: per --market)")
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
+    dispositions=sub.add_parser('dispositions',parents=[common])
+    dispositions.add_argument('--date',required=True)
+    dispositions.add_argument('--input',nargs='+',required=True)
+    dispositions.add_argument('--apply',action='store_true')
     d = sub.add_parser('diff', parents=[common], help='diff HAR exports against DATA actives')
     d.add_argument('--date', required=True)
     d.add_argument('single_csv')
@@ -696,6 +905,9 @@ def main():
     args = ap.parse_args()
     set_market(args.market)
     html = args.html or DEFAULT_HTML
+    if args.cmd=='dispositions':
+        cmd_dispositions(args,html)
+        return
 
     if args.cmd == 'generate':
         cmd_generate(html, skip_pull=args.skip_pull)

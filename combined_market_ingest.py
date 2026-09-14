@@ -48,7 +48,35 @@ def load(path, html, as_of):
                  source_file=path.name,source_row=line,source_sha256=digest,exclusion=reason,raw=raw)
         records.append(rec)
         if reason: ledger.append(dict(FILE=path.name,SHA256=digest,ROW=line,MLS=mls,ADDRESS=address,REASON=reason,RAW_JSON=json.dumps(raw,sort_keys=True)))
-    return records,ledger,dict(rows=len(rawrows),columns=len(reader.fieldnames),statuses=dict(Counter(r['Status'] for r in rawrows)),unique_mls=len(seen),lot_products=dict(Counter(r['product'] for r in records)),close_min=min(r['close_date'] for r in records if r['close_date']),close_max=max(r['close_date'] for r in records if r['close_date']))
+    closes=[r['close_date'] for r in records if r['close_date']]
+    return records,ledger,dict(
+        rows=len(rawrows),
+        columns=len(reader.fieldnames),
+        statuses=dict(Counter(r['Status'] for r in rawrows)),
+        unique_mls=len(seen),
+        lot_products=dict(Counter(r['product'] for r in records)),
+        close_min=min(closes,default=None),
+        close_max=max(closes,default=None))
+
+
+def load_many(paths, html, as_of):
+    paths=[Path(p) for p in paths]
+    if not paths or len({p.resolve() for p in paths})!=len(paths):
+        raise ValueError('Provide nonempty, distinct input paths')
+    incoming=[]; ledger=[]; profiles=[]; seen={}
+    for path in paths:
+        records,dropped,profile=load(path,html,as_of)
+        profiles.append(dict(file=str(path),**profile))
+        for rec in records:
+            if rec['mls'] in seen and seen[rec['mls']]!=path:
+                raise ValueError(
+                    'Cross-file MLS collision '+rec['mls']+
+                    ': '+str(seen[rec['mls']])+' / '+str(path))
+            seen[rec['mls']]=path
+        incoming.extend(records)
+        ledger.extend(dropped)
+    return incoming,ledger,dict(
+        files=profiles,rows=len(incoming),unique_mls=len(seen))
 
 
 def snapshot(records, sold, source, runtime, as_of):
@@ -78,7 +106,9 @@ def snapshot(records, sold, source, runtime, as_of):
 def run(args):
     html=(ROOT/'index.html').read_text(); old=json.loads((ROOT/'heights_market_status.data.json').read_text())
     runtime=json.loads(Path(args.runtime).read_text())['index']; source=span(html,'DATA')[2]; sale_store='SOLD_EVIDENCE' if 'const SOLD_EVIDENCE=' in html else 'SOLD_DATA'; sold=span(html,sale_store)[2]
-    incoming,ledger,profile=load(Path(args.input),html,args.as_of)
+    incoming,ledger,profile=load_many(
+        [args.input] if isinstance(args.input,(str,Path)) else args.input,
+        html,args.as_of)
     records={r['mls']:r for r in old['records']}; counts=Counter(); actions=[]
     for rec in incoming:
         prior=records.get(rec['mls'])
@@ -115,7 +145,7 @@ def run(args):
     for name in ('DATA','RECONCILE'):
         a,z,_=span(html,name); b,y,_=span(candidate,name); assert html[a:z]==candidate[b:y]
     outputs={ROOT/'index.html':candidate,ROOT/'heights_market_status.data.json':legacy.jsontxt(snap),
-             ROOT/'pulls/dropped_combined_market_2026-09-10.csv':legacy.csvtxt(ledger,['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON'])}
+             ROOT/f'pulls/dropped_combined_market_{args.as_of}.csv':legacy.csvtxt(ledger,['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON'])}
     changed=[str(p.relative_to(ROOT)) for p,t in outputs.items() if not p.exists() or p.read_text()!=t]
     before={address_key(p['current']['address']):p['status'] for p in old['properties'].values()}
     multi={address_key(r['address']) for r in incoming if sum(address_key(s['address'])==address_key(r['address']) for s in incoming)>1}
@@ -125,10 +155,18 @@ def run(args):
         out=Path(args.output); out.mkdir(parents=True,exist_ok=True); (out/'report.json').write_text(legacy.jsontxt(report))
     if args.apply:
         for p,t in outputs.items():
-            if str(p.relative_to(ROOT)) in changed: p.write_text(t)
+            if str(p.relative_to(ROOT)) in changed:
+                p.parent.mkdir(parents=True,exist_ok=True)
+                p.write_text(t)
     print(legacy.jsontxt({k:v for k,v in report.items() if k not in ('actions','multilisting_status_changes','sales','deferred_sales')}))
     return report
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser(); ap.add_argument('--input',default='bigexportofallhouses.csv'); ap.add_argument('--runtime',required=True)
-    ap.add_argument('--as-of',default='2026-09-10'); ap.add_argument('--output'); ap.add_argument('--apply',action='store_true'); ap.add_argument('--sale-policy',choices=['all','tracked'],default='all'); run(ap.parse_args())
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--input',nargs='+',required=True)
+    ap.add_argument('--runtime',required=True)
+    ap.add_argument('--as-of',required=True)
+    ap.add_argument('--output')
+    ap.add_argument('--apply',action='store_true')
+    ap.add_argument('--sale-policy',choices=['all','tracked'],default='all')
+    run(ap.parse_args())
