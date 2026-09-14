@@ -32,7 +32,18 @@
     "relisted": 0,
     "excluded": 0
    }
+  },
+  {
+   "file": "changes_2026-09-14.json",
+   "date": "2026-09-14",
+   "counts": {
+    "matched": 2,
+    "dropped": 7,
+    "relisted": 1,
+    "new": 0,
+    "excluded": 6
+   }
   }
  ],
- "updated": "2026-08-18"
+ "updated": "2026-09-14"
 }

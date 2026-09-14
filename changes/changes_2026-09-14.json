@@ -1,0 +1,153 @@
+{
+ "date": "2026-09-14",
+ "kind": "pending_disposition_refresh",
+ "sources": [
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HeightsActiveSingelots9.14.csv",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HeightsActiveSplitlots9.14.csv",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HeightsPending9.14.csv",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HEightsSoldNewconstruction9.14.csv",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/TerminatedExpiredLast180days9.14.csv"
+ ],
+ "source_hashes": {
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HeightsActiveSingelots9.14.csv": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HeightsActiveSplitlots9.14.csv": "9fba0b33c0e46af6f1e9aafd2b4b32acdad1550a0fc2f8ffb8ea62cde96cb683",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HeightsPending9.14.csv": "1c472882648eae5b11bfc32fa5e19ddebd18d7a22ab89d2c10e042499738cac0",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/HEightsSoldNewconstruction9.14.csv": "2c5f3062a4ba95e153dde91848dff4f6d79873d283c5534ca499b8c79c3f4492",
+  "/Users/tegaumukoro/heights-map/pulls/2026-09-14/TerminatedExpiredLast180days9.14.csv": "f19b0386a2c936666110d14b37b4b21e68a02150113c37e26cbbfab881f1719d"
+ },
+ "matchedIds": [
+  "act_1208-e-26th-street-unit-a",
+  "act_814-w-17th-street"
+ ],
+ "dropped": [
+  {
+   "id": "2131432164",
+   "a": "709 E 17th St, Houston, Tx 77008",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "72560168",
+   "close_date": "2026-08-24"
+  },
+  {
+   "id": "act_1023-euclid",
+   "a": "1023 Euclid Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "35621139",
+   "close_date": "2026-09-04"
+  },
+  {
+   "id": "act_1116-highland",
+   "a": "1116 Highland Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "42468659",
+   "close_date": "2026-09-09"
+  },
+  {
+   "id": "act_1207-tabor",
+   "a": "1207 Tabor Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "85478626",
+   "close_date": "2026-08-31"
+  },
+  {
+   "id": "act_1324-lawrence-street",
+   "a": "1324 Lawrence Street",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "10396812",
+   "close_date": "2026-08-28"
+  },
+  {
+   "id": "act_611-e-25th-street-unit-a",
+   "a": "611 E 25th Street Unit#A",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "30142567",
+   "close_date": "2026-05-21"
+  },
+  {
+   "id": "act_826-ralfallen",
+   "a": "826 Ralfallen Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "88173016",
+   "close_date": "2026-08-26"
+  }
+ ],
+ "relisted": [
+  {
+   "id": "act_616-ridge",
+   "a": "616 Ridge Street",
+   "ty": "single",
+   "mls": "8759927"
+  }
+ ],
+ "new": [],
+ "excluded": [
+  {
+   "FILE": "HeightsActiveSplitlots9.14.csv",
+   "SHA256": "9fba0b33c0e46af6f1e9aafd2b4b32acdad1550a0fc2f8ffb8ea62cde96cb683",
+   "ROW": 3,
+   "MLS": "92840987",
+   "ADDRESS": "5339 A Larkin Street",
+   "REASON": "OOZ_REGEX",
+   "RAW_JSON": "{\"Address\": \"5339 A Larkin Street\", \"Builder Name\": \"Riverway Homes\", \"Building SqFt\": \"2157\", \"Close Date\": \"\", \"Close Price\": \"\", \"Co List Team Name\": \"\", \"Co Selling Agent Full Name\": \"\", \"Co Selling Office Name\": \"\", \"County\": \"Harris\", \"DOM\": \"137\", \"Latitude\": \"29.77892\", \"List Agent Full Name\": \"Christian Martin\", \"List Office Name\": \"Riverway Properties\", \"Longitude\": \"-95.41759\", \"Lot Size\": \"2687\", \"MLS Number\": \"92840987\", \"Master Planned Community\": \"\", \"Original List Price\": \"604900\", \"Price Sq Ft Sold\": \"\", \"School District\": \"27 - Houston\", \"School Elementary\": \"LOVE ELEMENTARY SCHOOL\", \"Selling Agent Full Name\": \"\", \"Selling Office Name\": \"\", \"Status\": \"Active\", \"Subdivision\": \"COTTAGE GROVE SEC 1\", \"Year Built\": \"2025\"}"
+  },
+  {
+   "FILE": "HeightsActiveSplitlots9.14.csv",
+   "SHA256": "9fba0b33c0e46af6f1e9aafd2b4b32acdad1550a0fc2f8ffb8ea62cde96cb683",
+   "ROW": 6,
+   "MLS": "25935829",
+   "ADDRESS": "5339 Larkin Street",
+   "REASON": "OOZ_REGEX",
+   "RAW_JSON": "{\"Address\": \"5339 Larkin Street\", \"Builder Name\": \"Riverway Homes\", \"Building SqFt\": \"2438\", \"Close Date\": \"\", \"Close Price\": \"\", \"Co List Team Name\": \"\", \"Co Selling Agent Full Name\": \"\", \"Co Selling Office Name\": \"\", \"County\": \"Harris\", \"DOM\": \"115\", \"Latitude\": \"29.778911\", \"List Agent Full Name\": \"Christian Martin\", \"List Office Name\": \"Riverway Properties\", \"Longitude\": \"-95.417509\", \"Lot Size\": \"2687\", \"MLS Number\": \"25935829\", \"Master Planned Community\": \"\", \"Original List Price\": \"634900\", \"Price Sq Ft Sold\": \"\", \"School District\": \"27 - Houston\", \"School Elementary\": \"LOVE ELEMENTARY SCHOOL\", \"Selling Agent Full Name\": \"\", \"Selling Office Name\": \"\", \"Status\": \"Active\", \"Subdivision\": \"COTTAGE GROVE SEC 1\", \"Year Built\": \"2026\"}"
+  },
+  {
+   "FILE": "HeightsActiveSplitlots9.14.csv",
+   "SHA256": "9fba0b33c0e46af6f1e9aafd2b4b32acdad1550a0fc2f8ffb8ea62cde96cb683",
+   "ROW": 20,
+   "MLS": "53774355",
+   "ADDRESS": "5240 Cornish Street Unit#A",
+   "REASON": "OOZ_REGEX",
+   "RAW_JSON": "{\"Address\": \"5240 Cornish Street Unit#A\", \"Builder Name\": \"Unity Construction\", \"Building SqFt\": \"3376\", \"Close Date\": \"\", \"Close Price\": \"\", \"Co List Team Name\": \"\", \"Co Selling Agent Full Name\": \"\", \"Co Selling Office Name\": \"\", \"County\": \"Harris\", \"DOM\": \"19\", \"Latitude\": \"29.778622\", \"List Agent Full Name\": \"Katy To\", \"List Office Name\": \"Compass RE Texas, LLC - Houston\", \"Longitude\": \"-95.415648\", \"Lot Size\": \"2687\", \"MLS Number\": \"53774355\", \"Master Planned Community\": \"\", \"Original List Price\": \"929000\", \"Price Sq Ft Sold\": \"\", \"School District\": \"27 - Houston\", \"School Elementary\": \"LOVE ELEMENTARY SCHOOL\", \"Selling Agent Full Name\": \"\", \"Selling Office Name\": \"\", \"Status\": \"Active\", \"Subdivision\": \"Cottage Grove\", \"Year Built\": \"2025\"}"
+  },
+  {
+   "FILE": "HEightsSoldNewconstruction9.14.csv",
+   "SHA256": "2c5f3062a4ba95e153dde91848dff4f6d79873d283c5534ca499b8c79c3f4492",
+   "ROW": 9,
+   "MLS": "92854513",
+   "ADDRESS": "5337 Larkin Street",
+   "REASON": "OOZ_POLY",
+   "RAW_JSON": "{\"Address\": \"5337 Larkin Street\", \"Builder Name\": \"Riverway Homes\", \"Building SqFt\": \"2157\", \"Close Date\": \"2026-04-30\", \"Close Price\": \"599000\", \"Co List Team Name\": \"\", \"Co Selling Agent Full Name\": \"\", \"Co Selling Office Name\": \"\", \"County\": \"Harris\", \"DOM\": \"20\", \"Latitude\": \"29.77892\", \"List Agent Full Name\": \"Christian Martin\", \"List Office Name\": \"Riverway Properties\", \"Longitude\": \"-95.41759\", \"Lot Size\": \"2687\", \"MLS Number\": \"92854513\", \"Master Planned Community\": \"\", \"Original List Price\": \"599000\", \"Price Sq Ft Sold\": \"277.7\", \"School District\": \"27 - Houston\", \"School Elementary\": \"LOVE ELEMENTARY SCHOOL\", \"Selling Agent Full Name\": \"Christian Martin\", \"Selling Office Name\": \"Riverway Properties\", \"Status\": \"Sold\", \"Subdivision\": \"COTTAGE GROVE SEC 1\", \"Year Built\": \"2025\"}"
+  },
+  {
+   "FILE": "HEightsSoldNewconstruction9.14.csv",
+   "SHA256": "2c5f3062a4ba95e153dde91848dff4f6d79873d283c5534ca499b8c79c3f4492",
+   "ROW": 22,
+   "MLS": "42264901",
+   "ADDRESS": "5335 Larkin Street",
+   "REASON": "OOZ_POLY",
+   "RAW_JSON": "{\"Address\": \"5335 Larkin Street\", \"Builder Name\": \"Riverway Homes\", \"Building SqFt\": \"2438\", \"Close Date\": \"2025-11-14\", \"Close Price\": \"639000\", \"Co List Team Name\": \"\", \"Co Selling Agent Full Name\": \"\", \"Co Selling Office Name\": \"\", \"County\": \"Harris\", \"DOM\": \"24\", \"Latitude\": \"29.778911\", \"List Agent Full Name\": \"Christian Martin\", \"List Office Name\": \"Riverway Properties\", \"Longitude\": \"-95.417509\", \"Lot Size\": \"2687\", \"MLS Number\": \"42264901\", \"Master Planned Community\": \"\", \"Original List Price\": \"639000\", \"Price Sq Ft Sold\": \"262.1\", \"School District\": \"27 - Houston\", \"School Elementary\": \"LOVE ELEMENTARY SCHOOL\", \"Selling Agent Full Name\": \"Karishma Naidu\", \"Selling Office Name\": \"Nextgen Real Estate Properties\", \"Status\": \"Sold\", \"Subdivision\": \"COTTAGE GROVE SEC 1\", \"Year Built\": \"2025\"}"
+  },
+  {
+   "FILE": "TerminatedExpiredLast180days9.14.csv",
+   "SHA256": "f19b0386a2c936666110d14b37b4b21e68a02150113c37e26cbbfab881f1719d",
+   "ROW": 54,
+   "MLS": "82942203",
+   "ADDRESS": "5240 Cornish Street Unit#A",
+   "REASON": "OOZ_REGEX",
+   "RAW_JSON": "{\"Address\": \"5240 Cornish Street Unit#A\", \"Builder Name\": \"Unity Construction\", \"Building SqFt\": \"3376\", \"Close Date\": \"\", \"Close Price\": \"\", \"Co List Team Name\": \"\", \"Co Selling Agent Full Name\": \"\", \"Co Selling Office Name\": \"\", \"County\": \"Harris\", \"DOM\": \"132\", \"Latitude\": \"29.778622\", \"List Agent Full Name\": \"Katy To\", \"List Office Name\": \"Compass RE Texas, LLC - Houston\", \"Longitude\": \"-95.415648\", \"Lot Size\": \"2687\", \"MLS Number\": \"82942203\", \"Master Planned Community\": \"\", \"Original List Price\": \"1049000\", \"Price Sq Ft Sold\": \"\", \"School District\": \"27 - Houston\", \"School Elementary\": \"LOVE ELEMENTARY SCHOOL\", \"Selling Agent Full Name\": \"\", \"Selling Office Name\": \"\", \"Status\": \"Terminated\", \"Subdivision\": \"NA\", \"Year Built\": \"2025\"}"
+  }
+ ],
+ "dispositionUpdates": {},
+ "counts": {
+  "matched": 2,
+  "dropped": 7,
+  "relisted": 1,
+  "new": 0,
+  "excluded": 6
+ }
+}
