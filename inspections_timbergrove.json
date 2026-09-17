@@ -1,8 +1,8 @@
 {
   "24106506": {
     "status": "Passed",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3525 Harvest Dance Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -218,8 +218,8 @@
   },
   "25023737": {
     "status": "Passed",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3507 Harvest Dance Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -435,8 +435,8 @@
   },
   "25039329": {
     "status": "Pending",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1602 Turnpike Rd, Houston, TX 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -756,8 +756,8 @@
   },
   "25068449": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6107 Waltway Dr 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -981,8 +981,8 @@
   },
   "25096486": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1018 Grovewood Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1157,17 +1157,17 @@
       {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
-        "date": "2026-09-11",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-15",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "DECOR AD FINAL",
         "permit_type": "DECOR APPLANCE",
-        "date": "2026-09-11",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-15",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -1254,8 +1254,8 @@
   },
   "25104677": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1307 Foxwood Rd 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1279,8 +1279,8 @@
   },
   "26001989": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1118 Worthshire St, Houston, TX 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1306,6 +1306,14 @@
         "date": "2026-05-27",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-16",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -1368,8 +1376,8 @@
   },
   "26019598": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1226 Timbergrove Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1449,8 +1457,8 @@
   },
   "24106508": {
     "status": "Pending",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3523 Harvest Dance Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -1682,8 +1690,8 @@
   },
   "25023738": {
     "status": "Pending",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3502 Huntsford Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -1890,9 +1898,9 @@
     ]
   },
   "25058957": {
-    "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "status": "Passed",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1202 Timbergrove Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2003,9 +2011,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-16",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2036,16 +2044,16 @@
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2060,8 +2068,8 @@
         "type": "FDN-WOOD/INSUL",
         "permit_type": "Building Pmt",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2113,6 +2121,14 @@
         "inspector": ""
       },
       {
+        "type": "ADD AC FINAL 1",
+        "permit_type": "A1-ADDL-HVAC",
+        "date": "2026-09-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2025-12-09",
@@ -2131,9 +2147,9 @@
       {
         "type": "Prefill",
         "permit_type": "SFR New",
-        "date": "2026-09-11",
+        "date": "2026-09-16",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2147,33 +2163,33 @@
       {
         "type": "3rd EC",
         "permit_type": "SFR New",
-        "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-16",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Site Final",
         "permit_type": "SFR New",
-        "date": "2026-09-11",
-        "result": "Failed",
-        "raw": "Action Required",
+        "date": "2026-09-16",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "FINAL",
         "permit_type": "GRADING , FILL",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "TREE/SHRUB FNL",
         "permit_type": "LAND-TREE/SHRB",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2228,8 +2244,8 @@
   },
   "25069172": {
     "status": "Passed",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "2611 Lazybrook Dr 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2469,8 +2485,8 @@
   },
   "25097930": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6430 Lindyann Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2625,13 +2641,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-09-17",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-09-17",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
       }
     ]
   },
   "25111624": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1126 Timbergrove Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2652,6 +2684,14 @@
         "inspector": ""
       },
       {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-16",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "GROUND IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-02-09",
@@ -2665,6 +2705,14 @@
         "date": "2026-06-12",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-15",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2791,8 +2839,8 @@
   },
   "26008570": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1834 Crystal Ct 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2837,6 +2885,14 @@
         "inspector": ""
       },
       {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-17",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-09-11",
@@ -2872,8 +2928,8 @@
   },
   "26021492": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1723 Tannehill Dr 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2958,6 +3014,14 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-17",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-07-10",
@@ -2993,8 +3057,8 @@
   },
   "24106512": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3521 Harvest Dance Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -3218,8 +3282,8 @@
   },
   "25023741": {
     "status": "Passed",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3516 Harvest Dance Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -3427,8 +3491,8 @@
   },
   "25061909": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6607 Cindy Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3612,8 +3676,8 @@
   },
   "25080169": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "2418 Brookmere Dr 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3637,16 +3701,16 @@
         "type": "MLS",
         "permit_type": "Electrical Pmt",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3789,8 +3853,8 @@
   },
   "25098806": {
     "status": "Passed",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6515 Lindyann Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4118,8 +4182,8 @@
   },
   "25116900": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "2606 Droxford Dr 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4159,8 +4223,8 @@
   },
   "26011945": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6111 Hurst St 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4208,8 +4272,8 @@
   },
   "26031780": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1219 Bay Oaks Rd, Houston, Tx 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4337,8 +4401,8 @@
   },
   "24117058": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6118 Abington Way 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4434,8 +4498,8 @@
   },
   "25023742": {
     "status": "Pending",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "3511 Harvest Dance Dr 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -4651,8 +4715,8 @@
   },
   "25066472": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1510 Glen Oaks St, Houston, Tx 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4868,8 +4932,8 @@
   },
   "25090800": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6227 Lindyann Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4989,8 +5053,8 @@
   },
   "25098822": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "2006 Cranston Ct 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5158,8 +5222,8 @@
   },
   "25118994": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "822 Nashua St, Houston, TX 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5206,9 +5270,9 @@
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-07-22",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-09-17",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -5231,8 +5295,8 @@
   },
   "26017805": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "1011 Grovewood Ln 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5384,8 +5448,8 @@
   },
   "26063421": {
     "status": "Partial",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-17",
+    "scraped_at": "2026-09-17",
     "address": "6131 Abington Way, Houston, TX 77008",
     "final_project_inspection_outstanding": true,
     "inspections": [
