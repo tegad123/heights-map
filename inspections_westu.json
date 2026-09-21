@@ -1,8 +1,8 @@
 {
   "25020503": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3779 SYRACUSE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -130,8 +130,8 @@
   },
   "25037686": {
     "status": "Passed",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "1807 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -235,8 +235,8 @@
   },
   "25117126": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2426 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -283,9 +283,9 @@
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-09-15",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-18",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -307,9 +307,9 @@
       {
         "type": "2nd EC",
         "permit_type": "SFR New",
-        "date": "2026-09-16",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-17",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -348,8 +348,8 @@
   },
   "25083081": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2357 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -501,8 +501,8 @@
   },
   "25101670": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "5312 CHEROKEE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -571,6 +571,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-09-21",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-03-03",
@@ -582,8 +590,8 @@
   },
   "25053572": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3753 DRAKE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -711,8 +719,8 @@
   },
   "26042600": {
     "status": "Passed",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2341 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -760,8 +768,8 @@
   },
   "26033181": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2336 Dunstan Rd, Houston, TX 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -841,8 +849,8 @@
   },
   "25038586": {
     "status": "Pending",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2404 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1162,8 +1170,8 @@
   },
   "25037688": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "1811 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1267,8 +1275,8 @@
   },
   "25117127": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2424 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1315,9 +1323,9 @@
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-06-09",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-21",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -1347,9 +1355,9 @@
       {
         "type": "2nd EC",
         "permit_type": "SFR New",
-        "date": "2026-09-16",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-17",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -1372,8 +1380,8 @@
   },
   "25052444": {
     "status": "Pending",
-    "updated": "2026-09-14",
-    "scraped_at": "2026-09-14",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3746 CHILDRESS ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1661,8 +1669,8 @@
   },
   "25106029": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2334 DUNSTAN RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1774,8 +1782,8 @@
   },
   "26031875": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2337 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1839,8 +1847,8 @@
   },
   "26017678": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "5335 MANDELL ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1912,8 +1920,8 @@
   },
   "26033243": {
     "status": "Passed",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3711 Purdue St, Houston, TX 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1945,8 +1953,8 @@
   },
   "25038587": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2406 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2159,6 +2167,14 @@
         "inspector": ""
       },
       {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-09-21",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-02-04",
@@ -2258,8 +2274,8 @@
   },
   "25078146": {
     "status": "Passed",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "5329 DORA ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2499,8 +2515,8 @@
   },
   "25072450": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "5303 CHEROKEE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2684,8 +2700,8 @@
   },
   "25068930": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2325 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3037,8 +3053,8 @@
   },
   "25076059": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2410 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3398,8 +3414,8 @@
   },
   "26038687": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2405 NOTTINGHAM ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3471,8 +3487,8 @@
   },
   "26027179": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3771 PURDUE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3480,8 +3496,8 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-09-17",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3552,8 +3568,8 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-09-17",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -3576,8 +3592,8 @@
   },
   "25037683": {
     "status": "Passed",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "1803 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3681,8 +3697,8 @@
   },
   "25082414": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2428 NOTTINGHAM ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3898,8 +3914,8 @@
   },
   "25076577": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3802 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -4227,8 +4243,8 @@
   },
   "25077921": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3782 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4444,8 +4460,8 @@
   },
   "25076060": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2412 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4789,8 +4805,8 @@
   },
   "26019294": {
     "status": "Partial",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "2328 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4973,9 +4989,9 @@
     ]
   },
   "26030757": {
-    "status": "Passed",
-    "updated": "2026-09-17",
-    "scraped_at": "2026-09-17",
+    "status": "Partial",
+    "updated": "2026-09-21",
+    "scraped_at": "2026-09-21",
     "address": "3743 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4985,6 +5001,14 @@
         "date": "2026-06-04",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-18",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -5017,6 +5041,14 @@
         "date": "2026-08-05",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-09-18",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
