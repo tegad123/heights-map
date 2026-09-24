@@ -1,8 +1,8 @@
 {
   "25041469": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "2235 Brentwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20,6 +20,14 @@
         "date": "2026-04-01",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-23",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -154,8 +162,8 @@
   },
   "25083752": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3030 Ella Lee Ln, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -251,8 +259,8 @@
   },
   "26001858": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "2505 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -396,8 +404,8 @@
   },
   "26038084": {
     "status": "None",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "2433 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": []
@@ -1321,8 +1329,8 @@
   },
   "25058597": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "2260 Pine Valley Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1394,8 +1402,8 @@
   },
   "25088034": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3713 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1579,8 +1587,8 @@
   },
   "26014099": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3843 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3322,8 +3330,8 @@
   },
   "25077925": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "1817 Sharp Place, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3336,9 +3344,17 @@
         "inspector": ""
       },
       {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-22",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
-        "date": "2026-09-21",
+        "date": "2026-09-24",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -3347,16 +3363,16 @@
   },
   "25098554": {
     "status": "None",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3482 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": []
   },
   "26016023": {
     "status": "Passed",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "2121 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4506,8 +4522,8 @@
   },
   "25080058": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3438 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4563,8 +4579,8 @@
   },
   "26001641": {
     "status": "Partial",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3729 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4627,12 +4643,21 @@
     ]
   },
   "26040864": {
-    "status": "None",
-    "updated": "2026-09-21",
-    "scraped_at": "2026-09-21",
+    "status": "Pending",
+    "updated": "2026-09-24",
+    "scraped_at": "2026-09-24",
     "address": "3024 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
-    "inspections": []
+    "inspections": [
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-09-24",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      }
+    ]
   },
   "25078300": {
     "status": "Partial",
