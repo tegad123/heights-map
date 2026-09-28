@@ -13199,8 +13199,8 @@
     },
     {
       "mls": "23786126",
-      "status": "active",
-      "har_status": "Active",
+      "status": "pending",
+      "har_status": "Option Pending",
       "address": "1109 Tabor Street",
       "address_key": "1109 tabor st",
       "original_list_price": 1175000.0,
@@ -13224,7 +13224,7 @@
         "Co Selling Agent Full Name": "",
         "Co Selling Office Name": ""
       },
-      "as_of": "2026-09-14",
+      "as_of": "2026-09-28",
       "source_file": "HeightsActiveSingelots9.14.csv",
       "source_row": 3,
       "source_sha256": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
@@ -13256,6 +13256,16 @@
         "Longitude": "-95.377438",
         "Latitude": "29.801633",
         "School Elementary": "BROWNING ELEMENTARY SCHOOL"
+      },
+      "listing_details_as_of": "2026-09-14",
+      "status_evidence": {
+        "kind": "user_confirmation_and_HAR_screenshot",
+        "observed": "2026-09-28",
+        "status": "Under Contract - OP",
+        "url": "https://www.har.com/homedetail/1109-tabor-st-houston-tx-77009/2993676",
+        "screenshot": "Screenshot 2026-09-28 at 11.26.24\u202fAM.png",
+        "sha256": "074267a800f4ab6298a1146102f3d432a2bf3348a14ff33410a1ecde150fefb5",
+        "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
       }
     },
     {
@@ -43627,8 +43637,8 @@
     },
     {
       "mls": "57009282",
-      "status": "active",
-      "har_status": "Active",
+      "status": "pending",
+      "har_status": "Option Pending",
       "address": "1140 Waverly Street",
       "address_key": "1140 waverly st",
       "original_list_price": 2400000.0,
@@ -43652,7 +43662,7 @@
         "Co Selling Agent Full Name": "",
         "Co Selling Office Name": ""
       },
-      "as_of": "2026-09-14",
+      "as_of": "2026-09-28",
       "source_file": "HeightsActiveSingelots9.14.csv",
       "source_row": 36,
       "source_sha256": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
@@ -43684,6 +43694,16 @@
         "Longitude": "-95.40431",
         "Latitude": "29.792244",
         "School Elementary": "LOVE ELEMENTARY SCHOOL"
+      },
+      "listing_details_as_of": "2026-09-14",
+      "status_evidence": {
+        "kind": "user_confirmation_and_HAR_screenshot",
+        "observed": "2026-09-28",
+        "status": "Under Contract - OP",
+        "url": "https://www.har.com/homedetail/1140-waverly-st-houston-tx-77008/2975706",
+        "screenshot": "Screenshot 2026-09-28 at 11.26.40\u202fAM.png",
+        "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
+        "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
       }
     },
     {
@@ -84488,11 +84508,11 @@
       "chronology": "Observed status from September 28 exports; current active listings take precedence over earlier failed listings. Non-sold event dates remain unavailable."
     },
     "act_1109-tabor": {
-      "status": "active",
+      "status": "pending",
       "current": {
         "mls": "23786126",
-        "status": "active",
-        "har_status": "Active",
+        "status": "pending",
+        "har_status": "Option Pending",
         "address": "1109 Tabor Street",
         "address_key": "1109 tabor st",
         "original_list_price": 1175000.0,
@@ -84507,11 +84527,21 @@
         "building_sqft": 3384.0,
         "lat": 29.801633,
         "lng": -95.377438,
-        "as_of": "2026-09-14",
+        "as_of": "2026-09-28",
         "source_file": "HeightsActiveSingelots9.14.csv",
         "source_row": 3,
         "source_sha256": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
-        "exclusion": null
+        "exclusion": null,
+        "listing_details_as_of": "2026-09-14",
+        "status_evidence": {
+          "kind": "user_confirmation_and_HAR_screenshot",
+          "observed": "2026-09-28",
+          "status": "Under Contract - OP",
+          "url": "https://www.har.com/homedetail/1109-tabor-st-houston-tx-77009/2993676",
+          "screenshot": "Screenshot 2026-09-28 at 11.26.24\u202fAM.png",
+          "sha256": "074267a800f4ab6298a1146102f3d432a2bf3348a14ff33410a1ecde150fefb5",
+          "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+        }
       },
       "history": [
         {
@@ -84546,7 +84576,7 @@
         }
       ],
       "ordering_issue": null,
-      "chronology": "Observed status from September 28 exports; current active listings take precedence over earlier failed listings. Non-sold event dates remain unavailable."
+      "chronology": "Option Pending confirmed by user and supplied HAR screenshot on 2026-09-28; contract effective date not supplied."
     },
     "act_111-e-18": {
       "status": "sold",
@@ -85262,11 +85292,11 @@
       "chronology": "Observed status from September 28 exports; current active listings take precedence over earlier failed listings. Non-sold event dates remain unavailable."
     },
     "act_1140-waverly": {
-      "status": "active",
+      "status": "pending",
       "current": {
         "mls": "57009282",
-        "status": "active",
-        "har_status": "Active",
+        "status": "pending",
+        "har_status": "Option Pending",
         "address": "1140 Waverly Street",
         "address_key": "1140 waverly st",
         "original_list_price": 2400000.0,
@@ -85281,16 +85311,26 @@
         "building_sqft": 4416.0,
         "lat": 29.792244,
         "lng": -95.40431,
-        "as_of": "2026-09-14",
+        "as_of": "2026-09-28",
         "source_file": "HeightsActiveSingelots9.14.csv",
         "source_row": 36,
         "source_sha256": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
-        "exclusion": null
+        "exclusion": null,
+        "listing_details_as_of": "2026-09-14",
+        "status_evidence": {
+          "kind": "user_confirmation_and_HAR_screenshot",
+          "observed": "2026-09-28",
+          "status": "Under Contract - OP",
+          "url": "https://www.har.com/homedetail/1140-waverly-st-houston-tx-77008/2975706",
+          "screenshot": "Screenshot 2026-09-28 at 11.26.40\u202fAM.png",
+          "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
+          "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+        }
       },
       "history": [],
       "failed_listings": [],
       "ordering_issue": null,
-      "chronology": "Status precedence; non-sold event dates absent from export"
+      "chronology": "Option Pending confirmed by user and supplied HAR screenshot on 2026-09-28; contract effective date not supplied."
     },
     "act_116-e-23rd-street": {
       "status": "pending",
@@ -130478,11 +130518,11 @@
       "address": "1109 Tabor Street",
       "phase": "mep_finals",
       "product": "Single Lot",
-      "status": "active",
+      "status": "pending",
       "current": {
         "mls": "23786126",
-        "status": "active",
-        "har_status": "Active",
+        "status": "pending",
+        "har_status": "Option Pending",
         "address": "1109 Tabor Street",
         "address_key": "1109 tabor st",
         "original_list_price": 1175000.0,
@@ -130497,11 +130537,21 @@
         "building_sqft": 3384.0,
         "lat": 29.801633,
         "lng": -95.377438,
-        "as_of": "2026-09-14",
+        "as_of": "2026-09-28",
         "source_file": "HeightsActiveSingelots9.14.csv",
         "source_row": 3,
         "source_sha256": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
-        "exclusion": null
+        "exclusion": null,
+        "listing_details_as_of": "2026-09-14",
+        "status_evidence": {
+          "kind": "user_confirmation_and_HAR_screenshot",
+          "observed": "2026-09-28",
+          "status": "Under Contract - OP",
+          "url": "https://www.har.com/homedetail/1109-tabor-st-houston-tx-77009/2993676",
+          "screenshot": "Screenshot 2026-09-28 at 11.26.24\u202fAM.png",
+          "sha256": "074267a800f4ab6298a1146102f3d432a2bf3348a14ff33410a1ecde150fefb5",
+          "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+        }
       },
       "history": [
         {
@@ -130533,7 +130583,8 @@
       "archive_current": null,
       "ordering_issue": null,
       "category": "custom",
-      "in_supply": false
+      "in_supply": false,
+      "identity_note": "Option Pending confirmed from HAR screenshot on 2026-09-28. Other listing details retained from 2026-09-14."
     },
     {
       "member": "act_1315-waverly",
@@ -132798,11 +132849,11 @@
       "address": "1140 Waverly Street",
       "phase": "interior",
       "product": "Single Lot",
-      "status": "active",
+      "status": "pending",
       "current": {
         "mls": "57009282",
-        "status": "active",
-        "har_status": "Active",
+        "status": "pending",
+        "har_status": "Option Pending",
         "address": "1140 Waverly Street",
         "address_key": "1140 waverly st",
         "original_list_price": 2400000.0,
@@ -132817,18 +132868,29 @@
         "building_sqft": 4416.0,
         "lat": 29.792244,
         "lng": -95.40431,
-        "as_of": "2026-09-14",
+        "as_of": "2026-09-28",
         "source_file": "HeightsActiveSingelots9.14.csv",
         "source_row": 36,
         "source_sha256": "2c240610cfe787fb633d23cc3e6d48d3bdad97c78f9edf92d8ef49d58b20704f",
-        "exclusion": null
+        "exclusion": null,
+        "listing_details_as_of": "2026-09-14",
+        "status_evidence": {
+          "kind": "user_confirmation_and_HAR_screenshot",
+          "observed": "2026-09-28",
+          "status": "Under Contract - OP",
+          "url": "https://www.har.com/homedetail/1140-waverly-st-houston-tx-77008/2975706",
+          "screenshot": "Screenshot 2026-09-28 at 11.26.40\u202fAM.png",
+          "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
+          "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+        }
       },
       "history": [],
       "historical_sales": [],
       "archive_current": null,
       "ordering_issue": null,
       "category": null,
-      "in_supply": true
+      "in_supply": true,
+      "identity_note": "Option Pending confirmed from HAR screenshot on 2026-09-28. Other listing details retained from 2026-09-14."
     },
     {
       "member": "act_1126-e-7-12",

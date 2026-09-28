@@ -406,6 +406,38 @@
    "disposition": "terminated",
    "mls": "68235642",
    "close_date": null
+  },
+  {
+   "id": "act_1109-tabor",
+   "a": "1109 Tabor Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "mls": "23786126",
+   "status_evidence": {
+    "kind": "user_confirmation_and_HAR_screenshot",
+    "observed": "2026-09-28",
+    "status": "Under Contract - OP",
+    "url": "https://www.har.com/homedetail/1109-tabor-st-houston-tx-77009/2993676",
+    "screenshot": "Screenshot 2026-09-28 at 11.26.24 AM.png",
+    "sha256": "074267a800f4ab6298a1146102f3d432a2bf3348a14ff33410a1ecde150fefb5",
+    "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+   }
+  },
+  {
+   "id": "act_1140-waverly",
+   "a": "1140 Waverly Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "mls": "57009282",
+   "status_evidence": {
+    "kind": "user_confirmation_and_HAR_screenshot",
+    "observed": "2026-09-28",
+    "status": "Under Contract - OP",
+    "url": "https://www.har.com/homedetail/1140-waverly-st-houston-tx-77008/2975706",
+    "screenshot": "Screenshot 2026-09-28 at 11.26.40 AM.png",
+    "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
+    "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+   }
   }
  ],
  "relisted": [
@@ -452,7 +484,7 @@
  "dispositionUpdates": {},
  "counts": {
   "matched": 58,
-  "dropped": 42,
+  "dropped": 44,
   "relisted": 1,
   "new": 1,
   "excluded": 3
@@ -577,19 +609,41 @@
     "mls": "64725189",
     "address": "1016 E 27 th Street",
     "issue": "AMBIGUOUS_IDENTITY"
-   },
-   {
-    "member": "act_1109-tabor",
-    "address": "1109 Tabor Street",
-    "mls": "23786126",
-    "reason": "Prior active MLS absent from status export; other terminated MLS does not prove its disposition"
-   },
-   {
-    "member": "act_1140-waverly",
-    "address": "1140 Waverly Street",
-    "mls": "57009282",
-    "reason": "Prior active MLS absent from both September 28 exports; current status unverified"
    }
   ]
- }
+ },
+ "status_confirmations": [
+  {
+   "member": "act_1109-tabor",
+   "address": "1109 Tabor Street",
+   "before": "active",
+   "after": "pending",
+   "har_status": "Option Pending",
+   "evidence": {
+    "kind": "user_confirmation_and_HAR_screenshot",
+    "observed": "2026-09-28",
+    "status": "Under Contract - OP",
+    "url": "https://www.har.com/homedetail/1109-tabor-st-houston-tx-77009/2993676",
+    "screenshot": "Screenshot 2026-09-28 at 11.26.24 AM.png",
+    "sha256": "074267a800f4ab6298a1146102f3d432a2bf3348a14ff33410a1ecde150fefb5",
+    "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+   }
+  },
+  {
+   "member": "act_1140-waverly",
+   "address": "1140 Waverly Street",
+   "before": "active",
+   "after": "pending",
+   "har_status": "Option Pending",
+   "evidence": {
+    "kind": "user_confirmation_and_HAR_screenshot",
+    "observed": "2026-09-28",
+    "status": "Under Contract - OP",
+    "url": "https://www.har.com/homedetail/1140-waverly-st-houston-tx-77008/2975706",
+    "screenshot": "Screenshot 2026-09-28 at 11.26.40 AM.png",
+    "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
+    "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
+   }
+  }
+ ]
 }
