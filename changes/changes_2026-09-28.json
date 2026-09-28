@@ -119,12 +119,13 @@
    "close_date": null
   },
   {
-   "id": "act_112-e-27th-street",
-   "a": "112 E 27th Street",
+   "id": "pmt_112-e-27th-st-a-77008",
+   "a": "112 E 27th St A, Houston, TX 77008",
    "ty": "split",
    "disposition": "under contract",
    "mls": "34333707",
-   "close_date": null
+   "close_date": null,
+   "identity_source": "Existing client determination for MLS 34333707"
   },
   {
    "id": "act_116-e-23rd-street",
@@ -485,11 +486,12 @@
     "mls": "54747421"
    },
    {
-    "member": "act_112-e-27th-street",
-    "address": "112 E 27th Street",
+    "member": "pmt_112-e-27th-st-a-77008",
+    "address": "112 E 27th St A",
     "before": "active",
     "after": "pending",
-    "mls": "34333707"
+    "mls": "34333707",
+    "identity_source": "Existing client determination for MLS 34333707"
    },
    {
     "member": "pmt_310-w-9th-st-77007",
