@@ -1,11 +1,13 @@
 {
  "date": "2026-09-28",
- "kind": "active_listing_refresh",
+ "kind": "active_and_status_refresh",
  "sources": [
-  "HAR_Export (2).csv"
+  "HAR_Export (2).csv",
+  "HAR_Export (3).csv"
  ],
  "source_hashes": {
-  "HAR_Export (2).csv": "ea828afbaa9f8e976164d407e8f0ece73b80ef5101b4842a3b2fb0ff10b140b2"
+  "HAR_Export (2).csv": "ea828afbaa9f8e976164d407e8f0ece73b80ef5101b4842a3b2fb0ff10b140b2",
+  "HAR_Export (3).csv": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240"
  },
  "matchedIds": [
   "act_1303-cordell-street-unit-b",
@@ -67,7 +69,344 @@
   "act_248-w-22",
   "act_2434-white-oak"
  ],
- "dropped": [],
+ "dropped": [
+  {
+   "id": "act_409-walton-street-unit-b",
+   "a": "409 Walton Street Unit#B",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "54747421",
+   "close_date": null
+  },
+  {
+   "id": "pmt_807-w-22nd-st-77008",
+   "a": "807 W 22nd St, Houston, TX 77008",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "44304073",
+   "close_date": null
+  },
+  {
+   "id": "act_1434-alexander-street",
+   "a": "1434 Alexander Street",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "61282363",
+   "close_date": null
+  },
+  {
+   "id": "act_816-w-17th-street",
+   "a": "816 W 17TH Street",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "81354398",
+   "close_date": null
+  },
+  {
+   "id": "act_814-w-17th-street",
+   "a": "814 W 17TH Street",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "62144090",
+   "close_date": null
+  },
+  {
+   "id": "2131186599",
+   "a": "314 W 21st St, Houston, Tx 77008",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "32141788",
+   "close_date": null
+  },
+  {
+   "id": "act_112-e-27th-street",
+   "a": "112 E 27th Street",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "34333707",
+   "close_date": null
+  },
+  {
+   "id": "act_116-e-23rd-street",
+   "a": "116 E 23RD Street",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "81689864",
+   "close_date": null
+  },
+  {
+   "id": "act_710-waverly-street-unit-d",
+   "a": "710 Waverly Street Unit#D",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "32352560",
+   "close_date": null
+  },
+  {
+   "id": "act_1315-waverly",
+   "a": "1315 Waverly Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "mls": "62006938",
+   "close_date": null
+  },
+  {
+   "id": "pmt_310-w-9th-st-77007",
+   "a": "310 W 9th St, Houston, TX 77007",
+   "ty": "split",
+   "disposition": "under contract",
+   "mls": "86623183",
+   "close_date": null
+  },
+  {
+   "id": "act_2015-harvard",
+   "a": "2015 Harvard Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "mls": "7670973",
+   "close_date": null
+  },
+  {
+   "id": "act_1113-voight",
+   "a": "1113 Voight Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "mls": "40388055",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1246-omar-st-77008",
+   "a": "1246 Omar St, Houston, TX 77008",
+   "ty": "single",
+   "disposition": "under contract",
+   "mls": "54607823",
+   "close_date": null
+  },
+  {
+   "id": "act_1208-e-26th-street-unit-a",
+   "a": "1208 E 26th Street Unit#A",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "58591599",
+   "close_date": "2026-09-17"
+  },
+  {
+   "id": "act_1122-e-27th-st-unit-b",
+   "a": "1122 E 27TH ST Unit#B",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "92767147",
+   "close_date": "2026-07-24"
+  },
+  {
+   "id": "act_1229-prince-street",
+   "a": "1229 Prince Street",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "97105255",
+   "close_date": "2026-07-17"
+  },
+  {
+   "id": "act_406-e-28th-street",
+   "a": "406 E 28th Street",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "77501317",
+   "close_date": "2026-06-30"
+  },
+  {
+   "id": "act_1436-alexander-st",
+   "a": "1436 Alexander St",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "5279771",
+   "close_date": "2026-07-01"
+  },
+  {
+   "id": "act_1324-lawrence-street",
+   "a": "1324 Lawrence Street",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "10396812",
+   "close_date": "2026-08-28"
+  },
+  {
+   "id": "act_1326-lawrence-street",
+   "a": "1326 Lawrence Street",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "16373769",
+   "close_date": "2026-07-31"
+  },
+  {
+   "id": "act_827-w-16th-street-unit-a",
+   "a": "827 W 16th Street Unit#A",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "89555500",
+   "close_date": "2026-09-18"
+  },
+  {
+   "id": "act_1207-tabor",
+   "a": "1207 Tabor Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "85478626",
+   "close_date": "2026-08-31"
+  },
+  {
+   "id": "act_815-lawrence-street-unit-a",
+   "a": "815 Lawrence Street Unit#A",
+   "ty": "split",
+   "disposition": "sold",
+   "mls": "93385395",
+   "close_date": "2026-07-14"
+  },
+  {
+   "id": "act_111-e-18",
+   "a": "111 E 18th Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "74950038",
+   "close_date": "2026-09-11"
+  },
+  {
+   "id": "act_107-e-24",
+   "a": "107 E 24th Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "95407673",
+   "close_date": "2026-07-20"
+  },
+  {
+   "id": "act_1520-nicholson",
+   "a": "1520 Nicholson Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "33839156",
+   "close_date": "2026-08-01"
+  },
+  {
+   "id": "act_710-e-18",
+   "a": "710 E 18th Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "71056150",
+   "close_date": "2026-07-27"
+  },
+  {
+   "id": "act_826-ralfallen",
+   "a": "826 Ralfallen Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "88173016",
+   "close_date": "2026-08-26"
+  },
+  {
+   "id": "act_709-ridge",
+   "a": "709 Ridge Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "26903565",
+   "close_date": "2026-07-15"
+  },
+  {
+   "id": "2131432164",
+   "a": "709 E 17th St, Houston, Tx 77008",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "72560168",
+   "close_date": "2026-08-24"
+  },
+  {
+   "id": "act_1023-euclid",
+   "a": "1023 Euclid Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "35621139",
+   "close_date": "2026-09-04"
+  },
+  {
+   "id": "act_1116-highland",
+   "a": "1116 Highland Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "42468659",
+   "close_date": "2026-09-09"
+  },
+  {
+   "id": "act_1126-e-7-12",
+   "a": "1126 E 7th 1/2 Street",
+   "ty": "single",
+   "disposition": "sold",
+   "mls": "95336494",
+   "close_date": "2026-09-16"
+  },
+  {
+   "id": "act_1520-w-21st-st-unit-b",
+   "a": "1520 W 21st St Unit#B",
+   "ty": "split",
+   "disposition": "terminated",
+   "mls": "91497078",
+   "close_date": null
+  },
+  {
+   "id": "2131318242",
+   "a": "1120 E 26th St, Houston, Tx 77009",
+   "ty": "split",
+   "disposition": "terminated",
+   "mls": "29146166",
+   "close_date": null
+  },
+  {
+   "id": "act_833-w-25th-street",
+   "a": "833 W 25th Street",
+   "ty": "split",
+   "disposition": "terminated",
+   "mls": "86826256",
+   "close_date": null
+  },
+  {
+   "id": "act_227-e-26th-street",
+   "a": "227 E 26th Street",
+   "ty": "split",
+   "disposition": "terminated",
+   "mls": "18510291",
+   "close_date": null
+  },
+  {
+   "id": "act_615-wendel-street",
+   "a": "615 Wendel Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "mls": "55016263",
+   "close_date": null
+  },
+  {
+   "id": "act_1011-e-25",
+   "a": "1011 E 25th Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "mls": "93906672",
+   "close_date": null
+  },
+  {
+   "id": "act_231-e-26",
+   "a": "231 E 26th Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "mls": "39622259",
+   "close_date": null
+  },
+  {
+   "id": "act_2436-white-oak",
+   "a": "2436 White Oak",
+   "ty": "single",
+   "disposition": "terminated",
+   "mls": "68235642",
+   "close_date": null
+  }
+ ],
  "relisted": [
   {
    "id": "act_1520-w-21st-st-unit-a",
@@ -112,9 +451,143 @@
  "dispositionUpdates": {},
  "counts": {
   "matched": 58,
-  "dropped": 0,
+  "dropped": 42,
   "relisted": 1,
   "new": 1,
   "excluded": 3
+ },
+ "status_refresh": {
+  "profile": {
+   "rows": 100,
+   "columns": 27,
+   "statuses": {
+    "Pending": 14,
+    "Sold": 20,
+    "Withdrawn": 1,
+    "Expired": 5,
+    "Terminated": 55,
+    "Terminated-Relisted": 5
+   },
+   "unique_mls": 100,
+   "lot_products": {
+    "Split Lot": 52,
+    "Single Lot": 48
+   },
+   "close_min": "2026-06-30",
+   "close_max": "2026-09-18"
+  },
+  "transitions": [
+   {
+    "member": "act_409-walton-street-unit-b",
+    "address": "409 Walton Street Unit#B",
+    "before": "active",
+    "after": "pending",
+    "mls": "54747421"
+   },
+   {
+    "member": "act_112-e-27th-street",
+    "address": "112 E 27th Street",
+    "before": "active",
+    "after": "pending",
+    "mls": "34333707"
+   },
+   {
+    "member": "pmt_310-w-9th-st-77007",
+    "address": "310 W 9th St, Houston, TX 77007",
+    "before": null,
+    "after": "pending",
+    "mls": "86623183"
+   },
+   {
+    "member": "act_2015-harvard",
+    "address": "2015 Harvard Street",
+    "before": "active",
+    "after": "pending",
+    "mls": "7670973"
+   },
+   {
+    "member": "act_1208-e-26th-street-unit-a",
+    "address": "1208 E 26th Street Unit#A",
+    "before": "pending",
+    "after": "sold",
+    "mls": "58591599"
+   },
+   {
+    "member": "act_827-w-16th-street-unit-a",
+    "address": "827 W 16th Street Unit#A",
+    "before": "pending",
+    "after": "sold",
+    "mls": "89555500"
+   },
+   {
+    "member": "act_111-e-18",
+    "address": "111 E 18th Street",
+    "before": "pending",
+    "after": "sold",
+    "mls": "74950038"
+   },
+   {
+    "member": "act_1126-e-7-12",
+    "address": "1126 E 7th 1/2 Street",
+    "before": "pending",
+    "after": "sold",
+    "mls": "95336494"
+   },
+   {
+    "member": "2131318242",
+    "address": "1120 E 26th St, Houston, Tx 77009",
+    "before": "active",
+    "after": "terminated",
+    "mls": "29146166"
+   },
+   {
+    "member": "act_615-wendel-street",
+    "address": "615 Wendel Street",
+    "before": "active",
+    "after": "terminated",
+    "mls": "55016263"
+   },
+   {
+    "member": "act_2436-white-oak",
+    "address": "2436 White Oak",
+    "before": "active",
+    "after": "terminated",
+    "mls": "68235642"
+   }
+  ],
+  "unresolved": [
+   {
+    "mls": "15967458",
+    "address": "112 E 27th Street Unit#B",
+    "issue": "AMBIGUOUS_COORDINATE"
+   },
+   {
+    "mls": "31296604",
+    "address": "1202 Aurora Street",
+    "issue": "NOT_TRACKED"
+   },
+   {
+    "mls": "87531713",
+    "address": "2320 Lawrence Street",
+    "issue": "NOT_TRACKED"
+   },
+   {
+    "mls": "64725189",
+    "address": "1016 E 27 th Street",
+    "issue": "AMBIGUOUS_IDENTITY"
+   },
+   {
+    "member": "act_1109-tabor",
+    "address": "1109 Tabor Street",
+    "mls": "23786126",
+    "reason": "Prior active MLS absent from status export; other terminated MLS does not prove its disposition"
+   },
+   {
+    "member": "act_1140-waverly",
+    "address": "1140 Waverly Street",
+    "mls": "57009282",
+    "reason": "Prior active MLS absent from both September 28 exports; current status unverified"
+   }
+  ]
  }
 }
