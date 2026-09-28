@@ -51,6 +51,7 @@ function marketFacts(r){
     if(c){
       if(c.har_status)h+='<br>HAR status: '+esc(c.har_status);
       h+='<br>MLS '+esc(c.mls)+(PANEL_RESTRUCTURED?'':' · '+esc(c.product));
+      if(c.status==='active'&&Number(c.current_list_price)>0)h+='<br>Current asking price: $'+Number(c.current_list_price).toLocaleString();
       h+='<br>Original list price: $'+Number(c.original_list_price).toLocaleString()+' · DOM: '+c.dom+' days';
       if(c.close_date)h+='<br>Closed '+esc(c.close_date)+' · $'+Number(c.close_price).toLocaleString();
       else h+='<br>Observed '+esc(c.as_of)+' · status-change date not supplied';
@@ -66,7 +67,7 @@ function marketFacts(r){
     if(e.historical_sales?.length)h+='<details><summary>Sale archive · '+e.historical_sales.length+'</summary>'+e.historical_sales.map(s=>'<div>'+esc(s.cd)+' · MLS '+esc(s.id.slice(1))+' · $'+Number(s.cp).toLocaleString()+'</div>').join('')+'</details>';
     h+='</div>';
   }
-  h+='<div class="pmeta" style="margin-top:8px">Original list price is not a verified current asking price. Historical event dates are unavailable for non-sold listings.'+(r._twin?' Construction evidence below belongs to the paired project.':'')+'</div></section>';
+  h+='<div class="pmeta" style="margin-top:8px">Current asking price is shown when supplied in the dated export. Original list price is retained separately. Historical event dates are unavailable for non-sold listings.'+(r._twin?' Construction evidence below belongs to the paired project.':'')+'</div></section>';
   return h;
 }
 const marketOriginalPopup=popupHTML;
