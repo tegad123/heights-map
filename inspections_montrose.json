@@ -636,8 +636,8 @@
   },
   "25089084": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4534 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -677,8 +677,8 @@
   },
   "25121137": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "720 PEDEN ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -734,8 +734,8 @@
   },
   "25089118": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4518 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -759,8 +759,8 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -807,8 +807,8 @@
   },
   "25075531": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "419 LOVETT BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1041,8 +1041,8 @@
   },
   "25089111": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4520 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1162,8 +1162,8 @@
   },
   "25086165": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1601 VERMONT ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -1483,8 +1483,8 @@
   },
   "25089148": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4532 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1516,8 +1516,8 @@
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -1830,8 +1830,8 @@
   },
   "25116922": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1819 BRANARD ST 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2015,16 +2015,16 @@
         "type": "Driveway AM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Sidewalk AM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2618,8 +2618,8 @@
   },
   "23068821": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1016 RUTHVEN ST B 77019",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -2898,9 +2898,9 @@
     ]
   },
   "25094784": {
-    "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1107 WILSON ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3035,17 +3035,17 @@
       {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
-        "date": "2026-09-04",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-09-04",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3677,8 +3677,8 @@
   },
   "25114777": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "2413 BRUN ST A 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3854,8 +3854,8 @@
         "type": "P1 FINAL",
         "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-09-25",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -4070,8 +4070,8 @@
   },
   "25108616": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "2202 HULDY ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4271,8 +4271,8 @@
   },
   "26018493": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1514 TAFT ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4319,7 +4319,7 @@
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-09-24",
+        "date": "2026-09-28",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -4409,8 +4409,8 @@
   },
   "26024759": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "416 W Saulnier St, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4418,8 +4418,8 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -4450,8 +4450,8 @@
   },
   "26025196": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "412 W Saulnier St, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4459,8 +4459,8 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6301,8 +6301,8 @@
   },
   "25099983": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "3412 AUDUBON PLACE 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6427,6 +6427,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "ROUGH",
         "permit_type": "E1-ADDL-ELECT",
         "date": "2026-07-06",
@@ -6462,8 +6470,8 @@
   },
   "25089108": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4526 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6575,8 +6583,8 @@
   },
   "25089097": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4524 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6696,8 +6704,8 @@
   },
   "25089091": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4512 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6834,8 +6842,8 @@
   },
   "25065678": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1415 HAROLD ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -7195,8 +7203,8 @@
   },
   "25099835": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1312 VASSAR ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7332,8 +7340,8 @@
   },
   "25089112": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4522 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7453,8 +7461,8 @@
   },
   "25086166": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1603 VERMONT ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -8047,8 +8055,8 @@
   },
   "26034562": {
     "status": "None",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4404 YUPON ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": []
@@ -8787,8 +8795,8 @@
   },
   "25116556": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1820 BRANARD ST 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -8982,6 +8990,14 @@
         "date": "2026-02-17",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-09-28",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -9615,8 +9631,8 @@
   },
   "25106917": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1918 HULDY ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -9824,8 +9840,8 @@
   },
   "25114778": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "2413 BRUN ST B 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -9993,8 +10009,8 @@
         "type": "P1 FINAL",
         "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-09-25",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -10331,8 +10347,8 @@
   },
   "25113200": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4813 Milam St, Houston, TX 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -11887,8 +11903,8 @@
   },
   "25024203": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1644 BONNIE BRAE ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -12329,8 +12345,8 @@
   },
   "25089109": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4528 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12467,8 +12483,8 @@
   },
   "25089092": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4514 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12516,8 +12532,8 @@
   },
   "25075652": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1202 W DREW ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -13021,8 +13037,8 @@
   },
   "25082179": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1634 CASTLE CT 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -13318,8 +13334,8 @@
   },
   "25112747": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1223 W DREW ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -13526,7 +13542,7 @@
       {
         "type": "15 Final",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-07-27",
+        "date": "2026-09-25",
         "result": "Failed",
         "raw": "Correction Necessary",
         "inspector": ""
@@ -13744,8 +13760,8 @@
   },
   "25075844": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4317 ROSELAND ST A 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -14194,8 +14210,8 @@
   },
   "26043480": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1218 BOMAR ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14267,8 +14283,8 @@
   },
   "26005250": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1916 HAWTHORNE ST 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14315,9 +14331,9 @@
       {
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
-        "date": "2026-09-22",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-28",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -14549,8 +14565,8 @@
   },
   "25098743": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4207 DRISCOLL ST 77098",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -14822,8 +14838,8 @@
   },
   "25116555": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1818 BRANARD ST 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15012,6 +15028,14 @@
         "inspector": ""
       },
       {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-09-28",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "TEMP GAS INSP",
         "permit_type": "*PG*TEMP GAS",
         "date": "2026-07-16",
@@ -15031,8 +15055,8 @@
   },
   "25112651": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1802 PORTSMOUTH ST D 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15135,9 +15159,9 @@
     ]
   },
   "26043369": {
-    "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1744 NORFOLK ST 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15174,6 +15198,14 @@
         "inspector": ""
       },
       {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-28",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-09-18",
@@ -15193,8 +15225,8 @@
   },
   "26002697": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "2027 FAIRVIEW ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15241,7 +15273,7 @@
       {
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-09-24",
+        "date": "2026-09-28",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -15563,8 +15595,8 @@
   },
   "25090429": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1906 DRISCOLL ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15868,8 +15900,8 @@
   },
   "25092208": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "2412 ELMEN ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -16471,8 +16503,8 @@
   },
   "25098278": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1408 Indiana St B, Houston, TX 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -18259,8 +18291,8 @@
   },
   "25024204": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1642 BONNIE BRAE ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -18516,8 +18548,8 @@
   },
   "26013758": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1323 SOUTH BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -18527,6 +18559,14 @@
         "date": "2026-09-21",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-28",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       }
     ]
@@ -18838,8 +18878,8 @@
   },
   "26003096": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1828 FAIRVIEW ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19031,8 +19071,8 @@
   },
   "25089117": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "4516 YOAKUM BLVD 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19056,8 +19096,8 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -19096,8 +19136,8 @@
   },
   "26011549": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1304 WELCH ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19137,8 +19177,8 @@
   },
   "25082180": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1636 CASTLE CT 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -19426,8 +19466,8 @@
   },
   "25080759": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1501 BONNIE BRAE ST 77006",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -19915,8 +19955,8 @@
   },
   "25048142": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1604 SUL ROSS ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20149,8 +20189,8 @@
   },
   "25120080": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1246 PEDEN ST B 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20270,8 +20310,8 @@
   },
   "26043584": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "608 PEDEN ST 77006",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20295,16 +20335,16 @@
   },
   "26015553": {
     "status": "None",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1831 BRANARD ST 77098",
     "final_project_inspection_outstanding": true,
     "inspections": []
   },
   "25087507": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1959 RICHMOND AVE 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20649,8 +20689,8 @@
   },
   "25116311": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1822 BRANARD ST A 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20794,8 +20834,8 @@
         "type": "GRILLE SEAL",
         "permit_type": "HVAC Permit",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -20810,8 +20850,8 @@
   },
   "25112652": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1802 PORTSMOUTH ST C 77098",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21277,8 +21317,8 @@
   },
   "25094786": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1103 WILSON ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21840,8 +21880,8 @@
   },
   "26018492": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "314 W GRAY ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21929,8 +21969,8 @@
   },
   "26030766": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1510 STANFORD ST 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21970,8 +22010,8 @@
   },
   "26024758": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "418 W Saulnier St, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21979,8 +22019,8 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -22019,8 +22059,8 @@
   },
   "26025195": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "410 W Saulnier St, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22028,8 +22068,8 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -24022,8 +24062,8 @@
   },
   "26070372": {
     "status": "None",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-09-28",
+    "scraped_at": "2026-09-28",
     "address": "1929 Lexington St, Houston, TX 77098",
     "final_project_inspection_outstanding": true,
     "inspections": []
