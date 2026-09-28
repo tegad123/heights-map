@@ -49,9 +49,9 @@
    "date": "2026-09-28",
    "counts": {
     "matched": 58,
-    "dropped": 44,
+    "dropped": 48,
     "relisted": 1,
-    "new": 1,
+    "new": 3,
     "excluded": 3
    }
   }

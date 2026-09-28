@@ -371,6 +371,14 @@ def fold_events(changes=None):
             off.pop(r['id'], None)
         for k, v in c.get('dispositionUpdates', {}).items():
             disp[k] = (v, c['date'])
+        # Archived duplicate identities retain history but must not create a second
+        # reconciliation/CSV row for the canonical property.
+        for archived in c.get('archived_duplicates', []):
+            old_id = archived['record']['id']
+            if old_id == archived['canonical']:
+                raise ValueError('Duplicate archive cannot retire its canonical id')
+            for bucket in (off, rel, disp, ddate):
+                bucket.pop(old_id, None)
     pend = {i: off.pop(i) for i in [i for i in off
             if disp.get(i, ('', ''))[0] == 'under contract']}
     return off, rel, pend, disp, ddate

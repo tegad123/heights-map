@@ -6353,6 +6353,11 @@
         "Latitude": "29.811144",
         "School Elementary": "HELMS ELEMENTARY SCHOOL",
         "Current Price": "999990"
+      },
+      "status_confirmation": {
+        "source": "client confirmation and supplied HAR export",
+        "date": "2026-09-28",
+        "reason": "Client confirmed property identity/location and status for map purposes"
       }
     },
     {
@@ -19677,6 +19682,11 @@
         "Latitude": "29.809734",
         "School Elementary": "FIELD ELEMENTARY SCHOOL",
         "Current Price": "825000"
+      },
+      "status_confirmation": {
+        "source": "client confirmation and supplied HAR export",
+        "date": "2026-09-28",
+        "reason": "Client confirmed property identity/location and status for map purposes"
       }
     },
     {
@@ -51345,6 +51355,11 @@
         "Latitude": "29.81138",
         "School Elementary": "FIELD ELEMENTARY SCHOOL",
         "Current Price": "1389999"
+      },
+      "status_confirmation": {
+        "source": "client confirmation and supplied HAR export",
+        "date": "2026-09-28",
+        "reason": "Client confirmed property identity/location and status for map purposes"
       }
     },
     {
@@ -72066,6 +72081,11 @@
         "Latitude": "29.807737",
         "School Elementary": "HELMS ELEMENTARY SCHOOL",
         "Current Price": "869000"
+      },
+      "status_confirmation": {
+        "source": "client confirmation and supplied HAR export",
+        "date": "2026-09-28",
+        "reason": "Client confirmed property identity/location and status for map purposes"
       }
     },
     {
@@ -84848,67 +84868,6 @@
       "ordering_issue": null,
       "chronology": "Status precedence; non-sold event dates absent from export"
     },
-    "act_112-e-27th-street": {
-      "status": "pending",
-      "current": {
-        "mls": "34333707",
-        "status": "pending",
-        "har_status": "Pending",
-        "address": "112 E 27th Street",
-        "address_key": "112 27th st e",
-        "original_list_price": 999000.0,
-        "current_list_price": null,
-        "close_price": null,
-        "close_date": null,
-        "dom": 56.0,
-        "lot_sqft": 3000.0,
-        "product": "Split Lot",
-        "builder": "J. Christopher Builders",
-        "year_built": 2026.0,
-        "building_sqft": 3000.0,
-        "lat": 29.811144,
-        "lng": -95.398197,
-        "as_of": "2026-09-28",
-        "source_file": "HAR_Export (3).csv",
-        "source_row": 8,
-        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
-        "exclusion": null
-      },
-      "history": [
-        {
-          "mls": "24673295",
-          "status": "terminated",
-          "har_status": "Terminated",
-          "address": "112 E 27th Street",
-          "address_key": "112 27th st e",
-          "original_list_price": 999990.0,
-          "current_list_price": null,
-          "close_price": null,
-          "close_date": null,
-          "dom": 149.0,
-          "lot_sqft": 3000.0,
-          "product": "Split Lot",
-          "builder": "J. Christopher Builders",
-          "year_built": 2026.0,
-          "building_sqft": 3000.0,
-          "lat": 29.811144,
-          "lng": -95.398197,
-          "as_of": "2026-09-28",
-          "source_file": "HAR_Export (3).csv",
-          "source_row": 65,
-          "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
-          "exclusion": null
-        }
-      ],
-      "failed_listings": [
-        {
-          "mls": "24673295",
-          "dom": 149.0
-        }
-      ],
-      "ordering_issue": null,
-      "chronology": "Observed status from September 28 exports; current active listings take precedence over earlier failed listings. Non-sold event dates remain unavailable."
-    },
     "act_1122-e-27th-st-unit-a": {
       "status": "active",
       "current": {
@@ -91591,42 +91550,6 @@
       "ordering_issue": "SAME_STATUS_DATES_UNAVAILABLE",
       "chronology": "Status precedence; non-sold event dates absent from export"
     },
-    "address:1016 27th st e": {
-      "status": "terminated",
-      "current": {
-        "mls": "64725189",
-        "status": "terminated",
-        "har_status": "Terminated",
-        "address": "1016 E 27 th Street",
-        "address_key": "1016 27th st e",
-        "original_list_price": 1389999.0,
-        "current_list_price": null,
-        "close_price": null,
-        "close_date": null,
-        "dom": 35.0,
-        "lot_sqft": 6000.0,
-        "product": "Single Lot",
-        "builder": "Titan Homes",
-        "year_built": 2025.0,
-        "building_sqft": 3521.0,
-        "lat": 29.81138,
-        "lng": -95.385515,
-        "as_of": "2026-09-14",
-        "source_file": "TerminatedExpiredLast180days9.14.csv",
-        "source_row": 72,
-        "source_sha256": "f19b0386a2c936666110d14b37b4b21e68a02150113c37e26cbbfab881f1719d",
-        "exclusion": null
-      },
-      "history": [],
-      "failed_listings": [
-        {
-          "mls": "64725189",
-          "dom": 35.0
-        }
-      ],
-      "ordering_issue": null,
-      "chronology": "Status precedence; non-sold event dates absent from export"
-    },
     "address:1016 alexander st": {
       "status": "sold",
       "current": {
@@ -94585,42 +94508,6 @@
       "ordering_issue": null,
       "chronology": "Status precedence; non-sold event dates absent from export"
     },
-    "address:112 27th st b e": {
-      "status": "terminated",
-      "current": {
-        "mls": "15967458",
-        "status": "terminated",
-        "har_status": "Withdrawn",
-        "address": "112 E 27th Street Unit#B",
-        "address_key": "112 27th st b e",
-        "original_list_price": 999990.0,
-        "current_list_price": null,
-        "close_price": null,
-        "close_date": null,
-        "dom": 0.0,
-        "lot_sqft": 3000.0,
-        "product": "Split Lot",
-        "builder": "J. Christopher Builders",
-        "year_built": 2026.0,
-        "building_sqft": 3000.0,
-        "lat": 29.811144,
-        "lng": -95.398197,
-        "as_of": "2026-09-14",
-        "source_file": "TerminatedExpiredLast180days9.14.csv",
-        "source_row": 3,
-        "source_sha256": "f19b0386a2c936666110d14b37b4b21e68a02150113c37e26cbbfab881f1719d",
-        "exclusion": null
-      },
-      "history": [],
-      "failed_listings": [
-        {
-          "mls": "15967458",
-          "dom": 0.0
-        }
-      ],
-      "ordering_issue": null,
-      "chronology": "Status precedence; non-sold event dates absent from export"
-    },
     "address:1122 16th st a w": {
       "status": "sold",
       "current": {
@@ -97572,99 +97459,6 @@
         {
           "mls": "53731234",
           "dom": 73.0
-        }
-      ],
-      "ordering_issue": "SAME_STATUS_DATES_UNAVAILABLE",
-      "chronology": "Status precedence; non-sold event dates absent from export"
-    },
-    "address:1202 aurora st": {
-      "status": "terminated",
-      "current": {
-        "mls": "32770417",
-        "status": "terminated",
-        "har_status": "Terminated",
-        "address": "1202 Aurora Street",
-        "address_key": "1202 aurora st",
-        "original_list_price": 999900.0,
-        "current_list_price": null,
-        "close_price": null,
-        "close_date": null,
-        "dom": 98.0,
-        "lot_sqft": 6000.0,
-        "product": "Single Lot",
-        "builder": "Del Vega Investments",
-        "year_built": 2025.0,
-        "building_sqft": 2317.0,
-        "lat": 29.809734,
-        "lng": -95.383535,
-        "as_of": "2026-09-10",
-        "source_file": "Everythingsince2023.csv",
-        "source_row": 1052,
-        "source_sha256": "1f82e7674f17961075d01690930ab28eb016cffe5b613f5ce61c67f66f21ae1b",
-        "exclusion": null
-      },
-      "history": [
-        {
-          "mls": "31296604",
-          "status": "terminated",
-          "har_status": "Withdrawn",
-          "address": "1202 Aurora Street",
-          "address_key": "1202 aurora st",
-          "original_list_price": 850000.0,
-          "current_list_price": null,
-          "close_price": null,
-          "close_date": null,
-          "dom": 156.0,
-          "lot_sqft": 6000.0,
-          "product": "Single Lot",
-          "builder": "Del Vega Investments",
-          "year_built": 2025.0,
-          "building_sqft": 2317.0,
-          "lat": 29.809734,
-          "lng": -95.383535,
-          "as_of": "2026-09-14",
-          "source_file": "TerminatedExpiredLast180days9.14.csv",
-          "source_row": 2,
-          "source_sha256": "f19b0386a2c936666110d14b37b4b21e68a02150113c37e26cbbfab881f1719d",
-          "exclusion": null
-        },
-        {
-          "mls": "19026953",
-          "status": "terminated",
-          "har_status": "Terminated",
-          "address": "1202 Aurora Street",
-          "address_key": "1202 aurora st",
-          "original_list_price": 999900.0,
-          "current_list_price": null,
-          "close_price": null,
-          "close_date": null,
-          "dom": 152.0,
-          "lot_sqft": 6000.0,
-          "product": "Single Lot",
-          "builder": "Del Vega Investments",
-          "year_built": 2025.0,
-          "building_sqft": 2317.0,
-          "lat": 29.809734,
-          "lng": -95.383535,
-          "as_of": "2026-09-10",
-          "source_file": "Everythingsince2023.csv",
-          "source_row": 1111,
-          "source_sha256": "1f82e7674f17961075d01690930ab28eb016cffe5b613f5ce61c67f66f21ae1b",
-          "exclusion": null
-        }
-      ],
-      "failed_listings": [
-        {
-          "mls": "32770417",
-          "dom": 98.0
-        },
-        {
-          "mls": "31296604",
-          "dom": 156.0
-        },
-        {
-          "mls": "19026953",
-          "dom": 152.0
         }
       ],
       "ordering_issue": "SAME_STATUS_DATES_UNAVAILABLE",
@@ -108264,42 +108058,6 @@
       },
       "history": [],
       "failed_listings": [],
-      "ordering_issue": null,
-      "chronology": "Status precedence; non-sold event dates absent from export"
-    },
-    "address:2320 lawrence st": {
-      "status": "terminated",
-      "current": {
-        "mls": "87531713",
-        "status": "terminated",
-        "har_status": "Terminated",
-        "address": "2320 Lawrence Street",
-        "address_key": "2320 lawrence st",
-        "original_list_price": 869000.0,
-        "current_list_price": null,
-        "close_price": null,
-        "close_date": null,
-        "dom": 50.0,
-        "lot_sqft": 2275.0,
-        "product": "Split Lot",
-        "builder": "Taila Homes",
-        "year_built": 2026.0,
-        "building_sqft": 2895.0,
-        "lat": 29.807737,
-        "lng": -95.40783,
-        "as_of": "2026-09-14",
-        "source_file": "TerminatedExpiredLast180days9.14.csv",
-        "source_row": 44,
-        "source_sha256": "f19b0386a2c936666110d14b37b4b21e68a02150113c37e26cbbfab881f1719d",
-        "exclusion": null
-      },
-      "history": [],
-      "failed_listings": [
-        {
-          "mls": "87531713",
-          "dom": 50.0
-        }
-      ],
       "ordering_issue": null,
       "chronology": "Status precedence; non-sold event dates absent from export"
     },
@@ -124847,6 +124605,269 @@
       "failed_listings": [],
       "ordering_issue": null,
       "chronology": "Observed status from September 28 exports; current active listings take precedence over earlier failed listings. Non-sold event dates remain unavailable."
+    },
+    "act_112-e-27th-street": {
+      "status": "terminated",
+      "current": {
+        "mls": "15967458",
+        "status": "terminated",
+        "har_status": "Withdrawn",
+        "address": "112 E 27th Street Unit#B",
+        "address_key": "112 27th st b e",
+        "original_list_price": 999990.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 0.0,
+        "lot_sqft": 3000.0,
+        "product": "Split Lot",
+        "builder": "J. Christopher Builders",
+        "year_built": 2026.0,
+        "building_sqft": 3000.0,
+        "lat": 29.811144,
+        "lng": -95.398197,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 36,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [],
+      "failed_listings": [],
+      "ordering_issue": null,
+      "chronology": "Current map status confirmed by client on 2026-09-28; effective event date not supplied."
+    },
+    "pmt_1016-e-27th-st-77009": {
+      "status": "terminated",
+      "current": {
+        "mls": "64725189",
+        "status": "terminated",
+        "har_status": "Terminated",
+        "address": "1016 E 27 th Street",
+        "address_key": "1016 27th st e",
+        "original_list_price": 1389999.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 35.0,
+        "lot_sqft": 6000.0,
+        "product": "Single Lot",
+        "builder": "Titan Homes",
+        "year_built": 2025.0,
+        "building_sqft": 3521.0,
+        "lat": 29.81138,
+        "lng": -95.385515,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 78,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [],
+      "failed_listings": [],
+      "ordering_issue": null,
+      "chronology": "Current map status confirmed by client on 2026-09-28; effective event date not supplied."
+    },
+    "act_1202-aurora-street": {
+      "status": "terminated",
+      "current": {
+        "mls": "31296604",
+        "status": "terminated",
+        "har_status": "Terminated",
+        "address": "1202 Aurora Street",
+        "address_key": "1202 aurora st",
+        "original_list_price": 850000.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 156.0,
+        "lot_sqft": 6000.0,
+        "product": "Single Lot",
+        "builder": "Del Vega Investments",
+        "year_built": 2025.0,
+        "building_sqft": 2317.0,
+        "lat": 29.809734,
+        "lng": -95.383535,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 54,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [
+        {
+          "mls": "19026953",
+          "status": "terminated",
+          "har_status": "Terminated",
+          "address": "1202 Aurora Street",
+          "address_key": "1202 aurora st",
+          "original_list_price": 999900.0,
+          "current_list_price": null,
+          "close_price": null,
+          "close_date": null,
+          "dom": 152.0,
+          "lot_sqft": 6000.0,
+          "product": "Single Lot",
+          "builder": "Del Vega Investments",
+          "year_built": 2025.0,
+          "building_sqft": 2317.0,
+          "lat": 29.809734,
+          "lng": -95.383535,
+          "as_of": "2026-09-10",
+          "source_file": "Everythingsince2023.csv",
+          "source_row": 1111,
+          "source_sha256": "1f82e7674f17961075d01690930ab28eb016cffe5b613f5ce61c67f66f21ae1b",
+          "exclusion": null
+        },
+        {
+          "mls": "32770417",
+          "status": "terminated",
+          "har_status": "Terminated",
+          "address": "1202 Aurora Street",
+          "address_key": "1202 aurora st",
+          "original_list_price": 999900.0,
+          "current_list_price": null,
+          "close_price": null,
+          "close_date": null,
+          "dom": 98.0,
+          "lot_sqft": 6000.0,
+          "product": "Single Lot",
+          "builder": "Del Vega Investments",
+          "year_built": 2025.0,
+          "building_sqft": 2317.0,
+          "lat": 29.809734,
+          "lng": -95.383535,
+          "as_of": "2026-09-10",
+          "source_file": "Everythingsince2023.csv",
+          "source_row": 1052,
+          "source_sha256": "1f82e7674f17961075d01690930ab28eb016cffe5b613f5ce61c67f66f21ae1b",
+          "exclusion": null
+        }
+      ],
+      "failed_listings": [
+        {
+          "mls": "19026953",
+          "dom": 152.0
+        },
+        {
+          "mls": "32770417",
+          "dom": 98.0
+        }
+      ],
+      "ordering_issue": null,
+      "chronology": "Current map status confirmed by client on 2026-09-28; effective event date not supplied."
+    },
+    "act_2320-lawrence-street": {
+      "status": "terminated",
+      "current": {
+        "mls": "87531713",
+        "status": "terminated",
+        "har_status": "Terminated",
+        "address": "2320 Lawrence Street",
+        "address_key": "2320 lawrence st",
+        "original_list_price": 869000.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 50.0,
+        "lot_sqft": 2275.0,
+        "product": "Split Lot",
+        "builder": "Taila Homes",
+        "year_built": 2026.0,
+        "building_sqft": 2895.0,
+        "lat": 29.807737,
+        "lng": -95.40783,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 56,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [],
+      "failed_listings": [],
+      "ordering_issue": null,
+      "chronology": "Current map status confirmed by client on 2026-09-28; effective event date not supplied."
+    },
+    "pmt_112-e-27th-st-a-77008": {
+      "status": "pending",
+      "current": {
+        "mls": "34333707",
+        "status": "pending",
+        "har_status": "Pending",
+        "address": "112 E 27th Street",
+        "address_key": "112 27th st e",
+        "original_list_price": 999000.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 56.0,
+        "lot_sqft": 3000.0,
+        "product": "Split Lot",
+        "builder": "J. Christopher Builders",
+        "year_built": 2026.0,
+        "building_sqft": 3000.0,
+        "lat": 29.811144,
+        "lng": -95.398197,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 8,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null
+      },
+      "history": [
+        {
+          "mls": "24673295",
+          "status": "terminated",
+          "har_status": "Terminated",
+          "address": "112 E 27th Street",
+          "address_key": "112 27th st e",
+          "original_list_price": 999990.0,
+          "current_list_price": null,
+          "close_price": null,
+          "close_date": null,
+          "dom": 149.0,
+          "lot_sqft": 3000.0,
+          "product": "Split Lot",
+          "builder": "J. Christopher Builders",
+          "year_built": 2026.0,
+          "building_sqft": 3000.0,
+          "lat": 29.811144,
+          "lng": -95.398197,
+          "as_of": "2026-09-28",
+          "source_file": "HAR_Export (3).csv",
+          "source_row": 65,
+          "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+          "exclusion": null
+        }
+      ],
+      "failed_listings": [
+        {
+          "mls": "24673295",
+          "dom": 149.0
+        }
+      ],
+      "ordering_issue": null,
+      "chronology": "Client confirmed unsuffixed MLS belongs to Unit A."
     }
   },
   "tracked": [
@@ -128696,21 +128717,6 @@
       "address": "112 E 27th St A, Houston, TX 77008",
       "phase": "complete",
       "product": "Split Lot",
-      "status": "no_record",
-      "current": null,
-      "history": [],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null,
-      "category": null,
-      "in_supply": false
-    },
-    {
-      "member": "act_112-e-27th-street",
-      "pin": "pmt_112-e-27th-st-a-77008",
-      "address": "112 E 27th Street",
-      "phase": "complete",
-      "product": "Split Lot",
       "status": "pending",
       "current": {
         "mls": "34333707",
@@ -128767,6 +128773,50 @@
       "ordering_issue": null,
       "category": null,
       "in_supply": false
+    },
+    {
+      "member": "act_112-e-27th-street",
+      "pin": "pmt_112-e-27th-st-a-77008",
+      "address": "112 E 27th Street Unit#B",
+      "phase": "complete",
+      "product": "Split Lot",
+      "status": "terminated",
+      "current": {
+        "mls": "15967458",
+        "status": "terminated",
+        "har_status": "Withdrawn",
+        "address": "112 E 27th Street Unit#B",
+        "address_key": "112 27th st b e",
+        "original_list_price": 999990.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 0.0,
+        "lot_sqft": 3000.0,
+        "product": "Split Lot",
+        "builder": "J. Christopher Builders",
+        "year_built": 2026.0,
+        "building_sqft": 3000.0,
+        "lat": 29.811144,
+        "lng": -95.398197,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 36,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null,
+      "category": null,
+      "in_supply": false,
+      "identity_note": "Property and withdrawn status confirmed by client on 2026-09-28."
     },
     {
       "member": "pmt_705-e-13th-st-77008",
@@ -133548,21 +133598,6 @@
           "exclusion": null
         }
       ],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null,
-      "category": null,
-      "in_supply": false
-    },
-    {
-      "member": "act_1016-e-27",
-      "pin": "act_1016-e-27",
-      "address": "1016 E 27 th Street",
-      "phase": null,
-      "product": "Split Lot",
-      "status": "no_record",
-      "current": null,
-      "history": [],
       "historical_sales": [],
       "archive_current": null,
       "ordering_issue": null,
@@ -145438,14 +145473,43 @@
       "address": "1016 E 27th St, Houston, TX 77009",
       "phase": "interior",
       "product": "Split Lot",
-      "status": "no_record",
-      "current": null,
+      "status": "terminated",
+      "current": {
+        "mls": "64725189",
+        "status": "terminated",
+        "har_status": "Terminated",
+        "address": "1016 E 27 th Street",
+        "address_key": "1016 27th st e",
+        "original_list_price": 1389999.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 35.0,
+        "lot_sqft": 6000.0,
+        "product": "Single Lot",
+        "builder": "Titan Homes",
+        "year_built": 2025.0,
+        "building_sqft": 3521.0,
+        "lat": 29.81138,
+        "lng": -95.385515,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 78,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
       "history": [],
       "historical_sales": [],
       "archive_current": null,
       "ordering_issue": null,
       "category": null,
-      "in_supply": true
+      "in_supply": true,
+      "identity_note": "Property and terminated status confirmed by client on 2026-09-28."
     },
     {
       "member": "pmt_1127-robbie-st-77009",
@@ -145903,6 +145967,141 @@
       "history": [],
       "product": "Single Lot",
       "ordering_issue": null
+    },
+    {
+      "member": "act_1202-aurora-street",
+      "pin": "act_1202-aurora-street",
+      "address": "1202 Aurora Street",
+      "phase": null,
+      "product": "Single Lot",
+      "historical_sales": [],
+      "category": null,
+      "in_supply": false,
+      "status": "terminated",
+      "current": {
+        "mls": "31296604",
+        "status": "terminated",
+        "har_status": "Terminated",
+        "address": "1202 Aurora Street",
+        "address_key": "1202 aurora st",
+        "original_list_price": 850000.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 156.0,
+        "lot_sqft": 6000.0,
+        "product": "Single Lot",
+        "builder": "Del Vega Investments",
+        "year_built": 2025.0,
+        "building_sqft": 2317.0,
+        "lat": 29.809734,
+        "lng": -95.383535,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 54,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [
+        {
+          "mls": "19026953",
+          "status": "terminated",
+          "har_status": "Terminated",
+          "address": "1202 Aurora Street",
+          "address_key": "1202 aurora st",
+          "original_list_price": 999900.0,
+          "current_list_price": null,
+          "close_price": null,
+          "close_date": null,
+          "dom": 152.0,
+          "lot_sqft": 6000.0,
+          "product": "Single Lot",
+          "builder": "Del Vega Investments",
+          "year_built": 2025.0,
+          "building_sqft": 2317.0,
+          "lat": 29.809734,
+          "lng": -95.383535,
+          "as_of": "2026-09-10",
+          "source_file": "Everythingsince2023.csv",
+          "source_row": 1111,
+          "source_sha256": "1f82e7674f17961075d01690930ab28eb016cffe5b613f5ce61c67f66f21ae1b",
+          "exclusion": null
+        },
+        {
+          "mls": "32770417",
+          "status": "terminated",
+          "har_status": "Terminated",
+          "address": "1202 Aurora Street",
+          "address_key": "1202 aurora st",
+          "original_list_price": 999900.0,
+          "current_list_price": null,
+          "close_price": null,
+          "close_date": null,
+          "dom": 98.0,
+          "lot_sqft": 6000.0,
+          "product": "Single Lot",
+          "builder": "Del Vega Investments",
+          "year_built": 2025.0,
+          "building_sqft": 2317.0,
+          "lat": 29.809734,
+          "lng": -95.383535,
+          "as_of": "2026-09-10",
+          "source_file": "Everythingsince2023.csv",
+          "source_row": 1052,
+          "source_sha256": "1f82e7674f17961075d01690930ab28eb016cffe5b613f5ce61c67f66f21ae1b",
+          "exclusion": null
+        }
+      ],
+      "ordering_issue": null,
+      "identity_note": "Property and terminated status confirmed by client on 2026-09-28."
+    },
+    {
+      "member": "act_2320-lawrence-street",
+      "pin": "act_2320-lawrence-street",
+      "address": "2320 Lawrence Street",
+      "phase": null,
+      "product": "Split Lot",
+      "historical_sales": [],
+      "category": null,
+      "in_supply": false,
+      "status": "terminated",
+      "current": {
+        "mls": "87531713",
+        "status": "terminated",
+        "har_status": "Terminated",
+        "address": "2320 Lawrence Street",
+        "address_key": "2320 lawrence st",
+        "original_list_price": 869000.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 50.0,
+        "lot_sqft": 2275.0,
+        "product": "Split Lot",
+        "builder": "Taila Homes",
+        "year_built": 2026.0,
+        "building_sqft": 2895.0,
+        "lat": 29.807737,
+        "lng": -95.40783,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 56,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [],
+      "ordering_issue": null,
+      "identity_note": "Property and terminated status confirmed by client on 2026-09-28."
     }
   ],
   "complete": [
@@ -146773,21 +146972,6 @@
       "address": "112 E 27th St A, Houston, TX 77008",
       "phase": "complete",
       "product": "Split Lot",
-      "status": "no_record",
-      "current": null,
-      "history": [],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null,
-      "category": null,
-      "in_supply": false
-    },
-    {
-      "member": "act_112-e-27th-street",
-      "pin": "pmt_112-e-27th-st-a-77008",
-      "address": "112 E 27th Street",
-      "phase": "complete",
-      "product": "Split Lot",
       "status": "pending",
       "current": {
         "mls": "34333707",
@@ -146844,6 +147028,50 @@
       "ordering_issue": null,
       "category": null,
       "in_supply": false
+    },
+    {
+      "member": "act_112-e-27th-street",
+      "pin": "pmt_112-e-27th-st-a-77008",
+      "address": "112 E 27th Street Unit#B",
+      "phase": "complete",
+      "product": "Split Lot",
+      "status": "terminated",
+      "current": {
+        "mls": "15967458",
+        "status": "terminated",
+        "har_status": "Withdrawn",
+        "address": "112 E 27th Street Unit#B",
+        "address_key": "112 27th st b e",
+        "original_list_price": 999990.0,
+        "current_list_price": null,
+        "close_price": null,
+        "close_date": null,
+        "dom": 0.0,
+        "lot_sqft": 3000.0,
+        "product": "Split Lot",
+        "builder": "J. Christopher Builders",
+        "year_built": 2026.0,
+        "building_sqft": 3000.0,
+        "lat": 29.811144,
+        "lng": -95.398197,
+        "as_of": "2026-09-28",
+        "source_file": "HAR_Export (3).csv",
+        "source_row": 36,
+        "source_sha256": "dbd178c21ea3ab0ddba3a88c10939fd8c592af5bf9e49a73f4c0e2971f9f7240",
+        "exclusion": null,
+        "status_confirmation": {
+          "source": "client confirmation and supplied HAR export",
+          "date": "2026-09-28",
+          "reason": "Client confirmed property identity/location and status for map purposes"
+        }
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null,
+      "category": null,
+      "in_supply": false,
+      "identity_note": "Property and withdrawn status confirmed by client on 2026-09-28."
     },
     {
       "member": "pmt_729-w-21st-st-c-77008",
@@ -162562,26 +162790,6 @@
       "pin": null,
       "issue": "NOT_TRACKED",
       "candidates": []
-    },
-    {
-      "mls": "15967458",
-      "address": "112 E 27th Street Unit#B",
-      "issue": "AMBIGUOUS_COORDINATE"
-    },
-    {
-      "mls": "31296604",
-      "address": "1202 Aurora Street",
-      "issue": "NOT_TRACKED"
-    },
-    {
-      "mls": "87531713",
-      "address": "2320 Lawrence Street",
-      "issue": "NOT_TRACKED"
-    },
-    {
-      "mls": "64725189",
-      "address": "1016 E 27 th Street",
-      "issue": "AMBIGUOUS_IDENTITY"
     }
   ],
   "refresh_scope": "September 28 active and status exports; observations absent from these files retain their prior dates. Non-sold status-change dates were not supplied."

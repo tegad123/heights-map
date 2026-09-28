@@ -1,6 +1,5 @@
 id,address,lot_type,last_list_price,builder,agent,lot_sqft,building_sqft,mls_number,date_off_market,disposition,lat,lng,notes
 act_1011-e-25,1011 E 25th Street,Single Lot,"$1,369,000",Titan Homes,Lorannette Lewis,3470,,,2026-09-28,terminated,29.809194,-95.386256,Off market as of 2026-07-27. Active inventory — Single Lot. Builder: Titan Homes. Agent: Lorannette Lewis. (location approximate). Est. completion: 2026-01-30.
-act_1016-e-27,1016 E 27 th Street,Single Lot,"$1,389,999",Titan Homes,Lorannette Lewis,3521,,,2026-07-27,terminated,29.811706,-95.384997,Off market as of 2026-07-27. Active inventory — Single Lot. Builder: Titan Homes. Agent: Lorannette Lewis. (location approximate). Est. completion: 2025-09-30.
 act_107-e-24,107 E 24th Street,Single Lot,"$1,395,000",J. Maren Homes,Caroline Schlemmer,3394,,,2026-09-28,sold,29.807505,-95.397642,Off market as of 2026-07-27. Active inventory — Single Lot. Builder: J. Maren Homes. Agent: Caroline Schlemmer.
 act_1119-e-7-12,1119 E 7th 1/2 Street,Single Lot,"$2,170,000",Active listing,Melissa Kubala,4257,,,2026-07-27,unconfirmed,29.784593,-95.386865,Off market as of 2026-07-27. Active inventory — Single Lot. Agent: Melissa Kubala. Deed transfer 2025-06-17 · Village Studio D Llc.
 act_1122-e-27th-st-unit-b,1122 E 27TH ST Unit#B,Split Lot,"$685,000",NA,Ashley L Brown,2466,,,2026-09-28,sold,29.81216,-95.38431,Off market as of 2026-07-27. Active inventory — Split Lot. Builder: NA. Agent: Ashley L Brown.
@@ -38,3 +37,7 @@ act_1208-e-26th-street-unit-a,1208 E 26th Street Unit#A,Split Lot,"$599,900",San
 act_1520-w-21st-st-unit-b,1520 W 21st St Unit#B,Split Lot,"$689,900",Aspen Grey Homes,Thu-Anh Nguyen,,,,2026-09-28,terminated,29.8047394,-95.4261597,Active inventory — Split Lot. Builder: Aspen Grey Homes. Agent: Thu-Anh Nguyen.
 act_2436-white-oak,2436 White Oak,Single Lot,"$2,595,000",Novel Signature Homes,Ed Wolff,,,,2026-09-28,terminated,29.7818885,-95.3834084,Active inventory — Single Lot. Builder: Novel Signature Homes. Agent: Ed Wolff. Est. completion: 2027-03-31.
 act_615-wendel-street,615 Wendel Street,Single Lot,"$1,350,000",Daimler Builds,Destiny Demuren,,,,2026-09-28,terminated,29.7822851,-95.3784948,Active inventory — Single Lot. Builder: Daimler Builds. Agent: Destiny Demuren.
+act_112-e-27th-street,112 E 27th Street Unit#B,Split Lot,"$999,990",J. Christopher Builders,Spencer Huck,,,,2026-09-28,terminated,29.8111452,-95.398023,Active inventory — Split Lot. Builder: J. Christopher Builders. Agent: Spencer Huck. Est. completion: 2026-06-30.
+act_1202-aurora-street,1202 Aurora Street,Single Lot,"$825,000",Del Vega Investments,,,,,2026-09-28,terminated,29.809734,-95.383535,
+act_2320-lawrence-street,2320 Lawrence Street,Split Lot,"$869,000",Taila Homes,,,,,2026-09-28,terminated,29.807737,-95.40783,
+pmt_1016-e-27th-st-77009,"1016 E 27th St, Houston, TX 77009",Split Lot,,"HEIGHTS HOLLOW LLC, A TEXAS LIMITED LIABILI",,,,,2026-09-28,terminated,29.8113067,-95.3855346,

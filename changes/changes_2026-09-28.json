@@ -438,6 +438,38 @@
     "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
     "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
    }
+  },
+  {
+   "id": "act_112-e-27th-street",
+   "a": "112 E 27th Street Unit#B",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Withdrawn",
+   "mls": "15967458"
+  },
+  {
+   "id": "pmt_1016-e-27th-st-77009",
+   "a": "1016 E 27th St, Houston, TX 77009",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "64725189"
+  },
+  {
+   "id": "act_1202-aurora-street",
+   "a": "1202 Aurora Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "31296604"
+  },
+  {
+   "id": "act_2320-lawrence-street",
+   "a": "2320 Lawrence Street",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "87531713"
   }
  ],
  "relisted": [
@@ -453,6 +485,16 @@
    "id": "act_1317-waverly-street",
    "a": "1317 Waverly Street",
    "prod": "Single Lot"
+  },
+  {
+   "id": "act_1202-aurora-street",
+   "a": "1202 Aurora Street",
+   "prod": "Single Lot"
+  },
+  {
+   "id": "act_2320-lawrence-street",
+   "a": "2320 Lawrence Street",
+   "prod": "Split Lot"
   }
  ],
  "excluded": [
@@ -484,9 +526,9 @@
  "dispositionUpdates": {},
  "counts": {
   "matched": 58,
-  "dropped": 44,
+  "dropped": 48,
   "relisted": 1,
-  "new": 1,
+  "new": 3,
   "excluded": 3
  },
  "status_refresh": {
@@ -589,28 +631,7 @@
     "mls": "68235642"
    }
   ],
-  "unresolved": [
-   {
-    "mls": "15967458",
-    "address": "112 E 27th Street Unit#B",
-    "issue": "AMBIGUOUS_COORDINATE"
-   },
-   {
-    "mls": "31296604",
-    "address": "1202 Aurora Street",
-    "issue": "NOT_TRACKED"
-   },
-   {
-    "mls": "87531713",
-    "address": "2320 Lawrence Street",
-    "issue": "NOT_TRACKED"
-   },
-   {
-    "mls": "64725189",
-    "address": "1016 E 27 th Street",
-    "issue": "AMBIGUOUS_IDENTITY"
-   }
-  ]
+  "unresolved": []
  },
  "status_confirmations": [
   {
@@ -644,6 +665,76 @@
     "sha256": "50c21b00dd08b8d75a9a6c23b27a27918ef6aa8d5ad3c34da632f3114e55a328",
     "identity_basis": "User confirmed property address; MLS retained from prior export, not visible in screenshot"
    }
+  }
+ ],
+ "identity_resolutions": [
+  {
+   "member": "act_112-e-27th-street",
+   "address": "112 E 27th Street Unit#B",
+   "mls": "15967458",
+   "status": "terminated",
+   "har_status": "Withdrawn"
+  },
+  {
+   "member": "pmt_1016-e-27th-st-77009",
+   "address": "1016 E 27th St, Houston, TX 77009",
+   "mls": "64725189",
+   "status": "terminated",
+   "har_status": "Terminated"
+  },
+  {
+   "member": "act_1202-aurora-street",
+   "address": "1202 Aurora Street",
+   "mls": "31296604",
+   "status": "terminated",
+   "har_status": "Terminated"
+  },
+  {
+   "member": "act_2320-lawrence-street",
+   "address": "2320 Lawrence Street",
+   "mls": "87531713",
+   "status": "terminated",
+   "har_status": "Terminated"
+  }
+ ],
+ "archived_duplicates": [
+  {
+   "record": {
+    "id": "act_1016-e-27",
+    "a": "1016 E 27 th Street",
+    "llc": "Titan Homes",
+    "v": "$1,389,999",
+    "sd": "2025-02-21",
+    "st": "pending",
+    "lot": "3521",
+    "kind": "active",
+    "bb": "4 / 4.1",
+    "prod": "Split Lot",
+    "f": "Single Lot, Sunset Heights",
+    "u": "",
+    "c": [
+     {
+      "n": "Lorannette Lewis",
+      "p": [],
+      "e": []
+     }
+    ],
+    "lat": 29.811706,
+    "lng": -95.384997,
+    "comp": "2025-09-30",
+    "ty": "active_split",
+    "product_classification": {
+     "product": "Split Lot",
+     "confidence": "client",
+     "source": "client",
+     "reason_code": "CLIENT_DETERMINATION",
+     "date": "2026-09-10",
+     "authoritative": true,
+     "reason": "Client review: 1016 E 27th St is Split Lot. Geometry and lot-area rules do not override this determination."
+    }
+   },
+   "canonical": "pmt_1016-e-27th-st-77009",
+   "reason": "Same address/MLS; canonical location confirmed by client screenshot and HAR coordinates"
   }
  ]
 }
