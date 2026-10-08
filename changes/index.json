@@ -54,7 +54,18 @@
     "new": 3,
     "excluded": 3
    }
+  },
+  {
+   "file": "changes_2026-10-07.json",
+   "date": "2026-10-07",
+   "counts": {
+    "matched": 89,
+    "dropped": 33,
+    "relisted": 55,
+    "new": 0,
+    "excluded": 3
+   }
   }
  ],
- "updated": "2026-09-28"
+ "updated": "2026-10-07"
 }
