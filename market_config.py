@@ -20,6 +20,10 @@ Field notes:
   (Southampton/Rice Village pins included since the 07-08 build), so the
   zone guard is zip + coord box only.
 - coord_box: (lat_min, lat_max, lng_min, lng_max), boundary bbox +-0.01 deg.
+  westu's box is the 77005 ZCTA bbox (TIGERweb, 2026-10-26), not the city
+  line's: the city-line box cut off 77005 homes east of -95.408 (Bolsover,
+  Cherokee, Shadow Lawn). The ZCTA polygon itself is not usable as a ring —
+  it excludes the 77005 Boulevard Oaks blocks north of ~29.7275.
 - east_lng: Heights-only I-45 corridor cutoff. None elsewhere.
 - springvalley intentionally absent: investigation done 2026-08-27, joins only
   after springvalley_permits.json is created via a validated Stage-1 run.
@@ -49,7 +53,7 @@ MARKETS = {
         'permits_json': 'westu_permits.json',
         'zips': ['77005'],
         'boundary': None,          # all of 77005 by design; zip + box guard
-        'coord_box': (29.696, 29.735, -95.458, -95.408),
+        'coord_box': (29.696, 29.739, -95.458, -95.380),  # Census ZCTA 77005 bbox +-0.01
         'east_lng': None,
         'enabled': True,
     },
