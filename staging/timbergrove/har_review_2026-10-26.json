@@ -1,0 +1,90 @@
+{
+ "date": "2026-10-26",
+ "market": "timbergrove",
+ "html": "timbergrove.html",
+ "note": "timbergrove.html has no SOLD_DATA/SOLD_COMP_POLICY block; in-zone sold rows staged for review only",
+ "close_range": [
+  "2026-06-12",
+  "2026-09-15"
+ ],
+ "sold": [
+  {
+   "mls": "61583455",
+   "address": "1114 Pearlwood Drive",
+   "close_date": "2026-08-27",
+   "close_price": 556155.0,
+   "lot_sqft": 3346.0,
+   "product": "Split Lot",
+   "year_built": 2026.0,
+   "building_sqft": 1788.0,
+   "builder": "Sullivan Brothers Builders",
+   "lat": 29.790151,
+   "lng": -95.438436
+  },
+  {
+   "mls": "63469002",
+   "address": "3525 Harvest Dance Drive",
+   "close_date": "2026-06-30",
+   "close_price": 625000.0,
+   "lot_sqft": 2400.0,
+   "product": "Split Lot",
+   "year_built": 2026.0,
+   "building_sqft": 2455.0,
+   "builder": "Sullivan Brothers Builders",
+   "lat": 29.789636,
+   "lng": -95.440032
+  },
+  {
+   "mls": "50241952",
+   "address": "3507 Harvest Dance Drive",
+   "close_date": "2026-06-12",
+   "close_price": 628900.0,
+   "lot_sqft": 2340.0,
+   "product": "Split Lot",
+   "year_built": 2026.0,
+   "building_sqft": 2580.0,
+   "builder": "Sullivan Brothers Builders",
+   "lat": 29.789638,
+   "lng": -95.438875
+  },
+  {
+   "mls": "14610206",
+   "address": "3511 Harvest Dance Drive",
+   "close_date": "2026-06-30",
+   "close_price": 644900.0,
+   "lot_sqft": 2340.0,
+   "product": "Split Lot",
+   "year_built": 2026.0,
+   "building_sqft": 2580.0,
+   "builder": "Sullivan Brothers Builders",
+   "lat": 29.789642,
+   "lng": -95.439229
+  },
+  {
+   "mls": "69818146",
+   "address": "3518 Harvest Dance Drive",
+   "close_date": "2026-09-15",
+   "close_price": 681955.0,
+   "lot_sqft": 2400.0,
+   "product": "Split Lot",
+   "year_built": 2026.0,
+   "building_sqft": 2580.0,
+   "builder": "Sullivan Brothers Builders",
+   "lat": 29.789878,
+   "lng": -95.439696
+  },
+  {
+   "mls": "5116407",
+   "address": "1002 Lamelia Lane",
+   "close_date": "2026-07-15",
+   "close_price": 825000.0,
+   "lot_sqft": 2518.0,
+   "product": "Split Lot",
+   "year_built": 2026.0,
+   "building_sqft": 3152.0,
+   "builder": "America Intownhomes LLC",
+   "lat": 29.787981,
+   "lng": -95.435407
+  }
+ ]
+}

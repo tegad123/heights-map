@@ -1,0 +1,165 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "8ccefb6d9e7c37ac7bfde208a684f47a1bc2d700270924e626ac7c405ebcb815",
+  "pending_BigPending_27ca.csv": "30e113e1692b4e2ac3ae7257b997d7dc911f632fbae31b5a703efba375b2eadd",
+  "sold_BigSold_ad16.csv": "713e3f5c743e7d3401f0f2e9bdc519bf7cd76c02fb575795986c66fec9f8f325",
+  "terminated_bigTerminated_868d.csv": "806e5e5b2eb1b83c3e025876e8c0eb89359152a713d772b8c0164b8941f4dbee"
+ },
+ "counts": {
+  "matched": 0,
+  "dropped": 1,
+  "relisted": 0,
+  "new": 8,
+  "excluded": 0
+ },
+ "matchedIds": [],
+ "dropped": [
+  {
+   "id": "tg_6322-wynnwood",
+   "a": "6322 Wynnwood Lane",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "73923273",
+   "close_date": null
+  }
+ ],
+ "relisted": [],
+ "new": [
+  {
+   "a": "3516 Harvest Dance Drive",
+   "prod": "Split Lot",
+   "mls": "20071918",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "tgp_3516-harvest-dance"
+  },
+  {
+   "a": "3521 Harvest Dance Drive",
+   "prod": "Split Lot",
+   "mls": "14361484",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "tgp_3521-harvest-dance"
+  },
+  {
+   "a": "3524 Harvest Dance Drive",
+   "prod": "Split Lot",
+   "mls": "88180727",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1006 Golden Nectar",
+   "prod": "Split Lot",
+   "mls": "6936604",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1008 Golden Nectar",
+   "prod": "Split Lot",
+   "mls": "86916864",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "4010 Ascot Lane",
+   "prod": "Single Lot",
+   "mls": "19476920",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "4009 Brookwoods Drive",
+   "prod": "Single Lot",
+   "mls": "39802421",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "4418 Brookwoods Drive",
+   "prod": "Single Lot",
+   "mls": "63573336",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [
+  {
+   "id": "tg_1110-grovewood",
+   "mls": null,
+   "address": "1110 Grovewood Lane",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131537524",
+   "mls": null,
+   "address": "1219 Bay Oaks Rd, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131538328",
+   "mls": null,
+   "address": "922 Prince St, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131538429",
+   "mls": null,
+   "address": "1023 Nashua St, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131538680",
+   "mls": null,
+   "address": "911 Bay Oaks Rd, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131538718",
+   "mls": null,
+   "address": "905 Bay Oaks Rd, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131538725",
+   "mls": null,
+   "address": "1510 Glen Oaks St, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "tg_mig_2131538738",
+   "mls": null,
+   "address": "1522 Glen Oaks St, Houston, Tx 77008",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "tg_6322-wynnwood",
+   "address": "6322 Wynnwood Lane",
+   "before": "active",
+   "after": "terminated",
+   "mls": "73923273",
+   "previous_mls": null
+  }
+ ],
+ "observed": {}
+}
