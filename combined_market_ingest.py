@@ -16,32 +16,56 @@ from sold_classification import classify_lot
 from sold_ingest import money, parse_close, metrics_for
 
 ROOT = Path(__file__).resolve().parent
-STATUS = {'Sold':'sold', 'Active':'active', 'Pending':'pending', 'Terminated':'terminated',
-          'Expired':'terminated', 'Withdrawn':'terminated', 'Terminated-Relisted':'terminated'}
+STATUS = {'Sold':'sold', 'Active':'active', 'Pending':'pending', 'Option Pending':'pending',
+          'Pend Cont to Show':'pending', 'Terminated':'terminated', 'Expired':'terminated',
+          'Withdrawn':'terminated', 'Terminated-Relisted':'terminated'}
+REQUIRED = ('Address', 'MLS Number', 'Status', 'Latitude', 'Longitude', 'Lot Size')
+READ = ('Close Date', 'Close Price', 'Original List Price', 'DOM', 'Builder Name', 'Year Built', 'Building SqFt')
 
 
-def load(path, html, as_of):
+def zone_guard(html, market='heights'):
+    """Exclusion reason for one row under a market's own guard: the OUT_OF_ZONE regex
+    from that market's html, its east cutoff (Heights only), then its boundary ring.
+    A market without a polygon (westu) falls back to address zip + coord box."""
+    from market_config import MARKETS
+    cfg=MARKETS[market]
+    zone=re.compile(re.search(r'const OUT_OF_ZONE=/(.*?)/i;',html)[1],re.I)
+    boundary=json.loads((ROOT/cfg['boundary']).read_text()) if cfg['boundary'] else None
+    lat_min,lat_max,lng_min,lng_max=cfg['coord_box']
+    def reason(address,lng,lat):
+        if zone.search(address): return 'OOZ_REGEX'
+        if cfg['east_lng'] is not None and lng>cfg['east_lng']: return 'OOZ_EAST'
+        if boundary is not None: return None if in_boundary(boundary,lng,lat) else 'OOZ_POLY'
+        zip_=re.search(r'\b(77\d{3})(?:-\d{4})?\s*$',address)
+        if zip_ and zip_[1] not in cfg['zips']: return 'OOZ_ZIP'
+        return None if lat_min<=lat<=lat_max and lng_min<=lng<=lng_max else 'OOZ_BOX'
+    return reason
+
+
+def load(path, html, as_of, zone=None):
     payload=path.read_bytes(); digest=hashlib.sha256(payload).hexdigest()
     reader=csv.DictReader(payload.decode('utf-8-sig').splitlines())
     rawrows=list(reader)
     if not rawrows: raise ValueError('Empty export')
-    zone=re.compile(re.search(r'const OUT_OF_ZONE=/(.*?)/i;',html)[1],re.I)
-    boundary=json.loads((ROOT/'heights_boundary.geojson').read_text())
+    missing=[c for c in REQUIRED+READ if c not in (reader.fieldnames or [])]
+    if missing: raise ValueError(f'{path.name}: missing columns {missing}')
+    zone=zone or zone_guard(html)
     records=[]; ledger=[]; seen=set()
     for line,raw in enumerate(rawrows,2):
-        status=STATUS[raw['Status'].strip()]; mls=raw['MLS Number'].strip(); address=raw['Address'].strip()
+        har_status=raw['Status'].strip()
+        if har_status not in STATUS: raise ValueError(f'Unknown status {har_status!r} at {path.name}:{line}')
+        status=STATUS[har_status]; mls=raw['MLS Number'].strip(); address=raw['Address'].strip()
         lat,lng=money(raw['Latitude']),money(raw['Longitude']); lot=money(raw['Lot Size'])
         close=parse_close(raw['Close Date']); reason=None
         if not mls or not address or lat is None or lng is None: raise ValueError(f'Invalid identity at {line}')
         if status=='sold' and (not close or close>date.fromisoformat(as_of) or not money(raw['Close Price'])): raise ValueError(f'Invalid close at {line}')
         if status!='sold' and close: raise ValueError(f'Unexpected close at {line}')
         if mls in seen: reason='DUP_INPUT_MLS'
-        elif zone.search(address): reason='OOZ_REGEX'
-        elif lng>-95.370: reason='OOZ_EAST'
-        elif not in_boundary(boundary,lng,lat): reason='OOZ_POLY'
+        else: reason=zone(address,lng,lat)
         seen.add(mls)
-        rec=dict(mls=mls,status=status,har_status=raw['Status'].strip(),address=address,address_key=address_key(address),
-                 original_list_price=money(raw['Original List Price']),current_list_price=None,close_price=money(raw['Close Price']),
+        rec=dict(mls=mls,status=status,har_status=har_status,address=address,address_key=address_key(address),
+                 original_list_price=money(raw['Original List Price']),
+                 current_list_price=money(raw.get('Current Price')) if status=='active' else None,close_price=money(raw['Close Price']),
                  close_date=close.isoformat() if close else None,dom=money(raw['DOM']),lot_sqft=lot,product=classify_lot(lot),
                  builder=raw['Builder Name'],year_built=money(raw['Year Built']),building_sqft=money(raw['Building SqFt']),lat=lat,lng=lng,
                  agents={k:v for k,v in raw.items() if any(s in k for s in ('Agent','Office','Team'))},as_of=as_of,
@@ -59,13 +83,13 @@ def load(path, html, as_of):
         close_max=max(closes,default=None))
 
 
-def load_many(paths, html, as_of):
+def load_many(paths, html, as_of, zone=None):
     paths=[Path(p) for p in paths]
     if not paths or len({p.resolve() for p in paths})!=len(paths):
         raise ValueError('Provide nonempty, distinct input paths')
     incoming=[]; ledger=[]; profiles=[]; seen={}
     for path in paths:
-        records,dropped,profile=load(path,html,as_of)
+        records,dropped,profile=load(path,html,as_of,zone)
         profiles.append(dict(file=str(path),**profile))
         for rec in records:
             if rec['mls'] in seen and seen[rec['mls']]!=path:
@@ -79,13 +103,27 @@ def load_many(paths, html, as_of):
         files=profiles,rows=len(incoming),unique_mls=len(seen))
 
 
-def snapshot(records, sold, source, runtime, as_of):
+def snapshot(records, sold, source, runtime, as_of, links=None, retain=None, chronology=None,
+             price_basis='Original List Price'):
+    """links (MLS -> member) carries prior listing continuity ahead of fresh matching;
+    it changes grouping only, never the matcher conflict audit. With retain, groups
+    holding no record observed at as_of keep their prior property verbatim;
+    re-resolved groups take chronology."""
     matcher=Matcher(source,runtime); groups=defaultdict(list); conflicts=[]
     for rec in records:
-        link=matcher.match(rec)
+        link=matcher.match(rec); member=(links or {}).get(rec['mls']) or link['member']
         if link['issue']: conflicts.append(dict(mls=rec['mls'],address=rec['address'],**link))
-        groups[link['member'] or 'address:'+address_key(rec['address'])].append({k:v for k,v in rec.items() if k not in ('raw','agents')})
-    properties={k:resolve(v) for k,v in sorted(groups.items())}
+        groups[member or 'address:'+address_key(rec['address'])].append({k:v for k,v in rec.items() if k not in ('raw','agents')})
+    properties={}
+    for k,v in sorted(groups.items()):
+        prior=(retain or {}).get(k)
+        if prior and not any(r['as_of']==as_of for r in v):
+            properties[k]=prior; continue
+        properties[k]=resolve(v)
+        # A client confirmation stays the stated provenance while HAR evidence agrees with it.
+        agrees=prior and 'confirmed by client' in prior['chronology'] and (prior['status'],prior['current']['mls'])==(properties[k]['status'],properties[k]['current']['mls'])
+        if chronology and not agrees: properties[k]['chronology']=chronology
+        elif agrees: properties[k]['chronology']=prior['chronology']
     archive=defaultdict(list)
     for sale in sold: archive[address_key(sale['a'])].append(sale)
     phases={r['id']:r for r in runtime['rows']}; tracked=[]
@@ -98,9 +136,19 @@ def snapshot(records, sold, source, runtime, as_of):
                             history=prop['history'] if prop else [],historical_sales=history,archive_current=new_build[0] if new_build and not prop else None,
                             ordering_issue=prop['ordering_issue'] if prop else None,category=runtime['points'].get(pin_id,{}).get('classification',{}).get('category'),
                             in_supply=pin_id in runtime['supplyIds']))
-    return dict(as_of=as_of,price_basis='Original List Price',records=records,properties=properties,tracked=tracked,
+    return dict(as_of=as_of,price_basis=price_basis,records=records,properties=properties,tracked=tracked,
                 complete=[r for r in tracked if r['phase']=='complete' and not r['category']],
                 coverage=dict(source_rows=len(records),linked=sum(k in matcher.members for k in properties)),conflicts=conflicts)
+
+
+def merge_evidence(evidence, incoming):
+    """Union sold rows into sale evidence; historical resale facts stay verbatim."""
+    retained={r['id']:r for r in evidence if r.get('coh')=='resale'}
+    fresh=[r for r in incoming if 's'+r['mls'] not in retained and not any(address_key(s['a'])==r['address_key'] and s['cd']==r['close_date'] for s in retained.values())]
+    merged,report=legacy.merge_sales(evidence,fresh)
+    if report['conflicts']: raise ValueError(report['conflicts'])
+    assert all(next(s for s in merged if s['id']==k)==v for k,v in retained.items())
+    return merged,report
 
 
 def run(args):
