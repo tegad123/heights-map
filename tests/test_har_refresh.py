@@ -105,6 +105,36 @@ class ZoneGuardTest(unittest.TestCase):
         self.assertIsNone(westu('3700 Fixture St', -95.43, 29.715))
         self.assertEqual(westu('3700 Fixture St', -95.30, 29.715), 'OOZ_BOX')
         self.assertEqual(westu('3700 Fixture St, Houston, TX 77006', -95.43, 29.715), 'OOZ_ZIP')
+        self.assertIsNone(westu('5329 DORA ST 77005, Houston, TX 77005', -95.396108, 29.725302))
+
+    def test_page_zone_rings_match_market_config(self):
+        from market_config import MARKETS
+        for market, cfg in MARKETS.items():
+            if market == 'heights':
+                continue
+            page = (ROOT / cfg['html']).read_text()
+            rings = json.loads(re.search(r'const ZONE_RINGS=(\[.*?\]); //', page)[1])
+            if cfg['boundary'] is None:
+                la0, la1, lo0, lo1 = cfg['coord_box']
+                expected = [[[lo0, la0], [lo1, la0], [lo1, la1], [lo0, la1]]]
+            else:
+                geo = json.loads((ROOT / cfg['boundary']).read_text())
+                expected = [[[round(x, 6), round(y, 6)] for x, y in f['geometry']['coordinates'][0][:-1]]
+                            for f in geo['features']]
+            with self.subTest(market=market):
+                self.assertEqual(rings, expected)
+                self.assertEqual(page.count('||!inZonePoly(DATA[i].lng,DATA[i].lat))DATA.splice(i,1);'), 1)
+                self.assertEqual(page.count('if(!inZonePoly(p[1],p[0]))'), 1)
+
+    def test_deed_pins_follow_the_market_zone_guard(self):
+        import gen_acquisitions
+        for market in ('montrose', 'springbranch', 'westu', 'riveroaks'):
+            path = str(ROOT / f'{market}_acquisitions.json')
+            guard = cmi.zone_guard((ROOT / refresh.MARKETS[market]['html']).read_text(), market)
+            recs, _, _ = gen_acquisitions.generate(path)
+            with self.subTest(market=market):
+                self.assertTrue(recs)
+                self.assertEqual([r['address'] for r in recs if guard(r['address'], r['lng'], r['lat'])], [])
 
 
 def rec(mls, status, close=None):
@@ -443,6 +473,32 @@ class IdentityFollowUpTest(unittest.TestCase):
                 (self.root / 'westu.html').write_text(FIXTURE_PAGE)
             with self.subTest(pairs=pairs), self.assertRaisesRegex(SystemExit, message):
                 self.archive(pairs)
+        self.assertEqual(self.page(), FIXTURE_PAGE)
+
+    def archive_ooz(self, ids, apply=True):
+        args = argparse.Namespace(market='montrose', date='2026-10-26', ids=ids,
+                                  reason='fixture out of zone', apply=apply, skip_pull=True)
+        with contextlib.redirect_stdout(io.StringIO()):
+            return refresh.cmd_archive_out_of_zone(args, str(self.root / 'montrose.html'))
+
+    def test_archive_out_of_zone_removes_only_the_named_record(self):
+        self.archive_ooz(['pmt_300-pine-st'], apply=False)
+        self.assertEqual(self.page(), FIXTURE_PAGE)
+        self.archive_ooz(['pmt_300-pine-st'])
+        self.assertEqual(self.page(), FIXTURE_PAGE.replace(',\n' + FIXTURE_DATA[3], ''))
+        entry = self.changelog()['archived_out_of_zone'][0]
+        self.assertEqual((entry['record']['id'], entry['zone']), ('pmt_300-pine-st', 'OOZ_POLY'))
+        with self.assertRaisesRegex(SystemExit, 'already archived'):
+            self.archive_ooz(['pmt_300-pine-st'])
+
+    def test_archive_out_of_zone_refusals(self):
+        with self.assertRaisesRegex(SystemExit, 'carries listing state'):
+            self.archive_ooz(['act_100-elm-street'])
+        with self.assertRaisesRegex(SystemExit, 'is not in DATA'):
+            self.archive_ooz(['pmt_999-none-st'])
+        with mock.patch.object(cmi, 'zone_guard', lambda html, market: lambda a, lng, lat: None), \
+                self.assertRaisesRegex(SystemExit, 'is inside the montrose zone'):
+            self.archive_ooz(['pmt_300-pine-st'])
         self.assertEqual(self.page(), FIXTURE_PAGE)
 
     def run_apply_staged(self, approve):

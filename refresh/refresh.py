@@ -61,6 +61,14 @@ archive-duplicates retires a DATA record that repeats another pin's property
 changelog. Both re-fold, splice RECONCILE, regenerate the CSV and validate;
 dry run unless --apply.
 
+  python3 refresh/refresh.py archive-out-of-zone --market springbranch --date 2026-10-26 \
+      --ids acq_x acq_y --reason TEXT [--apply]
+
+archive-out-of-zone retires DATA records whose coordinates fail the market's
+own zone guard (market_config boundary; zip + coord box for westu) and that
+carry no listing state; the record moves into the changelog's
+archived_out_of_zone. Same fold/splice/validate path as archive-duplicates.
+
 HUMAN-INVOKED ONLY — never run from cron (CLAUDE.md hard rule).
 """
 import argparse, csv, hashlib, io, json, os, re, subprocess, sys
@@ -412,9 +420,9 @@ def fold_events(changes=None):
             disp[k] = (v, c['date'])
         # Archived duplicate identities retain history but must not create a second
         # reconciliation/CSV row for the canonical property.
-        for archived in c.get('archived_duplicates', []):
+        for archived in c.get('archived_duplicates', []) + c.get('archived_out_of_zone', []):
             old_id = archived['record']['id']
-            if old_id == archived['canonical']:
+            if old_id == archived.get('canonical'):
                 raise ValueError('Duplicate archive cannot retire its canonical id')
             for bucket in (off, rel, disp, ddate):
                 bucket.pop(old_id, None)
@@ -1817,7 +1825,8 @@ def cmd_archive_duplicates(args, html_path):
     from market_linkage import distance
 
     def edit(html, data, state, chg, earlier):
-        archived = {e['record']['id'] for c in earlier + [chg] for e in c.get('archived_duplicates', [])}
+        archived = {e['record']['id'] for c in earlier + [chg]
+                    for k in ('archived_duplicates', 'archived_out_of_zone') for e in c.get(k, [])}
         text, removed, lines = html, set(), []
         for dup, canonical in args.archive:
             if dup in archived or dup in removed:
@@ -1855,6 +1864,41 @@ def cmd_archive_duplicates(args, html_path):
         return text, removed, lines
 
     return _changelog_edit(args, html_path, 'archive', edit)
+
+
+def cmd_archive_out_of_zone(args, html_path):
+    """Retire DATA records whose coordinates fail the market's own zone guard
+    (the boundary the page's render-side guard draws from). Only pins without
+    listing state qualify; the full record is kept in the changelog's
+    archived_out_of_zone with the guard's reason."""
+    from combined_market_ingest import zone_guard
+
+    def edit(html, data, state, chg, earlier):
+        archived = {e['record']['id'] for c in earlier + [chg]
+                    for k in ('archived_duplicates', 'archived_out_of_zone') for e in c.get(k, [])}
+        guard = zone_guard(html, args.market)
+        text, removed, lines = html, set(), []
+        for rid in args.ids:
+            if rid in archived or rid in removed:
+                raise SystemExit(f'REFUSED: {rid} is already archived')
+            d = data.get(rid)
+            if d is None:
+                raise SystemExit(f'REFUSED: {rid} is not in DATA')
+            if not all(isinstance(d.get(k), (int, float)) for k in ('lat', 'lng')):
+                raise SystemExit(f'REFUSED: {rid} has no coordinates')
+            why = guard(d['a'], d['lng'], d['lat'])
+            if why is None:
+                raise SystemExit(f"REFUSED: {rid} ({d['a']}) is inside the {args.market} zone")
+            if state.get(rid):
+                raise SystemExit(f'REFUSED: {rid} carries listing state {state[rid][0]!r}; '
+                                 f'resolve the listing before archiving')
+            text = _remove_data_record(text, rid)
+            removed.add(rid)
+            chg.setdefault('archived_out_of_zone', []).append(dict(record=d, zone=why, reason=args.reason))
+            lines.append(f"{rid} ({d['a']}) {why} at {d['lat']:.5f},{d['lng']:.5f}")
+        return text, removed, lines
+
+    return _changelog_edit(args, html_path, 'archive_ooz', edit)
 
 
 def main():
@@ -1918,6 +1962,13 @@ def main():
     ar.add_argument('--reason', required=True)
     ar.add_argument('--apply', action='store_true')
     ar.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
+    az = sub.add_parser('archive-out-of-zone', parents=[common],
+                        help="retire DATA records outside the market's zone guard (kept in the changelog)")
+    az.add_argument('--date', required=True, help='changelog date to record the archive in')
+    az.add_argument('--ids', nargs='+', required=True, help='DATA ids to retire')
+    az.add_argument('--reason', required=True)
+    az.add_argument('--apply', action='store_true')
+    az.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
     args = ap.parse_args()
     set_market(args.market)
     html = args.html or DEFAULT_HTML
@@ -1948,6 +1999,9 @@ def main():
         return
     if args.cmd == 'archive-duplicates':
         cmd_archive_duplicates(args, html)
+        return
+    if args.cmd == 'archive-out-of-zone':
+        cmd_archive_out_of_zone(args, html)
         return
 
     if args.cmd == 'diff':
