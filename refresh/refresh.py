@@ -37,6 +37,17 @@ also refreshes SOLD_* (rolling new-construction comps), the market-status
 snapshot and heights_active.data.json; markets without SOLD_* get a staged
 review file instead. The dry run writes only to pulls/har_<market>_<date>/.
 
+  python3 refresh/refresh.py har-split --date 2026-11-01 \
+      --active A.csv --pending P.csv --sold S.csv --terminated T.csv
+
+har-split takes zip-wide exports covering several markets and cuts one slice
+set per enabled market into pulls/har_split_<date>/<market>/, routed by each
+row's coordinates through that market's own zone guard (never the HAR
+Subdivision text). Overlapping rows go to every market that accepts them;
+unplaced rows are ledgered in unplaced.csv. A market with no active rows is
+held. Feed each slice set to `har`; its split_manifest.json lets a header-only
+pending/sold/terminated slice through and replaces the cross-market hash guard.
+
 HUMAN-INVOKED ONLY — never run from cron (CLAUDE.md hard rule).
 """
 import argparse, csv, hashlib, io, json, os, re, subprocess, sys
@@ -901,6 +912,129 @@ def cmd_dispositions(args,html_path):
 HAR_ROLES = ('active', 'pending', 'sold', 'terminated')
 HAR_LEDGER = ['FILE', 'SHA256', 'ROW', 'MLS', 'ADDRESS', 'REASON', 'RAW_JSON']
 HAR_AUDIT = ['FILE', 'SHA256', 'ROW', 'MLS', 'ADDRESS', 'HAR_STATUS', 'MEMBER', 'METHOD', 'DECISION']
+SPLIT_MANIFEST = 'split_manifest.json'
+
+
+def split_manifest(paths, hashes, market):
+    """The har-split manifest vouching for these four slices, or None for direct exports.
+    A slice set must be complete, cut for this market, and byte-identical to the cut."""
+    found = {p.parent / SPLIT_MANIFEST for p in paths.values() if (p.parent / SPLIT_MANIFEST).is_file()}
+    if not found:
+        return None
+    if len(found) != 1 or any(p.parent / SPLIT_MANIFEST not in found for p in paths.values()):
+        raise SystemExit('FATAL: har-split slices must all come from one split directory')
+    manifest = json.loads(next(iter(found)).read_text())
+    if manifest.get('market') != market:
+        raise SystemExit(f"FATAL: these slices were cut for {manifest.get('market')}, not {market}")
+    for role, p in paths.items():
+        cut = manifest['slices'].get(role) or {}
+        if cut.get('file') != p.name or cut.get('sha256') != hashes[role]:
+            raise SystemExit(f'FATAL: --{role} {p.name} does not match the split manifest; re-run har-split')
+        if not manifest['sources'][role]['rows']:
+            raise SystemExit(f'FATAL: the zip-wide {role} export behind this slice was empty')
+    return manifest
+
+
+def cmd_har_split(args):
+    """Cut zip-wide HAR exports into per-market slices for `har`. Writes pulls/ only.
+
+    Each enabled market receives every row its own zone guard accepts (OUT_OF_ZONE regex,
+    Heights east cutoff, boundary ring, or westu's zip + coord box) — the same rows a
+    market-specific export would hold. Rows inside two markets go to both: sending a
+    shared listing to only one would make the other read its pin as a disappearance.
+    Rows no enabled market accepts are ledgered with every market's reason."""
+    from collections import Counter
+    import market_config
+    from combined_market_ingest import zone_guard, STATUS, REQUIRED, READ
+    from sold_ingest import money
+    from market_status_ingest import csvtxt
+
+    run_date = date.fromisoformat(args.date).isoformat()
+    markets = [m for m in market_config.INGEST_ORDER if market_config.MARKETS[m]['enabled']]
+    guards = {m: zone_guard(Path(ROOT, market_config.MARKETS[m]['html']).read_text(), m) for m in markets}
+    out_dir = Path(args.out) if args.out else Path(ROOT, 'pulls', f'har_split_{run_date}')
+    if out_dir.resolve().is_relative_to(Path(ROOT).resolve()) and \
+            not out_dir.resolve().is_relative_to(Path(ROOT, 'pulls').resolve()):
+        raise SystemExit(f'FATAL: --out {out_dir} sits in the deployed tree; use pulls/')
+    if out_dir.is_dir():
+        import shutil
+        for stale in out_dir.glob('*/' + SPLIT_MANIFEST):
+            shutil.rmtree(stale.parent)
+
+    sources, slices, unplaced, owners_of = {}, {m: {} for m in markets}, [], {}
+    for role in HAR_ROLES:
+        p = Path(getattr(args, role))
+        if not p.is_file() or p.stat().st_size == 0:
+            raise SystemExit(f'FATAL: --{role} {p} is missing or empty — refusing to split')
+        if p.resolve().is_relative_to(Path(ROOT).resolve()) and \
+                not p.resolve().is_relative_to(Path(ROOT, 'pulls').resolve()):
+            raise SystemExit(f'FATAL: --{role} {p} sits in the deployed tree; read exports from outside the repo or pulls/')
+        payload = p.read_bytes()
+        reader = csv.DictReader(io.StringIO(payload.decode('utf-8-sig'), newline=''))
+        rows = list(reader)
+        if not rows:
+            raise SystemExit(f'FATAL: --{role} {p} has a header but no rows — refusing to split')
+        missing = [c for c in REQUIRED + READ if c not in (reader.fieldnames or [])]
+        if missing:
+            raise SystemExit(f'FATAL: --{role} {p.name} is missing columns {missing}')
+        digest = hashlib.sha256(payload).hexdigest()
+        sources[role] = dict(file=str(p), sha256=digest, rows=len(rows),
+                             statuses=dict(Counter(r['Status'].strip() for r in rows)))
+        unknown = sorted({s for s in sources[role]['statuses'] if s not in STATUS})
+        if unknown:
+            raise SystemExit(f'FATAL: --{role} {p.name} has unknown statuses {unknown}')
+        for m in markets:
+            slices[m][role] = dict(fieldnames=reader.fieldnames, rows=[], source=p.name)
+        for line, raw in enumerate(rows, 2):
+            address = (raw.get('Address') or '').strip()
+            lat, lng = money(raw.get('Latitude')), money(raw.get('Longitude'))
+            entry = dict(FILE=p.name, SHA256=digest, ROW=line, MLS=raw.get('MLS Number', '').strip(),
+                         ADDRESS=address, RAW_JSON=json.dumps(raw, sort_keys=True))
+            if not address or lat is None or lng is None or not (-90 <= lat <= 90 and -180 <= lng <= 180):
+                unplaced.append(dict(entry, REASON='INVALID_ADDRESS_OR_COORDINATES'))
+                continue
+            reasons = {m: guards[m](address, lng, lat) for m in markets}
+            owners = [m for m in markets if reasons[m] is None]
+            for m in owners:
+                slices[m][role]['rows'].append(raw)
+            owners_of[(role, line)] = owners
+            if not owners:
+                unplaced.append(dict(entry, REASON='NO_MARKET ' + ' '.join(f'{m}:{r}' for m, r in reasons.items())))
+
+    report = dict(date=run_date, out=str(out_dir), sources=sources, markets={}, held={},
+                  shared=dict(Counter('+'.join(o) for o in owners_of.values() if len(o) > 1)),
+                  unplaced=dict(Counter(e['REASON'].split(' ')[0] for e in unplaced)),
+                  unplaced_rows=[f"{e['MLS']} {e['ADDRESS']} [{e['FILE']}] {e['REASON']}" for e in unplaced])
+    writes = {out_dir / 'unplaced.csv': csvtxt(unplaced, HAR_LEDGER)}
+    for m in markets:
+        counts = {role: len(slices[m][role]['rows']) for role in HAR_ROLES}
+        if not counts['active']:
+            report['held'][m] = dict(counts, reason='no active rows inside this market — an empty actives '
+                                                    'slice would read every listed pin as gone')
+            continue
+        mdir = out_dir / m
+        manifest = dict(market=m, date=run_date, sources=sources, slices={})
+        for role in HAR_ROLES:
+            s = slices[m][role]
+            buf = io.StringIO(newline='')
+            w = csv.DictWriter(buf, fieldnames=s['fieldnames'], quoting=csv.QUOTE_ALL, lineterminator='\n')
+            w.writeheader()
+            w.writerows(s['rows'])
+            name = f"{role}_{s['source']}"
+            writes[mdir / name] = buf.getvalue()
+            manifest['slices'][role] = dict(file=name, rows=counts[role],
+                                            sha256=hashlib.sha256(buf.getvalue().encode()).hexdigest())
+        writes[mdir / SPLIT_MANIFEST] = json.dumps(manifest, indent=2) + '\n'
+        flags = ' '.join(f'--{role} {mdir / manifest["slices"][role]["file"]}' for role in HAR_ROLES)
+        runtime = ' --runtime <timeline_browser capture>' if m == 'heights' else ''
+        report['markets'][m] = dict(counts, command=f'python3 refresh/refresh.py har --market {m} '
+                                                    f'--date {run_date} {flags}{runtime}')
+    for p, text in writes.items():
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(text.encode())
+    (out_dir / 'report.json').write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps(report, indent=2))
+    return report
 
 
 def har_state(src, folded):
@@ -1100,7 +1234,10 @@ def cmd_har(args, html_path):
     if len({p.resolve() for p in paths.values()}) != len(paths):
         raise SystemExit('FATAL: the four exports must be distinct files')
     hashes = {role: hashlib.sha256(p.read_bytes()).hexdigest() for role, p in paths.items()}
+    split = split_manifest(paths, hashes, args.market)
     for other, mk in MARKETS.items():
+        if split:
+            break
         cdir = Path(ROOT, 'changes', mk['sub']) if mk['sub'] else Path(ROOT, 'changes')
         if other == args.market or not cdir.is_dir():
             continue
@@ -1134,7 +1271,8 @@ def cmd_har(args, html_path):
 
     try:
         incoming, ledger, profile = load_many([paths[r] for r in HAR_ROLES], html, run_date,
-                                              zone=zone_guard(html, args.market))
+                                              zone=zone_guard(html, args.market),
+                                              allow_empty=[paths[r] for r in HAR_ROLES if split and r != 'active'])
     except ValueError as e:
         raise SystemExit(f'FATAL: {e}')
     role_of = {hashes[r]: r for r in HAR_ROLES}
@@ -1420,6 +1558,13 @@ def main():
     h.add_argument('--runtime', help='browser runtime capture (required for heights)')
     h.add_argument('--out', help='ledger / dry-run directory (default pulls/har_<market>_<date>)')
     h.add_argument('--apply', action='store_true')
+    hs = sub.add_parser('har-split',
+                        help='cut zip-wide HAR exports into per-market har inputs (writes pulls/ only)')
+    hs.add_argument('--date', required=True)
+    for role in HAR_ROLES:
+        hs.add_argument('--' + role, required=True, help=f'zip-wide HAR {role} export (CSV, header row)')
+    hs.add_argument('--out', help='slice directory (default pulls/har_split_<date>)')
+    hs.set_defaults(market='heights', html=None)
     d = sub.add_parser('diff', parents=[common], help='diff HAR exports against DATA actives')
     d.add_argument('--date', required=True)
     d.add_argument('single_csv')
@@ -1445,6 +1590,9 @@ def main():
         return
     if args.cmd == 'har':
         cmd_har(args, html)
+        return
+    if args.cmd == 'har-split':
+        cmd_har_split(args)
         return
 
     if args.cmd == 'generate':

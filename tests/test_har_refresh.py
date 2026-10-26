@@ -213,5 +213,84 @@ class NoSoldMarketDryRunTest(unittest.TestCase):
                 refresh.cmd_har(self.args(td, 'springvalley', files), str(ROOT / 'springvalley.html'))
 
 
+class HarSplitTest(unittest.TestCase):
+    def tearDown(self):
+        refresh.set_market('heights')
+
+    def exports(self, td, active=None):
+        active = active if active is not None else [
+            row('21', 'Active', '100 Heights Fixture St', 29.80, -95.40),
+            row('22', 'Active', '1517 Vermont Street #B', 29.7502339, -95.3985032),
+            row('23', 'Active', '200 Shared Fixture St', 29.7845, -95.417),
+            row('24', 'Active', '5339 Larkin Street', 29.80, -95.40),
+            row('25', 'Active', '300 Nowhere St', 29.60, -95.20),
+            row('26', 'Active', '400 Bad Coord St', '', '')]
+        return dict(
+            active=write(Path(td) / 'zipactive.csv', active),
+            pending=write(Path(td) / 'zippending.csv', [row('31', 'Option Pending', '101 Heights Fixture St', 29.80, -95.40)]),
+            sold=write(Path(td) / 'zipsold.csv', [
+                row('41', 'Sold', '4100 Fixture Street', 29.7470, -95.3940, '10/01/2026', '1500000')]),
+            terminated=write(Path(td) / 'zipterm.csv', [row('51', 'Expired', '102 Heights Fixture St', 29.80, -95.40)]))
+
+    def split(self, td, files):
+        args = argparse.Namespace(date='2026-11-01', out=str(Path(td) / 'split'), **files)
+        with contextlib.redirect_stdout(io.StringIO()):
+            return refresh.cmd_har_split(args)
+
+    def slice_mls(self, report, market, role):
+        manifest = json.loads((Path(report['out']) / market / refresh.SPLIT_MANIFEST).read_text())
+        with open(Path(report['out']) / market / manifest['slices'][role]['file'], newline='') as f:
+            return [r['MLS Number'] for r in csv.DictReader(f)]
+
+    def test_routes_by_coordinates_and_ledgers_unplaced(self):
+        with tempfile.TemporaryDirectory() as td:
+            report = self.split(td, self.exports(td))
+            self.assertEqual(self.slice_mls(report, 'heights', 'active'), ['21', '23'])
+            self.assertEqual(self.slice_mls(report, 'timbergrove', 'active'), ['23'])
+            self.assertEqual(self.slice_mls(report, 'montrose', 'active'), ['22'])
+            self.assertEqual(self.slice_mls(report, 'montrose', 'pending'), [])
+            self.assertEqual(self.slice_mls(report, 'montrose', 'sold'), ['41'])
+            self.assertEqual(self.slice_mls(report, 'heights', 'terminated'), ['51'])
+            self.assertEqual(report['shared'], {'heights+timbergrove': 1})
+            self.assertEqual(sorted(report['markets']), ['heights', 'montrose', 'timbergrove'])
+            self.assertIn('westu', report['held'])
+            self.assertEqual(report['unplaced'], {'NO_MARKET': 2, 'INVALID_ADDRESS_OR_COORDINATES': 1})
+            larkin = next(r for r in report['unplaced_rows'] if r.startswith('24 '))
+            self.assertIn('heights:OOZ_REGEX', larkin)
+            with open(Path(report['out']) / 'unplaced.csv', newline='') as f:
+                self.assertEqual(sorted(r['MLS'] for r in csv.DictReader(f)), ['24', '25', '26'])
+
+    def test_refuses_header_only_source(self):
+        with tempfile.TemporaryDirectory() as td:
+            files = self.exports(td)
+            files['sold'] = write(Path(td) / 'emptysold.csv', [])
+            with self.assertRaisesRegex(SystemExit, 'header but no rows'):
+                self.split(td, files)
+
+    def test_har_accepts_its_slices_and_refuses_tampering(self):
+        html_path = ROOT / 'montrose.html'
+        before = html_path.read_bytes()
+        with tempfile.TemporaryDirectory() as td:
+            report = self.split(td, self.exports(td))
+            mdir = Path(report['out']) / 'montrose'
+            manifest = json.loads((mdir / refresh.SPLIT_MANIFEST).read_text())
+            files = {role: mdir / manifest['slices'][role]['file'] for role in refresh.HAR_ROLES}
+            ns = lambda market, f: argparse.Namespace(market=market, date='2026-11-01', runtime=None,
+                                                      out=str(Path(td) / 'out'), apply=False, html=None, **f)
+            refresh.set_market('montrose')
+            with contextlib.redirect_stdout(io.StringIO()):
+                result = refresh.cmd_har(ns('montrose', files), str(html_path))
+            self.assertEqual(result['files']['pending']['rows'], 0)
+            self.assertEqual(result['files']['active']['in_zone'], 1)
+            self.assertEqual(html_path.read_bytes(), before)
+            refresh.set_market('timbergrove')
+            with self.assertRaisesRegex(SystemExit, 'cut for montrose'):
+                refresh.cmd_har(ns('timbergrove', files), str(ROOT / 'timbergrove.html'))
+            refresh.set_market('montrose')
+            files['sold'].write_text(files['sold'].read_text() + '"99","","Sold"\n')
+            with self.assertRaisesRegex(SystemExit, 'does not match the split manifest'):
+                refresh.cmd_har(ns('montrose', files), str(html_path))
+
+
 if __name__ == '__main__':
     unittest.main()

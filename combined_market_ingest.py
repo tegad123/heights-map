@@ -42,11 +42,13 @@ def zone_guard(html, market='heights'):
     return reason
 
 
-def load(path, html, as_of, zone=None):
+def load(path, html, as_of, zone=None, allow_empty=False):
+    """allow_empty: a header-only per-market slice cut by `refresh.py har-split` from a
+    non-empty zip-wide export (the caller verifies the split manifest)."""
     payload=path.read_bytes(); digest=hashlib.sha256(payload).hexdigest()
     reader=csv.DictReader(payload.decode('utf-8-sig').splitlines())
     rawrows=list(reader)
-    if not rawrows: raise ValueError('Empty export')
+    if not rawrows and not allow_empty: raise ValueError('Empty export')
     missing=[c for c in REQUIRED+READ if c not in (reader.fieldnames or [])]
     if missing: raise ValueError(f'{path.name}: missing columns {missing}')
     zone=zone or zone_guard(html)
@@ -83,13 +85,14 @@ def load(path, html, as_of, zone=None):
         close_max=max(closes,default=None))
 
 
-def load_many(paths, html, as_of, zone=None):
+def load_many(paths, html, as_of, zone=None, allow_empty=()):
     paths=[Path(p) for p in paths]
     if not paths or len({p.resolve() for p in paths})!=len(paths):
         raise ValueError('Provide nonempty, distinct input paths')
+    allow_empty={Path(p).resolve() for p in allow_empty}
     incoming=[]; ledger=[]; profiles=[]; seen={}
     for path in paths:
-        records,dropped,profile=load(path,html,as_of,zone)
+        records,dropped,profile=load(path,html,as_of,zone,allow_empty=path.resolve() in allow_empty)
         profiles.append(dict(file=str(path),**profile))
         for rec in records:
             if rec['mls'] in seen and seen[rec['mls']]!=path:
