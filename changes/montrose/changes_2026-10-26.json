@@ -1,0 +1,1148 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "df624d1bab55acf4c6b3a31b2d454ded0c99cc1413b1e040da2b8e36198efa4c",
+  "pending_BigPending_27ca.csv": "3910d812beb32416bb9f4edec492d1477ebf38039de93174c301b4f5b83dcc72",
+  "sold_BigSold_ad16.csv": "695658968df16719af60b9466186e8fdc7a631dcc372016d4cc45f0ea33d81a6",
+  "terminated_bigTerminated_868d.csv": "e44eb2cfb967b920d3ee1929c3c439b0aad0ff8d55ad2a9c6b35456d12166dde"
+ },
+ "counts": {
+  "matched": 7,
+  "dropped": 11,
+  "relisted": 20,
+  "new": 31,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "act_1521-nevada-street",
+  "act_1523-marshall-street",
+  "act_1606-hazard-street",
+  "act_1824-marshall-street",
+  "act_1907-sul-ross-street",
+  "act_511-w-polk-street",
+  "act_805-bomar-street"
+ ],
+ "dropped": [
+  {
+   "id": "act_1204-w-drew-street",
+   "a": "1204 W Drew Street, Houston, TX 77006",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "39637443",
+   "close_date": null
+  },
+  {
+   "id": "act_1641-hawthorne-street",
+   "a": "1641 Hawthorne Street, Houston, TX 77006",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Expired",
+   "mls": "11855114",
+   "close_date": null
+  },
+  {
+   "id": "act_1642-norfolk-street",
+   "a": "1642 Norfolk Street, Houston, TX 77006",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "71560409",
+   "close_date": "2026-09-25"
+  },
+  {
+   "id": "act_1810-hazard-a",
+   "a": "1810 Hazard Street Unit#A, Houston, TX 77019",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "62018227",
+   "close_date": "2026-07-24"
+  },
+  {
+   "id": "act_409-w-saulnier",
+   "a": "409 W Saulnier Street, Houston, TX 77019",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "22231415",
+   "close_date": "2026-09-04"
+  },
+  {
+   "id": "act_508-willard-street",
+   "a": "508 Willard Street, Houston, TX 77006",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "85307248",
+   "close_date": "2026-10-09"
+  },
+  {
+   "id": "acq_1911-milford-st",
+   "a": "1911 Milford St",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "41166118",
+   "close_date": null
+  },
+  {
+   "id": "act_1634-castle-court",
+   "a": "1634 CASTLE Court, Houston, TX 77006",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "82786004",
+   "close_date": null
+  },
+  {
+   "id": "act_1818-branard-street",
+   "a": "1818 BRANARD Street, Houston, TX 77098",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "34104141",
+   "close_date": null
+  },
+  {
+   "id": "act_1906-woodhead-street",
+   "a": "1906 WOODHEAD Street, Houston, TX 77019",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "14133558",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1720-kipling-st",
+   "a": "1720 KIPLING ST, Houston, TX 77098",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "44694086",
+   "close_date": null
+  }
+ ],
+ "relisted": [
+  {
+   "id": "acq_1120-welch-st",
+   "a": "1120 Welch St",
+   "ty": "single",
+   "mls": "37170106"
+  },
+  {
+   "id": "act_1511-kipling-street",
+   "a": "1511 KIPLING Street, Houston, TX 77006",
+   "ty": "single",
+   "mls": "4516785"
+  },
+  {
+   "id": "act_1817-branard-street",
+   "a": "1817 BRANARD Street, Houston, TX 77098",
+   "ty": "split",
+   "mls": "37959428"
+  },
+  {
+   "id": "act_1822-branard-street-b",
+   "a": "1822 BRANARD Street #B, Houston, TX 77098",
+   "ty": "single",
+   "mls": "15226844"
+  },
+  {
+   "id": "act_2027-fairview-avenue",
+   "a": "2027 Fairview Avenue, Houston, TX 77019",
+   "ty": "split",
+   "mls": "65565413"
+  },
+  {
+   "id": "act_2412-elmen-street",
+   "a": "2412 ELMEN Street, Houston, TX 77019",
+   "ty": "split",
+   "mls": "22201908"
+  },
+  {
+   "id": "act_2413-brun-street-a",
+   "a": "2413 BRUN Street #A, Houston, TX 77019",
+   "ty": "split",
+   "mls": "73142561"
+  },
+  {
+   "id": "act_2415-elmen-street",
+   "a": "2415 Elmen Street, Houston, TX 77019",
+   "ty": "single",
+   "mls": "10315678"
+  },
+  {
+   "id": "act_3909-driscoll-street",
+   "a": "3909 DRISCOLL Street, Houston, TX 77098",
+   "ty": "single",
+   "mls": "52880194"
+  },
+  {
+   "id": "act_4207-driscoll-street",
+   "a": "4207 Driscoll Street, Houston, TX 77098",
+   "ty": "split",
+   "mls": "35392131"
+  },
+  {
+   "id": "act_4317-roseland-street-a",
+   "a": "4317 Roseland Street #A, Houston, TX 77006",
+   "ty": "split",
+   "mls": "52705553"
+  },
+  {
+   "id": "act_4317-roseland-street-b",
+   "a": "4317 Roseland Street #B, Houston, TX 77006",
+   "ty": "split",
+   "mls": "27842066"
+  },
+  {
+   "id": "pmt_1202-w-drew-st",
+   "a": "1202 W DREW ST, Houston, TX 77006",
+   "ty": "single",
+   "mls": "69122938"
+  },
+  {
+   "id": "pmt_1223-w-drew-st",
+   "a": "1223 W DREW ST, Houston, TX 77006",
+   "ty": "single",
+   "mls": "25266879"
+  },
+  {
+   "id": "pmt_1636-castle-ct",
+   "a": "1636 CASTLE CT, Houston, TX 77006",
+   "ty": "split",
+   "mls": "92987764"
+  },
+  {
+   "id": "pmt_1638-castle-ct-77006",
+   "a": "1638 Castle Ct, Houston, TX 77006",
+   "ty": "split",
+   "mls": "10031519"
+  },
+  {
+   "id": "pmt_1820-branard-st",
+   "a": "1820 BRANARD ST, Houston, TX 77098",
+   "ty": "split",
+   "mls": "81369100"
+  },
+  {
+   "id": "pmt_2204-huldy-st",
+   "a": "2204 HULDY ST, Houston, TX 77019",
+   "ty": "split",
+   "mls": "72990346"
+  },
+  {
+   "id": "pmt_718-peden-st",
+   "a": "718 PEDEN ST, Houston, TX 77006",
+   "ty": "split",
+   "mls": "12477620"
+  },
+  {
+   "id": "pmt_720-peden-st",
+   "a": "720 PEDEN ST, Houston, TX 77006",
+   "ty": "split",
+   "mls": "95942562"
+  }
+ ],
+ "new": [
+  {
+   "a": "1120 WELCH Street",
+   "prod": "Single Lot",
+   "mls": "37170106",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "acq_1120-welch-st",
+   "id": "acq_1120-welch-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1911 Milford Street",
+   "prod": "Single Lot",
+   "mls": "41166118",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "acq_1911-milford-st",
+   "id": "acq_1911-milford-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1511 KIPLING Street",
+   "prod": "Single Lot",
+   "mls": "4516785",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_1511-kipling-street",
+   "id": "act_1511-kipling-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1634 CASTLE Court",
+   "prod": "Split Lot",
+   "mls": "82786004",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "act_1634-castle-court",
+   "id": "act_1634-castle-court",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1817 BRANARD Street",
+   "prod": "Split Lot",
+   "mls": "37959428",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_1817-branard-street",
+   "id": "act_1817-branard-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1818 BRANARD Street",
+   "prod": "Split Lot",
+   "mls": "34104141",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "act_1818-branard-street",
+   "id": "act_1818-branard-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1822 BRANARD Street Unit#B",
+   "prod": "Single Lot",
+   "mls": "15226844",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_1822-branard-street-b",
+   "id": "act_1822-branard-street-b",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1906 WOODHEAD Street",
+   "prod": "Single Lot",
+   "mls": "14133558",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "act_1906-woodhead-street",
+   "id": "act_1906-woodhead-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2027 Fairview Avenue",
+   "prod": "Split Lot",
+   "mls": "65565413",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_2027-fairview-avenue",
+   "id": "act_2027-fairview-avenue",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2412 ELMEN Street",
+   "prod": "Split Lot",
+   "mls": "22201908",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_2412-elmen-street",
+   "id": "act_2412-elmen-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2413 BRUN Street Unit#A",
+   "prod": "Split Lot",
+   "mls": "73142561",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_2413-brun-street-a",
+   "id": "act_2413-brun-street-a",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2415 Elmen Street",
+   "prod": "Single Lot",
+   "mls": "10315678",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_2415-elmen-street",
+   "id": "act_2415-elmen-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "3909 DRISCOLL Street",
+   "prod": "Single Lot",
+   "mls": "52880194",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_3909-driscoll-street",
+   "id": "act_3909-driscoll-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "4207 Driscoll Street",
+   "prod": "Split Lot",
+   "mls": "35392131",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_4207-driscoll-street",
+   "id": "act_4207-driscoll-street",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "4317 Roseland Street Unit#A",
+   "prod": "Split Lot",
+   "mls": "52705553",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_4317-roseland-street-a",
+   "id": "act_4317-roseland-street-a",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "4317 Roseland Street Unit#B",
+   "prod": "Split Lot",
+   "mls": "27842066",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "act_4317-roseland-street-b",
+   "id": "act_4317-roseland-street-b",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1202 W Drew",
+   "prod": "Single Lot",
+   "mls": "69122938",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1202-w-drew-st",
+   "id": "pmt_1202-w-drew-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1223 W Drew Street",
+   "prod": "Single Lot",
+   "mls": "25266879",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1223-w-drew-st",
+   "id": "pmt_1223-w-drew-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1636 CASTLE Court",
+   "prod": "Split Lot",
+   "mls": "92987764",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1636-castle-ct",
+   "id": "pmt_1636-castle-ct",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1638 CASTLE Court",
+   "prod": "Split Lot",
+   "mls": "10031519",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1638-castle-ct-77006",
+   "id": "pmt_1638-castle-ct-77006",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1720 Kipling Street",
+   "prod": "Single Lot",
+   "mls": "44694086",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_1720-kipling-st",
+   "id": "pmt_1720-kipling-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1820 BRANARD Street",
+   "prod": "Split Lot",
+   "mls": "81369100",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1820-branard-st",
+   "id": "pmt_1820-branard-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2204 Huldy Street",
+   "prod": "Split Lot",
+   "mls": "72990346",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_2204-huldy-st",
+   "id": "pmt_2204-huldy-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "718 Peden Street",
+   "prod": "Split Lot",
+   "mls": "12477620",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_718-peden-st",
+   "id": "pmt_718-peden-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "720 Peden Street",
+   "prod": "Split Lot",
+   "mls": "95942562",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_720-peden-st",
+   "id": "pmt_720-peden-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1809 Sul Ross Street",
+   "prod": "Split Lot",
+   "mls": "30727608",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1809-sul-ross-street",
+   "applied": true
+  },
+  {
+   "a": "1517 McDuffie Street",
+   "prod": "Split Lot",
+   "mls": "9962976",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1517-mcduffie-street",
+   "applied": true
+  },
+  {
+   "a": "918 PEDEN Street",
+   "prod": "Single Lot",
+   "mls": "50971157",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_918-peden-street",
+   "applied": true
+  },
+  {
+   "a": "2006 Lexington Street",
+   "prod": "Single Lot",
+   "mls": "61414127",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2006-lexington-street",
+   "applied": true
+  },
+  {
+   "a": "1701 BANKS Street",
+   "prod": "Single Lot",
+   "mls": "77437272",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1701-banks-street",
+   "applied": true
+  },
+  {
+   "a": "4819 Mandell Street",
+   "prod": "Single Lot",
+   "mls": "57113134",
+   "har_status": "Pend Cont to Show",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4819-mandell-street",
+   "applied": true
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [
+  {
+   "id": "act_1110-peden-street-b",
+   "mls": null,
+   "address": "1110 Peden Street #B, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1503-vermont-street-a",
+   "mls": null,
+   "address": "1503 Vermont Street #A, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1503-vermont-street-d",
+   "mls": null,
+   "address": "1503 Vermont Street #D, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1515-vermont-street-d",
+   "mls": null,
+   "address": "1515 Vermont Street #D, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1517-vermont-street-b",
+   "mls": null,
+   "address": "1517 Vermont Street #B, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1918-woodhead",
+   "mls": null,
+   "address": "1918 Woodhead Street, Houston, TX 77019",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2209-crocker",
+   "mls": null,
+   "address": "2209 Crocker, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2221-morse",
+   "mls": null,
+   "address": "2221 Morse Street, Houston, TX 77019",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2408-driscoll",
+   "mls": null,
+   "address": "2408 Driscoll Street, Houston, TX 77019",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2411-hazard",
+   "mls": null,
+   "address": "2411 Hazard Street, Houston, TX 77019",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_617-bomar-street",
+   "mls": null,
+   "address": "617 Bomar Street, Houston, TX 77006",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "act_1204-w-drew-street",
+   "address": "1204 W Drew Street, Houston, TX 77006",
+   "before": "active",
+   "after": "terminated",
+   "mls": "39637443",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1641-hawthorne-street",
+   "address": "1641 Hawthorne Street, Houston, TX 77006",
+   "before": "active",
+   "after": "terminated",
+   "mls": "11855114",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1642-norfolk-street",
+   "address": "1642 Norfolk Street, Houston, TX 77006",
+   "before": "active",
+   "after": "sold",
+   "mls": "71560409",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1810-hazard-a",
+   "address": "1810 Hazard Street Unit#A, Houston, TX 77019",
+   "before": "active",
+   "after": "sold",
+   "mls": "62018227",
+   "previous_mls": null
+  },
+  {
+   "member": "act_409-w-saulnier",
+   "address": "409 W Saulnier Street, Houston, TX 77019",
+   "before": "active",
+   "after": "sold",
+   "mls": "22231415",
+   "previous_mls": null
+  },
+  {
+   "member": "act_508-willard-street",
+   "address": "508 Willard Street, Houston, TX 77006",
+   "before": "active",
+   "after": "sold",
+   "mls": "85307248",
+   "previous_mls": null
+  }
+ ],
+ "observed": {
+  "act_1521-nevada-street": "19467712",
+  "act_1523-marshall-street": "96604140",
+  "act_1606-hazard-street": "91014583",
+  "act_1824-marshall-street": "45504753",
+  "act_1907-sul-ross-street": "5401188",
+  "act_511-w-polk-street": "88214722",
+  "act_805-bomar-street": "47351627"
+ },
+ "identity_resolutions": [
+  {
+   "member": "acq_1120-welch-st",
+   "address": "1120 WELCH Street",
+   "mls": "37170106",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1120-welch-street"
+  },
+  {
+   "member": "acq_1911-milford-st",
+   "address": "1911 Milford Street",
+   "mls": "41166118",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1911-milford-street"
+  },
+  {
+   "member": "act_1511-kipling-street",
+   "address": "1511 KIPLING Street",
+   "mls": "4516785",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1511-kipling-street"
+  },
+  {
+   "member": "act_1634-castle-court",
+   "address": "1634 CASTLE Court",
+   "mls": "82786004",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1634-castle-court"
+  },
+  {
+   "member": "act_1817-branard-street",
+   "address": "1817 BRANARD Street",
+   "mls": "37959428",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1817-branard-street"
+  },
+  {
+   "member": "act_1818-branard-street",
+   "address": "1818 BRANARD Street",
+   "mls": "34104141",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1818-branard-street"
+  },
+  {
+   "member": "act_1822-branard-street-b",
+   "address": "1822 BRANARD Street Unit#B",
+   "mls": "15226844",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1822-branard-street-unit-b"
+  },
+  {
+   "member": "act_1906-woodhead-street",
+   "address": "1906 WOODHEAD Street",
+   "mls": "14133558",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1906-woodhead-street"
+  },
+  {
+   "member": "act_2027-fairview-avenue",
+   "address": "2027 Fairview Avenue",
+   "mls": "65565413",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2027-fairview-avenue"
+  },
+  {
+   "member": "act_2412-elmen-street",
+   "address": "2412 ELMEN Street",
+   "mls": "22201908",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2412-elmen-street"
+  },
+  {
+   "member": "act_2413-brun-street-a",
+   "address": "2413 BRUN Street Unit#A",
+   "mls": "73142561",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2413-brun-street-unit-a"
+  },
+  {
+   "member": "act_2415-elmen-street",
+   "address": "2415 Elmen Street",
+   "mls": "10315678",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2415-elmen-street"
+  },
+  {
+   "member": "act_3909-driscoll-street",
+   "address": "3909 DRISCOLL Street",
+   "mls": "52880194",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_3909-driscoll-street"
+  },
+  {
+   "member": "act_4207-driscoll-street",
+   "address": "4207 Driscoll Street",
+   "mls": "35392131",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_4207-driscoll-street"
+  },
+  {
+   "member": "act_4317-roseland-street-a",
+   "address": "4317 Roseland Street Unit#A",
+   "mls": "52705553",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_4317-roseland-street-unit-a"
+  },
+  {
+   "member": "act_4317-roseland-street-b",
+   "address": "4317 Roseland Street Unit#B",
+   "mls": "27842066",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_4317-roseland-street-unit-b"
+  },
+  {
+   "member": "pmt_1202-w-drew-st",
+   "address": "1202 W Drew",
+   "mls": "69122938",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1202-w-drew"
+  },
+  {
+   "member": "pmt_1223-w-drew-st",
+   "address": "1223 W Drew Street",
+   "mls": "25266879",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1223-w-drew-street"
+  },
+  {
+   "member": "pmt_1636-castle-ct",
+   "address": "1636 CASTLE Court",
+   "mls": "92987764",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1636-castle-court"
+  },
+  {
+   "member": "pmt_1638-castle-ct-77006",
+   "address": "1638 CASTLE Court",
+   "mls": "10031519",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1638-castle-court"
+  },
+  {
+   "member": "pmt_1720-kipling-st",
+   "address": "1720 Kipling Street",
+   "mls": "44694086",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1720-kipling-street"
+  },
+  {
+   "member": "pmt_1820-branard-st",
+   "address": "1820 BRANARD Street",
+   "mls": "81369100",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1820-branard-street"
+  },
+  {
+   "member": "pmt_2204-huldy-st",
+   "address": "2204 Huldy Street",
+   "mls": "72990346",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2204-huldy-street"
+  },
+  {
+   "member": "pmt_718-peden-st",
+   "address": "718 Peden Street",
+   "mls": "12477620",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_718-peden-street"
+  },
+  {
+   "member": "pmt_720-peden-st",
+   "address": "720 Peden Street",
+   "mls": "95942562",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_720-peden-street"
+  }
+ ],
+ "archived_duplicates": [
+  {
+   "record": {
+    "id": "acq_1907-sul-ross-st",
+    "a": "1907 Sul Ross St",
+    "llc": "1907 Sul Ross Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-26, 7,813 sqft lot YB1940",
+    "c": "",
+    "lat": 29.737448,
+    "lng": -95.407498
+   },
+   "canonical": "act_1907-sul-ross-street",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1906-woodhead-st",
+    "a": "1906 Woodhead St",
+    "llc": "1906 Woodhead Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-02, 4,680 sqft lot YB1937",
+    "c": "",
+    "lat": 29.748882,
+    "lng": -95.404919
+   },
+   "canonical": "act_1906-woodhead-street",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_2415-elmen-st",
+    "a": "2415 Elmen St",
+    "llc": "Croix Custom Homes Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-24, 4,950 sqft lot YB1936",
+    "c": "",
+    "lat": 29.744185,
+    "lng": -95.403514
+   },
+   "canonical": "act_2415-elmen-street",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1125-jackson-blvd",
+    "a": "1125 Jackson Blvd",
+    "llc": "Bajaj Ventures Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-03, 7,375 sqft lot YB1932",
+    "c": "",
+    "lat": 29.748705,
+    "lng": -95.393446
+   },
+   "canonical": "pmt_1125-jackson-blvd",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1304-welch-st",
+    "a": "1304 Welch St",
+    "llc": "Zen At Welch Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-09, 5,000 sqft lot YB1925",
+    "c": "",
+    "lat": 29.750545,
+    "lng": -95.395533
+   },
+   "canonical": "pmt_1304-welch-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1223-w-drew-st",
+    "a": "1223 W Drew St",
+    "llc": "Bphb Assetco Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-26, 5,000 sqft lot YB1919",
+    "c": "",
+    "lat": 29.74952,
+    "lng": -95.395382
+   },
+   "canonical": "pmt_1223-w-drew-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_608-peden-st",
+    "a": "608 Peden St",
+    "llc": "Urban Stride Development Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-06, 5,000 sqft lot YB1930",
+    "c": "",
+    "lat": 29.752775,
+    "lng": -95.388454
+   },
+   "canonical": "pmt_608-peden-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1916-hawthorne-st",
+    "a": "1916 Hawthorne St",
+    "llc": "Bphb Assetco Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-12, 5,850 sqft lot YB1946",
+    "c": "",
+    "lat": 29.74211,
+    "lng": -95.407715
+   },
+   "canonical": "pmt_1916-hawthorne-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1744-harold-st",
+    "a": "1744 Harold St",
+    "llc": "Signature Collection Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-02, 5,300 sqft lot YB1929",
+    "c": "",
+    "lat": 29.741423,
+    "lng": -95.403729
+   },
+   "canonical": "pmt_1744-harold-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1720-kipling-st",
+    "a": "1720 Kipling St",
+    "llc": "1720 Kipling Holdings Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-18, 6,875 sqft lot YB1924",
+    "c": "",
+    "lat": 29.740585,
+    "lng": -95.402875
+   },
+   "canonical": "pmt_1720-kipling-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1918-huldy-st",
+    "a": "1918 Huldy St",
+    "llc": "Roque Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-12, 5,000 sqft lot YB1930",
+    "c": "",
+    "lat": 29.748277,
+    "lng": -95.410006
+   },
+   "canonical": "pmt_1918-huldy-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  }
+ ]
+}
