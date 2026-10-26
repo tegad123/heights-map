@@ -1143,6 +1143,78 @@
    },
    "canonical": "pmt_1918-huldy-st",
    "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_2336-bartlett-st",
+    "a": "2336 Bartlett St",
+    "llc": "Partners In Building Lp",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-18, 5,743 sqft lot YB1939",
+    "c": "",
+    "lat": 29.727397,
+    "lng": -95.414525
+   },
+   "canonical": "westu:act_2336-bartlett-street",
+   "reason": "Same parcel as the westu HAR listing pin (1-2 m apart): the Boulevard Oaks listing is on the westu map, whose zone guard accepts it; the montrose corporate-deed pin was a second marker for the same property"
+  },
+  {
+   "record": {
+    "id": "acq_2343-north-blvd",
+    "a": "2343 North Blvd",
+    "llc": "2343 North Blvd Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-03, 6,510 sqft lot YB1939",
+    "c": "",
+    "lat": 29.727698,
+    "lng": -95.414918
+   },
+   "canonical": "westu:act_2343-north-boulevard",
+   "reason": "Same parcel as the westu HAR listing pin (1-2 m apart): the Boulevard Oaks listing is on the westu map, whose zone guard accepts it; the montrose corporate-deed pin was a second marker for the same property"
+  },
+  {
+   "record": {
+    "id": "acq_2332-south-blvd",
+    "a": "2332 South Blvd",
+    "llc": "2332 South Blvd Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-27, 5,871 sqft lot YB1937",
+    "c": "",
+    "lat": 29.726619,
+    "lng": -95.414327
+   },
+   "canonical": "westu:act_2332-south-blvd-boulevard",
+   "reason": "Same parcel as the westu HAR listing pin (1-2 m apart): the Boulevard Oaks listing is on the westu map, whose zone guard accepts it; the montrose corporate-deed pin was a second marker for the same property"
+  },
+  {
+   "record": {
+    "id": "acq_2122-north-blvd",
+    "a": "2122 North Blvd",
+    "llc": "2122 North Boulevard Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-25, 6,573 sqft lot YB1930",
+    "c": "",
+    "lat": 29.728056,
+    "lng": -95.410038
+   },
+   "canonical": "westu:act_2122-north-boulevard",
+   "reason": "Same parcel as the westu HAR listing pin (1-2 m apart): the Boulevard Oaks listing is on the westu map, whose zone guard accepts it; the montrose corporate-deed pin was a second marker for the same property"
   }
  ]
 }
