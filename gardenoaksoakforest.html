@@ -562,7 +562,7 @@ function applyReconcile(pts){
     const p=pts[id]; if(!p) continue;
     const e=RECONCILE.off[id], want='off_market_'+e.t;
     let tg=Array.isArray(p.tags)?p.tags:[];
-    tg=tg.filter(t=>t!=='active_single'&&t!=='active_split');
+    tg=tg.filter(t=>t!=='active_single'&&t!=='active_split'&&t!=='pending');
     if(!tg.includes(want)) tg.push(want);
     p.tags=tg;
     if(typeof p.notes==='string'){
@@ -573,7 +573,7 @@ function applyReconcile(pts){
     const p=pts[id]; if(!p) continue;
     const want='active_'+RECONCILE.relist[id].t;
     let tg=Array.isArray(p.tags)?p.tags:[];
-    tg=tg.filter(t=>t!=='off_market_single'&&t!=='off_market_split');
+    tg=tg.filter(t=>t!=='off_market_single'&&t!=='off_market_split'&&t!=='pending');
     if(!tg.includes(want)) tg.push(want);
     p.tags=tg;
     if(typeof p.notes==='string')p.notes=p.notes.replace(/Off market as of \d{4}-\d{2}-\d{2}\. /g,'');
