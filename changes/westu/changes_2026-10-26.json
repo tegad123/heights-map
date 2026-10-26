@@ -1,0 +1,293 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "29983d87394ca9e2c778dd8f25c0fd1265ef157f603337a83cedd6c77c7c7a2f",
+  "pending_BigPending_27ca.csv": "a20d40dc8809271ce837b35777fec430a44aa9d77333a63330b95ab0c8c65ede",
+  "sold_BigSold_ad16.csv": "b630c089e9f04d3d1cab2586e1ec3840a53aee0c09ebc41f661185a15a76bb7f",
+  "terminated_bigTerminated_868d.csv": "df6f084c6c5a6ea55ab22153b1339d74a2024127ef0b79db98d19aeb2bbbdae4"
+ },
+ "counts": {
+  "matched": 2,
+  "dropped": 3,
+  "relisted": 0,
+  "new": 22,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "ACT06",
+  "ACT11"
+ ],
+ "dropped": [
+  {
+   "id": "ACT02",
+   "a": "2205 North Boulevard, Houston, TX 77005",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "42474246",
+   "close_date": "2026-08-28"
+  },
+  {
+   "id": "ACT07",
+   "a": "2316 North Boulevard, Houston, TX 77005",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "48367135",
+   "close_date": "2026-08-12"
+  },
+  {
+   "id": "ACT10",
+   "a": "2627 Tangley Road, Houston, TX 77005",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "5024887",
+   "close_date": "2026-10-15"
+  }
+ ],
+ "relisted": [],
+ "new": [
+  {
+   "a": "6107 Lake Street",
+   "prod": "Single Lot",
+   "mls": "28802500",
+   "har_status": "Option Pending",
+   "staged": true,
+   "mergeCandidate": "acq_6107-lake-st"
+  },
+  {
+   "a": "2341 Wroxton Road",
+   "prod": "Single Lot",
+   "mls": "35397835",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "pmt_2341-wroxton-rd"
+  },
+  {
+   "a": "2410 QUENBY Street",
+   "prod": "Split Lot",
+   "mls": "24232284",
+   "har_status": "Pending",
+   "staged": true,
+   "mergeCandidate": "pmt_2410-quenby-st"
+  },
+  {
+   "a": "3746 Childress St Street",
+   "prod": "Single Lot",
+   "mls": "65497992",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "pmt_3746-childress-st"
+  },
+  {
+   "a": "2914 W Holcombe Boulevard",
+   "prod": "Split Lot",
+   "mls": "10417264",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2006 Lexington Street",
+   "prod": "Single Lot",
+   "mls": "61414127",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2250 Bartlett Street",
+   "prod": "Single Lot",
+   "mls": "31030454",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2336 Bartlett Street",
+   "prod": "Single Lot",
+   "mls": "8517642",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2343 NORTH Boulevard",
+   "prod": "Single Lot",
+   "mls": "64380344",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2332 SOUTH BLVD Boulevard",
+   "prod": "Single Lot",
+   "mls": "765669",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2122 NORTH Boulevard",
+   "prod": "Single Lot",
+   "mls": "61484738",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2247 North Boulevard",
+   "prod": "Single Lot",
+   "mls": "65303737",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2345 Wroxton Road",
+   "prod": "Single Lot",
+   "mls": "32249523",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "3920 University Boulevard",
+   "prod": "Single Lot",
+   "mls": "60389503",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "4002 Marquette Street",
+   "prod": "Single Lot",
+   "mls": "4522423",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "6546 Westchester Avenue",
+   "prod": "Single Lot",
+   "mls": "58594494",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "6403 Buffalo Speedway",
+   "prod": "Single Lot",
+   "mls": "92129772",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "3023 Nottingham Street",
+   "prod": "Single Lot",
+   "mls": "27635794",
+   "har_status": "Option Pending",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2823 Plumb Street",
+   "prod": "Single Lot",
+   "mls": "32768649",
+   "har_status": "Pending",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "4230 Riley Street",
+   "prod": "Single Lot",
+   "mls": "92520384",
+   "har_status": "Pending",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "3906 Marquette Street",
+   "prod": "Single Lot",
+   "mls": "51350228",
+   "har_status": "Pending",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "3707 Rice Boulevard",
+   "prod": "Single Lot",
+   "mls": "14838163",
+   "har_status": "Pending",
+   "staged": true,
+   "mergeCandidate": null
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [
+  {
+   "id": "ACT04",
+   "mls": null,
+   "address": "4819 Mandell Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "ACT05",
+   "mls": null,
+   "address": "2216 Tangley Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "ACT08",
+   "mls": null,
+   "address": "4002 Marquette Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "ACT09",
+   "mls": null,
+   "address": "3717 Carlon Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "ACT02",
+   "address": "2205 North Boulevard, Houston, TX 77005",
+   "before": "active",
+   "after": "sold",
+   "mls": "42474246",
+   "previous_mls": null
+  },
+  {
+   "member": "ACT07",
+   "address": "2316 North Boulevard, Houston, TX 77005",
+   "before": "active",
+   "after": "sold",
+   "mls": "48367135",
+   "previous_mls": null
+  },
+  {
+   "member": "ACT10",
+   "address": "2627 Tangley Road, Houston, TX 77005",
+   "before": "active",
+   "after": "sold",
+   "mls": "5024887",
+   "previous_mls": null
+  }
+ ],
+ "observed": {
+  "ACT06": "2350118",
+  "ACT11": "13036422"
+ }
+}

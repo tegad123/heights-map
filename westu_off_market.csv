@@ -1,1 +1,4 @@
 id,address,lot_type,last_list_price,builder,agent,lot_sqft,building_sqft,mls_number,date_off_market,disposition,lat,lng,notes
+ACT02,"2205 North Boulevard, Houston, TX 77005",Single Lot,"$2,395,000",Chevy Chase,,,,,2026-10-26,sold,29.727780482199,-95.410700882283,"HAR listing: 4,653 sqft · $515/sqft ask · YB 2025 · 264d on market (re-listed) · 5,500 sqft lot · Chevy Chase"
+ACT07,"2316 North Boulevard, Houston, TX 77005",Single Lot,"$2,895,000",Greenbriar,,,,,2026-10-26,sold,29.727876529336,-95.413184160271,"HAR listing: 5,218 sqft · $555/sqft ask · YB 2026 · 34d on market · 7,095 sqft lot · Greenbriar"
+ACT10,"2627 Tangley Road, Houston, TX 77005",Single Lot,"$3,699,000",West University Place,,,,,2026-10-26,sold,29.720366784772,-95.420159605693,"HAR listing: 5,203 sqft · $711/sqft ask · YB 2026 · 114d on market (re-listed) · 6,500 sqft lot · West University Place"
