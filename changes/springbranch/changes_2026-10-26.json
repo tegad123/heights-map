@@ -1865,5 +1865,475 @@
    "canonical": "pmt_9741-warwana",
    "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
   }
+ ],
+ "archived_out_of_zone": [
+  {
+   "record": {
+    "id": "acq_1120-krist-dr",
+    "a": "1120 Krist Dr",
+    "llc": "Whitefish River Properties Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-20, 31,929 sqft lot YB1979",
+    "c": "",
+    "lat": 29.78942,
+    "lng": -95.491516
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1307-pine-chase-dr",
+    "a": "1307 Pine Chase Dr",
+    "llc": "Frontier Custom Builders Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-23, 16,984 sqft lot YB1954",
+    "c": "",
+    "lat": 29.793014,
+    "lng": -95.488506
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1317-ridgeley-dr",
+    "a": "1317 Ridgeley Dr",
+    "llc": "3bn Holdings Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-06, 17,438 sqft lot YB2014",
+    "c": "",
+    "lat": 29.794101,
+    "lng": -95.491194
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1328-bingle-rd",
+    "a": "1328 Bingle Rd",
+    "llc": "Apollo Heights Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-28, 9,000 sqft lot YB1953",
+    "c": "",
+    "lat": 29.793208,
+    "lng": -95.500175
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_14-fries-ct",
+    "a": "14 Fries Ct",
+    "llc": "14 Fries Court Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-11, 15,488 sqft lot YB1950",
+    "c": "",
+    "lat": 29.788963782,
+    "lng": -95.50996311
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_4-inverness-park-cir",
+    "a": "4 Inverness Park Cir",
+    "llc": "Fm3083 Industrial Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-16, 10,018 sqft lot YB1988",
+    "c": "",
+    "lat": 29.792006,
+    "lng": -95.508762
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8313-cedarbrake-dr",
+    "a": "8313 Cedarbrake Dr",
+    "llc": "Killion & Co Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-18, 9,800 sqft lot YB1955",
+    "c": "",
+    "lat": 29.790851,
+    "lng": -95.493938
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8320-cedarspur-dr",
+    "a": "8320 Cedarspur Dr",
+    "llc": "Multi-purpose Paper Company Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-10, 10,295 sqft lot YB1979",
+    "c": "",
+    "lat": 29.790474,
+    "lng": -95.494273
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8605-westview-dr",
+    "a": "8605 Westview Dr",
+    "llc": "8605 Westview Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-22, 12,000 sqft lot YB1955",
+    "c": "",
+    "lat": 29.793625,
+    "lng": -95.500992
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8623-cedarbrake-dr",
+    "a": "8623 Cedarbrake Dr",
+    "llc": "Deacon Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-05, 10,220 sqft lot YB1966",
+    "c": "",
+    "lat": 29.791042,
+    "lng": -95.501875
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8639-cedarbrake-dr",
+    "a": "8639 Cedarbrake Dr",
+    "llc": "Katyland Alliance Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-08, 13,045 sqft lot YB1966",
+    "c": "",
+    "lat": 29.790897141,
+    "lng": -95.50281148
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8725-burkhart-rd",
+    "a": "8725 Burkhart Rd",
+    "llc": "Ksd Developments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-23, 10,800 sqft lot YB1958",
+    "c": "",
+    "lat": 29.789095,
+    "lng": -95.50326
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8802-cedarbrake-dr",
+    "a": "8802 Cedarbrake Dr",
+    "llc": "Unika Homes Ltd",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-05, 11,400 sqft lot YB1955",
+    "c": "",
+    "lat": 29.791544,
+    "lng": -95.503988
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8814-croes-dr",
+    "a": "8814 Croes Dr",
+    "llc": "Lyons Investment Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-31, 15,862 sqft lot YB1957",
+    "c": "",
+    "lat": 29.789424,
+    "lng": -95.506667
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8825-cedarbrake-dr",
+    "a": "8825 Cedarbrake Dr",
+    "llc": "Emk Investments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-17, 10,800 sqft lot YB1955",
+    "c": "",
+    "lat": 29.790979,
+    "lng": -95.505759
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8826-winningham-ln",
+    "a": "8826 Winningham Ln",
+    "llc": "Unika Homes Ltd",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-31, 10,125 sqft lot YB1958",
+    "c": "",
+    "lat": 29.788918,
+    "lng": -95.505463
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_9052-elizabeth-rd",
+    "a": "9052 Elizabeth Rd",
+    "llc": "Hd Rainmaker Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-14, 16,254 sqft lot YB1973",
+    "c": "",
+    "lat": 29.791014,
+    "lng": -95.51356
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3003-ryson-st",
+    "a": "3003 Ryson St",
+    "llc": "Rwd Properties Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-14, 7,453 sqft lot YB1956",
+    "c": "",
+    "lat": 29.82154,
+    "lng": -95.499644
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3103-maysel-st",
+    "a": "3103 Maysel St",
+    "llc": "Kat Daddy Estates Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-14, 6,600 sqft lot YB1955",
+    "c": "",
+    "lat": 29.82279,
+    "lng": -95.501285
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8423-blankenship-dr",
+    "a": "8423 Blankenship Dr",
+    "llc": "Harris County Flood Control District",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-10, 6,600 sqft lot YB1952",
+    "c": "",
+    "lat": 29.822511,
+    "lng": -95.497797
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8521-friendship-rd",
+    "a": "8521 Friendship Rd",
+    "llc": "Rosemary Custom Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-29, 6,133 sqft lot YB2024",
+    "c": "",
+    "lat": 29.818976,
+    "lng": -95.501092
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8607-alcott-dr",
+    "a": "8607 Alcott Dr",
+    "llc": "Larios Home Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-10, 6,600 sqft lot YB1959",
+    "c": "",
+    "lat": 29.817517,
+    "lng": -95.50326
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8607-norton-dr",
+    "a": "8607 Norton Dr",
+    "llc": "Mandys Real Estate Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-23, 6,600 sqft lot YB1958",
+    "c": "",
+    "lat": 29.818283,
+    "lng": -95.503221
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8635-greiner-dr",
+    "a": "8635 Greiner Dr",
+    "llc": "Tdt Real Estate Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-28, 6,760 sqft lot YB1955",
+    "c": "",
+    "lat": 29.823015,
+    "lng": -95.503718
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8646-kempridge-st",
+    "a": "8646 Kempridge St",
+    "llc": "Martin Sisters Properties Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-02, 7,150 sqft lot YB1958",
+    "c": "",
+    "lat": 29.817143,
+    "lng": -95.505156
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8651-blankenship-dr",
+    "a": "8651 Blankenship Dr",
+    "llc": "Adams Casas Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-24, 6,710 sqft lot YB1955",
+    "c": "",
+    "lat": 29.822315,
+    "lng": -95.504484
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  }
  ]
 }
