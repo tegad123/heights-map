@@ -15,8 +15,8 @@
  },
  "counts": {
   "matched": 28,
-  "dropped": 17,
-  "relisted": 0,
+  "dropped": 19,
+  "relisted": 5,
   "new": 28,
   "excluded": 0
  },
@@ -203,233 +203,345 @@
    "har_status": "Sold",
    "mls": "89323031",
    "close_date": "2026-09-25"
+  },
+  {
+   "id": "acq_1348-althea-dr",
+   "a": "1348 Althea Dr",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "24674503",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1231-martin-st-77018",
+   "a": "1231 Martin St, Houston, TX 77018",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "67800301",
+   "close_date": null
   }
  ],
- "relisted": [],
+ "relisted": [
+  {
+   "id": "acq_1714-lamonte-ln",
+   "a": "1714 Lamonte Ln",
+   "ty": "single",
+   "mls": "33240383"
+  },
+  {
+   "id": "acq_1714-viking-dr",
+   "a": "1714 Viking Dr",
+   "ty": "single",
+   "mls": "42138869"
+  },
+  {
+   "id": "pmt_5310-de-milo-dr",
+   "a": "5310 DE MILO DR, Houston, TX 77092",
+   "ty": "single",
+   "mls": "49642353"
+  },
+  {
+   "id": "pmt_539-w-34th-st",
+   "a": "539 W 34TH ST, Houston, TX 77018",
+   "ty": "single",
+   "mls": "22031090"
+  },
+  {
+   "id": "pmt_963-w-41st-st",
+   "a": "963 W 41ST ST, Houston, TX 77018",
+   "ty": "single",
+   "mls": "93878007"
+  }
+ ],
  "new": [
   {
    "a": "1348 Althea Drive",
    "prod": "Single Lot",
    "mls": "24674503",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": "acq_1348-althea-dr"
+   "staged": false,
+   "mergeCandidate": "acq_1348-althea-dr",
+   "id": "acq_1348-althea-dr",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "1714 Lamonte Lane",
    "prod": "Single Lot",
    "mls": "33240383",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "acq_1714-lamonte-ln"
+   "staged": false,
+   "mergeCandidate": "acq_1714-lamonte-ln",
+   "id": "acq_1714-lamonte-ln",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "1714 Viking Drive",
    "prod": "Single Lot",
    "mls": "42138869",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "acq_1714-viking-dr"
+   "staged": false,
+   "mergeCandidate": "acq_1714-viking-dr",
+   "id": "acq_1714-viking-dr",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "1231 Martin Street",
    "prod": "Single Lot",
    "mls": "67800301",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": "pmt_1231-martin-st-77018"
+   "staged": false,
+   "mergeCandidate": "pmt_1231-martin-st-77018",
+   "id": "pmt_1231-martin-st-77018",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "5310 De Milo Drive",
    "prod": "Single Lot",
    "mls": "49642353",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_5310-de-milo-dr"
+   "staged": false,
+   "mergeCandidate": "pmt_5310-de-milo-dr",
+   "id": "pmt_5310-de-milo-dr",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "539 W 34th Street",
    "prod": "Single Lot",
    "mls": "22031090",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_539-w-34th-st"
+   "staged": false,
+   "mergeCandidate": "pmt_539-w-34th-st",
+   "id": "pmt_539-w-34th-st",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "963 W 41st Street",
    "prod": "Single Lot",
    "mls": "93878007",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_963-w-41st-st"
+   "staged": false,
+   "mergeCandidate": "pmt_963-w-41st-st",
+   "id": "pmt_963-w-41st-st",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "2023 Viking Drive",
    "prod": "Single Lot",
    "mls": "56234627",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2023-viking-drive",
+   "applied": true
   },
   {
    "a": "1726 Saxon Drive",
    "prod": "Single Lot",
    "mls": "9262601",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1726-saxon-drive",
+   "applied": true
   },
   {
    "a": "1634 Latexo Drive",
    "prod": "Single Lot",
    "mls": "54378542",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1634-latexo-drive",
+   "applied": true
   },
   {
    "a": "1806 De Milo Drive",
    "prod": "Single Lot",
    "mls": "5510224",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1806-de-milo-drive",
+   "applied": true
   },
   {
    "a": "1726 Chantilly Lane",
    "prod": "Single Lot",
    "mls": "96128022",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1726-chantilly-lane",
+   "applied": true
   },
   {
    "a": "1741 Gardenia Drive",
    "prod": "Single Lot",
    "mls": "17284119",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1741-gardenia-drive",
+   "applied": true
   },
   {
    "a": "1514 Gardenia Drive",
    "prod": "Single Lot",
    "mls": "32536565",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1514-gardenia-drive",
+   "applied": true
   },
   {
    "a": "1212 Candlelight Lane",
    "prod": "Single Lot",
    "mls": "28967265",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1212-candlelight-lane",
+   "applied": true
   },
   {
    "a": "4825 Ella Boulevard",
    "prod": "Single Lot",
    "mls": "91927524",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4825-ella-boulevard",
+   "applied": true
   },
   {
    "a": "1457 Curtin Street",
    "prod": "Single Lot",
    "mls": "96822457",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1457-curtin-street",
+   "applied": true
   },
   {
    "a": "1018 Rosepoint Street",
    "prod": "Single Lot",
    "mls": "33188903",
    "har_status": "Option Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1018-rosepoint-street",
+   "applied": true
   },
   {
    "a": "1623 Viking Drive",
    "prod": "Single Lot",
    "mls": "30716167",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1623-viking-drive",
+   "applied": true
   },
   {
    "a": "1313 Cheshire Lane",
    "prod": "Single Lot",
    "mls": "70698845",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1313-cheshire-lane",
+   "applied": true
   },
   {
    "a": "1359 Wakefield Drive",
    "prod": "Single Lot",
    "mls": "88542335",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1359-wakefield-drive",
+   "applied": true
   },
   {
    "a": "1248 Chamboard Lane",
    "prod": "Single Lot",
    "mls": "97291827",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1248-chamboard-lane",
+   "applied": true
   },
   {
    "a": "1739 Latexo Drive",
    "prod": "Single Lot",
    "mls": "39357522",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1739-latexo-drive",
+   "applied": true
   },
   {
    "a": "1510 Chantilly Lane",
    "prod": "Single Lot",
    "mls": "30460753",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1510-chantilly-lane",
+   "applied": true
   },
   {
    "a": "1451 Gardenia Drive",
    "prod": "Single Lot",
    "mls": "11976567",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1451-gardenia-drive",
+   "applied": true
   },
   {
    "a": "834 Lamonte Lane",
    "prod": "Single Lot",
    "mls": "27242827",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_834-lamonte-lane",
+   "applied": true
   },
   {
    "a": "1522 Hewitt Drive",
    "prod": "Single Lot",
    "mls": "11093929",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1522-hewitt-drive",
+   "applied": true
   },
   {
    "a": "1590 Sue Barnett Drive",
    "prod": "Single Lot",
    "mls": "27649083",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1590-sue-barnett-drive",
+   "applied": true
   }
  ],
  "excluded": [],
@@ -602,5 +714,70 @@
   "act_934-w-43rd-street": "60575189",
   "act_955-w-42nd-street": "94916904",
   "act_959-althea-drive": "17830263"
- }
+ },
+ "identity_resolutions": [
+  {
+   "member": "acq_1348-althea-dr",
+   "address": "1348 Althea Drive",
+   "mls": "24674503",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1348-althea-drive"
+  },
+  {
+   "member": "acq_1714-lamonte-ln",
+   "address": "1714 Lamonte Lane",
+   "mls": "33240383",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1714-lamonte-lane"
+  },
+  {
+   "member": "acq_1714-viking-dr",
+   "address": "1714 Viking Drive",
+   "mls": "42138869",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1714-viking-drive"
+  },
+  {
+   "member": "pmt_1231-martin-st-77018",
+   "address": "1231 Martin Street",
+   "mls": "67800301",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1231-martin-street"
+  },
+  {
+   "member": "pmt_5310-de-milo-dr",
+   "address": "5310 De Milo Drive",
+   "mls": "49642353",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_5310-de-milo-drive"
+  },
+  {
+   "member": "pmt_539-w-34th-st",
+   "address": "539 W 34th Street",
+   "mls": "22031090",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_539-w-34th-street"
+  },
+  {
+   "member": "pmt_963-w-41st-st",
+   "address": "963 W 41st Street",
+   "mls": "93878007",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_963-w-41st-street"
+  }
+ ]
 }

@@ -16,8 +16,8 @@
    "date": "2026-10-26",
    "counts": {
     "matched": 28,
-    "dropped": 17,
-    "relisted": 0,
+    "dropped": 19,
+    "relisted": 5,
     "new": 28,
     "excluded": 0
    }
