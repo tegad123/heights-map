@@ -1,0 +1,25 @@
+{
+ "date": "2026-10-26",
+ "market": "riveroaks",
+ "html": "riveroaks.html",
+ "note": "riveroaks.html has no SOLD_DATA/SOLD_COMP_POLICY block; in-zone sold rows staged for review only",
+ "close_range": [
+  "2026-09-10",
+  "2026-09-10"
+ ],
+ "sold": [
+  {
+   "mls": "1006370",
+   "address": "2321 Claremont Lane",
+   "close_date": "2026-09-10",
+   "close_price": 5600000.0,
+   "lot_sqft": 10500.0,
+   "product": "Single Lot",
+   "year_built": 2026.0,
+   "building_sqft": 7349.0,
+   "builder": "Winfrey Design Build",
+   "lat": 29.744408,
+   "lng": -95.429927
+  }
+ ]
+}

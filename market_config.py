@@ -15,10 +15,12 @@ Field notes:
   extracted from each page's HD_POLYS ring; gardenoaksoakforest is the union
   of garden_oaks/*_boundary_filled.geojson (commercial-frontage overreach on
   N Shepherd / W 43rd is mitigated by the S.F. RES filter — eyeball those
-  frontages in dry-runs, CLAUDE.md known issue). westu has NO polygon:
-  its HD_POLYS is the strict city boundary but the market is all of 77005
-  (Southampton/Rice Village pins included since the 07-08 build), so the
-  zone guard is zip + coord box only.
+  frontages in dry-runs, CLAUDE.md known issue). westu is the 77005
+  footprint, not the West U city line (the market is all of 77005 —
+  Southampton/Rice Village included since the 07-08 build): the union of
+  HCAD parcels whose site zip is 77005. It matches the Census ZCTA. The
+  Boulevard Oaks blocks north of it (North/South Blvd, Bartlett, Milford)
+  are HCAD zip 77098 even where a HAR row says 77005.
 - coord_box: (lat_min, lat_max, lng_min, lng_max), boundary bbox +-0.01 deg.
 - east_lng: Heights-only I-45 corridor cutoff. None elsewhere.
 - springvalley intentionally absent: investigation done 2026-08-27, joins only
@@ -48,8 +50,8 @@ MARKETS = {
         'html': 'westu.html',
         'permits_json': 'westu_permits.json',
         'zips': ['77005'],
-        'boundary': None,          # all of 77005 by design; zip + box guard
-        'coord_box': (29.696, 29.735, -95.458, -95.408),
+        'boundary': 'westu_boundary.geojson',
+        'coord_box': (29.696, 29.739, -95.458, -95.380),
         'east_lng': None,
         'enabled': True,
     },

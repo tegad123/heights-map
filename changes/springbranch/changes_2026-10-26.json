@@ -1,0 +1,2339 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "dc9a0ef07a9425cb0de18d3149b0b32d45f361f1a46433f983e2418106cf1913",
+  "pending_BigPending_27ca.csv": "3aa02911448fdff672c69c78e5e40245ec81ee141676329bd715ccd69cef37b9",
+  "sold_BigSold_ad16.csv": "3c68e38726e5eecc411529054ee3c11542d07bcf537adbe957e766d49255549f",
+  "terminated_bigTerminated_868d.csv": "ddfad590fb42ae033438aec90fa21bd6fce833c7f8bc539686c2990424a03331"
+ },
+ "counts": {
+  "matched": 28,
+  "dropped": 36,
+  "relisted": 14,
+  "new": 30,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "act_1116-oak-tree",
+  "act_1302-springrock",
+  "act_1306-zora",
+  "act_1634-antoine",
+  "act_1717-monarch-oaks",
+  "act_1720-huge-oaks",
+  "act_1730-bayram",
+  "act_1730-parana",
+  "act_1731-benbow",
+  "act_1946-pech",
+  "act_2204-hoskins",
+  "act_2206-hoskins",
+  "act_2309-hollister",
+  "act_2311-hollister",
+  "act_2618-lake-kolbe",
+  "act_2641-lake-kolbe",
+  "act_2647-lake-kolbe",
+  "act_3311-cardinal-crest",
+  "act_7006-schiller",
+  "act_7119-housman",
+  "act_7208-shadyvilla",
+  "act_7414-schiller",
+  "act_7938-turquoise",
+  "act_8021-turquoise",
+  "act_8025-cedel",
+  "act_9349-leto",
+  "act_9756-westview",
+  "act_9849-mocking-bird-hill"
+ ],
+ "dropped": [
+  {
+   "id": "act_10418-brinwood",
+   "a": "10418 Brinwood Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "62281742",
+   "close_date": "2026-09-24"
+  },
+  {
+   "id": "act_1418-caywood-d",
+   "a": "1418 Caywood Lane Unit#D, Houston, TX",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "95753782",
+   "close_date": "2026-10-22"
+  },
+  {
+   "id": "act_1422-caywood-b",
+   "a": "1422 Caywood Lane Unit#B, Houston, TX",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "96534863",
+   "close_date": null
+  },
+  {
+   "id": "act_1457-confederate",
+   "a": "1457 Confederate Road, Houston, TX",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Withdrawn",
+   "mls": "82786083",
+   "close_date": null
+  },
+  {
+   "id": "act_1502-story",
+   "a": "1502 Story Street, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "41588985",
+   "close_date": "2026-07-24"
+  },
+  {
+   "id": "act_1504-story",
+   "a": "1504 Story Street, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "22410145",
+   "close_date": "2026-08-21"
+  },
+  {
+   "id": "act_1525-caywood-d",
+   "a": "1525 Caywood Lane Unit#D, Houston, TX",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "42395073",
+   "close_date": null
+  },
+  {
+   "id": "act_1707-bayram",
+   "a": "1707 Bayram Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "24256600",
+   "close_date": "2026-09-25"
+  },
+  {
+   "id": "act_1734-hollister",
+   "a": "1734 Hollister Street, Houston, TX",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Expired",
+   "mls": "69685988",
+   "close_date": null
+  },
+  {
+   "id": "act_1922-norcrest",
+   "a": "1922 Norcrest Dr Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "44231733",
+   "close_date": "2026-08-27"
+  },
+  {
+   "id": "act_1941-coulcrest",
+   "a": "1941 Coulcrest Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "28204129",
+   "close_date": null
+  },
+  {
+   "id": "act_2229-blalock",
+   "a": "2229 Blalock Road, Houston, TX",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "51674411",
+   "close_date": null
+  },
+  {
+   "id": "act_2616-lake-kolbe",
+   "a": "2616 Lake Kolbe Lane, Houston, TX",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "87342860",
+   "close_date": "2026-07-31"
+  },
+  {
+   "id": "act_2629-lake-kolbe",
+   "a": "2629 Lake Kolbe Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "37995545",
+   "close_date": "2026-09-10"
+  },
+  {
+   "id": "act_2739-lake-kolbe",
+   "a": "2739 Lake Kolbe Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "68558747",
+   "close_date": null
+  },
+  {
+   "id": "act_7218-schiller",
+   "a": "7218 Schiller Street, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "28922837",
+   "close_date": "2026-09-30"
+  },
+  {
+   "id": "act_7407-janak",
+   "a": "7407 Janak Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "53602704",
+   "close_date": null
+  },
+  {
+   "id": "act_7905-westwood",
+   "a": "7905 Westwood Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "41269127",
+   "close_date": null
+  },
+  {
+   "id": "act_8017-turquoise",
+   "a": "8017 Turquoise Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "33564582",
+   "close_date": "2026-08-19"
+  },
+  {
+   "id": "act_8033-ridgeview",
+   "a": "8033 Ridgeview Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "4557019",
+   "close_date": "2026-08-24"
+  },
+  {
+   "id": "act_8306-western",
+   "a": "8306 Western Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "51360487",
+   "close_date": "2026-10-16"
+  },
+  {
+   "id": "act_8550-montridge",
+   "a": "8550 Montridge Drive, Houston, TX",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "48092893",
+   "close_date": null
+  },
+  {
+   "id": "act_9311-montridge",
+   "a": "9311 Montridge Drive, Houston, TX",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "85975258",
+   "close_date": null
+  },
+  {
+   "id": "act_9350-rosstown",
+   "a": "9350 Rosstown Way, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "28424118",
+   "close_date": "2026-09-25"
+  },
+  {
+   "id": "act_9537-kerrwood",
+   "a": "9537 Kerrwood Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "96914447",
+   "close_date": "2026-08-21"
+  },
+  {
+   "id": "act_9541-kerrwood",
+   "a": "9541 Kerrwood Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "34628895",
+   "close_date": "2026-10-19"
+  },
+  {
+   "id": "act_9603-carousel",
+   "a": "9603 Carousel Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "52002028",
+   "close_date": "2026-09-21"
+  },
+  {
+   "id": "act_9626-panola",
+   "a": "9626 Panola Way, Houston, TX",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "47512499",
+   "close_date": null
+  },
+  {
+   "id": "act_9630-vilven",
+   "a": "9630 Vilven Lane, Houston, TX",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "18389424",
+   "close_date": null
+  },
+  {
+   "id": "act_9713-larston",
+   "a": "9713 Larston Street, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "67615206",
+   "close_date": "2026-06-30"
+  },
+  {
+   "id": "act_9926-warwana",
+   "a": "9926 Warwana Road, Houston, TX",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "49202801",
+   "close_date": "2026-10-09"
+  },
+  {
+   "id": "pmt_1606-afton",
+   "a": "1606 Afton St 77055",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "75918080",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1618-ronson",
+   "a": "1618 Ronson Rd 77055",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "89202336",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1621-bayram",
+   "a": "1621 Bayram Dr 77055",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "37493946",
+   "close_date": null
+  },
+  {
+   "id": "pmt_7719-bryonwood",
+   "a": "7719 Bryonwood Dr 77055",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "56244689",
+   "close_date": null
+  },
+  {
+   "id": "pmt_9214-westview",
+   "a": "9214 Westview Dr 77055",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pend Cont to Show",
+   "mls": "32773710",
+   "close_date": null
+  }
+ ],
+ "relisted": [
+  {
+   "id": "pmt_1513-story",
+   "a": "1513 Story St 77055",
+   "ty": "single",
+   "mls": "83298064"
+  },
+  {
+   "id": "pmt_1909-restridge",
+   "a": "1909 Restridge Dr 77055",
+   "ty": "single",
+   "mls": "9967730"
+  },
+  {
+   "id": "pmt_1930-chaparral",
+   "a": "1930 Chaparral Dr 77043",
+   "ty": "single",
+   "mls": "45392054"
+  },
+  {
+   "id": "pmt_1949-coulcrest",
+   "a": "1949 Coulcrest Dr 77055",
+   "ty": "single",
+   "mls": "98330945"
+  },
+  {
+   "id": "pmt_2019-shadow-bend",
+   "a": "2019 Shadow Bend Dr 77043",
+   "ty": "single",
+   "mls": "26749264"
+  },
+  {
+   "id": "pmt_2109-mckean",
+   "a": "2109 Mckean Dr 77080",
+   "ty": "single",
+   "mls": "28664995"
+  },
+  {
+   "id": "pmt_6618-sivley",
+   "a": "6618 Sivley St 77055",
+   "ty": "single",
+   "mls": "19701591"
+  },
+  {
+   "id": "pmt_7106-raton",
+   "a": "7106 Raton St 77055",
+   "ty": "single",
+   "mls": "90146149"
+  },
+  {
+   "id": "pmt_7726-betty-jane",
+   "a": "7726 Betty Jane Ln 77055",
+   "ty": "single",
+   "mls": "82535787"
+  },
+  {
+   "id": "pmt_8005-ridgeview",
+   "a": "8005 Ridgeview Dr 77055",
+   "ty": "single",
+   "mls": "53028724"
+  },
+  {
+   "id": "pmt_8046-turquoise",
+   "a": "8046 Turquoise Ln 77055",
+   "ty": "single",
+   "mls": "76954750"
+  },
+  {
+   "id": "pmt_9306-livernois",
+   "a": "9306 Livernois Rd 77080",
+   "ty": "single",
+   "mls": "70579612"
+  },
+  {
+   "id": "pmt_9603-bundy",
+   "a": "9603 Bundy Ln 77080",
+   "ty": "single",
+   "mls": "39864917"
+  },
+  {
+   "id": "pmt_9621-larston",
+   "a": "9621 Larston St 77055",
+   "ty": "single",
+   "mls": "10262794"
+  }
+ ],
+ "new": [
+  {
+   "a": "1513 Story Street",
+   "prod": "Single Lot",
+   "mls": "83298064",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1513-story",
+   "id": "pmt_1513-story",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1606 Afton Street",
+   "prod": "Single Lot",
+   "mls": "75918080",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_1606-afton",
+   "id": "pmt_1606-afton",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1618 Ronson Road",
+   "prod": "Single Lot",
+   "mls": "89202336",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_1618-ronson",
+   "id": "pmt_1618-ronson",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1621 Bayram Drive",
+   "prod": "Single Lot",
+   "mls": "37493946",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_1621-bayram",
+   "id": "pmt_1621-bayram",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1909 Restridge Drive",
+   "prod": "Single Lot",
+   "mls": "9967730",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1909-restridge",
+   "id": "pmt_1909-restridge",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1930 Chaparral Drive",
+   "prod": "Single Lot",
+   "mls": "45392054",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1930-chaparral",
+   "id": "pmt_1930-chaparral",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1949 Coulcrest Drive",
+   "prod": "Single Lot",
+   "mls": "98330945",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_1949-coulcrest",
+   "id": "pmt_1949-coulcrest",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2019 Shadow Bend",
+   "prod": "Single Lot",
+   "mls": "26749264",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_2019-shadow-bend",
+   "id": "pmt_2019-shadow-bend",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2109 McKean Drive",
+   "prod": "Single Lot",
+   "mls": "28664995",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_2109-mckean",
+   "id": "pmt_2109-mckean",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "6618 Sivley Street",
+   "prod": "Single Lot",
+   "mls": "19701591",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_6618-sivley",
+   "id": "pmt_6618-sivley",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "7106 Raton Street",
+   "prod": "Single Lot",
+   "mls": "90146149",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_7106-raton",
+   "id": "pmt_7106-raton",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "7719 Bryonwood Drive",
+   "prod": "Single Lot",
+   "mls": "56244689",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_7719-bryonwood",
+   "id": "pmt_7719-bryonwood",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "7726 Betty Jane Lane",
+   "prod": "Single Lot",
+   "mls": "82535787",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_7726-betty-jane",
+   "id": "pmt_7726-betty-jane",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "8005 Ridgeview Drive",
+   "prod": "Single Lot",
+   "mls": "53028724",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_8005-ridgeview",
+   "id": "pmt_8005-ridgeview",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "8046 Turquoise Lane",
+   "prod": "Single Lot",
+   "mls": "76954750",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_8046-turquoise",
+   "id": "pmt_8046-turquoise",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "9214 Westview Drive",
+   "prod": "Single Lot",
+   "mls": "32773710",
+   "har_status": "Pend Cont to Show",
+   "staged": false,
+   "mergeCandidate": "pmt_9214-westview",
+   "id": "pmt_9214-westview",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "9306 Livernois Road",
+   "prod": "Single Lot",
+   "mls": "70579612",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_9306-livernois",
+   "id": "pmt_9306-livernois",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "9603 Bundy Lane",
+   "prod": "Single Lot",
+   "mls": "39864917",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_9603-bundy",
+   "id": "pmt_9603-bundy",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "9621 Larston Street",
+   "prod": "Single Lot",
+   "mls": "10262794",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_9621-larston",
+   "id": "pmt_9621-larston",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "9419 Montridge Drive Unit#B",
+   "prod": "Split Lot",
+   "mls": "47803523",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_9419-montridge-drive-unit-b",
+   "applied": true
+  },
+  {
+   "a": "8917 Grovner Place",
+   "prod": "Split Lot",
+   "mls": "21849003",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_8917-grovner-place",
+   "applied": true
+  },
+  {
+   "a": "8925 Grovner Place",
+   "prod": "Split Lot",
+   "mls": "63409666",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_8925-grovner-place",
+   "applied": true
+  },
+  {
+   "a": "8933 Grovner Place",
+   "prod": "Split Lot",
+   "mls": "72674162",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_8933-grovner-place",
+   "applied": true
+  },
+  {
+   "a": "8803 Hollywood Garden Lane",
+   "prod": "Split Lot",
+   "mls": "32563735",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_8803-hollywood-garden-lane",
+   "applied": true
+  },
+  {
+   "a": "1859 Lynnview Drive",
+   "prod": "Single Lot",
+   "mls": "17746726",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1859-lynnview-drive",
+   "applied": true
+  },
+  {
+   "a": "7543 Ciano Lane",
+   "prod": "Split Lot",
+   "mls": "21344725",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_7543-ciano-lane",
+   "applied": true
+  },
+  {
+   "a": "1918 Westcrest Drive",
+   "prod": "Single Lot",
+   "mls": "42099072",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1918-westcrest-drive",
+   "applied": true
+  },
+  {
+   "a": "8555 Forum Drive",
+   "prod": "Split Lot",
+   "mls": "10820280",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_8555-forum-drive",
+   "applied": true
+  },
+  {
+   "a": "2733 Lake Kolbe Lane",
+   "prod": "Single Lot",
+   "mls": "74491178",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2733-lake-kolbe-lane",
+   "applied": true
+  },
+  {
+   "a": "8553 Forum Drive",
+   "prod": "Single Lot",
+   "mls": "40133826",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_8553-forum-drive",
+   "applied": true
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [
+  {
+   "id": "act_1610-lynnview",
+   "mls": null,
+   "address": "1610 Lynnview Drive, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1926-hoskins",
+   "mls": null,
+   "address": "1926 Hoskins Drive, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1938-laverne",
+   "mls": null,
+   "address": "1938 Laverne Street, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_1952-purswell",
+   "mls": null,
+   "address": "1952 Purswell Road, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2102-red-cedar-ridge",
+   "mls": null,
+   "address": "2102 Red Cedar Ridge Way, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2139-counter-point",
+   "mls": null,
+   "address": "2139 Counter Point Drive, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2207-silverbonnet",
+   "mls": null,
+   "address": "2207 Silverbonnet Street, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2211-silverbonnet",
+   "mls": null,
+   "address": "2211 Silverbonnet Street, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_2508-hollister",
+   "mls": null,
+   "address": "2508 Hollister Road, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_3406-asher-landing",
+   "mls": null,
+   "address": "3406 Asher Landing Ln, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_4205-upland-bend",
+   "mls": null,
+   "address": "4205 Upland Bend Drive, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_4206-colony-pines",
+   "mls": null,
+   "address": "4206 Colony Pines Lane, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_6533-corbin",
+   "mls": null,
+   "address": "6533 Corbin Street, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_7535-ciano",
+   "mls": null,
+   "address": "7535 Ciano Lane, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_8006-longridge",
+   "mls": null,
+   "address": "8006 Longridge Drive, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_8618-cedar-plains",
+   "mls": null,
+   "address": "8618 Cedar Plains Lane, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_8810-carousel-a",
+   "mls": null,
+   "address": "8810 Carousel Lane A, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_9551-neuens-b",
+   "mls": null,
+   "address": "9551 Neuens Rd Road Unit#B, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_9820-mocking-bird-hill",
+   "mls": null,
+   "address": "9820 Mocking Bird Hill Lane, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "act_9909-larston",
+   "mls": null,
+   "address": "9909 Larston Street, Houston, TX",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "act_10418-brinwood",
+   "address": "10418 Brinwood Drive, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "62281742",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1418-caywood-d",
+   "address": "1418 Caywood Lane Unit#D, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "95753782",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1422-caywood-b",
+   "address": "1422 Caywood Lane Unit#B, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "96534863",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1457-confederate",
+   "address": "1457 Confederate Road, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "82786083",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1502-story",
+   "address": "1502 Story Street, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "41588985",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1504-story",
+   "address": "1504 Story Street, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "22410145",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1525-caywood-d",
+   "address": "1525 Caywood Lane Unit#D, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "42395073",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1707-bayram",
+   "address": "1707 Bayram Drive, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "24256600",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1734-hollister",
+   "address": "1734 Hollister Street, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "69685988",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1922-norcrest",
+   "address": "1922 Norcrest Dr Drive, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "44231733",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1941-coulcrest",
+   "address": "1941 Coulcrest Drive, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "28204129",
+   "previous_mls": null
+  },
+  {
+   "member": "act_2229-blalock",
+   "address": "2229 Blalock Road, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "51674411",
+   "previous_mls": null
+  },
+  {
+   "member": "act_2616-lake-kolbe",
+   "address": "2616 Lake Kolbe Lane, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "87342860",
+   "previous_mls": null
+  },
+  {
+   "member": "act_2629-lake-kolbe",
+   "address": "2629 Lake Kolbe Lane, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "37995545",
+   "previous_mls": null
+  },
+  {
+   "member": "act_2739-lake-kolbe",
+   "address": "2739 Lake Kolbe Lane, Houston, TX",
+   "before": "active",
+   "after": "pending",
+   "mls": "68558747",
+   "previous_mls": null
+  },
+  {
+   "member": "act_7218-schiller",
+   "address": "7218 Schiller Street, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "28922837",
+   "previous_mls": null
+  },
+  {
+   "member": "act_7407-janak",
+   "address": "7407 Janak Drive, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "53602704",
+   "previous_mls": null
+  },
+  {
+   "member": "act_7905-westwood",
+   "address": "7905 Westwood Drive, Houston, TX",
+   "before": "active",
+   "after": "pending",
+   "mls": "41269127",
+   "previous_mls": null
+  },
+  {
+   "member": "act_8017-turquoise",
+   "address": "8017 Turquoise Lane, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "33564582",
+   "previous_mls": null
+  },
+  {
+   "member": "act_8033-ridgeview",
+   "address": "8033 Ridgeview Drive, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "4557019",
+   "previous_mls": null
+  },
+  {
+   "member": "act_8306-western",
+   "address": "8306 Western Drive, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "51360487",
+   "previous_mls": null
+  },
+  {
+   "member": "act_8550-montridge",
+   "address": "8550 Montridge Drive, Houston, TX",
+   "before": "active",
+   "after": "pending",
+   "mls": "48092893",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9311-montridge",
+   "address": "9311 Montridge Drive, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "85975258",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9350-rosstown",
+   "address": "9350 Rosstown Way, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "28424118",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9537-kerrwood",
+   "address": "9537 Kerrwood Lane, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "96914447",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9541-kerrwood",
+   "address": "9541 Kerrwood Lane, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "34628895",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9603-carousel",
+   "address": "9603 Carousel Lane, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "52002028",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9626-panola",
+   "address": "9626 Panola Way, Houston, TX",
+   "before": "active",
+   "after": "pending",
+   "mls": "47512499",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9630-vilven",
+   "address": "9630 Vilven Lane, Houston, TX",
+   "before": "active",
+   "after": "terminated",
+   "mls": "18389424",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9713-larston",
+   "address": "9713 Larston Street, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "67615206",
+   "previous_mls": null
+  },
+  {
+   "member": "act_9926-warwana",
+   "address": "9926 Warwana Road, Houston, TX",
+   "before": "active",
+   "after": "sold",
+   "mls": "49202801",
+   "previous_mls": null
+  }
+ ],
+ "observed": {
+  "act_1116-oak-tree": "94629897",
+  "act_1302-springrock": "47155734",
+  "act_1306-zora": "96230978",
+  "act_1634-antoine": "98014457",
+  "act_1717-monarch-oaks": "38193031",
+  "act_1720-huge-oaks": "11495844",
+  "act_1730-bayram": "82895455",
+  "act_1730-parana": "10067615",
+  "act_1731-benbow": "88899325",
+  "act_1946-pech": "10003295",
+  "act_2204-hoskins": "57037656",
+  "act_2206-hoskins": "16644991",
+  "act_2309-hollister": "8748619",
+  "act_2311-hollister": "19591799",
+  "act_2618-lake-kolbe": "75843249",
+  "act_2641-lake-kolbe": "14598399",
+  "act_2647-lake-kolbe": "66397575",
+  "act_3311-cardinal-crest": "41217199",
+  "act_7006-schiller": "61539081",
+  "act_7119-housman": "96218735",
+  "act_7208-shadyvilla": "68230392",
+  "act_7414-schiller": "37905461",
+  "act_7938-turquoise": "5763919",
+  "act_8021-turquoise": "4733550",
+  "act_8025-cedel": "43594865",
+  "act_9349-leto": "97461854",
+  "act_9756-westview": "42491037",
+  "act_9849-mocking-bird-hill": "46050560"
+ },
+ "identity_resolutions": [
+  {
+   "member": "pmt_1513-story",
+   "address": "1513 Story Street",
+   "mls": "83298064",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1513-story-street"
+  },
+  {
+   "member": "pmt_1606-afton",
+   "address": "1606 Afton Street",
+   "mls": "75918080",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1606-afton-street"
+  },
+  {
+   "member": "pmt_1618-ronson",
+   "address": "1618 Ronson Road",
+   "mls": "89202336",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1618-ronson-road"
+  },
+  {
+   "member": "pmt_1621-bayram",
+   "address": "1621 Bayram Drive",
+   "mls": "37493946",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1621-bayram-drive"
+  },
+  {
+   "member": "pmt_1909-restridge",
+   "address": "1909 Restridge Drive",
+   "mls": "9967730",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1909-restridge-drive"
+  },
+  {
+   "member": "pmt_1930-chaparral",
+   "address": "1930 Chaparral Drive",
+   "mls": "45392054",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1930-chaparral-drive"
+  },
+  {
+   "member": "pmt_1949-coulcrest",
+   "address": "1949 Coulcrest Drive",
+   "mls": "98330945",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1949-coulcrest-drive"
+  },
+  {
+   "member": "pmt_2019-shadow-bend",
+   "address": "2019 Shadow Bend",
+   "mls": "26749264",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2019-shadow-bend"
+  },
+  {
+   "member": "pmt_2109-mckean",
+   "address": "2109 McKean Drive",
+   "mls": "28664995",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2109-mckean-drive"
+  },
+  {
+   "member": "pmt_6618-sivley",
+   "address": "6618 Sivley Street",
+   "mls": "19701591",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_6618-sivley-street"
+  },
+  {
+   "member": "pmt_7106-raton",
+   "address": "7106 Raton Street",
+   "mls": "90146149",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_7106-raton-street"
+  },
+  {
+   "member": "pmt_7719-bryonwood",
+   "address": "7719 Bryonwood Drive",
+   "mls": "56244689",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_7719-bryonwood-drive"
+  },
+  {
+   "member": "pmt_7726-betty-jane",
+   "address": "7726 Betty Jane Lane",
+   "mls": "82535787",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_7726-betty-jane-lane"
+  },
+  {
+   "member": "pmt_8005-ridgeview",
+   "address": "8005 Ridgeview Drive",
+   "mls": "53028724",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_8005-ridgeview-drive"
+  },
+  {
+   "member": "pmt_8046-turquoise",
+   "address": "8046 Turquoise Lane",
+   "mls": "76954750",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_8046-turquoise-lane"
+  },
+  {
+   "member": "pmt_9214-westview",
+   "address": "9214 Westview Drive",
+   "mls": "32773710",
+   "status": "pending",
+   "har_status": "Pend Cont to Show",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_9214-westview-drive"
+  },
+  {
+   "member": "pmt_9306-livernois",
+   "address": "9306 Livernois Road",
+   "mls": "70579612",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_9306-livernois-road"
+  },
+  {
+   "member": "pmt_9603-bundy",
+   "address": "9603 Bundy Lane",
+   "mls": "39864917",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_9603-bundy-lane"
+  },
+  {
+   "member": "pmt_9621-larston",
+   "address": "9621 Larston Street",
+   "mls": "10262794",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_9621-larston-street"
+  }
+ ],
+ "archived_duplicates": [
+  {
+   "record": {
+    "id": "acq_9541-kerrwood-ln",
+    "a": "9541 Kerrwood Ln",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-27, 7,855 sqft lot YB1958",
+    "c": "",
+    "lat": 29.810662,
+    "lng": -95.52847
+   },
+   "canonical": "act_9541-kerrwood",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1946-pech-rd",
+    "a": "1946 Pech Rd",
+    "llc": "Mazz Construction Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-12-16, 7,995 sqft lot YB1950",
+    "c": "",
+    "lat": 29.807285,
+    "lng": -95.495673
+   },
+   "canonical": "act_1946-pech",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_8550-montridge-dr",
+    "a": "8550 Montridge Dr",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-26, 7,440 sqft lot YB1952",
+    "c": "",
+    "lat": 29.808431,
+    "lng": -95.499406
+   },
+   "canonical": "act_8550-montridge",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1457-confederate-rd",
+    "a": "1457 Confederate Rd",
+    "llc": "Khanfamily6165 Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-02, 10,500 sqft lot YB1952",
+    "c": "",
+    "lat": 29.796236,
+    "lng": -95.527239
+   },
+   "canonical": "act_1457-confederate",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7119-housman-st",
+    "a": "7119 Housman St",
+    "llc": "7119 Housman Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-28, 7,500 sqft lot YB1952",
+    "c": "",
+    "lat": 29.799387,
+    "lng": -95.473042
+   },
+   "canonical": "act_7119-housman",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_9349-leto-rd",
+    "a": "9349 Leto Rd",
+    "llc": "F & N Construction Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-27, 14,073 sqft lot YB1952",
+    "c": "",
+    "lat": 29.803657,
+    "lng": -95.521656
+   },
+   "canonical": "act_9349-leto",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7218-schiller-st",
+    "a": "7218 Schiller St",
+    "llc": "Sarah Investment & Construction Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-22, 9,900 sqft lot YB2024",
+    "c": "",
+    "lat": 29.798988,
+    "lng": -95.474257
+   },
+   "canonical": "act_7218-schiller",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_8033-ridgeview-dr",
+    "a": "8033 Ridgeview Dr",
+    "llc": "Quintessa Homes Of Texas",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-02, 7,521 sqft lot YB1955",
+    "c": "",
+    "lat": 29.809684,
+    "lng": -95.491318
+   },
+   "canonical": "act_8033-ridgeview",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1941-coulcrest-dr",
+    "a": "1941 Coulcrest Dr",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-04, 8,125 sqft lot YB1955",
+    "c": "",
+    "lat": 29.807065,
+    "lng": -95.499094
+   },
+   "canonical": "act_1941-coulcrest",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1707-bayram-dr",
+    "a": "1707 Bayram Dr",
+    "llc": "Northstone Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-18, 10,800 sqft lot YB1953",
+    "c": "",
+    "lat": 29.800417,
+    "lng": -95.498424
+   },
+   "canonical": "act_1707-bayram",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1606-monarch-oaks-st",
+    "a": "1606 Monarch Oaks St",
+    "llc": "Casmer Randy Development Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-02, 15,000 sqft lot YB1957",
+    "c": "",
+    "lat": 29.799351,
+    "lng": -95.489721
+   },
+   "canonical": "pmt_1606-monarch-oaks",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1618-ronson-rd",
+    "a": "1618 Ronson Rd",
+    "llc": "Northstone Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-08, 9,450 sqft lot YB1953",
+    "c": "",
+    "lat": 29.799077,
+    "lng": -95.498906
+   },
+   "canonical": "pmt_1618-ronson",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7214-blandford-ln",
+    "a": "7214 Blandford Ln",
+    "llc": "Jf Homes Construction Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-21, 9,030 sqft lot YB1965",
+    "c": "",
+    "lat": 29.789948,
+    "lng": -95.474721
+   },
+   "canonical": "pmt_7214-blandford",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7719-bryonwood-dr",
+    "a": "7719 Bryonwood Dr",
+    "llc": "Holland Fine Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-31, 12,600 sqft lot YB1955",
+    "c": "",
+    "lat": 29.787058,
+    "lng": -95.483074
+   },
+   "canonical": "pmt_7719-bryonwood",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1305-confederate-rd",
+    "a": "1305 Confederate Rd",
+    "llc": "Brimstone Properties I Lp",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-31, 8,320 sqft lot YB1955",
+    "c": "",
+    "lat": 29.792168,
+    "lng": -95.528347
+   },
+   "canonical": "pmt_1305-confederate",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1909-restridge-dr",
+    "a": "1909 Restridge Dr",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-07, 7,995 sqft lot YB1951",
+    "c": "",
+    "lat": 29.805626,
+    "lng": -95.494218
+   },
+   "canonical": "pmt_1909-restridge",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_8561-forum-dr",
+    "a": "8561 Forum Dr",
+    "llc": "Fide Ventures Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-22, 7,236 sqft lot YB1952",
+    "c": "",
+    "lat": 29.801952,
+    "lng": -95.500254
+   },
+   "canonical": "pmt_8561-forum",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1521-bracher-st",
+    "a": "1521 Bracher St",
+    "llc": "Do California Routh",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-06, 12,000 sqft lot YB1956",
+    "c": "",
+    "lat": 29.797221,
+    "lng": -95.505906
+   },
+   "canonical": "pmt_1521-bracher",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7602-bryonwood-dr",
+    "a": "7602 Bryonwood Dr",
+    "llc": "Holland Fine Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-12-15, 12,036 sqft lot YB1969",
+    "c": "",
+    "lat": 29.787592,
+    "lng": -95.480066
+   },
+   "canonical": "pmt_7602-bryonwood",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_8046-turquoise-ln",
+    "a": "8046 Turquoise Ln",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-20, 7,521 sqft lot YB1954",
+    "c": "",
+    "lat": 29.811709,
+    "lng": -95.491998
+   },
+   "canonical": "pmt_8046-turquoise",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_8029-ridgeview-dr",
+    "a": "8029 Ridgeview Dr",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-12-16, 7,521 sqft lot YB1954",
+    "c": "",
+    "lat": 29.809701,
+    "lng": -95.491079
+   },
+   "canonical": "pmt_8029-ridgeview",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7106-raton-st",
+    "a": "7106 Raton St",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-12-19, 7,200 sqft lot YB1951",
+    "c": "",
+    "lat": 29.801469,
+    "lng": -95.472423
+   },
+   "canonical": "pmt_7106-raton",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_7127-northampton-way",
+    "a": "7127 Northampton Way",
+    "llc": "Castille Investments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-20, 8,160 sqft lot YB1955",
+    "c": "",
+    "lat": 29.787039601,
+    "lng": -95.4738324
+   },
+   "canonical": "pmt_7127-northampton",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1402-pine-chase-dr",
+    "a": "1402 Pine Chase Dr",
+    "llc": "Northstone Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-30, 9,094 sqft lot YB1957",
+    "c": "",
+    "lat": 29.795221,
+    "lng": -95.488747
+   },
+   "canonical": "pmt_1402-pine-chase",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_1606-afton-st",
+    "a": "1606 Afton St",
+    "llc": "Jbd Holdings Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-27, 8,184 sqft lot YB1952",
+    "c": "",
+    "lat": 29.799929,
+    "lng": -95.471834
+   },
+   "canonical": "pmt_1606-afton",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_9306-livernois-rd",
+    "a": "9306 Livernois Rd",
+    "llc": "Andares Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-19, 13,500 sqft lot YB1955",
+    "c": "",
+    "lat": 29.804214,
+    "lng": -95.517253
+   },
+   "canonical": "pmt_9306-livernois",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_9626-carousel-ln",
+    "a": "9626 Carousel Ln",
+    "llc": "Quintessa Homes Of Texas Incorporated",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-31, 7,150 sqft lot YB1962",
+    "c": "",
+    "lat": 29.814097,
+    "lng": -95.53051
+   },
+   "canonical": "pmt_9626-carousel",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_9741-warwana-rd",
+    "a": "9741 Warwana Rd",
+    "llc": "Jbd Holdings Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-21, 11,616 sqft lot YB1952",
+    "c": "",
+    "lat": 29.800711845,
+    "lng": -95.53363738
+   },
+   "canonical": "pmt_9741-warwana",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  }
+ ],
+ "archived_out_of_zone": [
+  {
+   "record": {
+    "id": "acq_1120-krist-dr",
+    "a": "1120 Krist Dr",
+    "llc": "Whitefish River Properties Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-20, 31,929 sqft lot YB1979",
+    "c": "",
+    "lat": 29.78942,
+    "lng": -95.491516
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1307-pine-chase-dr",
+    "a": "1307 Pine Chase Dr",
+    "llc": "Frontier Custom Builders Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-23, 16,984 sqft lot YB1954",
+    "c": "",
+    "lat": 29.793014,
+    "lng": -95.488506
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1317-ridgeley-dr",
+    "a": "1317 Ridgeley Dr",
+    "llc": "3bn Holdings Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-06, 17,438 sqft lot YB2014",
+    "c": "",
+    "lat": 29.794101,
+    "lng": -95.491194
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1328-bingle-rd",
+    "a": "1328 Bingle Rd",
+    "llc": "Apollo Heights Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-28, 9,000 sqft lot YB1953",
+    "c": "",
+    "lat": 29.793208,
+    "lng": -95.500175
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_14-fries-ct",
+    "a": "14 Fries Ct",
+    "llc": "14 Fries Court Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-11, 15,488 sqft lot YB1950",
+    "c": "",
+    "lat": 29.788963782,
+    "lng": -95.50996311
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_4-inverness-park-cir",
+    "a": "4 Inverness Park Cir",
+    "llc": "Fm3083 Industrial Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-16, 10,018 sqft lot YB1988",
+    "c": "",
+    "lat": 29.792006,
+    "lng": -95.508762
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8313-cedarbrake-dr",
+    "a": "8313 Cedarbrake Dr",
+    "llc": "Killion & Co Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-18, 9,800 sqft lot YB1955",
+    "c": "",
+    "lat": 29.790851,
+    "lng": -95.493938
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8320-cedarspur-dr",
+    "a": "8320 Cedarspur Dr",
+    "llc": "Multi-purpose Paper Company Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-07-10, 10,295 sqft lot YB1979",
+    "c": "",
+    "lat": 29.790474,
+    "lng": -95.494273
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8605-westview-dr",
+    "a": "8605 Westview Dr",
+    "llc": "8605 Westview Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-22, 12,000 sqft lot YB1955",
+    "c": "",
+    "lat": 29.793625,
+    "lng": -95.500992
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8623-cedarbrake-dr",
+    "a": "8623 Cedarbrake Dr",
+    "llc": "Deacon Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-05, 10,220 sqft lot YB1966",
+    "c": "",
+    "lat": 29.791042,
+    "lng": -95.501875
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8639-cedarbrake-dr",
+    "a": "8639 Cedarbrake Dr",
+    "llc": "Katyland Alliance Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-08, 13,045 sqft lot YB1966",
+    "c": "",
+    "lat": 29.790897141,
+    "lng": -95.50281148
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8725-burkhart-rd",
+    "a": "8725 Burkhart Rd",
+    "llc": "Ksd Developments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-23, 10,800 sqft lot YB1958",
+    "c": "",
+    "lat": 29.789095,
+    "lng": -95.50326
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8802-cedarbrake-dr",
+    "a": "8802 Cedarbrake Dr",
+    "llc": "Unika Homes Ltd",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-05, 11,400 sqft lot YB1955",
+    "c": "",
+    "lat": 29.791544,
+    "lng": -95.503988
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8814-croes-dr",
+    "a": "8814 Croes Dr",
+    "llc": "Lyons Investment Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-31, 15,862 sqft lot YB1957",
+    "c": "",
+    "lat": 29.789424,
+    "lng": -95.506667
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8825-cedarbrake-dr",
+    "a": "8825 Cedarbrake Dr",
+    "llc": "Emk Investments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-17, 10,800 sqft lot YB1955",
+    "c": "",
+    "lat": 29.790979,
+    "lng": -95.505759
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8826-winningham-ln",
+    "a": "8826 Winningham Ln",
+    "llc": "Unika Homes Ltd",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-31, 10,125 sqft lot YB1958",
+    "c": "",
+    "lat": 29.788918,
+    "lng": -95.505463
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_9052-elizabeth-rd",
+    "a": "9052 Elizabeth Rd",
+    "llc": "Hd Rainmaker Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-14, 16,254 sqft lot YB1973",
+    "c": "",
+    "lat": 29.791014,
+    "lng": -95.51356
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3003-ryson-st",
+    "a": "3003 Ryson St",
+    "llc": "Rwd Properties Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-14, 7,453 sqft lot YB1956",
+    "c": "",
+    "lat": 29.82154,
+    "lng": -95.499644
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3103-maysel-st",
+    "a": "3103 Maysel St",
+    "llc": "Kat Daddy Estates Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-14, 6,600 sqft lot YB1955",
+    "c": "",
+    "lat": 29.82279,
+    "lng": -95.501285
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8423-blankenship-dr",
+    "a": "8423 Blankenship Dr",
+    "llc": "Harris County Flood Control District",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-10, 6,600 sqft lot YB1952",
+    "c": "",
+    "lat": 29.822511,
+    "lng": -95.497797
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8521-friendship-rd",
+    "a": "8521 Friendship Rd",
+    "llc": "Rosemary Custom Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-29, 6,133 sqft lot YB2024",
+    "c": "",
+    "lat": 29.818976,
+    "lng": -95.501092
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8607-alcott-dr",
+    "a": "8607 Alcott Dr",
+    "llc": "Larios Home Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-10, 6,600 sqft lot YB1959",
+    "c": "",
+    "lat": 29.817517,
+    "lng": -95.50326
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8607-norton-dr",
+    "a": "8607 Norton Dr",
+    "llc": "Mandys Real Estate Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-23, 6,600 sqft lot YB1958",
+    "c": "",
+    "lat": 29.818283,
+    "lng": -95.503221
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8635-greiner-dr",
+    "a": "8635 Greiner Dr",
+    "llc": "Tdt Real Estate Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-28, 6,760 sqft lot YB1955",
+    "c": "",
+    "lat": 29.823015,
+    "lng": -95.503718
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8646-kempridge-st",
+    "a": "8646 Kempridge St",
+    "llc": "Martin Sisters Properties Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-02, 7,150 sqft lot YB1958",
+    "c": "",
+    "lat": 29.817143,
+    "lng": -95.505156
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_8651-blankenship-dr",
+    "a": "8651 Blankenship Dr",
+    "llc": "Adams Casas Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-24, 6,710 sqft lot YB1955",
+    "c": "",
+    "lat": 29.822315,
+    "lng": -95.504484
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Spring Branch boundary (springbranch_boundary.geojson); acquisitions file had no zone flag"
+  }
+ ]
+}

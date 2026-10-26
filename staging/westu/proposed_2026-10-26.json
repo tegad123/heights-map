@@ -1,0 +1,779 @@
+[
+ {
+  "id": "act_6107-lake-street",
+  "a": "6107 Lake Street",
+  "geocode": "HAR",
+  "mergeCandidate": "acq_6107-lake-st",
+  "mls": "28802500",
+  "har_status": "Option Pending",
+  "data": {
+   "id": "act_6107-lake-street",
+   "a": "6107 Lake Street",
+   "llc": "West U Builders",
+   "v": "$2,275,000",
+   "sd": "2026-07-23",
+   "lot": "3453",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Virginia Court",
+   "u": "",
+   "lat": 29.717147,
+   "lng": -95.419067,
+   "c": [
+    {
+     "n": "Jackie Behrendt",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: West U Builders. Agent: Jackie Behrendt. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_2341-wroxton-road",
+  "a": "2341 Wroxton Road",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_2341-wroxton-rd",
+  "mls": "35397835",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2341-wroxton-road",
+   "a": "2341 Wroxton Road",
+   "llc": "Croix Custom Homes",
+   "v": "$2,599,000",
+   "sd": "2026-09-18",
+   "lot": "4640",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Southampton Place Ext",
+   "u": "",
+   "lat": 29.724461,
+   "lng": -95.414522,
+   "c": [
+    {
+     "n": "Kathleen Debarbieris",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Croix Custom Homes. Agent: Kathleen Debarbieris. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2410-quenby-street",
+  "a": "2410 QUENBY Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_2410-quenby-st",
+  "mls": "24232284",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_2410-quenby-street",
+   "a": "2410 QUENBY Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,499,900",
+   "sd": "2026-07-30",
+   "lot": "3654",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, QUENBY GREEN",
+   "u": "",
+   "lat": 29.721694,
+   "lng": -95.415494,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Pending inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_3746-childress-st-street",
+  "a": "3746 Childress St Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_3746-childress-st",
+  "mls": "65497992",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3746-childress-st-street",
+   "a": "3746 Childress St Street",
+   "llc": "LINEA",
+   "v": "$2,749,000",
+   "sd": "2026-09-14",
+   "lot": "5364",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Sunset Terrace",
+   "u": "",
+   "lat": 29.727624,
+   "lng": -95.436065,
+   "c": [
+    {
+     "n": "Madeline Franqui",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: LINEA. Agent: Madeline Franqui. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2914-w-holcombe-boulevard",
+  "a": "2914 W Holcombe Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "10417264",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2914-w-holcombe-boulevard",
+   "a": "2914 W Holcombe Boulevard",
+   "llc": "Vita Homes",
+   "v": "$1,495,000",
+   "sd": "2026-09-24",
+   "lot": "3172",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, HOLCOMBE HOMES",
+   "u": "",
+   "lat": 29.706517,
+   "lng": -95.423675,
+   "c": [
+    {
+     "n": "Andy Onder Yaltir",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Vita Homes. Agent: Andy Onder Yaltir. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_2006-lexington-street",
+  "a": "2006 Lexington Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "61414127",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2006-lexington-street",
+   "a": "2006 Lexington Street",
+   "llc": "Cashiola",
+   "v": "$1,750,000",
+   "sd": "2026-05-19",
+   "lot": "4680",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, LEXINGTON PLACE",
+   "u": "",
+   "lat": 29.731936,
+   "lng": -95.409878,
+   "c": [
+    {
+     "n": "Alexandra Hampson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Cashiola. Agent: Alexandra Hampson. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2250-bartlett-street",
+  "a": "2250 Bartlett Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "31030454",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2250-bartlett-street",
+   "a": "2250 Bartlett Street",
+   "llc": "Homebound",
+   "v": "$1,949,000",
+   "sd": "2026-09-26",
+   "lot": "4337",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Chevy Chase",
+   "u": "",
+   "lat": 29.727288,
+   "lng": -95.412584,
+   "c": [
+    {
+     "n": "Jvonne Lowe",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Homebound. Agent: Jvonne Lowe. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2336-bartlett-street",
+  "a": "2336 Bartlett Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "8517642",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2336-bartlett-street",
+   "a": "2336 Bartlett Street",
+   "llc": "Partners in Building",
+   "v": "$2,199,950",
+   "sd": "2026-09-26",
+   "lot": "4470",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Greenbriar",
+   "u": "",
+   "lat": 29.727412,
+   "lng": -95.414523,
+   "c": [
+    {
+     "n": "Jimmy Franklin",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Partners in Building. Agent: Jimmy Franklin. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2343-north-boulevard",
+  "a": "2343 NORTH Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "64380344",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2343-north-boulevard",
+   "a": "2343 NORTH Boulevard",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$2,399,900",
+   "sd": "2026-10-11",
+   "lot": "4224",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, GREENBRIAR",
+   "u": "",
+   "lat": 29.727703,
+   "lng": -95.414897,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2332-south-blvd-boulevard",
+  "a": "2332 SOUTH BLVD Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "765669",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2332-south-blvd-boulevard",
+   "a": "2332 SOUTH BLVD Boulevard",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$2,399,900",
+   "sd": "2026-09-25",
+   "lot": "4387",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, GREENBRIAR",
+   "u": "",
+   "lat": 29.726625,
+   "lng": -95.414331,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2122-north-boulevard",
+  "a": "2122 NORTH Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "61484738",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2122-north-boulevard",
+   "a": "2122 NORTH Boulevard",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$2,399,900",
+   "sd": "2026-06-30",
+   "lot": "4275",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, CHEVY CHASE",
+   "u": "",
+   "lat": 29.728055,
+   "lng": -95.410056,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2247-north-boulevard",
+  "a": "2247 North Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "65303737",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2247-north-boulevard",
+   "a": "2247 North Boulevard",
+   "llc": "Build 1",
+   "v": "$2,425,000",
+   "sd": "2026-09-10",
+   "lot": "4661",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Chevy Chase",
+   "u": "",
+   "lat": 29.727624,
+   "lng": -95.412631,
+   "c": [
+    {
+     "n": "Lei Wang",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Build 1. Agent: Lei Wang. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2345-wroxton-road",
+  "a": "2345 Wroxton Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "32249523",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2345-wroxton-road",
+   "a": "2345 Wroxton Road",
+   "llc": "Croix Custom Homes",
+   "v": "$2,599,000",
+   "sd": "2026-09-18",
+   "lot": "4681",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Southampton Place Ext",
+   "u": "",
+   "lat": 29.724457,
+   "lng": -95.414674,
+   "c": [
+    {
+     "n": "Kathleen Debarbieris",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Croix Custom Homes. Agent: Kathleen Debarbieris. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_3920-university-boulevard",
+  "a": "3920 University Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "60389503",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3920-university-boulevard",
+   "a": "3920 University Boulevard",
+   "llc": "Stonehenge Classic Homes",
+   "v": "$2,799,000",
+   "sd": "2026-10-04",
+   "lot": "3921",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Collegeview Sec 01",
+   "u": "",
+   "lat": 29.714752,
+   "lng": -95.440374,
+   "c": [
+    {
+     "n": "Deborah Crow",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Stonehenge Classic Homes. Agent: Deborah Crow. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_6546-westchester-avenue",
+  "a": "6546 Westchester Avenue",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "58594494",
+  "har_status": "Active",
+  "data": {
+   "id": "act_6546-westchester-avenue",
+   "a": "6546 Westchester Avenue",
+   "llc": "St. Paul Construction Services",
+   "v": "$4,800,000",
+   "sd": "2026-10-23",
+   "lot": "5217",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, West University Place Amd",
+   "u": "",
+   "lat": 29.709333,
+   "lng": -95.430131,
+   "c": [
+    {
+     "n": "Emanuel Marsis",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: St. Paul Construction Services. Agent: Emanuel Marsis. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_6403-buffalo-speedway",
+  "a": "6403 Buffalo Speedway",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "92129772",
+  "har_status": "Active",
+  "data": {
+   "id": "act_6403-buffalo-speedway",
+   "a": "6403 Buffalo Speedway",
+   "llc": "SJS Development, LLC",
+   "v": "$5,995,000",
+   "sd": "2026-08-28",
+   "lot": "8638",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, West University Place",
+   "u": "",
+   "lat": 29.712576,
+   "lng": -95.427217,
+   "c": [
+    {
+     "n": "Kasteena Parikh",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: SJS Development, LLC. Agent: Kasteena Parikh. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_3023-nottingham-street",
+  "a": "3023 Nottingham Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "27635794",
+  "har_status": "Option Pending",
+  "data": {
+   "id": "act_3023-nottingham-street",
+   "a": "3023 Nottingham Street",
+   "llc": "CORE BUILDERS LLC",
+   "v": "$2,679,000",
+   "sd": "2026-09-09",
+   "lot": "3802",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Monticello",
+   "u": "",
+   "lat": 29.72219,
+   "lng": -95.425894,
+   "c": [
+    {
+     "n": "Jorge Bolio",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: CORE BUILDERS LLC. Agent: Jorge Bolio. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_2823-plumb-street",
+  "a": "2823 Plumb Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "32768649",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_2823-plumb-street",
+   "a": "2823 Plumb Street",
+   "llc": "Belmont Custom Homes",
+   "v": "$2,279,000",
+   "sd": "2026-10-11",
+   "lot": "3600",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Rice Court",
+   "u": "",
+   "lat": 29.719242,
+   "lng": -95.423447,
+   "c": [
+    {
+     "n": "Sonia Maredia",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Belmont Custom Homes. Agent: Sonia Maredia. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_4230-riley-street",
+  "a": "4230 Riley Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "92520384",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_4230-riley-street",
+   "a": "4230 Riley Street",
+   "llc": "Covington Builders",
+   "v": "$2,500,000",
+   "sd": "2026-10-26",
+   "lot": "3993",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Colonial Terrace",
+   "u": "",
+   "lat": 29.708647,
+   "lng": -95.446304,
+   "c": [
+    {
+     "n": "Kasteena Parikh",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Covington Builders. Agent: Kasteena Parikh. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_3906-marquette-street",
+  "a": "3906 Marquette Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "51350228",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_3906-marquette-street",
+   "a": "3906 Marquette Street",
+   "llc": "Belmont Custom Homes",
+   "v": "$2,559,000",
+   "sd": "2026-06-11",
+   "lot": "4003",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Collegeview Sec 02",
+   "u": "",
+   "lat": 29.709588,
+   "lng": -95.442164,
+   "c": [
+    {
+     "n": "Norman Ray Wilson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Belmont Custom Homes. Agent: Norman Ray Wilson. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_3707-rice-boulevard",
+  "a": "3707 Rice Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "14838163",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_3707-rice-boulevard",
+   "a": "3707 Rice Boulevard",
+   "llc": "Gotham Development",
+   "v": "$3,799,000",
+   "sd": "2026-10-26",
+   "lot": "5173",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Pershing Place",
+   "u": "",
+   "lat": 29.716704,
+   "lng": -95.434264,
+   "c": [
+    {
+     "n": "Lisa Kornhauser",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Gotham Development. Agent: Lisa Kornhauser. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ }
+]

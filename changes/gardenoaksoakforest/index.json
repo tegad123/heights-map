@@ -10,7 +10,18 @@
     "relisted": 0,
     "excluded": 0
    }
+  },
+  {
+   "file": "changes_2026-10-26.json",
+   "date": "2026-10-26",
+   "counts": {
+    "matched": 28,
+    "dropped": 19,
+    "relisted": 5,
+    "new": 28,
+    "excluded": 0
+   }
   }
  ],
- "updated": "2026-08-02"
+ "updated": "2026-10-26"
 }

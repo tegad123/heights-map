@@ -1,0 +1,500 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "29983d87394ca9e2c778dd8f25c0fd1265ef157f603337a83cedd6c77c7c7a2f",
+  "pending_BigPending_27ca.csv": "a20d40dc8809271ce837b35777fec430a44aa9d77333a63330b95ab0c8c65ede",
+  "sold_BigSold_ad16.csv": "b630c089e9f04d3d1cab2586e1ec3840a53aee0c09ebc41f661185a15a76bb7f",
+  "terminated_bigTerminated_868d.csv": "df6f084c6c5a6ea55ab22153b1339d74a2024127ef0b79db98d19aeb2bbbdae4"
+ },
+ "counts": {
+  "matched": 3,
+  "dropped": 5,
+  "relisted": 2,
+  "new": 21,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "ACT06",
+  "ACT08",
+  "ACT11"
+ ],
+ "dropped": [
+  {
+   "id": "ACT02",
+   "a": "2205 North Boulevard, Houston, TX 77005",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "42474246",
+   "close_date": "2026-08-28"
+  },
+  {
+   "id": "ACT07",
+   "a": "2316 North Boulevard, Houston, TX 77005",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "48367135",
+   "close_date": "2026-08-12"
+  },
+  {
+   "id": "ACT10",
+   "a": "2627 Tangley Road, Houston, TX 77005",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "5024887",
+   "close_date": "2026-10-15"
+  },
+  {
+   "id": "acq_6107-lake-st",
+   "a": "6107 Lake St",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Option Pending",
+   "mls": "28802500",
+   "close_date": null
+  },
+  {
+   "id": "pmt_2410-quenby-st",
+   "a": "2410 QUENBY ST 77005, Houston, TX 77005",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "24232284",
+   "close_date": null
+  }
+ ],
+ "relisted": [
+  {
+   "id": "pmt_2341-wroxton-rd",
+   "a": "2341 WROXTON RD 77005, Houston, TX 77005",
+   "ty": "single",
+   "mls": "35397835"
+  },
+  {
+   "id": "pmt_3746-childress-st",
+   "a": "3746 CHILDRESS ST 77005, Houston, TX 77005",
+   "ty": "single",
+   "mls": "65497992"
+  }
+ ],
+ "new": [
+  {
+   "a": "6107 Lake Street",
+   "prod": "Single Lot",
+   "mls": "28802500",
+   "har_status": "Option Pending",
+   "staged": false,
+   "mergeCandidate": "acq_6107-lake-st",
+   "id": "acq_6107-lake-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2341 Wroxton Road",
+   "prod": "Single Lot",
+   "mls": "35397835",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_2341-wroxton-rd",
+   "id": "pmt_2341-wroxton-rd",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2410 QUENBY Street",
+   "prod": "Split Lot",
+   "mls": "24232284",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_2410-quenby-st",
+   "id": "pmt_2410-quenby-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "3746 Childress St Street",
+   "prod": "Single Lot",
+   "mls": "65497992",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_3746-childress-st",
+   "id": "pmt_3746-childress-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2914 W Holcombe Boulevard",
+   "prod": "Split Lot",
+   "mls": "10417264",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2914-w-holcombe-boulevard",
+   "applied": true
+  },
+  {
+   "a": "2006 Lexington Street",
+   "prod": "Single Lot",
+   "mls": "61414127",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "2250 Bartlett Street",
+   "prod": "Single Lot",
+   "mls": "31030454",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2250-bartlett-street",
+   "applied": true
+  },
+  {
+   "a": "2336 Bartlett Street",
+   "prod": "Single Lot",
+   "mls": "8517642",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2336-bartlett-street",
+   "applied": true
+  },
+  {
+   "a": "2343 NORTH Boulevard",
+   "prod": "Single Lot",
+   "mls": "64380344",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2343-north-boulevard",
+   "applied": true
+  },
+  {
+   "a": "2332 SOUTH BLVD Boulevard",
+   "prod": "Single Lot",
+   "mls": "765669",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2332-south-blvd-boulevard",
+   "applied": true
+  },
+  {
+   "a": "2122 NORTH Boulevard",
+   "prod": "Single Lot",
+   "mls": "61484738",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2122-north-boulevard",
+   "applied": true
+  },
+  {
+   "a": "2247 North Boulevard",
+   "prod": "Single Lot",
+   "mls": "65303737",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2247-north-boulevard",
+   "applied": true
+  },
+  {
+   "a": "2345 Wroxton Road",
+   "prod": "Single Lot",
+   "mls": "32249523",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2345-wroxton-road",
+   "applied": true
+  },
+  {
+   "a": "3920 University Boulevard",
+   "prod": "Single Lot",
+   "mls": "60389503",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_3920-university-boulevard",
+   "applied": true
+  },
+  {
+   "a": "6546 Westchester Avenue",
+   "prod": "Single Lot",
+   "mls": "58594494",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_6546-westchester-avenue",
+   "applied": true
+  },
+  {
+   "a": "6403 Buffalo Speedway",
+   "prod": "Single Lot",
+   "mls": "92129772",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_6403-buffalo-speedway",
+   "applied": true
+  },
+  {
+   "a": "3023 Nottingham Street",
+   "prod": "Single Lot",
+   "mls": "27635794",
+   "har_status": "Option Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_3023-nottingham-street",
+   "applied": true
+  },
+  {
+   "a": "2823 Plumb Street",
+   "prod": "Single Lot",
+   "mls": "32768649",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2823-plumb-street",
+   "applied": true
+  },
+  {
+   "a": "4230 Riley Street",
+   "prod": "Single Lot",
+   "mls": "92520384",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4230-riley-street",
+   "applied": true
+  },
+  {
+   "a": "3906 Marquette Street",
+   "prod": "Single Lot",
+   "mls": "51350228",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_3906-marquette-street",
+   "applied": true
+  },
+  {
+   "a": "3707 Rice Boulevard",
+   "prod": "Single Lot",
+   "mls": "14838163",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_3707-rice-boulevard",
+   "applied": true
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [
+  {
+   "id": "ACT04",
+   "mls": null,
+   "address": "4819 Mandell Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "ACT05",
+   "mls": null,
+   "address": "2216 Tangley Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  },
+  {
+   "id": "ACT09",
+   "mls": null,
+   "address": "3717 Carlon Street, Houston, TX 77005",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "ACT02",
+   "address": "2205 North Boulevard, Houston, TX 77005",
+   "before": "active",
+   "after": "sold",
+   "mls": "42474246",
+   "previous_mls": null
+  },
+  {
+   "member": "ACT07",
+   "address": "2316 North Boulevard, Houston, TX 77005",
+   "before": "active",
+   "after": "sold",
+   "mls": "48367135",
+   "previous_mls": null
+  },
+  {
+   "member": "ACT10",
+   "address": "2627 Tangley Road, Houston, TX 77005",
+   "before": "active",
+   "after": "sold",
+   "mls": "5024887",
+   "previous_mls": null
+  }
+ ],
+ "observed": {
+  "ACT06": "2350118",
+  "ACT08": "4522423",
+  "ACT11": "13036422"
+ },
+ "identity_resolutions": [
+  {
+   "member": "acq_6107-lake-st",
+   "address": "6107 Lake Street",
+   "mls": "28802500",
+   "status": "pending",
+   "har_status": "Option Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_6107-lake-street"
+  },
+  {
+   "member": "pmt_2341-wroxton-rd",
+   "address": "2341 Wroxton Road",
+   "mls": "35397835",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2341-wroxton-road"
+  },
+  {
+   "member": "pmt_2410-quenby-st",
+   "address": "2410 QUENBY Street",
+   "mls": "24232284",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_2410-quenby-street"
+  },
+  {
+   "member": "pmt_3746-childress-st",
+   "address": "3746 Childress St Street",
+   "mls": "65497992",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_3746-childress-st-street"
+  }
+ ],
+ "archived_duplicates": [
+  {
+   "record": {
+    "id": "acq_4002-marquette-st",
+    "a": "4002 Marquette St",
+    "llc": "Innovent Capital Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-20, 7,500 sqft lot YB1939",
+    "c": "",
+    "lat": 29.710322,
+    "lng": -95.441318
+   },
+   "canonical": "ACT08",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_2405-nottingham-st",
+    "a": "2405 Nottingham St",
+    "llc": "Prebisch Entrepreneurs 7 Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-15, 6,000 sqft lot YB1939",
+    "c": "",
+    "lat": 29.722128,
+    "lng": -95.415333
+   },
+   "canonical": "pmt_2405-nottingham-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_2328-quenby-st",
+    "a": "2328 Quenby St",
+    "llc": "Roberson Building Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-21, 7,216 sqft lot YB1934",
+    "c": "",
+    "lat": 29.722181,
+    "lng": -95.413955
+   },
+   "canonical": "pmt_2328-quenby-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_3771-purdue-st",
+    "a": "3771 Purdue St",
+    "llc": "Avario Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-04, 9,835 sqft lot YB1948",
+    "c": "",
+    "lat": 29.725216,
+    "lng": -95.436863
+   },
+   "canonical": "pmt_3771-purdue-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "acq_3743-westerman-st",
+    "a": "3743 Westerman St",
+    "llc": "Pdg Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-05, 10,125 sqft lot YB1948",
+    "c": "",
+    "lat": 29.726681,
+    "lng": -95.435476
+   },
+   "canonical": "pmt_3743-westerman-st",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  },
+  {
+   "record": {
+    "id": "ACT04",
+    "a": "4819 Mandell Street, Houston, TX 77005",
+    "llc": "Boulevard Oaks",
+    "kind": "active",
+    "lat": 29.730253031845,
+    "lng": -95.39942197554,
+    "v": "$2,499,000",
+    "ty": "active_single"
+   },
+   "canonical": "montrose:act_4819-mandell-street",
+   "reason": "Same property as the montrose pin: 4819 Mandell sits east of westu's coordinate box (lng -95.3994 > -95.408) inside montrose's zone, and HAR's live listing (MLS row, now Pending) routes to montrose; one map carries it"
+  }
+ ]
+}

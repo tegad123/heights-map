@@ -1,0 +1,1038 @@
+[
+ {
+  "id": "act_1348-althea-drive",
+  "a": "1348 Althea Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "acq_1348-althea-dr",
+  "mls": "24674503",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1348-althea-drive",
+   "a": "1348 Althea Drive",
+   "llc": "Harvard Homes",
+   "v": "$1,889,000",
+   "sd": "2026-10-20",
+   "lot": "4433",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest Add Sec 01",
+   "u": "",
+   "lat": 29.825515,
+   "lng": -95.434299,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Harvard Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1714-lamonte-lane",
+  "a": "1714 Lamonte Lane",
+  "geocode": "HAR",
+  "mergeCandidate": "acq_1714-lamonte-ln",
+  "mls": "33240383",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1714-lamonte-lane",
+   "a": "1714 Lamonte Lane",
+   "llc": "Harvard Homes",
+   "v": "$1,725,000",
+   "sd": "2026-10-03",
+   "lot": "4346",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.827065,
+   "lng": -95.44325,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Harvard Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1714-viking-drive",
+  "a": "1714 Viking Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "acq_1714-viking-dr",
+  "mls": "42138869",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1714-viking-drive",
+   "a": "1714 Viking Drive",
+   "llc": "Harvard Homes",
+   "v": "$1,869,000",
+   "sd": "2026-09-30",
+   "lot": "4395",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.834477,
+   "lng": -95.441977,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Harvard Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1231-martin-street",
+  "a": "1231 Martin Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1231-martin-st-77018",
+  "mls": "67800301",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1231-martin-street",
+   "a": "1231 Martin Street",
+   "llc": "TyBeck Homes",
+   "v": "$1,499,000",
+   "sd": "2026-09-03",
+   "lot": "3600",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.834519,
+   "lng": -95.431279,
+   "c": [
+    {
+     "n": "Adam Robertson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: TyBeck Homes. Agent: Adam Robertson. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_5310-de-milo-drive",
+  "a": "5310 De Milo Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_5310-de-milo-dr",
+  "mls": "49642353",
+  "har_status": "Active",
+  "data": {
+   "id": "act_5310-de-milo-drive",
+   "a": "5310 De Milo Drive",
+   "llc": "Kadi Builders Group",
+   "v": "$1,075,000",
+   "sd": "2026-10-14",
+   "lot": "3381",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest Sec 16",
+   "u": "",
+   "lat": 29.834217,
+   "lng": -95.470347,
+   "c": [
+    {
+     "n": "Tiffany Kaileh",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Kadi Builders Group. Agent: Tiffany Kaileh. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_539-w-34th-street",
+  "a": "539 W 34th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_539-w-34th-st",
+  "mls": "22031090",
+  "har_status": "Active",
+  "data": {
+   "id": "act_539-w-34th-street",
+   "a": "539 W 34th Street",
+   "llc": "Tejas City Group, LLC",
+   "v": "$2,099,000",
+   "sd": "2026-08-20",
+   "lot": "5214",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Garden Oaks Sec 01",
+   "u": "",
+   "lat": 29.817489,
+   "lng": -95.408527,
+   "c": [
+    {
+     "n": "Debbie Levine",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Tejas City Group, LLC. Agent: Debbie Levine. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_963-w-41st-street",
+  "a": "963 W 41st Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_963-w-41st-st",
+  "mls": "93878007",
+  "har_status": "Active",
+  "data": {
+   "id": "act_963-w-41st-street",
+   "a": "963 W 41st Street",
+   "llc": "Oracle Signature",
+   "v": "$1,795,000",
+   "sd": "2026-10-23",
+   "lot": "4756",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Garden Oaks Sec 04",
+   "u": "",
+   "lat": 29.823852,
+   "lng": -95.423346,
+   "c": [
+    {
+     "n": "Oron Peer",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Oracle Signature. Agent: Oron Peer. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2023-viking-drive",
+  "a": "2023 Viking Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "56234627",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2023-viking-drive",
+   "a": "2023 Viking Drive",
+   "llc": "Del Vega Investments",
+   "v": "$1,199,000",
+   "sd": "2026-09-18",
+   "lot": "2738",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.835231,
+   "lng": -95.449062,
+   "c": [
+    {
+     "n": "Alexandra McCauley",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Del Vega Investments. Agent: Alexandra McCauley. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1726-saxon-drive",
+  "a": "1726 Saxon Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "9262601",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1726-saxon-drive",
+   "a": "1726 Saxon Drive",
+   "llc": "White Nest Builders",
+   "v": "$1,478,000",
+   "sd": "2026-10-15",
+   "lot": "3751",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.827852,
+   "lng": -95.444061,
+   "c": [
+    {
+     "n": "Rebecca Chirich",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: White Nest Builders. Agent: Rebecca Chirich. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1634-latexo-drive",
+  "a": "1634 Latexo Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "54378542",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1634-latexo-drive",
+   "a": "1634 Latexo Drive",
+   "llc": "Homebound",
+   "v": "$1,499,000",
+   "sd": "2026-10-21",
+   "lot": "4496",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest Sec 08",
+   "u": "",
+   "lat": 29.835005,
+   "lng": -95.441129,
+   "c": [
+    {
+     "n": "Jvonne Lowe",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Homebound. Agent: Jvonne Lowe. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1806-de-milo-drive",
+  "a": "1806 De Milo Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "5510224",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1806-de-milo-drive",
+   "a": "1806 De Milo Drive",
+   "llc": "New Life Construction",
+   "v": "$1,499,000",
+   "sd": "2026-08-16",
+   "lot": "2445",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.83469,
+   "lng": -95.44479,
+   "c": [
+    {
+     "n": "Pedro Zaldivar Rabago",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: New Life Construction. Agent: Pedro Zaldivar Rabago. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1726-chantilly-lane",
+  "a": "1726 Chantilly Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "96128022",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1726-chantilly-lane",
+   "a": "1726 Chantilly Lane",
+   "llc": "White Nest",
+   "v": "$1,499,990",
+   "sd": "2026-10-10",
+   "lot": "3751",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.828669,
+   "lng": -95.444311,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: White Nest. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1741-gardenia-drive",
+  "a": "1741 Gardenia Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "17284119",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1741-gardenia-drive",
+   "a": "1741 Gardenia Drive",
+   "llc": "Kanso Capital LLC",
+   "v": "$1,550,000",
+   "sd": "2026-10-10",
+   "lot": "4451",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, OAK FOREST",
+   "u": "",
+   "lat": 29.825812,
+   "lng": -95.444374,
+   "c": [
+    {
+     "n": "Ryan Writt",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Kanso Capital LLC. Agent: Ryan Writt. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1514-gardenia-drive",
+  "a": "1514 Gardenia Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "32536565",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1514-gardenia-drive",
+   "a": "1514 Gardenia Drive",
+   "llc": "Homebound",
+   "v": "$1,584,000",
+   "sd": "2026-09-26",
+   "lot": "4420",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.826863,
+   "lng": -95.438538,
+   "c": [
+    {
+     "n": "Jvonne Lowe",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Homebound. Agent: Jvonne Lowe. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1212-candlelight-lane",
+  "a": "1212 Candlelight Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "28967265",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1212-candlelight-lane",
+   "a": "1212 Candlelight Lane",
+   "llc": "Homebound",
+   "v": "$1,589,000",
+   "sd": "2026-09-26",
+   "lot": "4420",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.836615,
+   "lng": -95.43038,
+   "c": [
+    {
+     "n": "Jvonne Lowe",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Homebound. Agent: Jvonne Lowe. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_4825-ella-boulevard",
+  "a": "4825 Ella Boulevard",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "91927524",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4825-ella-boulevard",
+   "a": "4825 Ella Boulevard",
+   "llc": "YS Best Home Builders LLC",
+   "v": "$1,749,000",
+   "sd": "2026-10-07",
+   "lot": "4300",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest Sec 03",
+   "u": "",
+   "lat": 29.835994,
+   "lng": -95.430017,
+   "c": [
+    {
+     "n": "Yvette Solis",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: YS Best Home Builders LLC. Agent: Yvette Solis. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1457-curtin-street",
+  "a": "1457 Curtin Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "96822457",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1457-curtin-street",
+   "a": "1457 Curtin Street",
+   "llc": "Venice Custom Homes",
+   "v": "$1,990,000",
+   "sd": "2026-10-08",
+   "lot": "4866",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.829935,
+   "lng": -95.437139,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Venice Custom Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1018-rosepoint-street",
+  "a": "1018 Rosepoint Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "33188903",
+  "har_status": "Option Pending",
+  "data": {
+   "id": "act_1018-rosepoint-street",
+   "a": "1018 Rosepoint Street",
+   "llc": "RobRyan Custom Builders",
+   "v": "$1,690,000",
+   "sd": "2026-10-12",
+   "lot": "4252",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest Sec 01",
+   "u": "",
+   "lat": 29.82249,
+   "lng": -95.425713,
+   "c": [
+    {
+     "n": "David Vallejo",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: RobRyan Custom Builders. Agent: David Vallejo. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1623-viking-drive",
+  "a": "1623 Viking Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "30716167",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1623-viking-drive",
+   "a": "1623 Viking Drive",
+   "llc": "Herzog Homes LLC",
+   "v": "$1,425,000",
+   "sd": "2026-09-11",
+   "lot": "4410",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest Add Sec 08",
+   "u": "",
+   "lat": 29.832944,
+   "lng": -95.441489,
+   "c": [
+    {
+     "n": "David Herzog",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Herzog Homes LLC. Agent: David Herzog. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1313-cheshire-lane",
+  "a": "1313 Cheshire Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "70698845",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1313-cheshire-lane",
+   "a": "1313 Cheshire Lane",
+   "llc": "TyBeck Homes",
+   "v": "$1,499,000",
+   "sd": "2026-09-20",
+   "lot": "3600",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.833533,
+   "lng": -95.433046,
+   "c": [
+    {
+     "n": "Adam Robertson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: TyBeck Homes. Agent: Adam Robertson. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1359-wakefield-drive",
+  "a": "1359 Wakefield Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "88542335",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1359-wakefield-drive",
+   "a": "1359 Wakefield Drive",
+   "llc": "TyBeck Homes",
+   "v": "$1,499,000",
+   "sd": "2026-10-05",
+   "lot": "3600",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.824389,
+   "lng": -95.435046,
+   "c": [
+    {
+     "n": "Adam Robertson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: TyBeck Homes. Agent: Adam Robertson. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1248-chamboard-lane",
+  "a": "1248 Chamboard Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "97291827",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1248-chamboard-lane",
+   "a": "1248 Chamboard Lane",
+   "llc": "TyBeck Homes",
+   "v": "$1,649,000",
+   "sd": "2026-09-08",
+   "lot": "4000",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.830761,
+   "lng": -95.432034,
+   "c": [
+    {
+     "n": "Adam Robertson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: TyBeck Homes. Agent: Adam Robertson. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1739-latexo-drive",
+  "a": "1739 Latexo Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "39357522",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1739-latexo-drive",
+   "a": "1739 Latexo Drive",
+   "llc": "Sterling+Thomas",
+   "v": "$1,799,000",
+   "sd": "2026-08-25",
+   "lot": "4468",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.835653,
+   "lng": -95.44306,
+   "c": [
+    {
+     "n": "Andrew Doonan",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Sterling+Thomas. Agent: Andrew Doonan. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1510-chantilly-lane",
+  "a": "1510 Chantilly Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "30460753",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1510-chantilly-lane",
+   "a": "1510 Chantilly Lane",
+   "llc": "Harvard Homes",
+   "v": "$1,850,000",
+   "sd": "2026-10-03",
+   "lot": "4298",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.832172,
+   "lng": -95.437753,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Harvard Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1451-gardenia-drive",
+  "a": "1451 Gardenia Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "11976567",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1451-gardenia-drive",
+   "a": "1451 Gardenia Drive",
+   "llc": "Sledge Custom Homes",
+   "v": "$1,958,000",
+   "sd": "2026-10-26",
+   "lot": "4974",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.826458,
+   "lng": -95.437467,
+   "c": [
+    {
+     "n": "Rachel Hrncir",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Sledge Custom Homes. Agent: Rachel Hrncir. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_834-lamonte-lane",
+  "a": "834 Lamonte Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "27242827",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_834-lamonte-lane",
+   "a": "834 Lamonte Lane",
+   "llc": "Enterra Homes",
+   "v": "$2,150,000",
+   "sd": "2026-10-26",
+   "lot": "5106",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Garden Oaks",
+   "u": "",
+   "lat": 29.826472,
+   "lng": -95.417701,
+   "c": [
+    {
+     "n": "Tommy Walker",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Enterra Homes. Agent: Tommy Walker. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1522-hewitt-drive",
+  "a": "1522 Hewitt Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "11093929",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1522-hewitt-drive",
+   "a": "1522 Hewitt Drive",
+   "llc": "Harvard Homes",
+   "v": "$2,200,000",
+   "sd": "2026-10-26",
+   "lot": "5300",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Oak Forest",
+   "u": "",
+   "lat": 29.833415,
+   "lng": -95.440171,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Harvard Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1590-sue-barnett-drive",
+  "a": "1590 Sue Barnett Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "27649083",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1590-sue-barnett-drive",
+   "a": "1590 Sue Barnett Drive",
+   "llc": "Arch Angelo Homes",
+   "v": "$2,700,000",
+   "sd": "2026-10-26",
+   "lot": "6382",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Garden Oaks",
+   "u": "",
+   "lat": 29.829923,
+   "lng": -95.42809,
+   "c": [
+    {
+     "n": "Michael Silva",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Arch Angelo Homes. Agent: Michael Silva. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ }
+]

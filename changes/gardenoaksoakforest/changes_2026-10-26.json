@@ -1,0 +1,783 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "86d2247c296853e2c3223b9de2e32f9ac3f0dfaf8dc33ddef306241450624f0a",
+  "pending_BigPending_27ca.csv": "41244a3ef7ee471014d4b181afaed59c57c8f513d25274bd3c5b28716b7f8861",
+  "sold_BigSold_ad16.csv": "dacbb1ae8971b16a58dd2085cae357a4819776a78dabe546a6764c3d1e4b59cb",
+  "terminated_bigTerminated_868d.csv": "c2fc21ff3a8b51b6ab098e385ddff3f53bc375a1f420a8b0dcc3b3e8c69e1898"
+ },
+ "counts": {
+  "matched": 28,
+  "dropped": 19,
+  "relisted": 5,
+  "new": 28,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "act_1014-gardenia-drive",
+  "act_1225-wakefield-drive",
+  "act_1237-althea-drive",
+  "act_1335-gardenia-drive",
+  "act_1402-du-barry-lane",
+  "act_1414-du-barry-lane",
+  "act_1519-candlelight-lane",
+  "act_1522-thornton-road",
+  "act_1710-gardenia-drive",
+  "act_1721-chantilly-lane",
+  "act_1725-ebony-lane",
+  "act_2010-hewitt-drive",
+  "act_2019-chantilly-lane",
+  "act_2031-saxon-drive",
+  "act_2214-chantilly-lane",
+  "act_315-w-32nd-street",
+  "act_316-w-30th-street",
+  "act_320-w-32nd-street",
+  "act_5109-lido-lane",
+  "act_515-w-33rd-street",
+  "act_519-w-30th-street",
+  "act_713-w-42nd-street",
+  "act_810-w-41st-street",
+  "act_867-w-42nd-street",
+  "act_891-w-41st-street",
+  "act_934-w-43rd-street",
+  "act_955-w-42nd-street",
+  "act_959-althea-drive"
+ ],
+ "dropped": [
+  {
+   "id": "act_1223-richelieu-lane",
+   "a": "1223 Richelieu Lane",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pend Cont to Show",
+   "mls": "84878172",
+   "close_date": null
+  },
+  {
+   "id": "act_1226-du-barry-lane",
+   "a": "1226 Du Barry Lane",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "37276215",
+   "close_date": null
+  },
+  {
+   "id": "act_1316-althea-drive",
+   "a": "1316 Althea Drive",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "5889120",
+   "close_date": "2026-08-28"
+  },
+  {
+   "id": "act_1326-curtin-street",
+   "a": "1326 Curtin Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "64308963",
+   "close_date": null
+  },
+  {
+   "id": "act_1411-thornton-road",
+   "a": "1411 Thornton Road",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "11887146",
+   "close_date": "2026-10-13"
+  },
+  {
+   "id": "act_1431-curtin-street",
+   "a": "1431 Curtin Street",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "73374067",
+   "close_date": "2026-09-02"
+  },
+  {
+   "id": "act_1517-wakefield-drive",
+   "a": "1517 Wakefield Drive",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Expired",
+   "mls": "22746184",
+   "close_date": null
+  },
+  {
+   "id": "act_1527-thornton",
+   "a": "1527 Thornton",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "22763785",
+   "close_date": "2026-09-08"
+  },
+  {
+   "id": "act_1819-cheshire-lane",
+   "a": "1819 Cheshire Lane",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "54134423",
+   "close_date": "2026-10-12"
+  },
+  {
+   "id": "act_1914-viking-drive",
+   "a": "1914 Viking Drive",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "31286104",
+   "close_date": null
+  },
+  {
+   "id": "act_2014-ebony-lane",
+   "a": "2014 Ebony Lane",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "87955015",
+   "close_date": null
+  },
+  {
+   "id": "act_211-w-34th-street",
+   "a": "211 W 34th Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "28641268",
+   "close_date": null
+  },
+  {
+   "id": "act_2315-althea-drive",
+   "a": "2315 Althea Drive",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "9654927",
+   "close_date": null
+  },
+  {
+   "id": "act_431-w-30th-street",
+   "a": "431 W 30th Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated-Relisted",
+   "mls": "88598447",
+   "close_date": null
+  },
+  {
+   "id": "act_5313-verdome-lane",
+   "a": "5313 Verdome Lane",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "93996054",
+   "close_date": "2026-10-16"
+  },
+  {
+   "id": "act_752-w-43rd-street",
+   "a": "752 W 43rd Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "18296962",
+   "close_date": null
+  },
+  {
+   "id": "act_822-w-31st-street",
+   "a": "822 W 31st Street",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "89323031",
+   "close_date": "2026-09-25"
+  },
+  {
+   "id": "acq_1348-althea-dr",
+   "a": "1348 Althea Dr",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "24674503",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1231-martin-st-77018",
+   "a": "1231 Martin St, Houston, TX 77018",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "67800301",
+   "close_date": null
+  }
+ ],
+ "relisted": [
+  {
+   "id": "acq_1714-lamonte-ln",
+   "a": "1714 Lamonte Ln",
+   "ty": "single",
+   "mls": "33240383"
+  },
+  {
+   "id": "acq_1714-viking-dr",
+   "a": "1714 Viking Dr",
+   "ty": "single",
+   "mls": "42138869"
+  },
+  {
+   "id": "pmt_5310-de-milo-dr",
+   "a": "5310 DE MILO DR, Houston, TX 77092",
+   "ty": "single",
+   "mls": "49642353"
+  },
+  {
+   "id": "pmt_539-w-34th-st",
+   "a": "539 W 34TH ST, Houston, TX 77018",
+   "ty": "single",
+   "mls": "22031090"
+  },
+  {
+   "id": "pmt_963-w-41st-st",
+   "a": "963 W 41ST ST, Houston, TX 77018",
+   "ty": "single",
+   "mls": "93878007"
+  }
+ ],
+ "new": [
+  {
+   "a": "1348 Althea Drive",
+   "prod": "Single Lot",
+   "mls": "24674503",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "acq_1348-althea-dr",
+   "id": "acq_1348-althea-dr",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1714 Lamonte Lane",
+   "prod": "Single Lot",
+   "mls": "33240383",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "acq_1714-lamonte-ln",
+   "id": "acq_1714-lamonte-ln",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1714 Viking Drive",
+   "prod": "Single Lot",
+   "mls": "42138869",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "acq_1714-viking-dr",
+   "id": "acq_1714-viking-dr",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "1231 Martin Street",
+   "prod": "Single Lot",
+   "mls": "67800301",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": "pmt_1231-martin-st-77018",
+   "id": "pmt_1231-martin-st-77018",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "5310 De Milo Drive",
+   "prod": "Single Lot",
+   "mls": "49642353",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_5310-de-milo-dr",
+   "id": "pmt_5310-de-milo-dr",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "539 W 34th Street",
+   "prod": "Single Lot",
+   "mls": "22031090",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_539-w-34th-st",
+   "id": "pmt_539-w-34th-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "963 W 41st Street",
+   "prod": "Single Lot",
+   "mls": "93878007",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": "pmt_963-w-41st-st",
+   "id": "pmt_963-w-41st-st",
+   "applied": true,
+   "linked": true
+  },
+  {
+   "a": "2023 Viking Drive",
+   "prod": "Single Lot",
+   "mls": "56234627",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_2023-viking-drive",
+   "applied": true
+  },
+  {
+   "a": "1726 Saxon Drive",
+   "prod": "Single Lot",
+   "mls": "9262601",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1726-saxon-drive",
+   "applied": true
+  },
+  {
+   "a": "1634 Latexo Drive",
+   "prod": "Single Lot",
+   "mls": "54378542",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1634-latexo-drive",
+   "applied": true
+  },
+  {
+   "a": "1806 De Milo Drive",
+   "prod": "Single Lot",
+   "mls": "5510224",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1806-de-milo-drive",
+   "applied": true
+  },
+  {
+   "a": "1726 Chantilly Lane",
+   "prod": "Single Lot",
+   "mls": "96128022",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1726-chantilly-lane",
+   "applied": true
+  },
+  {
+   "a": "1741 Gardenia Drive",
+   "prod": "Single Lot",
+   "mls": "17284119",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1741-gardenia-drive",
+   "applied": true
+  },
+  {
+   "a": "1514 Gardenia Drive",
+   "prod": "Single Lot",
+   "mls": "32536565",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1514-gardenia-drive",
+   "applied": true
+  },
+  {
+   "a": "1212 Candlelight Lane",
+   "prod": "Single Lot",
+   "mls": "28967265",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1212-candlelight-lane",
+   "applied": true
+  },
+  {
+   "a": "4825 Ella Boulevard",
+   "prod": "Single Lot",
+   "mls": "91927524",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4825-ella-boulevard",
+   "applied": true
+  },
+  {
+   "a": "1457 Curtin Street",
+   "prod": "Single Lot",
+   "mls": "96822457",
+   "har_status": "Active",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1457-curtin-street",
+   "applied": true
+  },
+  {
+   "a": "1018 Rosepoint Street",
+   "prod": "Single Lot",
+   "mls": "33188903",
+   "har_status": "Option Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1018-rosepoint-street",
+   "applied": true
+  },
+  {
+   "a": "1623 Viking Drive",
+   "prod": "Single Lot",
+   "mls": "30716167",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1623-viking-drive",
+   "applied": true
+  },
+  {
+   "a": "1313 Cheshire Lane",
+   "prod": "Single Lot",
+   "mls": "70698845",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1313-cheshire-lane",
+   "applied": true
+  },
+  {
+   "a": "1359 Wakefield Drive",
+   "prod": "Single Lot",
+   "mls": "88542335",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1359-wakefield-drive",
+   "applied": true
+  },
+  {
+   "a": "1248 Chamboard Lane",
+   "prod": "Single Lot",
+   "mls": "97291827",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1248-chamboard-lane",
+   "applied": true
+  },
+  {
+   "a": "1739 Latexo Drive",
+   "prod": "Single Lot",
+   "mls": "39357522",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1739-latexo-drive",
+   "applied": true
+  },
+  {
+   "a": "1510 Chantilly Lane",
+   "prod": "Single Lot",
+   "mls": "30460753",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1510-chantilly-lane",
+   "applied": true
+  },
+  {
+   "a": "1451 Gardenia Drive",
+   "prod": "Single Lot",
+   "mls": "11976567",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1451-gardenia-drive",
+   "applied": true
+  },
+  {
+   "a": "834 Lamonte Lane",
+   "prod": "Single Lot",
+   "mls": "27242827",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_834-lamonte-lane",
+   "applied": true
+  },
+  {
+   "a": "1522 Hewitt Drive",
+   "prod": "Single Lot",
+   "mls": "11093929",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1522-hewitt-drive",
+   "applied": true
+  },
+  {
+   "a": "1590 Sue Barnett Drive",
+   "prod": "Single Lot",
+   "mls": "27649083",
+   "har_status": "Pending",
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1590-sue-barnett-drive",
+   "applied": true
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [],
+ "transitions": [
+  {
+   "member": "act_1223-richelieu-lane",
+   "address": "1223 Richelieu Lane",
+   "before": "active",
+   "after": "pending",
+   "mls": "84878172",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1226-du-barry-lane",
+   "address": "1226 Du Barry Lane",
+   "before": "active",
+   "after": "pending",
+   "mls": "37276215",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1316-althea-drive",
+   "address": "1316 Althea Drive",
+   "before": "active",
+   "after": "sold",
+   "mls": "5889120",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1326-curtin-street",
+   "address": "1326 Curtin Street",
+   "before": "active",
+   "after": "terminated",
+   "mls": "64308963",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1411-thornton-road",
+   "address": "1411 Thornton Road",
+   "before": "active",
+   "after": "sold",
+   "mls": "11887146",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1431-curtin-street",
+   "address": "1431 Curtin Street",
+   "before": "active",
+   "after": "sold",
+   "mls": "73374067",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1517-wakefield-drive",
+   "address": "1517 Wakefield Drive",
+   "before": "active",
+   "after": "terminated",
+   "mls": "22746184",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1527-thornton",
+   "address": "1527 Thornton",
+   "before": "active",
+   "after": "sold",
+   "mls": "22763785",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1819-cheshire-lane",
+   "address": "1819 Cheshire Lane",
+   "before": "active",
+   "after": "sold",
+   "mls": "54134423",
+   "previous_mls": null
+  },
+  {
+   "member": "act_1914-viking-drive",
+   "address": "1914 Viking Drive",
+   "before": "active",
+   "after": "pending",
+   "mls": "31286104",
+   "previous_mls": null
+  },
+  {
+   "member": "act_2014-ebony-lane",
+   "address": "2014 Ebony Lane",
+   "before": "active",
+   "after": "pending",
+   "mls": "87955015",
+   "previous_mls": null
+  },
+  {
+   "member": "act_211-w-34th-street",
+   "address": "211 W 34th Street",
+   "before": "active",
+   "after": "pending",
+   "mls": "28641268",
+   "previous_mls": null
+  },
+  {
+   "member": "act_2315-althea-drive",
+   "address": "2315 Althea Drive",
+   "before": "active",
+   "after": "terminated",
+   "mls": "9654927",
+   "previous_mls": null
+  },
+  {
+   "member": "act_431-w-30th-street",
+   "address": "431 W 30th Street",
+   "before": "active",
+   "after": "terminated",
+   "mls": "88598447",
+   "previous_mls": null
+  },
+  {
+   "member": "act_5313-verdome-lane",
+   "address": "5313 Verdome Lane",
+   "before": "active",
+   "after": "sold",
+   "mls": "93996054",
+   "previous_mls": null
+  },
+  {
+   "member": "act_752-w-43rd-street",
+   "address": "752 W 43rd Street",
+   "before": "active",
+   "after": "pending",
+   "mls": "18296962",
+   "previous_mls": null
+  },
+  {
+   "member": "act_822-w-31st-street",
+   "address": "822 W 31st Street",
+   "before": "active",
+   "after": "sold",
+   "mls": "89323031",
+   "previous_mls": null
+  }
+ ],
+ "observed": {
+  "act_1014-gardenia-drive": "93833401",
+  "act_1225-wakefield-drive": "40586177",
+  "act_1237-althea-drive": "18216945",
+  "act_1335-gardenia-drive": "70135073",
+  "act_1402-du-barry-lane": "8426208",
+  "act_1414-du-barry-lane": "6308030",
+  "act_1519-candlelight-lane": "69038130",
+  "act_1522-thornton-road": "79611442",
+  "act_1710-gardenia-drive": "64413930",
+  "act_1721-chantilly-lane": "73730481",
+  "act_1725-ebony-lane": "28411788",
+  "act_2010-hewitt-drive": "54308884",
+  "act_2019-chantilly-lane": "97900311",
+  "act_2031-saxon-drive": "46886200",
+  "act_2214-chantilly-lane": "20680521",
+  "act_315-w-32nd-street": "44367620",
+  "act_316-w-30th-street": "29975481",
+  "act_320-w-32nd-street": "40177936",
+  "act_5109-lido-lane": "43092506",
+  "act_515-w-33rd-street": "72852295",
+  "act_519-w-30th-street": "84184654",
+  "act_713-w-42nd-street": "98833200",
+  "act_810-w-41st-street": "2223197",
+  "act_867-w-42nd-street": "35985411",
+  "act_891-w-41st-street": "50903978",
+  "act_934-w-43rd-street": "60575189",
+  "act_955-w-42nd-street": "94916904",
+  "act_959-althea-drive": "17830263"
+ },
+ "identity_resolutions": [
+  {
+   "member": "acq_1348-althea-dr",
+   "address": "1348 Althea Drive",
+   "mls": "24674503",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1348-althea-drive"
+  },
+  {
+   "member": "acq_1714-lamonte-ln",
+   "address": "1714 Lamonte Lane",
+   "mls": "33240383",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1714-lamonte-lane"
+  },
+  {
+   "member": "acq_1714-viking-dr",
+   "address": "1714 Viking Drive",
+   "mls": "42138869",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1714-viking-drive"
+  },
+  {
+   "member": "pmt_1231-martin-st-77018",
+   "address": "1231 Martin Street",
+   "mls": "67800301",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1231-martin-street"
+  },
+  {
+   "member": "pmt_5310-de-milo-dr",
+   "address": "5310 De Milo Drive",
+   "mls": "49642353",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_5310-de-milo-drive"
+  },
+  {
+   "member": "pmt_539-w-34th-st",
+   "address": "539 W 34th Street",
+   "mls": "22031090",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_539-w-34th-street"
+  },
+  {
+   "member": "pmt_963-w-41st-st",
+   "address": "963 W 41st Street",
+   "mls": "93878007",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_963-w-41st-street"
+  }
+ ]
+}

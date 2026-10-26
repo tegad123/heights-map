@@ -1,0 +1,1149 @@
+[
+ {
+  "id": "act_1120-welch-street",
+  "a": "1120 WELCH Street",
+  "geocode": "HAR",
+  "mergeCandidate": "acq_1120-welch-st",
+  "mls": "37170106",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1120-welch-street",
+   "a": "1120 WELCH Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,699,900",
+   "sd": "2026-08-13",
+   "lot": "3593",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, WESTOVER",
+   "u": "",
+   "lat": 29.750589,
+   "lng": -95.393377,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1911-milford-street",
+  "a": "1911 Milford Street",
+  "geocode": "HAR",
+  "mergeCandidate": "acq_1911-milford-st",
+  "mls": "41166118",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1911-milford-street",
+   "a": "1911 Milford Street",
+   "llc": "Croix Custom Homes",
+   "v": "$2,599,000",
+   "sd": "2026-05-11",
+   "lot": "4616",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ormond Place",
+   "u": "",
+   "lat": 29.72852,
+   "lng": -95.405591,
+   "c": [
+    {
+     "n": "Kathleen Debarbieris",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Croix Custom Homes. Agent: Kathleen Debarbieris. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1511-kipling-street",
+  "a": "1511 KIPLING Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_1511-kipling-street",
+  "mls": "4516785",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1511-kipling-street",
+   "a": "1511 KIPLING Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,999,900",
+   "sd": "2026-08-07",
+   "lot": "4008",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, MANDELL PLACE",
+   "u": "",
+   "lat": 29.740177,
+   "lng": -95.398206,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1634-castle-court",
+  "a": "1634 CASTLE Court",
+  "geocode": "HAR",
+  "mergeCandidate": "act_1634-castle-court",
+  "mls": "82786004",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1634-castle-court",
+   "a": "1634 CASTLE Court",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,089,900",
+   "sd": "2026-09-16",
+   "lot": "3154",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, CASTLE COURT LIVING",
+   "u": "",
+   "lat": 29.732167,
+   "lng": -95.401009,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Pending inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1817-branard-street",
+  "a": "1817 BRANARD Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_1817-branard-street",
+  "mls": "37959428",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1817-branard-street",
+   "a": "1817 BRANARD Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,199,900",
+   "sd": "2026-07-21",
+   "lot": "3154",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, BRANARD STREET GREEN",
+   "u": "",
+   "lat": 29.73675,
+   "lng": -95.405225,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1818-branard-street",
+  "a": "1818 BRANARD Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_1818-branard-street",
+  "mls": "34104141",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1818-branard-street",
+   "a": "1818 BRANARD Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,199,900",
+   "sd": "2026-05-09",
+   "lot": "3154",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, BRANARD STREET PLACE",
+   "u": "",
+   "lat": 29.737086,
+   "lng": -95.405371,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Pending inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1822-branard-street-unit-b",
+  "a": "1822 BRANARD Street Unit#B",
+  "geocode": "HAR",
+  "mergeCandidate": "act_1822-branard-street-b",
+  "mls": "15226844",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1822-branard-street-unit-b",
+   "a": "1822 BRANARD Street Unit#B",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,549,900",
+   "sd": "2026-10-07",
+   "lot": "3254",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, BRANARD STREET VIEWS",
+   "u": "",
+   "lat": 29.737099,
+   "lng": -95.405573,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1906-woodhead-street",
+  "a": "1906 WOODHEAD Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_1906-woodhead-street",
+  "mls": "14133558",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1906-woodhead-street",
+   "a": "1906 WOODHEAD Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,919,900",
+   "sd": "2026-08-22",
+   "lot": "4212",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, HYDE PARK MAIN",
+   "u": "",
+   "lat": 29.748882,
+   "lng": -95.404925,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_2027-fairview-avenue",
+  "a": "2027 Fairview Avenue",
+  "geocode": "HAR",
+  "mergeCandidate": "act_2027-fairview-avenue",
+  "mls": "65565413",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2027-fairview-avenue",
+   "a": "2027 Fairview Avenue",
+   "llc": "Sandcastle Homes",
+   "v": "$899,900",
+   "sd": "2026-10-01",
+   "lot": "2834",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Fairveiw Patio Homes",
+   "u": "",
+   "lat": 29.744547,
+   "lng": -95.409337,
+   "c": [
+    {
+     "n": "Jennifer Vickers",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Sandcastle Homes. Agent: Jennifer Vickers. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_2412-elmen-street",
+  "a": "2412 ELMEN Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_2412-elmen-street",
+  "mls": "22201908",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2412-elmen-street",
+   "a": "2412 ELMEN Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,069,900",
+   "sd": "2026-10-07",
+   "lot": "3002",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, ELMEN STREET VIEWS",
+   "u": "",
+   "lat": 29.743993,
+   "lng": -95.404125,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_2413-brun-street-unit-a",
+  "a": "2413 BRUN Street Unit#A",
+  "geocode": "HAR",
+  "mergeCandidate": "act_2413-brun-street-a",
+  "mls": "73142561",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2413-brun-street-unit-a",
+   "a": "2413 BRUN Street Unit#A",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,289,900",
+   "sd": "2026-07-21",
+   "lot": "3361",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, BRUN STREET GREEN",
+   "u": "",
+   "lat": 29.744093,
+   "lng": -95.408567,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_2415-elmen-street",
+  "a": "2415 Elmen Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_2415-elmen-street",
+  "mls": "10315678",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2415-elmen-street",
+   "a": "2415 Elmen Street",
+   "llc": "Croix Custom Homes",
+   "v": "$2,050,000",
+   "sd": "2026-10-16",
+   "lot": "4039",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Plainview Sec 01",
+   "u": "",
+   "lat": 29.744184,
+   "lng": -95.403538,
+   "c": [
+    {
+     "n": "Kathleen Debarbieris",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Croix Custom Homes. Agent: Kathleen Debarbieris. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_3909-driscoll-street",
+  "a": "3909 DRISCOLL Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_3909-driscoll-street",
+  "mls": "52880194",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3909-driscoll-street",
+   "a": "3909 DRISCOLL Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,299,900",
+   "sd": "2026-10-24",
+   "lot": "3154",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, MONTLEW CROSSING",
+   "u": "",
+   "lat": 29.737379,
+   "lng": -95.406092,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_4207-driscoll-street",
+  "a": "4207 Driscoll Street",
+  "geocode": "HAR",
+  "mergeCandidate": "act_4207-driscoll-street",
+  "mls": "35392131",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4207-driscoll-street",
+   "a": "4207 Driscoll Street",
+   "llc": "Sandcastle Homes",
+   "v": "$879,900",
+   "sd": "2026-09-25",
+   "lot": "2359",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Garden Homes of Colquitt",
+   "u": "",
+   "lat": 29.735038,
+   "lng": -95.406079,
+   "c": [
+    {
+     "n": "Jennifer Vickers",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Sandcastle Homes. Agent: Jennifer Vickers. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_4317-roseland-street-unit-a",
+  "a": "4317 Roseland Street Unit#A",
+  "geocode": "HAR",
+  "mergeCandidate": "act_4317-roseland-street-a",
+  "mls": "52705553",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4317-roseland-street-unit-a",
+   "a": "4317 Roseland Street Unit#A",
+   "llc": "Sandcastle Homes",
+   "v": "$699,900",
+   "sd": "2026-07-16",
+   "lot": "2532",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Roseland Patio Homes",
+   "u": "",
+   "lat": 29.73365,
+   "lng": -95.3896,
+   "c": [
+    {
+     "n": "Jennifer Vickers",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Sandcastle Homes. Agent: Jennifer Vickers. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_4317-roseland-street-unit-b",
+  "a": "4317 Roseland Street Unit#B",
+  "geocode": "HAR",
+  "mergeCandidate": "act_4317-roseland-street-b",
+  "mls": "27842066",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4317-roseland-street-unit-b",
+   "a": "4317 Roseland Street Unit#B",
+   "llc": "Sandcastle Homes",
+   "v": "$774,900",
+   "sd": "2026-07-16",
+   "lot": "3009",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Roseland Patio Homes",
+   "u": "",
+   "lat": 29.73365,
+   "lng": -95.3896,
+   "c": [
+    {
+     "n": "Jennifer Vickers",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Sandcastle Homes. Agent: Jennifer Vickers. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1202-w-drew",
+  "a": "1202 W Drew",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1202-w-drew-st",
+  "mls": "69122938",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1202-w-drew",
+   "a": "1202 W Drew",
+   "llc": "Prebisch Homes",
+   "v": "$2,099,000",
+   "sd": "2026-08-28",
+   "lot": "4355",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Hyde Park",
+   "u": "",
+   "lat": 29.749837,
+   "lng": -95.393806,
+   "c": [
+    {
+     "n": "Patricia Dajani",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Prebisch Homes. Agent: Patricia Dajani. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1223-w-drew-street",
+  "a": "1223 W Drew Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1223-w-drew-st",
+  "mls": "25266879",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1223-w-drew-street",
+   "a": "1223 W Drew Street",
+   "llc": "Homebound",
+   "v": "$1,625,000",
+   "sd": "2026-10-08",
+   "lot": "4337",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Westover",
+   "u": "",
+   "lat": 29.749521,
+   "lng": -95.395387,
+   "c": [
+    {
+     "n": "Jvonne Lowe",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Homebound. Agent: Jvonne Lowe. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1636-castle-court",
+  "a": "1636 CASTLE Court",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1636-castle-ct",
+  "mls": "92987764",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1636-castle-court",
+   "a": "1636 CASTLE Court",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,069,900",
+   "sd": "2026-10-23",
+   "lot": "3002",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, CASTLE COURT LIVING",
+   "u": "",
+   "lat": 29.732167,
+   "lng": -95.401009,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1638-castle-court",
+  "a": "1638 CASTLE Court",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1638-castle-ct-77006",
+  "mls": "10031519",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1638-castle-court",
+   "a": "1638 CASTLE Court",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,139,900",
+   "sd": "2026-09-17",
+   "lot": "3214",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, CASTLE COURT MANORS",
+   "u": "",
+   "lat": 29.753833,
+   "lng": -95.393275,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1720-kipling-street",
+  "a": "1720 Kipling Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1720-kipling-st",
+  "mls": "44694086",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1720-kipling-street",
+   "a": "1720 Kipling Street",
+   "llc": "Gotham Development",
+   "v": "$2,599,000",
+   "sd": "2026-10-26",
+   "lot": "",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Winlow Place Add",
+   "u": "",
+   "lat": 29.740589,
+   "lng": -95.402885,
+   "c": [
+    {
+     "n": "Patricia Dajani",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Gotham Development. Agent: Patricia Dajani. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1820-branard-street",
+  "a": "1820 BRANARD Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1820-branard-st",
+  "mls": "81369100",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1820-branard-street",
+   "a": "1820 BRANARD Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,169,900",
+   "sd": "2026-09-23",
+   "lot": "3002",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, BRANARD STREET PLACE",
+   "u": "",
+   "lat": 29.737093,
+   "lng": -95.405421,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_2204-huldy-street",
+  "a": "2204 Huldy Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_2204-huldy-st",
+  "mls": "72990346",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2204-huldy-street",
+   "a": "2204 Huldy Street",
+   "llc": "Tanglwood Builders",
+   "v": "$1,129,000",
+   "sd": "2026-10-24",
+   "lot": "3110",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Hyde Park Main 4",
+   "u": "",
+   "lat": 29.746066,
+   "lng": -95.410027,
+   "c": [
+    {
+     "n": "Rachel Conkling",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Tanglwood Builders. Agent: Rachel Conkling. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_718-peden-street",
+  "a": "718 Peden Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_718-peden-st",
+  "mls": "12477620",
+  "har_status": "Active",
+  "data": {
+   "id": "act_718-peden-street",
+   "a": "718 Peden Street",
+   "llc": "Oracle City Homes",
+   "v": "$1,250,000",
+   "sd": "2026-10-08",
+   "lot": "3020",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, MONTROSE FAIRGROUNDS 3RD-ROWTH",
+   "u": "",
+   "lat": 29.752743,
+   "lng": -95.389721,
+   "c": [
+    {
+     "n": "Oron Peer",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Oracle City Homes. Agent: Oron Peer. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_720-peden-street",
+  "a": "720 Peden Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_720-peden-st",
+  "mls": "95942562",
+  "har_status": "Active",
+  "data": {
+   "id": "act_720-peden-street",
+   "a": "720 Peden Street",
+   "llc": "Oracle City Homes",
+   "v": "$1,200,000",
+   "sd": "2026-09-24",
+   "lot": "3020",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Montrose Fairgrounds",
+   "u": "",
+   "lat": 29.752785,
+   "lng": -95.38974,
+   "c": [
+    {
+     "n": "Dennis Pow-Sang",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Oracle City Homes. Agent: Dennis Pow-Sang. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1809-sul-ross-street",
+  "a": "1809 Sul Ross Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "30727608",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1809-sul-ross-street",
+   "a": "1809 Sul Ross Street",
+   "llc": "Oracle Signature",
+   "v": "$1,300,000",
+   "sd": "2026-10-14",
+   "lot": "3333",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, West Lancaster Place",
+   "u": "",
+   "lat": 29.737501,
+   "lng": -95.405108,
+   "c": [
+    {
+     "n": "Oron Peer",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Oracle Signature. Agent: Oron Peer. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1517-mcduffie-street",
+  "a": "1517 McDuffie Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "9962976",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1517-mcduffie-street",
+   "a": "1517 McDuffie Street",
+   "llc": "BK Builder",
+   "v": "$1,357,000",
+   "sd": "2026-10-10",
+   "lot": "3486",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, MCDUFFIE TERRACE",
+   "u": "",
+   "lat": 29.75162,
+   "lng": -95.40777,
+   "c": [
+    {
+     "n": "Bardia Samiee",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: BK Builder. Agent: Bardia Samiee. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_918-peden-street",
+  "a": "918 PEDEN Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "50971157",
+  "har_status": "Active",
+  "data": {
+   "id": "act_918-peden-street",
+   "a": "918 PEDEN Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,374,900",
+   "sd": "2026-08-28",
+   "lot": "3161",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, ROSEMONT HEIGHTS",
+   "u": "",
+   "lat": 29.752773,
+   "lng": -95.390488,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2006-lexington-street",
+  "a": "2006 Lexington Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "61414127",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2006-lexington-street",
+   "a": "2006 Lexington Street",
+   "llc": "Cashiola",
+   "v": "$1,750,000",
+   "sd": "2026-05-19",
+   "lot": "4680",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, LEXINGTON PLACE",
+   "u": "",
+   "lat": 29.731936,
+   "lng": -95.409878,
+   "c": [
+    {
+     "n": "Alexandra Hampson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Cashiola. Agent: Alexandra Hampson. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1701-banks-street",
+  "a": "1701 BANKS Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "77437272",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1701-banks-street",
+   "a": "1701 BANKS Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$3,499,900",
+   "sd": "2026-07-17",
+   "lot": "5709",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, WEST EDGEMONT",
+   "u": "",
+   "lat": 29.729373,
+   "lng": -95.402344,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_4819-mandell-street",
+  "a": "4819 Mandell Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "57113134",
+  "har_status": "Pend Cont to Show",
+  "data": {
+   "id": "act_4819-mandell-street",
+   "a": "4819 Mandell Street",
+   "llc": "Wood Custom Homes",
+   "v": "$2,399,000",
+   "sd": "2026-09-13",
+   "lot": "4727",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Boulevard Oaks",
+   "u": "",
+   "lat": 29.72988,
+   "lng": -95.399202,
+   "c": [
+    {
+     "n": "Derik Daniels",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Wood Custom Homes. Agent: Derik Daniels. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ }
+]

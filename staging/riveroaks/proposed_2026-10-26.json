@@ -1,0 +1,39 @@
+[
+ {
+  "id": "act_3058-locke-lane",
+  "a": "3058 Locke Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "74431691",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3058-locke-lane",
+   "a": "3058 Locke Lane",
+   "llc": "Roberson Building Group",
+   "v": "$5,295,000",
+   "sd": "2026-09-11",
+   "lot": "6608",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Avalon Place Sec 2 Thru Sec 6",
+   "u": "",
+   "lat": 29.74341,
+   "lng": -95.421525,
+   "c": [
+    {
+     "n": "Charlie Kriegel",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Roberson Building Group. Agent: Charlie Kriegel. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ }
+]

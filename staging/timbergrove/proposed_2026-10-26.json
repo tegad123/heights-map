@@ -1,0 +1,298 @@
+[
+ {
+  "id": "act_3516-harvest-dance-drive",
+  "a": "3516 Harvest Dance Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "tgp_3516-harvest-dance",
+  "mls": "20071918",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3516-harvest-dance-drive",
+   "a": "3516 Harvest Dance Drive",
+   "llc": "Sullivan Brothers Builders",
+   "v": "$589,290",
+   "sd": "2026-10-24",
+   "lot": "1869",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Timbergrove Trails",
+   "u": "",
+   "lat": 29.789882,
+   "lng": -95.439438,
+   "c": [
+    {
+     "n": "Jimmy Franklin",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Sullivan Brothers Builders. Agent: Jimmy Franklin. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_3521-harvest-dance-drive",
+  "a": "3521 Harvest Dance Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "tgp_3521-harvest-dance",
+  "mls": "14361484",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3521-harvest-dance-drive",
+   "a": "3521 Harvest Dance Drive",
+   "llc": "Sullivan Brothers Builders",
+   "v": "$589,970",
+   "sd": "2026-10-24",
+   "lot": "1869",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Timbergrove Trails",
+   "u": "",
+   "lat": 29.789638,
+   "lng": -95.439779,
+   "c": [
+    {
+     "n": "Jimmy Franklin",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Sullivan Brothers Builders. Agent: Jimmy Franklin. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_3524-harvest-dance-drive",
+  "a": "3524 Harvest Dance Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "88180727",
+  "har_status": "Active",
+  "data": {
+   "id": "act_3524-harvest-dance-drive",
+   "a": "3524 Harvest Dance Drive",
+   "llc": "",
+   "v": "$570,000",
+   "sd": "2026-09-15",
+   "lot": "2009",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Seamist Sec 2",
+   "u": "",
+   "lat": 29.789969,
+   "lng": -95.440085,
+   "c": [
+    {
+     "n": "Bridget Brown",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Agent: Bridget Brown. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1006-golden-nectar",
+  "a": "1006 Golden Nectar",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "6936604",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1006-golden-nectar",
+   "a": "1006 Golden Nectar",
+   "llc": "America Intown Homes",
+   "v": "$699,900",
+   "sd": "2026-10-23",
+   "lot": "2707",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Timbergrove Green",
+   "u": "",
+   "lat": 29.788005,
+   "lng": -95.435351,
+   "c": [
+    {
+     "n": "Emily Wang",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: America Intown Homes. Agent: Emily Wang. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1008-golden-nectar",
+  "a": "1008 Golden Nectar",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "86916864",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1008-golden-nectar",
+   "a": "1008 Golden Nectar",
+   "llc": "America Intown Homes",
+   "v": "$788,000",
+   "sd": "2026-10-19",
+   "lot": "3167",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Timbergrove Green",
+   "u": "",
+   "lat": 29.788005,
+   "lng": -95.435351,
+   "c": [
+    {
+     "n": "Emily Wang",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: America Intown Homes. Agent: Emily Wang. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_4010-ascot-lane",
+  "a": "4010 Ascot Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "19476920",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4010-ascot-lane",
+   "a": "4010 Ascot Lane",
+   "llc": "Kenneth Adam Designs",
+   "v": "$1,750,000",
+   "sd": "2026-09-23",
+   "lot": "4748",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Brook-Woods Estates",
+   "u": "",
+   "lat": 29.811479,
+   "lng": -95.450813,
+   "c": [
+    {
+     "n": "Kye Sampson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Kenneth Adam Designs. Agent: Kye Sampson. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_4009-brookwoods-drive",
+  "a": "4009 Brookwoods Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "39802421",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4009-brookwoods-drive",
+   "a": "4009 Brookwoods Drive",
+   "llc": "Kenneth Adam Designs",
+   "v": "$1,900,000",
+   "sd": "2026-09-23",
+   "lot": "5009",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Brook-Woods Estates",
+   "u": "",
+   "lat": 29.812019,
+   "lng": -95.450804,
+   "c": [
+    {
+     "n": "Kye Sampson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Kenneth Adam Designs. Agent: Kye Sampson. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_4418-brookwoods-drive",
+  "a": "4418 Brookwoods Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "63573336",
+  "har_status": "Active",
+  "data": {
+   "id": "act_4418-brookwoods-drive",
+   "a": "4418 Brookwoods Drive",
+   "llc": "Kenneth Adam Designs",
+   "v": "$2,100,000",
+   "sd": "2026-09-24",
+   "lot": "5370",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Brook-Woods Estates",
+   "u": "",
+   "lat": 29.812722,
+   "lng": -95.45599,
+   "c": [
+    {
+     "n": "Kye Sampson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Kenneth Adam Designs. Agent: Kye Sampson. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ }
+]

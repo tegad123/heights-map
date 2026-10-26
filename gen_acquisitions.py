@@ -28,7 +28,10 @@ Transform (matched field-for-field against riveroaks.html):
 
 Row filter: keep only in-zone records. riveroaks flags this with
 `in_river_oaks`; generally, any record whose `in_<zone>` boolean is False
-is dropped. Record order is preserved.
+is dropped. Records outside the market's ingest zone guard (market_config
+boundary polygon) are dropped, as are records the
+market's changelog archived (changes/<market>/ archived_duplicates,
+archived_out_of_zone). Record order is preserved.
 
 Teardown threshold: riveroaks has teardown up to YB1988 and plain from
 YB1990 (no 1989 in the data), so the exact cutoff is undetermined by
@@ -44,7 +47,9 @@ USAGE
 """
 
 import argparse
+import glob
 import json
+import os
 import sys
 
 TEARDOWN_BEFORE = 1990  # year_built < this -> "Likely teardown-to-spec" note
@@ -123,8 +128,41 @@ def seed_entry(rec):
     return record_id(rec), {"notes": notes, "tags": ["deed"]}
 
 
+def market_of(path):
+    return os.path.basename(path).rsplit("_acquisitions.json", 1)[0]
+
+
+def archived_ids(path):
+    """acq ids the market's changelog retired (archived_duplicates,
+    archived_out_of_zone) — they must not be regenerated as pins."""
+    cdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "changes", market_of(path))
+    ids = set()
+    for f in glob.glob(os.path.join(cdir, "changes_*.json")):
+        with open(f, encoding="utf-8") as fh:
+            chg = json.load(fh)
+        for key in ("archived_duplicates", "archived_out_of_zone"):
+            ids |= {e["record"]["id"] for e in chg.get(key, [])}
+    return ids
+
+
+def market_guard(path):
+    """The market's ingest zone guard (boundary polygon), so a deed pin can
+    never land outside the boundary its page draws. The acquisitions files
+    carry no in_<zone> flag outside riveroaks."""
+    from market_config import MARKETS
+    from combined_market_ingest import zone_guard
+    cfg = MARKETS[market_of(path)]
+    root = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(root, cfg["html"]), encoding="utf-8") as fh:
+        guard = zone_guard(fh.read(), market_of(path))
+    return lambda rec: guard(rec["address"], rec["lng"], rec["lat"]) is None
+
+
 def generate(path):
-    recs = [r for r in json.load(open(path)) if in_zone(r)]
+    retired = archived_ids(path)
+    inside = market_guard(path)
+    recs = [r for r in json.load(open(path))
+            if in_zone(r) and inside(r) and record_id(r) not in retired]
     rows = [_dumps(data_row(r)) for r in recs]
     seeds = []
     for r in recs:

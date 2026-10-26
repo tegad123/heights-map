@@ -132,8 +132,18 @@ be recreated).
 - Zip overlaps are real: 77019 = montrose + riveroaks, 77008 = heights +
   timbergrove. Boundary polygons disambiguate; the driver skips (not
   quarantines) OOZ-POLY rows that fall inside another enabled market's ring
-  ("other_market" skip). westu has NO polygon by design (market = all of
-  COH-side 77005; West U city-proper permits are not in the COH portal).
+  ("other_market" skip). westu's boundary is the 77005 footprint
+  (westu_boundary.geojson = union of HCAD parcels with site zip 77005,
+  matches the Census ZCTA; market = all of COH-side 77005; West U
+  city-proper permits are not in the COH portal), not the city line. The
+  Boulevard Oaks blocks north of it (North/South Blvd, Bartlett, Milford)
+  are HCAD zip 77098 even when HAR says 77005 — they sit outside both
+  West U and Montrose and stay hidden.
+- Every non-Heights page splices DATA outside its ZONE_RINGS at load (same
+  guard as Heights' inZonePoly); ZONE_RINGS must equal the market_config
+  boundary (tests/test_har_refresh enforces it). Out-of-boundary listings
+  and permits stay in DATA hidden; stray deed pins are retired with
+  `refresh.py archive-out-of-zone`.
 - The Heights OUT_OF_ZONE street regex was leaked verbatim into
   riveroaks/springbranch/timbergrove html (fixed 2026-08-27; timbergrove
   had been hiding 12 of its own records). springvalley.html still carries
