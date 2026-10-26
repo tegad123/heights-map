@@ -16,7 +16,7 @@
  "counts": {
   "matched": 0,
   "dropped": 1,
-  "relisted": 0,
+  "relisted": 2,
   "new": 8,
   "excluded": 0
  },
@@ -32,71 +32,102 @@
    "close_date": null
   }
  ],
- "relisted": [],
+ "relisted": [
+  {
+   "id": "tgp_3516-harvest-dance",
+   "a": "3516 Harvest Dance Dr 77008",
+   "ty": "split",
+   "mls": "20071918"
+  },
+  {
+   "id": "tgp_3521-harvest-dance",
+   "a": "3521 Harvest Dance Dr 77008",
+   "ty": "split",
+   "mls": "14361484"
+  }
+ ],
  "new": [
   {
    "a": "3516 Harvest Dance Drive",
    "prod": "Split Lot",
    "mls": "20071918",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "tgp_3516-harvest-dance"
+   "staged": false,
+   "mergeCandidate": "tgp_3516-harvest-dance",
+   "id": "tgp_3516-harvest-dance",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "3521 Harvest Dance Drive",
    "prod": "Split Lot",
    "mls": "14361484",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "tgp_3521-harvest-dance"
+   "staged": false,
+   "mergeCandidate": "tgp_3521-harvest-dance",
+   "id": "tgp_3521-harvest-dance",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "3524 Harvest Dance Drive",
    "prod": "Split Lot",
    "mls": "88180727",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_3524-harvest-dance-drive",
+   "applied": true
   },
   {
    "a": "1006 Golden Nectar",
    "prod": "Split Lot",
    "mls": "6936604",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1006-golden-nectar",
+   "applied": true
   },
   {
    "a": "1008 Golden Nectar",
    "prod": "Split Lot",
    "mls": "86916864",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_1008-golden-nectar",
+   "applied": true
   },
   {
    "a": "4010 Ascot Lane",
    "prod": "Single Lot",
    "mls": "19476920",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4010-ascot-lane",
+   "applied": true
   },
   {
    "a": "4009 Brookwoods Drive",
    "prod": "Single Lot",
    "mls": "39802421",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4009-brookwoods-drive",
+   "applied": true
   },
   {
    "a": "4418 Brookwoods Drive",
    "prod": "Single Lot",
    "mls": "63573336",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_4418-brookwoods-drive",
+   "applied": true
   }
  ],
  "excluded": [],
@@ -161,5 +192,25 @@
    "previous_mls": null
   }
  ],
- "observed": {}
+ "observed": {},
+ "identity_resolutions": [
+  {
+   "member": "tgp_3516-harvest-dance",
+   "address": "3516 Harvest Dance Drive",
+   "mls": "20071918",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_3516-harvest-dance-drive"
+  },
+  {
+   "member": "tgp_3521-harvest-dance",
+   "address": "3521 Harvest Dance Drive",
+   "mls": "14361484",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_3521-harvest-dance-drive"
+  }
+ ]
 }
