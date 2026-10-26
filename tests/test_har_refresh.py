@@ -463,6 +463,16 @@ class IdentityFollowUpTest(unittest.TestCase):
         applied = {n['mls']: n.get('id') for n in self.changelog()['new'] if n.get('applied')}
         self.assertEqual(applied, {'m5': 'act_400-ash-street', 'm6': 'act_200-oak-st-b'})
 
+    def test_apply_staged_with_trailing_comment_after_data(self):
+        page = FIXTURE_PAGE.replace('];\nconst OUT_OF_ZONE', ']; // NC actives from HAR export\nconst OUT_OF_ZONE')
+        (self.root / 'montrose.html').write_text(page)
+        self.run_apply_staged(['act_400-ash-street'])
+        after = self.page()
+        self.assertEqual([d['id'] for d in refresh.extract_data(after)][-1], 'act_400-ash-street')
+        data_frag = after[after.index(', {"id": "act_400-ash-street"'):after.index(']; // NC actives')]
+        seed_frag = after[after.index(',"act_400-ash-street":'):after.index('};\nif(Object')]
+        self.assertEqual(after.replace(data_frag, '', 1).replace(seed_frag, '', 1), page)
+
     def test_split_siblings(self):
         self.assertTrue(apply_staged.split_siblings('1006 Golden Nectar', '1008 Golden Nectar'))
         self.assertTrue(apply_staged.split_siblings('1208 E 26th Unit A', '1208 E 26th St Unit B'))

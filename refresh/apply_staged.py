@@ -114,8 +114,8 @@ def main():
         f'"{s["id"]}":' + json.dumps(s['seed'], ensure_ascii=False, separators=(',', ':'))
         for s in approved)
 
-    m = re.search(r'let DATA = \[.*?\];\n', src, re.S)
-    d_end = m.end() - len('];\n')
+    m = re.search(r'let DATA = (\[.*?\]);[ \t]*(?://[^\n]*)?\n', src, re.S)
+    d_end = m.end(1) - 1
     candidate = src[:d_end] + ', ' + data_frag + src[d_end:]
     m = re.search(r'SEED_POINTS=\{.*?\};\nif\(Object', candidate, re.S)
     s_end = m.end() - len('};\nif(Object')
