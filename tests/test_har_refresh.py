@@ -338,7 +338,8 @@ class IdentityFollowUpTest(unittest.TestCase):
         self.ctx = market_root(self.td.name, 'montrose', FIXTURE_PAGE)
         self.root = self.ctx.__enter__()
         self.staged = [
-            staged_row('act_200-oak-street', '200 Oak Street', 'pmt_200-oak-st', 'Active', 'm2', 'Single Lot', 29.8011, -95.4011),
+            staged_row('act_200-oak-street', '200 Oak Street', 'pmt_200-oak-st', 'Active', 'm2', 'Single Lot', 29.8028, -95.401),
+            staged_row('act_300-pine-road', '300 Pine Road', 'pmt_300-pine-st', 'Active', 'm8', '', 29.8118, -95.41),
             staged_row('act_300-pine-street', '300 Pine Street', 'pmt_300-pine-st', 'Option Pending', 'm3', '', 29.8101, -95.4101),
             staged_row('act_100-elm-street', '100 Elm Street', 'act_100-elm-street', 'Active', 'm1', 'Single Lot', 29.8, -95.4),
             staged_row('act_301-pine-street', '301 Pine Street', 'pmt_300-pine-st', 'Active', 'm4', '', 29.8101, -95.4101),
@@ -410,6 +411,7 @@ class IdentityFollowUpTest(unittest.TestCase):
     def test_link_staged_refusals(self):
         for approve, message in ((['act_100-elm-street'], 'already carries listing state'),
                                  (['act_301-pine-street'], 'is not the address of'),
+                                 (['act_300-pine-road'], 'sits 200 m from'),
                                  (['act_400-ash-street'], 'no mergeCandidate'),
                                  (['act_300-pine-street', 'act_300-pine-street'], 'already linked')):
             with self.subTest(approve=approve), self.assertRaisesRegex(SystemExit, message):

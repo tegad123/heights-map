@@ -1055,6 +1055,7 @@ def cmd_har_split(args):
 STREET_TYPES = frozenset({'st', 'ave', 'ln', 'dr', 'rd', 'ct', 'pl', 'blvd', 'way', 'cir',
                           'pkwy', 'trl', 'ter', 'hwy', 'speedway'})
 LOOSE_LINK_METERS = 150
+EXACT_LINK_METERS = 500
 
 
 def type_free_key(addr):
@@ -1740,6 +1741,7 @@ def cmd_link_staged(args, html_path):
     """Record approved staged mergeCandidate rows as listing events on their
     existing never-listed pin (active -> relisted, pending -> dropped 'under
     contract', so it folds into RECONCILE.pending). Nothing is appended."""
+    from market_address import address_key
     from market_linkage import distance
     staged = {}
     for s in json.loads(Path(args.file).read_text()):
@@ -1764,7 +1766,9 @@ def cmd_link_staged(args, html_path):
                 raise SystemExit(f'REFUSED: {pin} already carries listing state {state[pin][0]!r}; har owns it')
             if type_free_key(s['a']) != type_free_key(d['a']):
                 raise SystemExit(f"REFUSED: {sid} ({s['a']}) is not the address of {pin} ({d['a']})")
-            if distance(s['data'], d) > LOOSE_LINK_METERS:
+            # HAR coordinates can sit a block off; an exact address tolerates that
+            limit = EXACT_LINK_METERS if address_key(s['a']) == address_key(d['a']) else LOOSE_LINK_METERS
+            if distance(s['data'], d) > limit:
                 raise SystemExit(f'REFUSED: {sid} sits {distance(s["data"], d):.0f} m from {pin}')
             if pin in used:
                 raise SystemExit(f'REFUSED: {pin} is already linked to {used[pin]} in this run')
