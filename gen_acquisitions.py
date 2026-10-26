@@ -29,7 +29,7 @@ Transform (matched field-for-field against riveroaks.html):
 Row filter: keep only in-zone records. riveroaks flags this with
 `in_river_oaks`; generally, any record whose `in_<zone>` boolean is False
 is dropped. Records outside the market's ingest zone guard (market_config
-boundary polygon; zip + coord box for westu) are dropped, as are records the
+boundary polygon) are dropped, as are records the
 market's changelog archived (changes/<market>/ archived_duplicates,
 archived_out_of_zone). Record order is preserved.
 
@@ -146,9 +146,9 @@ def archived_ids(path):
 
 
 def market_guard(path):
-    """The market's ingest zone guard (boundary polygon; zip + coord box for
-    westu), so a deed pin can never land outside the boundary its page draws.
-    The acquisitions files carry no in_<zone> flag outside riveroaks."""
+    """The market's ingest zone guard (boundary polygon), so a deed pin can
+    never land outside the boundary its page draws. The acquisitions files
+    carry no in_<zone> flag outside riveroaks."""
     from market_config import MARKETS
     from combined_market_ingest import zone_guard
     cfg = MARKETS[market_of(path)]

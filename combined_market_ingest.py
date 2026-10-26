@@ -26,7 +26,7 @@ READ = ('Close Date', 'Close Price', 'Original List Price', 'DOM', 'Builder Name
 def zone_guard(html, market='heights'):
     """Exclusion reason for one row under a market's own guard: the OUT_OF_ZONE regex
     from that market's html, its east cutoff (Heights only), then its boundary ring.
-    A market without a polygon (westu) falls back to address zip + coord box."""
+    A market without a boundary file falls back to address zip + coord box."""
     from market_config import MARKETS
     cfg=MARKETS[market]
     zone=re.compile(re.search(r'const OUT_OF_ZONE=/(.*?)/i;',html)[1],re.I)

@@ -100,12 +100,13 @@ class ZoneGuardTest(unittest.TestCase):
         self.assertIsNone(montrose('5339 Larkin Street', -95.3985032, 29.7502339))
         self.assertEqual(montrose('5339 Larkin Street', -95.40, 29.80), 'OOZ_POLY')
 
-    def test_westu_uses_zip_and_box_without_polygon(self):
+    def test_westu_is_the_77005_footprint(self):
         westu = cmi.zone_guard((ROOT / 'westu.html').read_text(), 'westu')
         self.assertIsNone(westu('3700 Fixture St', -95.43, 29.715))
-        self.assertEqual(westu('3700 Fixture St', -95.30, 29.715), 'OOZ_BOX')
-        self.assertEqual(westu('3700 Fixture St, Houston, TX 77006', -95.43, 29.715), 'OOZ_ZIP')
+        self.assertEqual(westu('3700 Fixture St', -95.30, 29.715), 'OOZ_POLY')
         self.assertIsNone(westu('5329 DORA ST 77005, Houston, TX 77005', -95.396108, 29.725302))
+        self.assertEqual(westu('2205 North Boulevard, Houston, TX 77005', -95.410700882283, 29.727780482199),
+                         'OOZ_POLY')
 
     def test_page_zone_rings_match_market_config(self):
         from market_config import MARKETS

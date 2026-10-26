@@ -48,7 +48,7 @@ def set_market(name):
         if pp._BOUNDARY_RING is None:
             sys.exit(f"FATAL: boundary {cfg['boundary']} failed to load")
     else:
-        pp._BOUNDARY_RING = None      # zip + coord-box guard only (westu)
+        pp._BOUNDARY_RING = None      # zip + coord-box guard only
     return cfg
 
 

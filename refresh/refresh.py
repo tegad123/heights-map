@@ -29,7 +29,7 @@ Without --write it prints the classification and touches nothing.
 
 har takes the four headered HAR status exports for one market (names from
 market_config.py). Each row is zone-guarded by that market's own OUT_OF_ZONE
-regex, east cutoff and boundary (westu: zip + coord box) and every exclusion
+regex, east cutoff and boundary ring, and every exclusion
 is ledgered. Matched = still listed; pending is never off market; terminal
 statuses drop only on current evidence (or a true disappearance of the prior
 MLS); new listings and never-listed pins are staged, not appended. Heights
@@ -65,7 +65,7 @@ dry run unless --apply.
       --ids acq_x acq_y --reason TEXT [--apply]
 
 archive-out-of-zone retires DATA records whose coordinates fail the market's
-own zone guard (market_config boundary; zip + coord box for westu) and that
+own zone guard (market_config boundary) and that
 carry no listing state; the record moves into the changelog's
 archived_out_of_zone. Same fold/splice/validate path as archive-duplicates.
 
@@ -960,7 +960,7 @@ def cmd_har_split(args):
     """Cut zip-wide HAR exports into per-market slices for `har`. Writes pulls/ only.
 
     Each enabled market receives every row its own zone guard accepts (OUT_OF_ZONE regex,
-    Heights east cutoff, boundary ring, or westu's zip + coord box) — the same rows a
+    Heights east cutoff, boundary ring) — the same rows a
     market-specific export would hold. Rows inside two markets go to both: sending a
     shared listing to only one would make the other read its pin as a disappearance.
     Rows no enabled market accepts are ledgered with every market's reason."""
