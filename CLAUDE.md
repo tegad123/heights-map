@@ -3,6 +3,14 @@
 Supply-timing maps for CQ Houston. Static site, deployed to Netlify
 via CI from the GitHub main branch.
 
+The live site is password-gated by netlify/edge-functions/site-password.js
+(one sign-in, 30-day cookie; netlify/functions/ask.mjs checks the same
+session). The password is ONLY the SITE_PASSWORD Netlify env var — this repo
+is public, never commit it. Scripts that fetch the live site send it as HTTP
+Basic auth (weekly_permit_ingest.sh reads SITE_PASSWORD from the
+permitingest plist env). The gate protects the website only; everything in
+the repo, pin data included, is readable on GitHub.
+
 ## Hard rules — do not violate
 
 - The direct Netlify API deploy path has been removed. Deployment is

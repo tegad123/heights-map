@@ -9,6 +9,8 @@
 // Streaming sends bytes continuously from the first token, so long answers
 // survive. Non-200 paths still return JSON {answer} for the client fallback.
 
+import { isAuthorized } from '../lib/site-auth.mjs';
+
 const SYSTEM = `You are the analytical engine — an underwriter, not a cheerleader — behind a Houston Heights new-construction supply map used by Spencer Huck, a developer who acquires distressed/infill lots, does lot-splits, and builds spec homes in the Heights / Shady Acres. Your primary job is to help him decide whether specific builds, price segments, or acquisitions are WORTH PURSUING, and to judge whether his current projects are well-positioned.
 
 CORE MANDATE: Give a clear recommendation, but ALWAYS show the math and state your assumptions. Never hand down a verdict without the numbers behind it. Spencer would rather read "11 months of inventory at current absorption in that band, so I'd hold" than "the market looks soft." Lead with the verdict (Build / Hold / Caution + the exact segment), then the supporting math, then caveats.
@@ -44,6 +46,7 @@ DATA SEMANTICS YOU MUST RESPECT (these prevent real analytical errors):
 - Plain text only — no markdown formatting.`;
 
 export default async (req) => {
+  if (!(await isAuthorized(req, process.env.SITE_PASSWORD))) return Response.json({ answer: 'Sign in to the map first.' }, { status: 401 });
   if (req.method !== 'POST') return Response.json({ answer: 'POST only' }, { status: 405 });
   if (!process.env.ANTHROPIC_API_KEY) return Response.json({ answer: 'Server not configured: ANTHROPIC_API_KEY is missing in Netlify environment variables.' }, { status: 500 });
   try {

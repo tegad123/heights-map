@@ -7,6 +7,8 @@
 # input freshness, git (per-market commits, never add -A), deploy
 # verification, Discord, ingest_log.txt.
 # DISCORD_WEBHOOK_URL comes from the launchd plist env — never hardcode.
+# SITE_PASSWORD (same plist env) is the site password; the live-page check
+# sends it as HTTP Basic auth. Without it the check sees 401 and alerts.
 set -u
 
 REPO=/Users/tegaumukoro/heights-map
@@ -123,7 +125,8 @@ if [ -n "$CHECKS" ]; then
         while read -r LINE; do
             [ -z "$LINE" ] && continue
             PAGE=${LINE%%:*}
-            LIVE=$(curl -fsm 30 "$SITE/$PAGE?cb=$(date +%s)" 2>/dev/null)
+            LIVE=$(printf 'user = "map:%s"\n' "${SITE_PASSWORD:-}" |
+                   curl -fsm 30 -K - "$SITE/$PAGE?cb=$(date +%s)" 2>/dev/null)
             for P in ${LINE#*:}; do echo "$LIVE" | grep -q "$P" || OK=0; done
         done <<< "$CHECKS"
         [ "$OK" -eq 1 ] && { DEPLOY=OK; break; }
