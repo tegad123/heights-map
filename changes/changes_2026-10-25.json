@@ -15,8 +15,8 @@
  },
  "counts": {
   "matched": 61,
-  "dropped": 16,
-  "relisted": 3,
+  "dropped": 17,
+  "relisted": 9,
   "new": 7,
   "excluded": 7
  },
@@ -227,6 +227,15 @@
    "har_status": "Pending",
    "mls": "32396133",
    "close_date": null
+  },
+  {
+   "id": "pmt_1010-e-26th-st-77009",
+   "a": "1010 E 26th St, Houston, TX 77009",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "72282813",
+   "close_date": null
   }
  ],
  "relisted": [
@@ -250,6 +259,42 @@
    "ty": "split",
    "mls": "89786077",
    "offSince": "2026-10-07"
+  },
+  {
+   "id": "2131240072",
+   "a": "711 E 12th St, Houston, Tx 77008",
+   "ty": "single",
+   "mls": "92863972"
+  },
+  {
+   "id": "2131313166",
+   "a": "805 Walton St, Houston, Tx 77009",
+   "ty": "single",
+   "mls": "37511845"
+  },
+  {
+   "id": "pmt_1320-alexander-st-a-77008",
+   "a": "1320 Alexander St A, Houston, TX 77008",
+   "ty": "split",
+   "mls": "87122365"
+  },
+  {
+   "id": "pmt_217-teetshorn-st-77009",
+   "a": "217 Teetshorn St, Houston, TX 77009",
+   "ty": "single",
+   "mls": "41611827"
+  },
+  {
+   "id": "pmt_305-w-17th-st-77008",
+   "a": "305 W 17th St, Houston, TX 77008",
+   "ty": "single",
+   "mls": "28513470"
+  },
+  {
+   "id": "pmt_607-w-27th-st-77008",
+   "a": "607 W 27th St, Houston, TX 77008",
+   "ty": "split",
+   "mls": "39509151"
   }
  ],
  "new": [
@@ -258,56 +303,77 @@
    "prod": "Single Lot",
    "mls": "92863972",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "2131240072"
+   "staged": false,
+   "mergeCandidate": "2131240072",
+   "id": "2131240072",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "805 Walton Street",
    "prod": "Single Lot",
    "mls": "37511845",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "2131313166"
+   "staged": false,
+   "mergeCandidate": "2131313166",
+   "id": "2131313166",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "1010 E 26TH Street",
    "prod": "Split Lot",
    "mls": "72282813",
    "har_status": "Pending",
-   "staged": true,
-   "mergeCandidate": "pmt_1010-e-26th-st-77009"
+   "staged": false,
+   "mergeCandidate": "pmt_1010-e-26th-st-77009",
+   "id": "pmt_1010-e-26th-st-77009",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "1320 Alexander Street Unit#A",
    "prod": "Split Lot",
    "mls": "87122365",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_1320-alexander-st-a-77008"
+   "staged": false,
+   "mergeCandidate": "pmt_1320-alexander-st-a-77008",
+   "id": "pmt_1320-alexander-st-a-77008",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "217 TEETSHORN Street",
    "prod": "Single Lot",
    "mls": "41611827",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_217-teetshorn-st-77009"
+   "staged": false,
+   "mergeCandidate": "pmt_217-teetshorn-st-77009",
+   "id": "pmt_217-teetshorn-st-77009",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "305 W 17th Street",
    "prod": "Single Lot",
    "mls": "28513470",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_305-w-17th-st-77008"
+   "staged": false,
+   "mergeCandidate": "pmt_305-w-17th-st-77008",
+   "id": "pmt_305-w-17th-st-77008",
+   "applied": true,
+   "linked": true
   },
   {
    "a": "607 W 27th Street",
    "prod": "Split Lot",
    "mls": "39509151",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": "pmt_607-w-27th-st-77008"
+   "staged": false,
+   "mergeCandidate": "pmt_607-w-27th-st-77008",
+   "id": "pmt_607-w-27th-st-77008",
+   "applied": true,
+   "linked": true
   }
  ],
  "excluded": [
@@ -720,5 +786,105 @@
   "restored_from_evidence": [
    "90671798"
   ]
- }
+ },
+ "identity_resolutions": [
+  {
+   "member": "2131240072",
+   "address": "711 E 12th Street",
+   "mls": "92863972",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_711-e-12th-street"
+  },
+  {
+   "member": "2131313166",
+   "address": "805 Walton Street",
+   "mls": "37511845",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_805-walton-street"
+  },
+  {
+   "member": "pmt_1010-e-26th-st-77009",
+   "address": "1010 E 26TH Street",
+   "mls": "72282813",
+   "status": "pending",
+   "har_status": "Pending",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1010-e-26th-street"
+  },
+  {
+   "member": "pmt_1320-alexander-st-a-77008",
+   "address": "1320 Alexander Street Unit#A",
+   "mls": "87122365",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_1320-alexander-street-unit-a"
+  },
+  {
+   "member": "pmt_217-teetshorn-st-77009",
+   "address": "217 TEETSHORN Street",
+   "mls": "41611827",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_217-teetshorn-street"
+  },
+  {
+   "member": "pmt_305-w-17th-st-77008",
+   "address": "305 W 17th Street",
+   "mls": "28513470",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_305-w-17th-street"
+  },
+  {
+   "member": "pmt_607-w-27th-st-77008",
+   "address": "607 W 27th Street",
+   "mls": "39509151",
+   "status": "active",
+   "har_status": "Active",
+   "method": "staged_merge_candidate",
+   "staged_id": "act_607-w-27th-street"
+  }
+ ],
+ "archived_duplicates": [
+  {
+   "record": {
+    "id": "pmt_2436-white-oak-dr-77009",
+    "a": "2436 White Oak Dr, Houston, TX 77009",
+    "llc": "HOUSTON NSH LLC",
+    "kind": "permit",
+    "lat": 29.7813569,
+    "lng": -95.3830733,
+    "permits": [
+     {
+      "owner": "HOUSTON NSH LLC",
+      "desc": "S.F. RES W/ATT. GARAGE (1-3-5-R3-B) 21 IRC/21 IECC",
+      "val": "839430",
+      "ptype": "13",
+      "proj": "25077930",
+      "permitDesc": "Building Pmt"
+     }
+    ],
+    "prod": "Single Lot",
+    "ty": "active_single",
+    "product_classification": {
+     "product": "Single Lot",
+     "confidence": "client",
+     "source": "client",
+     "reason_code": "CLIENT_DETERMINATION",
+     "date": "2026-09-10",
+     "authoritative": true,
+     "reason": "Client review: 2436 White Oak Dr is Single Lot. Geometry and lot-area rules do not override this determination."
+    }
+   },
+   "canonical": "act_2436-white-oak",
+   "reason": "Same property and permit 25077930 as act_2436-white-oak (HAR listing pin, holds the off-market state); permit pin was a second marker for one home"
+  }
+ ]
 }
