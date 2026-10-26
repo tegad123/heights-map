@@ -28,7 +28,9 @@ Transform (matched field-for-field against riveroaks.html):
 
 Row filter: keep only in-zone records. riveroaks flags this with
 `in_river_oaks`; generally, any record whose `in_<zone>` boolean is False
-is dropped. Record order is preserved.
+is dropped. Records the market's changelog archived as duplicates of another
+pin (changes/<market>/ archived_duplicates) are dropped too. Record order is
+preserved.
 
 Teardown threshold: riveroaks has teardown up to YB1988 and plain from
 YB1990 (no 1989 in the data), so the exact cutoff is undetermined by
@@ -44,7 +46,9 @@ USAGE
 """
 
 import argparse
+import glob
 import json
+import os
 import sys
 
 TEARDOWN_BEFORE = 1990  # year_built < this -> "Likely teardown-to-spec" note
@@ -123,8 +127,21 @@ def seed_entry(rec):
     return record_id(rec), {"notes": notes, "tags": ["deed"]}
 
 
+def archived_ids(path):
+    """acq ids the market's changelog retired as duplicate identities
+    (archived_duplicates) — they must not be regenerated as pins."""
+    market = os.path.basename(path).rsplit("_acquisitions.json", 1)[0]
+    cdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "changes", market)
+    ids = set()
+    for f in glob.glob(os.path.join(cdir, "changes_*.json")):
+        with open(f, encoding="utf-8") as fh:
+            ids |= {e["record"]["id"] for e in json.load(fh).get("archived_duplicates", [])}
+    return ids
+
+
 def generate(path):
-    recs = [r for r in json.load(open(path)) if in_zone(r)]
+    retired = archived_ids(path)
+    recs = [r for r in json.load(open(path)) if in_zone(r) and record_id(r) not in retired]
     rows = [_dumps(data_row(r)) for r in recs]
     seeds = []
     for r in recs:

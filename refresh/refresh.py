@@ -48,6 +48,19 @@ unplaced rows are ledgered in unplaced.csv. A market with no active rows is
 held. Feed each slice set to `har`; its split_manifest.json lets a header-only
 pending/sold/terminated slice through and replaces the cross-market hash guard.
 
+  python3 refresh/refresh.py link-staged --market montrose --date 2026-10-26 \
+      --file staging/montrose/proposed_2026-10-26.json --approve act_a act_b [--apply]
+  python3 refresh/refresh.py archive-duplicates --market montrose --date 2026-10-26 \
+      --archive acq_x pmt_x [--archive DUP [market:]CANONICAL ...] --reason TEXT [--apply]
+
+link-staged records approved staged rows whose mergeCandidate is an existing
+never-listed pin as listing events on that pin in the same-date changelog
+(active -> relisted, pending -> 'under contract'); nothing is appended.
+archive-duplicates retires a DATA record that repeats another pin's property
+(precedent: changes_2026-09-28 archived_duplicates); the record moves into the
+changelog. Both re-fold, splice RECONCILE, regenerate the CSV and validate;
+dry run unless --apply.
+
 HUMAN-INVOKED ONLY — never run from cron (CLAUDE.md hard rule).
 """
 import argparse, csv, hashlib, io, json, os, re, subprocess, sys
@@ -1037,6 +1050,48 @@ def cmd_har_split(args):
     return report
 
 
+# Street-type words are optional in listing addresses ("1202 W Drew" is
+# "1202 W Drew St"); house numbers, directionals and unit letters stay significant.
+STREET_TYPES = frozenset({'st', 'ave', 'ln', 'dr', 'rd', 'ct', 'pl', 'blvd', 'way', 'cir',
+                          'pkwy', 'trl', 'ter', 'hwy', 'speedway'})
+LOOSE_LINK_METERS = 150
+
+
+def type_free_key(addr):
+    from market_address import address_key
+    return ' '.join(w for w in address_key(addr).split() if w not in STREET_TYPES)
+
+
+def is_deed_pin(d):
+    return d.get('prod') == 'Deed Transfer' or str(d.get('id', '')).startswith('acq_')
+
+
+def har_link(matcher, data, rec):
+    """Matcher.match plus two identity fallbacks for one HAR row. A corporate-deed
+    pin (acq_) sharing the address of a permit/listing pin is the same parcel, so
+    the non-deed pin takes the row instead of the whole address going ambiguous.
+    With no exact address hit, an address equal once street types are dropped
+    links when exactly one such pin sits within LOOSE_LINK_METERS."""
+    from market_linkage import distance
+    m = matcher.match(rec)
+    target = type_free_key(rec['address'])
+    if m['issue'] == 'AMBIGUOUS_IDENTITY':
+        cands = [data[i] for i in m['candidates'] if i in data]
+        live = [d for d in cands if not is_deed_pin(d)]
+        if (len(cands) == len(m['candidates']) and len(live) == 1
+                and all(type_free_key(d['a']) == target for d in cands)):
+            return dict(method='address_deed_twin', member=live[0]['id'], pin=live[0]['id'],
+                        issue=None, candidates=m['candidates'])
+    elif m['issue'] in ('NOT_TRACKED', 'AMBIGUOUS_COORDINATE', 'COORDINATE_IDENTITY_CONFLICT'):
+        near = [d for d in data.values() if type_free_key(d['a']) == target and d.get('lat')
+                and d.get('lng') and distance(rec, d) <= LOOSE_LINK_METERS]
+        live = [d for d in near if not is_deed_pin(d)] or near
+        if len(live) == 1:
+            return dict(method='address_loose', member=live[0]['id'], pin=live[0]['id'],
+                        issue=None, candidates=[d['id'] for d in near])
+    return m
+
+
 def har_state(src, folded):
     """Displayed listing state per DATA id: (bucket, disposition, t), bucket in
     listed/pending/off. Bucketed ids follow the fold; the rest follow their seed
@@ -1299,7 +1354,7 @@ def cmd_har(args, html_path):
     matcher = Matcher(list(data.values()), {'raw': list(data.values())})
     groups, unlinked, reviews, linkinfo = {}, [], {}, {}
     for r in inzone:
-        m = matcher.match(r)
+        m = har_link(matcher, data, r)
         member, method = links.get(r['mls']), 'prior_mls'
         if member is None and not m['issue']:
             member, method = m['member'], m['method']
@@ -1538,6 +1593,260 @@ def cmd_har(args, html_path):
     return report
 
 
+# ---------- identity follow-ups to a har run: link-staged / archive-duplicates ----------
+
+def _as_json(value):
+    return json.dumps(value, ensure_ascii=False, indent=1) + '\n'
+
+
+def _data_elements(text):
+    """(id, start, end) of every DATA element, read in place."""
+    from deed_ingest import span
+    s, _, _ = span(text, 'DATA')
+    dec, out, i = json.JSONDecoder(), [], s + 1
+    while True:
+        while text[i] in ' \t\r\n,':
+            i += 1
+        if text[i] == ']':
+            return out
+        value, j = dec.raw_decode(text, i)
+        out.append((value['id'], i, j))
+        i = j
+
+
+def _remove_data_record(text, rid):
+    """Cut one DATA element with its leading separator; every other byte stays."""
+    els = _data_elements(text)
+    hits = [k for k, (i, _, _) in enumerate(els) if i == rid]
+    if len(hits) != 1:
+        raise SystemExit(f'FATAL: {rid} appears {len(hits)} times in DATA')
+    k = hits[0]
+    if k:
+        a, b = els[k - 1][2], els[k][2]
+    elif len(els) > 1:
+        a, b = els[0][1], els[1][1]
+    else:
+        a, b = els[0][1], els[0][2]
+    return text[:a] + text[b:]
+
+
+def _changelog_edit(args, html_path, label, edit):
+    """Fold a human-approved identity edit into the same-date changelog, splice
+    RECONCILE from the full fold, regenerate the off-market CSV and re-validate.
+    `edit(html, data, state, chg, earlier)` mutates chg and returns
+    (html, removed_data_ids, report_lines). Dry run unless --apply."""
+    from deed_ingest import span
+    run_date = date.fromisoformat(args.date).isoformat()
+    if args.apply and not args.skip_pull:
+        try:
+            subprocess.run(['git', '-C', ROOT, 'pull', '--ff-only', '-q'], check=True, stdout=sys.stderr)
+        except subprocess.CalledProcessError:
+            raise SystemExit('FATAL: git pull --ff-only failed — resolve divergence first')
+    html = Path(html_path).read_text()
+    if html.count(MARK_BEGIN) != 1 or html.count(MARK_END) != 1:
+        raise SystemExit('FATAL: RECONCILE markers missing or ambiguous')
+    index_path = Path(CHANGES_DIR, 'index.json')
+    index = json.loads(index_path.read_text()) if index_path.exists() else dict(files=[], updated=None)
+    if any(e['date'] > run_date for e in index['files']):
+        raise SystemExit('FATAL: a later changelog exists; refusing historical edit')
+    filename = f'changes_{run_date}.json'
+    event_path = Path(CHANGES_DIR, filename)
+    if event_path.exists() != any(e['file'] == filename for e in index['files']):
+        raise SystemExit(f'FATAL: {filename} and changes index disagree — rebuild the index first')
+    earlier = [json.loads(Path(CHANGES_DIR, e['file']).read_text())
+               for e in index['files'] if e['file'] != filename]
+    if event_path.exists():
+        raw = event_path.read_text()
+        if _as_json(json.loads(raw)) != raw:
+            raise SystemExit(f'FATAL: {filename} does not round-trip; refusing to reserialize it')
+        chg = json.loads(raw)
+        baseline = fold_events(earlier + [json.loads(raw)])
+    else:
+        chg = dict(date=run_date, kind=label, sources=[label],
+                   counts=dict(matched=0, dropped=0, new=0, relisted=0, excluded=0),
+                   matchedIds=[], dropped=[], relisted=[], new=[], excluded=[], dispositionUpdates={})
+        baseline = fold_events(earlier)
+    current = json.loads(re.search(r'const RECONCILE=(\{.*?\});', html, re.S).group(1))
+    if current != dict(off=baseline[0], relist=baseline[1], pending=baseline[2]):
+        raise SystemExit('FATAL: RECONCILE block differs from the changelog fold — run generate first')
+    data, state = har_state(html, baseline)
+    edited, removed, lines = edit(html, data, state, chg, earlier)
+
+    folded = fold_events(earlier + [chg])
+    off, rel, pend = folded[:3]
+    for a, b in (('off', 'relist'), ('off', 'pending'), ('relist', 'pending')):
+        overlap = set(dict(off=off, relist=rel, pending=pend)[a]) & set(dict(off=off, relist=rel, pending=pend)[b])
+        if overlap:
+            raise SystemExit(f'FATAL: {a}/{b} overlap after fold: {sorted(overlap)}')
+    if any(folded[3].get(i, ('',))[0] == 'under contract' for i in off):
+        raise SystemExit('FATAL: an under-contract id folded into off')
+    block = (MARK_BEGIN + '\nconst RECONCILE=' +
+             json.dumps(dict(off=off, relist=rel, pending=pend), ensure_ascii=False, separators=(',', ':')) +
+             ';\n' + MARK_END)
+    a, b = edited.index(MARK_BEGIN), edited.index(MARK_END) + len(MARK_END)
+    candidate = edited[:a] + block + edited[b:]
+    validate_spliced(candidate)
+    if _skeleton(html, ['DATA']) != _skeleton(candidate, ['DATA']):
+        raise SystemExit('FATAL: bytes outside DATA/RECONCILE changed')
+    kept = [(i, html[x:y]) for i, x, y in _data_elements(html) if i not in removed]
+    if kept != [(i, candidate[x:y]) for i, x, y in _data_elements(candidate)]:
+        raise SystemExit('FATAL: a DATA record other than the archived ones changed')
+    s1, e1, _ = span(html, 'DATA'); s2, e2, _ = span(candidate, 'DATA')
+    if not removed and html[s1:e1] != candidate[s2:e2]:
+        raise SystemExit('FATAL: DATA bytes changed')
+    rec_block = json.loads(re.search(r'const RECONCILE=(\{.*?\});', candidate, re.S).group(1))
+    if set(rec_block['pending']) & set(rec_block['off']):
+        raise SystemExit('FATAL: a pending id landed in RECONCILE.off')
+
+    csv_path = Path(ROOT, CSV_NAME)
+    old_csv = csv_record_bytes(csv_path.read_text()) if csv_path.exists() else {}
+    csv_text = cmd_csv(html_path, folded=folded, write=False)
+    new_csv = csv_record_bytes(csv_text)
+    if CSV_NAME == 'heights_off_market.csv':
+        for rid, (row, raw) in old_csv.items():
+            if row['disposition'] == 'unconfirmed' and (rid not in new_csv or new_csv[rid][1] != raw):
+                raise SystemExit('FATAL: unconfirmed CSV row changed: ' + rid)
+    if set(pend) & set(new_csv):
+        raise SystemExit('FATAL: pending record present in off-market CSV')
+
+    entries = [e for e in index['files'] if e['file'] != filename]
+    entries.append(dict(file=filename, date=run_date, counts=chg['counts']))
+    entries.sort(key=lambda e: (e['date'], e['file']))
+    outputs = {event_path: _as_json(chg), index_path: _as_json(dict(files=entries, updated=entries[-1]['date'])),
+               Path(html_path): candidate, csv_path: csv_text}
+    changed = [str(p.relative_to(ROOT)) for p, text in outputs.items()
+               if not p.exists() or p.read_bytes() != text.encode()]
+    out_dir = Path(ROOT, 'pulls', f'{label}_{args.market}_{run_date}')
+    if args.apply:
+        for p, text in outputs.items():
+            if str(p.relative_to(ROOT)) in changed:
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_bytes(text.encode())
+    else:
+        for p, text in outputs.items():
+            dest = out_dir / 'candidate' / p.relative_to(ROOT)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(text.encode())
+    report = dict(market=args.market, date=run_date, applied=bool(args.apply), actions=lines,
+                  removed_data_ids=sorted(removed),
+                  reconcile=dict(off=len(off), relist=len(rel), pending=len(pend)),
+                  csv_rows=len(new_csv), changed_files=changed,
+                  scratch_dir=None if args.apply else str(out_dir))
+    print(json.dumps(report, indent=2))
+    return report
+
+
+def cmd_link_staged(args, html_path):
+    """Record approved staged mergeCandidate rows as listing events on their
+    existing never-listed pin (active -> relisted, pending -> dropped 'under
+    contract', so it folds into RECONCILE.pending). Nothing is appended."""
+    from market_linkage import distance
+    staged = {}
+    for s in json.loads(Path(args.file).read_text()):
+        if s['id'] in staged:
+            raise SystemExit(f"FATAL: staged id {s['id']} repeats in {args.file}")
+        staged[s['id']] = s
+
+    def edit(html, data, state, chg, earlier):
+        single, ambiguous, _, _ = _prior_observations(earlier + [chg], None)
+        lines, used = [], {}
+        for sid in args.approve:
+            s = staged.get(sid)
+            if s is None:
+                raise SystemExit(f'REFUSED: {sid} not in {args.file}')
+            pin = s.get('mergeCandidate')
+            if not pin:
+                raise SystemExit(f'REFUSED: {sid} has no mergeCandidate — it is new; use apply_staged.py')
+            d = data.get(pin)
+            if d is None:
+                raise SystemExit(f'REFUSED: {sid} mergeCandidate {pin} is not in DATA')
+            if state.get(pin):
+                raise SystemExit(f'REFUSED: {pin} already carries listing state {state[pin][0]!r}; har owns it')
+            if type_free_key(s['a']) != type_free_key(d['a']):
+                raise SystemExit(f"REFUSED: {sid} ({s['a']}) is not the address of {pin} ({d['a']})")
+            if distance(s['data'], d) > LOOSE_LINK_METERS:
+                raise SystemExit(f'REFUSED: {sid} sits {distance(s["data"], d):.0f} m from {pin}')
+            if pin in used:
+                raise SystemExit(f'REFUSED: {pin} is already linked to {used[pin]} in this run')
+            mls = s['mls']
+            if mls in ambiguous or single.get(mls, pin) != pin:
+                raise SystemExit(f'REFUSED: MLS {mls} already continues {ambiguous.get(mls) or single[mls]}')
+            used[pin] = sid
+            prod = s['data'].get('prod')
+            ty = (('split' if prod == 'Split Lot' else 'single') if prod else
+                  'split' if d.get('ty') == 'active_split' or d.get('prod') == 'Split Lot' else 'single')
+            status = 'pending' if 'pending' in s['seed']['tags'] else 'active'
+            if status == 'pending':
+                chg.setdefault('dropped', []).append(dict(id=pin, a=d['a'], ty=ty, disposition='under contract',
+                                                          har_status=s['har_status'], mls=mls, close_date=None))
+                chg['counts']['dropped'] += 1
+            else:
+                chg.setdefault('relisted', []).append(dict(id=pin, a=d['a'], ty=ty, mls=mls))
+                chg['counts']['relisted'] += 1
+            chg.setdefault('identity_resolutions', []).append(dict(
+                member=pin, address=s['a'], mls=mls, status=status, har_status=s['har_status'],
+                method='staged_merge_candidate', staged_id=sid))
+            news = [n for n in chg.get('new', []) if n.get('mls') == mls and n.get('mergeCandidate') == pin]
+            if len(news) > 1:
+                raise SystemExit(f'FATAL: MLS {mls} has {len(news)} new entries in the changelog')
+            for n in news:
+                n.update(staged=False, id=pin, applied=True, linked=True)
+            lines.append(f"{sid} -> {pin} {'pending' if status == 'pending' else 'relist ' + ty} "
+                         f"(MLS {mls} {s['har_status']}; {d['a']})")
+        return html, set(), lines
+
+    return _changelog_edit(args, html_path, 'link_staged', edit)
+
+
+def cmd_archive_duplicates(args, html_path):
+    """Retire DATA records that duplicate another pin's property identity (same
+    address once street types drop, within LOOSE_LINK_METERS). The full record
+    is kept in the changelog's archived_duplicates; every other DATA byte, the
+    seed and LIFE stay as they are. CANONICAL may be <market>:<id> for a
+    property that one market's zone guard owns."""
+    from market_linkage import distance
+
+    def edit(html, data, state, chg, earlier):
+        archived = {e['record']['id'] for c in earlier + [chg] for e in c.get('archived_duplicates', [])}
+        text, removed, lines = html, set(), []
+        for dup, canonical in args.archive:
+            if dup in archived or dup in removed:
+                raise SystemExit(f'REFUSED: {dup} is already archived')
+            d = data.get(dup)
+            if d is None:
+                raise SystemExit(f'REFUSED: {dup} is not in DATA')
+            market, _, cid = canonical.rpartition(':')
+            if market in ('', args.market):
+                market, canonical, cdata, cstate = '', cid, data, state
+            else:
+                if market not in MARKETS:
+                    raise SystemExit(f'REFUSED: unknown market in canonical {canonical}')
+                other = load_html(os.path.join(ROOT, MARKETS[market]['html']))
+                orec = json.loads(re.search(r'const RECONCILE=(\{.*?\});', other, re.S).group(1))
+                cdata, cstate = har_state(other, (orec['off'], orec['relist'], orec['pending'], {}, {}))
+            c = cdata.get(cid)
+            if c is None:
+                raise SystemExit(f'REFUSED: canonical {canonical} is not in DATA')
+            if canonical == dup or cid in removed:
+                raise SystemExit(f'REFUSED: {dup} cannot be archived onto {canonical}')
+            if type_free_key(c['a']) != type_free_key(d['a']):
+                raise SystemExit(f"REFUSED: {dup} ({d['a']}) and {canonical} ({c['a']}) are different addresses")
+            if not all(r.get(k) for r in (c, d) for k in ('lat', 'lng')):
+                raise SystemExit(f'REFUSED: {dup} or {canonical} has no coordinates')
+            if distance(c, d) > LOOSE_LINK_METERS:
+                raise SystemExit(f'REFUSED: {dup} sits {distance(c, d):.0f} m from {canonical}')
+            if state.get(dup) and not cstate.get(cid):
+                raise SystemExit(f'REFUSED: {dup} carries listing state {state[dup][0]!r} that '
+                                 f'{canonical} does not hold; move the state first')
+            text = _remove_data_record(text, dup)
+            removed.add(dup)
+            chg.setdefault('archived_duplicates', []).append(dict(record=d, canonical=canonical, reason=args.reason))
+            lines.append(f"{dup} ({d['a']}) -> {canonical} ({c['a']}, {distance(c, d):.0f} m)")
+        return text, removed, lines
+
+    return _changelog_edit(args, html_path, 'archive', edit)
+
+
 def main():
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument('--market', default='heights', choices=sorted(MARKETS),
@@ -1582,6 +1891,21 @@ def main():
                        'shared edits store; --apply folds dispositions into changes/')
     p.add_argument('--apply', action='store_true',
                    help='fold proposed disposition updates into changes/ (default: dry run)')
+    ls = sub.add_parser('link-staged', parents=[common],
+                        help='record approved staged mergeCandidate rows as relist/pending on their pin')
+    ls.add_argument('--date', required=True, help='changelog date the listing events belong to')
+    ls.add_argument('--file', required=True, help='staging proposed_<date>.json')
+    ls.add_argument('--approve', nargs='+', required=True, help='staged ids to link')
+    ls.add_argument('--apply', action='store_true')
+    ls.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
+    ar = sub.add_parser('archive-duplicates', parents=[common],
+                        help='retire DATA records that duplicate another pin (kept in the changelog)')
+    ar.add_argument('--date', required=True, help='changelog date to record the archive in')
+    ar.add_argument('--archive', nargs=2, action='append', required=True, metavar=('DUPLICATE', 'CANONICAL'),
+                    help='DATA id to retire and the id ([market:]id) that keeps the property')
+    ar.add_argument('--reason', required=True)
+    ar.add_argument('--apply', action='store_true')
+    ar.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
     args = ap.parse_args()
     set_market(args.market)
     html = args.html or DEFAULT_HTML
@@ -1606,6 +1930,12 @@ def main():
         return
     if args.cmd == 'pull-edits':
         cmd_pull_edits(html, apply_=args.apply)
+        return
+    if args.cmd == 'link-staged':
+        cmd_link_staged(args, html)
+        return
+    if args.cmd == 'archive-duplicates':
+        cmd_archive_duplicates(args, html)
         return
 
     if args.cmd == 'diff':
