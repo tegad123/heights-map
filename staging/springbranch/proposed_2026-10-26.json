@@ -1,0 +1,1334 @@
+[
+ {
+  "id": "act_1513-story-street",
+  "a": "1513 Story Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1513-story",
+  "mls": "83298064",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1513-story-street",
+   "a": "1513 Story Street",
+   "llc": "Geis Development",
+   "v": "$1,669,900",
+   "sd": "2026-09-05",
+   "lot": "4186",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Westview Terrace",
+   "u": "",
+   "lat": 29.797205,
+   "lng": -95.462791,
+   "c": [
+    {
+     "n": "Oliver Carter",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Geis Development. Agent: Oliver Carter. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1621-bayram-drive",
+  "a": "1621 Bayram Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1621-bayram",
+  "mls": "37493946",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1621-bayram-drive",
+   "a": "1621 Bayram Drive",
+   "llc": "Cunningham",
+   "v": "$2,249,500",
+   "sd": "2026-09-11",
+   "lot": "5231",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Spring Oaks R/P",
+   "u": "",
+   "lat": 29.79923,
+   "lng": -95.498355,
+   "c": [
+    {
+     "n": "Kyle Cunningham",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Cunningham. Agent: Kyle Cunningham. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1930-chaparral-drive",
+  "a": "1930 Chaparral Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1930-chaparral",
+  "mls": "45392054",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1930-chaparral-drive",
+   "a": "1930 Chaparral Drive",
+   "llc": "Quintessa Homes",
+   "v": "$1,249,000",
+   "sd": "2026-08-19",
+   "lot": "4299",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Timber Oaks Sec 02",
+   "u": "",
+   "lat": 29.80738,
+   "lng": -95.557481,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1949-coulcrest-drive",
+  "a": "1949 Coulcrest Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1949-coulcrest",
+  "mls": "98330945",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1949-coulcrest-drive",
+   "a": "1949 Coulcrest Drive",
+   "llc": "Quintessa Homes",
+   "v": "$1,195,000",
+   "sd": "2026-09-11",
+   "lot": "3994",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest Sec 02",
+   "u": "",
+   "lat": 29.80736,
+   "lng": -95.499059,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2109-mckean-drive",
+  "a": "2109 McKean Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_2109-mckean",
+  "mls": "28664995",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2109-mckean-drive",
+   "a": "2109 McKean Drive",
+   "llc": "Nima Homes",
+   "v": "$949,000",
+   "sd": "2026-10-21",
+   "lot": "3922",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Hammerly Estates",
+   "u": "",
+   "lat": 29.811342,
+   "lng": -95.514079,
+   "c": [
+    {
+     "n": "Christopher Phan",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Nima Homes. Agent: Christopher Phan. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_6618-sivley-street",
+  "a": "6618 Sivley Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_6618-sivley",
+  "mls": "19701591",
+  "har_status": "Active",
+  "data": {
+   "id": "act_6618-sivley-street",
+   "a": "6618 Sivley Street",
+   "llc": "Geis Development",
+   "v": "$1,769,900",
+   "sd": "2026-10-20",
+   "lot": "4781",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Westview Terrace",
+   "u": "",
+   "lat": 29.797156,
+   "lng": -95.467295,
+   "c": [
+    {
+     "n": "Oliver Carter",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Geis Development. Agent: Oliver Carter. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_8005-ridgeview-drive",
+  "a": "8005 Ridgeview Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_8005-ridgeview",
+  "mls": "53028724",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8005-ridgeview-drive",
+   "a": "8005 Ridgeview Drive",
+   "llc": "Nouva Homes",
+   "v": "$1,099,000",
+   "sd": "2026-09-26",
+   "lot": "3361",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest",
+   "u": "",
+   "lat": 29.809659,
+   "lng": -95.489775,
+   "c": [
+    {
+     "n": "Kariliz Perez",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Nouva Homes. Agent: Kariliz Perez. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_9214-westview-drive",
+  "a": "9214 Westview Drive",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_9214-westview",
+  "mls": "32773710",
+  "har_status": "Pend Cont to Show",
+  "data": {
+   "id": "act_9214-westview-drive",
+   "a": "9214 Westview Drive",
+   "llc": "Cea-Loveless Design Build",
+   "v": "$3,700,000",
+   "sd": "2026-09-30",
+   "lot": "5610",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Campbell Place",
+   "u": "",
+   "lat": 29.794338,
+   "lng": -95.517939,
+   "c": [
+    {
+     "n": "Holly Hernandez",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Cea-Loveless Design Build. Agent: Holly Hernandez. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_9603-bundy-lane",
+  "a": "9603 Bundy Lane",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_9603-bundy",
+  "mls": "39864917",
+  "har_status": "Active",
+  "data": {
+   "id": "act_9603-bundy-lane",
+   "a": "9603 Bundy Lane",
+   "llc": "Quintessa Homes of Texas",
+   "v": "$1,050,000",
+   "sd": "2026-08-19",
+   "lot": "4001",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Campbell Woods Sec 02 R/P",
+   "u": "",
+   "lat": 29.812901,
+   "lng": -95.529225,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes of Texas. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_9621-larston-street",
+  "a": "9621 Larston Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_9621-larston",
+  "mls": "10262794",
+  "har_status": "Active",
+  "data": {
+   "id": "act_9621-larston-street",
+   "a": "9621 Larston Street",
+   "llc": "City Cottage",
+   "v": "$1,699,999",
+   "sd": "2026-10-21",
+   "lot": "3585",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Long Point Woods Sec 02",
+   "u": "",
+   "lat": 29.79088,
+   "lng": -95.527058,
+   "c": [
+    {
+     "n": "Patrick Rollins",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: City Cottage. Agent: Patrick Rollins. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_9419-montridge-drive-unit-b",
+  "a": "9419 Montridge Drive Unit#B",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "47803523",
+  "har_status": "Active",
+  "data": {
+   "id": "act_9419-montridge-drive-unit-b",
+   "a": "9419 Montridge Drive Unit#B",
+   "llc": "AISLA HOMES",
+   "v": "$437,900",
+   "sd": "2026-10-15",
+   "lot": "2032",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, AISLA HOMES MONTRIDGE",
+   "u": "",
+   "lat": 29.807883,
+   "lng": -95.521607,
+   "c": [
+    {
+     "n": "Brenda Zambrano",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: AISLA HOMES. Agent: Brenda Zambrano. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_8917-grovner-place",
+  "a": "8917 Grovner Place",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "21849003",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8917-grovner-place",
+   "a": "8917 Grovner Place",
+   "llc": "COLINA HOMES",
+   "v": "$459,990",
+   "sd": "2026-08-13",
+   "lot": "2185",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Regents Court",
+   "u": "",
+   "lat": 29.802268,
+   "lng": -95.510513,
+   "c": [
+    {
+     "n": "Cameron Galatas",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: COLINA HOMES. Agent: Cameron Galatas. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_8925-grovner-place",
+  "a": "8925 Grovner Place",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "63409666",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8925-grovner-place",
+   "a": "8925 Grovner Place",
+   "llc": "COLINA HOMES",
+   "v": "$469,990",
+   "sd": "2026-10-10",
+   "lot": "2185",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Regents Court",
+   "u": "",
+   "lat": 29.801997,
+   "lng": -95.510688,
+   "c": [
+    {
+     "n": "Cameron Galatas",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: COLINA HOMES. Agent: Cameron Galatas. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_8933-grovner-place",
+  "a": "8933 Grovner Place",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "72674162",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8933-grovner-place",
+   "a": "8933 Grovner Place",
+   "llc": "COLINA HOMES",
+   "v": "$479,990",
+   "sd": "2026-10-10",
+   "lot": "2185",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Regents Court",
+   "u": "",
+   "lat": 29.801718,
+   "lng": -95.510873,
+   "c": [
+    {
+     "n": "Cameron Galatas",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: COLINA HOMES. Agent: Cameron Galatas. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_8803-hollywood-garden-lane",
+  "a": "8803 Hollywood Garden Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "32563735",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8803-hollywood-garden-lane",
+   "a": "8803 Hollywood Garden Lane",
+   "llc": "Vie de Luxe Homes",
+   "v": "$509,900",
+   "sd": "2026-02-21",
+   "lot": "2467",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Hollister Springs",
+   "u": "",
+   "lat": 29.806655,
+   "lng": -95.505318,
+   "c": [
+    {
+     "n": "Beto Tentori",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Vie de Luxe Homes. Agent: Beto Tentori. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1859-lynnview-drive",
+  "a": "1859 Lynnview Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "17746726",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1859-lynnview-drive",
+   "a": "1859 Lynnview Drive",
+   "llc": "City Cottage",
+   "v": "$1,049,000",
+   "sd": "2026-07-24",
+   "lot": "3094",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Glenview Sec 01",
+   "u": "",
+   "lat": 29.805766,
+   "lng": -95.492283,
+   "c": [
+    {
+     "n": "Patrick Rollins",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: City Cottage. Agent: Patrick Rollins. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1946-pech-road",
+  "a": "1946 Pech Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "10003295",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1946-pech-road",
+   "a": "1946 Pech Road",
+   "llc": "Mazz Construction",
+   "v": "$1,124,900",
+   "sd": "2026-10-17",
+   "lot": "3814",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest Sec 01",
+   "u": "",
+   "lat": 29.807253,
+   "lng": -95.49565,
+   "c": [
+    {
+     "n": "Suzanne Massiatte",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazz Construction. Agent: Suzanne Massiatte. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_7543-ciano-lane",
+  "a": "7543 Ciano Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "21344725",
+  "har_status": "Active",
+  "data": {
+   "id": "act_7543-ciano-lane",
+   "a": "7543 Ciano Lane",
+   "llc": "Ravenna Building Group LLC",
+   "v": "$1,165,000",
+   "sd": "2026-09-13",
+   "lot": "3161",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Ravenna Sub",
+   "u": "",
+   "lat": 29.787745,
+   "lng": -95.464015,
+   "c": [
+    {
+     "n": "Shayna Andrews",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Ravenna Building Group LLC. Agent: Shayna Andrews. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_8046-turquoise-lane",
+  "a": "8046 Turquoise Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "76954750",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8046-turquoise-lane",
+   "a": "8046 Turquoise Lane",
+   "llc": "Quintessa Homes",
+   "v": "$1,195,000",
+   "sd": "2026-09-11",
+   "lot": "3889",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Springdale",
+   "u": "",
+   "lat": 29.811671,
+   "lng": -95.491964,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1909-restridge-drive",
+  "a": "1909 Restridge Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "9967730",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1909-restridge-drive",
+   "a": "1909 Restridge Drive",
+   "llc": "Quintessa Homes",
+   "v": "$1,195,000",
+   "sd": "2026-09-11",
+   "lot": "3874",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest Sec 01",
+   "u": "",
+   "lat": 29.805606,
+   "lng": -95.494199,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2309-hollister-road",
+  "a": "2309 Hollister Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "8748619",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2309-hollister-road",
+   "a": "2309 Hollister Road",
+   "llc": "Metro Living",
+   "v": "$1,247,000",
+   "sd": "2026-09-18",
+   "lot": "4041",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Spring Branch Estates",
+   "u": "",
+   "lat": 29.815609,
+   "lng": -95.509877,
+   "c": [
+    {
+     "n": "Andrea Pardo",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Metro Living. Agent: Andrea Pardo. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2311-hollister-road",
+  "a": "2311 Hollister Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "19591799",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2311-hollister-road",
+   "a": "2311 Hollister Road",
+   "llc": "Metro Living",
+   "v": "$1,247,000",
+   "sd": "2026-09-18",
+   "lot": "4041",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Spring Branch Estates",
+   "u": "",
+   "lat": 29.815651,
+   "lng": -95.509848,
+   "c": [
+    {
+     "n": "Sheryle Campbell",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Metro Living. Agent: Sheryle Campbell. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2019-shadow-bend",
+  "a": "2019 Shadow Bend",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "26749264",
+  "har_status": "Active",
+  "data": {
+   "id": "act_2019-shadow-bend",
+   "a": "2019 Shadow Bend",
+   "llc": "Quintessa Homes",
+   "v": "$1,249,000",
+   "sd": "2026-07-23",
+   "lot": "4146",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Timber Oaks Sec 01",
+   "u": "",
+   "lat": 29.808574,
+   "lng": -95.557024,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1918-westcrest-drive",
+  "a": "1918 Westcrest Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "42099072",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1918-westcrest-drive",
+   "a": "1918 Westcrest Drive",
+   "llc": "Partners in Building",
+   "v": "$1,275,000",
+   "sd": "2026-10-17",
+   "lot": "4097",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest",
+   "u": "",
+   "lat": 29.806066,
+   "lng": -95.499506,
+   "c": [
+    {
+     "n": "Jimmy Franklin",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Partners in Building. Agent: Jimmy Franklin. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_8555-forum-drive",
+  "a": "8555 Forum Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "10820280",
+  "har_status": "Active",
+  "data": {
+   "id": "act_8555-forum-drive",
+   "a": "8555 Forum Drive",
+   "llc": "Cloudrider Group",
+   "v": "$1,295,000",
+   "sd": "2026-09-30",
+   "lot": "3608",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Ridgecrest Sec 03",
+   "u": "",
+   "lat": 29.801892,
+   "lng": -95.499923,
+   "c": [
+    {
+     "n": "Emily Brown",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Cloudrider Group. Agent: Emily Brown. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_7106-raton-street",
+  "a": "7106 Raton Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "90146149",
+  "har_status": "Active",
+  "data": {
+   "id": "act_7106-raton-street",
+   "a": "7106 Raton Street",
+   "llc": "Quintessa Homes",
+   "v": "$1,495,000",
+   "sd": "2026-07-23",
+   "lot": "4175",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Pine Terrace",
+   "u": "",
+   "lat": 29.801426,
+   "lng": -95.472416,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_7119-housman-street",
+  "a": "7119 Housman Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "96218735",
+  "har_status": "Active",
+  "data": {
+   "id": "act_7119-housman-street",
+   "a": "7119 Housman Street",
+   "llc": "7119 Housman, LLC",
+   "v": "$1,675,000",
+   "sd": "2026-07-24",
+   "lot": "4888",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Pine Terrace Sec 02",
+   "u": "",
+   "lat": 29.799366,
+   "lng": -95.473032,
+   "c": [
+    {
+     "n": "Blake Jessee",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: 7119 Housman, LLC. Agent: Blake Jessee. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_9306-livernois-road",
+  "a": "9306 Livernois Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "70579612",
+  "har_status": "Active",
+  "data": {
+   "id": "act_9306-livernois-road",
+   "a": "9306 Livernois Road",
+   "llc": "Andares",
+   "v": "$1,799,900",
+   "sd": "2026-09-24",
+   "lot": "4863",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Spring Branch Oaks",
+   "u": "",
+   "lat": 29.804161,
+   "lng": -95.517235,
+   "c": [
+    {
+     "n": "Abe Alqalam",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Andares. Agent: Abe Alqalam. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_9349-leto-road",
+  "a": "9349 Leto Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "97461854",
+  "har_status": "Active",
+  "data": {
+   "id": "act_9349-leto-road",
+   "a": "9349 Leto Road",
+   "llc": "Hidalgo Construction",
+   "v": "$1,799,995",
+   "sd": "2026-05-23",
+   "lot": "5353",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Spring Branch Oaks Sec 03",
+   "u": "",
+   "lat": 29.803625,
+   "lng": -95.521632,
+   "c": [
+    {
+     "n": "Naureen Samad",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Hidalgo Construction. Agent: Naureen Samad. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_7726-betty-jane-lane",
+  "a": "7726 Betty Jane Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "82535787",
+  "har_status": "Active",
+  "data": {
+   "id": "act_7726-betty-jane-lane",
+   "a": "7726 Betty Jane Lane",
+   "llc": "Kenneth Adam Designs",
+   "v": "$3,000,000",
+   "sd": "2026-09-25",
+   "lot": "6623",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Clay Woods",
+   "u": "",
+   "lat": 29.786637,
+   "lng": -95.483994,
+   "c": [
+    {
+     "n": "Kye Sampson",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Kenneth Adam Designs. Agent: Kye Sampson. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_2733-lake-kolbe-lane",
+  "a": "2733 Lake Kolbe Lane",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "74491178",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_2733-lake-kolbe-lane",
+   "a": "2733 Lake Kolbe Lane",
+   "llc": "InTown Homes",
+   "v": "$825,000",
+   "sd": "2026-10-26",
+   "lot": "2805",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Kolbe Farms",
+   "u": "",
+   "lat": 29.82003,
+   "lng": -95.507337,
+   "c": [
+    {
+     "n": "Emily Wang",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: InTown Homes. Agent: Emily Wang. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_8550-montridge-drive",
+  "a": "8550 Montridge Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "48092893",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_8550-montridge-drive",
+   "a": "8550 Montridge Drive",
+   "llc": "Quintessa Homes",
+   "v": "$1,225,000",
+   "sd": "2026-07-30",
+   "lot": "3874",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest Add Sec 02",
+   "u": "",
+   "lat": 29.808391,
+   "lng": -95.499391,
+   "c": [
+    {
+     "n": "Mel Reyna",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Quintessa Homes. Agent: Mel Reyna. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_8553-forum-drive",
+  "a": "8553 Forum Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "40133826",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_8553-forum-drive",
+   "a": "8553 Forum Drive",
+   "llc": "Cloudrider Group",
+   "v": "$1,297,000",
+   "sd": "2026-10-11",
+   "lot": "3626",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Ridgecrest Sec 03",
+   "u": "",
+   "lat": 29.801891,
+   "lng": -95.499834,
+   "c": [
+    {
+     "n": "Emily Brown",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Cloudrider Group. Agent: Emily Brown. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1606-afton-street",
+  "a": "1606 Afton Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "75918080",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1606-afton-street",
+   "a": "1606 Afton Street",
+   "llc": "JBD Holdings LLC",
+   "v": "$1,649,000",
+   "sd": "2026-10-13",
+   "lot": "4050",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Pine Terrace Sec 2",
+   "u": "",
+   "lat": 29.799903,
+   "lng": -95.471815,
+   "c": [
+    {
+     "n": "Brian McCulley",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: JBD Holdings LLC. Agent: Brian McCulley. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1618-ronson-road",
+  "a": "1618 Ronson Road",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "89202336",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1618-ronson-road",
+   "a": "1618 Ronson Road",
+   "llc": "Northstone Builders",
+   "v": "$2,200,000",
+   "sd": "2026-10-22",
+   "lot": "5188",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Spring Oaks R/P",
+   "u": "",
+   "lat": 29.799,
+   "lng": -95.498866,
+   "c": [
+    {
+     "n": "Richard Stone",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Northstone Builders. Agent: Richard Stone. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_7719-bryonwood-drive",
+  "a": "7719 Bryonwood Drive",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "mls": "56244689",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_7719-bryonwood-drive",
+   "a": "7719 Bryonwood Drive",
+   "llc": "Hausse Homes",
+   "v": "$3,250,000",
+   "sd": "2026-10-25",
+   "lot": "6203",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Brykerwood Estate Sec 2",
+   "u": "",
+   "lat": 29.787033,
+   "lng": -95.483043,
+   "c": [
+    {
+     "n": "Brookes Cunningham",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Pending inventory — Single Lot. Builder: Hausse Homes. Agent: Brookes Cunningham. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ }
+]
