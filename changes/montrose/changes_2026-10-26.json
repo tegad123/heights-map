@@ -1215,6 +1215,512 @@
    },
    "canonical": "westu:act_2122-north-boulevard",
    "reason": "Same parcel as the westu HAR listing pin (1-2 m apart): the Boulevard Oaks listing is on the westu map, whose zone guard accepts it; the montrose corporate-deed pin was a second marker for the same property"
+  },
+  {
+   "record": {
+    "id": "acq_1907-bellmeade-st",
+    "a": "1907 Bellmeade St",
+    "llc": "America Intownhomes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-02, 11,250 sqft lot YB1951",
+    "c": "",
+    "lat": 29.748797,
+    "lng": -95.422579
+   },
+   "canonical": "riveroaks:acq_1907-bellmeade-st",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_2204-inwood-dr",
+    "a": "2204 Inwood Dr",
+    "llc": "Spring Alliance Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-18, 11,250 sqft lot YB1939",
+    "c": "",
+    "lat": 29.753064,
+    "lng": -95.41329
+   },
+   "canonical": "riveroaks:acq_2204-inwood-dr",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_2411-stanmore-dr",
+    "a": "2411 Stanmore Dr",
+    "llc": "Gill Family Investments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-03-23, 11,145 sqft lot YB1941",
+    "c": "",
+    "lat": 29.749278,
+    "lng": -95.415415
+   },
+   "canonical": "riveroaks:acq_2411-stanmore-dr",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_2440-inwood-dr",
+    "a": "2440 Inwood Dr",
+    "llc": "Apitx 104 Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-11, 11,460 sqft lot YB1938",
+    "c": "",
+    "lat": 29.752771,
+    "lng": -95.416631
+   },
+   "canonical": "riveroaks:acq_2440-inwood-dr",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_2509-dickey-pl",
+    "a": "2509 Dickey Pl",
+    "llc": "Touchstone Resources Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-08-20, 6,745 sqft lot YB1952",
+    "c": "",
+    "lat": 29.74342,
+    "lng": -95.415345
+   },
+   "canonical": "riveroaks:acq_2509-dickey-pl",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_2525-inwood-dr",
+    "a": "2525 Inwood Dr",
+    "llc": "Nguyen Nguyen Tri",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-26, 14,550 sqft lot YB2024",
+    "c": "",
+    "lat": 29.752002,
+    "lng": -95.417569
+   },
+   "canonical": "riveroaks:acq_2525-inwood-dr",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_3020-ella-lee-ln",
+    "a": "3020 Ella Lee Ln",
+    "llc": "3020 Ella Lee Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-23, 9,000 sqft lot YB2007",
+    "c": "",
+    "lat": 29.74549,
+    "lng": -95.421147
+   },
+   "canonical": "riveroaks:acq_3020-ella-lee-ln",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_3112-locke-ln",
+    "a": "3112 Locke Ln",
+    "llc": "Radwell Homes Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-30, 8,320 sqft lot YB1940",
+    "c": "",
+    "lat": 29.743311,
+    "lng": -95.422937
+   },
+   "canonical": "riveroaks:acq_3112-locke-ln",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_3665-knollwood-st",
+    "a": "3665 Knollwood St",
+    "llc": "Olympic Holdings-3665 Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-02-19, 35,690 sqft lot YB1984",
+    "c": "",
+    "lat": 29.753157,
+    "lng": -95.437194
+   },
+   "canonical": "riveroaks:acq_3665-knollwood-st",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_3747-chevy-chase-dr",
+    "a": "3747 Chevy Chase Dr",
+    "llc": "Roec Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-12-18, 12,416 sqft lot YB2010",
+    "c": "",
+    "lat": 29.748204,
+    "lng": -95.438426
+   },
+   "canonical": "riveroaks:acq_3747-chevy-chase-dr",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_3831-del-monte-dr",
+    "a": "3831 Del Monte Dr",
+    "llc": "Signature Collection Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-28, 12,780 sqft lot YB1947",
+    "c": "",
+    "lat": 29.749187,
+    "lng": -95.440631
+   },
+   "canonical": "riveroaks:acq_3831-del-monte-dr",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  },
+  {
+   "record": {
+    "id": "acq_3910-willowick-rd",
+    "a": "3910 Willowick Rd",
+    "llc": "Jw Willowick Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-12-04, 63,624 sqft lot YB2002",
+    "c": "",
+    "lat": 29.750809,
+    "lng": -95.442036
+   },
+   "canonical": "riveroaks:acq_3910-willowick-rd",
+   "reason": "River Oaks deed pin inside riveroaks' boundary; the property lives on the River Oaks map under the same id"
+  }
+ ],
+ "archived_out_of_zone": [
+  {
+   "record": {
+    "id": "acq_1501-victor-st",
+    "a": "1501 Victor St",
+    "llc": "Fourth Ward Redevelopment Authority",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-28, 19,894 sqft lot YB1930",
+    "c": "",
+    "lat": 29.753774,
+    "lng": -95.382516
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_1511-andrews-st",
+    "a": "1511 Andrews St",
+    "llc": "Gullu Holdings Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-20, 4,793 sqft lot YB2012",
+    "c": "",
+    "lat": 29.755608,
+    "lng": -95.382824
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_35-tiel-way",
+    "a": "35 Tiel Way",
+    "llc": "Pomo Resources Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-09, 13,974 sqft lot YB1950",
+    "c": "",
+    "lat": 29.760853,
+    "lng": -95.411767
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_902-s-shepherd-dr",
+    "a": "902 S Shepherd Dr",
+    "llc": "902 South Shepherd Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-20, 5,520 sqft lot YB1948",
+    "c": "",
+    "lat": 29.758894,
+    "lng": -95.408892
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2021-south-blvd",
+    "a": "2021 South Blvd",
+    "llc": "15512 Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-03, 9,000 sqft lot YB1938",
+    "c": "",
+    "lat": 29.726285,
+    "lng": -95.407873
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2125-branard-st",
+    "a": "2125 Branard St",
+    "llc": "Bphb Assetco Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-02, 6,250 sqft lot YB1935",
+    "c": "",
+    "lat": 29.736594,
+    "lng": -95.411965
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2127-milford-st",
+    "a": "2127 Milford St",
+    "llc": "Skylight Capital Investments Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-11-26, 6,649 sqft lot YB1940",
+    "c": "",
+    "lat": 29.728254,
+    "lng": -95.410398
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2201-bartlett-st",
+    "a": "2201 Bartlett St",
+    "llc": "Parikh Trinity Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-09-29, 5,500 sqft lot YB1946",
+    "c": "",
+    "lat": 29.726936,
+    "lng": -95.410744
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2244-north-blvd",
+    "a": "2244 North Blvd",
+    "llc": "Akhras Amer",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-06, 6,573 sqft lot YB2024",
+    "c": "",
+    "lat": 29.728027,
+    "lng": -95.412476
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2328-south-blvd",
+    "a": "2328 South Blvd",
+    "llc": "2328 South Blvd Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-30, 5,723 sqft lot YB1939",
+    "c": "",
+    "lat": 29.726592,
+    "lng": -95.41417
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2332-bartlett-st",
+    "a": "2332 Bartlett St",
+    "llc": "Croix Custom Homes Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-17, 5,894 sqft lot YB1939",
+    "c": "",
+    "lat": 29.72742,
+    "lng": -95.414375
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2630-persa-st",
+    "a": "2630 Persa St",
+    "llc": "Core Builders Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-05-04, 5,000 sqft lot YB1930",
+    "c": "",
+    "lat": 29.74141,
+    "lng": -95.412538
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_2638-persa-st",
+    "a": "2638 Persa St",
+    "llc": "Ava Custom Homes Inc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-07-23, 5,000 sqft lot YB1930",
+    "c": "",
+    "lat": 29.741124,
+    "lng": -95.412555
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3103-ferndale-st",
+    "a": "3103 Ferndale St",
+    "llc": "H & N Capital Group Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-06-04, 7,320 sqft lot YB1949",
+    "c": "",
+    "lat": 29.737385,
+    "lng": -95.4216
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3310-ferndale-st",
+    "a": "3310 Ferndale St",
+    "llc": "Philip A Wood Construction Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-01-29, 6,710 sqft lot YB1950",
+    "c": "",
+    "lat": 29.73534,
+    "lng": -95.422026
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
+  },
+  {
+   "record": {
+    "id": "acq_3319-bammel-ln",
+    "a": "3319 Bammel Ln",
+    "llc": "Bammel Development Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2026-04-28, 7,500 sqft lot YB1955",
+    "c": "",
+    "lat": 29.735256,
+    "lng": -95.423464
+   },
+   "zone": "OOZ_POLY",
+   "reason": "Deed pin outside the Montrose boundary (montrose_boundary.geojson); acquisitions file had no zone flag"
   }
  ]
 }
