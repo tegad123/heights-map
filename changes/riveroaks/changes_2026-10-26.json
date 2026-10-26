@@ -1,0 +1,75 @@
+{
+ "date": "2026-10-26",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "active_BigActive_378a.csv",
+  "pending_BigPending_27ca.csv",
+  "sold_BigSold_ad16.csv",
+  "terminated_bigTerminated_868d.csv"
+ ],
+ "source_hashes": {
+  "active_BigActive_378a.csv": "708356c72b3fc2025ca30d7c629efbc7209c1d36d44b3469a3a3fefd404cf643",
+  "pending_BigPending_27ca.csv": "30e113e1692b4e2ac3ae7257b997d7dc911f632fbae31b5a703efba375b2eadd",
+  "sold_BigSold_ad16.csv": "9b8ee08b94cdabd533328abcc5b5769a8fb0404495f7787194dc6b31bc86b953",
+  "terminated_bigTerminated_868d.csv": "4ba68ff4329be12d531b9001e98c37df02a60fbeefb786020d7530e4063a9199"
+ },
+ "counts": {
+  "matched": 3,
+  "dropped": 1,
+  "relisted": 0,
+  "new": 1,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "act_2217-pelham",
+  "act_2247-chilton",
+  "act_3717-chevy-chase"
+ ],
+ "dropped": [
+  {
+   "id": "act_2321-claremont",
+   "a": "2321 Claremont Lane, Houston, TX 77019",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "1006370",
+   "close_date": "2026-09-10"
+  }
+ ],
+ "relisted": [],
+ "new": [
+  {
+   "a": "3058 Locke Lane",
+   "prod": "Single Lot",
+   "mls": "74431691",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": null
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {},
+ "unresolved": [
+  {
+   "id": "act_4-west",
+   "mls": null,
+   "address": "4 West Lane, Houston, TX 77019",
+   "reason": "Absent from all exports and never observed in HAR; status unverified"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "act_2321-claremont",
+   "address": "2321 Claremont Lane, Houston, TX 77019",
+   "before": "active",
+   "after": "sold",
+   "mls": "1006370",
+   "previous_mls": null
+  }
+ ],
+ "observed": {
+  "act_2217-pelham": "86261749",
+  "act_2247-chilton": "46649105",
+  "act_3717-chevy-chase": "80511581"
+ }
+}
