@@ -447,7 +447,9 @@ let DATA = [{"id": "tg_6322-wynnwood", "a": "6322 Wynnwood Lane", "llc": "SVJ Pr
 // No Timbergrove exclusions (the previous list was a Heights copy-paste leak that hid 12
 // in-zone records — Lindyann/Abington/Cranston/Grovewood/Hurst/Timbergrove Ln etc. Fixed 2026-08-27).
 const OUT_OF_ZONE=/$^/i;
-for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a))DATA.splice(i,1);}
+const ZONE_RINGS=[[[-95.45929,29.8152],[-95.44372,29.81526],[-95.44235,29.81156],[-95.44079,29.80938],[-95.44115,29.80903],[-95.43583,29.80617],[-95.43349,29.80402],[-95.42731,29.80297],[-95.42677,29.80239],[-95.42629,29.80099],[-95.42483,29.80012],[-95.42464,29.79856],[-95.42344,29.79688],[-95.42291,29.7951],[-95.41406,29.79513],[-95.41404,29.7923],[-95.41154,29.79234],[-95.4118,29.79087],[-95.41172,29.78562],[-95.4112,29.78313],[-95.43575,29.78376],[-95.43671,29.78434],[-95.43677,29.78507],[-95.43819,29.78627],[-95.4421,29.78834],[-95.45861,29.80041]]]; // [lng,lat] rings of this market's ingest zone guard (timbergrove_boundary.geojson) — keep in sync with market_config.py
+function inZonePoly(lng,lat){return ZONE_RINGS.some(R=>{let ins=false;for(let i=0,j=R.length-1;i<R.length;j=i++){const xi=R[i][0],yi=R[i][1],xj=R[j][0],yj=R[j][1];if(((yi>lat)!==(yj>lat))&&(lng<(xj-xi)*(lat-yi)/(yj-yi)+xi))ins=!ins;}return ins;});}
+for(let i=DATA.length-1;i>=0;i--){if(OUT_OF_ZONE.test(DATA[i].a)||!inZonePoly(DATA[i].lng,DATA[i].lat))DATA.splice(i,1);}
 // ---- split-lot pair merge: one pin per split project, units=2 (ported from Heights) ----
 window._DROPPED=new Set();
 (function(){
@@ -998,7 +1000,9 @@ if(!state.fieldEdits)state.fieldEdits={};
 if(!state.posEdits)state.posEdits={};
 function applyFieldEdits(){for(const id in state.fieldEdits){const r=byId[id];if(!r)continue;const e=state.fieldEdits[id];
   if('prod' in e){if(e.prod){r.prod=e.prod;if(e.prod==='Split Lot')r.ty='active_split';else if(e.prod==='Single Lot')r.ty='active_single';else delete r.ty;}else{delete r.prod;delete r.ty;}}}}
-function applyPosEdits(){for(const id in state.posEdits){const p=state.posEdits[id];const r=byId[id];if(r){r.lat=p[0];r.lng=p[1];}const m=mById[id];if(m)m.setLatLng(p);}}
+function applyPosEdits(){for(const id in state.posEdits){const p=state.posEdits[id];
+  if(!inZonePoly(p[1],p[0])){console.warn('[posEdits] ignoring out-of-zone drag for '+id+' — keeping original coords');continue;}
+  const r=byId[id];if(r){r.lat=p[0];r.lng=p[1];}const m=mById[id];if(m)m.setLatLng(p);}}
 function setProd(id,v){state.fieldEdits[id]={prod:v||null};applyFieldEdits();
   if(v){const p=pt(id);p.tags=p.tags.filter(t=>t!=='needs_clarification');}
   save();recolor(id);if(typeof renderLegend==='function')renderLegend();}
