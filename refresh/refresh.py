@@ -1748,6 +1748,9 @@ def cmd_link_staged(args, html_path):
         if s['id'] in staged:
             raise SystemExit(f"FATAL: staged id {s['id']} repeats in {args.file}")
         staged[s['id']] = s
+    trusted = set(getattr(args, 'trust_address', None) or [])
+    if trusted - set(args.approve):
+        raise SystemExit(f'FATAL: --trust-address ids not approved: {sorted(trusted - set(args.approve))}')
 
     def edit(html, data, state, chg, earlier):
         single, ambiguous, _, _ = _prior_observations(earlier + [chg], None)
@@ -1767,8 +1770,11 @@ def cmd_link_staged(args, html_path):
             if type_free_key(s['a']) != type_free_key(d['a']):
                 raise SystemExit(f"REFUSED: {sid} ({s['a']}) is not the address of {pin} ({d['a']})")
             # HAR coordinates can sit a block off; an exact address tolerates that
-            limit = EXACT_LINK_METERS if address_key(s['a']) == address_key(d['a']) else LOOSE_LINK_METERS
-            if distance(s['data'], d) > limit:
+            exact = address_key(s['a']) == address_key(d['a'])
+            if sid in trusted and not exact:
+                raise SystemExit(f'REFUSED: --trust-address {sid} needs an exact address match with {pin}')
+            limit = EXACT_LINK_METERS if exact else LOOSE_LINK_METERS
+            if sid not in trusted and distance(s['data'], d) > limit:
                 raise SystemExit(f'REFUSED: {sid} sits {distance(s["data"], d):.0f} m from {pin}')
             if pin in used:
                 raise SystemExit(f'REFUSED: {pin} is already linked to {used[pin]} in this run')
@@ -1900,6 +1906,8 @@ def main():
     ls.add_argument('--date', required=True, help='changelog date the listing events belong to')
     ls.add_argument('--file', required=True, help='staging proposed_<date>.json')
     ls.add_argument('--approve', nargs='+', required=True, help='staged ids to link')
+    ls.add_argument('--trust-address', nargs='+', default=[],
+                    help='approved ids whose HAR coordinates are reviewed as wrong: exact address, no distance guard')
     ls.add_argument('--apply', action='store_true')
     ls.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
     ar = sub.add_parser('archive-duplicates', parents=[common],
