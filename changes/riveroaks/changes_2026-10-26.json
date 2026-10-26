@@ -43,8 +43,10 @@
    "prod": "Single Lot",
    "mls": "74431691",
    "har_status": "Active",
-   "staged": true,
-   "mergeCandidate": null
+   "staged": false,
+   "mergeCandidate": null,
+   "id": "act_3058-locke-lane",
+   "applied": true
   }
  ],
  "excluded": [],
@@ -71,5 +73,25 @@
   "act_2217-pelham": "86261749",
   "act_2247-chilton": "46649105",
   "act_3717-chevy-chase": "80511581"
- }
+ },
+ "archived_duplicates": [
+  {
+   "record": {
+    "id": "acq_3713-chevy-chase-dr",
+    "a": "3713 Chevy Chase Dr",
+    "llc": "Bh 3713 Chevy Chase Llc",
+    "v": "",
+    "sd": "",
+    "kind": "permit",
+    "prod": "Deed Transfer",
+    "ty": "active_single",
+    "f": "corporate deed 2025-10-20, 10,920 sqft lot YB1950",
+    "c": "",
+    "lat": 29.748533,
+    "lng": -95.437161
+   },
+   "canonical": "pmt_3713-chevy-chase",
+   "reason": "Corporate-deed pin for the same address as a permit/listing pin (same parcel, two markers); the permit/listing pin keeps the property"
+  }
+ ]
 }
