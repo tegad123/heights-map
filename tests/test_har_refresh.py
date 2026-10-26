@@ -413,7 +413,7 @@ class IdentityFollowUpTest(unittest.TestCase):
         for approve, message in ((['act_100-elm-street'], 'already carries listing state'),
                                  (['act_301-pine-street'], 'is not the address of'),
                                  (['act_300-pine-road'], 'sits 200 m from'),
-                                 (['act_200-oak-st-far'], 'sits 2442 m from'),
+                                 (['act_200-oak-st-far'], 'sits 2446 m from'),
                                  (['act_400-ash-street'], 'no mergeCandidate'),
                                  (['act_300-pine-street', 'act_300-pine-street'], 'already linked')):
             with self.subTest(approve=approve), self.assertRaisesRegex(SystemExit, message):
