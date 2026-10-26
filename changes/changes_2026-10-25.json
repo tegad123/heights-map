@@ -1,0 +1,724 @@
+{
+ "date": "2026-10-25",
+ "kind": "har_incremental_refresh",
+ "sources": [
+  "CurrentlyActiveHeightsP_9ebd.csv",
+  "PendingOptionsHeights_ad61.csv",
+  "Soldheights_1f31.csv",
+  "TERMINATEDWITHDRAWN_6c86.csv"
+ ],
+ "source_hashes": {
+  "CurrentlyActiveHeightsP_9ebd.csv": "0b2a899587a1046c4c51f558debb93a25fc8bec21413b01b83493da690208484",
+  "PendingOptionsHeights_ad61.csv": "fabe37a53ad0caa18e43b1695198ab22cda2a34b680ff15d8aef46a2c0c11cdd",
+  "Soldheights_1f31.csv": "7e3aa702925b7c8afbc14746f38dfc45b555f5595356964735eb09c1e28c26bf",
+  "TERMINATEDWITHDRAWN_6c86.csv": "8d6eb0f23618ebd095008272f08a3ef0b2c931a91f7424299cf992cab13f64e2"
+ },
+ "counts": {
+  "matched": 61,
+  "dropped": 16,
+  "relisted": 3,
+  "new": 7,
+  "excluded": 7
+ },
+ "matchedIds": [
+  "2131129832",
+  "2131144961",
+  "2131186599",
+  "2131191267",
+  "act_1002-e-25th-street",
+  "act_1002-e-6-12",
+  "act_1012-e-26th-street",
+  "act_1032-w-17th-street-unit-a",
+  "act_1109-tabor",
+  "act_1122-e-27th-st-unit-a",
+  "act_1140-waverly",
+  "act_1202-aurora-street",
+  "act_1218-prince-street",
+  "act_122-e-4",
+  "act_1227-prince-street",
+  "act_1303-cordell-street-unit-b",
+  "act_1317-waverly-street",
+  "act_1322-lawrence-street",
+  "act_1502-w-21",
+  "act_1504-w-21st-street",
+  "act_1520-w-21st-st-unit-b",
+  "act_1906-w-14",
+  "act_2015-harvard",
+  "act_212-e-24",
+  "act_2218-gostick-street",
+  "act_2434-white-oak",
+  "act_248-w-22",
+  "act_2603-julian",
+  "act_2924-watson-street",
+  "act_3115-beauchamp",
+  "act_312-w-9th-st",
+  "act_318-w-21st-street",
+  "act_335-harvard-street",
+  "act_407-e-27th-street",
+  "act_603-e-23",
+  "act_611-e-25th-street-unit-b",
+  "act_614-ridge-street",
+  "act_616-ridge",
+  "act_623-e-13",
+  "act_711-e-26th-street",
+  "act_715-merrill",
+  "act_731-e-8-12",
+  "act_735-e-8-12",
+  "act_741-w-21st-street-unit-a",
+  "act_805-w-22nd-street",
+  "act_814-w-17th-street",
+  "act_816-w-17th-street",
+  "act_830-e-27",
+  "act_830-waverly-street",
+  "act_834-waverly-street",
+  "act_902-e-25",
+  "act_920-e-25",
+  "pmt_1109-voight-st-77009",
+  "pmt_112-e-27th-st-a-77008",
+  "pmt_1138-fugate-st-77009",
+  "pmt_1246-omar-st-77008",
+  "pmt_310-w-9th-st-77007",
+  "pmt_602-northwood-st-77009",
+  "pmt_807-w-22nd-st-77008",
+  "pmt_845-w-23rd-st-a-77008",
+  "pmt_906-bayland-ave-77009"
+ ],
+ "dropped": [
+  {
+   "id": "2131282520",
+   "a": "837 W 25th St, Houston, Tx 77008",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "37211542",
+   "close_date": null
+  },
+  {
+   "id": "2131421176",
+   "a": "410 Merrill St, Houston, Tx 77009",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "31444523",
+   "close_date": null
+  },
+  {
+   "id": "act_1122-robbie-street",
+   "a": "1122 Robbie Street",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pend Cont to Show",
+   "mls": "19311879",
+   "close_date": null
+  },
+  {
+   "id": "act_116-e-23rd-street",
+   "a": "116 E 23RD Street",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "81689864",
+   "close_date": "2026-10-14"
+  },
+  {
+   "id": "act_1315-waverly",
+   "a": "1315 Waverly Street",
+   "ty": "single",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "62006938",
+   "close_date": "2026-10-15"
+  },
+  {
+   "id": "act_1434-alexander-street",
+   "a": "1434 Alexander Street",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "61282363",
+   "close_date": "2026-10-08"
+  },
+  {
+   "id": "act_602-jewett-street-unit-b",
+   "a": "602 Jewett Street Unit#B",
+   "ty": "split",
+   "disposition": "unconfirmed",
+   "har_status": null,
+   "mls": "56131613",
+   "close_date": null
+  },
+  {
+   "id": "act_609-e-25",
+   "a": "609 E 25th Street",
+   "ty": "single",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "53672595",
+   "close_date": null
+  },
+  {
+   "id": "act_609-w-27th-street",
+   "a": "609 W 27th Street",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "98658584",
+   "close_date": null
+  },
+  {
+   "id": "act_613-wendel",
+   "a": "613 Wendel Street",
+   "ty": "single",
+   "disposition": "under contract",
+   "har_status": "Option Pending",
+   "mls": "30315725",
+   "close_date": null
+  },
+  {
+   "id": "act_710-waverly-street-unit-d",
+   "a": "710 Waverly Street Unit#D",
+   "ty": "split",
+   "disposition": "sold",
+   "har_status": "Sold",
+   "mls": "32352560",
+   "close_date": "2026-10-16"
+  },
+  {
+   "id": "act_833-w-25th-street",
+   "a": "833 W 25th Street",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "27657456",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1122-e-26th-st-77009",
+   "a": "1122 E 26th St, Houston, TX 77009",
+   "ty": "split",
+   "disposition": "terminated",
+   "har_status": "Terminated",
+   "mls": "57498457",
+   "close_date": null
+  },
+  {
+   "id": "pmt_1320-alexander-st-b-77008",
+   "a": "1320 Alexander St B, Houston, TX 77008",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Option Pending",
+   "mls": "88551552",
+   "close_date": null
+  },
+  {
+   "id": "pmt_409-walton-st-a-77009",
+   "a": "409 Walton St A, Houston, TX 77009",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pend Cont to Show",
+   "mls": "82453557",
+   "close_date": null
+  },
+  {
+   "id": "pmt_949-ridge-st-77009",
+   "a": "949 Ridge St, Houston, TX 77009",
+   "ty": "split",
+   "disposition": "under contract",
+   "har_status": "Pending",
+   "mls": "32396133",
+   "close_date": null
+  }
+ ],
+ "relisted": [
+  {
+   "id": "2131318242",
+   "a": "1120 E 26th St, Houston, Tx 77009",
+   "ty": "split",
+   "mls": "51613923",
+   "offSince": "2026-10-07"
+  },
+  {
+   "id": "act_705-walton-street",
+   "a": "705 Walton Street",
+   "ty": "single",
+   "mls": "23403413",
+   "offSince": "2026-10-07"
+  },
+  {
+   "id": "act_835-w-25th-street",
+   "a": "835 W 25th Street",
+   "ty": "split",
+   "mls": "89786077",
+   "offSince": "2026-10-07"
+  }
+ ],
+ "new": [
+  {
+   "a": "711 E 12th Street",
+   "prod": "Single Lot",
+   "mls": "92863972",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "2131240072"
+  },
+  {
+   "a": "805 Walton Street",
+   "prod": "Single Lot",
+   "mls": "37511845",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "2131313166"
+  },
+  {
+   "a": "1010 E 26TH Street",
+   "prod": "Split Lot",
+   "mls": "72282813",
+   "har_status": "Pending",
+   "staged": true,
+   "mergeCandidate": "pmt_1010-e-26th-st-77009"
+  },
+  {
+   "a": "1320 Alexander Street Unit#A",
+   "prod": "Split Lot",
+   "mls": "87122365",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "pmt_1320-alexander-st-a-77008"
+  },
+  {
+   "a": "217 TEETSHORN Street",
+   "prod": "Single Lot",
+   "mls": "41611827",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "pmt_217-teetshorn-st-77009"
+  },
+  {
+   "a": "305 W 17th Street",
+   "prod": "Single Lot",
+   "mls": "28513470",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "pmt_305-w-17th-st-77008"
+  },
+  {
+   "a": "607 W 27th Street",
+   "prod": "Split Lot",
+   "mls": "39509151",
+   "har_status": "Active",
+   "staged": true,
+   "mergeCandidate": "pmt_607-w-27th-st-77008"
+  }
+ ],
+ "excluded": [
+  {
+   "FILE": "CurrentlyActiveHeightsP_9ebd.csv",
+   "SHA256": "0b2a899587a1046c4c51f558debb93a25fc8bec21413b01b83493da690208484",
+   "ROW": 3,
+   "MLS": "95437024",
+   "ADDRESS": "5339 Larkin Street Unit#A",
+   "REASON": "OOZ_REGEX"
+  },
+  {
+   "FILE": "CurrentlyActiveHeightsP_9ebd.csv",
+   "SHA256": "0b2a899587a1046c4c51f558debb93a25fc8bec21413b01b83493da690208484",
+   "ROW": 4,
+   "MLS": "30336295",
+   "ADDRESS": "5339 Larkin Street",
+   "REASON": "OOZ_REGEX"
+  },
+  {
+   "FILE": "CurrentlyActiveHeightsP_9ebd.csv",
+   "SHA256": "0b2a899587a1046c4c51f558debb93a25fc8bec21413b01b83493da690208484",
+   "ROW": 19,
+   "MLS": "53774355",
+   "ADDRESS": "5240 Cornish Street Unit#A",
+   "REASON": "OOZ_REGEX"
+  },
+  {
+   "FILE": "Soldheights_1f31.csv",
+   "SHA256": "7e3aa702925b7c8afbc14746f38dfc45b555f5595356964735eb09c1e28c26bf",
+   "ROW": 3,
+   "MLS": "92854513",
+   "ADDRESS": "5337 Larkin Street",
+   "REASON": "OOZ_POLY"
+  },
+  {
+   "FILE": "TERMINATEDWITHDRAWN_6c86.csv",
+   "SHA256": "8d6eb0f23618ebd095008272f08a3ef0b2c931a91f7424299cf992cab13f64e2",
+   "ROW": 11,
+   "MLS": "92840987",
+   "ADDRESS": "5339 A Larkin Street",
+   "REASON": "OOZ_REGEX"
+  },
+  {
+   "FILE": "TERMINATEDWITHDRAWN_6c86.csv",
+   "SHA256": "8d6eb0f23618ebd095008272f08a3ef0b2c931a91f7424299cf992cab13f64e2",
+   "ROW": 16,
+   "MLS": "25935829",
+   "ADDRESS": "5339 Larkin Street",
+   "REASON": "OOZ_REGEX"
+  },
+  {
+   "FILE": "TERMINATEDWITHDRAWN_6c86.csv",
+   "SHA256": "8d6eb0f23618ebd095008272f08a3ef0b2c931a91f7424299cf992cab13f64e2",
+   "ROW": 60,
+   "MLS": "82942203",
+   "ADDRESS": "5240 Cornish Street Unit#A",
+   "REASON": "OOZ_REGEX"
+  }
+ ],
+ "dispositionUpdates": {
+  "act_1119-e-7-12": "sold",
+  "act_1321-alexander-street": "sold",
+  "act_1524-w-21st-st": "sold",
+  "act_2612-greenleaf": "sold"
+ },
+ "unresolved": [
+  {
+   "id": "act_845-w-23",
+   "mls": null,
+   "address": "845 West 23rd Street",
+   "reason": "Identity review: MLS 80344814 (845 West 23rd Street) matches this pin by address but continues listing pmt_845-w-23rd-st-a-77008 by prior MLS"
+  }
+ ],
+ "transitions": [
+  {
+   "member": "2131129832",
+   "address": "2011 Singleton St, Houston, Tx 77008",
+   "before": "active",
+   "after": "active",
+   "mls": "82231552",
+   "previous_mls": "5383346"
+  },
+  {
+   "member": "2131282520",
+   "address": "837 W 25th St, Houston, Tx 77008",
+   "before": "active",
+   "after": "terminated",
+   "mls": "37211542",
+   "previous_mls": "37211542"
+  },
+  {
+   "member": "2131318242",
+   "address": "1120 E 26th St, Houston, Tx 77009",
+   "before": "terminated",
+   "after": "active",
+   "mls": "51613923",
+   "previous_mls": "29146166"
+  },
+  {
+   "member": "2131421176",
+   "address": "410 Merrill St, Houston, Tx 77009",
+   "before": "active",
+   "after": "terminated",
+   "mls": "31444523",
+   "previous_mls": "31444523"
+  },
+  {
+   "member": "act_1119-e-7-12",
+   "address": "1119 E 7th 1/2 Street",
+   "before": "unconfirmed",
+   "after": "sold",
+   "mls": "90671798",
+   "previous_mls": "90671798"
+  },
+  {
+   "member": "act_1122-robbie-street",
+   "address": "1122 Robbie Street",
+   "before": "active",
+   "after": "pending",
+   "mls": "19311879",
+   "previous_mls": "19311879"
+  },
+  {
+   "member": "act_116-e-23rd-street",
+   "address": "116 E 23RD Street",
+   "before": "pending",
+   "after": "sold",
+   "mls": "81689864",
+   "previous_mls": "81689864"
+  },
+  {
+   "member": "act_1315-waverly",
+   "address": "1315 Waverly Street",
+   "before": "pending",
+   "after": "sold",
+   "mls": "62006938",
+   "previous_mls": "62006938"
+  },
+  {
+   "member": "act_1321-alexander-street",
+   "address": "1321 Alexander Street",
+   "before": "unconfirmed",
+   "after": "sold",
+   "mls": "10970361",
+   "previous_mls": "10970361"
+  },
+  {
+   "member": "act_1322-lawrence-street",
+   "address": "1322 Lawrence Street",
+   "before": "active",
+   "after": "active",
+   "mls": "29567571",
+   "previous_mls": "96825265"
+  },
+  {
+   "member": "act_1434-alexander-street",
+   "address": "1434 Alexander Street",
+   "before": "pending",
+   "after": "sold",
+   "mls": "61282363",
+   "previous_mls": "61282363"
+  },
+  {
+   "member": "act_1524-w-21st-st",
+   "address": "1524 W 21st St",
+   "before": "unconfirmed",
+   "after": "sold",
+   "mls": "76530080",
+   "previous_mls": "76530080"
+  },
+  {
+   "member": "act_2218-gostick-street",
+   "address": "2218 Gostick Street",
+   "before": "active",
+   "after": "active",
+   "mls": "60349875",
+   "previous_mls": "87300082"
+  },
+  {
+   "member": "act_2612-greenleaf",
+   "address": "2612 Greenleaf Street",
+   "before": "unconfirmed",
+   "after": "sold",
+   "mls": "65984026",
+   "previous_mls": "65984026"
+  },
+  {
+   "member": "act_335-harvard-street",
+   "address": "335 Harvard Street",
+   "before": "active",
+   "after": "active",
+   "mls": "78512587",
+   "previous_mls": "39648858"
+  },
+  {
+   "member": "act_602-jewett-street-unit-b",
+   "address": "602 Jewett Street Unit#B",
+   "before": "active",
+   "after": "unconfirmed",
+   "mls": "56131613",
+   "previous_mls": "56131613"
+  },
+  {
+   "member": "act_603-e-23",
+   "address": "603 E 23rd Street",
+   "before": "active",
+   "after": "active",
+   "mls": "98501448",
+   "previous_mls": "70087101"
+  },
+  {
+   "member": "act_609-e-25",
+   "address": "609 E 25th Street",
+   "before": "active",
+   "after": "terminated",
+   "mls": "53672595",
+   "previous_mls": "53672595"
+  },
+  {
+   "member": "act_609-w-27th-street",
+   "address": "609 W 27th Street",
+   "before": "active",
+   "after": "terminated",
+   "mls": "98658584",
+   "previous_mls": "98658584"
+  },
+  {
+   "member": "act_613-wendel",
+   "address": "613 Wendel Street",
+   "before": "active",
+   "after": "pending",
+   "mls": "30315725",
+   "previous_mls": "59672233"
+  },
+  {
+   "member": "act_623-e-13",
+   "address": "623 E 13th Street",
+   "before": "active",
+   "after": "active",
+   "mls": "55905740",
+   "previous_mls": "89411837"
+  },
+  {
+   "member": "act_705-walton-street",
+   "address": "705 Walton Street",
+   "before": "terminated",
+   "after": "active",
+   "mls": "23403413",
+   "previous_mls": "6584972"
+  },
+  {
+   "member": "act_710-waverly-street-unit-d",
+   "address": "710 Waverly Street Unit#D",
+   "before": "pending",
+   "after": "sold",
+   "mls": "32352560",
+   "previous_mls": "32352560"
+  },
+  {
+   "member": "act_715-merrill",
+   "address": "715 Merrill Street",
+   "before": "active",
+   "after": "active",
+   "mls": "28250484",
+   "previous_mls": "88557637"
+  },
+  {
+   "member": "act_833-w-25th-street",
+   "address": "833 W 25th Street",
+   "before": "active",
+   "after": "terminated",
+   "mls": "27657456",
+   "previous_mls": "27657456"
+  },
+  {
+   "member": "act_835-w-25th-street",
+   "address": "835 W 25th Street",
+   "before": "terminated",
+   "after": "active",
+   "mls": "89786077",
+   "previous_mls": "87747647"
+  },
+  {
+   "member": "pmt_1109-voight-st-77009",
+   "address": "1109 Voight St, Houston, TX 77009",
+   "before": "active",
+   "after": "active",
+   "mls": "77030754",
+   "previous_mls": "86342875"
+  },
+  {
+   "member": "pmt_1122-e-26th-st-77009",
+   "address": "1122 E 26th St, Houston, TX 77009",
+   "before": "active",
+   "after": "terminated",
+   "mls": "57498457",
+   "previous_mls": "57498457"
+  },
+  {
+   "member": "pmt_1320-alexander-st-b-77008",
+   "address": "1320 Alexander St B, Houston, TX 77008",
+   "before": "active",
+   "after": "pending",
+   "mls": "88551552",
+   "previous_mls": "88551552"
+  },
+  {
+   "member": "pmt_409-walton-st-a-77009",
+   "address": "409 Walton St A, Houston, TX 77009",
+   "before": "active",
+   "after": "pending",
+   "mls": "82453557",
+   "previous_mls": "82453557"
+  },
+  {
+   "member": "pmt_949-ridge-st-77009",
+   "address": "949 Ridge St, Houston, TX 77009",
+   "before": "active",
+   "after": "pending",
+   "mls": "32396133",
+   "previous_mls": "32396133"
+  }
+ ],
+ "observed": {
+  "2131129832": "82231552",
+  "2131144961": "5930421",
+  "2131186599": "32141788",
+  "2131191267": "44226252",
+  "act_1002-e-25th-street": "72762085",
+  "act_1002-e-6-12": "93562410",
+  "act_1012-e-26th-street": "54722254",
+  "act_1032-w-17th-street-unit-a": "7485788",
+  "act_1109-tabor": "23786126",
+  "act_1122-e-27th-st-unit-a": "9187773",
+  "act_1140-waverly": "57009282",
+  "act_1202-aurora-street": "48588346",
+  "act_1218-prince-street": "57925491",
+  "act_122-e-4": "90552057",
+  "act_1227-prince-street": "22766797",
+  "act_1303-cordell-street-unit-b": "64036585",
+  "act_1317-waverly-street": "10888947",
+  "act_1322-lawrence-street": "29567571",
+  "act_1502-w-21": "22973800",
+  "act_1504-w-21st-street": "14206939",
+  "act_1520-w-21st-st-unit-b": "33373553",
+  "act_1906-w-14": "98440189",
+  "act_2015-harvard": "7670973",
+  "act_212-e-24": "35874761",
+  "act_2218-gostick-street": "60349875",
+  "act_2434-white-oak": "74589231",
+  "act_248-w-22": "89221155",
+  "act_2603-julian": "59044155",
+  "act_2924-watson-street": "70723638",
+  "act_3115-beauchamp": "54037481",
+  "act_312-w-9th-st": "16999317",
+  "act_318-w-21st-street": "69573145",
+  "act_335-harvard-street": "78512587",
+  "act_407-e-27th-street": "10210884",
+  "act_603-e-23": "98501448",
+  "act_611-e-25th-street-unit-b": "82547279",
+  "act_614-ridge-street": "90107924",
+  "act_616-ridge": "8759927",
+  "act_623-e-13": "55905740",
+  "act_711-e-26th-street": "36627624",
+  "act_715-merrill": "28250484",
+  "act_731-e-8-12": "40836939",
+  "act_735-e-8-12": "5069786",
+  "act_741-w-21st-street-unit-a": "7364673",
+  "act_805-w-22nd-street": "4182331",
+  "act_814-w-17th-street": "62144090",
+  "act_816-w-17th-street": "81354398",
+  "act_830-e-27": "94349442",
+  "act_830-waverly-street": "97695610",
+  "act_834-waverly-street": "46031576",
+  "act_902-e-25": "44576999",
+  "act_920-e-25": "35798306",
+  "pmt_1109-voight-st-77009": "77030754",
+  "pmt_112-e-27th-st-a-77008": "34333707",
+  "pmt_1138-fugate-st-77009": "31213675",
+  "pmt_1246-omar-st-77008": "54607823",
+  "pmt_310-w-9th-st-77007": "86623183",
+  "pmt_602-northwood-st-77009": "60625157",
+  "pmt_807-w-22nd-st-77008": "44304073",
+  "pmt_845-w-23rd-st-a-77008": "80344814",
+  "pmt_906-bayland-ave-77009": "56747960"
+ },
+ "sold_refresh": {
+  "before": 96,
+  "after": 97,
+  "added": [
+   "32352560",
+   "62006938",
+   "81689864",
+   "61282363",
+   "90671798"
+  ],
+  "updated": [
+   "94092178"
+  ],
+  "retired_outside_window": [
+   "s92400749",
+   "s25468303",
+   "s60308322",
+   "s26683609"
+  ],
+  "start": "2025-10-25",
+  "coverage": "Incremental refresh; complete market coverage not independently established",
+  "scope": "incremental",
+  "restored_from_evidence": [
+   "90671798"
+  ]
+ }
+}

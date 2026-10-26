@@ -1,0 +1,261 @@
+[
+ {
+  "id": "act_711-e-12th-street",
+  "a": "711 E 12th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131240072",
+  "mls": "92863972",
+  "har_status": "Active",
+  "data": {
+   "id": "act_711-e-12th-street",
+   "a": "711 E 12th Street",
+   "llc": "Aspire Fine Homes",
+   "v": "$2,299,000",
+   "sd": "2026-10-09",
+   "lot": "4246",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Stude Sec 02",
+   "u": "",
+   "lat": 29.792842,
+   "lng": -95.389539,
+   "c": [
+    {
+     "n": "Kasia Mccormick",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Aspire Fine Homes. Agent: Kasia Mccormick. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_805-walton-street",
+  "a": "805 Walton Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131313166",
+  "mls": "37511845",
+  "har_status": "Active",
+  "data": {
+   "id": "act_805-walton-street",
+   "a": "805 Walton Street",
+   "llc": "Maybrook Homes",
+   "v": "$1,199,000",
+   "sd": "2026-10-08",
+   "lot": "3384",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Brooke Smith",
+   "u": "",
+   "lat": 29.798472,
+   "lng": -95.376648,
+   "c": [
+    {
+     "n": "Alexandra Loyd",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Maybrook Homes. Agent: Alexandra Loyd. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1010-e-26th-street",
+  "a": "1010 E 26TH Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1010-e-26th-st-77009",
+  "mls": "72282813",
+  "har_status": "Pending",
+  "data": {
+   "id": "act_1010-e-26th-street",
+   "a": "1010 E 26TH Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$899,900",
+   "sd": "2026-10-24",
+   "lot": "2997",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, SUNSET HEIGHTS",
+   "u": "",
+   "lat": 29.810531,
+   "lng": -95.385731,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Pending inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "pending"
+   ]
+  }
+ },
+ {
+  "id": "act_1320-alexander-street-unit-a",
+  "a": "1320 Alexander Street Unit#A",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1320-alexander-st-a-77008",
+  "mls": "87122365",
+  "har_status": "Active",
+  "data": {
+   "id": "act_1320-alexander-street-unit-a",
+   "a": "1320 Alexander Street Unit#A",
+   "llc": "Brownstone Living",
+   "v": "$824,990",
+   "sd": "2026-10-23",
+   "lot": "2526",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights Annex",
+   "u": "",
+   "lat": 29.795096,
+   "lng": -95.408197,
+   "c": [
+    {
+     "n": "Spencer Huck",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Spencer Huck. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_217-teetshorn-street",
+  "a": "217 TEETSHORN Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_217-teetshorn-st-77009",
+  "mls": "41611827",
+  "har_status": "Active",
+  "data": {
+   "id": "act_217-teetshorn-street",
+   "a": "217 TEETSHORN Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,594,900",
+   "sd": "2026-10-10",
+   "lot": "3422",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, RODGERS",
+   "u": "",
+   "lat": 29.783895,
+   "lng": -95.375059,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_305-w-17th-street",
+  "a": "305 W 17th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_305-w-17th-st-77008",
+  "mls": "28513470",
+  "har_status": "Active",
+  "data": {
+   "id": "act_305-w-17th-street",
+   "a": "305 W 17th Street",
+   "llc": "Titan Homes",
+   "v": "$2,299,000",
+   "sd": "2026-10-24",
+   "lot": "4800",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Houston Heights",
+   "u": "",
+   "lat": 29.801016,
+   "lng": -95.401738,
+   "c": [
+    {
+     "n": "Debbie Hagan",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Titan Homes. Agent: Debbie Hagan. (location from HAR export coordinates).",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_607-w-27th-street",
+  "a": "607 W 27th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_607-w-27th-st-77008",
+  "mls": "39509151",
+  "har_status": "Active",
+  "data": {
+   "id": "act_607-w-27th-street",
+   "a": "607 W 27th Street",
+   "llc": "Brownstone Living",
+   "v": "$949,000",
+   "sd": "2026-10-13",
+   "lot": "3010",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights",
+   "u": "",
+   "lat": 29.810186,
+   "lng": -95.407228,
+   "c": [
+    {
+     "n": "Steve Hajizade",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Steve Hajizade. (location from HAR export coordinates).",
+   "tags": [
+    "active_split"
+   ]
+  }
+ }
+]
