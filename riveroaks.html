@@ -542,7 +542,7 @@ function applyReconcile(pts){
     const p=pts[id]; if(!p) continue;
     const e=RECONCILE.off[id], want='off_market_'+e.t;
     let tg=Array.isArray(p.tags)?p.tags:[];
-    tg=tg.filter(t=>t!=='active_single'&&t!=='active_split');
+    tg=tg.filter(t=>t!=='active_single'&&t!=='active_split'&&t!=='pending');
     if(!tg.includes(want)) tg.push(want);
     p.tags=tg;
     if(typeof p.notes==='string'){
@@ -553,7 +553,7 @@ function applyReconcile(pts){
     const p=pts[id]; if(!p) continue;
     const want='active_'+RECONCILE.relist[id].t;
     let tg=Array.isArray(p.tags)?p.tags:[];
-    tg=tg.filter(t=>t!=='off_market_single'&&t!=='off_market_split');
+    tg=tg.filter(t=>t!=='off_market_single'&&t!=='off_market_split'&&t!=='pending');
     if(!tg.includes(want)) tg.push(want);
     p.tags=tg;
     if(typeof p.notes==='string')p.notes=p.notes.replace(/Off market as of \d{4}-\d{2}-\d{2}\. /g,'');
@@ -803,10 +803,14 @@ function timelineDay(value){
 function timelineDate(day){return new Date(day*864e5).toISOString().slice(0,10);}
 function phaseAnchor(r,phase){
   const ins=inspForPin(r);if(!ins)return null;
-  let rows=(ins.inspections||[]).filter(it=>inspPhase(it.type,it)===phase&&timelineDay(it.date)!==null);
-  // First final starts the finals window. Additional finals do not restart its clock.
-  rows.sort((a,b)=>phase==='mep_finals'?a.date.localeCompare(b.date):b.date.localeCompare(a.date));
-  return rows[0]||null;
+  const rows=(ins.inspections||[]).filter(it=>timelineDay(it.date)!==null)
+    .slice().sort((a,b)=>a.date.localeCompare(b.date));
+  let highest=-1,anchor=null;
+  for(const row of rows){
+    const rank=CONSTRUCTION_PHASES.indexOf(inspPhase(row.type,row));
+    if(rank>highest){highest=rank;anchor=row;}
+  }
+  return CONSTRUCTION_PHASES[highest]===phase?anchor:null;
 }
 function phaseTimeline(phase,anchorDate,now=new Date()){
   const day=timelineDay(anchorDate),today=timelineDay(now.toISOString().slice(0,10));
@@ -814,25 +818,171 @@ function phaseTimeline(phase,anchorDate,now=new Date()){
   if(day===null||index<0||phase==='complete')return null;
   const duration=PHASE_DAYS[phase],elapsed=Math.max(0,today-day);
   const following=CONSTRUCTION_PHASES.slice(index+1).reduce((n,k)=>n+PHASE_DAYS[k],0);
-  const nextDays=Math.max(0,duration-elapsed),overdueDays=Math.max(0,elapsed-duration);
-  // Elapsed idle time is evidence of a stall, not additional construction work.
-  // Keep the full overdue signal, but bound its ETA contribution to one phase.
-  const overdueAdjustmentDays=Math.min(overdueDays,duration);
-  const baseDays=(overdueDays>0?duration:nextDays)+following,remainingDays=baseDays+overdueAdjustmentDays;
+  // An inspection due today has not expired. Restart only after its due date.
+  const restartCount=Math.max(0,Math.ceil(elapsed/duration)-1);
+  const expectedInspectionDate=timelineDate(day+(restartCount+1)*duration);
+  const nextDays=timelineDay(expectedInspectionDate)-today;
+  const overdueDays=Math.max(0,elapsed-duration),overdueAdjustmentDays=0;
+  const baseDays=nextDays+following,remainingDays=baseDays;
   return {duration,elapsed,nextDays,overdueDays,overdueAdjustmentDays,baseDays,remainingDays,
+    restartCount,expectedInspectionDate,
     anchorTarget:timelineDate(day+duration+following),baseTarget:timelineDate(today+baseDays),
-    target:timelineDate(today+remainingDays),nextPhase:CONSTRUCTION_PHASES[index+1],
+    target:timelineDate(timelineDay(expectedInspectionDate)+following),nextPhase:CONSTRUCTION_PHASES[index+1],
     months:Math.max(0.5,Math.round(remainingDays/30*2)/2)};
 }
-function inspectionEta(r,now=new Date()){
-  const empty={anchor:null,anchorDate:null,target:null,months:null,complete:false,overdue:false,overdueDays:0,overdueAdjustmentDays:0,baseDays:null,remainingDays:null,nextDays:null,nextPhase:null};
+function rollingCompletionTarget(target,now=new Date()){
+  if(!target)return {target,rolled:false};
+  const today=now.toISOString().slice(0,10),original=target;
+  while(target<today){
+    const d=new Date(target+'T00:00:00Z'),day=d.getUTCDate();
+    d.setUTCDate(1);d.setUTCMonth(d.getUTCMonth()+1);
+    const last=new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,0)).getUTCDate();
+    d.setUTCDate(Math.min(day,last));target=d.toISOString().slice(0,10);
+  }
+  return {target,rolled:target!==original};
+}
+function constructionEta(r,now=new Date()){
+  const empty={anchor:null,anchorDate:null,target:null,months:null,complete:false,overdue:false,overdueDays:0,overdueAdjustmentDays:0,baseDays:null,remainingDays:null,nextDays:null,nextPhase:null,restartCount:null,expectedInspectionDate:null};
   if(!r||!r.permits||!r.permits.length)return {...empty,phase:null};
   const ins=inspForPin(r),done=completionFinal(ins);
   if(done)return {...empty,phase:'complete',anchor:'All five finals',anchorDate:done.date||null,target:done.date||null,complete:true};
-  const phase=homePhase(r.id)||inspToPhase(ins)||'foundation',anchor=phaseAnchor(r,phase);
+  const phase=homePhase(r.id)||inspToPhase(ins);
+  if(!phase)return empty;
+  const anchor=phaseAnchor(r,phase);
   if(!anchor)return {...empty,phase,missingAnchor:true};
   const timeline=phaseTimeline(phase,anchor.date,now);
-  return {...empty,...timeline,phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
+  const client=r.client_completion,rolling=client?.target
+    ?rollingCompletionTarget(client.target,now):{target:timeline.target,rolled:false};
+  const remainingDays=timelineDay(rolling.target)-timelineDay(now.toISOString().slice(0,10));
+  return {...empty,...timeline,...rolling,targetMonth:rolling.target.slice(0,7),remainingDays,
+    months:Math.max(0.5,Math.round(remainingDays/30*2)/2),clientCompletion:client||null,
+    phase,anchor:anchor.type,anchorDate:anchor.date,anchorProject:anchor.proj||null,overdue:timeline.overdueDays>0,complete:false};
+}
+
+const HEIGHTS_PRECON_COMPLETION_MONTHS=10;
+const HEIGHTS_FORECAST_TIME_ZONE='America/Chicago';
+function forecastToday(now=new Date()){
+  return new Intl.DateTimeFormat('en-CA',{
+    timeZone:HEIGHTS_FORECAST_TIME_ZONE,
+    year:'numeric',month:'2-digit',day:'2-digit'
+  }).format(now);
+}
+function forecastWeekAnchor(now=new Date()){
+  const day=timelineDay(forecastToday(now));
+  const weekday=new Date(day*864e5).getUTCDay();
+  return timelineDate(day-(weekday+6)%7);
+}
+function calendarMonthAnniversary(anchor,months){
+  const [y,m,day]=anchor.split('-').map(Number);
+  const first=new Date(Date.UTC(y,m-1+months,1));
+  const last=new Date(Date.UTC(first.getUTCFullYear(),first.getUTCMonth()+1,0)).getUTCDate();
+  first.setUTCDate(Math.min(day,last));
+  return first.toISOString().slice(0,10);
+}
+function validForecastDate(s){
+  const day=timelineDay(s);
+  return day!==null&&timelineDate(day)===s;
+}
+function maximumRemainingConstructionDays(){
+  return Math.max(...CONSTRUCTION_PHASES.map((_,i)=>
+    CONSTRUCTION_PHASES.slice(i).reduce((sum,p)=>sum+PHASE_DAYS[p],0)));
+}
+function preconTimeline(r,now=new Date()){
+  if(!r?.permits?.length||r.client_completion?.target)return null;
+  const projects=[...new Set(r.permits.map(p=>String(p.proj)))];
+  if(projects.length!==1||UW(r.id)!==1)return null;
+  if(!INSPECTIONS[projects[0]])return null;
+  const rows=inspForPin(r)?.inspections||[];
+  if(homePhase(r.id)||rows.some(row=>inspPhase(row.type,row)))return null;
+  const precon=rows.filter(row=>/^precon$/i.test(row.type||''));
+  if(!precon.length||precon.some(row=>!validForecastDate(row.date)))return null;
+  precon.sort((a,b)=>b.date.localeCompare(a.date));
+  const latest=precon.filter(row=>row.date===precon[0].date);
+  if(latest.some(row=>row.raw!=='Approved'))return null;
+  const approval=latest[0].date,today=forecastToday(now);
+  if(approval>today)return null;
+  const anchorDate=approval;
+  const preconAnchorTarget=calendarMonthAnniversary(approval,HEIGHTS_PRECON_COMPLETION_MONTHS);
+  const weekDay=timelineDay(forecastWeekAnchor(now));
+  const anchorDay=timelineDay(preconAnchorTarget);
+  const preconResetWeeks=Math.max(0,Math.ceil((weekDay-anchorDay)/7));
+  const preconResetTarget=timelineDate(anchorDay+7*preconResetWeeks);
+  const preconFloorDays=maximumRemainingConstructionDays();
+  const preconFloorTarget=timelineDate(timelineDay(today)+preconFloorDays);
+  const forecastFloorApplied=preconResetTarget<preconFloorTarget;
+  const target=forecastFloorApplied?preconFloorTarget:preconResetTarget;
+  const forecastDateBasis=forecastFloorApplied?'floor':preconResetWeeks?'weekly_reset':'anchor';
+  const remainingDays=timelineDay(target)-timelineDay(today);
+  return {
+    phase:null,anchor:'Precon Approved',anchorDate,
+    preconAnchorTarget,preconResetWeeks,preconResetTarget,
+    preconFloorDays,preconFloorTarget,forecastFloorApplied,forecastDateBasis,
+    anchorProject:projects[0],target,targetMonth:target.slice(0,7),
+    preconApprovalDate:approval,
+    daysSincePreconApproval:timelineDay(today)-timelineDay(approval),
+    remainingDays,baseDays:remainingDays,
+    months:Math.max(0.5,Math.round(remainingDays/30*2)/2),
+    restartCount:null,expectedInspectionDate:null,
+    forecastSource:'precon_approval_weekly_floor',forecastConfidence:'lower'
+  };
+}
+
+function inspectionEta(r,now=new Date()){
+  const current=constructionEta(r,now);
+  if(current.target)return {...current,
+    forecastSource:current.complete?'actual_completion':
+      current.clientCompletion?'client_override':'inspection_phase',
+    forecastConfidence:current.complete?'actual':
+      current.clientCompletion?'client_supplied':'inspection_anchored',
+    preconApprovalDate:null,daysSincePreconApproval:null
+  };
+  return {...current,forecastSource:'undated',forecastConfidence:null,
+    preconApprovalDate:null,daysSincePreconApproval:null,
+    ...(preconTimeline(r,now)||{})};
+}
+function isPreconForecast(r){
+  return inspectionEta(r).forecastSource==='precon_approval_weekly_floor';
+}
+function forecastSourceLabel(r){
+  const eta=inspectionEta(r);
+  if(isPreconForecast(r))return 'Precon estimate · lower confidence · '+
+    eta.daysSincePreconApproval+' days since precon approval · '+
+    (eta.forecastFloorApplied?'Construction-time floor applied':
+      eta.forecastDateBasis==='weekly_reset'?'Weekly-reset date':'Approval-date estimate');
+  if(eta.forecastSource==='inspection_phase')return 'Inspection-anchored estimate';
+  if(eta.forecastSource==='client_override')return 'Client estimate';
+  return '';
+}
+
+function preconCompletionLabel(r,now=new Date()){
+  const eta=inspectionEta(r,now);
+  if(!eta.target)return '';
+  return new Intl.DateTimeFormat('en-US',{
+    timeZone:'UTC',month:'long',year:'numeric',
+    ...(eta.forecastFloorApplied?{}:{day:'numeric'})
+  }).format(new Date(eta.target+'T00:00:00Z'));
+}
+function forecastExportMetadata(r){
+  const eta=inspectionEta(r);
+  return {
+    precon_approval_date:eta.preconApprovalDate,
+    days_since_precon_approval:eta.daysSincePreconApproval,
+    forecast_source:eta.forecastSource,
+    forecast_confidence:eta.forecastConfidence,
+    forecast_floor_applied:eta.forecastFloorApplied??false,
+    forecast_date_basis:eta.forecastDateBasis??null
+  };
+}
+// Display-only comparison with the original anchored/client completion month.
+function missedCompletionTarget(r,eta=inspectionEta(r),now=new Date()){
+  if(eta.complete||!eta.target||(r.id&&typeof soldInventoryPin==='function'&&soldInventoryPin(r.id)))return null;
+  const original=eta.clientCompletion?.target||eta.anchorTarget;
+  if(!original)return null;
+  const monthIndex=s=>Number(s.slice(0,4))*12+Number(s.slice(5,7));
+  const months=monthIndex(now.toISOString())-monthIndex(original);
+  if(months<1||monthIndex(eta.target)<=monthIndex(original))return null;
+  return {originalMonth:original.slice(0,7),months,
+    label:'Overdue · '+months+' month'+(months===1?'':'s')+' past original target ('+original.slice(0,7)+')'};
 }
 function timelineDuration(days){
   if(days<60)return '~'+Math.max(1,Math.round(days/7))+' weeks';
@@ -841,7 +991,7 @@ function timelineDuration(days){
 function etaText(r){
   const eta=inspectionEta(r);
   if(eta.complete)return 'Complete'+(eta.target?' · '+eta.target:'');
-  if(!eta.phase)return '';
+  if(!eta.phase&&!eta.target)return '';
   if(eta.missingAnchor)return 'Timeline unavailable — no dated phase anchor';
   return timelineDuration(eta.remainingDays)+' to completion';
 }
@@ -876,8 +1026,8 @@ function inspAnnotations(r,ins){
 function inspToPhase(ins){
   if(!ins)return null;
   if(completionFinal(ins))return 'complete';
-  let best='foundation'; // A permit alone establishes Foundation, never a later phase.
-  for(const it of ins.inspections||[]){const ph=inspPhase(it.type,it);if(ph&&PHASE_RANK[ph]>PHASE_RANK[best])best=ph;}
+  let best=null; // Only a passed construction inspection establishes a phase.
+  for(const it of ins.inspections||[]){const ph=inspPhase(it.type,it);if(ph&&(!best||PHASE_RANK[ph]>PHASE_RANK[best]))best=ph;}
   return best;
 }
 // Project-level rollup: units built together (same base address / shared master
@@ -927,9 +1077,14 @@ function applyInspectionPromotions(){
       let ph=inspToPhase(inspForPin(r)||{inspections:[]});
       const shared=PROJ[projectBaseKey(r)];
       // Shared non-final progress is retained, but five finals must belong to this pin's permits.
-      if(shared&&shared!=='complete'&&PHASE_RANK[shared]>PHASE_RANK[ph])ph=shared;
-      p.tags=[ph].concat(retained.filter(t=>t!=='permit'&&t!=='market'&&t!=='deed'));
-      p.inspPromoted=true;
+      if(shared&&shared!=='complete'&&(!ph||PHASE_RANK[shared]>PHASE_RANK[ph]))ph=shared;
+      if(ph){
+        p.tags=[ph].concat(retained.filter(t=>t!=='permit'&&t!=='market'&&t!=='deed'));
+        p.inspPromoted=true;
+      }else{
+        p.tags=retained;
+        stripUnevidencedStage(r);
+      }
     }else{
       p.tags=retained;
       if(p.inspPromoted)delete p.inspPromoted;
@@ -996,7 +1151,7 @@ const recolor=id=>{const m=mById[id]; if(m) m.setStyle(mkStyle(id));};
 // ---- EDIT MODE (ported from Heights): drag pins, product/stage edits, export ----
 if(!state.fieldEdits)state.fieldEdits={};
 if(!state.posEdits)state.posEdits={};
-function applyFieldEdits(){for(const id in state.fieldEdits){const r=byId[id];if(!r)continue;const e=state.fieldEdits[id];
+function applyFieldEdits(){for(const id in state.fieldEdits){const r=byId[id];if(!r||r.product_classification?.source==='client')continue;const e=state.fieldEdits[id];
   if('prod' in e){if(e.prod){r.prod=e.prod;if(e.prod==='Split Lot')r.ty='active_split';else if(e.prod==='Single Lot')r.ty='active_single';else delete r.ty;}else{delete r.prod;delete r.ty;}}}}
 function applyPosEdits(){for(const id in state.posEdits){const p=state.posEdits[id];const r=byId[id];if(r){r.lat=p[0];r.lng=p[1];}const m=mById[id];if(m)m.setLatLng(p);}}
 function setProd(id,v){state.fieldEdits[id]={prod:v||null};applyFieldEdits();
@@ -1094,7 +1249,7 @@ function popupHTML(r){
   let h='<div class="card" data-pid="'+esc(r.id)+'">';
   h+='<div class="llc">'+(esc(r.llc)||'Unknown entity')+'</div>';
   h+='<div class="addr">'+esc(r.a)+'</div>';
-  if(inventoryCategory(r.id))h+='<div class="pmeta">'+esc(inventoryCategory(r.id)==='custom'?'Custom':'Sold Off Market')+' · excluded from inventory</div>';
+  if(inventoryCategory(r.id))h+='<div class="pmeta">'+esc(inventoryCategory(r.id)==='custom'?'Custom':inventoryCategory(r.id)==='needs_clarification'?'Needs Clarification':'Sold Off Market')+' · excluded from inventory</div>';
   if(r._chip)h+='<div class="addr"><span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">'+esc(r._chip)+'</span></div>';
   if(r._twin)h+='<div class="addr">'+esc(r._twin.a)+' <span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">paired \u00b7 2 homes</span></div>';
   if(r._twin){ // per-twin status badge: only rendered when the twins' statuses diverge
@@ -1110,14 +1265,24 @@ function popupHTML(r){
   else if(r._soloSplit)h+='<div class="addr"><span class="chip" style="border-color:#8e5bd0;color:#c9b6ec">split project \u00b7 2 homes \u00b7 twin not tracked</span></div>';
   // Construction evidence and timeline are independent of listing status.
   {const ph=homePhase(r.id),eta=inspectionEta(r);
+   if(eta.forecastSource==='precon_approval_weekly_floor'){
+     h+='<div class="phasehead"><div class="phasetime">Completion: '+
+       esc(preconCompletionLabel(r))+'</div>';
+     h+='<div class="pmeta">'+esc(forecastSourceLabel(r))+'</div>';
+     h+='<div class="pmeta">Precon approved: '+esc(eta.preconApprovalDate)+'</div></div>';
+   }else if(eta.target&&!eta.complete){
+     h+='<div class="pmeta">'+esc(forecastSourceLabel(r))+'</div>';
+   }
    if(ph){
     h+='<div class="phasehead"><span class="phasechip" style="background:'+PHASE_DEF[ph][1]+';color:#0d0c0b">'+esc(PHASE_DEF[ph][0].toUpperCase())+'</span>';
     if(eta.complete)h+='<div class="phasetime">Complete · '+esc(eta.anchorDate)+'</div>';
     else if(eta.missingAnchor)h+='<div class="phasetime">Next / completion: unavailable — no dated phase evidence</div>';
     else{
-      h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+(eta.overdueDays?' — overdue':' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks')+'</div>';
-      h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.target)+'</div>';
-      if(eta.overdueDays)h+='<div class="phasetime">Stalled: '+Math.round(eta.elapsed/7)+' weeks in '+esc(PHASE_DEF[ph][0])+' ('+Math.round(eta.overdueDays/7)+' weeks overdue for '+esc(NEXT_INSPECTION[ph])+')</div>';
+      h+='<div class="phasetime">Next: '+esc(PHASE_DEF[eta.nextPhase][0])+' in ~'+Math.max(1,Math.round(eta.nextDays/7))+' weeks'+'</div>';
+      h+='<div class="phasetime">Completion: '+esc(timelineDuration(eta.remainingDays))+' · '+esc(eta.targetMonth)+(eta.clientCompletion?' · client estimate':'')+'</div>';
+      const missed=missedCompletionTarget(r,eta);
+      if(missed)h+='<div class="pmeta missed-target">'+esc(missed.label)+'</div>';
+      if(eta.elapsed>eta.duration)h+='<div class="phasetime">Stalled: '+Math.round(eta.elapsed/7)+' weeks in '+esc(PHASE_DEF[ph][0])+'</div>';
       h+='<div class="pmeta">Phase anchor: '+esc(eta.anchorDate)+'</div>';
     }
     h+='</div>';
@@ -1132,7 +1297,7 @@ function popupHTML(r){
       }
       h+='</div>';
     }
-   }else h+='<div class="phasehead"><span class="phasechip">No permit activity</span></div>';
+   }else h+='<div class="phasehead"><span class="phasechip">'+(r.permits?.length?'Permitted, no passed construction inspections':'No permit activity')+'</span></div>';
   }
   const A=r.kind==='active';
   const cells=[];
@@ -1198,6 +1363,7 @@ function popupHTML(r){
   h+='</div></div>';
   // notes — split into structured field boxes + free-text remainder
   h+='<div style="margin-top:12px"><div class="lbl">Notes</div>';
+  if(r.review_note)h+='<div class="notebox"><strong>Flagged for review</strong><br>'+esc(r.review_note)+'</div>';
   h+=noteFields(p.notes);
   {const ft=noteFreeText(p.notes);
    if(VIEWER){ if(ft) h+='<div class="notebox">'+esc(ft)+'</div>'; h+='</div>'; }
@@ -1250,7 +1416,7 @@ let VIEWER=true; // read-only by default; EDIT button (top right) flips this liv
 const collapsed=new Set();
 const PHASE_TAGS=['complete','mep_finals','interior','insulation','mep_roughs','exterior','framing','foundation','market'];
 const PHASE_DEF={foundation:['Foundation','#e8590c'],framing:['Framing','#f59f00'],exterior:['Framed / Exterior Close-In','#d7b13a'],mep_roughs:['MEP Roughs','#a6b83a'],insulation:['Insulation','#79a66b'],interior:['INT.CAB, Tile, ETC','#0ca678'],mep_finals:['MEP Finals','#3a9d8f'],complete:['Complete','#2f9e44'],market:['Finished on Market','#2f9e44']};
-function inventoryCategory(id){const t=(state.points[id]||{}).tags||[];return t.includes('sold_off_market')?'sold_off_market':t.includes('custom')?'custom':null;}
+function inventoryCategory(id){const t=(state.points[id]||{}).tags||[];return t.includes('sold_off_market')?'sold_off_market':t.includes('custom')?'custom':t.includes('needs_clarification')&&state.points[id]?.classification?.exclude_inventory?'needs_clarification':null;}
 function categoryCount(category){return DATA.reduce((n,r)=>n+(inventoryCategory(r.id)===category?UW(r.id):0),0);}
 function ensureTags(){let ch=false;
   for(const [key,name,color] of [['custom','Custom','#9b72cf'],['sold_off_market','Sold Off Market','#777777']]){
@@ -1277,9 +1443,10 @@ function deedCount(){return tagCount('deed');}
 function readyTypeCount(sp){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp))n+=UW(id);}return n;}
 function readyFinCount(sp,pu){let n=0;for(const id in state.points){if(!mById[id]||inventoryCategory(id))continue;const t=state.points[id].tags||[];if(t.includes('market')&&(t.includes('active_split')===sp)&&(t.includes('punch')===pu))n+=UW(id);}return n;}
 function matchSel(tags,k,id){
+  if(k==='T:missed_completion')return !!byId[id]&&!!missedCompletionTarget(byId[id]);
   const category=inventoryCategory(id);
   if(k==='G:custom'||k==='G:sold_off_market')return category===k.slice(2);
-  if(category)return false;
+  if(category)return category==='needs_clarification'&&(k==='L:needs_clarification'||k==='T:needs_clarification');
   const bld=CONSTRUCTION_PHASES.some(p=>tags.includes(p));
   const building=BUILD_PHASES.some(p=>tags.includes(p));
   if(k==='G:deed')return tags.includes('deed');
@@ -1337,6 +1504,8 @@ function renderLegend(){
   if(others.length){
     h+='<div class="grp'+(collapsed.has('other')?' col':'')+'" data-grp="other"><div class="grp-h" data-col="other"><span class="chev2">▼</span><span class="gn">Other</span><span class="ct2">'+others.length+'</span></div><div class="grp-body">';
     for(const tid of others)h+='<div class="leafrow'+sOn('L:'+tid)+'" data-sel="L:'+tid+'">'+cSw(tid)+'<span class="nm">'+esc(state.tags[tid].name)+'</span><span class="ct2">'+tagCount(tid)+'</span><span class="del" data-del="'+tid+'" title="Delete tag">×</span></div>';
+    const missedCount=DATA.reduce((n,r)=>n+(mById[r.id]&&missedCompletionTarget(r)?UW(r.id):0),0);
+    h+='<div class="leafrow'+sOn('T:missed_completion')+'" data-sel="T:missed_completion" title="Missed original completion month; includes excluded categories without adding them to inventory"><span class="mbox'+sOn('T:missed_completion')+'" data-sel="T:missed_completion"></span><span class="nm">Overdue — missed target</span><span class="ct2">'+missedCount+'</span></div>';
     h+='</div></div>';}
   el.innerHTML=h;
   wireLegend(el);
@@ -1362,7 +1531,7 @@ function refresh(){
     let show;
     if(inventoryCategory(m._rec.id)){show=okText&&(nothing||baseSels.some(k=>matchSel(tags,k,m._rec.id)));}
     else if(nothing){ show=okText; }                                   // no filters -> show all (subject to search)
-    else if(isPermit){ show=permitOn&&okText; }                   // permit pins only when New Construction is checked
+    else if(isPermit&&!baseSels.some(k=>k.startsWith('AL:')&&matchSel(tags,k,m._rec.id))){ show=permitOn&&okText; }                   // permit pins only when New Construction is checked
     else { show=okText && baseSels.length>0 && baseSels.some(k=>matchSel(tags,k,m._rec.id)); } // non-permit pins need a matching non-permit filter
     if(show){layer.addLayer(m);n+=(m._rec.units||1);} else if(okText&&q) hiddenByFilter++;}
   document.getElementById('shown').textContent=n.toLocaleString();
@@ -1572,7 +1741,7 @@ const PHASE_ORDER=['complete','mep_finals','interior','insulation','mep_roughs',
 const PHASE_MONTHS=Object.fromEntries(CONSTRUCTION_PHASES.map((p,i)=>[p,CONSTRUCTION_PHASES.slice(i).reduce((n,k)=>n+PHASE_DAYS[k],0)/30]));
 // A permit pin that inspections promoted carries a real phase tag; treat it like a tracked pin.
 function isPromotedPermit(r){if(!r||r.kind!=='permit')return false;const t=(state.points[r.id]||{}).tags||[];return t.some(x=>['complete','mep_finals','interior','insulation','mep_roughs','exterior','framing','foundation','market'].includes(x));}
-function inPipeline(r){return !inventoryCategory(r.id)&&(r.kind!=='permit'||isPromotedPermit(r));}
+function inPipeline(r){return !inventoryCategory(r.id)&&(r.kind!=='permit'||isPromotedPermit(r)||isPreconForecast(r));}
 function primaryStage(pid){const t=(state.points[pid]||{}).tags||[];
   if(t.includes('built')) return null; // completed long ago, not pipeline supply
   for(const k of PHASE_ORDER) if(t.includes(k)) return k;
@@ -1596,7 +1765,7 @@ const PHASE_SEQ=['complete','mep_finals','interior','insulation','mep_roughs','e
 function pipelineHomes(){
   return DATA.filter(inPipeline).filter(r=>{
     const s=primaryStage(r.id);
-    return s && s!=='deed';           // exclude raw deed transfers (pre-construction)
+    return (s&&s!=='deed')||isPreconForecast(r);           // exclude raw deed transfers (pre-construction)
   });
 }
 
@@ -1640,7 +1809,9 @@ function buildOverview(){
   const bd=phaseBreakdown();
   const uc=BUILD_PHASES.reduce((n,p)=>n+(bd[p]||0),0);
   const ready=bd.complete||0;
-  const within12=comingOnline(12).count;
+  const marketAdjusted=typeof PANEL_RESTRUCTURED!=='undefined'&&PANEL_RESTRUCTURED&&MARKET_VIEW.ready&&MARKET_VIEW.available;
+  const snapshot=marketAdjusted?marketSnapshot():null;
+  const within12=snapshot?snapshot.available:comingOnline(12).count;
   const permitN=DATA.filter(r=>!inventoryCategory(r.id)&&r.kind==='permit'&&!isPromotedPermit(r)).length;
   const deedN=DATA.filter(r=>!inventoryCategory(r.id)&&primaryStage(r.id)==='deed').length;
   const upd=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
@@ -1654,10 +1825,19 @@ function buildOverview(){
   h+='<div class="ovx-herosub">'+(within12===uc+ready?'Every home now under construction reaches market inside a year. ':'')+permitN+' permits are queued behind them.</div></div>';
   h+='<div class="ovx-heroR">';
   h+='<div class="ovx-stat"><span class="k">UNDER CONSTRUCTION</span><span class="v" style="color:#e8590c">'+ucCount()+'</span></div>';
+  if(marketAdjusted){
+    const active=activeMarketCounts();
+    h+='<div class="ovx-stat" data-active-market="finished"><span class="k">FINISHED ON MARKET</span><span class="v" style="color:#2f9e44">'+active.finished+'</span></div>';
+    h+='<div class="ovx-stat" data-active-market="construction"><span class="k">UNDER CONSTRUCTION ON MARKET</span><span class="v" style="color:#2f9e44">'+active.construction+'</span></div>';
+  }else if(typeof PANEL_RESTRUCTURED!=='undefined'&&PANEL_RESTRUCTURED){
+    h+='<div class="ovx-stat"><span class="k">ACTIVE MARKET EVIDENCE</span><span class="v">Unavailable</span></div>';
+  }else{
   h+='<div class="ovx-stat"><span class="k">ACTIVE ON MARKET</span><span class="v" style="color:#2f9e44">'+listedCount()+'</span></div>';
+  }
   h+='<div class="ovx-stat"><span class="k">PERMITS QUEUED</span><span class="v" style="color:#f1ede6">'+permitN+'</span></div>';
   h+='<div class="ovx-stat"><span class="k">LOTS BOUGHT · PRE-CON</span><span class="v" style="color:#3f6cd1">'+deedN+'</span></div>';
   h+='</div></div>';
+  if(snapshot)h+='<p class="note-foot ovx-snapshot-note">'+esc(marketSnapshotNote(snapshot))+'</p>';
 
   // CONSTRUCTION PIPELINE: 5 phase circles
   h+='<div class="ovx-secH"><span>CONSTRUCTION PIPELINE</span><span>FOUNDATION → COMPLETE · '+(uc+ready)+' HOMES</span></div>';
@@ -1669,13 +1849,13 @@ function buildOverview(){
   h+='</div>';
 
   // SUPPLY CURVE: SVG chart of comingOnline at checkpoints
-  const curve=supplyCurve();
+  const curve=supplyCurve().map(c=>marketAdjusted?{...c,count:marketSnapshot(c.months).available}:c);
   const maxN=Math.max(1,...curve.map(c=>c.count));
   const W=640,H=180,PX=44,PY=18;
   const xs=m=>PX+( [3,6,9,12,18,24].indexOf(m) )*( (W-PX-14)/5 );
   const ys=n=>H-PY-(n/maxN)*(H-PY*2);
   let pts=curve.map(c=>xs(c.months)+','+ys(c.count)).join(' ');
-  const twelveX=xs(12),twelveY=ys(comingOnline(12).count);
+  const twelveX=xs(12),twelveY=ys(within12);
   h+='<div class="ovx-secH"><span>HOMES REACHING MARKET</span><span>CUMULATIVE · FROM TODAY</span></div>';
   h+='<div class="ovx-chart"><svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet">';
   // area fill
@@ -1697,14 +1877,13 @@ function buildTimeline(){
   const now=new Date(); const base=new Date(now.getFullYear(),now.getMonth(),1);
   const buckets={}; let noStage=0,deedN=0;
   DATA.filter(inPipeline).forEach(r=>{const s=primaryStage(r.id);
-    if(s==='deed'){deedN++;return;}
+    if(s==='deed'&&!isPreconForecast(r)){deedN++;return;}
     if(!tlMatch(r.id))return;
-    const ml=monthsLeft(r.id),eta=inspectionEta(r); if((ml===null||ml===undefined)&&!eta.overdue){noStage++;return;}
+    const ml=monthsLeft(r.id),eta=inspectionEta(r); if(ml===null||ml===undefined){noStage++;return;}
     let key,label,ord;
-    if(eta.overdue){key='overdue';label='OVERDUE VS TYPICAL PACE';ord=998;}
-    else if(ml<=0){key='now';label='AVAILABLE NOW';ord=10000;}
+    if(ml<=0){key='now';label='AVAILABLE NOW';ord=10000;}
     else if(ml>12){key='p12';label='12+ MONTHS OUT';ord=999;}
-    else{const d=eta.target?new Date(eta.target+'T00:00:00'):new Date(base.getFullYear(),base.getMonth()+Math.ceil(ml),1);key='m'+d.getFullYear()+'-'+d.getMonth();label=d.toLocaleString('en-US',{month:'short',year:'numeric'}).toUpperCase();ord=ml;}
+    else{const d=eta.target?new Date(eta.target+'T00:00:00'):new Date(base.getFullYear(),base.getMonth()+Math.ceil(ml),1);key='m'+d.getFullYear()+'-'+d.getMonth();label=d.toLocaleString('en-US',{month:'short',year:'numeric'}).toUpperCase();ord=d.getFullYear()*12+d.getMonth()-(base.getFullYear()*12+base.getMonth());}
     (buckets[key]=buckets[key]||{label:label,ord:ord,ml:ml,items:[]}).items.push(r);});
   const arr=Object.values(buckets).sort((a,b)=>a.ord-b.ord);
 
@@ -1738,7 +1917,9 @@ function buildTimeline(){
       let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
       if(p==='market'){const pk=prodKeyR(r),pu=t.includes('punch');
         lbl=(pk==='Common Driveway'?'Common Drwy':pk==='Split Lot'?'Split':'Single')+(pu?' · Punch List':' · Finished');}
-      h+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
+      const missed=missedCompletionTarget(r);if(missed)lbl+=' · Overdue ('+missed.months+'mo past target)';
+      if(isPreconForecast(r))lbl='Precon · '+preconCompletionLabel(r);
+      h+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div><div class="m">'+esc(forecastSourceLabel(r))+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
     if(b.items.length>3)h+='<div class="tlx-more" data-more="'+esc(b.label)+'">+ '+(b.items.length-3)+' more homes</div>';
     h+='</div></div>';}
   if(deedN) h+='<p class="note-foot">'+deedN+' deed-transfer lots are pre-construction and not yet scheduled.</p>';
@@ -1754,7 +1935,9 @@ function buildTimeline(){
     for(const r of bkt.items.slice(3)){const p=homePhase(r.id);const t=pt(r.id).tags||[];
       let col=p?PH_C[p]:'#8c857a', lbl=p?(PHASE_LABELS[p]||p):'—';
       if(p==='market'){const pk=prodKeyR(r),pu=t.includes('punch');lbl=(pk==='Common Driveway'?'Common Drwy':pk==='Split Lot'?'Split':'Single')+(pu?' · Punch List':' · Finished');}
-      hh+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
+      const missed=missedCompletionTarget(r);if(missed)lbl+=' · Overdue ('+missed.months+'mo past target)';
+      if(isPreconForecast(r))lbl='Precon · '+preconCompletionLabel(r);
+      hh+='<div class="house" data-go="'+esc(r.id)+'"><div><div class="a">'+esc(shortAddr(r.a))+'</div><div class="m">'+esc(r.llc||'')+'</div><div class="m">'+esc(forecastSourceLabel(r))+'</div></div><span class="stg" style="background:'+col+';color:'+txtOn(col)+'">'+esc(lbl)+'</span></div>';}
     this.outerHTML=hh;
     el.querySelectorAll('[data-go]').forEach(y=>y.addEventListener('click',()=>openPin(y.getAttribute('data-go'))));
   }));
@@ -1791,7 +1974,7 @@ function askContext(){
   const lines=[];const deedLines=[];const agg={active_on_market:0,under_construction:0,deed_lots:0,permits_queued:0,market_by_product:{},uc_by_product:{}};
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];
     const ph=PH.find(p=>t.includes(p));
-    if(t.includes('deed')&&!ph){
+    if(t.includes('deed')&&!ph&&!isPreconForecast(r)){
       agg.deed_lots++;
       const monthsSince=r.sd?Math.max(0,Math.round((now-new Date(r.sd+'T00:00:00'))/(30.44*24*3600e3))):null;
       const act=activeKeys.has(projectBaseKey(r))?'HAS_PERMIT_ACTIVITY':'NO_PERMIT_ACTIVITY';
@@ -1806,9 +1989,9 @@ function askContext(){
     else if(ph&&ph!=='market'){grp='under_construction';agg.under_construction++;const pd=r.prod||prodKeyR(r)||'Unknown';agg.uc_by_product[pd]=(agg.uc_by_product[pd]||0)+1;}
     else if(r.kind==='permit'){grp='permit_queued';agg.permits_queued++;}
     else grp='other';
-    const ml=monthsLeft(r.id);
+    const ml=monthsLeft(r.id),eta=inspectionEta(r,now);
     const note=((state.points[r.id]||{}).notes||'').split('\n')[0].slice(0,90);
-    lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||prodKeyR(r)||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',note].join(' | '));
+    lines.push([r.a.replace(/, Houston.*$/,''),grp,ph||'-',r.prod||prodKeyR(r)||'-',r.v||'-',(ml===null||ml===undefined)?'-':ml+'mo',r.f||'-',r.comp||'-',eta.target||'-',eta.expectedInspectionDate||'-',eta.restartCount??'-',eta.preconApprovalDate||'-',eta.daysSincePreconApproval??'-',eta.forecastSource,eta.forecastConfidence||'-',eta.forecastFloorApplied??false,eta.forecastDateBasis||'-',note].join(' | '));
   }
   // cross-tabs matching the sidebar exactly (tag-based grouping)
   const active_breakdown={'Single Lot':{move_in_ready:0,still_building:0},'Split Lot':{move_in_ready:0,still_building:0},'Common Driveway':{move_in_ready:0,still_building:0}};
@@ -1821,8 +2004,8 @@ function askContext(){
     else if(phx)uc_breakdown[key][phx]++;}
   agg.active_breakdown=active_breakdown;agg.uc_breakdown=uc_breakdown;
   // Phase cohorts describe present construction evidence. Completion estimates use
-  // inspection-date anchors; overdue homes retain their phase; ETA delay is capped at one phase duration.
-  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + standard remaining durations + capped overdue']));
+  // inspection-date anchors; overdue homes retain their phase; elapsed time reduces remaining phase work.
+  const COHORT_RANGE=Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,'inspection anchor + elapsed-adjusted remaining durations']));
   const mk=()=>({ready_now:0,by_phase_cohort:Object.fromEntries(CONSTRUCTION_PHASES.map(k=>[k,0])),cohort_ranges:COHORT_RANGE,done_within:{}});
   const forecast={ 'Single Lot':mk(), 'Split Lot':mk(), 'Common Driveway':mk(), 'ALL':mk() };
   for(const r of DATA){if(inventoryCategory(r.id))continue;const t=(state.points[r.id]||{}).tags||[];
@@ -1842,7 +2025,7 @@ function askContext(){
   return 'AS OF '+now.toISOString().slice(0,10)+'. AGGREGATES: '+JSON.stringify(agg)+
    '\nCOMPLETION_FORECAST (PHASE-COHORT model. ready_now = complete/listed now, EXCLUDED from all other numbers. by_phase_cohort = count of under-construction homes at each build stage; cohort_ranges gives the ROUGH month window for each stage. These are STAGE COHORTS, not monthly completion counts — e.g. a foundation count of 36 means 36 homes are AT foundation stage (~7-9 months out), NOT 36 homes finishing in a single month. done_within[N] = approximate cumulative count expected done within N months, from inspection-date anchors with no forecast when a dated phase anchor is missing; treat as directional, use verbatim, never restate as a single-month figure): '+JSON.stringify(forecast)+
    '\n\n=== DEED-TRANSFER LOTS (pre-construction; acquisition leads) ===\nFIELDS: address | sale_date | months_since_deed | buyer_llc | price | lot_size | permit_activity | owner_contacts | notable_flags\n'+deedLines.join('\n')+
-   '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | note\n'+lines.join('\n')+
+   '\n\n=== HOMES (listed / under construction / permitted) ===\nFIELDS: address | group | phase | product | price | months_to_market | neighborhood | est_completion | forecast_completion | expected_inspection | phase_clock_restarts | precon_approval_date | days_since_precon_approval | forecast_source | forecast_confidence | forecast_floor_applied | forecast_date_basis | note\n'+lines.join('\n')+
    '\n\n=== MARKET METRICS (HAR trailing-12mo SOLD vs current ACTIVE+PENDING supply; the absorption/inventory basis for any build/no-build reasoning). months_of_inventory = active_pending / (sold_12mo/12); <6 = tight/undersupplied, 6-9 = balanced, >9 = oversupplied/softening. DOM is median days-on-market (lower=faster velocity). median_list_ppsf is ASKING $/sqft (list-side, not closed). CAUTION: true sold price+close date present on only 49 of 103 sold rows, so treat sold-to-list and margin as directional; DOM and $/sqft-asking are reliable. Always cite sample size (sold_n) and never extrapolate a price-band with sold_n<5 as if it were robust.): '+JSON.stringify(MARKET_METRICS);
 }
 const askHist=[];
@@ -1922,7 +2105,7 @@ function renderSupplyCard(){
   const foot=document.getElementById('sc-foot');
   if(foot){const permits=DATA.reduce((a,r)=>a+(r.kind==='permit'?(r.units||1):0),0);const sold=SOLD.length;
     foot.textContent=DATA.reduce((a,r)=>a+(r.units||1),0)+' homes · '+permits+' permits · '+sold+' closed sales';}
-  if(foot)foot.textContent+=' · Excluded: '+categoryCount('custom')+' Custom / '+categoryCount('sold_off_market')+' Sold Off Market';
+  if(foot)foot.textContent+=' · Excluded: '+categoryCount('custom')+' Custom / '+categoryCount('sold_off_market')+' Sold Off Market / '+categoryCount('needs_clarification')+' Needs Clarification';
 }
 // Ready-within toggle: filter map pins to homes reaching market within N months
 function applyReadyFilter(){
