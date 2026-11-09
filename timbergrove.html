@@ -153,8 +153,8 @@ h1 .thin{display:block;font-size:13px;color:var(--paper2)}
 .phasechip{font-family:var(--lab);font-size:11px;font-weight:600;letter-spacing:.08em;padding:5px 11px;border-radius:6px}
 .phasetime{font-family:var(--lab);font-size:11px;color:var(--sub);letter-spacing:.02em}
 /* ===== Overview cockpit ===== */
-.ovx-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;font-family:var(--lab);font-size:10px;letter-spacing:.12em}
-.ovx-kicker{color:var(--fdn)}.ovx-live{color:#2f9e44}
+.ovx-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:4px;font-family:var(--lab);font-size:10px;letter-spacing:.12em}
+.ovx-kicker{color:var(--fdn)}.ovx-live{color:#2f9e44}.ovx-fresh{display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right}.ovx-insp{color:#8c857a}.ovx-insp.stale{color:#e8590c}.ovx-stale{margin:10px 0 0;padding:8px 12px;border:1px solid #e8590c;border-radius:8px;background:rgba(232,89,12,.08);color:#e8590c;font-family:var(--lab);font-size:12px;letter-spacing:.02em;line-height:1.45}
 .ovx-hero{display:flex;gap:0;border:1px solid var(--bd);border-left:3px solid var(--acc);border-radius:10px;overflow:hidden;margin:12px 0 20px;background:var(--sur2)}
 .ovx-heroL{flex:1.4;padding:18px 20px}
 .ovx-herolbl{font-family:var(--lab);font-size:9.5px;color:var(--sub);letter-spacing:.14em;margin-bottom:6px}
@@ -1637,6 +1637,21 @@ function supplyCurve(){
 
 function stageName(s){ return state.tags[s]?state.tags[s].name:s;}
 function txtOn(hex){const c=(hex||'#888').replace('#','');const r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);return (0.299*r+0.587*g+0.114*b)>150?'#1a1a1a':'#fff';}
+const INSP_STALE_DAYS=10;
+function inspectionFeedAsOf(){
+  let newest='';
+  if(!INSPECTIONS||typeof INSPECTIONS!=='object')return newest;
+  for(const rec of Object.values(INSPECTIONS)){
+    if(!rec||typeof rec!=='object')continue;
+    const d=rec.updated||rec.scraped_at||'';
+    if(/^\d{4}-\d{2}-\d{2}$/.test(d)&&d>newest)newest=d;
+  }
+  return newest;
+}
+function formatFeedDate(iso){
+  const [y,m,d]=iso.split('-').map(Number);
+  return new Date(Date.UTC(y,m-1,d)).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).toUpperCase();
+}
 function buildOverview(){
   const bd=phaseBreakdown();
   const uc=BUILD_PHASES.reduce((n,p)=>n+(bd[p]||0),0);
@@ -1644,9 +1659,25 @@ function buildOverview(){
   const within12=comingOnline(12).count;
   const permitN=DATA.filter(r=>!inventoryCategory(r.id)&&r.kind==='permit'&&!isPromotedPermit(r)).length;
   const deedN=DATA.filter(r=>!inventoryCategory(r.id)&&primaryStage(r.id)==='deed').length;
-  const upd=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-
-  let h='<div class="ovx-top"><span class="ovx-kicker">34DEV · SUPPLY FORECAST</span><span class="ovx-live">● LIVE · UPDATED '+upd.toUpperCase()+'</span></div>';
+  const upd=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/Chicago'});
+  const asOf=inspectionFeedAsOf();
+  let inspHtml,staleNote='';
+  if(!INSP_LOADED&&!INSP_ERR){
+    inspHtml='<span class="ovx-insp">● INSPECTIONS · LOADING</span>';
+  }else if(INSP_ERR){
+    inspHtml='<span class="ovx-insp stale">● INSPECTIONS · FEED NOT LOADED</span>';
+    staleNote='<div class="ovx-stale">Inspection records could not be loaded. The forecast date is today and does not mean inspections were refreshed.</div>';
+  }else if(!asOf){
+    inspHtml='<span class="ovx-insp">● INSPECTIONS · NONE ON FILE</span>';
+    staleNote='<p class="note-foot" style="margin-top:8px">No inspection records are on file for this market.</p>';
+  }else{
+    const todayISO=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    const age=timelineDay(todayISO)-timelineDay(asOf);
+    const stale=age>INSP_STALE_DAYS;
+    inspHtml='<span class="ovx-insp'+(stale?' stale':'')+'">● INSPECTIONS'+(stale?' STALE':'')+' · AS OF '+formatFeedDate(asOf)+'</span>';
+    if(stale)staleNote='<div class="ovx-stale">Inspection data is '+age+' days old (as of '+formatFeedDate(asOf)+'). The forecast date above is computed today and does not mean inspections were refreshed.</div>';
+  }
+  let h='<div class="ovx-top"><span class="ovx-kicker">34DEV · SUPPLY FORECAST</span><span class="ovx-fresh"><span class="ovx-live">● FORECAST · AS OF '+upd.toUpperCase()+'</span>'+inspHtml+'</span></div>'+staleNote;
   h+='<h2>Pipeline Overview</h2><p>Inventory excludes '+categoryCount('custom')+' Custom and '+categoryCount('sold_off_market')+' Sold Off Market homes.</p>';
 
   // HERO: big number + side stats
@@ -1689,7 +1720,7 @@ function buildOverview(){
   h+='<line x1="'+twelveX+'" y1="'+(H-PY)+'" x2="'+twelveX+'" y2="'+twelveY+'" stroke="#e23a47" stroke-dasharray="3,3" stroke-width="1"/>';
   h+='</svg></div>';
 
-  h+='<p class="note-foot">Phases derive from deed, inventory, active-listing and live city inspection data; permits advance as inspections pass.</p>';
+  h+='<p class="note-foot">Phases derive from deed, inventory, active-listing and city inspection data; permits advance as inspections pass. Inspection age is shown separately from the forecast date.</p>';
   document.getElementById('ovBody').innerHTML=h;
 }
 let TL_PRODUCT='all';

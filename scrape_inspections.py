@@ -45,11 +45,13 @@ ACTUAL STATUS WORDING (from the live site)
 NOTE: there is no clean JSON API (the /ilmsapinew/SaveFileX endpoint uses
 an encrypted POST body/response), so we must drive the UI with Playwright.
 
-RUN ON THE MAC MINI (see run_and_deploy.py for the auto-deploy wrapper)
+RUN ON TEGA'S MAC (see inspection_refresh.sh / run_and_deploy.py)
   source ~/insp-venv/bin/activate
   pip install playwright && playwright install chromium
   python3 scrape_inspections.py --permits heights_permits.json \
       --out inspections.json --limit 3 --show     # watch 3 first
+The scheduled job is launchd (Mon/Thu 05:00 America/Chicago), not the
+old Mac Mini crontab. SETUP.md has the install commands.
 =====================================================================
 """
 
@@ -57,6 +59,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from datetime import date
 
 try:
@@ -118,9 +121,16 @@ def parse_date(raw: str) -> str:
 
 # ------------------------------------------------- ILMS-specific extraction
 def open_inspection_history(page, proj: str) -> bool:
-    page.goto(ILMS_URL, wait_until="networkidle", timeout=60000)
+    # domcontentloaded, then an explicit wait for the permit-type step.
+    # A fixed 1.5s pause plus networkidle clicked Submit again on the
+    # project-number form (ILMS build 2026.10.24) and the grid never opened.
+    page.goto(ILMS_URL, wait_until="domcontentloaded", timeout=60000)
 
     proj_input = None
+    try:
+        page.locator("input[type='text']").first.wait_for(state="visible", timeout=30000)
+    except Exception:
+        return False
     for sel in ["input[type='text']", "input:not([type])",
                 "input[name*='roject' i]", "input[id*='roject' i]"]:
         try:
@@ -134,15 +144,21 @@ def open_inspection_history(page, proj: str) -> bool:
         return False
     proj_input.click()
     proj_input.fill("")
-    proj_input.type(str(proj), delay=20)
+    proj_input.fill(str(proj))
 
     if not _click_submit(page):
         return False
-    page.wait_for_timeout(1500)
-    try:
-        page.wait_for_load_state("networkidle", timeout=20000)
-    except Exception:
-        pass
+    # Old UI: a permit-type <select> whose options include "All Types".
+    # Current UI (ILMS 2026.10.24): a Kendo dropdown already on "All Types",
+    # announced by this heading. Any visible <select> is not enough — the
+    # project-number page can host one, and treating it as the second step
+    # clicks Submit before the history form exists.
+    if not _wait_permit_type_step(page):
+        return False
+    # The heading renders before project info arrives. Submitting then
+    # opens an empty Inspection History shell and the grid never fills.
+    if not _wait_project_loaded(page):
+        return False
 
     try:
         sel_el = page.query_selector("select")
@@ -157,14 +173,74 @@ def open_inspection_history(page, proj: str) -> bool:
     except Exception:
         pass
 
-    _click_submit(page, second=True)
-    page.wait_for_timeout(1500)
+    if not _click_submit(page, second=True):
+        return False
+    if not _wait_for_grid(page):
+        # The permit-type Submit sometimes swallows the first click.
+        if not _click_submit(page, second=True):
+            return False
+        if not _wait_for_grid(page):
+            return False
+    _reveal_grid_rows(page)
+    return True
+
+
+def _wait_permit_type_step(page, timeout_ms=30000):
+    deadline = time.time() + timeout_ms / 1000
+    while time.time() < deadline:
+        try:
+            if page.get_by_text("Please Select the desired Permit Type").first.is_visible():
+                return True
+        except Exception:
+            pass
+        try:
+            for sel in page.query_selector_all("select"):
+                if not sel.is_visible():
+                    continue
+                labels = " ".join(_text(opt) for opt in sel.query_selector_all("option"))
+                if re.search(r"all\s*types", labels, re.I):
+                    return True
+        except Exception:
+            pass
+        page.wait_for_timeout(200)
+    return False
+
+
+def _wait_project_loaded(page, timeout_ms=20000):
+    deadline = time.time() + timeout_ms / 1000
+    while time.time() < deadline:
+        try:
+            text = page.inner_text("body")
+        except Exception:
+            text = ""
+        if re.search(r"Address:\s*[0-9A-Za-z]", text):
+            return True
+        page.wait_for_timeout(200)
+    return False
+
+
+def _wait_for_grid(page, timeout_ms=20000):
     try:
         page.wait_for_selector("table.k-grid-table, table.k-grid-header-table",
-                               timeout=20000)
+                               timeout=timeout_ms, state="attached")
+        return True
     except Exception:
         return _grid_present(page)
-    return True
+
+
+def _reveal_grid_rows(page):
+    """Scroll the Kendo grid so virtualized rows are in the DOM before parsing."""
+    try:
+        page.evaluate("""() => {
+          const el = document.querySelector('.k-grid-content');
+          if (!el) return;
+          const step = el.clientHeight || 400;
+          for (let y = 0; y <= el.scrollHeight; y += step) el.scrollTop = y;
+          el.scrollTop = el.scrollHeight;
+        }""")
+        page.wait_for_timeout(200)
+    except Exception:
+        pass
 
 
 def _click_submit(page, second=False):
@@ -266,6 +342,8 @@ def _text(el):
 # ------------------------------------------------------------------- driver
 def scrape(permits, delay, headless, limit):
     out = {}
+    grid_miss = 0
+    errors = 0
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=headless)
         ctx = browser.new_context()
@@ -279,6 +357,10 @@ def scrape(permits, delay, headless, limit):
             try:
                 ok = open_inspection_history(page, proj)
                 if not ok:
+                    page.wait_for_timeout(1000)
+                    ok = open_inspection_history(page, proj)
+                if not ok:
+                    grid_miss += 1
                     print(f"[{i}/{len(todo)}] {proj}  grid did not render  ({addr})")
                     page.wait_for_timeout(int(delay * 1000))
                     continue
@@ -309,10 +391,13 @@ def scrape(permits, delay, headless, limit):
                     }
                     print(f"[{i}/{len(todo)}] {proj}  no inspections yet  ({addr})")
             except Exception as e:
+                errors += 1
                 print(f"[{i}/{len(todo)}] {proj}  ERROR {type(e).__name__}: {e}")
             page.wait_for_timeout(int(delay * 1000))
 
         browser.close()
+    print(f"SCRAPE_SUMMARY attempted={len(todo)} updated={len(out)} "
+          f"grid_miss={grid_miss} errors={errors}")
     return out
 
 

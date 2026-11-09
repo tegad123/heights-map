@@ -1,8 +1,8 @@
 {
   "25020503": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3779 SYRACUSE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -90,8 +90,8 @@
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -138,8 +138,8 @@
   },
   "25037686": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "1807 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -243,11 +243,19 @@
   },
   "25117126": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2426 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -273,9 +281,33 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-04",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-05",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -294,6 +326,14 @@
         "date": "2026-09-18",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-11-04",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -331,7 +371,7 @@
       {
         "type": "Site Final",
         "permit_type": "SFR New",
-        "date": "2026-08-05",
+        "date": "2026-10-05",
         "result": "Failed",
         "raw": "Action Required",
         "inspector": ""
@@ -351,16 +391,40 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
       }
     ]
   },
   "25083081": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2357 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-21",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -386,6 +450,14 @@
         "inspector": ""
       },
       {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "STORM SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-03-31",
@@ -396,9 +468,9 @@
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2026-04-28",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-11-03",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -412,9 +484,9 @@
       {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
-        "date": "2026-04-27",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-11-05",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -439,6 +511,14 @@
         "date": "2026-06-04",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-11-03",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -509,8 +589,8 @@
   },
   "25101670": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "5312 CHEROKEE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -555,6 +635,30 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-09",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-04-10",
@@ -581,9 +685,9 @@
       {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
-        "date": "2026-09-21",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -598,8 +702,8 @@
   },
   "25053572": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3753 DRAKE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -734,12 +838,28 @@
     ]
   },
   "26042600": {
-    "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Partial",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2341 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-09",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "EV Level 1",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-02",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -757,9 +877,33 @@
         "inspector": ""
       },
       {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-11-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-19",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-16",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -770,6 +914,22 @@
         "date": "2026-08-10",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -784,11 +944,27 @@
   },
   "26033181": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2336 Dunstan Rd, Houston, TX 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
@@ -860,13 +1036,21 @@
         "result": "Failed",
         "raw": "Action Required",
         "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "25038586": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2404 QUENBY ST 77005",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -1194,8 +1378,8 @@
   },
   "25037688": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "1811 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1299,11 +1483,19 @@
   },
   "25117127": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2424 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -1329,9 +1521,33 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-04",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-04-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-05",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -1350,6 +1566,14 @@
         "date": "2026-09-21",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-11-04",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -1399,13 +1623,29 @@
         "result": "Failed",
         "raw": "Action Required",
         "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
       }
     ]
   },
   "25052444": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3746 CHILDRESS ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1693,8 +1933,8 @@
   },
   "25106029": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2334 DUNSTAN RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1736,6 +1976,22 @@
         "date": "2026-06-22",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-22",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -1806,11 +2062,27 @@
   },
   "26031875": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2337 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-03",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -1820,11 +2092,27 @@
         "inspector": ""
       },
       {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "GROUND IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-07-13",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -1879,8 +2167,8 @@
   },
   "26017678": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "5335 MANDELL ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1896,6 +2184,14 @@
         "type": "GROUND IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-07-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-11-02",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -1951,9 +2247,9 @@
     ]
   },
   "26033243": {
-    "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3711 Purdue St, Houston, TX 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1974,11 +2270,27 @@
         "inspector": ""
       },
       {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Piers AM",
         "permit_type": "Building Pmt",
         "date": "2026-09-08",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-09",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -1992,11 +2304,11 @@
     ]
   },
   "25038587": {
-    "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Passed",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2406 QUENBY ST 77005",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -2231,6 +2543,14 @@
         "inspector": ""
       },
       {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2025-10-02",
@@ -2290,8 +2610,16 @@
         "type": "STORM SEWER",
         "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-09-24",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -2314,8 +2642,8 @@
   },
   "25078146": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "5329 DORA ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2555,8 +2883,8 @@
   },
   "25072450": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "5303 CHEROKEE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2740,8 +3068,8 @@
   },
   "25068930": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2325 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3092,11 +3420,11 @@
     ]
   },
   "25076059": {
-    "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2410 QUENBY ST 77005",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -3213,9 +3541,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-08-07",
+        "date": "2026-10-08",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3339,6 +3667,14 @@
         "inspector": ""
       },
       {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2025-11-04",
@@ -3357,9 +3693,9 @@
       {
         "type": "Prefill",
         "permit_type": "SFR New",
-        "date": "2026-08-11",
+        "date": "2026-10-07",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3373,17 +3709,25 @@
       {
         "type": "3rd EC",
         "permit_type": "SFR New",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Site Final",
         "permit_type": "SFR New",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Flood Final",
+        "permit_type": "SFR New",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3419,6 +3763,14 @@
         "inspector": ""
       },
       {
+        "type": "P3 FINAL",
+        "permit_type": "*P3*ADD-PL-PMT",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "GROUND IN",
         "permit_type": "ADDL PL PMT #4",
         "date": "2026-07-20",
@@ -3449,16 +3801,32 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "V2 Final",
+        "permit_type": "RES ELEV INSTL",
+        "date": "2026-09-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "26038687": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2405 NOTTINGHAM ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -3476,6 +3844,14 @@
         "inspector": ""
       },
       {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
         "date": "2026-07-29",
@@ -3484,11 +3860,27 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-09-10",
+        "date": "2026-10-26",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3508,9 +3900,33 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-29",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-08-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-19",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3527,8 +3943,8 @@
   },
   "26027179": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3771 PURDUE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3565,6 +3981,14 @@
         "inspector": ""
       },
       {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-26",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "Piers AM",
         "permit_type": "Building Pmt",
         "date": "2026-06-23",
@@ -3576,24 +4000,32 @@
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Brick Tie",
         "permit_type": "Building Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-08-13",
+        "date": "2026-09-28",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3608,6 +4040,14 @@
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
         "date": "2026-06-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-02",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3648,8 +4088,8 @@
   },
   "25037683": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "1803 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3753,8 +4193,8 @@
   },
   "25082414": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2428 NOTTINGHAM ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3820,6 +4260,14 @@
         "date": "2026-04-02",
         "result": "Failed",
         "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "WATER SERVICE",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3970,8 +4418,8 @@
   },
   "25076577": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3802 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -4299,8 +4747,8 @@
   },
   "25077921": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3782 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4515,11 +4963,11 @@
     ]
   },
   "25076060": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Pending",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2412 QUENBY ST 77005",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -4644,9 +5092,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-09-25",
+        "date": "2026-10-08",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -4762,6 +5210,14 @@
         "inspector": ""
       },
       {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-06-03",
@@ -4780,9 +5236,9 @@
       {
         "type": "Prefill",
         "permit_type": "SFR New",
-        "date": "2026-08-11",
+        "date": "2026-10-05",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -4796,23 +5252,31 @@
       {
         "type": "3rd EC",
         "permit_type": "SFR New",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Site Final",
         "permit_type": "SFR New",
-        "date": "2026-08-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "FINAL",
         "permit_type": "GRADING , FILL",
         "date": "2026-08-27",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-12",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -4856,13 +5320,21 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "V2 Final",
+        "permit_type": "RES ELEV INSTL",
+        "date": "2026-10-09",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
       }
     ]
   },
   "26019294": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "2328 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4878,6 +5350,14 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-08-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-19",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -4902,6 +5382,14 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-08-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-01",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -4941,9 +5429,9 @@
       {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-09-10",
+        "date": "2026-11-02",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -4982,6 +5470,14 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-09-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-26",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -5046,11 +5542,27 @@
   },
   "26030757": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
     "address": "3743 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "GROUND IN",
         "permit_type": "Plumbing Pmt",
@@ -5068,9 +5580,41 @@
         "inspector": ""
       },
       {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Piers AM",
         "permit_type": "Building Pmt",
         "date": "2026-06-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-19",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -5092,6 +5636,14 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-19",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-08-05",
@@ -5108,6 +5660,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-06-11",
@@ -5116,5 +5676,13 @@
         "inspector": ""
       }
     ]
+  },
+  "26081845": {
+    "status": "None",
+    "updated": "2026-11-08",
+    "scraped_at": "2026-11-08",
+    "address": "3727 Westerman St, Houston, TX 77005",
+    "final_project_inspection_outstanding": true,
+    "inspections": []
   }
 }
