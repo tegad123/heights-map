@@ -43,7 +43,7 @@ function page(next, { error = '', status = 401 } = {}) {
   .err{margin:10px 0 0;color:#cf2230;font-size:13px}
 </style></head>
 <body><form method="post" action="${LOGIN}">
-  <h1>CQ Houston supply maps</h1>
+  <h1>34 Dev</h1>
   <p>Enter the password to continue.</p>
   <input type="password" name="password" autocomplete="current-password" placeholder="Password" autofocus required>
   <input type="hidden" name="next" value="${esc(next)}">
