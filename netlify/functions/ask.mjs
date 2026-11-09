@@ -46,7 +46,7 @@ DATA SEMANTICS YOU MUST RESPECT (these prevent real analytical errors):
 - Plain text only — no markdown formatting.`;
 
 export default async (req) => {
-  if (!(await isAuthorized(req, process.env.SITE_PASSWORD))) return Response.json({ answer: 'Sign in to the map first.' }, { status: 401 });
+  if (!(await isAuthorized(req, process.env.MAPSITE_PASSWORD))) return Response.json({ answer: 'Sign in to the map first.' }, { status: 401 });
   if (req.method !== 'POST') return Response.json({ answer: 'POST only' }, { status: 405 });
   if (!process.env.ANTHROPIC_API_KEY) return Response.json({ answer: 'Server not configured: ANTHROPIC_API_KEY is missing in Netlify environment variables.' }, { status: 500 });
   try {

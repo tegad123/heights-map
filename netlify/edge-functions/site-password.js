@@ -1,13 +1,13 @@
 // Password gate for the whole site. Every request needs the hm_auth session
-// cookie (set by the sign-in form) or HTTP Basic auth carrying SITE_PASSWORD.
-// With SITE_PASSWORD unset the site fails closed: nothing is served.
+// cookie (set by the sign-in form) or HTTP Basic auth carrying MAPSITE_PASSWORD.
+// With MAPSITE_PASSWORD unset the site fails closed: nothing is served.
 import { COOKIE, MAX_AGE, isAuthorized, same, tokenFor } from '../lib/site-auth.mjs';
 
 const LOGIN = '/__login';
 const LOGOUT = '/__logout';
 
 function sitePassword() {
-  return globalThis.Netlify?.env?.get('SITE_PASSWORD') || '';
+  return globalThis.Netlify?.env?.get('MAPSITE_PASSWORD') || '';
 }
 
 function safeNext(value) {
@@ -61,7 +61,7 @@ export default async (request, context) => {
   const url = new URL(request.url);
   const password = sitePassword();
   if (!password) {
-    return new Response('Site password is not configured (set SITE_PASSWORD in Netlify).',
+    return new Response('Site password is not configured (set MAPSITE_PASSWORD in Netlify).',
       { status: 503, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store' } });
   }
 

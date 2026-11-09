@@ -1,7 +1,7 @@
 // Site password check shared by the edge gate and the Ask-the-Map function.
-// The password lives only in the SITE_PASSWORD Netlify environment variable:
+// The password lives only in the MAPSITE_PASSWORD Netlify environment variable:
 // this repo is public, so it must never be committed. The session cookie holds
-// a SHA-256 of the password, so changing SITE_PASSWORD signs everyone out.
+// a SHA-256 of the password, so changing MAPSITE_PASSWORD signs everyone out.
 
 export const COOKIE = 'hm_auth';
 export const MAX_AGE = 60 * 60 * 24 * 30;
