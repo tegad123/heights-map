@@ -1,8 +1,8 @@
 {
   "24048105": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2121 Hoskins Dr D 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -42,8 +42,8 @@
   },
   "24106841": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "3432 Stanling Brook Ln 77080",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -315,10 +315,10 @@
   },
   "25000646": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2123 Hoskins Dr B 77080",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "SEWER",
@@ -388,8 +388,8 @@
   },
   "25031740": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6414 Teluco St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -709,8 +709,8 @@
   },
   "25039604": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9710 Larston St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -1014,10 +1014,10 @@
   },
   "25044598": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9603 Carousel Lane, Houston, TX",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -1287,8 +1287,8 @@
   },
   "25050580": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9734 Cedardale Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1552,8 +1552,8 @@
   },
   "25052144": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8034 Turquoise Ln 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1753,8 +1753,8 @@
   },
   "25053607": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1542 Antoine Dr 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -2010,8 +2010,8 @@
   },
   "25057198": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9254 Elizabeth Rd 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2203,8 +2203,8 @@
   },
   "25059889": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1609 Bayram Dr 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -2508,8 +2508,8 @@
   },
   "25063328": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1510 Longacre Dr 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -2837,8 +2837,8 @@
   },
   "25069400": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6606 Clawson St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -3141,9 +3141,9 @@
     ]
   },
   "25072120": {
-    "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8306 Western Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3164,6 +3164,14 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-07-31",
@@ -3172,9 +3180,25 @@
         "inspector": ""
       },
       {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2025-10-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-02",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3190,9 +3214,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-02-03",
+        "date": "2026-10-12",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3204,11 +3228,19 @@
         "inspector": ""
       },
       {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2025-10-28",
+        "date": "2026-10-14",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3223,6 +3255,14 @@
         "type": "Brick Tie",
         "permit_type": "Building Pmt",
         "date": "2026-07-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-15",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3246,9 +3286,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-05-04",
+        "date": "2026-10-14",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3263,6 +3303,22 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-03-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-09",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3286,31 +3342,63 @@
       {
         "type": "Driveway PM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-01",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Sidewalk PM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-01",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "15 Final",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-16",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-05-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "RECONNECT",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ADD EL FINAL 1",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-10-14",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3324,19 +3412,51 @@
         "inspector": ""
       },
       {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Gas Test",
         "permit_type": "*P1*ADD-PL-PMT",
-        "date": "2026-07-01",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "25076502": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9306 Livernois Rd 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3386,6 +3506,14 @@
         "date": "2026-06-15",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -3461,6 +3589,14 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-03-30",
@@ -3472,8 +3608,8 @@
   },
   "25079583": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9741 Long Branch Ln 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3528,15 +3664,15 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-04-02",
+        "date": "2026-10-06",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-06-22",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -3665,8 +3801,8 @@
   },
   "25082851": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1306 Zora Street, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3874,8 +4010,8 @@
   },
   "25083859": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7210 Shadyvilla Ln 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4098,9 +4234,9 @@
     ]
   },
   "25089873": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2309 Hollister Street, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4129,6 +4265,14 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-06-15",
@@ -4139,9 +4283,9 @@
       {
         "type": "ELECT FINAL",
         "permit_type": "Electrical Pmt",
-        "date": "2026-09-18",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -4281,6 +4425,14 @@
         "inspector": ""
       },
       {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "GRILLE SEAL",
         "permit_type": "HVAC Permit",
         "date": "2026-04-17",
@@ -4329,6 +4481,14 @@
         "inspector": ""
       },
       {
+        "type": "VISIT, ETC.",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-02-17",
@@ -4337,9 +4497,25 @@
         "inspector": ""
       },
       {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2025-12-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -4372,8 +4548,8 @@
   },
   "25090711": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "10418 Brinwood Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4637,8 +4813,8 @@
   },
   "25091818": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "10318 Raritan Dr 77043",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -4982,8 +5158,8 @@
   },
   "25096893": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9327 Willowview Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5279,8 +5455,8 @@
   },
   "25098803": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1625 Pine Chase Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5312,6 +5488,14 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-01-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-01",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -5479,17 +5663,25 @@
       {
         "type": "TEMP GAS INSP",
         "permit_type": "*PG*TEMP GAS",
-        "date": "2026-09-17",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "25104800": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9713 Larston Street, Houston, TX",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -5793,8 +5985,8 @@
   },
   "25107776": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8550 Montridge Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5815,9 +6007,25 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-09-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-15",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -5834,8 +6042,8 @@
         "type": "Gas Test",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -5965,13 +6173,45 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "P1 FINAL",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "25112843": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6502 Saxet St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6032,6 +6272,14 @@
         "inspector": ""
       },
       {
+        "type": "LATH",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-14",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
         "date": "2026-03-16",
@@ -6061,6 +6309,14 @@
         "date": "2026-03-11",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-09-30",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
         "inspector": ""
       },
       {
@@ -6110,13 +6366,197 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "Date Received",
+        "permit_type": "Wastewater",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Str Cut Permit",
+        "permit_type": "Wastewater",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Lane Closure",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Bore and Jack",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Bedding & Fill",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ce-Sand Sample",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Manhole Instal",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Manhole Drop",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "INVERT",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Pipe Instal",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "MH/Pipe Test",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Lab Reports",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Mandrel Test",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Punch List",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "WW Final",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Restoration",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Mylar",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Aband Sewer",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Clean Sewer",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Flowable Fill",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Manufact Plug",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Dispose Waste",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Plug End Main",
+        "permit_type": "Wastewater",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "No Action Required",
+        "inspector": ""
       }
     ]
   },
   "25114964": {
-    "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1707 Bayram Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6179,9 +6619,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-09-18",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-24",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6196,8 +6636,8 @@
         "type": "PLUMBING FINAL",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6219,9 +6659,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-09-23",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6251,9 +6691,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-09-23",
+        "date": "2026-09-25",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6363,17 +6803,17 @@
       {
         "type": "FINAL",
         "permit_type": "GRADING , FILL",
-        "date": "2026-09-22",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "TREE/SHRUB FNL",
         "permit_type": "LAND-TREE/SHRB",
-        "date": "2026-09-23",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6420,8 +6860,8 @@
   },
   "25115547": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2010 Antoine Dr C 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6477,8 +6917,8 @@
   },
   "25115551": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2008 Antoine Dr C 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6533,11 +6973,11 @@
     ]
   },
   "25118930": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1710 Ronson Rd 77055",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -6783,16 +7223,32 @@
         "type": "DECOR AD FINAL",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SITE VISIT",
         "permit_type": "OUTDOOR KITCHEN",
-        "date": "2026-09-25",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-09-28",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6822,9 +7278,9 @@
     ]
   },
   "26002506": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1618 Ronson Rd 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6911,9 +7367,9 @@
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2026-09-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6935,9 +7391,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-09-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -6959,9 +7415,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-09-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7055,17 +7511,17 @@
       {
         "type": "FINAL",
         "permit_type": "GRADING , FILL",
-        "date": "2026-09-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "TREE/SHRUB FNL",
         "permit_type": "LAND-TREE/SHRB",
-        "date": "2026-09-10",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7111,9 +7567,9 @@
     ]
   },
   "26006198": {
-    "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7602 Bryonwood Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7136,7 +7592,7 @@
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2026-09-04",
+        "date": "2026-10-15",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -7156,13 +7612,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "26013408": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1930 Chaparral Dr 77043",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7282,11 +7754,19 @@
   },
   "26024144": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7106 Raton St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
       {
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
@@ -7296,11 +7776,27 @@
         "inspector": ""
       },
       {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-05-14",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -7322,9 +7818,9 @@
       {
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-09-23",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7410,17 +7906,17 @@
       {
         "type": "Driveway AM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-25",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Sidewalk AM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-25",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7435,8 +7931,8 @@
   },
   "26028316": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1457 Confederate Road, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7495,16 +7991,48 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "26035414": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8506 Montridge Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -7530,11 +8058,27 @@
         "inspector": ""
       },
       {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
         "date": "2026-08-11",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-30",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -7572,9 +8116,9 @@
       {
         "type": "COVER",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7584,13 +8128,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "Date Received",
+        "permit_type": "Wastewater",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Str Cut Permit",
+        "permit_type": "Wastewater",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "26038581": {
-    "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1413 Caywood Ln A 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7627,6 +8187,14 @@
         "inspector": ""
       },
       {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-09-23",
@@ -7638,8 +8206,8 @@
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7654,8 +8222,8 @@
   },
   "26040024": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8029 Ridgeview Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7700,6 +8268,22 @@
         "inspector": ""
       },
       {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-06-26",
@@ -7711,11 +8295,19 @@
   },
   "25022791": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1702 Sedola Ln, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
@@ -7760,8 +8352,8 @@
   },
   "26051326": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1507 Jacquelyn Dr, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7798,6 +8390,14 @@
         "inspector": ""
       },
       {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-09-21",
@@ -7808,9 +8408,9 @@
     ]
   },
   "26060678": {
-    "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "10407 Metronome Dr, Houston, TX 77043",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7829,13 +8429,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "24048106": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2121 Hoskins Dr E 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -7875,8 +8491,8 @@
   },
   "24106842": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "3434 Stanling Brook Ln 77080",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -8140,10 +8756,10 @@
   },
   "25000647": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2123 Hoskins Dr A 77080",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "SEWER",
@@ -8213,8 +8829,8 @@
   },
   "25033587": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1426 Huge Oaks St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -8534,8 +9150,8 @@
   },
   "25041978": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9214 Westview Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -8743,8 +9359,8 @@
   },
   "25045238": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7214 Hartland Ave 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -8776,6 +9392,14 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2025-09-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-01",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -8877,6 +9501,22 @@
         "inspector": ""
       },
       {
+        "type": "Driveway AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-10-14",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway PM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-10-13",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-01-08",
@@ -8899,13 +9539,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "25050991": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9621 Larston St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -8992,9 +9648,9 @@
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2025-11-10",
+        "date": "2026-10-01",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -9014,6 +9670,14 @@
         "inspector": ""
       },
       {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-03-13",
@@ -9024,9 +9688,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-03-24",
+        "date": "2026-10-05",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -9041,6 +9705,14 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-02-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-09-30",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -9062,11 +9734,35 @@
         "inspector": ""
       },
       {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-09-21",
         "result": "Pending",
         "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -9105,8 +9801,8 @@
   },
   "25052483": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1719 Bayram Dr 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -9410,8 +10106,8 @@
   },
   "25054529": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1713 Bayram Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -9763,8 +10459,8 @@
   },
   "25057526": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1825 Huge Oaks St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -10012,8 +10708,8 @@
   },
   "25059963": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1521 Bracher St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -10325,16 +11021,16 @@
   },
   "25063548": {
     "status": "None",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "27 Rollingwood Dr 77080",
     "final_project_inspection_outstanding": false,
     "inspections": []
   },
   "25069740": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7414 Schiller Street, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -10790,8 +11486,8 @@
   },
   "25073643": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7311 Jalna St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -11087,8 +11783,8 @@
   },
   "25076534": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1918 Ridgecrest Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -11344,8 +12040,8 @@
   },
   "25079698": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6618 Sivley St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -11510,6 +12206,14 @@
         "inspector": ""
       },
       {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-03-27",
@@ -11552,9 +12256,9 @@
     ]
   },
   "25083570": {
-    "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "3811 Peppermill Rd 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -11665,9 +12369,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-04-23",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -11801,9 +12505,9 @@
       {
         "type": "Prefill",
         "permit_type": "SFR New",
-        "date": "2026-04-22",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -11817,17 +12521,17 @@
       {
         "type": "3rd EC",
         "permit_type": "SFR New",
-        "date": "2026-05-12",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Site Final",
         "permit_type": "SFR New",
-        "date": "2026-04-15",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -11882,8 +12586,8 @@
   },
   "25084770": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1734 Hollister Street, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12083,8 +12787,8 @@
   },
   "25090331": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7608 Janak Spring St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12219,9 +12923,9 @@
       {
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-22",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -12238,6 +12942,14 @@
         "date": "2026-08-24",
         "result": "Pending",
         "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-12",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -12260,8 +12972,8 @@
   },
   "25091261": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8005 Ridgeview Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12397,8 +13109,8 @@
   },
   "25093749": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8033 Ridgeview Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12638,8 +13350,8 @@
   },
   "25097957": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2107 Mckean Dr 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -12660,9 +13372,25 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-08-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -12695,8 +13423,8 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -12711,8 +13439,8 @@
         "type": "PLUMBING FINAL",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -12766,9 +13494,9 @@
       {
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -12807,6 +13535,14 @@
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-07-22",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -13031,8 +13767,8 @@
   },
   "25099784": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9733 Warwana Rd 77080",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -13464,8 +14200,8 @@
   },
   "25105377": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9603 Bundy Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -13494,6 +14230,14 @@
         "inspector": ""
       },
       {
+        "type": "ROUGH IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "WATER SERVICE",
         "permit_type": "Plumbing Pmt",
         "date": "2026-06-10",
@@ -13507,6 +14251,22 @@
         "date": "2026-06-23",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -13526,6 +14286,14 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-08-14",
@@ -13536,9 +14304,9 @@
       {
         "type": "COVER",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-21",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -13552,9 +14320,9 @@
     ]
   },
   "25107975": {
-    "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1909 Restridge Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -13570,8 +14338,8 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-06-08",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -13585,15 +14353,23 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-09-18",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "WATER SERVICE",
         "permit_type": "Plumbing Pmt",
         "date": "2026-06-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -13617,33 +14393,33 @@
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
-        "date": "2026-08-05",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
         "date": "2026-06-18",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-07-30",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-09-14",
-        "result": "Pending",
-        "raw": "Permit Currently on Hold",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -13658,8 +14434,8 @@
   },
   "25113917": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1514 Afton St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -13675,6 +14451,14 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-07-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-08",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -13798,13 +14582,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "25115355": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1305 Confederate Rd 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -13812,6 +14612,14 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-06-18",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-29",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -13908,8 +14716,8 @@
   },
   "25115548": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2010 Antoine Dr D 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -13965,8 +14773,8 @@
   },
   "25115552": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2008 Antoine Dr D 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14022,8 +14830,8 @@
   },
   "25119566": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1603 Lynnview Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14127,8 +14935,8 @@
   },
   "26002756": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1415 Murray Bay St B 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14165,9 +14973,25 @@
         "inspector": ""
       },
       {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-07-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-14",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -14191,25 +15015,25 @@
       {
         "type": "COVER",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-23",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-15",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       }
     ]
   },
   "26008892": {
     "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1758 Bayram Dr 77055",
-    "final_project_inspection_outstanding": false,
+    "final_project_inspection_outstanding": true,
     "inspections": []
   },
   "26015149": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1606 Monarch Oaks St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14361,10 +15185,10 @@
   },
   "26025911": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1606 Afton St 77055",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "ROUGH",
@@ -14514,8 +15338,8 @@
   },
   "26028696": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1737 Bayram Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14563,8 +15387,8 @@
   },
   "26037492": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1510 Lynnview Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14612,6 +15436,14 @@
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
         "date": "2026-09-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-08",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -14676,8 +15508,8 @@
   },
   "26039183": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1402 Pine Chase Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14700,9 +15532,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-09-02",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-15",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -14789,8 +15621,8 @@
   },
   "26041424": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9741 Warwana Rd 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14926,16 +15758,16 @@
   },
   "25117797": {
     "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7006 Northampton Way, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": []
   },
   "26056694": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1605 Pine Chase Dr, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -14959,8 +15791,8 @@
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-09-29",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -14991,8 +15823,8 @@
   },
   "26066396": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7203 Housman St, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15032,8 +15864,8 @@
   },
   "24066320": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2629 Lake Kolbe Lane, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15337,8 +16169,8 @@
   },
   "24106843": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "3436 Stanling Brook Ln 77080",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -15602,10 +16434,10 @@
   },
   "25000648": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2123 Hoskins Dr C 77080",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "SEWER",
@@ -15675,8 +16507,8 @@
   },
   "25035063": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7410 Dearborn St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -15916,8 +16748,8 @@
   },
   "25042462": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1419 Murray Bay St 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -15997,8 +16829,8 @@
   },
   "25049938": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7210 Jalna St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -16294,8 +17126,8 @@
   },
   "25051002": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1922 Norcrest Dr Drive, Houston, TX",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -16615,8 +17447,8 @@
   },
   "25052869": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8719 Kempwood Dr 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -16928,8 +17760,8 @@
   },
   "25055021": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1503 Caywood Ln A 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -17217,8 +18049,8 @@
   },
   "25059588": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9839 Warwana Rd 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -17490,15 +18322,31 @@
   },
   "25060526": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9626 Panola Way, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
       {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-07-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-13",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -17619,8 +18467,8 @@
   },
   "25066258": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8017 Turquoise Lane, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -17908,8 +18756,8 @@
   },
   "25069818": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1517 Ronson Rd 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -18437,8 +19285,8 @@
   },
   "25073720": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1618 Huge Oaks St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -18782,8 +19630,8 @@
   },
   "25076563": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7118 Schiller St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19047,8 +19895,8 @@
   },
   "25082629": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6618 Housman St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19200,8 +20048,8 @@
   },
   "25083601": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1634 ANTOINE, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19640,9 +20488,9 @@
     ]
   },
   "25087139": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2311 Hollister Street, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19671,6 +20519,14 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-06-15",
@@ -19681,9 +20537,9 @@
       {
         "type": "ELECT FINAL",
         "permit_type": "Electrical Pmt",
-        "date": "2026-09-18",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -19823,6 +20679,14 @@
         "inspector": ""
       },
       {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "GRILLE SEAL",
         "permit_type": "HVAC Permit",
         "date": "2026-04-17",
@@ -19871,9 +20735,25 @@
         "inspector": ""
       },
       {
+        "type": "VISIT, ETC.",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-02-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -19884,6 +20764,14 @@
         "date": "2026-06-24",
         "result": "Pending",
         "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -19914,8 +20802,8 @@
   },
   "25090332": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7610 Janak Spring St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -19928,9 +20816,25 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-06-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-08",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -19962,15 +20866,23 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-05-28",
+        "date": "2026-09-29",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-07-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -20058,9 +20970,9 @@
       {
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-22",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -20077,6 +20989,14 @@
         "date": "2026-03-23",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-12",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -20099,11 +21019,19 @@
   },
   "25091335": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7726 Betty Jane Ln 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "GROUND IN",
         "permit_type": "Plumbing Pmt",
@@ -20145,6 +21073,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-14",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-07-24",
@@ -20156,8 +21092,8 @@
   },
   "25095281": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9814 Cedardale Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20324,9 +21260,9 @@
     ]
   },
   "25097958": {
-    "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2109 Mckean Dr 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20531,6 +21467,14 @@
         "inspector": ""
       },
       {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-10-06",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
         "type": "FINAL",
         "permit_type": "GRADING , FILL",
         "date": "2026-08-25",
@@ -20590,8 +21534,8 @@
   },
   "25102758": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1941 Coulcrest Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20879,8 +21823,8 @@
   },
   "25106504": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1402 Glourie Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -20927,17 +21871,17 @@
       {
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
-        "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Brick Tie",
         "permit_type": "Building Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -20973,6 +21917,14 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-08-31",
@@ -21000,8 +21952,8 @@
   },
   "25109947": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7609 Bellewood Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21128,9 +22080,9 @@
     ]
   },
   "25114004": {
-    "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7719 Bryonwood Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21145,9 +22097,9 @@
       {
         "type": "MLS",
         "permit_type": "Electrical Pmt",
-        "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -21161,9 +22113,9 @@
       {
         "type": "ELECT FINAL",
         "permit_type": "Electrical Pmt",
-        "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -21193,9 +22145,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-04-09",
+        "date": "2026-10-05",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -21207,19 +22159,27 @@
         "inspector": ""
       },
       {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2026-02-12",
-        "result": "Failed",
-        "raw": "Admin. Correction",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Piers AM",
         "permit_type": "Building Pmt",
-        "date": "2026-02-18",
+        "date": "2026-10-06",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -21234,6 +22194,14 @@
         "type": "Brick Tie",
         "permit_type": "Building Pmt",
         "date": "2026-04-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -21257,9 +22225,9 @@
       {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
-        "date": "2026-02-25",
+        "date": "2026-10-05",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -21282,6 +22250,14 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-04-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-01",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -21322,14 +22298,54 @@
         "type": "DECOR AD FINAL",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECO AE FINAL",
+        "permit_type": "ADD DECO APP#2",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SITE VISIT",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "OUTDOOR KITCHEN",
+        "date": "2026-10-14",
         "result": "Pending",
-        "raw": "Inspection Requested",
+        "raw": "Canceled/Revoked",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-03-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-10-05",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -21354,8 +22370,8 @@
   },
   "25115545": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2010 Antoine Dr A 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21595,8 +22611,8 @@
   },
   "25115549": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2008 Antoine Dr A 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21644,8 +22660,8 @@
   },
   "25115785": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1337 Confederate Rd 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21765,8 +22781,8 @@
   },
   "25120167": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8819 Emnora Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -21958,8 +22974,8 @@
   },
   "26004287": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9814 Warwana Rd 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22087,8 +23103,8 @@
   },
   "26010960": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1116 Oak Tree Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22248,8 +23264,8 @@
   },
   "26017596": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1513 Story St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22390,11 +23406,19 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Driveway AM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-25",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -22441,8 +23465,8 @@
   },
   "26028064": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "48 Rollingwood Dr 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22570,8 +23594,8 @@
   },
   "26030329": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8046 Turquoise Ln 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22643,16 +23667,16 @@
   },
   "26037955": {
     "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8209 Western Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": []
   },
   "26039551": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6910 Schiller St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22668,6 +23692,14 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-09-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -22731,9 +23763,9 @@
       {
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
-        "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -22753,6 +23785,14 @@
         "inspector": ""
       },
       {
+        "type": "INSULATION",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-08-13",
@@ -22769,19 +23809,27 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Driveway PM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "Sidewalk PM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -22804,8 +23852,8 @@
   },
   "26046939": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7127 Northampton Way 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -22821,6 +23869,30 @@
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-08-20",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -22853,17 +23925,49 @@
   },
   "26066682": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8525 Panatella Dr, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
       {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-05",
+        "result": "Pending",
+        "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
         "type": "Piers AM",
         "permit_type": "Building Pmt",
         "date": "2026-09-29",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -22905,16 +24009,40 @@
         "result": "Failed",
         "raw": "Action Required",
         "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "*P3*ADD-PL-PMT",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "*P3*ADD-PL-PMT",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "26039486": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9017 Kerrwood Ln C, Houston, TX 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "GROUND IN",
+        "permit_type": "*P1*ADD-PL-PMT",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "CELL >60 FINAL",
         "permit_type": "CELL TOWER >60",
@@ -22927,8 +24055,8 @@
   },
   "24067464": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2703 Lake Kolbe Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -23240,8 +24368,8 @@
   },
   "24106844": {
     "status": "Pending",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "3438 Stanling Brook Ln 77080",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -23497,11 +24625,19 @@
   },
   "25020397": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1412 Story St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
@@ -23514,6 +24650,14 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-03-31",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Gas Test",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -23653,13 +24797,29 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
   "25036628": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9838 Briarwild Ln 77080",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -24011,8 +25171,8 @@
   },
   "25042729": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1423 Murray Bay St 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -24108,8 +25268,8 @@
   },
   "25050242": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9537 Kerrwood Lane, Houston, TX",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -24421,8 +25581,8 @@
   },
   "25051140": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1415 Lynnview Dr 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -24734,8 +25894,8 @@
   },
   "25052870": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2816 Lake Kolbe Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -25047,8 +26207,8 @@
   },
   "25055031": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1503 Caywood Ln B 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -25496,8 +26656,8 @@
   },
   "25059656": {
     "status": "Pending",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "6610 Housman St 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -25793,8 +26953,8 @@
   },
   "25061492": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9601 Cedardale Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -25929,9 +27089,9 @@
       {
         "type": "Sidewalk AM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-09-23",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-01",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -25962,8 +27122,8 @@
   },
   "25066345": {
     "status": "Passed",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7119 Housman Street, Houston, TX",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -26203,8 +27363,8 @@
   },
   "25072116": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8029 Longridge Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -26484,8 +27644,8 @@
   },
   "25073980": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9154 Larston St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -26661,8 +27821,8 @@
   },
   "25079253": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9350 Rosstown Way, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -26941,9 +28101,9 @@
     ]
   },
   "25082681": {
-    "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1621 Bayram Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -26964,9 +28124,25 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-04-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-13",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -26998,9 +28174,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-03-16",
+        "date": "2026-10-07",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -27012,19 +28188,27 @@
         "inspector": ""
       },
       {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "WATER SERVICE",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-05-08",
-        "result": "Failed",
-        "raw": "Admin. Correction",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2025-12-22",
+        "date": "2026-10-13",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -27044,6 +28228,14 @@
         "inspector": ""
       },
       {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2025-12-22",
@@ -27054,9 +28246,9 @@
       {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-02-13",
+        "date": "2026-10-13",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -27070,9 +28262,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-03-26",
+        "date": "2026-10-13",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -27087,6 +28279,14 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-03-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-08",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27140,9 +28340,25 @@
         "inspector": ""
       },
       {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "COVER",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-03-19",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27156,9 +28372,33 @@
         "inspector": ""
       },
       {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "STORM SEWER",
         "permit_type": "*P1*ADD-PL-PMT",
         "date": "2026-09-03",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "P2 FINAL",
+        "permit_type": "*P2*ADD-PL-PMT",
+        "date": "2026-09-25",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27183,8 +28423,8 @@
   },
   "25083856": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7208 Shadyvilla Lane, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -27279,9 +28519,9 @@
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2026-07-07",
+        "date": "2026-10-07",
         "result": "Failed",
-        "raw": "Admin. Correction",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -27295,9 +28535,9 @@
       {
         "type": "Struct Final",
         "permit_type": "Building Pmt",
-        "date": "2026-07-07",
+        "date": "2026-10-07",
         "result": "Failed",
-        "raw": "Admin. Correction",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -27319,9 +28559,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-07-07",
+        "date": "2026-10-07",
         "result": "Failed",
-        "raw": "Admin. Correction",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -27368,6 +28608,14 @@
         "type": "Sidewalk AM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-03-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27576,8 +28824,8 @@
   },
   "25087280": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7905 Westwood Drive, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -27603,6 +28851,14 @@
         "date": "2026-07-01",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -27688,9 +28944,9 @@
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-04-10",
+        "date": "2026-10-06",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -27705,6 +28961,14 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-03-23",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-09",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27742,6 +29006,14 @@
         "inspector": ""
       },
       {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "VISIT, ETC.",
         "permit_type": "DECOR APPLANCE",
         "date": "2026-03-20",
@@ -27763,6 +29035,22 @@
         "date": "2025-11-19",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-12",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-10-12",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -27793,8 +29081,8 @@
   },
   "25090333": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7612 Janak Spring St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -27807,9 +29095,25 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-06-24",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-08",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27841,15 +29145,23 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-05-27",
+        "date": "2026-09-29",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-07-10",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "PLUMBING FINAL",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-07",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -27937,9 +29249,9 @@
       {
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-22",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -27956,6 +29268,14 @@
         "date": "2026-08-24",
         "result": "Pending",
         "raw": "Canceled/Revoked",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-12",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -27978,8 +29298,8 @@
   },
   "25091738": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1709 Cranway Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -28218,11 +29538,11 @@
     ]
   },
   "25095914": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9541 Kerrwood Lane, Houston, TX",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -28308,8 +29628,8 @@
         "type": "PLUMBING FINAL",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -28323,9 +29643,9 @@
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
-        "date": "2026-02-09",
+        "date": "2026-09-29",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -28345,6 +29665,14 @@
         "inspector": ""
       },
       {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-02-09",
@@ -28355,17 +29683,17 @@
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
-        "date": "2026-03-19",
+        "date": "2026-09-29",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-05-05",
+        "date": "2026-09-29",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -28387,9 +29715,9 @@
       {
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
-        "date": "2026-09-25",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -28412,22 +29740,46 @@
         "type": "Sidewalk AM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "15 Final",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-01-16",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-09-29",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -28468,8 +29820,8 @@
   },
   "25098192": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7214 Blandford Ln 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -28508,9 +29860,9 @@
       {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -28530,6 +29882,22 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "ROUGH",
+        "permit_type": "E1-ADDL-ELECT",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-05-19",
@@ -28541,11 +29909,19 @@
   },
   "25103332": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1949 Coulcrest Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
+      {
+        "type": "ROUGH",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
       {
         "type": "1031-FDN AM",
         "permit_type": "Building Pmt",
@@ -28579,6 +29955,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-06-26",
@@ -28590,8 +29974,8 @@
   },
   "25106825": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8561 Forum Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -28655,6 +30039,14 @@
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
         "date": "2026-09-11",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Brick Tie",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-29",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -28727,8 +30119,8 @@
   },
   "25112480": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9718 Tappenbeck Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -28760,8 +30152,8 @@
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
         "date": "2026-09-28",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -28853,6 +30245,14 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Driveway AM",
         "permit_type": "Sidewalk,DW,PV",
         "date": "2026-09-22",
@@ -28904,8 +30304,8 @@
   },
   "25114074": {
     "status": "Passed",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8510 Montridge Dr 77055",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -29201,8 +30601,8 @@
   },
   "25115546": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2010 Antoine Dr B 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -29258,8 +30658,8 @@
   },
   "25115550": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2008 Antoine Dr B 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -29307,8 +30707,8 @@
   },
   "25115786": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9629 Pine Lake Dr 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -29444,8 +30844,8 @@
   },
   "25120266": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "7215 Shavelson St 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -29476,15 +30876,15 @@
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
-        "date": "2026-08-10",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-10-07",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-08-10",
+        "date": "2026-10-07",
         "result": "Failed",
         "raw": "Correction Necessary",
         "inspector": ""
@@ -29501,8 +30901,8 @@
   },
   "26004663": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1946 Pech Road, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -29693,17 +31093,17 @@
       {
         "type": "P1 FINAL",
         "permit_type": "*P1*ADD-PL-PMT",
-        "date": "2026-08-20",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
   },
   "26011132": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2803 Lake Kolbe Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -29836,6 +31236,14 @@
         "inspector": ""
       },
       {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-04-08",
@@ -29927,8 +31335,8 @@
   },
   "26018495": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2019 Shadow Bend Dr 77043",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30056,8 +31464,8 @@
   },
   "26028238": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1339 Spillers Ln 77043",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30072,9 +31480,17 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-09-24",
+        "date": "2026-10-15",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-15",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -30126,6 +31542,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-08-07",
@@ -30136,11 +31560,11 @@
     ]
   },
   "26033281": {
-    "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "3405 Grace Haven Ln 77080",
-    "final_project_inspection_outstanding": true,
+    "final_project_inspection_outstanding": false,
     "inspections": [
       {
         "type": "DITCH COVER",
@@ -30159,9 +31583,25 @@
         "inspector": ""
       },
       {
+        "type": "MLS",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "TCI",
         "permit_type": "Electrical Pmt",
         "date": "2026-07-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -30223,6 +31663,14 @@
         "inspector": ""
       },
       {
+        "type": "Struct Final",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Ele Grnd Insp",
         "permit_type": "Building Pmt",
         "date": "2026-06-04",
@@ -30249,17 +31697,17 @@
       {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
-        "date": "2026-06-04",
+        "date": "2026-10-09",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
         "type": "INSULATION",
         "permit_type": "Building Pmt",
-        "date": "2026-07-23",
+        "date": "2026-10-09",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -30274,6 +31722,14 @@
         "type": "COVER",
         "permit_type": "HVAC Permit",
         "date": "2026-07-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "AC FINAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-10-06",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -30295,9 +31751,33 @@
         "inspector": ""
       },
       {
+        "type": "CC FINAL",
+        "permit_type": "CRT/COMPLIANCE",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-05-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "FINAL",
+        "permit_type": "GRADING , FILL",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TREE/SHRUB FNL",
+        "permit_type": "LAND-TREE/SHRB",
+        "date": "2026-10-09",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -30338,8 +31818,8 @@
   },
   "26038580": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1409 Caywood Ln A 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30376,11 +31856,27 @@
         "inspector": ""
       },
       {
-        "type": "WINDSTORM",
+        "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-09-23",
+        "date": "2026-10-08",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-02",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-28",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -30395,8 +31891,8 @@
   },
   "26040012": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "2739 Lake Kolbe Lane, Houston, TX",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30417,6 +31913,14 @@
         "inspector": ""
       },
       {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
         "date": "2026-08-05",
@@ -30425,11 +31929,27 @@
         "inspector": ""
       },
       {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "FDN-WOOD/INSUL",
         "permit_type": "Building Pmt",
         "date": "2026-09-01",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -30476,8 +31996,8 @@
   },
   "26048192": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9626 Carousel Ln 77080",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30493,6 +32013,14 @@
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
         "date": "2026-08-13",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
         "result": "Passed",
         "raw": "Partial Approval",
         "inspector": ""
@@ -30533,8 +32061,8 @@
   },
   "26058915": {
     "status": "Partial",
-    "updated": "2026-09-24",
-    "scraped_at": "2026-09-24",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9253 Elizabeth Rd, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30621,17 +32149,26 @@
     ]
   },
   "26043537": {
-    "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9017 Kerrwood Ln B, Houston, TX 77080",
     "final_project_inspection_outstanding": true,
-    "inspections": []
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
   },
   "25022790": {
     "status": "Partial",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "8719 Padua Ln, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -30668,6 +32205,30 @@
         "inspector": ""
       },
       {
+        "type": "Fire Wall",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-09-25",
@@ -30679,34 +32240,519 @@
   },
   "26073239": {
     "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "9605 Long Branch Ln, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": []
   },
   "26068292": {
-    "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "1522 Auline Ln, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
-    "inspections": []
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-09-29",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-10-08",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
   },
   "26001203": {
-    "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
     "address": "10015 Whiteside Ln B, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      }
+    ]
+  },
+  "26001204": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "10015 Whiteside Ln A, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-05",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "ELECT FINAL",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-10-05",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-10-06",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      }
+    ]
+  },
+  "26001199": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "10017 Whiteside Ln C, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      }
+    ]
+  },
+  "26001200": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "10017 Whiteside Ln B, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      }
+    ]
+  },
+  "26001201": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "10017 Whiteside Ln A, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      }
+    ]
+  },
+  "26001202": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "10015 Whiteside Ln C, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "DITCH COVER",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-09-30",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-12",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-09",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      }
+    ]
+  },
+  "26069388": {
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "1807 Maux Dr, Houston, TX 77043",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Ele Grnd Insp",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-16",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-09-25",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "26076615": {
+    "status": "None",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "10507 Ivyridge Rd, Houston, TX 77043",
     "final_project_inspection_outstanding": true,
     "inspections": []
   },
-  "26001204": {
+  "25022798": {
     "status": "None",
-    "updated": "2026-09-28",
-    "scraped_at": "2026-09-28",
-    "address": "10015 Whiteside Ln A, Houston, TX 77080",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "8703 Padua Ln, Houston, TX 77055",
     "final_project_inspection_outstanding": true,
     "inspections": []
+  },
+  "25042045": {
+    "status": "Passed",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "6622 Corbin St, Houston, TX 77055",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "SEWER",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-14",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
+  },
+  "26076808": {
+    "status": "Pending",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "1517 Bracher St, Houston, TX 77055",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-10-15",
+        "result": "Pending",
+        "raw": "Permit Currently on Hold",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-10-15",
+        "result": "Pending",
+        "raw": "Permit Currently on Hold",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-09-09",
+        "result": "Pending",
+        "raw": "Permit Currently on Hold",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-09-09",
+        "result": "Pending",
+        "raw": "Permit Currently on Hold",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-09-09",
+        "result": "Pending",
+        "raw": "Permit Currently on Hold",
+        "inspector": ""
+      }
+    ]
+  },
+  "26073866": {
+    "status": "None",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "1522 Ronson Rd, Houston, TX 77055",
+    "final_project_inspection_outstanding": true,
+    "inspections": []
+  },
+  "26060628": {
+    "status": "None",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "8729 Fairbend St, Houston, TX 77055",
+    "final_project_inspection_outstanding": true,
+    "inspections": []
+  },
+  "26070578": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "9258 Elizabeth Rd, Houston, TX 77055",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "Precon",
+        "permit_type": "SFR New",
+        "date": "2026-09-08",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Prefill",
+        "permit_type": "SFR New",
+        "date": "2026-09-03",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "2nd EC",
+        "permit_type": "SFR New",
+        "date": "2026-09-03",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "3rd EC",
+        "permit_type": "SFR New",
+        "date": "2026-09-03",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "Site Final",
+        "permit_type": "SFR New",
+        "date": "2026-09-03",
+        "result": "Failed",
+        "raw": "Action Required",
+        "inspector": ""
+      }
+    ]
+  },
+  "26073489": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "8409 Montridge Dr, Houston, TX 77055",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-09-11",
+        "result": "Failed",
+        "raw": "Admin. Correction",
+        "inspector": ""
+      }
+    ]
+  },
+  "26071225": {
+    "status": "Partial",
+    "updated": "2026-10-15",
+    "scraped_at": "2026-10-15",
+    "address": "43 Rollingwood Dr, Houston, TX 77080",
+    "final_project_inspection_outstanding": true,
+    "inspections": [
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-10-13",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Piers AM",
+        "permit_type": "Building Pmt",
+        "date": "2026-10-07",
+        "result": "Passed",
+        "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-10-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      }
+    ]
   }
 }
