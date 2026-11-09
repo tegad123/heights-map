@@ -1,0 +1,100 @@
+# Scheduled ILMS inspection scrape.
+#
+# Cron is UTC and does not follow US daylight saving time.
+# 11:00 UTC Monday and Thursday is:
+#   5:00 AM America/Chicago during Central Standard Time (CST, UTC-6)
+#   6:00 AM America/Chicago during Central Daylight Time (CDT, UTC-5)
+# Standard time is in effect from the first Sunday in November through
+# the second Sunday in March. This job was added in November, so 11:00 UTC
+# is exactly 5:00 AM local now, and 6:00 AM local in the summer. It does
+# not run before 5:00 AM Central.
+name: Inspection refresh
+
+on:
+  schedule:
+    - cron: '0 11 * * 1,4'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: >-
+          Max permits to scrape per market. 0 scrapes every permit and
+          commits to main when the data changed. Any other number is a
+          smoke test and does not commit.
+        required: false
+        default: '0'
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: inspection-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      TZ: America/Chicago
+      PYTHONUNBUFFERED: "1"
+      LIMIT: ${{ github.event.inputs.limit || '0' }}
+    steps:
+      - name: Check out the workflow ref
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Playwright Chromium
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Scrape inspections
+        id: refresh
+        run: |
+          set +e
+          set -o pipefail
+          if [ -z "${LIMIT}" ]; then LIMIT=0; fi
+          if ! [[ "$LIMIT" =~ ^[0-9]+$ ]]; then
+            echo "limit must be a non-negative integer, got: ${LIMIT}"
+            exit 1
+          fi
+          python3 run_and_deploy.py --no-push --limit "$LIMIT" | tee /tmp/inspection-refresh.log
+          rc=${PIPESTATUS[0]}
+          echo "rc=${rc}" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Inspection refresh (exit ${rc})"
+            echo
+            echo '```'
+            grep -E 'INSPECTION_RESULT|PUBLISH_CHECK|REFUSING|SCRAPE_SUMMARY|No-push|Limit run|placeholder' /tmp/inspection-refresh.log || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # Exit 2 means at least one market failed and any market that
+          # passed has already been written. Keep this step green so the
+          # commit step can publish those files, then fail the job.
+          if [ "$rc" -eq 2 ]; then
+            exit 0
+          fi
+          exit "$rc"
+
+      - name: Commit changed inspection JSON to main
+        if: ${{ success() && (steps.refresh.outputs.rc == '0' || steps.refresh.outputs.rc == '2') }}
+        env:
+          LIMIT: ${{ github.event.inputs.limit || '0' }}
+        run: bash .github/commit-inspection-data.sh
+
+      - name: Fail the job when a market failed
+        if: ${{ always() && steps.refresh.outputs.rc == '2' }}
+        run: |
+          echo "One or more markets failed the scrape or the publish check."
+          echo "Markets that passed were committed when this was a full run."
+          echo "A failed market's file was not overwritten."
+          exit 1

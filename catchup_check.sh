@@ -8,10 +8,12 @@
 #   - weekly ingest: if it's Sunday >= 07:05 (or Monday < 12:00, catching a
 #     slept-through Sunday) and ingest_log.txt has no line dated >= that
 #     Sunday, run weekly_permit_ingest.sh.
-#   - inspection refresh: if it's Monday or Thursday >= 05:15 (or Tuesday /
-#     Friday < 12:00, catching a slept-through slot) and inspection_log.txt
-#     has no line dated >= that slot, run inspection_refresh.sh. A live
-#     lock means the scrape is still running; don't start a second one.
+#   - inspection refresh (legacy Mac fallback only): the scheduled scrape
+#     is GitHub Actions. This block runs only when INSPECTION_LEGACY_MAC=1
+#     is set in the environment, so the hourly permit catch-up does not
+#     also launch a scrape that races Actions. When that flag is set, a
+#     missed Monday/Thursday slot is retried Tuesday/Friday before noon,
+#     and a live lock pid skips a second scrape.
 set -u
 
 REPO=/Users/tegaumukoro/heights-map
@@ -62,7 +64,8 @@ elif [ "$DOW" -eq 5 ] && [ "$NOW" -lt 1200 ] 2>/dev/null; then
     if date -v-1d >/dev/null 2>&1; then SLOT=$(date -v-1d +%Y-%m-%d)
     else SLOT=$(date -d 'yesterday' +%Y-%m-%d); fi
 fi
-if [ -n "$SLOT" ]; then
+# Off unless a Mac is deliberately the inspection host again.
+if [ "${INSPECTION_LEGACY_MAC:-}" = "1" ] && [ -n "$SLOT" ]; then
     RAN=$(awk -F, -v s="${SLOT//-/}" '{gsub(/-/,"",$1); if ($1+0 >= s+0) n++} END{print n+0}' \
           pulls/inspection_log.txt 2>/dev/null || echo 0)
     LOCKPID=$(cat pulls/inspection_refresh.lock 2>/dev/null || true)

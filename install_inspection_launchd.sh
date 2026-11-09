@@ -1,4 +1,11 @@
 #!/bin/bash
+# LEGACY FALLBACK. GitHub Actions runs the inspection scrape. Install
+# this launchd agent only if Actions cannot reach ILMS and a Mac has to
+# own the job instead. Unload com.heightsmap.inspections before turning
+# Actions back on. Catch-up retries also need INSPECTION_LEGACY_MAC=1
+# in the catchup agent's environment; leave that unset while Actions is
+# the scheduler.
+#
 # Install the Monday/Thursday inspection scrape on Tega's Mac.
 # The permit jobs already live in ~/Library/LaunchAgents as
 # com.heightsmap.permitpull, com.heightsmap.permitingest, and
