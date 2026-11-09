@@ -45,18 +45,18 @@ ACTUAL STATUS WORDING (from the live site)
 NOTE: there is no clean JSON API (the /ilmsapinew/SaveFileX endpoint uses
 an encrypted POST body/response), so we must drive the UI with Playwright.
 
-RUN ON TEGA'S MAC (see inspection_refresh.sh / run_and_deploy.py)
-  source ~/insp-venv/bin/activate
-  pip install playwright && playwright install chromium
-  python3 scrape_inspections.py --permits heights_permits.json \
-      --out inspections.json --limit 3 --show     # watch 3 first
-The scheduled job is launchd (Mon/Thu 05:00 America/Chicago), not the
-old Mac Mini crontab. SETUP.md has the install commands.
+SCHEDULED RUN
+  GitHub Actions (.github/workflows/inspection-refresh.yml) is the
+  scheduled job: Monday and Thursday, 11:00 UTC (5:00 AM Central
+  Standard Time, 6:00 AM Central Daylight Time). SETUP.md is the
+  operator doc. The Mac launchd script is a legacy fallback.
+  A partial or empty scrape does not write the output file.
 =====================================================================
 """
 
 import argparse
 import json
+import os
 import re
 import sys
 import time
@@ -65,11 +65,19 @@ from datetime import date
 try:
     from playwright.sync_api import sync_playwright
 except ImportError:
-    sys.exit(
-        "Playwright is not installed.\n"
-        "  python3 -m venv ~/insp-venv && source ~/insp-venv/bin/activate\n"
-        "  pip install playwright && playwright install chromium"
-    )
+    sync_playwright = None
+
+PLAYWRIGHT_INSTALL = (
+    "Playwright is not installed.\n"
+    "  python3 -m venv ~/insp-venv && source ~/insp-venv/bin/activate\n"
+    "  pip install playwright && playwright install chromium"
+)
+
+# A run that keeps fewer than this fraction of the permits it attempted
+# is a partial scrape (challenge page, timeout, blocked IP). The existing
+# file is left untouched. Half is the line for "obviously partial": a
+# handful of hits must not replace or freshen a full market file.
+MIN_ACCEPTED_FRACTION = 0.5
 
 ILMS_URL = "https://www.pdinet.pd.houstontx.gov/Inspection_Status/"
 
@@ -175,11 +183,16 @@ def open_inspection_history(page, proj: str) -> bool:
 
     if not _click_submit(page, second=True):
         return False
-    if not _wait_for_grid(page):
+    # The grid is on the page within a second or two when Submit lands.
+    # A 20s wait made a swallowed click cost most of a minute, and a full
+    # run is about a thousand permits. Five seconds is enough to tell the
+    # click was swallowed; the retry below, and the caller's second pass,
+    # load the history.
+    if not _wait_for_grid(page, timeout_ms=5000):
         # The permit-type Submit sometimes swallows the first click.
         if not _click_submit(page, second=True):
             return False
-        if not _wait_for_grid(page):
+        if not _wait_for_grid(page, timeout_ms=5000):
             return False
     _reveal_grid_rows(page)
     return True
@@ -340,7 +353,61 @@ def _text(el):
 
 
 # ------------------------------------------------------------------- driver
+def inspection_row_count(data):
+    if not isinstance(data, dict):
+        return 0
+    total = 0
+    for rec in data.values():
+        if isinstance(rec, dict) and isinstance(rec.get("inspections"), list):
+            total += len(rec["inspections"])
+    return total
+
+
+def protect_merge(prev, fresh):
+    """Merge this run onto the previous file.
+
+    Returns (merged, accepted, blocked_empty). A project that already
+    has inspection rows is kept unchanged when this lookup came back
+    with none — an empty grid is not a reason to delete history.
+    accepted counts projects from this run that are kept.
+    """
+    if not isinstance(prev, dict):
+        prev = {}
+    if not isinstance(fresh, dict):
+        fresh = {}
+    kept = {}
+    blocked_empty = 0
+    for proj, rec in fresh.items():
+        old = prev.get(proj)
+        old_rows = old.get("inspections") if isinstance(old, dict) else None
+        new_rows = rec.get("inspections") if isinstance(rec, dict) else None
+        if isinstance(old_rows, list) and old_rows and not new_rows:
+            blocked_empty += 1
+            continue
+        kept[proj] = rec
+    return {**prev, **kept}, len(kept), blocked_empty
+
+
+def publish_decision(prev, merged, attempted, accepted):
+    """Whether merged is safe to write over prev. Returns (ok, reason)."""
+    if attempted <= 0:
+        return False, "nothing-attempted"
+    if not isinstance(merged, dict):
+        return False, "not-an-object"
+    if isinstance(prev, dict) and prev and not merged:
+        return False, "empty-output"
+    if accepted / attempted < MIN_ACCEPTED_FRACTION:
+        return False, f"partial-{accepted}-of-{attempted}"
+    prev_rows = inspection_row_count(prev if isinstance(prev, dict) else {})
+    new_rows = inspection_row_count(merged)
+    if prev_rows >= 20 and new_rows < prev_rows * MIN_ACCEPTED_FRACTION:
+        return False, f"row-collapse-{new_rows}-of-{prev_rows}"
+    return True, "ok"
+
+
 def scrape(permits, delay, headless, limit):
+    if sync_playwright is None:
+        sys.exit(PLAYWRIGHT_INSTALL)
     out = {}
     grid_miss = 0
     errors = 0
@@ -396,6 +463,12 @@ def scrape(permits, delay, headless, limit):
             page.wait_for_timeout(int(delay * 1000))
 
         browser.close()
+    scrape.last_stats = {
+        "attempted": len(todo),
+        "updated": len(out),
+        "grid_miss": grid_miss,
+        "errors": errors,
+    }
     print(f"SCRAPE_SUMMARY attempted={len(todo)} updated={len(out)} "
           f"grid_miss={grid_miss} errors={errors}")
     return out
@@ -427,18 +500,38 @@ def main():
           f"(delay {args.delay}s, headless={not args.show})...\n")
 
     data = scrape(permits, args.delay, headless=not args.show, limit=args.limit)
+    stats = getattr(scrape, "last_stats", {})
+    attempted = int(stats.get("attempted") or 0)
 
     try:
         prev = json.load(open(args.out))
     except Exception:
         prev = {}
-    merged = {**prev, **data}
+    if not isinstance(prev, dict):
+        prev = {}
+    merged, accepted, blocked_empty = protect_merge(prev, data)
+    ok, reason = publish_decision(prev, merged, attempted, accepted)
+    print(f"PUBLISH_CHECK ok={str(ok).lower()} reason={reason} "
+          f"accepted={accepted} blocked_empty={blocked_empty} "
+          f"attempted={attempted} grid_miss={stats.get('grid_miss', 0)} "
+          f"errors={stats.get('errors', 0)}")
+    if not ok:
+        print(f"REFUSING to write {args.out}: {reason}. "
+              f"Existing file left untouched.")
+        sys.exit(3)
 
-    with open(args.out, "w") as f:
-        json.dump(merged, f, indent=2)
+    tmp = args.out + ".partial"
+    try:
+        with open(tmp, "w") as f:
+            json.dump(merged, f, indent=2)
+        os.replace(tmp, args.out)
+    except Exception:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+        raise
 
     print(f"\nWrote {len(merged)} permits with inspection data -> {args.out}")
-    print(f"  ({len(data)} updated this run)")
+    print(f"  ({accepted} accepted this run, {blocked_empty} empty overwrites blocked)")
     print("The map picks this up on its next load / 6-hour refresh.")
 
 

@@ -2,17 +2,22 @@
 """
 run_and_deploy.py
 =====================================================================
-Refreshes every market's inspections JSON from Houston ILMS and pushes
-the files to GitHub main. Netlify CI rebuilds from that push.
+Refreshes every market's inspections JSON from Houston ILMS.
 
-Runs on Tega's Mac (/Users/tegaumukoro/heights-map), same checkout and
-venv as the permit jobs. launchd starts it Monday and Thursday at
-05:00 America/Chicago via inspection_refresh.sh. Install with
-install_inspection_launchd.sh. SETUP.md is the operator doc.
+The scheduled run is GitHub Actions
+(.github/workflows/inspection-refresh.yml), Monday and Thursday at
+11:00 UTC. That workflow calls this script with --no-push and commits
+the JSON itself. Netlify CI rebuilds from the push to main.
+
+inspection_refresh.sh and install_inspection_launchd.sh are the legacy
+Mac fallback. They call this script without --no-push, so the script
+still commits and pushes when invoked that way. SETUP.md is the
+operator doc.
 
 Spring Valley is in MARKETS but has no springvalley_permits.json.
 That market is skipped and inspections_springvalley.json is left
-alone (it is an empty object).
+alone (it is an empty object). The run refuses to continue if that
+placeholder is no longer empty.
 =====================================================================
 """
 
@@ -102,6 +107,19 @@ def classify_market(permits_exist, returncode, changed, newest, today):
     return "FAIL", "unchanged-stale"
 
 
+def spring_valley_placeholder_ok():
+    """Spring Valley stays {} until springvalley_permits.json exists."""
+    permits = os.path.join(HERE, "springvalley_permits.json")
+    out = os.path.join(HERE, "inspections_springvalley.json")
+    if os.path.exists(permits):
+        return True
+    try:
+        with open(out) as f:
+            return json.load(f) == {}
+    except Exception:
+        return False
+
+
 def run_scraper(market, limit, today):
     """Run the Playwright scraper for one market.
 
@@ -159,6 +177,9 @@ def main():
                     help="git = commit+push; Netlify CI rebuilds from the push")
     ap.add_argument("--limit", type=int, default=0,
                     help="Only scrape first N permits (testing). Does not commit or push.")
+    ap.add_argument("--no-push", action="store_true",
+                    help="Scrape and validate, but do not commit or push. "
+                         "GitHub Actions commits the JSON itself.")
     ap.add_argument("--skip-scrape", action="store_true",
                     help="Deploy existing inspection files without re-scraping")
     ap.add_argument("--market", default="",
@@ -170,6 +191,13 @@ def main():
         markets = [m for m in MARKETS if m["name"] == args.market]
         if not markets:
             sys.exit(f"Unknown --market {args.market}; known: {known}")
+
+    if not spring_valley_placeholder_ok():
+        print("INSPECTION_RESULT market=springvalley status=FAIL "
+              "reason=placeholder-not-empty newest=-")
+        print("inspections_springvalley.json is not {} and "
+              "springvalley_permits.json does not exist. Refusing to scrape.")
+        sys.exit(1)
 
     today = date.today().isoformat()
     ready = []
@@ -200,8 +228,18 @@ def main():
             elif status == "FAIL":
                 failed = True
 
-    if args.limit:
-        print("Limit run: inspection files may have been updated on disk. Not committing.")
+    if not spring_valley_placeholder_ok():
+        print("INSPECTION_RESULT market=springvalley status=FAIL "
+              "reason=placeholder-changed newest=-")
+        print("inspections_springvalley.json changed without a permits file. "
+              "Refusing to publish.")
+        sys.exit(1)
+
+    if args.limit or args.no_push:
+        if args.limit:
+            print("Limit run: inspection files may have been updated on disk. Not committing.")
+        else:
+            print("No-push run: not committing. The caller commits inspection JSON.")
         if failed:
             sys.exit(2)
         if not produced:

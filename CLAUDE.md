@@ -207,27 +207,33 @@ be recreated).
 
 ## Inspection refresh (Mon/Thu, all markets with a permits file)
 
-- inspection_refresh.sh runs Monday and Thursday at 05:00 America/Chicago
-  via launchd (com.heightsmap.inspections). Install it on Tega's Mac
-  with install_inspection_launchd.sh. The plist template is
-  launchd/com.heightsmap.inspections.plist; the installed copy lives in
-  ~/Library/LaunchAgents next to permitpull, permitingest, and catchup.
-  Repo path is /Users/tegaumukoro/heights-map. The Mac system timezone
-  must be America/Chicago — launchd fires on local time.
-- It is the same checkout and ~/insp-venv as the permit jobs. The old
+- GitHub Actions is the scheduled scrape:
+  `.github/workflows/inspection-refresh.yml`. Cron is `0 11 * * 1,4`
+  (11:00 UTC Monday and Thursday): 5:00 AM America/Chicago in standard
+  time and 6:00 AM in daylight time. GitHub cron does not follow DST.
+  workflow_dispatch runs it by hand. SETUP.md is the operator doc.
+- The workflow installs Playwright Chromium, runs `run_and_deploy.py
+  --no-push` for every market in MARKETS that has a permits file, and
+  commits the inspection JSON to main with GITHUB_TOKEN (`contents:
+  write`) only when the data changed. Netlify rebuilds from that push.
+  The Overview badge reads `updated` / `scraped_at` in those JSON files.
+  There is no separate freshness file.
+- A missing permits file is a skip, not a failure: Spring Valley has no
+  springvalley_permits.json, so inspections_springvalley.json stays {}.
+  The run refuses to continue if that placeholder is no longer `{}`.
+- scrape_inspections.py will not write a market file when the run is
+  empty or partial (under half the attempted permits accepted, or the
+  merged inspection-row count collapses). An empty lookup does not
+  replace a project that already has inspection rows. A failed market
+  is left on disk as it was.
+- inspection_refresh.sh, install_inspection_launchd.sh, and
+  launchd/com.heightsmap.inspections.plist are the legacy Mac fallback.
+  Do not leave that agent loaded while Actions is enabled. catchup_check.sh
+  retries a missed Mac slot only when INSPECTION_LEGACY_MAC=1. The old
   Mac Mini crontab (/Users/spencer/jarvis/inspections) is retired.
-  SETUP.md is the operator doc.
-- The job runs run_and_deploy.py, which scrapes Houston ILMS for every
-  market in its MARKETS list that has a permits file, then commits only
-  those inspections JSON files and pushes main. A missing permits file
-  is a skip, not a failure: Spring Valley has no springvalley_permits.json,
-  so inspections_springvalley.json stays {}.
-- Discord webhook from DISCORD_WEBHOOK_URL in the plist env (copied from
-  the permitingest plist at install time — never hardcoded, never
-  committed). Failures and a one-line success go to Discord. The run
-  log is pulls/inspection_log.txt (gitignored). catchup_check.sh retries
-  a missed Monday/Thursday slot on Tuesday/Friday before noon, and will
-  not start a second scrape while the lock pid is alive.
+- Discord on the Mac path still comes from DISCORD_WEBHOOK_URL in the
+  plist env (never hardcoded, never committed). The Actions job is loud
+  by failing the workflow; it does not post to Discord.
 - ILMS build 2026.10.24 renders the permit-type step before project
   info arrives. scrape_inspections.py waits for a real address and for
   the Kendo grid; it does not click Submit on a fixed timer.

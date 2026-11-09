@@ -1,4 +1,9 @@
 #!/bin/bash
+# LEGACY FALLBACK. The scheduled inspection scrape is GitHub Actions
+# (.github/workflows/inspection-refresh.yml). Keep this script for a Mac
+# that has to run the scrape itself. Do not leave it scheduled while
+# Actions is enabled — both would push inspections JSON to main.
+#
 # inspection_refresh.sh — Mon/Thu 05:00 America/Chicago ILMS inspection scrape.
 # Same machine and checkout as the permit jobs:
 #   /Users/tegaumukoro/heights-map
