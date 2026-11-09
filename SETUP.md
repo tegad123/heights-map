@@ -1,78 +1,130 @@
-# Heights Map — Auto-Deploy Setup
+# Heights Map — where the jobs actually run
 
-Goal: stop manually re-uploading. After this, you `git push` to update the
-map, and the Mac Mini pushes inspection data on its own. You never drag a
-file into Netlify again.
+The live site is Netlify. It rebuilds from GitHub `main`. There is no
+other deploy path. A direct Netlify upload used to replace the whole
+site with just the JSON files and wipe the HTML. Do not bring that back.
 
-Everything ships the same way — a push to GitHub `main`. The site is
-hosted on Netlify and rebuilds from `main` via CI, so there is one path:
+Two different schedules commit to this repo, both from **Tega's Mac**
+(`/Users/tegaumukoro/heights-map`), both using `~/insp-venv`:
 
-- **Map code (index.html)** → commit + push → Netlify CI rebuilds.
-- **Inspection data (inspections.json + per-market files)** → the Mac Mini
-  scraper commits and pushes them → Netlify CI rebuilds.
+| Job | When (America/Chicago) | launchd label | Script |
+|---|---|---|---|
+| Permit pull | every day 05:30 | `com.heightsmap.permitpull` | `nightly_permit_pull.sh` |
+| Permit ingest | Sunday 07:00 | `com.heightsmap.permitingest` | `weekly_permit_ingest.sh` |
+| Catch-up | hourly | `com.heightsmap.catchup` | `catchup_check.sh` |
+| **Inspections** | **Monday and Thursday 05:00** | `com.heightsmap.inspections` | `inspection_refresh.sh` |
 
-Deploy is host-agnostic: any machine with the repo cloned and push access
-can `git push` to `main`. The **Mac Mini** is not special for deploying — it
-is just the scheduled scraper host (PART 2) that runs cron and pushes the
-inspection data on its own.
+The Mac Mini path in older notes (`/Users/spencer/jarvis/inspections`,
+user crontab) is retired. Inspection commits ran on that old schedule
+through 28 Sep 2026 and then stopped, while the permit launchd jobs on
+Tega's Mac kept committing. The inspection scrape was never moved onto
+the launchd setup.
 
-(There used to be a direct Netlify-API upload for data. It has been
-removed — it replaced the whole site with just the JSON files and wiped
-everything else. Do not reintroduce it. Push to `main` is the only deploy.)
+Git identity on the permit jobs is "Tega Umukoro". The retired inspection
+cron committed as `tegad123`. After this job is installed, inspection
+commits come from the same checkout as the permit jobs.
 
----
-
-## PART 1 — Put the map on GitHub + connect Netlify (one time, ~10 min)
-
-### 1. Create the repo
-On github.com → New repository → name it `heights-map` → Private → Create.
-Don't add a README (we have files already).
-
-### 2. Push these files up
-On your computer, in this folder (the one with `index.html`):
-
-```bash
-git init
-git add .
-git commit -m "Heights map + inspections pipeline"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/heights-map.git
-git push -u origin main
-```
-
-### 3. Point your EXISTING Netlify site at the repo
-You already have the site (`splendorous-basbousa-9270fc`). Connect it to Git
-so it stops being a manual-upload site:
-
-- Netlify dashboard → your site → **Site configuration** → **Build & deploy**
-  → **Continuous deployment** → **Link repository**.
-- Choose GitHub → authorize → pick `heights-map`.
-- Branch to deploy: `main`. Build command: leave blank. Publish directory: `.`
-- Save.
-
-(If Netlify won't let you link a repo to the existing site, just create a new
-site from the repo — "Add new site" → "Import an existing project" → GitHub →
-`heights-map`. Then update your bookmarked URL, or set the custom domain on the
-new site so the link stays the same.)
-
-### 4. Done with manual uploads for the map
-From now on: edit `index.html`, then:
-```bash
-git add index.html && git commit -m "map update" && git push
-```
-Netlify rebuilds in ~30s. Refresh the live URL. That's it.
+`pulls/` is gitignored. Logs stay on the Mac. The Discord webhook is
+only in the launchd plists (`DISCORD_WEBHOOK_URL`), never in git.
 
 ---
 
-## PART 2 — Make the Mac Mini auto-deploy inspection data (one time, ~10 min)
+## Install the inspection job (once, on Tega's Mac)
 
-This is what makes the every-few-days scrape land on the live site by itself.
+The permit venv is already there if the nightly pull runs. Chromium
+still has to be installed for Playwright.
 
-### 1. Put the scraper files on the Mac Mini
-Copy `scrape_inspections.py`, `heights_permits.json`, and `run_and_deploy.py`
-into a folder, e.g. `/Users/spencer/jarvis/inspections/`.
+```bash
+cd /Users/tegaumukoro/heights-map
+git pull --ff-only
+source ~/insp-venv/bin/activate
+python3 -c "import playwright"
+playwright install chromium
+bash install_inspection_launchd.sh
+sudo systemsetup -gettimezone    # must print America/Chicago
+```
 
-### 2. Python env (if not already done for the scraper)
+`install_inspection_launchd.sh` copies
+`launchd/com.heightsmap.inspections.plist` into
+`~/Library/LaunchAgents/com.heightsmap.inspections.plist` and fills
+`DISCORD_WEBHOOK_URL` from the existing permit-ingest plist. It does
+not print the webhook. It aborts if this checkout is not
+`/Users/tegaumukoro/heights-map`, because the permit scripts hardcode
+that path and the inspection job has to commit the same clone.
+
+The agent fires Monday and Thursday at 05:00 **local** time. launchd
+does not read the `TZ` variable for the schedule, so the Mac's own
+timezone has to be Central. The script still exports `TZ=America/Chicago`
+so the scrape dates written into the JSON are Houston dates.
+
+If the lid is closed at 05:00, `catchup_check.sh` runs the scrape on
+Tuesday or Friday before noon. It will not start a second copy while
+the first is still running.
+
+### Smoke one permit without touching the repo
+
+```bash
+source ~/insp-venv/bin/activate
+cd /Users/tegaumukoro/heights-map
+python3 scrape_inspections.py --permits heights_permits.json \
+    --out /tmp/insp-smoke.json --limit 1
+```
+
+A line like `Passed` or `Partial` plus `SCRAPE_SUMMARY ... updated=1`
+means ILMS answered. Do not point `--out` at `inspections.json` for a
+one-permit test. A partial file would make the map look current.
+
+### Run the real job once by hand
+
+This scrapes every market, commits, and pushes `main`:
+
+```bash
+bash /Users/tegaumukoro/heights-map/inspection_refresh.sh
+```
+
+The checkout must be on `main` with a clean fast-forward. Expect this
+to take a while (about a thousand permits).
+
+---
+
+## What the job scrapes
+
+`run_and_deploy.py` walks its MARKETS list. A market is scraped only
+when its permits file exists:
+
+- Heights → `inspections.json`
+- Montrose, West U, River Oaks, Spring Branch, Timbergrove,
+  Garden Oaks + Oak Forest → `inspections_<market>.json`
+
+Spring Valley is in that list and is skipped. There is no
+`springvalley_permits.json`, and `inspections_springvalley.json` is
+`{}`. The job refuses to start if that file is no longer an empty
+object. When a real permits file is added, the next run picks the
+market up with no other change.
+
+A market whose scrape does not change a stale file (ILMS never
+returned) is a failure. Discord gets the `INSPECTION_RESULT` lines.
+Successes still commit. The log line is `pulls/inspection_log.txt`.
+
+---
+
+## How to tell the site is honest
+
+Overview shows two dates:
+
+- **FORECAST · AS OF** — today in America/Chicago. The supply curve is
+  computed from today's date. It is not an inspection timestamp.
+- **INSPECTIONS · AS OF** — the newest `updated` / `scraped_at` in that
+  market's inspections file. If that date is more than 10 days old the
+  badge turns orange and a warning is shown. An empty file (Spring
+  Valley) says **NONE ON FILE** instead of inventing a date.
+
+Permit ingest moving does not move the inspection date.
+
+---
+
+## Playwright, if the venv is new
+
 ```bash
 python3 -m venv ~/insp-venv
 source ~/insp-venv/bin/activate
@@ -80,58 +132,5 @@ pip install playwright
 playwright install chromium
 ```
 
-### 3. Clone the repo with push access
-The scraper commits and pushes, so the Mac Mini needs the repo cloned and
-git push auth set up to work non-interactively (SSH key or a cached
-credential helper) — cron cannot answer a password prompt.
-```bash
-git clone git@github.com:YOUR_USERNAME/heights-map.git /Users/spencer/jarvis/inspections
-```
-
-### 4. Test it once
-```bash
-source ~/insp-venv/bin/activate
-cd /Users/spencer/jarvis/inspections
-python3 run_and_deploy.py --limit 5
-```
-Watch for `Pushed inspection files to GitHub`. Netlify CI rebuilds from
-`main` in ~30s; then open the live map — the header badge should read green
-"● inspections: N permits live". If it does, the whole pipeline works.
-
-### 5. Schedule it (every Mon & Thu, 5am)
-```bash
-crontab -e
-```
-add this line (fix the paths to match where you put things):
-```
-0 5 * * 1,4  cd /Users/spencer/jarvis/inspections && /Users/spencer/insp-venv/bin/python run_and_deploy.py >> deploy.log 2>&1
-```
-
-Save. From now on the Mac Mini scrapes Houston's inspection records twice a
-week and pushes them to the live map automatically. You do nothing.
-
----
-
-## How to tell it's working
-- Live map header shows green "● inspections: N permits live".
-- Permit popups show the **Inspections** box with passed/failed/pending rows.
-- Permits with passed inspections move out of the gray "New Construction"
-  layer into the right Under-Construction phase on their own.
-- `deploy.log` on the Mac Mini shows each run's results.
-
-## If the badge says "feed not loaded"
-- The map (index.html) and inspections.json must both be live on the same site.
-  After Part 1 they will be. Until the first scrape runs, the committed
-  inspections.json (sample data) is what shows — that's fine.
-- Check the browser console (right-click → Inspect → Console) for the
-  `[inspections]` log line; it says exactly what loaded or why it failed.
-
-## Deploy path
-Deployment is a `git push` to `main` from **any** machine that has the repo
-cloned with push access — Netlify CI rebuilds the full tree. There is no
-host-specific deploy path. `git` is the default mode; `--mode git` is
-accepted but redundant.
-
-The **Mac Mini** is only special as the *scheduled scraper host*: it runs the
-cron job (PART 2) that scrapes and pushes inspection data automatically. A
-manual deploy can come from your laptop or anywhere else with the repo.
+The nightly permit pull imports Playwright from this same venv. `pip
+install` is only needed when the venv itself is missing.

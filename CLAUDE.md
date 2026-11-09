@@ -205,6 +205,33 @@ be recreated).
   always — permit_pull.py --ingest --from-csv <csv> dry-run, review,
   rerun with --apply. Delete the quarantine CSV rows you've resolved.
 
+## Inspection refresh (Mon/Thu, all markets with a permits file)
+
+- inspection_refresh.sh runs Monday and Thursday at 05:00 America/Chicago
+  via launchd (com.heightsmap.inspections). Install it on Tega's Mac
+  with install_inspection_launchd.sh. The plist template is
+  launchd/com.heightsmap.inspections.plist; the installed copy lives in
+  ~/Library/LaunchAgents next to permitpull, permitingest, and catchup.
+  Repo path is /Users/tegaumukoro/heights-map. The Mac system timezone
+  must be America/Chicago — launchd fires on local time.
+- It is the same checkout and ~/insp-venv as the permit jobs. The old
+  Mac Mini crontab (/Users/spencer/jarvis/inspections) is retired.
+  SETUP.md is the operator doc.
+- The job runs run_and_deploy.py, which scrapes Houston ILMS for every
+  market in its MARKETS list that has a permits file, then commits only
+  those inspections JSON files and pushes main. A missing permits file
+  is a skip, not a failure: Spring Valley has no springvalley_permits.json,
+  so inspections_springvalley.json stays {}.
+- Discord webhook from DISCORD_WEBHOOK_URL in the plist env (copied from
+  the permitingest plist at install time — never hardcoded, never
+  committed). Failures and a one-line success go to Discord. The run
+  log is pulls/inspection_log.txt (gitignored). catchup_check.sh retries
+  a missed Monday/Thursday slot on Tuesday/Friday before noon, and will
+  not start a second scrape while the lock pid is alive.
+- ILMS build 2026.10.24 renders the permit-type step before project
+  info arrives. scrape_inspections.py waits for a real address and for
+  the Kendo grid; it does not click Submit on a fixed timer.
+
 ## Working style
 
 - Verify root cause from actual file contents or logs before writing a fix.

@@ -8,6 +8,10 @@
 #   - weekly ingest: if it's Sunday >= 07:05 (or Monday < 12:00, catching a
 #     slept-through Sunday) and ingest_log.txt has no line dated >= that
 #     Sunday, run weekly_permit_ingest.sh.
+#   - inspection refresh: if it's Monday or Thursday >= 05:15 (or Tuesday /
+#     Friday < 12:00, catching a slept-through slot) and inspection_log.txt
+#     has no line dated >= that slot, run inspection_refresh.sh. A live
+#     lock means the scrape is still running; don't start a second one.
 set -u
 
 REPO=/Users/tegaumukoro/heights-map
@@ -42,6 +46,32 @@ if [ -n "$SUNDAY" ]; then
         echo "$TODAY $(date +%H:%M) CATCHUP: weekly ingest for $SUNDAY missing — running" >> "$CLOG"
         /bin/bash "$REPO/weekly_permit_ingest.sh"
         echo "$TODAY $(date +%H:%M) CATCHUP: weekly ingest done (exit $?)" >> "$CLOG"
+    fi
+fi
+
+# --- inspection refresh catchup (Mon/Thu 05:00; next morning if slept through) ---
+SLOT=""
+if [ "$DOW" -eq 1 ] && [ "$NOW" -ge 0515 ] 2>/dev/null; then
+    SLOT=$TODAY
+elif [ "$DOW" -eq 4 ] && [ "$NOW" -ge 0515 ] 2>/dev/null; then
+    SLOT=$TODAY
+elif [ "$DOW" -eq 2 ] && [ "$NOW" -lt 1200 ] 2>/dev/null; then
+    if date -v-1d >/dev/null 2>&1; then SLOT=$(date -v-1d +%Y-%m-%d)
+    else SLOT=$(date -d 'yesterday' +%Y-%m-%d); fi
+elif [ "$DOW" -eq 5 ] && [ "$NOW" -lt 1200 ] 2>/dev/null; then
+    if date -v-1d >/dev/null 2>&1; then SLOT=$(date -v-1d +%Y-%m-%d)
+    else SLOT=$(date -d 'yesterday' +%Y-%m-%d); fi
+fi
+if [ -n "$SLOT" ]; then
+    RAN=$(awk -F, -v s="${SLOT//-/}" '{gsub(/-/,"",$1); if ($1+0 >= s+0) n++} END{print n+0}' \
+          pulls/inspection_log.txt 2>/dev/null || echo 0)
+    LOCKPID=$(cat pulls/inspection_refresh.lock 2>/dev/null || true)
+    RUNNING=0
+    if [ -n "${LOCKPID:-}" ] && kill -0 "$LOCKPID" 2>/dev/null; then RUNNING=1; fi
+    if [ "$RAN" -eq 0 ] && [ "$RUNNING" -eq 0 ]; then
+        echo "$TODAY $(date +%H:%M) CATCHUP: inspection refresh for $SLOT missing — running" >> "$CLOG"
+        /bin/bash "$REPO/inspection_refresh.sh"
+        echo "$TODAY $(date +%H:%M) CATCHUP: inspection refresh done (exit $?)" >> "$CLOG"
     fi
 fi
 exit 0
