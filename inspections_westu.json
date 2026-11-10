@@ -638,8 +638,8 @@
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -2247,7 +2247,7 @@
     ]
   },
   "26033243": {
-    "status": "Pending",
+    "status": "Passed",
     "updated": "2026-11-09",
     "scraped_at": "2026-11-09",
     "address": "3711 Purdue St, Houston, TX 77005",
@@ -2289,8 +2289,8 @@
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {

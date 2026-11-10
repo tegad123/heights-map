@@ -5299,41 +5299,57 @@
       {
         "type": "Driveway AM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-08-20",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
         "type": "Sidewalk AM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-08-20",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
         "type": "Go By",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-08-24",
-        "result": "Failed",
-        "raw": "No Action Required",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
         "type": "Driveway PM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-08-25",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
         "type": "Sidewalk PM",
         "permit_type": "Sidewalk,DW,PV",
-        "date": "2026-08-25",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "15 Final",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -5862,9 +5878,9 @@
       {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
-        "date": "2026-09-18",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {

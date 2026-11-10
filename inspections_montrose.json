@@ -378,9 +378,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-11-06",
-        "result": "Failed",
-        "raw": "Admin. Correction",
+        "date": "2026-11-09",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -403,8 +403,8 @@
         "type": "PLUMBING FINAL",
         "permit_type": "Plumbing Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -491,8 +491,8 @@
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -579,8 +579,8 @@
         "type": "ADD EL FINAL 2",
         "permit_type": "E2,ADDL-ELECT",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -717,8 +717,8 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -5201,8 +5201,8 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -7633,8 +7633,8 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -11981,16 +11981,16 @@
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -14148,8 +14148,8 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -16247,6 +16247,38 @@
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
+      },
+      {
+        "type": "Bedding & Fill",
+        "permit_type": "Wastewater",
+        "date": "2026-11-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Pipe Instal",
+        "permit_type": "Wastewater",
+        "date": "2026-11-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "WW Final",
+        "permit_type": "Wastewater",
+        "date": "2026-11-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Restoration",
+        "permit_type": "Wastewater",
+        "date": "2026-11-05",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
       }
     ]
   },
@@ -17127,7 +17159,7 @@
     ]
   },
   "26043369": {
-    "status": "Passed",
+    "status": "Pending",
     "updated": "2026-11-09",
     "scraped_at": "2026-11-09",
     "address": "1744 NORFOLK ST 77098",
@@ -17163,6 +17195,14 @@
         "date": "2026-07-17",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1035-Frame",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -18543,8 +18583,8 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -24537,7 +24577,7 @@
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
-        "date": "2026-11-05",
+        "date": "2026-11-10",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""

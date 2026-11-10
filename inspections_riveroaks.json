@@ -332,8 +332,8 @@
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -4781,8 +4781,8 @@
         "type": "Piers AM",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {

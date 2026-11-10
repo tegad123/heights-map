@@ -4045,9 +4045,9 @@
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
-        "date": "2025-10-21",
+        "date": "2026-11-09",
         "result": "Passed",
-        "raw": "Approved",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -4062,8 +4062,8 @@
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -4078,8 +4078,8 @@
         "type": "PLUMBING FINAL",
         "permit_type": "Plumbing Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -4752,7 +4752,7 @@
       {
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
-        "date": "2026-11-09",
+        "date": "2026-11-10",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -4825,8 +4825,8 @@
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -4986,8 +4986,8 @@
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -7658,6 +7658,22 @@
         "inspector": ""
       },
       {
+        "type": "TEMP GAS INSP",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "TEMP GAS FINAL",
+        "permit_type": "*PG*TEMP GAS",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "Date Received",
         "permit_type": "Wastewater",
         "date": "2026-04-28",
@@ -9731,7 +9747,7 @@
       {
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
-        "date": "2026-11-09",
+        "date": "2026-11-10",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -9797,24 +9813,24 @@
         "type": "1035-Frame",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -11523,8 +11539,8 @@
         "type": "Struct Final",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -11563,8 +11579,8 @@
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -14945,9 +14961,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-11-06",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -15545,6 +15561,30 @@
         "date": "2026-10-05",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "Driveway AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "Sidewalk AM",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
+        "type": "Culvert",
+        "permit_type": "Sidewalk,DW,PV",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -21214,8 +21254,8 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -21286,8 +21326,8 @@
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -21414,9 +21454,9 @@
       {
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
-        "date": "2026-10-21",
+        "date": "2026-11-09",
         "result": "Passed",
-        "raw": "Partial Approval",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -43748,7 +43788,7 @@
     "inspections": []
   },
   "25117865": {
-    "status": "Passed",
+    "status": "Pending",
     "updated": "2026-11-09",
     "scraped_at": "2026-11-09",
     "address": "1032 Key St, Houston, TX 77009",
@@ -43776,6 +43816,14 @@
         "date": "2026-10-16",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       }
     ]
@@ -47684,14 +47732,22 @@
         "type": "AC FINAL",
         "permit_type": "HVAC Permit",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
         "type": "GO BY",
         "permit_type": "HVAC Permit",
         "date": "2026-07-30",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "GRILLE SEAL",
+        "permit_type": "HVAC Permit",
+        "date": "2026-11-09",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -47734,6 +47790,14 @@
         "date": "2026-01-23",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "DECOR AD FINAL",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -48118,8 +48182,8 @@
   },
   "25042403": {
     "status": "Partial",
-    "updated": "2026-11-08",
-    "scraped_at": "2026-11-08",
+    "updated": "2026-11-09",
+    "scraped_at": "2026-11-09",
     "address": "827 W 16th St A, Houston, TX 77008",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -53052,8 +53116,8 @@
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -54902,8 +54966,8 @@
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -58053,9 +58117,9 @@
       {
         "type": "ROUGH IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-11-06",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-11-10",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -58227,6 +58291,22 @@
         "inspector": ""
       },
       {
+        "type": "WW Final",
+        "permit_type": "Wastewater",
+        "date": "2026-11-09",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "Restoration",
+        "permit_type": "Wastewater",
+        "date": "2026-11-06",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
         "type": "Mylar",
         "permit_type": "Wastewater",
         "date": "2026-11-05",
@@ -58376,8 +58456,8 @@
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       }
     ]
@@ -58668,8 +58748,8 @@
   },
   "24053698": {
     "status": "Passed",
-    "updated": "2026-11-08",
-    "scraped_at": "2026-11-08",
+    "updated": "2026-11-09",
+    "scraped_at": "2026-11-09",
     "address": "4327 Center St, Houston, TX 77007",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -91124,16 +91204,16 @@
         "type": "Fire Wall",
         "permit_type": "Building Pmt",
         "date": "2026-11-10",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Admin. Correction",
         "inspector": ""
       },
       {
         "type": "Nail Pattern",
         "permit_type": "Building Pmt",
         "date": "2026-11-10",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Admin. Correction",
         "inspector": ""
       },
       {
@@ -103830,7 +103910,7 @@
       {
         "type": "SEWER",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-11-09",
+        "date": "2026-11-10",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -103838,7 +103918,7 @@
       {
         "type": "GROUND IN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-11-09",
+        "date": "2026-11-10",
         "result": "Pending",
         "raw": "Inspection Requested",
         "inspector": ""
@@ -103862,7 +103942,7 @@
     "inspections": []
   },
   "26063866": {
-    "status": "Pending",
+    "status": "Passed",
     "updated": "2026-11-09",
     "scraped_at": "2026-11-09",
     "address": "731 Wilken St, Houston, TX 77008",
@@ -103872,8 +103952,8 @@
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-11-09",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       }
     ]
