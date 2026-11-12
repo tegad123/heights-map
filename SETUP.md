@@ -150,6 +150,45 @@ unchanged" means ILMS was reached and the file already matched.
 
 ---
 
+## HAR sold comps and active listings
+
+Heights stays on its own scripts (`active_ingest.py`, `sold_ingest.py`).
+Do not point those at a multi-market export.
+
+Every other live market, including Spring Valley Village, is one command.
+The two CSVs are the address-led HAR export (no separate single/split
+files). The command assigns each row by the market boundary, or by the
+coordinate box where a market has no boundary (West University). It
+keeps year built 2025 or later and lots of at least 2,200 sqft. Lots of
+4,000 sqft or more are Single Lot. Lots of 2,200 to 3,999 are Split Lot.
+Pending rows are tagged pending. They are not Off Market and they are
+not sold comps.
+
+Dry run, then apply:
+
+```bash
+python3 har_refresh.py \
+  --active markets_active.csv \
+  --sold markets_sold.csv \
+  --as-of 2026-11-12
+python3 har_refresh.py \
+  --active markets_active.csv \
+  --sold markets_sold.csv \
+  --as-of 2026-11-12 \
+  --apply
+```
+
+`--market montrose` limits the write to one market. `--market heights`
+is refused. The raw CSVs stay out of git. Dropped rows go to
+`pulls/dropped_har_<date>.csv`, which is gitignored. Apply writes, per
+market, `<market>_active.data.json`, `<market>_sold.data.json`, and
+`<market>_market_status.data.json`. The map page reads those. It does
+not rewrite DATA or RECONCILE.
+
+Spring Valley's ring is the Census city limit (GEOID 4869830), not all
+of 77024. It is still excluded from the permit ingest until
+`springvalley_permits.json` exists.
+
 ## Legacy fallback — Mac launchd / cron
 
 Use this only if GitHub-hosted runners cannot reach ILMS. While the
