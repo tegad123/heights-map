@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """HAR active snapshot, independent of hand-authored DATA. Dry run by default.
-Original List Price is not current asking price. Missing exports never imply sold.
+
+List Price is the asking price on the export date. Original List Price is
+kept separately. Missing exports never imply sold. Year built and the lot
+floor are ingest drops; they do not change Single Lot versus Split Lot.
 """
 import argparse
 import csv
@@ -11,7 +14,7 @@ import re
 from collections import Counter
 from pathlib import Path
 from sold_ingest import money
-from sold_classification import classify_lot
+from sold_classification import MIN_LOT_SQFT, MIN_YEAR_BUILT, classify_lot, lot_floor_reason
 from deed_ingest import in_boundary
 
 ROOT = Path(__file__).resolve().parent
@@ -35,6 +38,47 @@ def address_key(address):
     return ' '.join(w)
 
 
+def exclusion_reason(row, expected, zone, geo):
+    """One reason, or None when the row belongs in the active snapshot.
+
+    Zone guards win over the lot floor so an out-of-Heights townhome is not
+    counted as a Heights lot drop. A blank or sub-minimum lot is not a
+    file-split failure; classify_lot is unchanged.
+    """
+    mls=(row.get('MLS Number') or '').strip()
+    address=(row.get('Address') or '').strip()
+    lot=money(row.get('Lot Size'))
+    price=money(row.get('Original List Price'))
+    ask=money(row.get('List Price'))
+    dom=money(row.get('DOM'))
+    year=money(row.get('Year Built'))
+    lat=money(row.get('Latitude'))
+    lng=money(row.get('Longitude'))
+    floor=lot_floor_reason(row.get('Lot Size'))
+    product=classify_lot(row.get('Lot Size'))
+    if not mls or not address or price is None or price<=0 or dom is None or dom<0 or year is None:
+        return 'INVALID_REQUIRED_FIELD'
+    if row.get('Status','').strip()!='Active' or (row.get('Close Price') or '').strip() or (row.get('Close Date') or '').strip():
+        return 'NOT_ACTIVE_EXPORT'
+    if lat is None or lng is None or not (-90<=lat<=90 and -180<=lng<=180):
+        return 'INVALID_COORDINATES'
+    if zone.search(address):
+        return 'OOZ_REGEX'
+    if lng>-95.370:
+        return 'OOZ_EAST'
+    if not in_boundary(geo,lng,lat):
+        return 'OOZ_POLY'
+    if year<MIN_YEAR_BUILT:
+        return 'YEAR_BEFORE_MIN'
+    if floor:
+        return floor
+    if product!=expected:
+        return 'CLASSIFICATION_MISMATCH'
+    if ask is None or ask<=0:
+        return 'MISSING_CURRENT_PRICE'
+    return None
+
+
 def run(as_of, single_input, split_input, apply=False):
     from datetime import date
     date.fromisoformat(as_of)
@@ -50,45 +94,47 @@ def run(as_of, single_input, split_input, apply=False):
     existing={r['mls']:r for r in old['listings']}
     listings=[];ledger=[];summaries=[];seen=set();seen_addresses=set();mismatches=[]
     for name,expected in inputs:
-        payload=(ROOT/name).read_bytes();digest=hashlib.sha256(payload).hexdigest()
+        payload=Path(name).read_bytes();digest=hashlib.sha256(payload).hexdigest()
         reader=csv.DictReader(io.StringIO(payload.decode('utf-8-sig')))
-        required={'MLS Number','Address','Latitude','Longitude','Lot Size','DOM','Original List Price','Year Built','Builder Name','List Agent Full Name','Close Price','Close Date','Status'}
+        required={'MLS Number','Address','Latitude','Longitude','Lot Size','DOM','Original List Price','List Price','Year Built','Builder Name','List Agent Full Name','Close Price','Close Date','Status'}
         if not required.issubset(reader.fieldnames or []):raise ValueError('Missing columns: '+name)
         rows=list(reader)
         if not rows:raise ValueError('Empty export: '+name)
-        summary=dict(file=name,read=len(rows),added=0,updated=0,unchanged=0,excluded=Counter(),classification_matches=0)
+        summary=dict(file=Path(name).name,read=len(rows),added=0,updated=0,unchanged=0,excluded=Counter(),classification_matches=0)
         for line,row in enumerate(rows,2):
             mls=(row.get('MLS Number') or '').strip();a=(row.get('Address') or '').strip()
-            lot=money(row.get('Lot Size'));prod=classify_lot(lot)
-            if prod==expected:summary['classification_matches']+=1
-            else:mismatches.append(dict(file=name,row=line,address=a,derived=prod,expected=expected))
-            lat=money(row.get('Latitude'));lng=money(row.get('Longitude'));price=money(row.get('Original List Price'));dom=money(row.get('DOM'));yb=money(row.get('Year Built'))
-            reason=None;k=address_key(a)
-            if not mls or not a or any(v is None for v in (lot,price,dom,yb)) or lot<=0 or price<=0 or dom<0:reason='INVALID_REQUIRED_FIELD'
-            elif row.get('Status','').strip()!='Active' or row.get('Close Price') or row.get('Close Date'):reason='NOT_ACTIVE_EXPORT'
-            elif lat is None or lng is None or not (-90<=lat<=90 and -180<=lng<=180):reason='INVALID_COORDINATES'
-            elif zone.search(a):reason='OOZ_REGEX'
-            elif lng> -95.370:reason='OOZ_EAST'
-            elif not in_boundary(geo,lng,lat):reason='OOZ_POLY'
-            elif prod!=expected:reason='CLASSIFICATION_MISMATCH'
-            elif mls in seen or k in seen_addresses:reason='DUP_INPUT'
+            floor=lot_floor_reason(row.get('Lot Size'));prod=classify_lot(row.get('Lot Size'))
+            # A below-minimum or blank lot is dropped later. It is not a mis-filed Single/Split row.
+            if floor or prod==expected:
+                summary['classification_matches']+=1
+            else:
+                mismatches.append(dict(file=Path(name).name,row=line,address=a,derived=prod,expected=expected))
+            reason=exclusion_reason(row,expected,zone,geo)
+            lat=money(row.get('Latitude'));lng=money(row.get('Longitude'));price=money(row.get('Original List Price'));ask=money(row.get('List Price'));dom=money(row.get('DOM'));yb=money(row.get('Year Built'));lot=money(row.get('Lot Size'));k=address_key(a)
+            if not reason and (mls in seen or k in seen_addresses):reason='DUP_INPUT'
             if reason:
                 summary['excluded'][reason]+=1
-                ledger.append(dict(FILE=name,SHA256=digest,ROW=line,MLS=mls,ADDRESS=a,REASON=reason,RAW_JSON=json.dumps(row,sort_keys=True)))
+                ledger.append(dict(FILE=Path(name).name,SHA256=digest,ROW=line,MLS=mls,ADDRESS=a,REASON=reason,RAW_JSON=json.dumps(row,sort_keys=True)))
                 continue
             seen.add(mls);seen_addresses.add(k)
-            r=dict(mls=mls,address=a,address_key=k,original_list_price=price,dom=dom,lot_sqft=lot,product=prod,builder=row['Builder Name'].strip(),list_agent=row['List Agent Full Name'].strip(),year_built=yb,lat=lat,lng=lng,status='active',as_of=as_of,source_file=name,source_row=line,source_sha256=digest)
+            r=dict(mls=mls,address=a,address_key=k,original_list_price=price,current_list_price=ask,dom=dom,lot_sqft=lot,product=prod,builder=row['Builder Name'].strip(),list_agent=row['List Agent Full Name'].strip(),year_built=yb,lat=lat,lng=lng,status='active',as_of=as_of,source_file=Path(name).name,source_row=line,source_sha256=digest)
             prior=existing.get(mls)
             summary['unchanged' if prior==r else 'updated' if prior else 'added']+=1
             listings.append(r)
         summaries.append(summary)
-    result=dict(as_of=as_of,scope='Two supplied HAR exports; absence is not proof of off-market status. Price is Original List Price, not verified current asking price.',listings=sorted(listings,key=lambda r:r['mls']))
+    result=dict(as_of=as_of,scope=(
+        'Current HAR active snapshot. List Price is the asking price on the export date; '
+        'Original List Price is retained separately. Absence is not proof of off-market status. '
+        f'New construction, year built >= {MIN_YEAR_BUILT}; lot size >= {MIN_LOT_SQFT} sqft.'),
+        listings=sorted(listings,key=lambda r:r['mls']))
     contents=json.dumps(result,indent=2,ensure_ascii=True)+'\n'
     buf=io.StringIO(newline='');writer=csv.DictWriter(buf,fieldnames=['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON'],lineterminator='\n');writer.writeheader();writer.writerows(ledger)
     ledger_path=ROOT/'pulls'/('dropped_active_'+as_of+'.csv')
     outputs={path:contents,ledger_path:buf.getvalue()}
     changed=[str(p.relative_to(ROOT)) for p,s in outputs.items() if not p.exists() or p.read_text()!=s]
-    report=dict(files=summaries,total=len(listings),crosscheck_mismatches=mismatches,ledger_rows=len(ledger),changed_files=changed)
+    report=dict(files=summaries,total=len(listings),products=dict(Counter(r['product'] for r in listings)),
+                accepted=[{'mls':r['mls'],'product':r['product'],'lot_sqft':r['lot_sqft'],'current_list_price':r['current_list_price'],'year_built':r['year_built']} for r in listings],
+                crosscheck_mismatches=mismatches,ledger_rows=len(ledger),changed_files=changed)
     print(json.dumps(report,indent=2))
     if mismatches:raise ValueError('Classification mismatch; refusing apply')
     if apply:

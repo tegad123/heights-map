@@ -1,0 +1,268 @@
+{
+ "date": "2026-11-12",
+ "sources": [
+  "heights_active_eligible_single_2026-11-12.csv",
+  "heights_active_eligible_split_2026-11-12.csv"
+ ],
+ "counts": {
+  "matched": 34,
+  "dropped": 13,
+  "new": 18,
+  "relisted": 4,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "2131129832",
+  "act_1012-e-26th-street",
+  "act_1122-e-27th-st-unit-a",
+  "act_1202-aurora-street",
+  "act_1218-prince-street",
+  "act_1303-cordell-street-unit-b",
+  "act_1317-waverly-street",
+  "act_1322-lawrence-street",
+  "act_1502-w-21",
+  "act_1520-w-21st-st-unit-b",
+  "act_212-e-24",
+  "act_2218-gostick-street",
+  "act_2434-white-oak",
+  "act_248-w-22",
+  "act_2603-julian",
+  "act_2924-watson-street",
+  "act_312-w-9th-st",
+  "act_318-w-21st-street",
+  "act_335-harvard-street",
+  "act_407-e-27th-street",
+  "act_603-e-23",
+  "act_611-e-25th-street-unit-b",
+  "act_614-ridge-street",
+  "act_616-ridge",
+  "act_623-e-13",
+  "act_711-e-26th-street",
+  "act_715-merrill",
+  "act_735-e-8-12",
+  "act_830-e-27",
+  "act_830-waverly-street",
+  "act_834-waverly-street",
+  "act_845-w-23",
+  "act_902-e-25",
+  "act_920-e-25"
+ ],
+ "dropped": [
+  {
+   "id": "act_1002-e-25th-street",
+   "a": "1002 E 25th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1122-robbie-street",
+   "a": "1122 Robbie Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_122-e-4",
+   "a": "122 E 4th Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1504-w-21st-street",
+   "a": "1504 W 21st Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_1906-w-14",
+   "a": "1906 W 14th",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_602-jewett-street-unit-b",
+   "a": "602 Jewett Street Unit#B",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_609-e-25",
+   "a": "609 E 25th Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_609-w-27th-street",
+   "a": "609 W 27th Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_613-wendel",
+   "a": "613 Wendel Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_731-e-8-12",
+   "a": "731 E 8TH 1/2 Street",
+   "ty": "single",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_741-w-21st-street-unit-a",
+   "a": "741 W 21st Street Unit#A",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_805-w-22nd-street",
+   "a": "805 W 22nd Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  },
+  {
+   "id": "act_833-w-25th-street",
+   "a": "833 W 25th Street",
+   "ty": "split",
+   "disposition": "unconfirmed"
+  }
+ ],
+ "relisted": [
+  {
+   "id": "2131318242",
+   "a": "1120 E 26th St, Houston, Tx 77009",
+   "ty": "active_split",
+   "offSince": "2026-10-07"
+  },
+  {
+   "id": "act_227-e-26th-street",
+   "a": "227 E 26th Street",
+   "ty": null,
+   "offSince": "2026-09-28"
+  },
+  {
+   "id": "act_705-walton-street",
+   "a": "705 Walton Street",
+   "ty": "active_single",
+   "offSince": "2026-10-07"
+  },
+  {
+   "id": "act_835-w-25th-street",
+   "a": "835 W 25th Street",
+   "ty": "active_split",
+   "offSince": "2026-10-07"
+  }
+ ],
+ "new": [
+  {
+   "a": "805 Walton Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "217 TEETSHORN Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1138 Fugate Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1021 Nadine Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "845 E 26th Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "618 Wendel Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1109 Voight Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "711 E 12th Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "305 W 17th Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "123 Amundsen Street Unit#A",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "5226 Cornish Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1135 Adele Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1320 Alexander Street Unit#A",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1320 Alexander Street Unit#B",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "607 W 27th Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "934 Dorothy Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "520 W 24th Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "118 E 23RD Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {}
+}

@@ -21,14 +21,18 @@ function activePopupFacts(r){
     const {listing,sales}=activeEvidence(c);
     const rec=RECONCILE.pending[c.id]?'Pending / Under Contract':RECONCILE.off[c.id]?'Off Market':null;
     h+='<div style="margin-top:8px"><b>'+esc(c.a)+'</b><br>';
-    if(listing)h+='<strong style="color:#2f9e44">Active in HAR export</strong><br>MLS '+esc(listing.mls)+' · '+esc(listing.product)+'<br>Original list price: $'+listing.original_list_price.toLocaleString()+'<br>DOM: '+listing.dom+' days · Lot: '+listing.lot_sqft.toLocaleString()+' sq ft<br>Builder: '+esc(listing.builder||'Not supplied')+'<br>List agent: '+esc(listing.list_agent||'Not supplied');
+    if(listing){
+      h+='<strong style="color:#2f9e44">Active in HAR export</strong><br>MLS '+esc(listing.mls)+' · '+esc(listing.product);
+      if(Number(listing.current_list_price)>0)h+='<br>Current asking price: $'+Number(listing.current_list_price).toLocaleString();
+      h+='<br>Original list price: $'+listing.original_list_price.toLocaleString()+'<br>DOM: '+listing.dom+' days · Lot: '+listing.lot_sqft.toLocaleString()+' sq ft<br>Builder: '+esc(listing.builder||'Not supplied')+'<br>List agent: '+esc(listing.list_agent||'Not supplied');
+    }
     else if(sales.length)h+='<strong>Sold record: '+esc(sales[0].cd)+'</strong> · $'+sales[0].cp.toLocaleString()+' · MLS '+esc(sales[0].id.slice(1))+'<br>Absent from this active export; subsequent listing status unverified.';
     else h+='Not in this active export; no matching sold comp. Availability unverified.';
     if(listing&&sales.length)h+='<br>Historical sale: '+esc(sales[0].cd)+' (separate transaction).';
     if(rec)h+='<br><span class="pmeta">Prior recorded status: '+esc(rec)+'; retained for review.</span>';
     h+='</div>';
   }
-  h+='<div class="pmeta" style="margin-top:8px">Original list price is not a verified current asking price. Export coverage is limited.'+(r._twin?' Construction evidence below belongs to the paired project.':'')+'</div></section>';
+  h+='<div class="pmeta" style="margin-top:8px">Current asking price is the list price on the export date when that column was supplied. Original list price is retained separately. Export coverage is limited.'+(r._twin?' Construction evidence below belongs to the paired project.':'')+'</div></section>';
   return h;
 }
 const activeOriginalPopup=popupHTML;
@@ -62,7 +66,8 @@ matchSel=function(tags,k,id){
   return activeOriginalMatch(tags,k,id);
 };
 function renderActiveLegend(){
-  const eligible=ACTIVE_VIEW.listings.filter(r=>![...ACTIVE_VIEW.byPin].some(([id,rows])=>inventoryCategory(id)&&rows.includes(r)));
+  const mapped=new Set([...ACTIVE_VIEW.byAddress.values()]);
+  const eligible=ACTIVE_VIEW.listings.filter(r=>mapped.has(r)&&![...ACTIVE_VIEW.byPin].some(([id,rows])=>inventoryCategory(id)&&rows.includes(r)));
   const el=document.getElementById('legend');el.querySelector('[data-active-listings]')?.remove();
   let h='<div data-active-listings class="grp"><div class="grp-h"><span class="gn">Active Listings</span><span class="ct2">'+eligible.length+'</span></div>';
   if(!ACTIVE_VIEW.ready)h+='<div class="pmeta">'+esc(ACTIVE_VIEW.error||'Loading HAR snapshot…')+'</div>';
@@ -71,7 +76,7 @@ function renderActiveLegend(){
       const key='AL:'+prod,count=eligible.filter(r=>r.product===prod).length;
       h+='<button type="button" class="leafrow'+sOn(key)+'" data-active-product="'+prod+'" aria-pressed="'+activeF.has(key)+'" style="width:100%;border:0;font:inherit;color:inherit;background:transparent;text-align:left"><span class="sw" style="background:#2f9e44"></span><span class="nm">'+prod+'</span><span class="ct2">'+count+'</span></button>';
     }
-    h+='<div class="pmeta" style="padding:6px 12px;font-size:10px;color:var(--muted)">HAR '+esc(ACTIVE_VIEW.asOf)+' · listing counts, paired pins may overlap</div>';
+    h+='<div class="pmeta" style="padding:6px 12px;font-size:10px;color:var(--muted)">HAR '+esc(ACTIVE_VIEW.asOf)+' · listing counts, paired pins may overlap'+((ACTIVE_VIEW.unmatched||[]).length?' · '+(ACTIVE_VIEW.unmatched.length)+' with no map pin':'')+'</div>';
   }
   h+='</div>';el.insertAdjacentHTML('afterbegin',h);
   el.querySelectorAll('[data-active-product]').forEach(button=>button.addEventListener('click',()=>{
@@ -87,13 +92,16 @@ async function loadActiveListings(){
     const idx=new Map();for(const r of DATA)for(const c of activeMembers(r)){
       const key=activeAddressKey(c.a);if(!idx.has(key))idx.set(key,[]);idx.get(key).push(r.id);
     }
-    const byPin=new Map(),byAddress=new Map();
+    const byPin=new Map(),byAddress=new Map(),unmatched=[];
     for(const listing of data.listings){
       const key=activeAddressKey(listing.address),ids=[...new Set(idx.get(key)||[])];
-      if(ids.length!==1||byAddress.has(key))throw Error('Ambiguous or missing property match: '+listing.address);
+      if(listing.address_key!==key||ids.length!==1||byAddress.has(key)){
+        unmatched.push({address:listing.address,mls:listing.mls,reason:ids.length>1?'ambiguous':ids.length?'duplicate':'missing'});
+        continue;
+      }
       if(!byPin.has(ids[0]))byPin.set(ids[0],[]);byPin.get(ids[0]).push(listing);byAddress.set(key,listing);
     }
-    Object.assign(ACTIVE_VIEW,{ready:true,asOf:data.as_of,listings:data.listings,byPin,byAddress});
+    Object.assign(ACTIVE_VIEW,{ready:true,asOf:data.as_of,listings:data.listings,byPin,byAddress,unmatched});
   }catch(e){ACTIVE_VIEW.error='Active listings unavailable: '+e.message;console.error(ACTIVE_VIEW.error);}
   renderLegend();refresh();
 }

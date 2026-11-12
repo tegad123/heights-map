@@ -8,18 +8,14 @@ from combined_market_ingest import load
 from deed_ingest import span,encode
 from market_address import address_key
 import market_status_ingest as legacy
-from sold_ingest import metrics_for, money
+from sold_classification import MIN_LOT_SQFT, MIN_YEAR_BUILT, lot_floor_reason
+from sold_ingest import metrics_for, money, refresh_derived
 ROOT=Path(__file__).resolve().parent
-HEIGHTS_SOLD_COMP_MIN_LOT_SQFT = 2200
+HEIGHTS_SOLD_COMP_MIN_LOT_SQFT = MIN_LOT_SQFT
 ABSENT_SOURCE_REASON = 'absent from source export, cause unconfirmed'
 
 def lot_exclusion(lot):
-    lot=money(lot)
-    if lot is None or lot<=0:
-        return 'MISSING_OR_INVALID_LOT_SIZE'
-    if lot<HEIGHTS_SOLD_COMP_MIN_LOT_SQFT:
-        return 'BELOW_COMP_MIN_LOT_SQFT'
-    return None
+    return lot_floor_reason(lot, HEIGHTS_SOLD_COMP_MIN_LOT_SQFT)
 
 def replace_once_or_already(text, old, new):
     if text.count(new)==1 and old not in text:
@@ -171,6 +167,119 @@ def run(args):
             if str(p.relative_to(ROOT)) in changed:p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
     if args.output:Path(args.output).write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2));return report
+def merge_incremental(inputs, as_of, apply=False):
+    """Merge a single/split sold export into the displayed comps and the evidence store.
+
+    New MLS rows that pass the zone guards, year floor, and lot floor are added.
+    Existing comps stay, including ones this short export does not repeat.
+    Display comps older than the trailing 365 days leave SOLD_DATA and stay in
+    SOLD_EVIDENCE. Absence from this export is not a retirement.
+    """
+    html=(ROOT/'index.html').read_text()
+    today=date.fromisoformat(as_of)
+    if 'const SOLD_EVIDENCE=' not in html or 'const SOLD_COMP_POLICY=' not in html:
+        raise ValueError('incremental comp merge requires the split evidence/policy constants')
+    evidence=span(html,'SOLD_EVIDENCE')[2]
+    before=span(html,'SOLD_DATA')[2]
+    policy=dict(span(html,'SOLD_COMP_POLICY')[2])
+    records=[]; ledger=[]; summaries=[]; mismatches=[]; seen=set()
+    for path, expected in inputs:
+        path=Path(path)
+        recs, _dropped, profile=load(path, html, as_of)
+        summary=dict(file=path.name, read=profile['rows'], accepted=0, excluded=Counter(), classification_matches=0)
+        for rec in recs:
+            floor=lot_floor_reason(rec['raw'].get('Lot Size'))
+            if floor or rec['product']==expected:
+                summary['classification_matches']+=1
+            else:
+                mismatches.append(dict(file=path.name, row=rec['source_row'], address=rec['address'], derived=rec['product'], expected=expected))
+            if not rec['exclusion']:
+                if rec['year_built'] is None or rec['year_built']<MIN_YEAR_BUILT:
+                    rec['exclusion']='YEAR_BEFORE_MIN'
+                elif floor:
+                    rec['exclusion']=floor
+                elif not rec['building_sqft'] or rec['building_sqft']<=0:
+                    rec['exclusion']='MISSING_BUILDING_SQFT'
+                elif not today-timedelta(days=365)<=date.fromisoformat(rec['close_date'])<=today:
+                    rec['exclusion']='OUTSIDE_365_DAYS'
+                elif rec['mls'] in seen:
+                    rec['exclusion']='DUP_INPUT'
+            if rec['exclusion']:
+                summary['excluded'][rec['exclusion']]+=1
+                ledger.append(dict(FILE=path.name, SHA256=rec['source_sha256'], ROW=rec['source_row'], MLS=rec['mls'], ADDRESS=rec['address'], REASON=rec['exclusion'], RAW_JSON=json.dumps(rec['raw'], sort_keys=True)))
+            else:
+                seen.add(rec['mls']); summary['accepted']+=1; records.append(rec)
+        summaries.append(summary)
+    legacy.AS_OF=as_of
+    evidence_rows, evidence_report=legacy.merge_sales(list(evidence), records)
+    display_rows, display_report=legacy.merge_sales(list(before), records)
+    if evidence_report['conflicts'] or display_report['conflicts']:
+        raise ValueError({'evidence':evidence_report['conflicts'], 'display':display_report['conflicts']})
+    start=today-timedelta(days=365)
+    kept=[]; aged=[]
+    accepted_ids={'s'+rec['mls'] for rec in records}
+    for row in display_rows:
+        reason=None
+        closed=date.fromisoformat(row['cd'])
+        if closed<start or closed>today:
+            reason='OUTSIDE_365_DAY_COMP_WINDOW'
+        else:
+            reason=lot_floor_reason(row.get('lot'))
+        if reason:
+            if row['id'] in accepted_ids:
+                raise ValueError('Accepted sale failed display policy: '+row['id']+' '+reason)
+            aged.append(dict(MLS=row['id'].removeprefix('s'), ADDRESS=row['a'], CLOSE_DATE=row['cd'], REASON=reason))
+        else:
+            kept.append(row)
+    aged.sort(key=lambda row: (row['CLOSE_DATE'], row['MLS']))
+    kept=refresh_derived(kept, today)
+    if any(lot_floor_reason(row.get('lot')) for row in kept):
+        raise ValueError('Comp lot policy validation failed')
+    metrics=metrics_for(kept, today)
+    metrics['basis']=(
+        'Displayed eligible new-construction comps, trailing 365 days, lots >=2,200 sqft. '
+        f'Incremental merge of the September 14 baseline with later sales through {as_of}; '
+        'not a new full-year census.')
+    policy.update(as_of=as_of, start=start.isoformat(), end=as_of,
+                  source='September 14 baseline + incremental sales through '+as_of,
+                  min_lot_sqft=HEIGHTS_SOLD_COMP_MIN_LOT_SQFT,
+                  coverage='Incremental refresh; complete market coverage not independently established')
+    candidate=html
+    for name,value in [('SOLD_EVIDENCE',evidence_rows),('SOLD_COMP_POLICY',policy),('SOLD_DATA',kept),('SOLD_METRICS',metrics)]:
+        a,b,old=span(candidate,name)
+        if old!=value:candidate=candidate[:a]+encode(value)+candidate[b:]
+    for name in ['DATA','RECONCILE']:
+        a,b,_=span(html,name);c,d,_=span(candidate,name);assert html[a:b]==candidate[c:d]
+    before_ids={row['id'] for row in before}
+    evidence_ids={row['id'] for row in evidence}
+    aged_ids={'s'+row['MLS'] for row in aged}
+    removed=before_ids-aged_ids-{row['id'] for row in kept}
+    if removed:
+        raise ValueError('Displayed comp removed for a reason other than the trailing window or lot floor: '+', '.join(sorted(removed)))
+    if not evidence_ids <= {row['id'] for row in evidence_rows}:
+        raise ValueError('Historical sale evidence was dropped')
+    outputs={
+        ROOT/'index.html':candidate,
+        ROOT/f'pulls/dropped_sold_{as_of}.csv':legacy.csvtxt(ledger,['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON']),
+        ROOT/f'pulls/aged_sold_comps_{as_of}.csv':legacy.csvtxt(aged,['MLS','ADDRESS','CLOSE_DATE','REASON'])}
+    changed=[str(p.relative_to(ROOT)) for p,text in outputs.items() if not p.exists() or p.read_text()!=text]
+    products=Counter(row['prod'] for row in kept)
+    report=dict(mode='APPLY' if apply else 'DRY RUN', as_of=as_of, files=summaries,
+                crosscheck_mismatches=mismatches, comps_before=len(before), comps_after=len(kept),
+                added=display_report['added'], updated=display_report['updated'],
+                aged_out=aged, products=dict(products),
+                evidence_before=len(evidence), evidence_after=len(evidence_rows),
+                evidence_added=evidence_report['added'], ledger_rows=len(ledger), changed_files=changed)
+    print(json.dumps(report, indent=2))
+    if mismatches:
+        raise ValueError('export classification mismatch; refusing apply')
+    if apply:
+        for path,text in outputs.items():
+            if str(path.relative_to(ROOT)) in changed:
+                path.parent.mkdir(parents=True, exist_ok=True); path.write_text(text)
+    return report
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     p.add_argument('--input',required=True)
