@@ -1,0 +1,4035 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "act_9849-mocking-bird-hill": {
+      "status": "active",
+      "current": {
+        "mls": "63602910",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 599900.0,
+        "original_list_price": 599900.0,
+        "dom": 1.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9849 Mocking Bird Hill Lane"
+      }
+    },
+    "act_9537-kerrwood": {
+      "status": "sold",
+      "current": {
+        "mls": "96914447",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 939900.0,
+        "dom": 73.0,
+        "close_date": "2026-08-21",
+        "close_price": 899990.0,
+        "as_of": "2026-11-12",
+        "address": "9537 Kerrwood Lane"
+      }
+    },
+    "act_7938-turquoise": {
+      "status": "active",
+      "current": {
+        "mls": "5763919",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1099000.0,
+        "original_list_price": 1100000.0,
+        "dom": 139.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7938 Turquoise Lane"
+      }
+    },
+    "act_1946-pech": {
+      "status": "active",
+      "current": {
+        "mls": "10003295",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1124900.0,
+        "original_list_price": 1124900.0,
+        "dom": 27.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1946 Pech Road"
+      }
+    },
+    "act_8025-cedel": {
+      "status": "active",
+      "current": {
+        "mls": "43594865",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1175000.0,
+        "original_list_price": 1175000.0,
+        "dom": 153.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8025 Cedel Drive"
+      }
+    },
+    "act_8550-montridge": {
+      "status": "sold",
+      "current": {
+        "mls": "48092893",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1195000.0,
+        "dom": 88.0,
+        "close_date": "2026-10-28",
+        "close_price": 1190000.0,
+        "as_of": "2026-11-12",
+        "address": "8550 Montridge Drive"
+      }
+    },
+    "act_1720-huge-oaks": {
+      "status": "active",
+      "current": {
+        "mls": "11495844",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1199900.0,
+        "original_list_price": 1250000.0,
+        "dom": 259.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1720 Huge Oaks Street"
+      }
+    },
+    "act_1922-norcrest": {
+      "status": "sold",
+      "current": {
+        "mls": "44231733",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1269000.0,
+        "dom": 37.0,
+        "close_date": "2026-08-27",
+        "close_price": 1255000.0,
+        "as_of": "2026-11-12",
+        "address": "1922 Norcrest Dr Drive"
+      }
+    },
+    "act_8021-turquoise": {
+      "status": "active",
+      "current": {
+        "mls": "10064858",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1249999.0,
+        "original_list_price": 1249999.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8021 Turquoise Lane"
+      }
+    },
+    "act_1717-monarch-oaks": {
+      "status": "active",
+      "current": {
+        "mls": "38193031",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1249900.0,
+        "original_list_price": 1249900.0,
+        "dom": 42.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1717 Monarch Oaks Street"
+      }
+    },
+    "act_1504-story": {
+      "status": "sold",
+      "current": {
+        "mls": "22410145",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1425900.0,
+        "dom": 10.0,
+        "close_date": "2026-08-21",
+        "close_price": 1425900.0,
+        "as_of": "2026-11-12",
+        "address": "1504 Story Street"
+      }
+    },
+    "act_1302-springrock": {
+      "status": "active",
+      "current": {
+        "mls": "58319751",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1385000.0,
+        "original_list_price": 1385000.0,
+        "dom": 17.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1302 Springrock Lane"
+      }
+    },
+    "act_7414-schiller": {
+      "status": "active",
+      "current": {
+        "mls": "37905461",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1479000.0,
+        "original_list_price": 1479000.0,
+        "dom": 45.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7414 Schiller Street"
+      }
+    },
+    "act_1731-benbow": {
+      "status": "active",
+      "current": {
+        "mls": "88899325",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1593000.0,
+        "original_list_price": 1593000.0,
+        "dom": 199.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1731 Benbow Way"
+      }
+    },
+    "act_9756-westview": {
+      "status": "active",
+      "current": {
+        "mls": "42491037",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1690000.0,
+        "original_list_price": 1670000.0,
+        "dom": 268.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9756 Westview Drive"
+      }
+    },
+    "act_7119-housman": {
+      "status": "active",
+      "current": {
+        "mls": "72893803",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1600000.0,
+        "original_list_price": 1600000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7119 Housman Street"
+      }
+    },
+    "act_1306-zora": {
+      "status": "active",
+      "current": {
+        "mls": "96230978",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1595000.0,
+        "original_list_price": 1695000.0,
+        "dom": 147.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1306 Zora Street"
+      }
+    },
+    "act_7006-schiller": {
+      "status": "active",
+      "current": {
+        "mls": "58764081",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1698000.0,
+        "original_list_price": 1698000.0,
+        "dom": 2.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7006 Schiller Street"
+      }
+    },
+    "act_1730-parana": {
+      "status": "active",
+      "current": {
+        "mls": "10067615",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699990.0,
+        "original_list_price": 1699990.0,
+        "dom": 70.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1730 Parana Drive"
+      }
+    },
+    "act_9926-warwana": {
+      "status": "sold",
+      "current": {
+        "mls": "49202801",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1793000.0,
+        "dom": 129.0,
+        "close_date": "2026-10-09",
+        "close_price": 1700000.0,
+        "as_of": "2026-11-12",
+        "address": "9926 Warwana Road"
+      }
+    },
+    "act_9349-leto": {
+      "status": "active",
+      "current": {
+        "mls": "97461854",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799995.0,
+        "original_list_price": 1799995.0,
+        "dom": 174.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9349 Leto Road"
+      }
+    },
+    "act_7218-schiller": {
+      "status": "sold",
+      "current": {
+        "mls": "28922837",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1720000.0,
+        "dom": 16.0,
+        "close_date": "2026-09-30",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "7218 Schiller Street"
+      }
+    },
+    "act_1116-oak-tree": {
+      "status": "active",
+      "current": {
+        "mls": "94629897",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1900000.0,
+        "original_list_price": 1900000.0,
+        "dom": 156.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1116 Oak Tree Drive"
+      }
+    },
+    "act_1730-bayram": {
+      "status": "active",
+      "current": {
+        "mls": "82895455",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1995000.0,
+        "original_list_price": 1995000.0,
+        "dom": 45.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1730 Bayram Drive"
+      }
+    },
+    "act_1734-hollister": {
+      "status": "active",
+      "current": {
+        "mls": "95297234",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2249000.0,
+        "original_list_price": 2249000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1734 Hollister Street"
+      }
+    },
+    "act_2629-lake-kolbe": {
+      "status": "sold",
+      "current": {
+        "mls": "37995545",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 799900.0,
+        "dom": 0.0,
+        "close_date": "2026-09-10",
+        "close_price": 826235.0,
+        "as_of": "2026-11-12",
+        "address": "2629 Lake Kolbe Lane"
+      }
+    },
+    "act_8306-western": {
+      "status": "sold",
+      "current": {
+        "mls": "51360487",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1375000.0,
+        "dom": 48.0,
+        "close_date": "2026-10-16",
+        "close_price": 1375000.0,
+        "as_of": "2026-11-12",
+        "address": "8306 Western Drive"
+      }
+    },
+    "act_9713-larston": {
+      "status": "sold",
+      "current": {
+        "mls": "67615206",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1425000.0,
+        "dom": 5.0,
+        "close_date": "2026-06-30",
+        "close_price": 877366.0,
+        "as_of": "2026-11-12",
+        "address": "9713 Larston Street"
+      }
+    },
+    "act_1502-story": {
+      "status": "sold",
+      "current": {
+        "mls": "41588985",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1499990.0,
+        "dom": 130.0,
+        "close_date": "2026-07-24",
+        "close_price": 1485000.0,
+        "as_of": "2026-11-12",
+        "address": "1502 Story Street"
+      }
+    },
+    "act_1707-bayram": {
+      "status": "sold",
+      "current": {
+        "mls": "24256600",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 2.0,
+        "close_date": "2026-09-25",
+        "close_price": 2200000.0,
+        "as_of": "2026-11-12",
+        "address": "1707 Bayram Drive"
+      }
+    },
+    "act_2204-hoskins": {
+      "status": "active",
+      "current": {
+        "mls": "57037656",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 430000.0,
+        "original_list_price": 430000.0,
+        "dom": 438.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2204 Hoskins Drive"
+      }
+    },
+    "act_2206-hoskins": {
+      "status": "active",
+      "current": {
+        "mls": "16644991",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 430000.0,
+        "original_list_price": 530000.0,
+        "dom": 686.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2206 Hoskins Drive"
+      }
+    },
+    "act_3311-cardinal-crest": {
+      "status": "active",
+      "current": {
+        "mls": "12385527",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 599900.0,
+        "original_list_price": 599900.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3311 Cardinal Crest Lane"
+      }
+    },
+    "act_7208-shadyvilla": {
+      "status": "active",
+      "current": {
+        "mls": "75317443",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 615000.0,
+        "original_list_price": 620000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7208 Shadyvilla Lane"
+      }
+    },
+    "act_2618-lake-kolbe": {
+      "status": "active",
+      "current": {
+        "mls": "26815848",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 650000.0,
+        "original_list_price": 650000.0,
+        "dom": 14.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2618 Lake Kolbe Lane"
+      }
+    },
+    "act_2641-lake-kolbe": {
+      "status": "active",
+      "current": {
+        "mls": "7007295",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 660000.0,
+        "original_list_price": 660000.0,
+        "dom": 1.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2641 Lake Kolbe Lane"
+      }
+    },
+    "act_1418-caywood-d": {
+      "status": "sold",
+      "current": {
+        "mls": "95753782",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 667500.0,
+        "dom": 86.0,
+        "close_date": "2026-10-22",
+        "close_price": 674000.0,
+        "as_of": "2026-11-12",
+        "address": "1418 Caywood Lane Unit#D"
+      }
+    },
+    "act_2647-lake-kolbe": {
+      "status": "active",
+      "current": {
+        "mls": "66397575",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 760000.0,
+        "original_list_price": 760000.0,
+        "dom": 62.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2647 Lake Kolbe Lane"
+      }
+    },
+    "act_2616-lake-kolbe": {
+      "status": "sold",
+      "current": {
+        "mls": "87342860",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 640000.0,
+        "dom": 0.0,
+        "close_date": "2026-07-31",
+        "close_price": 640000.0,
+        "as_of": "2026-11-12",
+        "address": "2616 Lake Kolbe Lane"
+      }
+    },
+    "pmt_9710-larston": {
+      "status": "sold",
+      "current": {
+        "mls": "97057321",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1460000.0,
+        "dom": 7.0,
+        "close_date": "2026-06-25",
+        "close_price": 1462000.0,
+        "as_of": "2026-11-12",
+        "address": "9710 Larston Street"
+      }
+    },
+    "pmt_6414-teluco": {
+      "status": "sold",
+      "current": {
+        "mls": "83446224",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1649000.0,
+        "dom": 0.0,
+        "close_date": "2026-05-20",
+        "close_price": 1575000.0,
+        "as_of": "2026-11-12",
+        "address": "6414 Teluco Street"
+      }
+    },
+    "pmt_1426-huge-oaks": {
+      "status": "sold",
+      "current": {
+        "mls": "60941216",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3095000.0,
+        "dom": 9.0,
+        "close_date": "2026-04-22",
+        "close_price": 3150000.0,
+        "as_of": "2026-11-12",
+        "address": "1426 Huge Oaks Street"
+      }
+    },
+    "pmt_1918-ridgecrest": {
+      "status": "sold",
+      "current": {
+        "mls": "98775088",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1225000.0,
+        "dom": 180.0,
+        "close_date": "2026-06-18",
+        "close_price": 1140000.0,
+        "as_of": "2026-11-12",
+        "address": "1918 Ridgecrest Drive"
+      }
+    },
+    "pmt_7118-schiller": {
+      "status": "sold",
+      "current": {
+        "mls": "36911985",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1495000.0,
+        "dom": 105.0,
+        "close_date": "2026-05-26",
+        "close_price": 1490000.0,
+        "as_of": "2026-11-12",
+        "address": "7118 Schiller Street"
+      }
+    },
+    "pmt_1503-caywood-a": {
+      "status": "sold",
+      "current": {
+        "mls": "10648933",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 675000.0,
+        "dom": 6.0,
+        "close_date": "2026-02-03",
+        "close_price": 678731.0,
+        "as_of": "2026-11-12",
+        "address": "1503-A Caywood Lane"
+      }
+    },
+    "pmt_7210-jalna": {
+      "status": "sold",
+      "current": {
+        "mls": "73393520",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1399000.0,
+        "dom": 29.0,
+        "close_date": "2026-05-04",
+        "close_price": 1399000.0,
+        "as_of": "2026-11-12",
+        "address": "7210 Jalna Street"
+      }
+    },
+    "pmt_7210-shadyvilla": {
+      "status": "sold",
+      "current": {
+        "mls": "42145783",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 625000.0,
+        "dom": 32.0,
+        "close_date": "2026-07-10",
+        "close_price": 612000.0,
+        "as_of": "2026-11-12",
+        "address": "7210 Shadyvilla Lane"
+      }
+    },
+    "pmt_1618-ronson": {
+      "status": "sold",
+      "current": {
+        "mls": "89202336",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 4.0,
+        "close_date": "2026-10-27",
+        "close_price": 2175000.0,
+        "as_of": "2026-11-12",
+        "address": "1618 Ronson Road"
+      }
+    },
+    "pmt_1503-caywood-b": {
+      "status": "sold",
+      "current": {
+        "mls": "83281685",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 675000.0,
+        "dom": 0.0,
+        "close_date": "2026-02-03",
+        "close_price": 650210.0,
+        "as_of": "2026-11-12",
+        "address": "1503-B Caywood Lane"
+      }
+    },
+    "pmt_6618-sivley": {
+      "status": "active",
+      "current": {
+        "mls": "67533650",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1769900.0,
+        "original_list_price": 1769900.0,
+        "dom": 3.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "6618 Sivley Street"
+      }
+    },
+    "pmt_7612-janak-spring": {
+      "status": "sold",
+      "current": {
+        "mls": "81219092",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 685000.0,
+        "dom": 0.0,
+        "close_date": "2026-10-21",
+        "close_price": 685000.0,
+        "as_of": "2026-11-12",
+        "address": "7612 Janak Spring Street"
+      }
+    },
+    "pmt_1625-pine-chase": {
+      "status": "active",
+      "current": {
+        "mls": "69184500",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2395000.0,
+        "original_list_price": 2395000.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1625 Pine Chase Drive"
+      }
+    },
+    "pmt_6610-housman": {
+      "status": "sold",
+      "current": {
+        "mls": "50852238",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1595000.0,
+        "dom": 94.0,
+        "close_date": "2026-07-01",
+        "close_price": 1580000.0,
+        "as_of": "2026-11-12",
+        "address": "6610 Housman Street"
+      }
+    },
+    "pmt_1719-bayram": {
+      "status": "sold",
+      "current": {
+        "mls": "53847539",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1650000.0,
+        "dom": 0.0,
+        "close_date": "2026-04-17",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "1719 Bayram Drive"
+      }
+    },
+    "pmt_7719-bryonwood": {
+      "status": "sold",
+      "current": {
+        "mls": "56244689",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3250000.0,
+        "dom": 1.0,
+        "close_date": "2026-10-28",
+        "close_price": 3190000.0,
+        "as_of": "2026-11-12",
+        "address": "7719 Bryonwood Drive"
+      }
+    },
+    "pmt_1621-bayram": {
+      "status": "sold",
+      "current": {
+        "mls": "37493946",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2249500.0,
+        "dom": 45.0,
+        "close_date": "2026-10-23",
+        "close_price": 2250000.0,
+        "as_of": "2026-11-12",
+        "address": "1621 Bayram Drive"
+      }
+    },
+    "pmt_7311-jalna": {
+      "status": "sold",
+      "current": {
+        "mls": "72111129",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1389000.0,
+        "dom": 92.0,
+        "close_date": "2026-08-10",
+        "close_price": 1320000.0,
+        "as_of": "2026-11-12",
+        "address": "7311 Jalna Street"
+      }
+    },
+    "pmt_1609-bayram": {
+      "status": "sold",
+      "current": {
+        "mls": "24995899",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1850000.0,
+        "dom": 7.0,
+        "close_date": "2026-06-29",
+        "close_price": 1958747.0,
+        "as_of": "2026-11-12",
+        "address": "1609 Bayram Drive"
+      }
+    },
+    "pmt_1909-restridge": {
+      "status": "active",
+      "current": {
+        "mls": "9967730",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1909 Restridge Drive"
+      }
+    },
+    "pmt_8034-turquoise": {
+      "status": "active",
+      "current": {
+        "mls": "5313473",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1250000.0,
+        "original_list_price": 1250000.0,
+        "dom": 12.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8034 Turquoise Lane"
+      }
+    },
+    "pmt_1713-bayram": {
+      "status": "sold",
+      "current": {
+        "mls": "7917186",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2099000.0,
+        "dom": 70.0,
+        "close_date": "2026-06-03",
+        "close_price": 2220000.0,
+        "as_of": "2026-11-12",
+        "address": "1713 Bayram Drive"
+      }
+    },
+    "pmt_1949-coulcrest": {
+      "status": "active",
+      "current": {
+        "mls": "98330945",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1949 Coulcrest Drive"
+      }
+    },
+    "pmt_6606-clawson": {
+      "status": "sold",
+      "current": {
+        "mls": "44034358",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1700000.0,
+        "dom": 7.0,
+        "close_date": "2026-05-13",
+        "close_price": 1700000.0,
+        "as_of": "2026-11-12",
+        "address": "6606 Clawson Street"
+      }
+    },
+    "pmt_8005-ridgeview": {
+      "status": "active",
+      "current": {
+        "mls": "53028724",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1099000.0,
+        "original_list_price": 1099000.0,
+        "dom": 48.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8005 Ridgeview Drive"
+      }
+    },
+    "pmt_7726-betty-jane": {
+      "status": "active",
+      "current": {
+        "mls": "82535787",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3000000.0,
+        "original_list_price": 3000000.0,
+        "dom": 49.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7726 Betty Jane Lane"
+      }
+    },
+    "pmt_1510-longacre": {
+      "status": "sold",
+      "current": {
+        "mls": "62530125",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2199900.0,
+        "dom": 43.0,
+        "close_date": "2026-04-30",
+        "close_price": 2199900.0,
+        "as_of": "2026-11-12",
+        "address": "1510 Longacre Drive"
+      }
+    },
+    "pmt_9621-larston": {
+      "status": "active",
+      "current": {
+        "mls": "10262794",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699999.0,
+        "original_list_price": 1699999.0,
+        "dom": 23.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9621 Larston Street"
+      }
+    },
+    "pmt_1825-huge-oaks": {
+      "status": "sold",
+      "current": {
+        "mls": "77714205",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1025000.0,
+        "dom": 54.0,
+        "close_date": "2026-05-22",
+        "close_price": 950000.0,
+        "as_of": "2026-11-12",
+        "address": "1825 Huge Oaks Street"
+      }
+    },
+    "pmt_8046-turquoise": {
+      "status": "active",
+      "current": {
+        "mls": "76954750",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8046 Turquoise Lane"
+      }
+    },
+    "pmt_7106-raton": {
+      "status": "active",
+      "current": {
+        "mls": "90146149",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1495000.0,
+        "original_list_price": 1495000.0,
+        "dom": 113.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7106 Raton Street"
+      }
+    },
+    "pmt_1513-story": {
+      "status": "active",
+      "current": {
+        "mls": "83298064",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1669900.0,
+        "original_list_price": 1669900.0,
+        "dom": 69.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1513 Story Street"
+      }
+    },
+    "pmt_2703-lake-kolbe": {
+      "status": "sold",
+      "current": {
+        "mls": "16228014",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 799900.0,
+        "dom": 0.0,
+        "close_date": "2026-06-05",
+        "close_price": 799900.0,
+        "as_of": "2026-11-12",
+        "address": "2703 Lake Kolbe Lane"
+      }
+    },
+    "pmt_9306-livernois": {
+      "status": "active",
+      "current": {
+        "mls": "70579612",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799900.0,
+        "original_list_price": 1799900.0,
+        "dom": 50.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9306 Livernois Road"
+      }
+    },
+    "pmt_9603-bundy": {
+      "status": "active",
+      "current": {
+        "mls": "39864917",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 995000.0,
+        "original_list_price": 1050000.0,
+        "dom": 86.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9603 Bundy Lane"
+      }
+    },
+    "pmt_9839-warwana": {
+      "status": "sold",
+      "current": {
+        "mls": "8499953",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1395000.0,
+        "dom": 216.0,
+        "close_date": "2026-05-29",
+        "close_price": 1415000.0,
+        "as_of": "2026-11-12",
+        "address": "9839 Warwana Road"
+      }
+    },
+    "pmt_2107-mckean": {
+      "status": "active",
+      "current": {
+        "mls": "12917996",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 949000.0,
+        "original_list_price": 949000.0,
+        "dom": 15.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2107 McKean Drive"
+      }
+    },
+    "pmt_1930-chaparral": {
+      "status": "active",
+      "current": {
+        "mls": "45392054",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1249000.0,
+        "original_list_price": 1249000.0,
+        "dom": 86.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1930 Chaparral Drive"
+      }
+    },
+    "acq_1610-hillendahl-blvd": {
+      "status": "active",
+      "current": {
+        "mls": "28563256",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2800000.0,
+        "original_list_price": 2800000.0,
+        "dom": 13.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1610 Hillendahl Boulevard"
+      }
+    },
+    "acq_1618-ronson-rd": {
+      "status": "sold",
+      "current": {
+        "mls": "89202336",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 4.0,
+        "close_date": "2026-10-27",
+        "close_price": 2175000.0,
+        "as_of": "2026-11-12",
+        "address": "1618 Ronson Road"
+      }
+    },
+    "acq_1707-bayram-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "24256600",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 2.0,
+        "close_date": "2026-09-25",
+        "close_price": 2200000.0,
+        "as_of": "2026-11-12",
+        "address": "1707 Bayram Drive"
+      }
+    },
+    "acq_1909-restridge-dr": {
+      "status": "active",
+      "current": {
+        "mls": "9967730",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1909 Restridge Drive"
+      }
+    },
+    "acq_1933-restridge-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "34456745",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1375000.0,
+        "dom": 7.0,
+        "close_date": "2026-06-19",
+        "close_price": 1375000.0,
+        "as_of": "2026-11-12",
+        "address": "1933 Restridge Drive"
+      }
+    },
+    "acq_1946-pech-rd": {
+      "status": "active",
+      "current": {
+        "mls": "10003295",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1124900.0,
+        "original_list_price": 1124900.0,
+        "dom": 27.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1946 Pech Road"
+      }
+    },
+    "acq_6606-sivley-st": {
+      "status": "sold",
+      "current": {
+        "mls": "43451407",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1795000.0,
+        "dom": 30.0,
+        "close_date": "2026-01-20",
+        "close_price": 1740000.0,
+        "as_of": "2026-11-12",
+        "address": "6606 Sivley Street"
+      }
+    },
+    "acq_7106-raton-st": {
+      "status": "active",
+      "current": {
+        "mls": "90146149",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1495000.0,
+        "original_list_price": 1495000.0,
+        "dom": 113.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7106 Raton Street"
+      }
+    },
+    "acq_7119-housman-st": {
+      "status": "active",
+      "current": {
+        "mls": "72893803",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1600000.0,
+        "original_list_price": 1600000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7119 Housman Street"
+      }
+    },
+    "acq_7218-schiller-st": {
+      "status": "sold",
+      "current": {
+        "mls": "28922837",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1720000.0,
+        "dom": 16.0,
+        "close_date": "2026-09-30",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "7218 Schiller Street"
+      }
+    },
+    "acq_7719-bryonwood-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "56244689",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3250000.0,
+        "dom": 1.0,
+        "close_date": "2026-10-28",
+        "close_price": 3190000.0,
+        "as_of": "2026-11-12",
+        "address": "7719 Bryonwood Drive"
+      }
+    },
+    "acq_7726-betty-jane-ln": {
+      "status": "active",
+      "current": {
+        "mls": "82535787",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3000000.0,
+        "original_list_price": 3000000.0,
+        "dom": 49.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7726 Betty Jane Lane"
+      }
+    },
+    "acq_8046-turquoise-ln": {
+      "status": "active",
+      "current": {
+        "mls": "76954750",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8046 Turquoise Lane"
+      }
+    },
+    "acq_8550-montridge-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "48092893",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1195000.0,
+        "dom": 88.0,
+        "close_date": "2026-10-28",
+        "close_price": 1190000.0,
+        "as_of": "2026-11-12",
+        "address": "8550 Montridge Drive"
+      }
+    },
+    "acq_8553-western-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "38228736",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1249999.0,
+        "dom": 43.0,
+        "close_date": "2026-06-08",
+        "close_price": 1225000.0,
+        "as_of": "2026-11-12",
+        "address": "8553 Western Drive"
+      }
+    },
+    "acq_2031-peppermill-rd": {
+      "status": "sold",
+      "current": {
+        "mls": "30961949",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 775000.0,
+        "dom": 31.0,
+        "close_date": "2026-06-25",
+        "close_price": 750000.0,
+        "as_of": "2026-11-12",
+        "address": "2031 Peppermill Road"
+      }
+    },
+    "acq_9306-livernois-rd": {
+      "status": "active",
+      "current": {
+        "mls": "70579612",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799900.0,
+        "original_list_price": 1799900.0,
+        "dom": 50.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9306 Livernois Road"
+      }
+    },
+    "acq_9349-leto-rd": {
+      "status": "active",
+      "current": {
+        "mls": "97461854",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799995.0,
+        "original_list_price": 1799995.0,
+        "dom": 174.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9349 Leto Road"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "act_9849-mocking-bird-hill",
+      "pin": "act_9849-mocking-bird-hill",
+      "address": "9849 Mocking Bird Hill Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "63602910",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 599900.0,
+        "original_list_price": 599900.0,
+        "dom": 1.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9849 Mocking Bird Hill Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_9537-kerrwood",
+      "pin": "act_9537-kerrwood",
+      "address": "9537 Kerrwood Lane, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "96914447",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 939900.0,
+        "dom": 73.0,
+        "close_date": "2026-08-21",
+        "close_price": 899990.0,
+        "as_of": "2026-11-12",
+        "address": "9537 Kerrwood Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s96914447",
+          "cd": "2026-08-21",
+          "cp": 899990.0,
+          "a": "9537 Kerrwood Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_7938-turquoise",
+      "pin": "act_7938-turquoise",
+      "address": "7938 Turquoise Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "5763919",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1099000.0,
+        "original_list_price": 1100000.0,
+        "dom": 139.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7938 Turquoise Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1946-pech",
+      "pin": "act_1946-pech",
+      "address": "1946 Pech Road, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "10003295",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1124900.0,
+        "original_list_price": 1124900.0,
+        "dom": 27.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1946 Pech Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_8025-cedel",
+      "pin": "act_8025-cedel",
+      "address": "8025 Cedel Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "43594865",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1175000.0,
+        "original_list_price": 1175000.0,
+        "dom": 153.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8025 Cedel Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_8550-montridge",
+      "pin": "act_8550-montridge",
+      "address": "8550 Montridge Drive, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "48092893",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1195000.0,
+        "dom": 88.0,
+        "close_date": "2026-10-28",
+        "close_price": 1190000.0,
+        "as_of": "2026-11-12",
+        "address": "8550 Montridge Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s48092893",
+          "cd": "2026-10-28",
+          "cp": 1190000.0,
+          "a": "8550 Montridge Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1720-huge-oaks",
+      "pin": "act_1720-huge-oaks",
+      "address": "1720 Huge Oaks Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "11495844",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1199900.0,
+        "original_list_price": 1250000.0,
+        "dom": 259.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1720 Huge Oaks Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1922-norcrest",
+      "pin": "act_1922-norcrest",
+      "address": "1922 Norcrest Dr Drive, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "44231733",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1269000.0,
+        "dom": 37.0,
+        "close_date": "2026-08-27",
+        "close_price": 1255000.0,
+        "as_of": "2026-11-12",
+        "address": "1922 Norcrest Dr Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s44231733",
+          "cd": "2026-08-27",
+          "cp": 1255000.0,
+          "a": "1922 Norcrest Dr Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_8021-turquoise",
+      "pin": "act_8021-turquoise",
+      "address": "8021 Turquoise Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "10064858",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1249999.0,
+        "original_list_price": 1249999.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8021 Turquoise Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1717-monarch-oaks",
+      "pin": "act_1717-monarch-oaks",
+      "address": "1717 Monarch Oaks Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "38193031",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1249900.0,
+        "original_list_price": 1249900.0,
+        "dom": 42.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1717 Monarch Oaks Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1504-story",
+      "pin": "act_1504-story",
+      "address": "1504 Story Street, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "22410145",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1425900.0,
+        "dom": 10.0,
+        "close_date": "2026-08-21",
+        "close_price": 1425900.0,
+        "as_of": "2026-11-12",
+        "address": "1504 Story Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s22410145",
+          "cd": "2026-08-21",
+          "cp": 1425900.0,
+          "a": "1504 Story Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1302-springrock",
+      "pin": "act_1302-springrock",
+      "address": "1302 Springrock Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "58319751",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1385000.0,
+        "original_list_price": 1385000.0,
+        "dom": 17.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1302 Springrock Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_7414-schiller",
+      "pin": "act_7414-schiller",
+      "address": "7414 Schiller Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "37905461",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1479000.0,
+        "original_list_price": 1479000.0,
+        "dom": 45.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7414 Schiller Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1731-benbow",
+      "pin": "act_1731-benbow",
+      "address": "1731 Benbow Way, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "88899325",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1593000.0,
+        "original_list_price": 1593000.0,
+        "dom": 199.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1731 Benbow Way"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_9756-westview",
+      "pin": "act_9756-westview",
+      "address": "9756 Westview Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "42491037",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1690000.0,
+        "original_list_price": 1670000.0,
+        "dom": 268.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9756 Westview Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_7119-housman",
+      "pin": "act_7119-housman",
+      "address": "7119 Housman Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "72893803",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1600000.0,
+        "original_list_price": 1600000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7119 Housman Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1306-zora",
+      "pin": "act_1306-zora",
+      "address": "1306 Zora Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "96230978",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1595000.0,
+        "original_list_price": 1695000.0,
+        "dom": 147.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1306 Zora Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_7006-schiller",
+      "pin": "act_7006-schiller",
+      "address": "7006 Schiller Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "58764081",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1698000.0,
+        "original_list_price": 1698000.0,
+        "dom": 2.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7006 Schiller Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1730-parana",
+      "pin": "act_1730-parana",
+      "address": "1730 Parana Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "10067615",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699990.0,
+        "original_list_price": 1699990.0,
+        "dom": 70.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1730 Parana Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_9926-warwana",
+      "pin": "act_9926-warwana",
+      "address": "9926 Warwana Road, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "49202801",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1793000.0,
+        "dom": 129.0,
+        "close_date": "2026-10-09",
+        "close_price": 1700000.0,
+        "as_of": "2026-11-12",
+        "address": "9926 Warwana Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s49202801",
+          "cd": "2026-10-09",
+          "cp": 1700000.0,
+          "a": "9926 Warwana Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_9349-leto",
+      "pin": "act_9349-leto",
+      "address": "9349 Leto Road, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "97461854",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799995.0,
+        "original_list_price": 1799995.0,
+        "dom": 174.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9349 Leto Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_7218-schiller",
+      "pin": "act_7218-schiller",
+      "address": "7218 Schiller Street, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "28922837",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1720000.0,
+        "dom": 16.0,
+        "close_date": "2026-09-30",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "7218 Schiller Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s28922837",
+          "cd": "2026-09-30",
+          "cp": 1600000.0,
+          "a": "7218 Schiller Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1116-oak-tree",
+      "pin": "act_1116-oak-tree",
+      "address": "1116 Oak Tree Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "94629897",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1900000.0,
+        "original_list_price": 1900000.0,
+        "dom": 156.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1116 Oak Tree Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1730-bayram",
+      "pin": "act_1730-bayram",
+      "address": "1730 Bayram Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "82895455",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1995000.0,
+        "original_list_price": 1995000.0,
+        "dom": 45.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1730 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1734-hollister",
+      "pin": "act_1734-hollister",
+      "address": "1734 Hollister Street, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "95297234",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2249000.0,
+        "original_list_price": 2249000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1734 Hollister Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2629-lake-kolbe",
+      "pin": "act_2629-lake-kolbe",
+      "address": "2629 Lake Kolbe Lane, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "37995545",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 799900.0,
+        "dom": 0.0,
+        "close_date": "2026-09-10",
+        "close_price": 826235.0,
+        "as_of": "2026-11-12",
+        "address": "2629 Lake Kolbe Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s37995545",
+          "cd": "2026-09-10",
+          "cp": 826235.0,
+          "a": "2629 Lake Kolbe Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_8306-western",
+      "pin": "act_8306-western",
+      "address": "8306 Western Drive, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "51360487",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1375000.0,
+        "dom": 48.0,
+        "close_date": "2026-10-16",
+        "close_price": 1375000.0,
+        "as_of": "2026-11-12",
+        "address": "8306 Western Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s51360487",
+          "cd": "2026-10-16",
+          "cp": 1375000.0,
+          "a": "8306 Western Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_9713-larston",
+      "pin": "act_9713-larston",
+      "address": "9713 Larston Street, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "67615206",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1425000.0,
+        "dom": 5.0,
+        "close_date": "2026-06-30",
+        "close_price": 877366.0,
+        "as_of": "2026-11-12",
+        "address": "9713 Larston Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s67615206",
+          "cd": "2026-06-30",
+          "cp": 877366.0,
+          "a": "9713 Larston Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1502-story",
+      "pin": "act_1502-story",
+      "address": "1502 Story Street, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "41588985",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1499990.0,
+        "dom": 130.0,
+        "close_date": "2026-07-24",
+        "close_price": 1485000.0,
+        "as_of": "2026-11-12",
+        "address": "1502 Story Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s41588985",
+          "cd": "2026-07-24",
+          "cp": 1485000.0,
+          "a": "1502 Story Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1707-bayram",
+      "pin": "act_1707-bayram",
+      "address": "1707 Bayram Drive, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "24256600",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 2.0,
+        "close_date": "2026-09-25",
+        "close_price": 2200000.0,
+        "as_of": "2026-11-12",
+        "address": "1707 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s24256600",
+          "cd": "2026-09-25",
+          "cp": 2200000.0,
+          "a": "1707 Bayram Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2204-hoskins",
+      "pin": "act_2204-hoskins",
+      "address": "2204 Hoskins Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "57037656",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 430000.0,
+        "original_list_price": 430000.0,
+        "dom": 438.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2204 Hoskins Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2206-hoskins",
+      "pin": "act_2206-hoskins",
+      "address": "2206 Hoskins Drive, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "16644991",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 430000.0,
+        "original_list_price": 530000.0,
+        "dom": 686.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2206 Hoskins Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_3311-cardinal-crest",
+      "pin": "act_3311-cardinal-crest",
+      "address": "3311 Cardinal Crest Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "12385527",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 599900.0,
+        "original_list_price": 599900.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3311 Cardinal Crest Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_7208-shadyvilla",
+      "pin": "act_7208-shadyvilla",
+      "address": "7208 Shadyvilla Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "75317443",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 615000.0,
+        "original_list_price": 620000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7208 Shadyvilla Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2618-lake-kolbe",
+      "pin": "act_2618-lake-kolbe",
+      "address": "2618 Lake Kolbe Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "26815848",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 650000.0,
+        "original_list_price": 650000.0,
+        "dom": 14.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2618 Lake Kolbe Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2641-lake-kolbe",
+      "pin": "act_2641-lake-kolbe",
+      "address": "2641 Lake Kolbe Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "7007295",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 660000.0,
+        "original_list_price": 660000.0,
+        "dom": 1.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2641 Lake Kolbe Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1418-caywood-d",
+      "pin": "act_1418-caywood-d",
+      "address": "1418 Caywood Lane Unit#D, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "95753782",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 667500.0,
+        "dom": 86.0,
+        "close_date": "2026-10-22",
+        "close_price": 674000.0,
+        "as_of": "2026-11-12",
+        "address": "1418 Caywood Lane Unit#D"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s95753782",
+          "cd": "2026-10-22",
+          "cp": 674000.0,
+          "a": "1418 Caywood Lane Unit#D"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2647-lake-kolbe",
+      "pin": "act_2647-lake-kolbe",
+      "address": "2647 Lake Kolbe Lane, Houston, TX",
+      "status": "active",
+      "current": {
+        "mls": "66397575",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 760000.0,
+        "original_list_price": 760000.0,
+        "dom": 62.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2647 Lake Kolbe Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2616-lake-kolbe",
+      "pin": "act_2616-lake-kolbe",
+      "address": "2616 Lake Kolbe Lane, Houston, TX",
+      "status": "sold",
+      "current": {
+        "mls": "87342860",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 640000.0,
+        "dom": 0.0,
+        "close_date": "2026-07-31",
+        "close_price": 640000.0,
+        "as_of": "2026-11-12",
+        "address": "2616 Lake Kolbe Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s87342860",
+          "cd": "2026-07-31",
+          "cp": 640000.0,
+          "a": "2616 Lake Kolbe Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_9710-larston",
+      "pin": "pmt_9710-larston",
+      "address": "9710 Larston St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "97057321",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1460000.0,
+        "dom": 7.0,
+        "close_date": "2026-06-25",
+        "close_price": 1462000.0,
+        "as_of": "2026-11-12",
+        "address": "9710 Larston Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s97057321",
+          "cd": "2026-06-25",
+          "cp": 1462000.0,
+          "a": "9710 Larston Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_6414-teluco",
+      "pin": "pmt_6414-teluco",
+      "address": "6414 Teluco St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "83446224",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1649000.0,
+        "dom": 0.0,
+        "close_date": "2026-05-20",
+        "close_price": 1575000.0,
+        "as_of": "2026-11-12",
+        "address": "6414 Teluco Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s83446224",
+          "cd": "2026-05-20",
+          "cp": 1575000.0,
+          "a": "6414 Teluco Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1426-huge-oaks",
+      "pin": "pmt_1426-huge-oaks",
+      "address": "1426 Huge Oaks St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "60941216",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3095000.0,
+        "dom": 9.0,
+        "close_date": "2026-04-22",
+        "close_price": 3150000.0,
+        "as_of": "2026-11-12",
+        "address": "1426 Huge Oaks Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s60941216",
+          "cd": "2026-04-22",
+          "cp": 3150000.0,
+          "a": "1426 Huge Oaks Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1918-ridgecrest",
+      "pin": "pmt_1918-ridgecrest",
+      "address": "1918 Ridgecrest Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "98775088",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1225000.0,
+        "dom": 180.0,
+        "close_date": "2026-06-18",
+        "close_price": 1140000.0,
+        "as_of": "2026-11-12",
+        "address": "1918 Ridgecrest Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s98775088",
+          "cd": "2026-06-18",
+          "cp": 1140000.0,
+          "a": "1918 Ridgecrest Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7118-schiller",
+      "pin": "pmt_7118-schiller",
+      "address": "7118 Schiller St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "36911985",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1495000.0,
+        "dom": 105.0,
+        "close_date": "2026-05-26",
+        "close_price": 1490000.0,
+        "as_of": "2026-11-12",
+        "address": "7118 Schiller Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s36911985",
+          "cd": "2026-05-26",
+          "cp": 1490000.0,
+          "a": "7118 Schiller Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1503-caywood-a",
+      "pin": "pmt_1503-caywood-a",
+      "address": "1503 Caywood Ln A 77055",
+      "status": "sold",
+      "current": {
+        "mls": "10648933",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 675000.0,
+        "dom": 6.0,
+        "close_date": "2026-02-03",
+        "close_price": 678731.0,
+        "as_of": "2026-11-12",
+        "address": "1503-A Caywood Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s10648933",
+          "cd": "2026-02-03",
+          "cp": 678731.0,
+          "a": "1503-A Caywood Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7210-jalna",
+      "pin": "pmt_7210-jalna",
+      "address": "7210 Jalna St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "73393520",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1399000.0,
+        "dom": 29.0,
+        "close_date": "2026-05-04",
+        "close_price": 1399000.0,
+        "as_of": "2026-11-12",
+        "address": "7210 Jalna Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s73393520",
+          "cd": "2026-05-04",
+          "cp": 1399000.0,
+          "a": "7210 Jalna Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7210-shadyvilla",
+      "pin": "pmt_7210-shadyvilla",
+      "address": "7210 Shadyvilla Ln 77055",
+      "status": "sold",
+      "current": {
+        "mls": "42145783",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 625000.0,
+        "dom": 32.0,
+        "close_date": "2026-07-10",
+        "close_price": 612000.0,
+        "as_of": "2026-11-12",
+        "address": "7210 Shadyvilla Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s42145783",
+          "cd": "2026-07-10",
+          "cp": 612000.0,
+          "a": "7210 Shadyvilla Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1618-ronson",
+      "pin": "pmt_1618-ronson",
+      "address": "1618 Ronson Rd 77055",
+      "status": "sold",
+      "current": {
+        "mls": "89202336",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 4.0,
+        "close_date": "2026-10-27",
+        "close_price": 2175000.0,
+        "as_of": "2026-11-12",
+        "address": "1618 Ronson Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s89202336",
+          "cd": "2026-10-27",
+          "cp": 2175000.0,
+          "a": "1618 Ronson Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1503-caywood-b",
+      "pin": "pmt_1503-caywood-b",
+      "address": "1503 Caywood Ln B 77055",
+      "status": "sold",
+      "current": {
+        "mls": "83281685",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 675000.0,
+        "dom": 0.0,
+        "close_date": "2026-02-03",
+        "close_price": 650210.0,
+        "as_of": "2026-11-12",
+        "address": "1503-B Caywood Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s83281685",
+          "cd": "2026-02-03",
+          "cp": 650210.0,
+          "a": "1503-B Caywood Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_6618-sivley",
+      "pin": "pmt_6618-sivley",
+      "address": "6618 Sivley St 77055",
+      "status": "active",
+      "current": {
+        "mls": "67533650",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1769900.0,
+        "original_list_price": 1769900.0,
+        "dom": 3.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "6618 Sivley Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7612-janak-spring",
+      "pin": "pmt_7612-janak-spring",
+      "address": "7612 Janak Spring St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "81219092",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 685000.0,
+        "dom": 0.0,
+        "close_date": "2026-10-21",
+        "close_price": 685000.0,
+        "as_of": "2026-11-12",
+        "address": "7612 Janak Spring Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s81219092",
+          "cd": "2026-10-21",
+          "cp": 685000.0,
+          "a": "7612 Janak Spring Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1625-pine-chase",
+      "pin": "pmt_1625-pine-chase",
+      "address": "1625 Pine Chase Dr 77055",
+      "status": "active",
+      "current": {
+        "mls": "69184500",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2395000.0,
+        "original_list_price": 2395000.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1625 Pine Chase Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_6610-housman",
+      "pin": "pmt_6610-housman",
+      "address": "6610 Housman St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "50852238",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1595000.0,
+        "dom": 94.0,
+        "close_date": "2026-07-01",
+        "close_price": 1580000.0,
+        "as_of": "2026-11-12",
+        "address": "6610 Housman Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s50852238",
+          "cd": "2026-07-01",
+          "cp": 1580000.0,
+          "a": "6610 Housman Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1719-bayram",
+      "pin": "pmt_1719-bayram",
+      "address": "1719 Bayram Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "53847539",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1650000.0,
+        "dom": 0.0,
+        "close_date": "2026-04-17",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "1719 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s53847539",
+          "cd": "2026-04-17",
+          "cp": 1650000.0,
+          "a": "1719 Bayram Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7719-bryonwood",
+      "pin": "pmt_7719-bryonwood",
+      "address": "7719 Bryonwood Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "56244689",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3250000.0,
+        "dom": 1.0,
+        "close_date": "2026-10-28",
+        "close_price": 3190000.0,
+        "as_of": "2026-11-12",
+        "address": "7719 Bryonwood Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s56244689",
+          "cd": "2026-10-28",
+          "cp": 3190000.0,
+          "a": "7719 Bryonwood Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1621-bayram",
+      "pin": "pmt_1621-bayram",
+      "address": "1621 Bayram Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "37493946",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2249500.0,
+        "dom": 45.0,
+        "close_date": "2026-10-23",
+        "close_price": 2250000.0,
+        "as_of": "2026-11-12",
+        "address": "1621 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s37493946",
+          "cd": "2026-10-23",
+          "cp": 2250000.0,
+          "a": "1621 Bayram Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7311-jalna",
+      "pin": "pmt_7311-jalna",
+      "address": "7311 Jalna St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "72111129",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1389000.0,
+        "dom": 92.0,
+        "close_date": "2026-08-10",
+        "close_price": 1320000.0,
+        "as_of": "2026-11-12",
+        "address": "7311 Jalna Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s72111129",
+          "cd": "2026-08-10",
+          "cp": 1320000.0,
+          "a": "7311 Jalna Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1609-bayram",
+      "pin": "pmt_1609-bayram",
+      "address": "1609 Bayram Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "24995899",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1850000.0,
+        "dom": 7.0,
+        "close_date": "2026-06-29",
+        "close_price": 1958747.0,
+        "as_of": "2026-11-12",
+        "address": "1609 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s24995899",
+          "cd": "2026-06-29",
+          "cp": 1958747.0,
+          "a": "1609 Bayram Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1909-restridge",
+      "pin": "pmt_1909-restridge",
+      "address": "1909 Restridge Dr 77055",
+      "status": "active",
+      "current": {
+        "mls": "9967730",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1909 Restridge Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_8034-turquoise",
+      "pin": "pmt_8034-turquoise",
+      "address": "8034 Turquoise Ln 77055",
+      "status": "active",
+      "current": {
+        "mls": "5313473",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1250000.0,
+        "original_list_price": 1250000.0,
+        "dom": 12.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8034 Turquoise Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1713-bayram",
+      "pin": "pmt_1713-bayram",
+      "address": "1713 Bayram Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "7917186",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2099000.0,
+        "dom": 70.0,
+        "close_date": "2026-06-03",
+        "close_price": 2220000.0,
+        "as_of": "2026-11-12",
+        "address": "1713 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s7917186",
+          "cd": "2026-06-03",
+          "cp": 2220000.0,
+          "a": "1713 Bayram Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1949-coulcrest",
+      "pin": "pmt_1949-coulcrest",
+      "address": "1949 Coulcrest Dr 77055",
+      "status": "active",
+      "current": {
+        "mls": "98330945",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1949 Coulcrest Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_6606-clawson",
+      "pin": "pmt_6606-clawson",
+      "address": "6606 Clawson St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "44034358",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1700000.0,
+        "dom": 7.0,
+        "close_date": "2026-05-13",
+        "close_price": 1700000.0,
+        "as_of": "2026-11-12",
+        "address": "6606 Clawson Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s44034358",
+          "cd": "2026-05-13",
+          "cp": 1700000.0,
+          "a": "6606 Clawson Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_8005-ridgeview",
+      "pin": "pmt_8005-ridgeview",
+      "address": "8005 Ridgeview Dr 77055",
+      "status": "active",
+      "current": {
+        "mls": "53028724",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1099000.0,
+        "original_list_price": 1099000.0,
+        "dom": 48.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8005 Ridgeview Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7726-betty-jane",
+      "pin": "pmt_7726-betty-jane",
+      "address": "7726 Betty Jane Ln 77055",
+      "status": "active",
+      "current": {
+        "mls": "82535787",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3000000.0,
+        "original_list_price": 3000000.0,
+        "dom": 49.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7726 Betty Jane Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1510-longacre",
+      "pin": "pmt_1510-longacre",
+      "address": "1510 Longacre Dr 77055",
+      "status": "sold",
+      "current": {
+        "mls": "62530125",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2199900.0,
+        "dom": 43.0,
+        "close_date": "2026-04-30",
+        "close_price": 2199900.0,
+        "as_of": "2026-11-12",
+        "address": "1510 Longacre Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s62530125",
+          "cd": "2026-04-30",
+          "cp": 2199900.0,
+          "a": "1510 Longacre Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_9621-larston",
+      "pin": "pmt_9621-larston",
+      "address": "9621 Larston St 77055",
+      "status": "active",
+      "current": {
+        "mls": "10262794",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699999.0,
+        "original_list_price": 1699999.0,
+        "dom": 23.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9621 Larston Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1825-huge-oaks",
+      "pin": "pmt_1825-huge-oaks",
+      "address": "1825 Huge Oaks St 77055",
+      "status": "sold",
+      "current": {
+        "mls": "77714205",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1025000.0,
+        "dom": 54.0,
+        "close_date": "2026-05-22",
+        "close_price": 950000.0,
+        "as_of": "2026-11-12",
+        "address": "1825 Huge Oaks Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s77714205",
+          "cd": "2026-05-22",
+          "cp": 950000.0,
+          "a": "1825 Huge Oaks Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_8046-turquoise",
+      "pin": "pmt_8046-turquoise",
+      "address": "8046 Turquoise Ln 77055",
+      "status": "active",
+      "current": {
+        "mls": "76954750",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8046 Turquoise Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_7106-raton",
+      "pin": "pmt_7106-raton",
+      "address": "7106 Raton St 77055",
+      "status": "active",
+      "current": {
+        "mls": "90146149",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1495000.0,
+        "original_list_price": 1495000.0,
+        "dom": 113.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7106 Raton Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1513-story",
+      "pin": "pmt_1513-story",
+      "address": "1513 Story St 77055",
+      "status": "active",
+      "current": {
+        "mls": "83298064",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1669900.0,
+        "original_list_price": 1669900.0,
+        "dom": 69.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1513 Story Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2703-lake-kolbe",
+      "pin": "pmt_2703-lake-kolbe",
+      "address": "2703 Lake Kolbe Ln 77080",
+      "status": "sold",
+      "current": {
+        "mls": "16228014",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 799900.0,
+        "dom": 0.0,
+        "close_date": "2026-06-05",
+        "close_price": 799900.0,
+        "as_of": "2026-11-12",
+        "address": "2703 Lake Kolbe Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s16228014",
+          "cd": "2026-06-05",
+          "cp": 799900.0,
+          "a": "2703 Lake Kolbe Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_9306-livernois",
+      "pin": "pmt_9306-livernois",
+      "address": "9306 Livernois Rd 77080",
+      "status": "active",
+      "current": {
+        "mls": "70579612",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799900.0,
+        "original_list_price": 1799900.0,
+        "dom": 50.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9306 Livernois Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_9603-bundy",
+      "pin": "pmt_9603-bundy",
+      "address": "9603 Bundy Ln 77080",
+      "status": "active",
+      "current": {
+        "mls": "39864917",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 995000.0,
+        "original_list_price": 1050000.0,
+        "dom": 86.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9603 Bundy Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_9839-warwana",
+      "pin": "pmt_9839-warwana",
+      "address": "9839 Warwana Rd 77080",
+      "status": "sold",
+      "current": {
+        "mls": "8499953",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1395000.0,
+        "dom": 216.0,
+        "close_date": "2026-05-29",
+        "close_price": 1415000.0,
+        "as_of": "2026-11-12",
+        "address": "9839 Warwana Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s8499953",
+          "cd": "2026-05-29",
+          "cp": 1415000.0,
+          "a": "9839 Warwana Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2107-mckean",
+      "pin": "pmt_2107-mckean",
+      "address": "2107 Mckean Dr 77080",
+      "status": "active",
+      "current": {
+        "mls": "12917996",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 949000.0,
+        "original_list_price": 949000.0,
+        "dom": 15.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2107 McKean Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1930-chaparral",
+      "pin": "pmt_1930-chaparral",
+      "address": "1930 Chaparral Dr 77043",
+      "status": "active",
+      "current": {
+        "mls": "45392054",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1249000.0,
+        "original_list_price": 1249000.0,
+        "dom": 86.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1930 Chaparral Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1610-hillendahl-blvd",
+      "pin": "acq_1610-hillendahl-blvd",
+      "address": "1610 Hillendahl Blvd",
+      "status": "active",
+      "current": {
+        "mls": "28563256",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2800000.0,
+        "original_list_price": 2800000.0,
+        "dom": 13.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1610 Hillendahl Boulevard"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1618-ronson-rd",
+      "pin": "acq_1618-ronson-rd",
+      "address": "1618 Ronson Rd",
+      "status": "sold",
+      "current": {
+        "mls": "89202336",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 4.0,
+        "close_date": "2026-10-27",
+        "close_price": 2175000.0,
+        "as_of": "2026-11-12",
+        "address": "1618 Ronson Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s89202336",
+          "cd": "2026-10-27",
+          "cp": 2175000.0,
+          "a": "1618 Ronson Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1707-bayram-dr",
+      "pin": "acq_1707-bayram-dr",
+      "address": "1707 Bayram Dr",
+      "status": "sold",
+      "current": {
+        "mls": "24256600",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2200000.0,
+        "dom": 2.0,
+        "close_date": "2026-09-25",
+        "close_price": 2200000.0,
+        "as_of": "2026-11-12",
+        "address": "1707 Bayram Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s24256600",
+          "cd": "2026-09-25",
+          "cp": 2200000.0,
+          "a": "1707 Bayram Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1909-restridge-dr",
+      "pin": "acq_1909-restridge-dr",
+      "address": "1909 Restridge Dr",
+      "status": "active",
+      "current": {
+        "mls": "9967730",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1909 Restridge Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1933-restridge-dr",
+      "pin": "acq_1933-restridge-dr",
+      "address": "1933 Restridge Dr",
+      "status": "sold",
+      "current": {
+        "mls": "34456745",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1375000.0,
+        "dom": 7.0,
+        "close_date": "2026-06-19",
+        "close_price": 1375000.0,
+        "as_of": "2026-11-12",
+        "address": "1933 Restridge Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s34456745",
+          "cd": "2026-06-19",
+          "cp": 1375000.0,
+          "a": "1933 Restridge Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1946-pech-rd",
+      "pin": "acq_1946-pech-rd",
+      "address": "1946 Pech Rd",
+      "status": "active",
+      "current": {
+        "mls": "10003295",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1124900.0,
+        "original_list_price": 1124900.0,
+        "dom": 27.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1946 Pech Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_6606-sivley-st",
+      "pin": "acq_6606-sivley-st",
+      "address": "6606 Sivley St",
+      "status": "sold",
+      "current": {
+        "mls": "43451407",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1795000.0,
+        "dom": 30.0,
+        "close_date": "2026-01-20",
+        "close_price": 1740000.0,
+        "as_of": "2026-11-12",
+        "address": "6606 Sivley Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s43451407",
+          "cd": "2026-01-20",
+          "cp": 1740000.0,
+          "a": "6606 Sivley Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_7106-raton-st",
+      "pin": "acq_7106-raton-st",
+      "address": "7106 Raton St",
+      "status": "active",
+      "current": {
+        "mls": "90146149",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1495000.0,
+        "original_list_price": 1495000.0,
+        "dom": 113.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7106 Raton Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_7119-housman-st",
+      "pin": "acq_7119-housman-st",
+      "address": "7119 Housman St",
+      "status": "active",
+      "current": {
+        "mls": "72893803",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1600000.0,
+        "original_list_price": 1600000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7119 Housman Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_7218-schiller-st",
+      "pin": "acq_7218-schiller-st",
+      "address": "7218 Schiller St",
+      "status": "sold",
+      "current": {
+        "mls": "28922837",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1720000.0,
+        "dom": 16.0,
+        "close_date": "2026-09-30",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "7218 Schiller Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s28922837",
+          "cd": "2026-09-30",
+          "cp": 1600000.0,
+          "a": "7218 Schiller Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_7719-bryonwood-dr",
+      "pin": "acq_7719-bryonwood-dr",
+      "address": "7719 Bryonwood Dr",
+      "status": "sold",
+      "current": {
+        "mls": "56244689",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3250000.0,
+        "dom": 1.0,
+        "close_date": "2026-10-28",
+        "close_price": 3190000.0,
+        "as_of": "2026-11-12",
+        "address": "7719 Bryonwood Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s56244689",
+          "cd": "2026-10-28",
+          "cp": 3190000.0,
+          "a": "7719 Bryonwood Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_7726-betty-jane-ln",
+      "pin": "acq_7726-betty-jane-ln",
+      "address": "7726 Betty Jane Ln",
+      "status": "active",
+      "current": {
+        "mls": "82535787",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3000000.0,
+        "original_list_price": 3000000.0,
+        "dom": 49.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "7726 Betty Jane Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_8046-turquoise-ln",
+      "pin": "acq_8046-turquoise-ln",
+      "address": "8046 Turquoise Ln",
+      "status": "active",
+      "current": {
+        "mls": "76954750",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1195000.0,
+        "original_list_price": 1195000.0,
+        "dom": 63.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "8046 Turquoise Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_8550-montridge-dr",
+      "pin": "acq_8550-montridge-dr",
+      "address": "8550 Montridge Dr",
+      "status": "sold",
+      "current": {
+        "mls": "48092893",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1195000.0,
+        "dom": 88.0,
+        "close_date": "2026-10-28",
+        "close_price": 1190000.0,
+        "as_of": "2026-11-12",
+        "address": "8550 Montridge Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s48092893",
+          "cd": "2026-10-28",
+          "cp": 1190000.0,
+          "a": "8550 Montridge Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_8553-western-dr",
+      "pin": "acq_8553-western-dr",
+      "address": "8553 Western Dr",
+      "status": "sold",
+      "current": {
+        "mls": "38228736",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1249999.0,
+        "dom": 43.0,
+        "close_date": "2026-06-08",
+        "close_price": 1225000.0,
+        "as_of": "2026-11-12",
+        "address": "8553 Western Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s38228736",
+          "cd": "2026-06-08",
+          "cp": 1225000.0,
+          "a": "8553 Western Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_2031-peppermill-rd",
+      "pin": "acq_2031-peppermill-rd",
+      "address": "2031 Peppermill Rd",
+      "status": "sold",
+      "current": {
+        "mls": "30961949",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 775000.0,
+        "dom": 31.0,
+        "close_date": "2026-06-25",
+        "close_price": 750000.0,
+        "as_of": "2026-11-12",
+        "address": "2031 Peppermill Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s30961949",
+          "cd": "2026-06-25",
+          "cp": 750000.0,
+          "a": "2031 Peppermill Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_9306-livernois-rd",
+      "pin": "acq_9306-livernois-rd",
+      "address": "9306 Livernois Rd",
+      "status": "active",
+      "current": {
+        "mls": "70579612",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799900.0,
+        "original_list_price": 1799900.0,
+        "dom": 50.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9306 Livernois Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_9349-leto-rd",
+      "pin": "acq_9349-leto-rd",
+      "address": "9349 Leto Rd",
+      "status": "active",
+      "current": {
+        "mls": "97461854",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1799995.0,
+        "original_list_price": 1799995.0,
+        "dom": 174.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "9349 Leto Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 56,
+    "pending": 0,
+    "sold": 98,
+    "terminated": 0,
+    "linked": 95
+  }
+}

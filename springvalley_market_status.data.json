@@ -1,0 +1,199 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "act_8919-echo-valley": {
+      "status": "sold",
+      "current": {
+        "mls": "27369811",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2648130.0,
+        "dom": 194.0,
+        "close_date": "2026-11-06",
+        "close_price": 2450000.0,
+        "as_of": "2026-11-12",
+        "address": "8919 Echo Valley Drive"
+      }
+    },
+    "act_1328-mickey": {
+      "status": "sold",
+      "current": {
+        "mls": "12883634",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2900000.0,
+        "dom": 49.0,
+        "close_date": "2026-08-14",
+        "close_price": 2850000.0,
+        "as_of": "2026-11-12",
+        "address": "1328 Mickey Way"
+      }
+    },
+    "act_8722-lupton": {
+      "status": "sold",
+      "current": {
+        "mls": "29784356",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2899000.0,
+        "dom": 7.0,
+        "close_date": "2026-08-26",
+        "close_price": 2890000.0,
+        "as_of": "2026-11-12",
+        "address": "8722 Lupton Lane"
+      }
+    },
+    "act_8412-lofland": {
+      "status": "sold",
+      "current": {
+        "mls": "37211893",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3395000.0,
+        "dom": 35.0,
+        "close_date": "2026-10-05",
+        "close_price": 3285000.0,
+        "as_of": "2026-11-12",
+        "address": "8412 Lofland Drive"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "act_8919-echo-valley",
+      "pin": "act_8919-echo-valley",
+      "address": "8919 Echo Valley Drive",
+      "status": "sold",
+      "current": {
+        "mls": "27369811",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2648130.0,
+        "dom": 194.0,
+        "close_date": "2026-11-06",
+        "close_price": 2450000.0,
+        "as_of": "2026-11-12",
+        "address": "8919 Echo Valley Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s27369811",
+          "cd": "2026-11-06",
+          "cp": 2450000.0,
+          "a": "8919 Echo Valley Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1328-mickey",
+      "pin": "act_1328-mickey",
+      "address": "1328 Mickey Way",
+      "status": "sold",
+      "current": {
+        "mls": "12883634",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2900000.0,
+        "dom": 49.0,
+        "close_date": "2026-08-14",
+        "close_price": 2850000.0,
+        "as_of": "2026-11-12",
+        "address": "1328 Mickey Way"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s12883634",
+          "cd": "2026-08-14",
+          "cp": 2850000.0,
+          "a": "1328 Mickey Way"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_8722-lupton",
+      "pin": "act_8722-lupton",
+      "address": "8722 Lupton Lane",
+      "status": "sold",
+      "current": {
+        "mls": "29784356",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2899000.0,
+        "dom": 7.0,
+        "close_date": "2026-08-26",
+        "close_price": 2890000.0,
+        "as_of": "2026-11-12",
+        "address": "8722 Lupton Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s29784356",
+          "cd": "2026-08-26",
+          "cp": 2890000.0,
+          "a": "8722 Lupton Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_8412-lofland",
+      "pin": "act_8412-lofland",
+      "address": "8412 Lofland Drive",
+      "status": "sold",
+      "current": {
+        "mls": "37211893",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3395000.0,
+        "dom": 35.0,
+        "close_date": "2026-10-05",
+        "close_price": 3285000.0,
+        "as_of": "2026-11-12",
+        "address": "8412 Lofland Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s37211893",
+          "cd": "2026-10-05",
+          "cp": 3285000.0,
+          "a": "8412 Lofland Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 2,
+    "pending": 0,
+    "sold": 11,
+    "terminated": 0,
+    "linked": 4
+  }
+}

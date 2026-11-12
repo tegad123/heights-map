@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {},
+  "tracked": [],
+  "coverage": {
+    "active": 3,
+    "pending": 0,
+    "sold": 0,
+    "terminated": 0,
+    "linked": 0
+  }
+}

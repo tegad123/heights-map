@@ -21,8 +21,11 @@ Field notes:
   zone guard is zip + coord box only.
 - coord_box: (lat_min, lat_max, lng_min, lng_max), boundary bbox +-0.01 deg.
 - east_lng: Heights-only I-45 corridor cutoff. None elsewhere.
-- springvalley intentionally absent: investigation done 2026-08-27, joins only
-  after springvalley_permits.json is created via a validated Stage-1 run.
+- springvalley stays out of permit ingest (enabled False, not in
+  INGEST_ORDER) until springvalley_permits.json exists. HAR sold/active
+  refresh does include it. The boundary is the Census incorporated-place
+  limit, GEOID 4869830, not the whole 77024 ZIP. See
+  springvalley_boundary.geojson.
 """
 
 MARKETS = {
@@ -89,10 +92,26 @@ MARKETS = {
         'east_lng': None,
         'enabled': True,
     },
+    # Permit ingest stays off. HAR refresh uses the municipal boundary.
+    'springvalley': {
+        'html': 'springvalley.html',
+        'permits_json': None,
+        'zips': ['77024'],
+        'boundary': 'springvalley_boundary.geojson',
+        'coord_box': (29.7735, 29.8089, -95.5304, -95.4763),
+        'east_lng': None,
+        'enabled': False,
+    },
 }
 
-# ingest order: heights first (established), then worst-staleness order
+# ingest order: heights first (established), then worst-staleness order.
+# springvalley is omitted until a permits file exists.
 INGEST_ORDER = ['heights', 'montrose', 'westu', 'riveroaks', 'springbranch',
                 'timbergrove', 'gardenoaksoakforest']
+
+# Weekly HAR pass. Heights keeps sold_ingest.py / active_ingest.py so a
+# multi-zip export cannot replace the Heights snapshot.
+HAR_MARKETS = ['montrose', 'westu', 'riveroaks', 'springbranch', 'springvalley',
+               'timbergrove', 'gardenoaksoakforest']
 
 ALL_ZIPS = sorted({z for m in MARKETS.values() if m['enabled'] for z in m['zips']})

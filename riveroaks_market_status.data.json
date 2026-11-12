@@ -1,0 +1,224 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "act_2217-pelham": {
+      "status": "active",
+      "current": {
+        "mls": "86261749",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 4750000.0,
+        "original_list_price": 4750000.0,
+        "dom": 44.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2217 Pelham Drive"
+      }
+    },
+    "act_2247-chilton": {
+      "status": "active",
+      "current": {
+        "mls": "46649105",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 5590000.0,
+        "original_list_price": 5590000.0,
+        "dom": 44.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2247 Chilton Road"
+      }
+    },
+    "act_3717-chevy-chase": {
+      "status": "active",
+      "current": {
+        "mls": "80511581",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 7995000.0,
+        "original_list_price": 7995000.0,
+        "dom": 34.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3717 Chevy Chase Drive"
+      }
+    },
+    "act_2321-claremont": {
+      "status": "sold",
+      "current": {
+        "mls": "1006370",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 5694000.0,
+        "dom": 57.0,
+        "close_date": "2026-09-10",
+        "close_price": 5600000.0,
+        "as_of": "2026-11-12",
+        "address": "2321 Claremont Lane"
+      }
+    },
+    "acq_2525-inwood-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "34967678",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 7250000.0,
+        "dom": 149.0,
+        "close_date": "2025-11-26",
+        "close_price": 7000000.0,
+        "as_of": "2026-11-12",
+        "address": "2525 Inwood Drive"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "act_2217-pelham",
+      "pin": "act_2217-pelham",
+      "address": "2217 Pelham Drive, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "86261749",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 4750000.0,
+        "original_list_price": 4750000.0,
+        "dom": 44.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2217 Pelham Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2247-chilton",
+      "pin": "act_2247-chilton",
+      "address": "2247 Chilton Road, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "46649105",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 5590000.0,
+        "original_list_price": 5590000.0,
+        "dom": 44.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2247 Chilton Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_3717-chevy-chase",
+      "pin": "act_3717-chevy-chase",
+      "address": "3717 Chevy Chase Drive, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "80511581",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 7995000.0,
+        "original_list_price": 7995000.0,
+        "dom": 34.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3717 Chevy Chase Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2321-claremont",
+      "pin": "act_2321-claremont",
+      "address": "2321 Claremont Lane, Houston, TX 77019",
+      "status": "sold",
+      "current": {
+        "mls": "1006370",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 5694000.0,
+        "dom": 57.0,
+        "close_date": "2026-09-10",
+        "close_price": 5600000.0,
+        "as_of": "2026-11-12",
+        "address": "2321 Claremont Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s1006370",
+          "cd": "2026-09-10",
+          "cp": 5600000.0,
+          "a": "2321 Claremont Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_2525-inwood-dr",
+      "pin": "acq_2525-inwood-dr",
+      "address": "2525 Inwood Dr",
+      "status": "sold",
+      "current": {
+        "mls": "34967678",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 7250000.0,
+        "dom": 149.0,
+        "close_date": "2025-11-26",
+        "close_price": 7000000.0,
+        "as_of": "2026-11-12",
+        "address": "2525 Inwood Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s34967678",
+          "cd": "2025-11-26",
+          "cp": 7000000.0,
+          "a": "2525 Inwood Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 4,
+    "pending": 0,
+    "sold": 2,
+    "terminated": 0,
+    "linked": 5
+  }
+}

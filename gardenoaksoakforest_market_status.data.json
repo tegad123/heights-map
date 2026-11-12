@@ -1,0 +1,4097 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "act_959-althea-drive": {
+      "status": "active",
+      "current": {
+        "mls": "17830263",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699000.0,
+        "original_list_price": 1799000.0,
+        "dom": 70.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "959 Althea Drive"
+      }
+    },
+    "act_1014-gardenia-drive": {
+      "status": "active",
+      "current": {
+        "mls": "93833401",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1669999.0,
+        "original_list_price": 1694999.0,
+        "dom": 70.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1014 Gardenia Drive"
+      }
+    },
+    "act_955-w-42nd-street": {
+      "status": "active",
+      "current": {
+        "mls": "94916904",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1850000.0,
+        "original_list_price": 1850000.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "955 W 42nd Street"
+      }
+    },
+    "act_934-w-43rd-street": {
+      "status": "active",
+      "current": {
+        "mls": "60575189",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2150000.0,
+        "original_list_price": 2150000.0,
+        "dom": 35.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "934 W 43rd Street"
+      }
+    },
+    "act_515-w-33rd-street": {
+      "status": "active",
+      "current": {
+        "mls": "71002399",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2149000.0,
+        "original_list_price": 2149000.0,
+        "dom": 14.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "515 W 33rd Street"
+      }
+    },
+    "act_891-w-41st-street": {
+      "status": "active",
+      "current": {
+        "mls": "50903978",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2490000.0,
+        "original_list_price": 2490000.0,
+        "dom": 137.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "891 W 41st Street"
+      }
+    },
+    "act_713-w-42nd-street": {
+      "status": "active",
+      "current": {
+        "mls": "98833200",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2500000.0,
+        "original_list_price": 2450000.0,
+        "dom": 254.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "713 W 42nd Street"
+      }
+    },
+    "act_867-w-42nd-street": {
+      "status": "active",
+      "current": {
+        "mls": "35985411",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2589000.0,
+        "original_list_price": 2589000.0,
+        "dom": 30.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "867 W 42nd Street"
+      }
+    },
+    "act_810-w-41st-street": {
+      "status": "active",
+      "current": {
+        "mls": "2223197",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2599000.0,
+        "original_list_price": 2599000.0,
+        "dom": 30.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "810 W 41st Street"
+      }
+    },
+    "pmt_539-w-34th-st": {
+      "status": "active",
+      "current": {
+        "mls": "22031090",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2099000.0,
+        "original_list_price": 2175000.0,
+        "dom": 85.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "539 W 34th Street"
+      }
+    },
+    "pmt_765-sue-barnett-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "95562907",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2175000.0,
+        "dom": 89.0,
+        "close_date": "2026-02-11",
+        "close_price": 2175000.0,
+        "as_of": "2026-11-12",
+        "address": "765 Sue Barnett Drive"
+      }
+    },
+    "pmt_1030-w-41st-st": {
+      "status": "sold",
+      "current": {
+        "mls": "47157138",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1799000.0,
+        "dom": 26.0,
+        "close_date": "2026-01-12",
+        "close_price": 1750000.0,
+        "as_of": "2026-11-12",
+        "address": "1030 W 41st Street"
+      }
+    },
+    "pmt_1032-w-41st-st": {
+      "status": "sold",
+      "current": {
+        "mls": "34262913",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1699000.0,
+        "dom": 9.0,
+        "close_date": "2026-04-02",
+        "close_price": 1699000.0,
+        "as_of": "2026-11-12",
+        "address": "1032 W 41st Street"
+      }
+    },
+    "pmt_963-w-41st-st": {
+      "status": "active",
+      "current": {
+        "mls": "21593956",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1795000.0,
+        "original_list_price": 1795000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "963 W 41st Street"
+      }
+    },
+    "pmt_830-azalea-st": {
+      "status": "active",
+      "current": {
+        "mls": "37922774",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2500000.0,
+        "original_list_price": 2500000.0,
+        "dom": 23.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "830 Azalea Street"
+      }
+    },
+    "act_207-w-33rd-street": {
+      "status": "sold",
+      "current": {
+        "mls": "38434235",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2150000.0,
+        "dom": 123.0,
+        "close_date": "2026-07-31",
+        "close_price": 1852500.0,
+        "as_of": "2026-11-12",
+        "address": "207 W 33rd Street"
+      }
+    },
+    "act_938-gardenia-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "43170919",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1775000.0,
+        "dom": 189.0,
+        "close_date": "2026-04-24",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "938 Gardenia Drive"
+      }
+    },
+    "act_910-w-41st-street": {
+      "status": "sold",
+      "current": {
+        "mls": "65433312",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1699000.0,
+        "dom": 105.0,
+        "close_date": "2026-05-15",
+        "close_price": 1530000.0,
+        "as_of": "2026-11-12",
+        "address": "910 W 41st Street"
+      }
+    },
+    "act_958-gardenia-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "81996896",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1635000.0,
+        "dom": 0.0,
+        "close_date": "2026-02-20",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "958 Gardenia Drive"
+      }
+    },
+    "act_1046-gardenia-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "85185760",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1920000.0,
+        "dom": 1.0,
+        "close_date": "2026-05-29",
+        "close_price": 1880400.0,
+        "as_of": "2026-11-12",
+        "address": "1046 Gardenia Drive"
+      }
+    },
+    "act_710-sue-barnett-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "98013218",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2150000.0,
+        "dom": 38.0,
+        "close_date": "2026-03-31",
+        "close_price": 2100000.0,
+        "as_of": "2026-11-12",
+        "address": "710 Sue Barnett Drive"
+      }
+    },
+    "act_5109-lido-lane": {
+      "status": "active",
+      "current": {
+        "mls": "20492499",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 999000.0,
+        "original_list_price": 999000.0,
+        "dom": 15.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "5109 Lido Lane"
+      }
+    },
+    "act_2010-hewitt-drive": {
+      "status": "active",
+      "current": {
+        "mls": "54308884",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1350000.0,
+        "original_list_price": 1450000.0,
+        "dom": 111.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2010 Hewitt Drive"
+      }
+    },
+    "act_2031-saxon-drive": {
+      "status": "active",
+      "current": {
+        "mls": "10405003",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1575000.0,
+        "original_list_price": 1575000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2031 Saxon Drive"
+      }
+    },
+    "act_1414-du-barry-lane": {
+      "status": "active",
+      "current": {
+        "mls": "12330488",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1539000.0,
+        "original_list_price": 1539000.0,
+        "dom": 10.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1414 Du Barry Lane"
+      }
+    },
+    "act_1527-thornton": {
+      "status": "sold",
+      "current": {
+        "mls": "22763785",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1549000.0,
+        "dom": 20.0,
+        "close_date": "2026-09-08",
+        "close_price": 1525000.0,
+        "as_of": "2026-11-12",
+        "address": "1527 Thornton"
+      }
+    },
+    "act_1431-curtin-street": {
+      "status": "sold",
+      "current": {
+        "mls": "73374067",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 49.0,
+        "close_date": "2026-09-02",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1431 Curtin Street"
+      }
+    },
+    "act_1316-althea-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "5889120",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1749000.0,
+        "dom": 207.0,
+        "close_date": "2026-08-28",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "1316 Althea Drive"
+      }
+    },
+    "act_1335-gardenia-drive": {
+      "status": "active",
+      "current": {
+        "mls": "70135073",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1875000.0,
+        "original_list_price": 1875000.0,
+        "dom": 22.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1335 Gardenia Drive"
+      }
+    },
+    "act_1326-curtin-street": {
+      "status": "active",
+      "current": {
+        "mls": "98656791",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1850000.0,
+        "original_list_price": 1850000.0,
+        "dom": 11.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1326 Curtin Street"
+      }
+    },
+    "act_1411-thornton-road": {
+      "status": "sold",
+      "current": {
+        "mls": "11887146",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1989000.0,
+        "dom": 61.0,
+        "close_date": "2026-10-13",
+        "close_price": 1979000.0,
+        "as_of": "2026-11-12",
+        "address": "1411 Thornton Road"
+      }
+    },
+    "act_1519-candlelight-lane": {
+      "status": "active",
+      "current": {
+        "mls": "69038130",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2388000.0,
+        "original_list_price": 2388000.0,
+        "dom": 44.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1519 Candlelight Lane"
+      }
+    },
+    "act_1402-du-barry-lane": {
+      "status": "active",
+      "current": {
+        "mls": "8426208",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2350000.0,
+        "original_list_price": 2350000.0,
+        "dom": 156.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1402 Du Barry Lane"
+      }
+    },
+    "act_1237-althea-drive": {
+      "status": "active",
+      "current": {
+        "mls": "28184756",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2395000.0,
+        "original_list_price": 2475000.0,
+        "dom": 1.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1237 Althea Drive"
+      }
+    },
+    "act_1226-du-barry-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "37276215",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1999000.0,
+        "dom": 181.0,
+        "close_date": "2026-11-04",
+        "close_price": 1680000.0,
+        "as_of": "2026-11-12",
+        "address": "1226 Du Barry Lane"
+      }
+    },
+    "act_1225-wakefield-drive": {
+      "status": "active",
+      "current": {
+        "mls": "30687789",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2188000.0,
+        "original_list_price": 2188000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1225 Wakefield Drive"
+      }
+    },
+    "act_1725-ebony-lane": {
+      "status": "active",
+      "current": {
+        "mls": "28411788",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1495000.0,
+        "original_list_price": 1495000.0,
+        "dom": 435.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1725 Ebony Lane"
+      }
+    },
+    "act_1721-chantilly-lane": {
+      "status": "active",
+      "current": {
+        "mls": "73730481",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1489900.0,
+        "original_list_price": 1499900.0,
+        "dom": 74.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1721 Chantilly Lane"
+      }
+    },
+    "act_1522-thornton-road": {
+      "status": "active",
+      "current": {
+        "mls": "65266162",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1969000.0,
+        "original_list_price": 1969000.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1522 Thornton Road"
+      }
+    },
+    "act_1819-cheshire-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "54134423",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599990.0,
+        "dom": 105.0,
+        "close_date": "2026-10-12",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1819 Cheshire Lane"
+      }
+    },
+    "act_2014-ebony-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "87955015",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1920000.0,
+        "dom": 12.0,
+        "close_date": "2026-11-06",
+        "close_price": 1880000.0,
+        "as_of": "2026-11-12",
+        "address": "2014 Ebony Lane"
+      }
+    },
+    "act_2019-chantilly-lane": {
+      "status": "active",
+      "current": {
+        "mls": "97900311",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1450000.0,
+        "original_list_price": 1450000.0,
+        "dom": 195.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2019 Chantilly Lane"
+      }
+    },
+    "act_5313-verdome-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "93996054",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1025000.0,
+        "dom": 5.0,
+        "close_date": "2026-10-16",
+        "close_price": 1025000.0,
+        "as_of": "2026-11-12",
+        "address": "5313 Verdome Lane"
+      }
+    },
+    "pmt_1611-richelieu-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "2375586",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1750000.0,
+        "dom": 40.0,
+        "close_date": "2025-12-12",
+        "close_price": 1725000.0,
+        "as_of": "2026-11-12",
+        "address": "1611 Richelieu Lane"
+      }
+    },
+    "pmt_1112-kinley-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "27744808",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1625000.0,
+        "dom": 91.0,
+        "close_date": "2026-03-02",
+        "close_price": 1490000.0,
+        "as_of": "2026-11-12",
+        "address": "1112 Kinley Lane"
+      }
+    },
+    "pmt_1823-ebony-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "85106917",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1500000.0,
+        "dom": 20.0,
+        "close_date": "2026-03-18",
+        "close_price": 1440000.0,
+        "as_of": "2026-11-12",
+        "address": "1823 Ebony Lane"
+      }
+    },
+    "pmt_2211-saxon-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "7673397",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1370000.0,
+        "dom": 91.0,
+        "close_date": "2026-03-31",
+        "close_price": 1357300.0,
+        "as_of": "2026-11-12",
+        "address": "2211 Saxon Drive"
+      }
+    },
+    "pmt_1322-candlelight-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "76940156",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2199000.0,
+        "dom": 42.0,
+        "close_date": "2026-01-02",
+        "close_price": 2125000.0,
+        "as_of": "2026-11-12",
+        "address": "1322 Candlelight Lane"
+      }
+    },
+    "pmt_1306-curtin-st": {
+      "status": "sold",
+      "current": {
+        "mls": "90008496",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1849000.0,
+        "dom": 8.0,
+        "close_date": "2026-06-18",
+        "close_price": 1825000.0,
+        "as_of": "2026-11-12",
+        "address": "1306 Curtin Street"
+      }
+    },
+    "pmt_1407-martin-st": {
+      "status": "sold",
+      "current": {
+        "mls": "56206998",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1799000.0,
+        "dom": 35.0,
+        "close_date": "2026-06-12",
+        "close_price": 1799000.0,
+        "as_of": "2026-11-12",
+        "address": "1407 Martin Street"
+      }
+    },
+    "pmt_2019-saxon-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "56641426",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1550000.0,
+        "dom": 41.0,
+        "close_date": "2026-01-14",
+        "close_price": 1535000.0,
+        "as_of": "2026-11-12",
+        "address": "2019 Saxon Drive"
+      }
+    },
+    "pmt_1822-de-milo-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "79219908",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1400000.0,
+        "dom": 35.0,
+        "close_date": "2026-02-06",
+        "close_price": 1362500.0,
+        "as_of": "2026-11-12",
+        "address": "1822 De Milo Drive"
+      }
+    },
+    "pmt_1642-viking-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "3363483",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2099000.0,
+        "dom": 103.0,
+        "close_date": "2025-11-13",
+        "close_price": 1950000.0,
+        "as_of": "2026-11-12",
+        "address": "1642 Viking Drive"
+      }
+    },
+    "pmt_1741-chippendale-rd": {
+      "status": "sold",
+      "current": {
+        "mls": "22241061",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1579900.0,
+        "dom": 140.0,
+        "close_date": "2026-03-31",
+        "close_price": 1470000.0,
+        "as_of": "2026-11-12",
+        "address": "1741 Chippendale Road"
+      }
+    },
+    "pmt_1719-candlelight-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "44328244",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2050000.0,
+        "dom": 22.0,
+        "close_date": "2026-05-01",
+        "close_price": 2050000.0,
+        "as_of": "2026-11-12",
+        "address": "1719 Candlelight Lane"
+      }
+    },
+    "pmt_1526-wakefield-dr": {
+      "status": "sold",
+      "current": {
+        "mls": "60300770",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1999000.0,
+        "dom": 22.0,
+        "close_date": "2026-01-16",
+        "close_price": 1945000.0,
+        "as_of": "2026-11-12",
+        "address": "1526 Wakefield Drive"
+      }
+    },
+    "pmt_1314-richelieu-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "58419447",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1795000.0,
+        "dom": 7.0,
+        "close_date": "2025-12-29",
+        "close_price": 1795000.0,
+        "as_of": "2026-11-12",
+        "address": "1314 Richelieu Lane"
+      }
+    },
+    "pmt_5310-de-milo-dr": {
+      "status": "active",
+      "current": {
+        "mls": "49642353",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1075000.0,
+        "original_list_price": 1075000.0,
+        "dom": 30.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "5310 De Milo Drive"
+      }
+    },
+    "pmt_5213-lido-ln": {
+      "status": "sold",
+      "current": {
+        "mls": "20837942",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1159000.0,
+        "dom": 13.0,
+        "close_date": "2026-10-06",
+        "close_price": 1140000.0,
+        "as_of": "2026-11-12",
+        "address": "5213 Lido Lane"
+      }
+    },
+    "acq_1714-viking-dr": {
+      "status": "active",
+      "current": {
+        "mls": "4327724",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1869000.0,
+        "original_list_price": 1869000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1714 Viking Drive"
+      }
+    },
+    "acq_1714-lamonte-ln": {
+      "status": "active",
+      "current": {
+        "mls": "83776361",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1725000.0,
+        "original_list_price": 1725000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1714 Lamonte Lane"
+      }
+    },
+    "act_4902-oak-forest-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "14911590",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1999000.0,
+        "dom": 41.0,
+        "close_date": "2026-07-17",
+        "close_price": 1900000.0,
+        "as_of": "2026-11-12",
+        "address": "4902 Oak Forest Drive"
+      }
+    },
+    "act_1423-gardenia-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "16363892",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2099000.0,
+        "dom": 33.0,
+        "close_date": "2026-06-16",
+        "close_price": 2099000.0,
+        "as_of": "2026-11-12",
+        "address": "1423 Gardenia Drive"
+      }
+    },
+    "act_1439-martin-street": {
+      "status": "sold",
+      "current": {
+        "mls": "18975290",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1735000.0,
+        "dom": 8.0,
+        "close_date": "2025-11-25",
+        "close_price": 1719000.0,
+        "as_of": "2026-11-12",
+        "address": "1439 Martin Street"
+      }
+    },
+    "act_1438-wakefield-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "32293853",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1749000.0,
+        "dom": 5.0,
+        "close_date": "2026-04-23",
+        "close_price": 1750500.0,
+        "as_of": "2026-11-12",
+        "address": "1438 Wakefield Drive"
+      }
+    },
+    "act_1702-candlelight-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "32322403",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1985000.0,
+        "dom": 15.0,
+        "close_date": "2026-05-26",
+        "close_price": 1975000.0,
+        "as_of": "2026-11-12",
+        "address": "1702 Candlelight Lane"
+      }
+    },
+    "act_4311-piney-woods-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "32724353",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1395000.0,
+        "dom": 27.0,
+        "close_date": "2026-04-15",
+        "close_price": 1395000.0,
+        "as_of": "2026-11-12",
+        "address": "4311 Piney Woods Drive"
+      }
+    },
+    "act_1710-chantilly-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "34290929",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1549000.0,
+        "dom": 13.0,
+        "close_date": "2026-04-13",
+        "close_price": 1549000.0,
+        "as_of": "2026-11-12",
+        "address": "1710 Chantilly Lane"
+      }
+    },
+    "act_1411-lamonte-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "36838777",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1640000.0,
+        "dom": 100.0,
+        "close_date": "2026-07-16",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1411 Lamonte Lane"
+      }
+    },
+    "act_1236-martin-street": {
+      "status": "sold",
+      "current": {
+        "mls": "37506208",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1990000.0,
+        "dom": 2.0,
+        "close_date": "2026-04-23",
+        "close_price": 1990000.0,
+        "as_of": "2026-11-12",
+        "address": "1236 Martin Street"
+      }
+    },
+    "act_1622-candlelight": {
+      "status": "sold",
+      "current": {
+        "mls": "42031948",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1625000.0,
+        "dom": 2.0,
+        "close_date": "2026-06-05",
+        "close_price": 1625000.0,
+        "as_of": "2026-11-12",
+        "address": "1622 Candlelight"
+      }
+    },
+    "act_2103-woodcrest-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "42415706",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1699000.0,
+        "dom": 0.0,
+        "close_date": "2026-01-27",
+        "close_price": 1699000.0,
+        "as_of": "2026-11-12",
+        "address": "2103 Woodcrest Drive"
+      }
+    },
+    "act_1225-du-barry-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "44853453",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1529000.0,
+        "dom": 111.0,
+        "close_date": "2026-04-23",
+        "close_price": 1420000.0,
+        "as_of": "2026-11-12",
+        "address": "1225 Du Barry Lane"
+      }
+    },
+    "act_1614-woodcrest-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "5153509",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1595000.0,
+        "dom": 18.0,
+        "close_date": "2026-05-29",
+        "close_price": 1595000.0,
+        "as_of": "2026-11-12",
+        "address": "1614 Woodcrest Drive"
+      }
+    },
+    "act_1441-chamboard-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "52347123",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1590000.0,
+        "dom": 170.0,
+        "close_date": "2026-06-03",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1441 Chamboard Lane"
+      }
+    },
+    "act_1111-wakefield-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "52687951",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2349990.0,
+        "dom": 17.0,
+        "close_date": "2026-03-30",
+        "close_price": 2349990.0,
+        "as_of": "2026-11-12",
+        "address": "1111 Wakefield Drive"
+      }
+    },
+    "act_1638-wakefield-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "54944525",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1525000.0,
+        "dom": 86.0,
+        "close_date": "2026-04-03",
+        "close_price": 1499900.0,
+        "as_of": "2026-11-12",
+        "address": "1638 Wakefield Drive"
+      }
+    },
+    "act_1614-cheshire-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "56714166",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1499900.0,
+        "dom": 29.0,
+        "close_date": "2026-05-07",
+        "close_price": 1475000.0,
+        "as_of": "2026-11-12",
+        "address": "1614 Cheshire Lane"
+      }
+    },
+    "act_1249-lamonte-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "62332631",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1549000.0,
+        "dom": 0.0,
+        "close_date": "2025-12-19",
+        "close_price": 1549000.0,
+        "as_of": "2026-11-12",
+        "address": "1249 Lamonte Lane"
+      }
+    },
+    "act_2311-saxon-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "68410731",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1219000.0,
+        "dom": 38.0,
+        "close_date": "2026-04-30",
+        "close_price": 1175000.0,
+        "as_of": "2026-11-12",
+        "address": "2311 Saxon Drive"
+      }
+    },
+    "act_1243-candlelight-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "75322773",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1759000.0,
+        "dom": 1.0,
+        "close_date": "2026-04-20",
+        "close_price": 1759000.0,
+        "as_of": "2026-11-12",
+        "address": "1243 Candlelight Lane"
+      }
+    },
+    "act_1529-althea-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "80481190",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1750000.0,
+        "dom": 24.0,
+        "close_date": "2025-11-21",
+        "close_price": 1687000.0,
+        "as_of": "2026-11-12",
+        "address": "1529 Althea Drive"
+      }
+    },
+    "act_1705-saxon-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "80524547",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599990.0,
+        "dom": 5.0,
+        "close_date": "2026-05-29",
+        "close_price": 1599900.0,
+        "as_of": "2026-11-12",
+        "address": "1705 Saxon Drive"
+      }
+    },
+    "act_1310-chantilly-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "8147949",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 112.0,
+        "close_date": "2026-04-29",
+        "close_price": 1475000.0,
+        "as_of": "2026-11-12",
+        "address": "1310 Chantilly Lane"
+      }
+    },
+    "act_1811-du-barry-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "83760545",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1329000.0,
+        "dom": 44.0,
+        "close_date": "2026-05-29",
+        "close_price": 1215000.0,
+        "as_of": "2026-11-12",
+        "address": "1811 Du Barry Lane"
+      }
+    },
+    "act_1807-du-barry-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "85300690",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 26.0,
+        "close_date": "2026-02-25",
+        "close_price": 1500000.0,
+        "as_of": "2026-11-12",
+        "address": "1807 Du Barry Lane"
+      }
+    },
+    "act_1714-hewitt-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "89805515",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1575000.0,
+        "dom": 8.0,
+        "close_date": "2026-06-02",
+        "close_price": 1575000.0,
+        "as_of": "2026-11-12",
+        "address": "1714 Hewitt Drive"
+      }
+    },
+    "act_1341-candlelight-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "90163506",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 70.0,
+        "close_date": "2026-04-17",
+        "close_price": 1549000.0,
+        "as_of": "2026-11-12",
+        "address": "1341 Candlelight Lane"
+      }
+    },
+    "act_1241-du-barry-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "92130411",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1750000.0,
+        "dom": 31.0,
+        "close_date": "2026-06-09",
+        "close_price": 1775000.0,
+        "as_of": "2026-11-12",
+        "address": "1241 Du Barry Lane"
+      }
+    },
+    "act_1842-chantilly-lane": {
+      "status": "sold",
+      "current": {
+        "mls": "92526679",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1329000.0,
+        "dom": 20.0,
+        "close_date": "2025-11-12",
+        "close_price": 1327733.0,
+        "as_of": "2026-11-12",
+        "address": "1842 Chantilly Lane"
+      }
+    },
+    "act_1261-wakefield-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "94229749",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1799000.0,
+        "dom": 99.0,
+        "close_date": "2026-06-05",
+        "close_price": 1693000.0,
+        "as_of": "2026-11-12",
+        "address": "1261 Wakefield Drive"
+      }
+    },
+    "act_1543-hewitt-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "97425985",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1810000.0,
+        "dom": 0.0,
+        "close_date": "2026-07-01",
+        "close_price": 1810000.0,
+        "as_of": "2026-11-12",
+        "address": "1543 Hewitt Drive"
+      }
+    },
+    "act_1807-wakefield-drive": {
+      "status": "sold",
+      "current": {
+        "mls": "98078299",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1349000.0,
+        "dom": 71.0,
+        "close_date": "2026-04-20",
+        "close_price": 1245000.0,
+        "as_of": "2026-11-12",
+        "address": "1807 Wakefield Drive"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "act_959-althea-drive",
+      "pin": "act_959-althea-drive",
+      "address": "959 Althea Drive",
+      "status": "active",
+      "current": {
+        "mls": "17830263",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699000.0,
+        "original_list_price": 1799000.0,
+        "dom": 70.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "959 Althea Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1014-gardenia-drive",
+      "pin": "act_1014-gardenia-drive",
+      "address": "1014 Gardenia Drive",
+      "status": "active",
+      "current": {
+        "mls": "93833401",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1669999.0,
+        "original_list_price": 1694999.0,
+        "dom": 70.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1014 Gardenia Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_955-w-42nd-street",
+      "pin": "act_955-w-42nd-street",
+      "address": "955 W 42nd Street",
+      "status": "active",
+      "current": {
+        "mls": "94916904",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1850000.0,
+        "original_list_price": 1850000.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "955 W 42nd Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_934-w-43rd-street",
+      "pin": "act_934-w-43rd-street",
+      "address": "934 W 43rd Street",
+      "status": "active",
+      "current": {
+        "mls": "60575189",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2150000.0,
+        "original_list_price": 2150000.0,
+        "dom": 35.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "934 W 43rd Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_515-w-33rd-street",
+      "pin": "act_515-w-33rd-street",
+      "address": "515 W 33rd Street",
+      "status": "active",
+      "current": {
+        "mls": "71002399",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2149000.0,
+        "original_list_price": 2149000.0,
+        "dom": 14.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "515 W 33rd Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_891-w-41st-street",
+      "pin": "act_891-w-41st-street",
+      "address": "891 W 41st Street",
+      "status": "active",
+      "current": {
+        "mls": "50903978",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2490000.0,
+        "original_list_price": 2490000.0,
+        "dom": 137.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "891 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_713-w-42nd-street",
+      "pin": "act_713-w-42nd-street",
+      "address": "713 W 42nd Street",
+      "status": "active",
+      "current": {
+        "mls": "98833200",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2500000.0,
+        "original_list_price": 2450000.0,
+        "dom": 254.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "713 W 42nd Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_867-w-42nd-street",
+      "pin": "act_867-w-42nd-street",
+      "address": "867 W 42nd Street",
+      "status": "active",
+      "current": {
+        "mls": "35985411",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2589000.0,
+        "original_list_price": 2589000.0,
+        "dom": 30.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "867 W 42nd Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_810-w-41st-street",
+      "pin": "act_810-w-41st-street",
+      "address": "810 W 41st Street",
+      "status": "active",
+      "current": {
+        "mls": "2223197",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2599000.0,
+        "original_list_price": 2599000.0,
+        "dom": 30.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "810 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_539-w-34th-st",
+      "pin": "pmt_539-w-34th-st",
+      "address": "539 W 34TH ST, Houston, TX 77018",
+      "status": "active",
+      "current": {
+        "mls": "22031090",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2099000.0,
+        "original_list_price": 2175000.0,
+        "dom": 85.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "539 W 34th Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_765-sue-barnett-dr",
+      "pin": "pmt_765-sue-barnett-dr",
+      "address": "765 SUE BARNETT DR, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "95562907",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2175000.0,
+        "dom": 89.0,
+        "close_date": "2026-02-11",
+        "close_price": 2175000.0,
+        "as_of": "2026-11-12",
+        "address": "765 Sue Barnett Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s95562907",
+          "cd": "2026-02-11",
+          "cp": 2175000.0,
+          "a": "765 Sue Barnett Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1030-w-41st-st",
+      "pin": "pmt_1030-w-41st-st",
+      "address": "1030 W 41ST ST, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "47157138",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1799000.0,
+        "dom": 26.0,
+        "close_date": "2026-01-12",
+        "close_price": 1750000.0,
+        "as_of": "2026-11-12",
+        "address": "1030 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s47157138",
+          "cd": "2026-01-12",
+          "cp": 1750000.0,
+          "a": "1030 W 41st Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1032-w-41st-st",
+      "pin": "pmt_1032-w-41st-st",
+      "address": "1032 W 41ST ST, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "34262913",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1699000.0,
+        "dom": 9.0,
+        "close_date": "2026-04-02",
+        "close_price": 1699000.0,
+        "as_of": "2026-11-12",
+        "address": "1032 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s34262913",
+          "cd": "2026-04-02",
+          "cp": 1699000.0,
+          "a": "1032 W 41st Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_963-w-41st-st",
+      "pin": "pmt_963-w-41st-st",
+      "address": "963 W 41ST ST, Houston, TX 77018",
+      "status": "active",
+      "current": {
+        "mls": "21593956",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1795000.0,
+        "original_list_price": 1795000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "963 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_830-azalea-st",
+      "pin": "pmt_830-azalea-st",
+      "address": "830 AZALEA ST, Houston, TX 77018",
+      "status": "active",
+      "current": {
+        "mls": "37922774",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2500000.0,
+        "original_list_price": 2500000.0,
+        "dom": 23.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "830 Azalea Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s72147610",
+          "cd": "2026-08-12",
+          "cp": 2000000.0,
+          "a": "830 Azalea Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_207-w-33rd-street",
+      "pin": "act_207-w-33rd-street",
+      "address": "207 W 33rd Street",
+      "status": "sold",
+      "current": {
+        "mls": "38434235",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2150000.0,
+        "dom": 123.0,
+        "close_date": "2026-07-31",
+        "close_price": 1852500.0,
+        "as_of": "2026-11-12",
+        "address": "207 W 33rd Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s38434235",
+          "cd": "2026-07-31",
+          "cp": 1852500.0,
+          "a": "207 W 33rd Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_938-gardenia-drive",
+      "pin": "act_938-gardenia-drive",
+      "address": "938 Gardenia Drive",
+      "status": "sold",
+      "current": {
+        "mls": "43170919",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1775000.0,
+        "dom": 189.0,
+        "close_date": "2026-04-24",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "938 Gardenia Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s43170919",
+          "cd": "2026-04-24",
+          "cp": 1650000.0,
+          "a": "938 Gardenia Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_910-w-41st-street",
+      "pin": "act_910-w-41st-street",
+      "address": "910 W 41st Street",
+      "status": "sold",
+      "current": {
+        "mls": "65433312",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1699000.0,
+        "dom": 105.0,
+        "close_date": "2026-05-15",
+        "close_price": 1530000.0,
+        "as_of": "2026-11-12",
+        "address": "910 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s65433312",
+          "cd": "2026-05-15",
+          "cp": 1530000.0,
+          "a": "910 W 41st Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_958-gardenia-drive",
+      "pin": "act_958-gardenia-drive",
+      "address": "958 Gardenia Drive",
+      "status": "sold",
+      "current": {
+        "mls": "81996896",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1635000.0,
+        "dom": 0.0,
+        "close_date": "2026-02-20",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "958 Gardenia Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s81996896",
+          "cd": "2026-02-20",
+          "cp": 1600000.0,
+          "a": "958 Gardenia Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1046-gardenia-drive",
+      "pin": "act_1046-gardenia-drive",
+      "address": "1046 Gardenia Drive",
+      "status": "sold",
+      "current": {
+        "mls": "85185760",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1920000.0,
+        "dom": 1.0,
+        "close_date": "2026-05-29",
+        "close_price": 1880400.0,
+        "as_of": "2026-11-12",
+        "address": "1046 Gardenia Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s85185760",
+          "cd": "2026-05-29",
+          "cp": 1880400.0,
+          "a": "1046 Gardenia Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_710-sue-barnett-drive",
+      "pin": "act_710-sue-barnett-drive",
+      "address": "710 Sue Barnett Drive",
+      "status": "sold",
+      "current": {
+        "mls": "98013218",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2150000.0,
+        "dom": 38.0,
+        "close_date": "2026-03-31",
+        "close_price": 2100000.0,
+        "as_of": "2026-11-12",
+        "address": "710 Sue Barnett Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s98013218",
+          "cd": "2026-03-31",
+          "cp": 2100000.0,
+          "a": "710 Sue Barnett Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_5109-lido-lane",
+      "pin": "act_5109-lido-lane",
+      "address": "5109 Lido Lane",
+      "status": "active",
+      "current": {
+        "mls": "20492499",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 999000.0,
+        "original_list_price": 999000.0,
+        "dom": 15.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "5109 Lido Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2010-hewitt-drive",
+      "pin": "act_2010-hewitt-drive",
+      "address": "2010 Hewitt Drive",
+      "status": "active",
+      "current": {
+        "mls": "54308884",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1350000.0,
+        "original_list_price": 1450000.0,
+        "dom": 111.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2010 Hewitt Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2031-saxon-drive",
+      "pin": "act_2031-saxon-drive",
+      "address": "2031 Saxon Drive",
+      "status": "active",
+      "current": {
+        "mls": "10405003",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1575000.0,
+        "original_list_price": 1575000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2031 Saxon Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1414-du-barry-lane",
+      "pin": "act_1414-du-barry-lane",
+      "address": "1414 Du Barry Lane",
+      "status": "active",
+      "current": {
+        "mls": "12330488",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1539000.0,
+        "original_list_price": 1539000.0,
+        "dom": 10.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1414 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1527-thornton",
+      "pin": "act_1527-thornton",
+      "address": "1527 Thornton",
+      "status": "sold",
+      "current": {
+        "mls": "22763785",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1549000.0,
+        "dom": 20.0,
+        "close_date": "2026-09-08",
+        "close_price": 1525000.0,
+        "as_of": "2026-11-12",
+        "address": "1527 Thornton"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s22763785",
+          "cd": "2026-09-08",
+          "cp": 1525000.0,
+          "a": "1527 Thornton"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1431-curtin-street",
+      "pin": "act_1431-curtin-street",
+      "address": "1431 Curtin Street",
+      "status": "sold",
+      "current": {
+        "mls": "73374067",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 49.0,
+        "close_date": "2026-09-02",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1431 Curtin Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s73374067",
+          "cd": "2026-09-02",
+          "cp": 1550000.0,
+          "a": "1431 Curtin Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1316-althea-drive",
+      "pin": "act_1316-althea-drive",
+      "address": "1316 Althea Drive",
+      "status": "sold",
+      "current": {
+        "mls": "5889120",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1749000.0,
+        "dom": 207.0,
+        "close_date": "2026-08-28",
+        "close_price": 1600000.0,
+        "as_of": "2026-11-12",
+        "address": "1316 Althea Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s5889120",
+          "cd": "2026-08-28",
+          "cp": 1600000.0,
+          "a": "1316 Althea Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1335-gardenia-drive",
+      "pin": "act_1335-gardenia-drive",
+      "address": "1335 Gardenia Drive",
+      "status": "active",
+      "current": {
+        "mls": "70135073",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1875000.0,
+        "original_list_price": 1875000.0,
+        "dom": 22.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1335 Gardenia Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1326-curtin-street",
+      "pin": "act_1326-curtin-street",
+      "address": "1326 Curtin Street",
+      "status": "active",
+      "current": {
+        "mls": "98656791",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1850000.0,
+        "original_list_price": 1850000.0,
+        "dom": 11.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1326 Curtin Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1411-thornton-road",
+      "pin": "act_1411-thornton-road",
+      "address": "1411 Thornton Road",
+      "status": "sold",
+      "current": {
+        "mls": "11887146",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1989000.0,
+        "dom": 61.0,
+        "close_date": "2026-10-13",
+        "close_price": 1979000.0,
+        "as_of": "2026-11-12",
+        "address": "1411 Thornton Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s11887146",
+          "cd": "2026-10-13",
+          "cp": 1979000.0,
+          "a": "1411 Thornton Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1519-candlelight-lane",
+      "pin": "act_1519-candlelight-lane",
+      "address": "1519 Candlelight Lane",
+      "status": "active",
+      "current": {
+        "mls": "69038130",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2388000.0,
+        "original_list_price": 2388000.0,
+        "dom": 44.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1519 Candlelight Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1402-du-barry-lane",
+      "pin": "act_1402-du-barry-lane",
+      "address": "1402 Du Barry Lane",
+      "status": "active",
+      "current": {
+        "mls": "8426208",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2350000.0,
+        "original_list_price": 2350000.0,
+        "dom": 156.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1402 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1237-althea-drive",
+      "pin": "act_1237-althea-drive",
+      "address": "1237 Althea Drive",
+      "status": "active",
+      "current": {
+        "mls": "28184756",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2395000.0,
+        "original_list_price": 2475000.0,
+        "dom": 1.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1237 Althea Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1226-du-barry-lane",
+      "pin": "act_1226-du-barry-lane",
+      "address": "1226 Du Barry Lane",
+      "status": "sold",
+      "current": {
+        "mls": "37276215",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1999000.0,
+        "dom": 181.0,
+        "close_date": "2026-11-04",
+        "close_price": 1680000.0,
+        "as_of": "2026-11-12",
+        "address": "1226 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s37276215",
+          "cd": "2026-11-04",
+          "cp": 1680000.0,
+          "a": "1226 Du Barry Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1225-wakefield-drive",
+      "pin": "act_1225-wakefield-drive",
+      "address": "1225 Wakefield Drive",
+      "status": "active",
+      "current": {
+        "mls": "30687789",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2188000.0,
+        "original_list_price": 2188000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1225 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1725-ebony-lane",
+      "pin": "act_1725-ebony-lane",
+      "address": "1725 Ebony Lane",
+      "status": "active",
+      "current": {
+        "mls": "28411788",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1495000.0,
+        "original_list_price": 1495000.0,
+        "dom": 435.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1725 Ebony Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1721-chantilly-lane",
+      "pin": "act_1721-chantilly-lane",
+      "address": "1721 Chantilly Lane",
+      "status": "active",
+      "current": {
+        "mls": "73730481",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1489900.0,
+        "original_list_price": 1499900.0,
+        "dom": 74.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1721 Chantilly Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1522-thornton-road",
+      "pin": "act_1522-thornton-road",
+      "address": "1522 Thornton Road",
+      "status": "active",
+      "current": {
+        "mls": "65266162",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1969000.0,
+        "original_list_price": 1969000.0,
+        "dom": 8.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1522 Thornton Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1819-cheshire-lane",
+      "pin": "act_1819-cheshire-lane",
+      "address": "1819 Cheshire Lane",
+      "status": "sold",
+      "current": {
+        "mls": "54134423",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599990.0,
+        "dom": 105.0,
+        "close_date": "2026-10-12",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1819 Cheshire Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s54134423",
+          "cd": "2026-10-12",
+          "cp": 1550000.0,
+          "a": "1819 Cheshire Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2014-ebony-lane",
+      "pin": "act_2014-ebony-lane",
+      "address": "2014 Ebony Lane",
+      "status": "sold",
+      "current": {
+        "mls": "87955015",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1920000.0,
+        "dom": 12.0,
+        "close_date": "2026-11-06",
+        "close_price": 1880000.0,
+        "as_of": "2026-11-12",
+        "address": "2014 Ebony Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s87955015",
+          "cd": "2026-11-06",
+          "cp": 1880000.0,
+          "a": "2014 Ebony Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2019-chantilly-lane",
+      "pin": "act_2019-chantilly-lane",
+      "address": "2019 Chantilly Lane",
+      "status": "active",
+      "current": {
+        "mls": "97900311",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1450000.0,
+        "original_list_price": 1450000.0,
+        "dom": 195.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2019 Chantilly Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_5313-verdome-lane",
+      "pin": "act_5313-verdome-lane",
+      "address": "5313 Verdome Lane",
+      "status": "sold",
+      "current": {
+        "mls": "93996054",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1025000.0,
+        "dom": 5.0,
+        "close_date": "2026-10-16",
+        "close_price": 1025000.0,
+        "as_of": "2026-11-12",
+        "address": "5313 Verdome Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s93996054",
+          "cd": "2026-10-16",
+          "cp": 1025000.0,
+          "a": "5313 Verdome Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1611-richelieu-ln",
+      "pin": "pmt_1611-richelieu-ln",
+      "address": "1611 RICHELIEU LN, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "2375586",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1750000.0,
+        "dom": 40.0,
+        "close_date": "2025-12-12",
+        "close_price": 1725000.0,
+        "as_of": "2026-11-12",
+        "address": "1611 Richelieu Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s2375586",
+          "cd": "2025-12-12",
+          "cp": 1725000.0,
+          "a": "1611 Richelieu Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1112-kinley-ln",
+      "pin": "pmt_1112-kinley-ln",
+      "address": "1112 KINLEY LN, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "27744808",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1625000.0,
+        "dom": 91.0,
+        "close_date": "2026-03-02",
+        "close_price": 1490000.0,
+        "as_of": "2026-11-12",
+        "address": "1112 Kinley Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s27744808",
+          "cd": "2026-03-02",
+          "cp": 1490000.0,
+          "a": "1112 Kinley Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1823-ebony-ln",
+      "pin": "pmt_1823-ebony-ln",
+      "address": "1823 EBONY LN, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "85106917",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1500000.0,
+        "dom": 20.0,
+        "close_date": "2026-03-18",
+        "close_price": 1440000.0,
+        "as_of": "2026-11-12",
+        "address": "1823 Ebony Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s85106917",
+          "cd": "2026-03-18",
+          "cp": 1440000.0,
+          "a": "1823 Ebony Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2211-saxon-dr",
+      "pin": "pmt_2211-saxon-dr",
+      "address": "2211 SAXON DR, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "7673397",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1370000.0,
+        "dom": 91.0,
+        "close_date": "2026-03-31",
+        "close_price": 1357300.0,
+        "as_of": "2026-11-12",
+        "address": "2211 Saxon Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s7673397",
+          "cd": "2026-03-31",
+          "cp": 1357300.0,
+          "a": "2211 Saxon Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1322-candlelight-ln",
+      "pin": "pmt_1322-candlelight-ln",
+      "address": "1322 CANDLELIGHT LN, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "76940156",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2199000.0,
+        "dom": 42.0,
+        "close_date": "2026-01-02",
+        "close_price": 2125000.0,
+        "as_of": "2026-11-12",
+        "address": "1322 Candlelight Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s76940156",
+          "cd": "2026-01-02",
+          "cp": 2125000.0,
+          "a": "1322 Candlelight Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1306-curtin-st",
+      "pin": "pmt_1306-curtin-st",
+      "address": "1306 CURTIN ST, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "90008496",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1849000.0,
+        "dom": 8.0,
+        "close_date": "2026-06-18",
+        "close_price": 1825000.0,
+        "as_of": "2026-11-12",
+        "address": "1306 Curtin Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s90008496",
+          "cd": "2026-06-18",
+          "cp": 1825000.0,
+          "a": "1306 Curtin Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1407-martin-st",
+      "pin": "pmt_1407-martin-st",
+      "address": "1407 MARTIN ST, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "56206998",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1799000.0,
+        "dom": 35.0,
+        "close_date": "2026-06-12",
+        "close_price": 1799000.0,
+        "as_of": "2026-11-12",
+        "address": "1407 Martin Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s56206998",
+          "cd": "2026-06-12",
+          "cp": 1799000.0,
+          "a": "1407 Martin Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2019-saxon-dr",
+      "pin": "pmt_2019-saxon-dr",
+      "address": "2019 SAXON DR, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "56641426",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1550000.0,
+        "dom": 41.0,
+        "close_date": "2026-01-14",
+        "close_price": 1535000.0,
+        "as_of": "2026-11-12",
+        "address": "2019 Saxon Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s56641426",
+          "cd": "2026-01-14",
+          "cp": 1535000.0,
+          "a": "2019 Saxon Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1822-de-milo-dr",
+      "pin": "pmt_1822-de-milo-dr",
+      "address": "1822 DE MILO DR, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "79219908",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1400000.0,
+        "dom": 35.0,
+        "close_date": "2026-02-06",
+        "close_price": 1362500.0,
+        "as_of": "2026-11-12",
+        "address": "1822 De Milo Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s79219908",
+          "cd": "2026-02-06",
+          "cp": 1362500.0,
+          "a": "1822 De Milo Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1642-viking-dr",
+      "pin": "pmt_1642-viking-dr",
+      "address": "1642 VIKING DR, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "3363483",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2099000.0,
+        "dom": 103.0,
+        "close_date": "2025-11-13",
+        "close_price": 1950000.0,
+        "as_of": "2026-11-12",
+        "address": "1642 Viking Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s3363483",
+          "cd": "2025-11-13",
+          "cp": 1950000.0,
+          "a": "1642 Viking Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1741-chippendale-rd",
+      "pin": "pmt_1741-chippendale-rd",
+      "address": "1741 CHIPPENDALE RD, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "22241061",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1579900.0,
+        "dom": 140.0,
+        "close_date": "2026-03-31",
+        "close_price": 1470000.0,
+        "as_of": "2026-11-12",
+        "address": "1741 Chippendale Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s22241061",
+          "cd": "2026-03-31",
+          "cp": 1470000.0,
+          "a": "1741 Chippendale Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1719-candlelight-ln",
+      "pin": "pmt_1719-candlelight-ln",
+      "address": "1719 CANDLELIGHT LN, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "44328244",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2050000.0,
+        "dom": 22.0,
+        "close_date": "2026-05-01",
+        "close_price": 2050000.0,
+        "as_of": "2026-11-12",
+        "address": "1719 Candlelight Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s44328244",
+          "cd": "2026-05-01",
+          "cp": 2050000.0,
+          "a": "1719 Candlelight Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1526-wakefield-dr",
+      "pin": "pmt_1526-wakefield-dr",
+      "address": "1526 WAKEFIELD DR, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "60300770",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1999000.0,
+        "dom": 22.0,
+        "close_date": "2026-01-16",
+        "close_price": 1945000.0,
+        "as_of": "2026-11-12",
+        "address": "1526 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s60300770",
+          "cd": "2026-01-16",
+          "cp": 1945000.0,
+          "a": "1526 Wakefield Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1314-richelieu-ln",
+      "pin": "pmt_1314-richelieu-ln",
+      "address": "1314 RICHELIEU LN, Houston, TX 77018",
+      "status": "sold",
+      "current": {
+        "mls": "58419447",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1795000.0,
+        "dom": 7.0,
+        "close_date": "2025-12-29",
+        "close_price": 1795000.0,
+        "as_of": "2026-11-12",
+        "address": "1314 Richelieu Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s58419447",
+          "cd": "2025-12-29",
+          "cp": 1795000.0,
+          "a": "1314 Richelieu Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_5310-de-milo-dr",
+      "pin": "pmt_5310-de-milo-dr",
+      "address": "5310 DE MILO DR, Houston, TX 77092",
+      "status": "active",
+      "current": {
+        "mls": "49642353",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1075000.0,
+        "original_list_price": 1075000.0,
+        "dom": 30.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "5310 De Milo Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_5213-lido-ln",
+      "pin": "pmt_5213-lido-ln",
+      "address": "5213 LIDO LN, Houston, TX 77092",
+      "status": "sold",
+      "current": {
+        "mls": "20837942",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1159000.0,
+        "dom": 13.0,
+        "close_date": "2026-10-06",
+        "close_price": 1140000.0,
+        "as_of": "2026-11-12",
+        "address": "5213 Lido Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s20837942",
+          "cd": "2026-10-06",
+          "cp": 1140000.0,
+          "a": "5213 Lido Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1714-viking-dr",
+      "pin": "acq_1714-viking-dr",
+      "address": "1714 Viking Dr",
+      "status": "active",
+      "current": {
+        "mls": "4327724",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1869000.0,
+        "original_list_price": 1869000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1714 Viking Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1714-lamonte-ln",
+      "pin": "acq_1714-lamonte-ln",
+      "address": "1714 Lamonte Ln",
+      "status": "active",
+      "current": {
+        "mls": "83776361",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1725000.0,
+        "original_list_price": 1725000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1714 Lamonte Lane"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_4902-oak-forest-drive",
+      "pin": "act_4902-oak-forest-drive",
+      "address": "4902 Oak Forest Drive",
+      "status": "sold",
+      "current": {
+        "mls": "14911590",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1999000.0,
+        "dom": 41.0,
+        "close_date": "2026-07-17",
+        "close_price": 1900000.0,
+        "as_of": "2026-11-12",
+        "address": "4902 Oak Forest Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s14911590",
+          "cd": "2026-07-17",
+          "cp": 1900000.0,
+          "a": "4902 Oak Forest Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1423-gardenia-drive",
+      "pin": "act_1423-gardenia-drive",
+      "address": "1423 Gardenia Drive",
+      "status": "sold",
+      "current": {
+        "mls": "16363892",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2099000.0,
+        "dom": 33.0,
+        "close_date": "2026-06-16",
+        "close_price": 2099000.0,
+        "as_of": "2026-11-12",
+        "address": "1423 Gardenia Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s16363892",
+          "cd": "2026-06-16",
+          "cp": 2099000.0,
+          "a": "1423 Gardenia Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1439-martin-street",
+      "pin": "act_1439-martin-street",
+      "address": "1439 Martin Street",
+      "status": "sold",
+      "current": {
+        "mls": "18975290",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1735000.0,
+        "dom": 8.0,
+        "close_date": "2025-11-25",
+        "close_price": 1719000.0,
+        "as_of": "2026-11-12",
+        "address": "1439 Martin Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s18975290",
+          "cd": "2025-11-25",
+          "cp": 1719000.0,
+          "a": "1439 Martin Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1438-wakefield-drive",
+      "pin": "act_1438-wakefield-drive",
+      "address": "1438 Wakefield Drive",
+      "status": "sold",
+      "current": {
+        "mls": "32293853",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1749000.0,
+        "dom": 5.0,
+        "close_date": "2026-04-23",
+        "close_price": 1750500.0,
+        "as_of": "2026-11-12",
+        "address": "1438 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s32293853",
+          "cd": "2026-04-23",
+          "cp": 1750500.0,
+          "a": "1438 Wakefield Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1702-candlelight-lane",
+      "pin": "act_1702-candlelight-lane",
+      "address": "1702 Candlelight Lane",
+      "status": "sold",
+      "current": {
+        "mls": "32322403",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1985000.0,
+        "dom": 15.0,
+        "close_date": "2026-05-26",
+        "close_price": 1975000.0,
+        "as_of": "2026-11-12",
+        "address": "1702 Candlelight Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s32322403",
+          "cd": "2026-05-26",
+          "cp": 1975000.0,
+          "a": "1702 Candlelight Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_4311-piney-woods-drive",
+      "pin": "act_4311-piney-woods-drive",
+      "address": "4311 Piney Woods Drive",
+      "status": "sold",
+      "current": {
+        "mls": "32724353",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1395000.0,
+        "dom": 27.0,
+        "close_date": "2026-04-15",
+        "close_price": 1395000.0,
+        "as_of": "2026-11-12",
+        "address": "4311 Piney Woods Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s32724353",
+          "cd": "2026-04-15",
+          "cp": 1395000.0,
+          "a": "4311 Piney Woods Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1710-chantilly-lane",
+      "pin": "act_1710-chantilly-lane",
+      "address": "1710 Chantilly Lane",
+      "status": "sold",
+      "current": {
+        "mls": "34290929",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1549000.0,
+        "dom": 13.0,
+        "close_date": "2026-04-13",
+        "close_price": 1549000.0,
+        "as_of": "2026-11-12",
+        "address": "1710 Chantilly Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s34290929",
+          "cd": "2026-04-13",
+          "cp": 1549000.0,
+          "a": "1710 Chantilly Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1411-lamonte-lane",
+      "pin": "act_1411-lamonte-lane",
+      "address": "1411 Lamonte Lane",
+      "status": "sold",
+      "current": {
+        "mls": "36838777",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1640000.0,
+        "dom": 100.0,
+        "close_date": "2026-07-16",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1411 Lamonte Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s36838777",
+          "cd": "2026-07-16",
+          "cp": 1550000.0,
+          "a": "1411 Lamonte Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1236-martin-street",
+      "pin": "act_1236-martin-street",
+      "address": "1236 Martin Street",
+      "status": "sold",
+      "current": {
+        "mls": "37506208",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1990000.0,
+        "dom": 2.0,
+        "close_date": "2026-04-23",
+        "close_price": 1990000.0,
+        "as_of": "2026-11-12",
+        "address": "1236 Martin Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s37506208",
+          "cd": "2026-04-23",
+          "cp": 1990000.0,
+          "a": "1236 Martin Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1622-candlelight",
+      "pin": "act_1622-candlelight",
+      "address": "1622 Candlelight",
+      "status": "sold",
+      "current": {
+        "mls": "42031948",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1625000.0,
+        "dom": 2.0,
+        "close_date": "2026-06-05",
+        "close_price": 1625000.0,
+        "as_of": "2026-11-12",
+        "address": "1622 Candlelight"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s42031948",
+          "cd": "2026-06-05",
+          "cp": 1625000.0,
+          "a": "1622 Candlelight"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2103-woodcrest-drive",
+      "pin": "act_2103-woodcrest-drive",
+      "address": "2103 Woodcrest Drive",
+      "status": "sold",
+      "current": {
+        "mls": "42415706",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1699000.0,
+        "dom": 0.0,
+        "close_date": "2026-01-27",
+        "close_price": 1699000.0,
+        "as_of": "2026-11-12",
+        "address": "2103 Woodcrest Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s42415706",
+          "cd": "2026-01-27",
+          "cp": 1699000.0,
+          "a": "2103 Woodcrest Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1225-du-barry-lane",
+      "pin": "act_1225-du-barry-lane",
+      "address": "1225 Du Barry Lane",
+      "status": "sold",
+      "current": {
+        "mls": "44853453",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1529000.0,
+        "dom": 111.0,
+        "close_date": "2026-04-23",
+        "close_price": 1420000.0,
+        "as_of": "2026-11-12",
+        "address": "1225 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s44853453",
+          "cd": "2026-04-23",
+          "cp": 1420000.0,
+          "a": "1225 Du Barry Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1614-woodcrest-drive",
+      "pin": "act_1614-woodcrest-drive",
+      "address": "1614 Woodcrest Drive",
+      "status": "sold",
+      "current": {
+        "mls": "5153509",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1595000.0,
+        "dom": 18.0,
+        "close_date": "2026-05-29",
+        "close_price": 1595000.0,
+        "as_of": "2026-11-12",
+        "address": "1614 Woodcrest Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s5153509",
+          "cd": "2026-05-29",
+          "cp": 1595000.0,
+          "a": "1614 Woodcrest Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1441-chamboard-lane",
+      "pin": "act_1441-chamboard-lane",
+      "address": "1441 Chamboard Lane",
+      "status": "sold",
+      "current": {
+        "mls": "52347123",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1590000.0,
+        "dom": 170.0,
+        "close_date": "2026-06-03",
+        "close_price": 1550000.0,
+        "as_of": "2026-11-12",
+        "address": "1441 Chamboard Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s52347123",
+          "cd": "2026-06-03",
+          "cp": 1550000.0,
+          "a": "1441 Chamboard Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1111-wakefield-drive",
+      "pin": "act_1111-wakefield-drive",
+      "address": "1111 Wakefield Drive",
+      "status": "sold",
+      "current": {
+        "mls": "52687951",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2349990.0,
+        "dom": 17.0,
+        "close_date": "2026-03-30",
+        "close_price": 2349990.0,
+        "as_of": "2026-11-12",
+        "address": "1111 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s52687951",
+          "cd": "2026-03-30",
+          "cp": 2349990.0,
+          "a": "1111 Wakefield Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1638-wakefield-drive",
+      "pin": "act_1638-wakefield-drive",
+      "address": "1638 Wakefield Drive",
+      "status": "sold",
+      "current": {
+        "mls": "54944525",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1525000.0,
+        "dom": 86.0,
+        "close_date": "2026-04-03",
+        "close_price": 1499900.0,
+        "as_of": "2026-11-12",
+        "address": "1638 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s54944525",
+          "cd": "2026-04-03",
+          "cp": 1499900.0,
+          "a": "1638 Wakefield Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1614-cheshire-lane",
+      "pin": "act_1614-cheshire-lane",
+      "address": "1614 Cheshire Lane",
+      "status": "sold",
+      "current": {
+        "mls": "56714166",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1499900.0,
+        "dom": 29.0,
+        "close_date": "2026-05-07",
+        "close_price": 1475000.0,
+        "as_of": "2026-11-12",
+        "address": "1614 Cheshire Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s56714166",
+          "cd": "2026-05-07",
+          "cp": 1475000.0,
+          "a": "1614 Cheshire Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1249-lamonte-lane",
+      "pin": "act_1249-lamonte-lane",
+      "address": "1249 Lamonte Lane",
+      "status": "sold",
+      "current": {
+        "mls": "62332631",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1549000.0,
+        "dom": 0.0,
+        "close_date": "2025-12-19",
+        "close_price": 1549000.0,
+        "as_of": "2026-11-12",
+        "address": "1249 Lamonte Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s62332631",
+          "cd": "2025-12-19",
+          "cp": 1549000.0,
+          "a": "1249 Lamonte Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2311-saxon-drive",
+      "pin": "act_2311-saxon-drive",
+      "address": "2311 Saxon Drive",
+      "status": "sold",
+      "current": {
+        "mls": "68410731",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1219000.0,
+        "dom": 38.0,
+        "close_date": "2026-04-30",
+        "close_price": 1175000.0,
+        "as_of": "2026-11-12",
+        "address": "2311 Saxon Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s68410731",
+          "cd": "2026-04-30",
+          "cp": 1175000.0,
+          "a": "2311 Saxon Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1243-candlelight-lane",
+      "pin": "act_1243-candlelight-lane",
+      "address": "1243 Candlelight Lane",
+      "status": "sold",
+      "current": {
+        "mls": "75322773",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1759000.0,
+        "dom": 1.0,
+        "close_date": "2026-04-20",
+        "close_price": 1759000.0,
+        "as_of": "2026-11-12",
+        "address": "1243 Candlelight Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s75322773",
+          "cd": "2026-04-20",
+          "cp": 1759000.0,
+          "a": "1243 Candlelight Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1529-althea-drive",
+      "pin": "act_1529-althea-drive",
+      "address": "1529 Althea Drive",
+      "status": "sold",
+      "current": {
+        "mls": "80481190",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1750000.0,
+        "dom": 24.0,
+        "close_date": "2025-11-21",
+        "close_price": 1687000.0,
+        "as_of": "2026-11-12",
+        "address": "1529 Althea Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s80481190",
+          "cd": "2025-11-21",
+          "cp": 1687000.0,
+          "a": "1529 Althea Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1705-saxon-drive",
+      "pin": "act_1705-saxon-drive",
+      "address": "1705 Saxon Drive",
+      "status": "sold",
+      "current": {
+        "mls": "80524547",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599990.0,
+        "dom": 5.0,
+        "close_date": "2026-05-29",
+        "close_price": 1599900.0,
+        "as_of": "2026-11-12",
+        "address": "1705 Saxon Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s80524547",
+          "cd": "2026-05-29",
+          "cp": 1599900.0,
+          "a": "1705 Saxon Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1310-chantilly-lane",
+      "pin": "act_1310-chantilly-lane",
+      "address": "1310 Chantilly Lane",
+      "status": "sold",
+      "current": {
+        "mls": "8147949",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 112.0,
+        "close_date": "2026-04-29",
+        "close_price": 1475000.0,
+        "as_of": "2026-11-12",
+        "address": "1310 Chantilly Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s8147949",
+          "cd": "2026-04-29",
+          "cp": 1475000.0,
+          "a": "1310 Chantilly Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1811-du-barry-lane",
+      "pin": "act_1811-du-barry-lane",
+      "address": "1811 Du Barry Lane",
+      "status": "sold",
+      "current": {
+        "mls": "83760545",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1329000.0,
+        "dom": 44.0,
+        "close_date": "2026-05-29",
+        "close_price": 1215000.0,
+        "as_of": "2026-11-12",
+        "address": "1811 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s83760545",
+          "cd": "2026-05-29",
+          "cp": 1215000.0,
+          "a": "1811 Du Barry Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1807-du-barry-lane",
+      "pin": "act_1807-du-barry-lane",
+      "address": "1807 Du Barry Lane",
+      "status": "sold",
+      "current": {
+        "mls": "85300690",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 26.0,
+        "close_date": "2026-02-25",
+        "close_price": 1500000.0,
+        "as_of": "2026-11-12",
+        "address": "1807 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s85300690",
+          "cd": "2026-02-25",
+          "cp": 1500000.0,
+          "a": "1807 Du Barry Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1714-hewitt-drive",
+      "pin": "act_1714-hewitt-drive",
+      "address": "1714 Hewitt Drive",
+      "status": "sold",
+      "current": {
+        "mls": "89805515",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1575000.0,
+        "dom": 8.0,
+        "close_date": "2026-06-02",
+        "close_price": 1575000.0,
+        "as_of": "2026-11-12",
+        "address": "1714 Hewitt Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s89805515",
+          "cd": "2026-06-02",
+          "cp": 1575000.0,
+          "a": "1714 Hewitt Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1341-candlelight-lane",
+      "pin": "act_1341-candlelight-lane",
+      "address": "1341 Candlelight Lane",
+      "status": "sold",
+      "current": {
+        "mls": "90163506",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1599000.0,
+        "dom": 70.0,
+        "close_date": "2026-04-17",
+        "close_price": 1549000.0,
+        "as_of": "2026-11-12",
+        "address": "1341 Candlelight Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s90163506",
+          "cd": "2026-04-17",
+          "cp": 1549000.0,
+          "a": "1341 Candlelight Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1241-du-barry-lane",
+      "pin": "act_1241-du-barry-lane",
+      "address": "1241 Du Barry Lane",
+      "status": "sold",
+      "current": {
+        "mls": "92130411",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1750000.0,
+        "dom": 31.0,
+        "close_date": "2026-06-09",
+        "close_price": 1775000.0,
+        "as_of": "2026-11-12",
+        "address": "1241 Du Barry Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s92130411",
+          "cd": "2026-06-09",
+          "cp": 1775000.0,
+          "a": "1241 Du Barry Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1842-chantilly-lane",
+      "pin": "act_1842-chantilly-lane",
+      "address": "1842 Chantilly Lane",
+      "status": "sold",
+      "current": {
+        "mls": "92526679",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1329000.0,
+        "dom": 20.0,
+        "close_date": "2025-11-12",
+        "close_price": 1327733.0,
+        "as_of": "2026-11-12",
+        "address": "1842 Chantilly Lane"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s92526679",
+          "cd": "2025-11-12",
+          "cp": 1327733.0,
+          "a": "1842 Chantilly Lane"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1261-wakefield-drive",
+      "pin": "act_1261-wakefield-drive",
+      "address": "1261 Wakefield Drive",
+      "status": "sold",
+      "current": {
+        "mls": "94229749",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1799000.0,
+        "dom": 99.0,
+        "close_date": "2026-06-05",
+        "close_price": 1693000.0,
+        "as_of": "2026-11-12",
+        "address": "1261 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s94229749",
+          "cd": "2026-06-05",
+          "cp": 1693000.0,
+          "a": "1261 Wakefield Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1543-hewitt-drive",
+      "pin": "act_1543-hewitt-drive",
+      "address": "1543 Hewitt Drive",
+      "status": "sold",
+      "current": {
+        "mls": "97425985",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1810000.0,
+        "dom": 0.0,
+        "close_date": "2026-07-01",
+        "close_price": 1810000.0,
+        "as_of": "2026-11-12",
+        "address": "1543 Hewitt Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s97425985",
+          "cd": "2026-07-01",
+          "cp": 1810000.0,
+          "a": "1543 Hewitt Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1807-wakefield-drive",
+      "pin": "act_1807-wakefield-drive",
+      "address": "1807 Wakefield Drive",
+      "status": "sold",
+      "current": {
+        "mls": "98078299",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1349000.0,
+        "dom": 71.0,
+        "close_date": "2026-04-20",
+        "close_price": 1245000.0,
+        "as_of": "2026-11-12",
+        "address": "1807 Wakefield Drive"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s98078299",
+          "cd": "2026-04-20",
+          "cp": 1245000.0,
+          "a": "1807 Wakefield Drive"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 42,
+    "pending": 0,
+    "sold": 83,
+    "terminated": 0,
+    "linked": 93
+  }
+}

@@ -1,0 +1,656 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "ACT02": {
+      "status": "sold",
+      "current": {
+        "mls": "42474246",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2450000.0,
+        "dom": 104.0,
+        "close_date": "2026-08-28",
+        "close_price": 2300000.0,
+        "as_of": "2026-11-12",
+        "address": "2205 North Boulevard"
+      }
+    },
+    "ACT06": {
+      "status": "active",
+      "current": {
+        "mls": "2350118",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2399000.0,
+        "original_list_price": 2499000.0,
+        "dom": 51.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2325 Wroxton Road"
+      }
+    },
+    "ACT07": {
+      "status": "sold",
+      "current": {
+        "mls": "48367135",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2895000.0,
+        "dom": 49.0,
+        "close_date": "2026-08-12",
+        "close_price": 2700000.0,
+        "as_of": "2026-11-12",
+        "address": "2316 North Boulevard"
+      }
+    },
+    "ACT08": {
+      "status": "active",
+      "current": {
+        "mls": "4522423",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3498000.0,
+        "original_list_price": 3590000.0,
+        "dom": 40.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4002 Marquette Street"
+      }
+    },
+    "ACT10": {
+      "status": "sold",
+      "current": {
+        "mls": "5024887",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3699000.0,
+        "dom": 21.0,
+        "close_date": "2026-10-15",
+        "close_price": 3645000.0,
+        "as_of": "2026-11-12",
+        "address": "2627 Tangley Road"
+      }
+    },
+    "ACT11": {
+      "status": "active",
+      "current": {
+        "mls": "13036422",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3990000.0,
+        "original_list_price": 3990000.0,
+        "dom": 472.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3701 Arnold Street"
+      }
+    },
+    "pmt_2404-quenby-st": {
+      "status": "sold",
+      "current": {
+        "mls": "75090831",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1475000.0,
+        "dom": 8.0,
+        "close_date": "2026-07-17",
+        "close_price": 1480000.0,
+        "as_of": "2026-11-12",
+        "address": "2404 Quenby Street"
+      }
+    },
+    "pmt_3802-westerman-st": {
+      "status": "sold",
+      "current": {
+        "mls": "57550225",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3499000.0,
+        "dom": 11.0,
+        "close_date": "2026-06-26",
+        "close_price": 3475000.0,
+        "as_of": "2026-11-12",
+        "address": "3802 Westerman Street"
+      }
+    },
+    "pmt_3746-childress-st": {
+      "status": "active",
+      "current": {
+        "mls": "53182799",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2679000.0,
+        "original_list_price": 2679000.0,
+        "dom": 5.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3746 Childress St Street"
+      }
+    },
+    "pmt_2410-quenby-st": {
+      "status": "sold",
+      "current": {
+        "mls": "24232284",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1499900.0,
+        "dom": 88.0,
+        "close_date": "2026-10-30",
+        "close_price": 1537450.0,
+        "as_of": "2026-11-12",
+        "address": "2410 QUENBY Street"
+      }
+    },
+    "pmt_2412-quenby-st": {
+      "status": "sold",
+      "current": {
+        "mls": "95260089",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1499900.0,
+        "dom": 71.0,
+        "close_date": "2026-10-14",
+        "close_price": 1475000.0,
+        "as_of": "2026-11-12",
+        "address": "2412 QUENBY Street"
+      }
+    },
+    "pmt_2341-wroxton-rd": {
+      "status": "active",
+      "current": {
+        "mls": "35397835",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2599000.0,
+        "original_list_price": 2599000.0,
+        "dom": 56.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2341 Wroxton Road"
+      }
+    },
+    "acq_2722-pemberton-dr": {
+      "status": "active",
+      "current": {
+        "mls": "46509863",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 6450000.0,
+        "original_list_price": 6450000.0,
+        "dom": 9.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2722 Pemberton Drive"
+      }
+    },
+    "acq_3012-jarrard-st": {
+      "status": "sold",
+      "current": {
+        "mls": "22796632",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2650000.0,
+        "dom": 4.0,
+        "close_date": "2026-06-11",
+        "close_price": 2900000.0,
+        "as_of": "2026-11-12",
+        "address": "3012 Jarrard Street"
+      }
+    },
+    "acq_4002-marquette-st": {
+      "status": "active",
+      "current": {
+        "mls": "4522423",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3498000.0,
+        "original_list_price": 3590000.0,
+        "dom": 40.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4002 Marquette Street"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "ACT02",
+      "pin": "ACT02",
+      "address": "2205 North Boulevard, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "42474246",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2450000.0,
+        "dom": 104.0,
+        "close_date": "2026-08-28",
+        "close_price": 2300000.0,
+        "as_of": "2026-11-12",
+        "address": "2205 North Boulevard"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s42474246",
+          "cd": "2026-08-28",
+          "cp": 2300000.0,
+          "a": "2205 North Boulevard"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "ACT06",
+      "pin": "ACT06",
+      "address": "2325 Wroxton Road, Houston, TX 77005",
+      "status": "active",
+      "current": {
+        "mls": "2350118",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2399000.0,
+        "original_list_price": 2499000.0,
+        "dom": 51.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2325 Wroxton Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "ACT07",
+      "pin": "ACT07",
+      "address": "2316 North Boulevard, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "48367135",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2895000.0,
+        "dom": 49.0,
+        "close_date": "2026-08-12",
+        "close_price": 2700000.0,
+        "as_of": "2026-11-12",
+        "address": "2316 North Boulevard"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s48367135",
+          "cd": "2026-08-12",
+          "cp": 2700000.0,
+          "a": "2316 North Boulevard"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "ACT08",
+      "pin": "ACT08",
+      "address": "4002 Marquette Street, Houston, TX 77005",
+      "status": "active",
+      "current": {
+        "mls": "4522423",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3498000.0,
+        "original_list_price": 3590000.0,
+        "dom": 40.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4002 Marquette Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "ACT10",
+      "pin": "ACT10",
+      "address": "2627 Tangley Road, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "5024887",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3699000.0,
+        "dom": 21.0,
+        "close_date": "2026-10-15",
+        "close_price": 3645000.0,
+        "as_of": "2026-11-12",
+        "address": "2627 Tangley Road"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s5024887",
+          "cd": "2026-10-15",
+          "cp": 3645000.0,
+          "a": "2627 Tangley Road"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "ACT11",
+      "pin": "ACT11",
+      "address": "3701 Arnold Street, Houston, TX 77005",
+      "status": "active",
+      "current": {
+        "mls": "13036422",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3990000.0,
+        "original_list_price": 3990000.0,
+        "dom": 472.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3701 Arnold Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2404-quenby-st",
+      "pin": "pmt_2404-quenby-st",
+      "address": "2404 QUENBY ST 77005, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "75090831",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1475000.0,
+        "dom": 8.0,
+        "close_date": "2026-07-17",
+        "close_price": 1480000.0,
+        "as_of": "2026-11-12",
+        "address": "2404 Quenby Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s75090831",
+          "cd": "2026-07-17",
+          "cp": 1480000.0,
+          "a": "2404 Quenby Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_3802-westerman-st",
+      "pin": "pmt_3802-westerman-st",
+      "address": "3802 WESTERMAN ST 77005, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "57550225",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 3499000.0,
+        "dom": 11.0,
+        "close_date": "2026-06-26",
+        "close_price": 3475000.0,
+        "as_of": "2026-11-12",
+        "address": "3802 Westerman Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s57550225",
+          "cd": "2026-06-26",
+          "cp": 3475000.0,
+          "a": "3802 Westerman Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_3746-childress-st",
+      "pin": "pmt_3746-childress-st",
+      "address": "3746 CHILDRESS ST 77005, Houston, TX 77005",
+      "status": "active",
+      "current": {
+        "mls": "53182799",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2679000.0,
+        "original_list_price": 2679000.0,
+        "dom": 5.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3746 Childress St Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2410-quenby-st",
+      "pin": "pmt_2410-quenby-st",
+      "address": "2410 QUENBY ST 77005, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "24232284",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1499900.0,
+        "dom": 88.0,
+        "close_date": "2026-10-30",
+        "close_price": 1537450.0,
+        "as_of": "2026-11-12",
+        "address": "2410 QUENBY Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s24232284",
+          "cd": "2026-10-30",
+          "cp": 1537450.0,
+          "a": "2410 QUENBY Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2412-quenby-st",
+      "pin": "pmt_2412-quenby-st",
+      "address": "2412 QUENBY ST 77005, Houston, TX 77005",
+      "status": "sold",
+      "current": {
+        "mls": "95260089",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1499900.0,
+        "dom": 71.0,
+        "close_date": "2026-10-14",
+        "close_price": 1475000.0,
+        "as_of": "2026-11-12",
+        "address": "2412 QUENBY Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s95260089",
+          "cd": "2026-10-14",
+          "cp": 1475000.0,
+          "a": "2412 QUENBY Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2341-wroxton-rd",
+      "pin": "pmt_2341-wroxton-rd",
+      "address": "2341 WROXTON RD 77005, Houston, TX 77005",
+      "status": "active",
+      "current": {
+        "mls": "35397835",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2599000.0,
+        "original_list_price": 2599000.0,
+        "dom": 56.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2341 Wroxton Road"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_2722-pemberton-dr",
+      "pin": "acq_2722-pemberton-dr",
+      "address": "2722 Pemberton Dr",
+      "status": "active",
+      "current": {
+        "mls": "46509863",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 6450000.0,
+        "original_list_price": 6450000.0,
+        "dom": 9.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2722 Pemberton Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_3012-jarrard-st",
+      "pin": "acq_3012-jarrard-st",
+      "address": "3012 Jarrard St",
+      "status": "sold",
+      "current": {
+        "mls": "22796632",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2650000.0,
+        "dom": 4.0,
+        "close_date": "2026-06-11",
+        "close_price": 2900000.0,
+        "as_of": "2026-11-12",
+        "address": "3012 Jarrard Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s22796632",
+          "cd": "2026-06-11",
+          "cp": 2900000.0,
+          "a": "3012 Jarrard Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_4002-marquette-st",
+      "pin": "acq_4002-marquette-st",
+      "address": "4002 Marquette St",
+      "status": "active",
+      "current": {
+        "mls": "4522423",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 3498000.0,
+        "original_list_price": 3590000.0,
+        "dom": 40.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4002 Marquette Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 17,
+    "pending": 0,
+    "sold": 26,
+    "terminated": 0,
+    "linked": 15
+  }
+}
