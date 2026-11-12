@@ -644,13 +644,26 @@ def stage_new(chg, csv_paths, html_path):
         for rec in parse_har(path):
             rec['_prod'] = prod
             rows[key(rec['Address'])] = rec
-    new_addrs = [e['a'] for e in chg['new']]
+    def har_coord(rec):
+        try:
+            lat = float(str(rec.get('Latitude') or '').strip())
+            lng = float(str(rec.get('Longitude') or '').strip())
+        except ValueError:
+            return None
+        if -90 <= lat <= 90 and -180 <= lng <= 180 and lat and lng:
+            return round(lat, 7), round(lng, 7)
+        return None
+    new_addrs = [e['a'] for e in chg['new'] if har_coord(rows.get(key(e['a']), {})) is None]
     geo = geocode_batch(new_addrs) if new_addrs else {}
     y, m, dd = map(int, chg['date'].split('-'))
     staged = []
     for e in chg['new']:
         rec = rows.get(key(e['a']), {})
-        lat, lng, q = geo.get(e['a'], (None, None, 'FAILED'))
+        supplied = har_coord(rec)
+        if supplied:
+            lat, lng, q = supplied[0], supplied[1], 'HAR'
+        else:
+            lat, lng, q = geo.get(e['a'], (None, None, 'FAILED'))
         pid = slug_id(e['a'])
         prod = rec.get('_prod', e.get('prod', ''))
         subdiv = (rec.get('Subdivision') or '').strip()
@@ -881,6 +894,43 @@ def cmd_dispositions(args,html_path):
     print(json.dumps(report,indent=2))
 
 
+def confirm_sold_dispositions(chg, sold_csv, html_path):
+    """Absence is not a sale. A drop becomes sold only when this export says so.
+
+    The sold row must sit inside the Heights guards. Lot size does not matter:
+    a small-lot closing still confirms the listing sold. Pending ids are not
+    in `dropped` and are left alone.
+    """
+    from deed_ingest import in_boundary
+    src = load_html(html_path)
+    data = {d['id']: d for d in extract_data(src)}
+    zone = extract_out_of_zone(src)
+    with open(os.path.join(ROOT, 'heights_boundary.geojson'), encoding='utf-8') as f:
+        geo = json.load(f)
+    confirmed = set()
+    for rec in parse_har(sold_csv):
+        address = rec.get('Address') or ''
+        if zone.search(address):
+            continue
+        try:
+            lat = float(str(rec.get('Latitude') or '').strip())
+            lng = float(str(rec.get('Longitude') or '').strip())
+        except ValueError:
+            continue
+        if lng > -95.370 or not in_boundary(geo, lng, lat):
+            continue
+        confirmed.add(key(address))
+    n = 0
+    for dropped in chg['dropped']:
+        if dropped.get('disposition') not in (None, 'unconfirmed'):
+            continue
+        pin = data.get(dropped['id'])
+        if pin and key(pin['a']) in confirmed:
+            dropped['disposition'] = 'sold'
+            n += 1
+    return n
+
+
 def main():
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument('--market', default='heights', choices=sorted(MARKETS),
@@ -898,6 +948,8 @@ def main():
     d.add_argument('single_csv')
     d.add_argument('split_csv')
     d.add_argument('--write', action='store_true', help='write the changelog (default: dry run)')
+    d.add_argument('--confirm-sold', default=None,
+                   help='sold export; a dropped id is disposition sold only when this file confirms the address')
     g = sub.add_parser('generate', parents=[common],
                        help="splice RECONCILE block into the market's html from the changelog")
     g.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
@@ -933,6 +985,9 @@ def main():
     if args.cmd == 'diff':
         chg = run_diff(args.date, [('Single Lot', args.single_csv),
                                    ('Split Lot', args.split_csv)], html)
+        if args.confirm_sold:
+            n = confirm_sold_dispositions(chg, args.confirm_sold, html)
+            print(f'sold export confirmed {n} drop(s); other absences stay unconfirmed')
         print(json.dumps(chg['counts']))
         for sec in ('dropped', 'relisted', 'new', 'excluded'):
             for e in chg[sec]:

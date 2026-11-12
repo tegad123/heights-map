@@ -1,0 +1,632 @@
+[
+ {
+  "id": "act_805-walton-street",
+  "a": "805 Walton Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131313166",
+  "data": {
+   "id": "act_805-walton-street",
+   "a": "805 Walton Street",
+   "llc": "Maybrook Homes",
+   "v": "$1,199,000",
+   "sd": "2026-10-08",
+   "lot": "3384",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Brooke Smith",
+   "u": "",
+   "lat": 29.798472,
+   "lng": -95.376648,
+   "c": [
+    {
+     "n": "Alexandra Loyd",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Maybrook Homes. Agent: Alexandra Loyd.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_217-teetshorn-street",
+  "a": "217 TEETSHORN Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_217-teetshorn-st-77009",
+  "data": {
+   "id": "act_217-teetshorn-street",
+   "a": "217 TEETSHORN Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,594,900",
+   "sd": "2026-10-10",
+   "lot": "3422",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, RODGERS",
+   "u": "",
+   "lat": 29.783895,
+   "lng": -95.375059,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1138-fugate-street",
+  "a": "1138 Fugate Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1138-fugate-st-77009",
+  "data": {
+   "id": "act_1138-fugate-street",
+   "a": "1138 Fugate Street",
+   "llc": "Vette Renovations",
+   "v": "$1,695,000",
+   "sd": "2026-09-24",
+   "lot": "3133",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, North Norhill",
+   "u": "",
+   "lat": 29.79482,
+   "lng": -95.387724,
+   "c": [
+    {
+     "n": "Stephanie Sykes",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Vette Renovations. Agent: Stephanie Sykes.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1021-nadine-street",
+  "a": "1021 Nadine Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131191267",
+  "data": {
+   "id": "act_1021-nadine-street",
+   "a": "1021 Nadine Street",
+   "llc": "Jain & Company | TOMO Homes",
+   "v": "$1,599,990",
+   "sd": "2026-09-23",
+   "lot": "3811",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Stude",
+   "u": "",
+   "lat": 29.806595,
+   "lng": -95.385405,
+   "c": [
+    {
+     "n": "Rahul Jain",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Jain & Company | TOMO Homes. Agent: Rahul Jain.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_845-e-26th-street",
+  "a": "845 E 26th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_845-e-26th-st-77009",
+  "data": {
+   "id": "act_845-e-26th-street",
+   "a": "845 E 26th Street",
+   "llc": "TOMO HOMES",
+   "v": "$1,799,999",
+   "sd": "2026-11-10",
+   "lot": "3900",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Sunset Heights",
+   "u": "",
+   "lat": 29.810848,
+   "lng": -95.38735,
+   "c": [
+    {
+     "n": "Zephry Hodges",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: TOMO HOMES. Agent: Zephry Hodges.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_618-wendel-street",
+  "a": "618 Wendel Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131211370",
+  "data": {
+   "id": "act_618-wendel-street",
+   "a": "618 Wendel Street",
+   "llc": "StoneManor Signature",
+   "v": "$1,899,990",
+   "sd": "2026-10-31",
+   "lot": "4209",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Woodland Terrace",
+   "u": "",
+   "lat": 29.782039,
+   "lng": -95.378806,
+   "c": [
+    {
+     "n": "Lily Jang",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: StoneManor Signature. Agent: Lily Jang.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_1109-voight-street",
+  "a": "1109 Voight Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1109-voight-st-77009",
+  "data": {
+   "id": "act_1109-voight-street",
+   "a": "1109 Voight Street",
+   "llc": "Vecino Homes",
+   "v": "$1,999,900",
+   "sd": "2026-10-23",
+   "lot": "4060",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Usener",
+   "u": "",
+   "lat": 29.779906,
+   "lng": -95.386636,
+   "c": [
+    {
+     "n": "Christopher Phan",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Vecino Homes. Agent: Christopher Phan.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_711-e-12th-street",
+  "a": "711 E 12th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131240072",
+  "data": {
+   "id": "act_711-e-12th-street",
+   "a": "711 E 12th Street",
+   "llc": "Aspire Fine Homes",
+   "v": "$2,299,000",
+   "sd": "2026-10-09",
+   "lot": "4246",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Stude Sec 02",
+   "u": "",
+   "lat": 29.792842,
+   "lng": -95.389539,
+   "c": [
+    {
+     "n": "Kasia Mccormick",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Aspire Fine Homes. Agent: Kasia Mccormick.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_305-w-17th-street",
+  "a": "305 W 17th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_305-w-17th-st-77008",
+  "data": {
+   "id": "act_305-w-17th-street",
+   "a": "305 W 17th Street",
+   "llc": "Titan Homes",
+   "v": "$2,299,000",
+   "sd": "2026-10-24",
+   "lot": "4800",
+   "kind": "active",
+   "bb": "",
+   "prod": "Single Lot",
+   "f": "Single Lot, Houston Heights",
+   "u": "",
+   "lat": 29.801016,
+   "lng": -95.401738,
+   "c": [
+    {
+     "n": "Debbie Hagan",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_single"
+  },
+  "seed": {
+   "notes": "Active inventory — Single Lot. Builder: Titan Homes. Agent: Debbie Hagan.",
+   "tags": [
+    "active_single"
+   ]
+  }
+ },
+ {
+  "id": "act_123-amundsen-street-unit-a",
+  "a": "123 Amundsen Street Unit#A",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "data": {
+   "id": "act_123-amundsen-street-unit-a",
+   "a": "123 Amundsen Street Unit#A",
+   "llc": "JST HOMES LLC",
+   "v": "$399,990",
+   "sd": "2026-05-13",
+   "lot": "1980",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, AMUNDSEN WAY",
+   "u": "",
+   "lat": 29.800989,
+   "lng": -95.370227,
+   "c": [
+    {
+     "n": "Shawn Baksh",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: JST HOMES LLC. Agent: Shawn Baksh.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_5226-cornish-street",
+  "a": "5226 Cornish Street",
+  "geocode": "HAR",
+  "mergeCandidate": null,
+  "data": {
+   "id": "act_5226-cornish-street",
+   "a": "5226 Cornish Street",
+   "llc": "Riverway Homes",
+   "v": "$629,900",
+   "sd": "2026-10-27",
+   "lot": "2438",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, COTTAGE GROVE SEC 1",
+   "u": "",
+   "lat": 29.778589,
+   "lng": -95.415054,
+   "c": [
+    {
+     "n": "Christian Martin",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Riverway Homes. Agent: Christian Martin.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1135-adele-street",
+  "a": "1135 Adele Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1135-adele-st-77009",
+  "data": {
+   "id": "act_1135-adele-street",
+   "a": "1135 Adele Street",
+   "llc": "N/A",
+   "v": "$749,990",
+   "sd": "2026-11-10",
+   "lot": "2488",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot",
+   "u": "",
+   "lat": 29.805833,
+   "lng": -95.387695,
+   "c": [
+    {
+     "n": "Spencer Huck",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: N/A. Agent: Spencer Huck.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1320-alexander-street-unit-a",
+  "a": "1320 Alexander Street Unit#A",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1320-alexander-st-a-77008",
+  "data": {
+   "id": "act_1320-alexander-street-unit-a",
+   "a": "1320 Alexander Street Unit#A",
+   "llc": "Brownstone Living",
+   "v": "$824,990",
+   "sd": "2026-10-23",
+   "lot": "2526",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights Annex",
+   "u": "",
+   "lat": 29.795096,
+   "lng": -95.408197,
+   "c": [
+    {
+     "n": "Spencer Huck",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Spencer Huck.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_1320-alexander-street-unit-b",
+  "a": "1320 Alexander Street Unit#B",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_1320-alexander-st-b-77008",
+  "data": {
+   "id": "act_1320-alexander-street-unit-b",
+   "a": "1320 Alexander Street Unit#B",
+   "llc": "Brownstone Living",
+   "v": "$839,000",
+   "sd": "2026-10-04",
+   "lot": "2526",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights Annex",
+   "u": "",
+   "lat": 29.795096,
+   "lng": -95.408197,
+   "c": [
+    {
+     "n": "Spencer Huck",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Spencer Huck.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_607-w-27th-street",
+  "a": "607 W 27th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "pmt_607-w-27th-st-77008",
+  "data": {
+   "id": "act_607-w-27th-street",
+   "a": "607 W 27th Street",
+   "llc": "Brownstone Living",
+   "v": "$949,000",
+   "sd": "2026-10-13",
+   "lot": "3010",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights",
+   "u": "",
+   "lat": 29.810186,
+   "lng": -95.407228,
+   "c": [
+    {
+     "n": "Steve Hajizade",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Steve Hajizade.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_934-dorothy-street",
+  "a": "934 Dorothy Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131360894",
+  "data": {
+   "id": "act_934-dorothy-street",
+   "a": "934 Dorothy Street",
+   "llc": "Brownstone Living",
+   "v": "$949,990",
+   "sd": "2026-11-10",
+   "lot": "2762",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, West Heights",
+   "u": "",
+   "lat": 29.788261,
+   "lng": -95.40869,
+   "c": [
+    {
+     "n": "Spencer Huck",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Spencer Huck.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_520-w-24th-street",
+  "a": "520 W 24th Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131144336",
+  "data": {
+   "id": "act_520-w-24th-street",
+   "a": "520 W 24th Street",
+   "llc": "Brownstone Living",
+   "v": "$999,000",
+   "sd": "2026-11-04",
+   "lot": "2885",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, Houston Heights",
+   "u": "",
+   "lat": 29.807682,
+   "lng": -95.407003,
+   "c": [
+    {
+     "n": "Steve Hajizade",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Brownstone Living. Agent: Steve Hajizade.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ },
+ {
+  "id": "act_118-e-23rd-street",
+  "a": "118 E 23RD Street",
+  "geocode": "HAR",
+  "mergeCandidate": "2131144961",
+  "data": {
+   "id": "act_118-e-23rd-street",
+   "a": "118 E 23RD Street",
+   "llc": "Mazzarino Cons & Dev",
+   "v": "$1,059,900",
+   "sd": "2026-09-10",
+   "lot": "3026",
+   "kind": "active",
+   "bb": "",
+   "prod": "Split Lot",
+   "f": "Split Lot, EAST 23RD VIEWS",
+   "u": "",
+   "lat": 29.806731,
+   "lng": -95.398399,
+   "c": [
+    {
+     "n": "Blake Vincent",
+     "p": [],
+     "e": []
+    }
+   ],
+   "ty": "active_split"
+  },
+  "seed": {
+   "notes": "Active inventory — Split Lot. Builder: Mazzarino Cons & Dev. Agent: Blake Vincent.",
+   "tags": [
+    "active_split"
+   ]
+  }
+ }
+]

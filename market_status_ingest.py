@@ -142,8 +142,9 @@ def merge_sales(existing, records):
         row.update(a=rec['address'], lat=round(rec['lat'], 7), lng=round(rec['lng'], 7),
                    cp=rec['close_price'], sq=rec['building_sqft'], cd=rec['close_date'],
                    psf=round(rec['close_price'] / rec['building_sqft'], 1) if rec['building_sqft'] else None)
-        row.update({k: money(raw[v]) for k, v in OPTIONAL.items()})
-        row.update({k: raw[v].strip() for k, v in TEXT.items()})
+        # A column the export does not contain is not a blank. Keep the prior value.
+        row.update({k: money(raw[v]) if v in raw else row.get(k) for k, v in OPTIONAL.items()})
+        row.update({k: raw[v].strip() if v in raw else (row.get(k) or '') for k, v in TEXT.items()})
         row['coh'] = 'nc' if rec['year_built'] and rec['year_built'] >= 2025 else 'resale'
         if row.get('lp'): row['svl'] = round((row['cp'] - row['lp']) / row['lp'], 4)
         if row.get('dom') == 0: row['p'] = 1
