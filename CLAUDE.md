@@ -119,7 +119,12 @@ be recreated).
 
 - inspections_springvalley.json is `{}` and there is no
   springvalley_permits.json, yet springvalley.html is fully sized.
-  Determine how it is built before touching it.
+  Determine how it is built before touching it. Permit ingest stays
+  off. HAR refresh does include the market. Its boundary is the Census
+  incorporated-place limit (GEOID 4869830) in
+  springvalley_boundary.geojson, not the whole 77024 ZIP. The leaked
+  Heights OUT_OF_ZONE regex on that page was cleared when the market
+  joined the HAR pass.
 - upperkirby_holdout.json exists with no corresponding HTML. Status unknown.
 - The garden_oaks filled boundaries (`*_boundary_filled.geojson`) overreach
   into commercial frontage: N Shepherd Dr (Garden Oaks) and W 43rd St

@@ -1,0 +1,179 @@
+{
+  "as_of": "2026-11-12",
+  "policy": {
+    "kind": "new_construction_trailing_365",
+    "as_of": "2026-11-12",
+    "start": "2025-11-12",
+    "end": "2026-11-12",
+    "source": "markets_sold_2a4d.csv",
+    "min_lot_sqft": 2200,
+    "coverage": "HAR export assigned by market boundary or coordinate box"
+  },
+  "metrics": {
+    "as_of": "2026-11-12",
+    "basis": "Displayed new-construction comps, trailing 365 days, lot size >= 2,200 sqft, year built >= 2025. riveroaks. Pending listings are excluded from comps.",
+    "overall": {
+      "n": 2,
+      "med_psf": 861.5,
+      "med_price": 6300000.0,
+      "med_dom": 103.0,
+      "avg_svl_pct": -2.55,
+      "absorption_per_month": 0.2
+    },
+    "trailing_365": {
+      "n": 2,
+      "med_psf": 861.5,
+      "med_price": 6300000.0,
+      "med_dom": 103.0,
+      "avg_svl_pct": -2.55,
+      "absorption_per_month": 0.2
+    },
+    "by_window": {
+      "180-365": {
+        "n": 1,
+        "med_psf": 960.9,
+        "med_price": 7000000.0,
+        "med_dom": 149.0,
+        "avg_svl_pct": -3.45
+      },
+      "60-90": {
+        "n": 1,
+        "med_psf": 762.0,
+        "med_price": 5600000.0,
+        "med_dom": 57.0,
+        "avg_svl_pct": -1.65
+      }
+    },
+    "by_band": {
+      "2M+": {
+        "n": 2,
+        "med_psf": 861.5,
+        "med_price": 6300000.0,
+        "med_dom": 103.0,
+        "avg_svl_pct": -2.55,
+        "absorption_per_month": 0.2
+      }
+    },
+    "by_product": {
+      "Single Lot": {
+        "n": 2,
+        "med_psf": 861.5,
+        "med_price": 6300000.0,
+        "med_dom": 103.0,
+        "avg_svl_pct": -2.55,
+        "absorption_per_month": 0.2
+      }
+    },
+    "by_cohort": {
+      "nc": {
+        "n": 2,
+        "med_psf": 861.5,
+        "med_price": 6300000.0,
+        "med_dom": 103.0,
+        "avg_svl_pct": -2.55
+      }
+    },
+    "by_month": {
+      "2025-11": {
+        "n": 1,
+        "med_psf": 960.9,
+        "med_price": 7000000.0,
+        "med_dom": 149.0,
+        "avg_svl_pct": -3.45
+      },
+      "2026-09": {
+        "n": 1,
+        "med_psf": 762.0,
+        "med_price": 5600000.0,
+        "med_dom": 57.0,
+        "avg_svl_pct": -1.65
+      }
+    },
+    "by_window_product": {
+      "180-365|Single Lot": {
+        "n": 1,
+        "med_psf": 960.9,
+        "med_price": 7000000.0,
+        "med_dom": 149.0,
+        "avg_svl_pct": -3.45
+      },
+      "60-90|Single Lot": {
+        "n": 1,
+        "med_psf": 762.0,
+        "med_price": 5600000.0,
+        "med_dom": 57.0,
+        "avg_svl_pct": -1.65
+      }
+    },
+    "cells": {
+      "180-365|2M+|Single Lot|nc": {
+        "n": 1,
+        "med_psf": 960.9,
+        "med_price": 7000000.0,
+        "med_dom": 149.0,
+        "avg_svl_pct": -3.45
+      },
+      "60-90|2M+|Single Lot|nc": {
+        "n": 1,
+        "med_psf": 762.0,
+        "med_price": 5600000.0,
+        "med_dom": 57.0,
+        "avg_svl_pct": -1.65
+      }
+    }
+  },
+  "comps": [
+    {
+      "id": "s1006370",
+      "a": "2321 Claremont Lane",
+      "lat": 29.744408,
+      "lng": -95.429927,
+      "cp": 5600000.0,
+      "sq": 7349.0,
+      "cd": "2026-09-10",
+      "psf": 762.0,
+      "lp": 5694000.0,
+      "lot": 10500.0,
+      "dom": 57.0,
+      "yb": 2026.0,
+      "har_psf": null,
+      "bl": "Winfrey Design Build",
+      "sch": "RIVER OAKS ELEMENTARY SCHOOL (HOUSTON)",
+      "la": "Gregory East",
+      "ba": "Yelena Grinina",
+      "coh": "nc",
+      "svl": -0.0165,
+      "prod": "Single Lot",
+      "ak": "2321 claremont ln",
+      "win": "60-90",
+      "band": "2M+",
+      "mo": "2026-09"
+    },
+    {
+      "id": "s34967678",
+      "a": "2525 Inwood Drive",
+      "lat": 29.751996,
+      "lng": -95.417598,
+      "cp": 7000000.0,
+      "sq": 7285.0,
+      "cd": "2025-11-26",
+      "psf": 960.9,
+      "lp": 7250000.0,
+      "lot": 14550.0,
+      "dom": 149.0,
+      "yb": 2025.0,
+      "har_psf": null,
+      "bl": "Mirador Builders",
+      "sch": "RIVER OAKS ELEMENTARY SCHOOL (HOUSTON)",
+      "la": "Patricia Reed",
+      "ba": "Nadia Rasouli",
+      "coh": "nc",
+      "svl": -0.0345,
+      "prod": "Single Lot",
+      "ak": "2525 inwood dr",
+      "win": "180-365",
+      "band": "2M+",
+      "mo": "2025-11"
+    }
+  ]
+}

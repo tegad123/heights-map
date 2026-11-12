@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-11-12",
+  "scope": "Current HAR active snapshot for springvalley. List Price is the asking price on the export date; Original List Price is retained separately. Year built >= 2025; lot size >= 2200 sqft. Pending rows are not in this list.",
+  "listings": [
+    {
+      "mls": "40117020",
+      "address": "8606 Westview Drive",
+      "address_key": "8606 westview dr",
+      "original_list_price": 3000000.0,
+      "current_list_price": 3000000.0,
+      "dom": 103.0,
+      "lot_sqft": 19000.0,
+      "product": "Single Lot",
+      "builder": "Bravado",
+      "list_agent": "Jason Junkin",
+      "year_built": 2026.0,
+      "lat": 29.794183,
+      "lng": -95.500994,
+      "status": "active",
+      "har_status": "Active",
+      "as_of": "2026-11-12",
+      "source_file": "markets_active_8f33.csv",
+      "source_row": 293,
+      "source_sha256": "e6ec7d1bbc80ab656b298339e43a645cf2bab6d582032177d1d7c32ad46cdc2d"
+    },
+    {
+      "mls": "80504571",
+      "address": "8725 Burkhart Road",
+      "address_key": "8725 burkhart rd",
+      "original_list_price": 2849999.0,
+      "current_list_price": 2849999.0,
+      "dom": 0.0,
+      "lot_sqft": 10800.0,
+      "product": "Single Lot",
+      "builder": "MR Construction & Developments LLC",
+      "list_agent": "Joshua May",
+      "year_built": 2026.0,
+      "lat": 29.789063,
+      "lng": -95.503216,
+      "status": "active",
+      "har_status": "Active",
+      "as_of": "2026-11-12",
+      "source_file": "markets_active_8f33.csv",
+      "source_row": 290,
+      "source_sha256": "e6ec7d1bbc80ab656b298339e43a645cf2bab6d582032177d1d7c32ad46cdc2d"
+    }
+  ]
+}

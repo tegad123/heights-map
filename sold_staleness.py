@@ -20,6 +20,14 @@ DATE = re.compile(r'^20\d\d-\d\d-\d\d$')
 
 def newest_sale(mk, cfg):
     html = open(os.path.join(REPO, cfg['html']), encoding='utf-8').read()
+    sold_path = os.path.join(REPO, mk + '_sold.data.json')
+    if mk != 'heights' and os.path.exists(sold_path):
+        try:
+            obj = json.load(open(sold_path))
+            if DATE.match(str(obj.get('as_of', ''))):
+                return obj['as_of']
+        except (OSError, ValueError):
+            pass
     if mk == 'heights':
         m = re.search(r'SOLD_METRICS\s*=\s*\{', html)
         if m:

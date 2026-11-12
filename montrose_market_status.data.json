@@ -1,0 +1,1719 @@
+{
+  "as_of": "2026-11-12",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "act_4317-roseland-street-b": {
+      "status": "active",
+      "current": {
+        "mls": "27842066",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 749900.0,
+        "original_list_price": 774900.0,
+        "dom": 120.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4317 Roseland Street Unit#B"
+      }
+    },
+    "act_4207-driscoll-street": {
+      "status": "active",
+      "current": {
+        "mls": "35392131",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 854900.0,
+        "original_list_price": 879900.0,
+        "dom": 49.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4207 Driscoll Street"
+      }
+    },
+    "act_2412-elmen-street": {
+      "status": "active",
+      "current": {
+        "mls": "22201908",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1069900.0,
+        "original_list_price": 1069900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2412 ELMEN Street"
+      }
+    },
+    "act_1634-castle-court": {
+      "status": "sold",
+      "current": {
+        "mls": "82786004",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1089900.0,
+        "dom": 40.0,
+        "close_date": "2026-11-12",
+        "close_price": 1089900.0,
+        "as_of": "2026-11-12",
+        "address": "1634 CASTLE Court"
+      }
+    },
+    "act_1817-branard-street": {
+      "status": "active",
+      "current": {
+        "mls": "37959428",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1199900.0,
+        "original_list_price": 1199900.0,
+        "dom": 115.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1817 BRANARD Street"
+      }
+    },
+    "act_1521-nevada-street": {
+      "status": "active",
+      "current": {
+        "mls": "19467712",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1199900.0,
+        "original_list_price": 1199900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1521 NEVADA Street"
+      }
+    },
+    "act_2413-brun-street-a": {
+      "status": "active",
+      "current": {
+        "mls": "73142561",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1289900.0,
+        "original_list_price": 1289900.0,
+        "dom": 115.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2413 BRUN Street Unit#A"
+      }
+    },
+    "act_3909-driscoll-street": {
+      "status": "active",
+      "current": {
+        "mls": "52880194",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1299900.0,
+        "original_list_price": 1299900.0,
+        "dom": 20.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3909 DRISCOLL Street"
+      }
+    },
+    "act_1601-vermont-street": {
+      "status": "sold",
+      "current": {
+        "mls": "59900699",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1299900.0,
+        "dom": 110.0,
+        "close_date": "2026-10-07",
+        "close_price": 1265000.0,
+        "as_of": "2026-11-12",
+        "address": "1601 VERMONT Street"
+      }
+    },
+    "act_1907-sul-ross-street": {
+      "status": "active",
+      "current": {
+        "mls": "5401188",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1399900.0,
+        "original_list_price": 1399900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1907 SUL ROSS Street"
+      }
+    },
+    "act_1822-branard-street-b": {
+      "status": "active",
+      "current": {
+        "mls": "15226844",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1549900.0,
+        "original_list_price": 1549900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1822 BRANARD Street Unit#B"
+      }
+    },
+    "act_805-bomar-street": {
+      "status": "active",
+      "current": {
+        "mls": "47351627",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699900.0,
+        "original_list_price": 1699900.0,
+        "dom": 139.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "805 BOMAR Street"
+      }
+    },
+    "act_508-willard-street": {
+      "status": "sold",
+      "current": {
+        "mls": "85307248",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1849000.0,
+        "dom": 99.0,
+        "close_date": "2026-10-09",
+        "close_price": 1750000.0,
+        "as_of": "2026-11-12",
+        "address": "508 Willard Street"
+      }
+    },
+    "act_1824-marshall-street": {
+      "status": "active",
+      "current": {
+        "mls": "45504753",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1899900.0,
+        "original_list_price": 1899900.0,
+        "dom": 77.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1824 MARSHALL Street"
+      }
+    },
+    "act_1642-norfolk-street": {
+      "status": "sold",
+      "current": {
+        "mls": "71560409",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1969900.0,
+        "dom": 9.0,
+        "close_date": "2026-09-25",
+        "close_price": 1950000.0,
+        "as_of": "2026-11-12",
+        "address": "1642 Norfolk Street"
+      }
+    },
+    "act_1511-kipling-street": {
+      "status": "active",
+      "current": {
+        "mls": "4516785",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1999900.0,
+        "original_list_price": 1999900.0,
+        "dom": 98.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1511 KIPLING Street"
+      }
+    },
+    "act_2415-elmen-street": {
+      "status": "active",
+      "current": {
+        "mls": "10315678",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2050000.0,
+        "original_list_price": 2050000.0,
+        "dom": 28.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2415 Elmen Street"
+      }
+    },
+    "act_1606-hazard-street": {
+      "status": "active",
+      "current": {
+        "mls": "91014583",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2250000.0,
+        "original_list_price": 2350000.0,
+        "dom": 41.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1606 Hazard Street"
+      }
+    },
+    "act_1523-marshall-street": {
+      "status": "active",
+      "current": {
+        "mls": "96604140",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2410000.0,
+        "original_list_price": 4100000.0,
+        "dom": 20.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1523 Marshall Street"
+      }
+    },
+    "pmt_1312-castle-ct-a": {
+      "status": "sold",
+      "current": {
+        "mls": "66397265",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1069900.0,
+        "dom": 62.0,
+        "close_date": "2026-06-24",
+        "close_price": 1069900.0,
+        "as_of": "2026-11-12",
+        "address": "1312 CASTLE Court Unit#A"
+      }
+    },
+    "pmt_1644-bonnie-brae-st": {
+      "status": "sold",
+      "current": {
+        "mls": "62483273",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 990000.0,
+        "dom": 8.0,
+        "close_date": "2026-07-13",
+        "close_price": 980000.0,
+        "as_of": "2026-11-12",
+        "address": "1644 Bonnie Brae Street"
+      }
+    },
+    "pmt_720-peden-st": {
+      "status": "active",
+      "current": {
+        "mls": "95942562",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1200000.0,
+        "original_list_price": 1200000.0,
+        "dom": 50.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "720 Peden Street"
+      }
+    },
+    "pmt_1415-harold-st": {
+      "status": "sold",
+      "current": {
+        "mls": "35873821",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1650000.0,
+        "dom": 0.0,
+        "close_date": "2026-06-15",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "1415 Harold Street"
+      }
+    },
+    "pmt_1636-castle-ct": {
+      "status": "active",
+      "current": {
+        "mls": "92987764",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1069900.0,
+        "original_list_price": 1069900.0,
+        "dom": 21.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1636 CASTLE Court"
+      }
+    },
+    "pmt_1312-vassar-st": {
+      "status": "active",
+      "current": {
+        "mls": "37707766",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2599000.0,
+        "original_list_price": 2599000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1312 Vassar Street"
+      }
+    },
+    "pmt_1501-bonnie-brae-st": {
+      "status": "sold",
+      "current": {
+        "mls": "62512817",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1725000.0,
+        "dom": 17.0,
+        "close_date": "2026-07-31",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "1501 Bonnie Brae Street"
+      }
+    },
+    "pmt_1603-vermont-st": {
+      "status": "sold",
+      "current": {
+        "mls": "67698578",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1299900.0,
+        "dom": 0.0,
+        "close_date": "2026-08-11",
+        "close_price": 1334350.0,
+        "as_of": "2026-11-12",
+        "address": "1603 VERMONT Street"
+      }
+    },
+    "pmt_1811-sul-ross-st": {
+      "status": "active",
+      "current": {
+        "mls": "30299394",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1300000.0,
+        "original_list_price": 1300000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1811 Sul Ross Street"
+      }
+    },
+    "pmt_4203-driscoll-st": {
+      "status": "sold",
+      "current": {
+        "mls": "39809891",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 929900.0,
+        "dom": 34.0,
+        "close_date": "2026-08-26",
+        "close_price": 951273.0,
+        "as_of": "2026-11-12",
+        "address": "4203 Driscoll Street"
+      }
+    },
+    "pmt_1820-branard-st": {
+      "status": "active",
+      "current": {
+        "mls": "81369100",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1169900.0,
+        "original_list_price": 1169900.0,
+        "dom": 51.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1820 BRANARD Street"
+      }
+    },
+    "pmt_1306-crocker-st": {
+      "status": "sold",
+      "current": {
+        "mls": "45815762",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1489900.0,
+        "dom": 144.0,
+        "close_date": "2026-05-27",
+        "close_price": 1479900.0,
+        "as_of": "2026-11-12",
+        "address": "1306 CROCKER Street"
+      }
+    },
+    "pmt_1606-woodhead-st": {
+      "status": "sold",
+      "current": {
+        "mls": "45304099",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2150000.0,
+        "dom": 31.0,
+        "close_date": "2026-07-24",
+        "close_price": 2150000.0,
+        "as_of": "2026-11-12",
+        "address": "1606 Woodhead Street"
+      }
+    },
+    "pmt_1906-driscoll-st": {
+      "status": "sold",
+      "current": {
+        "mls": "34832338",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2195000.0,
+        "dom": 4.0,
+        "close_date": "2026-07-31",
+        "close_price": 2075000.0,
+        "as_of": "2026-11-12",
+        "address": "1906 Driscoll Street"
+      }
+    },
+    "pmt_2202-huldy-st": {
+      "status": "active",
+      "current": {
+        "mls": "51081316",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1129000.0,
+        "original_list_price": 1129000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2202 Huldy Street"
+      }
+    },
+    "pmt_2204-huldy-st": {
+      "status": "active",
+      "current": {
+        "mls": "72990346",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1129000.0,
+        "original_list_price": 1129000.0,
+        "dom": 20.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2204 Huldy Street"
+      }
+    },
+    "act_1810-hazard-a": {
+      "status": "sold",
+      "current": {
+        "mls": "62018227",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 875000.0,
+        "dom": 81.0,
+        "close_date": "2026-07-24",
+        "close_price": 825000.0,
+        "as_of": "2026-11-12",
+        "address": "1810 Hazard Street Unit#A"
+      }
+    },
+    "act_409-w-saulnier": {
+      "status": "sold",
+      "current": {
+        "mls": "22231415",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1247000.0,
+        "dom": 178.0,
+        "close_date": "2026-09-04",
+        "close_price": 1240000.0,
+        "as_of": "2026-11-12",
+        "address": "409 W Saulnier Street"
+      }
+    },
+    "acq_1120-welch-st": {
+      "status": "active",
+      "current": {
+        "mls": "37170106",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699900.0,
+        "original_list_price": 1699900.0,
+        "dom": 92.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1120 WELCH Street"
+      }
+    },
+    "acq_2415-elmen-st": {
+      "status": "active",
+      "current": {
+        "mls": "10315678",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2050000.0,
+        "original_list_price": 2050000.0,
+        "dom": 28.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2415 Elmen Street"
+      }
+    },
+    "acq_1907-sul-ross-st": {
+      "status": "active",
+      "current": {
+        "mls": "5401188",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1399900.0,
+        "original_list_price": 1399900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1907 SUL ROSS Street"
+      }
+    },
+    "pmt_1638-castle-ct-77006": {
+      "status": "active",
+      "current": {
+        "mls": "10031519",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1139900.0,
+        "original_list_price": 1139900.0,
+        "dom": 57.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1638 CASTLE Court"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "act_4317-roseland-street-b",
+      "pin": "act_4317-roseland-street-b",
+      "address": "4317 Roseland Street #B, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "27842066",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 749900.0,
+        "original_list_price": 774900.0,
+        "dom": 120.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4317 Roseland Street Unit#B"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_4207-driscoll-street",
+      "pin": "act_4207-driscoll-street",
+      "address": "4207 Driscoll Street, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "35392131",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 854900.0,
+        "original_list_price": 879900.0,
+        "dom": 49.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "4207 Driscoll Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2412-elmen-street",
+      "pin": "act_2412-elmen-street",
+      "address": "2412 ELMEN Street, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "22201908",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1069900.0,
+        "original_list_price": 1069900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2412 ELMEN Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1634-castle-court",
+      "pin": "act_1634-castle-court",
+      "address": "1634 CASTLE Court, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "82786004",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1089900.0,
+        "dom": 40.0,
+        "close_date": "2026-11-12",
+        "close_price": 1089900.0,
+        "as_of": "2026-11-12",
+        "address": "1634 CASTLE Court"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s82786004",
+          "cd": "2026-11-12",
+          "cp": 1089900.0,
+          "a": "1634 CASTLE Court"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1817-branard-street",
+      "pin": "act_1817-branard-street",
+      "address": "1817 BRANARD Street, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "37959428",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1199900.0,
+        "original_list_price": 1199900.0,
+        "dom": 115.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1817 BRANARD Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1521-nevada-street",
+      "pin": "act_1521-nevada-street",
+      "address": "1521 NEVADA Street, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "19467712",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1199900.0,
+        "original_list_price": 1199900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1521 NEVADA Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2413-brun-street-a",
+      "pin": "act_2413-brun-street-a",
+      "address": "2413 BRUN Street #A, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "73142561",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1289900.0,
+        "original_list_price": 1289900.0,
+        "dom": 115.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2413 BRUN Street Unit#A"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_3909-driscoll-street",
+      "pin": "act_3909-driscoll-street",
+      "address": "3909 DRISCOLL Street, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "52880194",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1299900.0,
+        "original_list_price": 1299900.0,
+        "dom": 20.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "3909 DRISCOLL Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1601-vermont-street",
+      "pin": "act_1601-vermont-street",
+      "address": "1601 VERMONT Street, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "59900699",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1299900.0,
+        "dom": 110.0,
+        "close_date": "2026-10-07",
+        "close_price": 1265000.0,
+        "as_of": "2026-11-12",
+        "address": "1601 VERMONT Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s59900699",
+          "cd": "2026-10-07",
+          "cp": 1265000.0,
+          "a": "1601 VERMONT Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1907-sul-ross-street",
+      "pin": "act_1907-sul-ross-street",
+      "address": "1907 SUL ROSS Street, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "5401188",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1399900.0,
+        "original_list_price": 1399900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1907 SUL ROSS Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1822-branard-street-b",
+      "pin": "act_1822-branard-street-b",
+      "address": "1822 BRANARD Street #B, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "15226844",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1549900.0,
+        "original_list_price": 1549900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1822 BRANARD Street Unit#B"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_805-bomar-street",
+      "pin": "act_805-bomar-street",
+      "address": "805 BOMAR Street, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "47351627",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699900.0,
+        "original_list_price": 1699900.0,
+        "dom": 139.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "805 BOMAR Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_508-willard-street",
+      "pin": "act_508-willard-street",
+      "address": "508 Willard Street, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "85307248",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1849000.0,
+        "dom": 99.0,
+        "close_date": "2026-10-09",
+        "close_price": 1750000.0,
+        "as_of": "2026-11-12",
+        "address": "508 Willard Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s85307248",
+          "cd": "2026-10-09",
+          "cp": 1750000.0,
+          "a": "508 Willard Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1824-marshall-street",
+      "pin": "act_1824-marshall-street",
+      "address": "1824 MARSHALL Street, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "45504753",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1899900.0,
+        "original_list_price": 1899900.0,
+        "dom": 77.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1824 MARSHALL Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1642-norfolk-street",
+      "pin": "act_1642-norfolk-street",
+      "address": "1642 Norfolk Street, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "71560409",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1969900.0,
+        "dom": 9.0,
+        "close_date": "2026-09-25",
+        "close_price": 1950000.0,
+        "as_of": "2026-11-12",
+        "address": "1642 Norfolk Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s71560409",
+          "cd": "2026-09-25",
+          "cp": 1950000.0,
+          "a": "1642 Norfolk Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1511-kipling-street",
+      "pin": "act_1511-kipling-street",
+      "address": "1511 KIPLING Street, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "4516785",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1999900.0,
+        "original_list_price": 1999900.0,
+        "dom": 98.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1511 KIPLING Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_2415-elmen-street",
+      "pin": "act_2415-elmen-street",
+      "address": "2415 Elmen Street, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "10315678",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2050000.0,
+        "original_list_price": 2050000.0,
+        "dom": 28.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2415 Elmen Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1606-hazard-street",
+      "pin": "act_1606-hazard-street",
+      "address": "1606 Hazard Street, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "91014583",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2250000.0,
+        "original_list_price": 2350000.0,
+        "dom": 41.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1606 Hazard Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1523-marshall-street",
+      "pin": "act_1523-marshall-street",
+      "address": "1523 Marshall Street, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "96604140",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2410000.0,
+        "original_list_price": 4100000.0,
+        "dom": 20.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1523 Marshall Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1312-castle-ct-a",
+      "pin": "pmt_1312-castle-ct-a",
+      "address": "1312 CASTLE CT A, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "66397265",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1069900.0,
+        "dom": 62.0,
+        "close_date": "2026-06-24",
+        "close_price": 1069900.0,
+        "as_of": "2026-11-12",
+        "address": "1312 CASTLE Court Unit#A"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s66397265",
+          "cd": "2026-06-24",
+          "cp": 1069900.0,
+          "a": "1312 CASTLE Court Unit#A"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1644-bonnie-brae-st",
+      "pin": "pmt_1644-bonnie-brae-st",
+      "address": "1644 BONNIE BRAE ST, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "62483273",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 990000.0,
+        "dom": 8.0,
+        "close_date": "2026-07-13",
+        "close_price": 980000.0,
+        "as_of": "2026-11-12",
+        "address": "1644 Bonnie Brae Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s62483273",
+          "cd": "2026-07-13",
+          "cp": 980000.0,
+          "a": "1644 Bonnie Brae Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_720-peden-st",
+      "pin": "pmt_720-peden-st",
+      "address": "720 PEDEN ST, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "95942562",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1200000.0,
+        "original_list_price": 1200000.0,
+        "dom": 50.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "720 Peden Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1415-harold-st",
+      "pin": "pmt_1415-harold-st",
+      "address": "1415 HAROLD ST, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "35873821",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1650000.0,
+        "dom": 0.0,
+        "close_date": "2026-06-15",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "1415 Harold Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s35873821",
+          "cd": "2026-06-15",
+          "cp": 1650000.0,
+          "a": "1415 Harold Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1636-castle-ct",
+      "pin": "pmt_1636-castle-ct",
+      "address": "1636 CASTLE CT, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "92987764",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1069900.0,
+        "original_list_price": 1069900.0,
+        "dom": 21.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1636 CASTLE Court"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1312-vassar-st",
+      "pin": "pmt_1312-vassar-st",
+      "address": "1312 VASSAR ST, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "37707766",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2599000.0,
+        "original_list_price": 2599000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1312 Vassar Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1501-bonnie-brae-st",
+      "pin": "pmt_1501-bonnie-brae-st",
+      "address": "1501 BONNIE BRAE ST, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "62512817",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1725000.0,
+        "dom": 17.0,
+        "close_date": "2026-07-31",
+        "close_price": 1650000.0,
+        "as_of": "2026-11-12",
+        "address": "1501 Bonnie Brae Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s62512817",
+          "cd": "2026-07-31",
+          "cp": 1650000.0,
+          "a": "1501 Bonnie Brae Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1603-vermont-st",
+      "pin": "pmt_1603-vermont-st",
+      "address": "1603 VERMONT ST, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "67698578",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1299900.0,
+        "dom": 0.0,
+        "close_date": "2026-08-11",
+        "close_price": 1334350.0,
+        "as_of": "2026-11-12",
+        "address": "1603 VERMONT Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s67698578",
+          "cd": "2026-08-11",
+          "cp": 1334350.0,
+          "a": "1603 VERMONT Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1811-sul-ross-st",
+      "pin": "pmt_1811-sul-ross-st",
+      "address": "1811 SUL ROSS ST, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "30299394",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1300000.0,
+        "original_list_price": 1300000.0,
+        "dom": 7.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1811 Sul Ross Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_4203-driscoll-st",
+      "pin": "pmt_4203-driscoll-st",
+      "address": "4203 DRISCOLL ST, Houston, TX 77098",
+      "status": "sold",
+      "current": {
+        "mls": "39809891",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 929900.0,
+        "dom": 34.0,
+        "close_date": "2026-08-26",
+        "close_price": 951273.0,
+        "as_of": "2026-11-12",
+        "address": "4203 Driscoll Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s39809891",
+          "cd": "2026-08-26",
+          "cp": 951273.0,
+          "a": "4203 Driscoll Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1820-branard-st",
+      "pin": "pmt_1820-branard-st",
+      "address": "1820 BRANARD ST, Houston, TX 77098",
+      "status": "active",
+      "current": {
+        "mls": "81369100",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1169900.0,
+        "original_list_price": 1169900.0,
+        "dom": 51.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1820 BRANARD Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1306-crocker-st",
+      "pin": "pmt_1306-crocker-st",
+      "address": "1306 CROCKER ST, Houston, TX 77019",
+      "status": "sold",
+      "current": {
+        "mls": "45815762",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 1489900.0,
+        "dom": 144.0,
+        "close_date": "2026-05-27",
+        "close_price": 1479900.0,
+        "as_of": "2026-11-12",
+        "address": "1306 CROCKER Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s45815762",
+          "cd": "2026-05-27",
+          "cp": 1479900.0,
+          "a": "1306 CROCKER Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1606-woodhead-st",
+      "pin": "pmt_1606-woodhead-st",
+      "address": "1606 WOODHEAD ST, Houston, TX 77019",
+      "status": "sold",
+      "current": {
+        "mls": "45304099",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2150000.0,
+        "dom": 31.0,
+        "close_date": "2026-07-24",
+        "close_price": 2150000.0,
+        "as_of": "2026-11-12",
+        "address": "1606 Woodhead Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s45304099",
+          "cd": "2026-07-24",
+          "cp": 2150000.0,
+          "a": "1606 Woodhead Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1906-driscoll-st",
+      "pin": "pmt_1906-driscoll-st",
+      "address": "1906 DRISCOLL ST, Houston, TX 77019",
+      "status": "sold",
+      "current": {
+        "mls": "34832338",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2195000.0,
+        "dom": 4.0,
+        "close_date": "2026-07-31",
+        "close_price": 2075000.0,
+        "as_of": "2026-11-12",
+        "address": "1906 Driscoll Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s34832338",
+          "cd": "2026-07-31",
+          "cp": 2075000.0,
+          "a": "1906 Driscoll Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2202-huldy-st",
+      "pin": "pmt_2202-huldy-st",
+      "address": "2202 HULDY ST, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "51081316",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1129000.0,
+        "original_list_price": 1129000.0,
+        "dom": 6.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2202 Huldy Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_2204-huldy-st",
+      "pin": "pmt_2204-huldy-st",
+      "address": "2204 HULDY ST, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "72990346",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1129000.0,
+        "original_list_price": 1129000.0,
+        "dom": 20.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2204 Huldy Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_1810-hazard-a",
+      "pin": "act_1810-hazard-a",
+      "address": "1810 Hazard Street Unit#A, Houston, TX 77019",
+      "status": "sold",
+      "current": {
+        "mls": "62018227",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 875000.0,
+        "dom": 81.0,
+        "close_date": "2026-07-24",
+        "close_price": 825000.0,
+        "as_of": "2026-11-12",
+        "address": "1810 Hazard Street Unit#A"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s62018227",
+          "cd": "2026-07-24",
+          "cp": 825000.0,
+          "a": "1810 Hazard Street Unit#A"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_409-w-saulnier",
+      "pin": "act_409-w-saulnier",
+      "address": "409 W Saulnier Street, Houston, TX 77019",
+      "status": "sold",
+      "current": {
+        "mls": "22231415",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 1247000.0,
+        "dom": 178.0,
+        "close_date": "2026-09-04",
+        "close_price": 1240000.0,
+        "as_of": "2026-11-12",
+        "address": "409 W Saulnier Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s22231415",
+          "cd": "2026-09-04",
+          "cp": 1240000.0,
+          "a": "409 W Saulnier Street"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1120-welch-st",
+      "pin": "acq_1120-welch-st",
+      "address": "1120 Welch St",
+      "status": "active",
+      "current": {
+        "mls": "37170106",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 1699900.0,
+        "original_list_price": 1699900.0,
+        "dom": 92.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1120 WELCH Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_2415-elmen-st",
+      "pin": "acq_2415-elmen-st",
+      "address": "2415 Elmen St",
+      "status": "active",
+      "current": {
+        "mls": "10315678",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2050000.0,
+        "original_list_price": 2050000.0,
+        "dom": 28.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "2415 Elmen Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "acq_1907-sul-ross-st",
+      "pin": "acq_1907-sul-ross-st",
+      "address": "1907 Sul Ross St",
+      "status": "active",
+      "current": {
+        "mls": "5401188",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1399900.0,
+        "original_list_price": 1399900.0,
+        "dom": 37.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1907 SUL ROSS Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1638-castle-ct-77006",
+      "pin": "pmt_1638-castle-ct-77006",
+      "address": "1638 Castle Ct, Houston, TX 77006",
+      "status": "active",
+      "current": {
+        "mls": "10031519",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1139900.0,
+        "original_list_price": 1139900.0,
+        "dom": 57.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-12",
+        "address": "1638 CASTLE Court"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 30,
+    "pending": 0,
+    "sold": 45,
+    "terminated": 0,
+    "linked": 41
+  }
+}

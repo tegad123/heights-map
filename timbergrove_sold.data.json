@@ -1,0 +1,32 @@
+{
+  "as_of": "2026-11-12",
+  "policy": {
+    "kind": "new_construction_trailing_365",
+    "as_of": "2026-11-12",
+    "start": "2025-11-12",
+    "end": "2026-11-12",
+    "source": "markets_sold_2a4d.csv",
+    "min_lot_sqft": 2200,
+    "coverage": "HAR export assigned by market boundary or coordinate box"
+  },
+  "metrics": {
+    "as_of": "2026-11-12",
+    "basis": "Displayed new-construction comps, trailing 365 days, lot size >= 2,200 sqft, year built >= 2025. timbergrove. Pending listings are excluded from comps.",
+    "overall": {
+      "n": 0,
+      "absorption_per_month": 0.0
+    },
+    "trailing_365": {
+      "n": 0,
+      "absorption_per_month": 0.0
+    },
+    "by_window": {},
+    "by_band": {},
+    "by_product": {},
+    "by_cohort": {},
+    "by_month": {},
+    "by_window_product": {},
+    "cells": {}
+  },
+  "comps": []
+}
