@@ -1814,6 +1814,46 @@
      "year_built": null
     }
    ]
+  },
+  {
+   "pulled_date": "2026-11-13",
+   "window_start": "2026-09-30",
+   "window_end": "2026-10-15",
+   "source_file": "deed_slim.csv",
+   "source": "DealMachine export",
+   "property_count": 2,
+   "properties": [
+    {
+     "id": "2131538003",
+     "a": "1102 Bay Oaks Rd, Houston, Tx 77008",
+     "llc": "Federal Home Loan Mortgage Corporation",
+     "v": "$507,242",
+     "lot": "7150",
+     "lat": 29.790467,
+     "lng": -95.414095,
+     "f": "Recently Sold, Off Market, Bank Owned, Cash Buyer, Free And Clear, High Equity, Out Of State Owner, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131538003",
+     "c": null,
+     "sale_date": "2026-10-15",
+     "apn": "077-181-010-0021",
+     "year_built": 1950
+    },
+    {
+     "id": "2131538929",
+     "a": "1018 Worthshire St, Houston, Tx 77008",
+     "llc": "Casablanca Property Management Llc",
+     "v": "$462,465",
+     "lot": "9730",
+     "lat": 29.789929,
+     "lng": -95.415051,
+     "f": "Recently Sold, High Equity, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131538929",
+     "c": null,
+     "sale_date": "2026-09-30",
+     "apn": "077-182-018-0020",
+     "year_built": 1952
+    }
+   ]
   }
  ]
 }

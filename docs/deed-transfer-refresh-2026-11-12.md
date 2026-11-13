@@ -12,9 +12,7 @@ The export's `sale_price` column is not written onto the pin (see open items).
 SHA-256 of the file used here:
 `b21b510fef955c6ad1f5852f030609933ace0cbb4f4ceb31715b2b1750e46dd4`.
 
-`sold_ingest.py` was not modified. Routing is unchanged: configured polygons,
-the Heights street regex, and Heights `lng <= -95.370`. West U stays on its
-zip-plus-box rule. Ambiguous markets are excluded, not guessed.
+`sold_ingest.py` was not modified. Routing is the configured polygons, the Heights street regex, and Heights `lng <= -95.370`. West U stays on its zip-plus-box rule. When a point is inside more than one market, `deed_market_overrides.json` names the one map that gets the pin. An override is used only if that market's boundary actually contains the point.
 
 ## Overlap rule
 
@@ -35,7 +33,8 @@ Pins within 0.70 m are treated as the same map point (stacked units, or two
 geocodes on top of each other). Every market page, including Spring Valley,
 spreads that cluster so the drawn markers are 16 m apart. `tests/test_pin_overlap.py`
 fails if any market still has a duplicate address, two pins with the same
-DealMachine id and the same address, or two display positions within 0.70 m.
+DealMachine id and the same address, two display positions within 0.70 m, or
+the same property on two market maps.
 `.github/workflows/tests.yml` runs that test on push and pull request.
 
 ## Counts
@@ -47,26 +46,32 @@ TOTAL read=160 accepted=119 added=110 updated=9 unchanged=0 excluded=41
 EXCLUSIONS {"AMBIGUOUS_MARKET": 4, "AMBIGUOUS_MATCH": 1, "OOZ_EAST": 5, "OUT_OF_MARKET": 31}
 ```
 
-The one `AMBIGUOUS_MATCH` was 1300 Waverly St. After the merge step the same
-file applies as:
+The one `AMBIGUOUS_MATCH` was 1300 Waverly St. Merging that pair, then applying
+the four market decisions in `deed_market_overrides.json`, produces:
 
 ```text
-TOTAL read=160 accepted=120 added=110 updated=10 unchanged=0 excluded=40
-MARKET gardenoaksoakforest: added=17 updated=2
-MARKET heights: added=38 updated=5
+TOTAL read=160 accepted=124 added=113 updated=11 unchanged=0 excluded=36
+MARKET gardenoaksoakforest: added=18 updated=3
+MARKET heights: added=40 updated=5
 MARKET montrose: added=8 updated=2
 MARKET riveroaks: added=2 updated=0
 MARKET springbranch: added=34 updated=1
 MARKET timbergrove: added=3 updated=0
 MARKET westu: added=8 updated=0
-EXCLUSIONS {"AMBIGUOUS_MARKET": 4, "OOZ_EAST": 5, "OUT_OF_MARKET": 31}
-MERGES 49
+EXCLUSIONS {"OOZ_EAST": 5, "OUT_OF_MARKET": 31}
 ```
 
-A second run of the same file reported `added=0 updated=0 unchanged=120`,
-`MERGES 0`, and wrote no files. The dropped ledger
-`pulls/dropped_2026-11-13.csv` is gitignored. The first apply appended 40
-rows; the second append added none.
+Those added/updated numbers are the whole refresh (the first apply plus the
+override apply). 315 W 32nd St updated the existing Garden Oaks listing
+`act_315-w-32nd-street` instead of adding a second pin. Its list price and
+list date stay; the deed is a note. 702 W 32nd St, 1102 Bay Oaks Rd, and
+1018 Worthshire St are new deed pins.
+
+A rerun of the same file after that reported `added=0 updated=0 unchanged=124`,
+`KEPT ON ONE MAP 0`, and wrote no files. The dropped ledger
+`pulls/dropped_2026-11-13.csv` is gitignored. It still has the four
+`AMBIGUOUS_MARKET` rows from the first apply; the override run did not append
+them again.
 
 The six permit-overlap rows are single pins. Three already had a city permit
 array; three were acquisition pins (`kind: "permit"`). Each now also has the
@@ -162,19 +167,48 @@ argument; the reason says which destination was refused.
 | --- | --- |
 | OUT_OF_MARKET | 31 |
 | OOZ_EAST | 5 |
-| AMBIGUOUS_MARKET | 4 |
 
 OOZ_EAST (Heights longitude east of -95.370, no other market): 1103 Harrington
 St, 4106 Siegel St, 4119 Beggs St, 411 Marie St, 305 Frawley St.
 
-AMBIGUOUS_MARKET, left off the map on purpose:
+The four rows that were `AMBIGUOUS_MARKET` are on the map now, via
+`deed_market_overrides.json`:
 
-| Address | Zip | Coordinate | Markets | Sale | DealMachine id |
-| --- | --- | --- | --- | --- | --- |
-| 315 W 32nd St | 77018 | 29.815854, -95.402646 | heights, gardenoaksoakforest | 2026-09-14 | 2131395799 |
-| 702 W 32nd St | 77018 | 29.816624, -95.411972 | heights, gardenoaksoakforest | 2026-10-27 | 2131442049 |
-| 1102 Bay Oaks Rd | 77008 | 29.790467, -95.414095 | heights, timbergrove | 2026-10-15 | 2131538003 |
-| 1018 Worthshire St | 77008 | 29.789929, -95.415051 | heights, timbergrove | 2026-09-30 | 2131538929 |
+| Address | Market | Pin | Sale |
+| --- | --- | --- | --- |
+| 315 W 32nd St | gardenoaksoakforest | `act_315-w-32nd-street` (existing listing, deed note added) | 2026-09-14 |
+| 702 W 32nd St | gardenoaksoakforest | `2131442049` | 2026-10-27 |
+| 1102 Bay Oaks Rd | heights | `2131538003` | 2026-10-15 |
+| 1018 Worthshire St | heights | `2131538929` | 2026-09-30 |
+
+## One property, one map
+
+These seven DealMachine ids were on both Heights and Timbergrove. The
+Timbergrove copies (`tg_mig_<id>`) were removed after any field the Heights
+pin lacked was copied over. 1219 Bay Oaks Rd gained `prod: Single Lot` and
+`ty: active_single` from the Timbergrove copy. The migration sentence on the
+Timbergrove seed was not copied. The same override file sends any future deed
+at these addresses to Heights:
+
+1219 Bay Oaks Rd (`2131537524`), 922 Prince St (`2131538328`), 1023 Nashua St
+(`2131538429`), 911 Bay Oaks Rd (`2131538680`), 905 Bay Oaks Rd
+(`2131538718`), 1510 Glen Oaks St (`2131538725`), 1522 Glen Oaks St
+(`2131538738`).
+
+The overlap test also found three more `tg_mig_` copies of Heights permit
+pins, in both polygons. They stay on Heights for the same reason (Worthshire
+and Nashua were assigned to Heights; Turnpike is the same migration): 1118
+Worthshire St, 822 Nashua St, and 1602 Turnpike Rd. 1602 Turnpike Rd's
+Timbergrove copy had `prod: Single Lot`, which the Heights pin did not, so
+that label was copied first.
+
+Twelve acquisition pins were on both Montrose and River Oaks, and the
+coordinate is inside River Oaks and outside Montrose. The Montrose copies
+were removed. Nothing on the River Oaks pin differed. The override file lists
+them as `riveroaks`, so a later ingest will not put them back on Montrose:
+1907 Bellmeade St, 2204 Inwood Dr, 2411 Stanmore Dr, 2440 Inwood Dr, 2509
+Dickey Pl, 2525 Inwood Dr, 3020 Ella Lee Ln, 3112 Locke Ln, 3665 Knollwood
+St, 3747 Chevy Chase Dr, 3831 Del Monte Dr, 3910 Willowick Rd.
 
 OUT_OF_MARKET (outside every tracked polygon): 1202 Birdsall St, 1204
 Birdsall St, 502 Jackson Hill St, 504 Jackson Hill St, 1004 Candlelight Ln,
@@ -187,14 +221,6 @@ Winningham Ln, 6 Tam Ct, 4119 Portsmouth Ave, 4702 Banning Dr, 4028 Essex Ln,
 
 ## Open items
 
-- Four ambiguous-market rows above need a person to pick the map. The same
-  boundary already puts these existing DealMachine ids on both Heights and
-  Timbergrove, so a new row for Bay Oaks or Worthshire was not guessed:
-  `2131537524` 1219 Bay Oaks Rd, `2131538328` 922 Prince St, `2131538429`
-  1023 Nashua St, `2131538680` 911 Bay Oaks Rd, `2131538718` 905 Bay Oaks Rd,
-  `2131538725` 1510 Glen Oaks St, `2131538738` 1522 Glen Oaks St. Each
-  Timbergrove copy is `tg_mig_<id>`. They are one pin per map, not two pins
-  on one map, and were not deleted.
 - 1300 Waverly St is one pin now, with both tract facts in the note. The
   product hold on retired id `2131146860` is still in
   `product_classification_holds.json` and no longer matches a pin.
@@ -210,4 +236,5 @@ Winningham Ln, 6 Tam Ct, 4119 Portsmouth Ave, 4702 Banning Dr, 4028 Essex Ln,
   every townhouse row would move whole blocks. Same-point stacks are the
   ones the page separates.
 - Checked by parsing every market DATA and SEED block after the apply, and
-  by `tests/test_pin_overlap.py`. The password-gated live site was not opened.
+  by `tests/test_pin_overlap.py` (including the cross-market check). The
+  password-gated live site was not opened.

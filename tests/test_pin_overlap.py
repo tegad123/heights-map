@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 import pin_overlap
-from deed_ingest import span
+from deed_ingest import choose_market, normalize, span
 from market_config import MARKETS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -111,6 +111,64 @@ const DEED_PULL={};
         self.assertEqual(positions['c'], (29.80002, -95.40))
 
 
+class OverrideTest(unittest.TestCase):
+    def test_override_wins_only_when_that_market_is_eligible(self):
+        overrides = {'315 W 32ND ST': 'gardenoaksoakforest', '1102 BAY OAKS RD': 'heights'}
+        self.assertEqual(choose_market(['heights', 'gardenoaksoakforest'], '315 W 32nd St', overrides)[0],
+                         'gardenoaksoakforest')
+        self.assertEqual(choose_market(['heights', 'timbergrove'], '1102 Bay Oaks Rd', overrides)[0], 'heights')
+        market, reason, _ = choose_market(['timbergrove'], '1102 Bay Oaks Rd', overrides)
+        self.assertIsNone(market)
+        self.assertEqual(reason, 'OVERRIDE_MARKET')
+        market, reason, _ = choose_market(['heights', 'timbergrove'], '1219 Bay Oaks Rd', {})
+        self.assertIsNone(market)
+        self.assertEqual(reason, 'AMBIGUOUS_MARKET')
+
+    def test_override_removes_the_other_maps_copy_and_keeps_unique_fields(self):
+        text_h = """let DATA = [{"id": "2131537524", "a": "1219 Bay Oaks Rd", "llc": "Heffley Capital Llc", "lat": 29.79, "lng": -95.41}];
+const SEED_POINTS={};
+const LIFE={"2131537524": {"s": "deed", "note": "Lifecycle: Deed transfer 2026-02-27 · Heffley Capital Llc"}};
+const DEED_PULL={};
+"""
+        text_t = """let DATA = [{"id": "tg_mig_2131537524", "a": "1219 Bay Oaks Rd", "llc": "Heffley Capital Llc", "prod": "Single Lot", "ty": "active_single", "lat": 29.79, "lng": -95.41}];
+const SEED_POINTS={"tg_mig_2131537524": {"notes": "Migrated from Heights page (Timbergrove-side).", "tags": ["listed", "active_single"]}};
+const LIFE={};
+const DEED_PULL={};
+"""
+        markets = {
+            'heights': dict(text=text_h, data=span(text_h, 'DATA')[2]),
+            'timbergrove': dict(text=text_t, data=span(text_t, 'DATA')[2]),
+        }
+        moves = pin_overlap.enforce_market_overrides(markets, {'1219 BAY OAKS RD': 'heights'})
+        self.assertEqual(moves[0]['canonical'], '2131537524')
+        self.assertEqual(moves[0]['retired'], 'tg_mig_2131537524')
+        self.assertEqual(markets['timbergrove']['data'], [])
+        kept = markets['heights']['data'][0]
+        self.assertEqual(kept['prod'], 'Single Lot')
+        self.assertEqual(kept['ty'], 'active_single')
+        self.assertIn('tg_mig_2131537524', kept['listing_alias_ids'])
+        notes = span(markets['heights']['text'], 'SEED_POINTS')[2]['2131537524']['notes']
+        self.assertNotIn('Migrated from Heights page', notes)
+        self.assertEqual(pin_overlap.enforce_market_overrides(markets, {'1219 BAY OAKS RD': 'heights'}), [])
+        self.assertEqual(pin_overlap.cross_market_duplicates([
+            ('heights', markets['heights']['data']),
+            ('timbergrove', markets['timbergrove']['data']),
+        ]), [])
+
+    def test_same_property_on_two_maps_fails(self):
+        pages = [
+            ('heights', [{'id': '2131537524', 'a': '1219 Bay Oaks Rd', 'u': 'https://app.dealmachine.com/leads#property(id)=2131537524'}]),
+            ('timbergrove', [{'id': 'tg_mig_2131537524', 'a': '1219 Bay Oaks Road'}]),
+        ]
+        dupes = pin_overlap.cross_market_duplicates(pages)
+        self.assertTrue(any(kind == 'property' and key == '2131537524' for kind, key, _ in dupes))
+        units = [
+            ('heights', [{'id': '1', 'a': '711 E 25th St A', 'u': 'https://app.dealmachine.com/leads#property(id)=9'}]),
+            ('timbergrove', [{'id': '2', 'a': '711 E 25th St B', 'u': 'https://app.dealmachine.com/leads#property(id)=9'}]),
+        ]
+        self.assertEqual(pin_overlap.cross_market_duplicates(units), [])
+
+
 class MapAuditTest(unittest.TestCase):
     def test_every_market_page_spreads_same_point_pins(self):
         pages = [cfg['html'] for cfg in MARKETS.values()] + ['springvalley.html']
@@ -128,6 +186,26 @@ class MapAuditTest(unittest.TestCase):
             self.assertEqual(report['addresses'], [], name)
             self.assertEqual(report['property_ids'], [], name)
             self.assertEqual(report['stacked'], [], name)
+        pages = [(name, span((ROOT / html).read_text(), 'DATA')[2]) for name, html in pages]
+        self.assertEqual(pin_overlap.cross_market_duplicates(pages), [])
+
+    def test_override_file_places_each_address_on_one_market(self):
+        overrides = json.loads((ROOT / 'deed_market_overrides.json').read_text())
+        from market_config import MARKETS as configured
+        required = {
+            '315 W 32ND ST', '702 W 32ND ST',
+            '905 BAY OAKS RD', '911 BAY OAKS RD', '922 PRINCE ST', '1018 WORTHSHIRE ST',
+            '1023 NASHUA ST', '1102 BAY OAKS RD', '1219 BAY OAKS RD',
+            '1510 GLEN OAKS ST', '1522 GLEN OAKS ST',
+        }
+        self.assertTrue(required <= set(overrides), sorted(required - set(overrides)))
+        located = {name: span((ROOT / cfg['html']).read_text(), 'DATA')[2] for name, cfg in configured.items()}
+        for address, market in overrides.items():
+            self.assertEqual(normalize(address), address)
+            self.assertIn(market, configured)
+            found = [name for name, records in located.items()
+                     if any(normalize(row.get('a')) == address for row in records)]
+            self.assertEqual(found, [market], address)
 
     def test_deed_metadata_does_not_repeat_an_event(self):
         for path in sorted(ROOT.glob('*_deed.data.json')):

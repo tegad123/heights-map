@@ -201,7 +201,7 @@ def merge_records(canonical, others):
     aliases = list(merged.get('listing_alias_ids') or [])
     notes = []
     for other in others:
-        if other['id'] not in aliases:
+        if other['id'] not in aliases and other['id'] != canonical['id']:
             aliases.append(other['id'])
         for alias in other.get('listing_alias_ids') or []:
             if alias not in aliases and alias != canonical['id']:
@@ -374,6 +374,107 @@ def audit(records):
         'property_ids': same_address_ids(records),
         'stacked': stacked_display(records),
     }
+
+
+def unit_token(address):
+    """Trailing unit letter, so 711 E 25th A and B stay different homes."""
+    text = normalize(address)
+    match = re.search(r'\bUNIT\s+([A-Z0-9]+)$', text)
+    if match:
+        return match.group(1)
+    match = re.search(r'\b([A-Z])$', text)
+    return match.group(1) if match else None
+
+
+def cross_market_duplicates(pages):
+    """Same property on two market maps.
+
+    pages is (market name, DATA records). A shared DealMachine id is one
+    property unless the pins carry distinct unit tokens. The same normalized
+    address on two maps is one property even when the ids differ.
+    """
+    by_pid = defaultdict(list)
+    by_addr = defaultdict(list)
+    for market, records in pages:
+        for record in records:
+            address = normalize(record.get('a'))
+            if address:
+                by_addr[address].append((market, record['id']))
+            for pid in property_ids(record):
+                by_pid[pid].append((market, record['id'], address, unit_token(record.get('a'))))
+    found = []
+    for address, rows in sorted(by_addr.items()):
+        markets = {market for market, _ in rows}
+        if len(markets) > 1:
+            found.append(('address', address, rows))
+    for pid, rows in sorted(by_pid.items()):
+        markets = {market for market, _, _, _ in rows}
+        units = {unit for _, _, _, unit in rows}
+        if len(markets) < 2:
+            continue
+        if len(units) > 1 and None not in units:
+            continue
+        found.append(('property', pid, [(market, ident, address) for market, ident, address, _ in rows]))
+    return found
+
+
+_MIGRATION_NOTE = 'Migrated from Heights page (Timbergrove-side).'
+
+
+def _find_canonical(records, incoming):
+    ids = set(property_ids(incoming))
+    address = normalize(incoming.get('a'))
+    hits = []
+    for record in records:
+        if ids & set(property_ids(record)) or (address and normalize(record.get('a')) == address):
+            hits.append(record)
+    if len(hits) > 1:
+        raise ValueError('override destination has more than one pin for ' + incoming.get('a', ''))
+    return hits[0] if hits else None
+
+
+def enforce_market_overrides(markets, overrides):
+    """Drop a pin that an override assigns to a different market.
+
+    Unique facts are copied onto the destination pin first. The destination
+    must already have that property; this does not invent a pin, and it does
+    not delete the only copy.
+    """
+    foreign = []
+    for name, market in markets.items():
+        for record in market['data']:
+            destination = (overrides or {}).get(normalize(record.get('a')))
+            if destination and destination != name:
+                foreign.append((name, record, destination))
+    moves = []
+    for name, record, destination in foreign:
+        target = markets[destination]
+        canonical = _find_canonical(target['data'], record)
+        if canonical is None:
+            raise ValueError(
+                f"{record['id']} ({record.get('a')}) is on {name}, but {destination} has no pin to keep")
+        merged, notes = merge_records(canonical, [record])
+        source_seed = _object(markets[name]['text'], 'SEED_POINTS').get(record['id']) or {}
+        extra = [line for line in notes if _MIGRATION_NOTE not in line]
+        for line in (source_seed.get('notes') or '').split('\n'):
+            if line.strip() and _MIGRATION_NOTE not in line:
+                extra.append(line.strip())
+        seeds = _object(target['text'], 'SEED_POINTS')
+        seed = dict(seeds.get(canonical['id']) or {'notes': '', 'tags': []})
+        seed['notes'] = _append_unique(seed.get('notes'), extra)
+        seed['tags'] = list(seed.get('tags') or [])
+        target['text'] = patch(target['text'], 'DATA', canonical['id'], merged)
+        target['text'] = patch(target['text'], 'SEED_POINTS', canonical['id'], seed)
+        pulls = _object(markets[name]['text'], 'DEED_PULL')
+        if pulls.get(record['id']) and not _object(target['text'], 'DEED_PULL').get(canonical['id']):
+            target['text'] = patch(target['text'], 'DEED_PULL', canonical['id'], pulls[record['id']])
+        for container in ('DATA', 'SEED_POINTS', 'LIFE', 'DEED_PULL'):
+            markets[name]['text'] = drop_member(markets[name]['text'], container, record['id'])
+        markets[name]['data'] = [row for row in markets[name]['data'] if row['id'] != record['id']]
+        target['data'] = [merged if row['id'] == canonical['id'] else row for row in target['data']]
+        moves.append(dict(address=normalize(record.get('a')), market=destination,
+                          canonical=canonical['id'], retired=record['id'], removed_from=name))
+    return moves
 
 
 # Kept identical in every market page. display_positions() is the Python mirror.
