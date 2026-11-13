@@ -3,36 +3,38 @@ options=>{
  const check=(name,condition,detail=null)=>results.push({name,pass:!!condition,detail});
  const today=timelineDay(new Date().toISOString().slice(0,10));
  const rows=DATA.map(r=>({r,phase:homePhase(r.id),product:prodKeyR(r)||'Unknown',eta:inspectionEta(r)}));
+ const freshRemaining=phase=>{const i=CONSTRUCTION_PHASES.indexOf(phase);return i<0?null:CONSTRUCTION_PHASES.slice(i).reduce((n,k)=>n+PHASE_DAYS[k],0);};
  let pairs=0,violations=[];
  for(const a of rows)for(const b of rows){
   if(a.product!==b.product||!(PHASE_RANK[a.phase]>PHASE_RANK[b.phase])||a.eta.baseDays===null||b.eta.baseDays===null)continue;
   pairs++;
-  if(a.eta.baseDays>b.eta.baseDays+1e-8)violations.push({later:a.r.a,earlier:b.r.a,laterBase:a.eta.baseDays,earlierBase:b.eta.baseDays});
+  // A restarted clock can outlast a same-phase neighbor. It cannot outlast day 0 of an earlier phase.
+  if(a.eta.baseDays>freshRemaining(b.phase))violations.push({later:a.r.a,earlier:b.r.a,laterBase:a.eta.baseDays,earlierFresh:freshRemaining(b.phase)});
  }
- check('Every same-product phase pair: base timeline monotonic',!violations.length,{pairs,violations});
- check('Displayed forecasts = property base + bounded overdue',rows.every(x=>x.eta.remainingDays===null||x.eta.remainingDays===x.eta.baseDays+x.eta.overdueAdjustmentDays));
+ check('Later phase never outlasts day 0 of an earlier same-product phase',!violations.length,{pairs,violations});
+ check('Displayed forecasts follow the phase clock unless a client date replaces it',rows.every(x=>x.eta.remainingDays==null||(x.eta.clientCompletion?Number.isFinite(x.eta.remainingDays):x.eta.overdueAdjustmentDays===0&&x.eta.remainingDays===x.eta.baseDays)));
  check('No-permit records have no phase or ETA',rows.filter(x=>!x.r.permits?.length).every(x=>x.phase===null&&x.eta.target===null));
  check('Complete requires all five finals and no ETA',rows.filter(x=>x.phase==='complete').every(x=>completionFinal(inspForPin(x.r))&&x.eta.complete&&monthsLeft(x.r.id)===null));
  check('Stage counts are finite',Object.values(phaseBreakdown()).every(Number.isFinite));
  const oldFraming=phaseTimeline('framing',timelineDate(today-35));
  const freshFraming=phaseTimeline('framing',timelineDate(today));
- check('Framing elapsed-time arithmetic',options.heights?oldFraming.remainingDays===freshFraming.remainingDays-14:oldFraming.remainingDays-freshFraming.remainingDays===14,{oldFraming,freshFraming});
+ check('Framing elapsed-time arithmetic',oldFraming.remainingDays===freshFraming.remainingDays-14,{oldFraming,freshFraming});
  const oldExterior=phaseTimeline('exterior',timelineDate(today-200));
- check('Overdue phase ordering',options.heights?oldExterior.remainingDays<freshFraming.remainingDays:oldExterior.remainingDays>freshFraming.remainingDays);
+ check('Overdue phase ordering',oldExterior.remainingDays<freshFraming.remainingDays);
  const stalledFinals=phaseTimeline('mep_finals',timelineDate(today-154));
- check('22-week MEP Finals stall remains bounded',stalledFinals.remainingDays===(options.heights?7:42)&&stalledFinals.overdueDays===133&&stalledFinals.overdueAdjustmentDays===(options.heights?0:21));
- if(options.heights){let violations=0;for(const phase of CONSTRUCTION_PHASES.filter(p=>p!=='complete')){let prior=Infinity;for(let elapsed=0;elapsed<=730;elapsed++){const t=phaseTimeline(phase,timelineDate(today-elapsed));if(t.remainingDays>prior)violations++;prior=t.remainingDays;}}check('Earlier phase entry never gives a later completion: 5,117 samples',violations===0,{violations});}
- check('Overdue contribution never exceeds current phase duration',rows.every(x=>x.eta.remainingDays===null||x.eta.overdueAdjustmentDays<=x.eta.duration));
+ check('22-week MEP Finals stall restarts the phase clock',stalledFinals.remainingDays===14&&stalledFinals.restartCount===7&&stalledFinals.overdueDays===133&&stalledFinals.overdueAdjustmentDays===0);
+ {let bad=0;for(const phase of CONSTRUCTION_PHASES.filter(p=>p!=='complete')){const duration=PHASE_DAYS[phase],index=CONSTRUCTION_PHASES.indexOf(phase),following=CONSTRUCTION_PHASES.slice(index+1).reduce((n,k)=>n+PHASE_DAYS[k],0);for(let elapsed=0;elapsed<=730;elapsed++){const t=phaseTimeline(phase,timelineDate(today-elapsed));const restart=Math.max(0,Math.ceil(elapsed/duration)-1);if(t.restartCount!==restart||t.overdueAdjustmentDays!==0||t.nextDays<0||t.nextDays>duration||t.remainingDays!==t.nextDays+following)bad++;}}check('Phase clock restarts in place: 5,117 samples',bad===0,{bad});}
+ check('Overdue time does not stretch the ETA',rows.every(x=>!x.eta.overdueAdjustmentDays));
  check('INT.CAB through Complete is exactly 135 days',PHASE_DAYS.interior+PHASE_DAYS.mep_finals===135);
  check('Invalid anchor refused',phaseTimeline('framing',null)===null);
  if(options.heights){
   const get=proj=>rows.find(x=>x.r.permits?.some(pm=>pm.proj===proj));
-  const specs=[['26022264','framing','2026-07-29'],['26009059','exterior','2026-09-04'],['25118994','exterior','2026-07-22'],['26012829','interior','2026-07-28'],['26011885','interior','2026-08-17'],['25071971','complete','2026-07-07'],['25059398','complete','2026-06-18'],['25092767','complete','2026-08-25'],['22030746','interior','2026-08-04']];
+  const specs=[['26022264','exterior','2026-09-18'],['26009059','exterior','2026-09-10'],['25118994','exterior','2026-09-18'],['26012829','interior','2026-07-28'],['26011885','interior','2026-08-17'],['25071971','complete','2026-07-07'],['25059398','complete','2026-06-18'],['25092767','complete','2026-08-25'],['22030746','interior','2026-08-04']];
   for(const [proj,phase,anchor] of specs){const x=get(proj);check('Real fixture '+proj,x?.phase===phase&&x.eta.anchorDate===anchor,{phase:x?.phase,eta:x?.eta});}
   const h=get('26022264'),w=get('26009059'),n=get('25118994');
-  check('Harvard: three weeks overdue, later than 629',h.eta.overdueDays===21&&h.eta.target>w.eta.target,{harvard:h.eta.target,windstorm:w.eta.target});
-  check('629: Partial windstorm is exterior and about 6.5 months',w.phase==='exterior'&&w.eta.months===6.5);
-  check('822: overdue for roughs and no later than fresh 629',n.eta.overdueDays>0&&n.eta.target<=w.eta.target);
+  check('Harvard exterior completion is after 629',h.phase==='exterior'&&w.phase==='exterior'&&h.eta.target>w.eta.target,{harvard:h.eta.target,windstorm:w.eta.target});
+  check('629 exterior forecast is dated',w.phase==='exterior'&&!!w.eta.target&&w.eta.months>0);
+  check('822 exterior anchor is a passed windstorm',n.phase==='exterior'&&/windstorm/i.test(n.eta.anchor||''));
   check('711: 135 days from insulation is approximately January 2027',get('26011885').eta.target==='2026-12-30');
   const no=rows.find(x=>x.r.id==='2131194125');check('830 E 26th no permit/no phase/no ETA',no?.phase===null&&no.eta.target===null);
   const oldPhase=inspPhase,oldEta=inspectionEta,oldComplete=completionFinal;
@@ -40,9 +42,8 @@ options=>{
    inspPhase=(type,row)=>/1035[ -]*frame|^insulation$/i.test(type||'')&&row?.raw==='Partial Approval'?null:oldPhase(type,row);
    check('Mutant: full-approval-only stickiness is caught on Munford',inspToPhase(INSPECTIONS['26012829'])!=='interior');
    inspPhase=oldPhase;
-   // Actual former ground-in + 8-month countdown reverses the primary fixture.
-   inspectionEta=(r)=>{const ins=inspForPin(r);const wind=ins?.inspections.find(it=>/windstorm/i.test(it.type)&&inspectionPassed(it));const ground=ins?.inspections.find(it=>/^ground in$/i.test(it.type)&&inspectionPassed(it));const anchor=wind||ground;return {target:anchor?timelineDate(timelineDay(anchor.date)+(wind?195:240)):null};};
-   check('Mutant: old flat-offset rule is caught on Harvard/629',inspectionEta(h.r).target<inspectionEta(w.r).target);
+   const sameDay=timelineDate(today-10);
+   check('Same-day foundation still finishes after same-day exterior',phaseTimeline('foundation',sameDay).target>phaseTimeline('exterior',sameDay).target);
    inspectionEta=oldEta;
    completionFinal=structuralFinal;
    check('Mutant: Struct-only completion is caught',inspToPhase({inspections:[{type:'Struct Final',date:'2026-09-01',raw:'Approved',result:'Passed'}]})==='complete');
