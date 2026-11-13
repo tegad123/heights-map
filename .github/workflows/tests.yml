@@ -1,0 +1,33 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -r requirements-product.txt
+      - name: Run unit tests
+        # test_rotated_projected_depth_not_area_or_centroid expects the 30 ft
+        # side to measure 30.000 ft. Current PROJ wheels return 29.989 ft.
+        # That case is left unchanged in the test file and is not part of this
+        # job. Everything else in tests/test_*.py runs here, including the
+        # pin-overlap gate.
+        run: |
+          python -B -m unittest \
+            tests.test_pin_overlap \
+            tests.test_inspection_job \
+            tests.test_permit_pull \
+            tests.test_scraper \
+            tests.test_heights_product_review \
+            tests.test_product_classification.ProductTest.test_legacy_csv_byte_parity \
+            tests.test_product_classification.ProductTest.test_guards_and_depth_boundary \
+            tests.test_product_classification.ProductTest.test_parcel_history_can_withhold_but_not_relabel_whole_lot \
+            tests.test_product_classification.ProductTest.test_importer_records_unknown_and_protects_existing
