@@ -225,6 +225,12 @@ def main():
     if not rows:
         raise ValueError('empty input; refusing to write')
     markets = load_markets()
+    from pin_overlap import STAGE_TAGS, audit, collapse_market
+    merge_rows = []
+    for name, market in markets.items():
+        for row in collapse_market(market):
+            row['market'] = name
+            merge_rows.append(row)
     by_address, by_parcel = defaultdict(set), defaultdict(set)
     for name, market in markets.items():
         for record in market['data']:
@@ -312,12 +318,28 @@ def main():
                         f=row.get('property_flags', '').strip() or None,
                         u=row.get('dealmachine_url', '').strip() or None,
                         lat=lat, lng=lng, c=None)
+        prior_note = ''
         if existing:
             updated = dict(existing)
             # Existing listing fields mean list price/date, not assessment/deed.
             # Preserve them and attach the acquisition in the existing notes.
             if existing.get('kind') != 'active':
+                prior = []
+                if existing.get('sd') and existing.get('sd') != sale_date:
+                    prior.append('prior sale ' + existing['sd'])
+                if existing.get('v') and existing.get('v') != incoming['v']:
+                    prior.append('prior assessed ' + str(existing['v']))
+                if existing.get('llc') and existing.get('llc') != incoming['llc']:
+                    prior.append('prior owner ' + str(existing['llc']))
+                if prior:
+                    prior_note = ' (' + '; '.join(prior) + ')'
                 updated.update(sd=sale_date, v=incoming['v'], llc=incoming['llc'])
+                # Blank lot, flags, and DealMachine link are filled from the deed.
+                # A value already on the pin (listing copy, or the acquisition
+                # sentence) stays.
+                for field in ('lot', 'f', 'u'):
+                    if not updated.get(field) and incoming.get(field):
+                        updated[field] = incoming[field]
             action = 'updated' if updated != existing else 'unchanged'
             market['text'] = patch(market['text'], 'DATA', identifier, updated)
             market['data'][market['data'].index(existing)] = updated
@@ -340,9 +362,15 @@ def main():
             market['text'] = patch(market['text'], 'DEED_PULL', identifier, date.fromisoformat(today).strftime('%b %d, %Y'))
             if existing:
                 seed = dict(span(market['text'], 'SEED_POINTS')[2].get(identifier, {'notes': '', 'tags': []}))
-                note = f'Deed transfer {sale_date} · {incoming["llc"] or "Unknown entity"} · assessed {incoming["v"] or "unknown"}'
+                note = f'Deed transfer {sale_date} · {incoming["llc"] or "Unknown entity"} · assessed {incoming["v"] or "unknown"}' + prior_note
                 if note not in (seed.get('notes') or ''):
                     seed['notes'] = ((seed.get('notes') or '') + '\n' + note).strip()
+                # A listing or staged build keeps its color. pinColor checks
+                # `deed` before active_single, so the tag is only added when
+                # it will not repaint a pin that already has a stage.
+                if (existing.get('kind') != 'active' and 'deed' not in (seed.get('tags') or [])
+                        and not any(tag in STAGE_TAGS for tag in (seed.get('tags') or []))):
+                    seed['tags'] = list(seed.get('tags') or []) + ['deed']
                 market['text'] = patch(market['text'], 'SEED_POINTS', identifier, seed)
                 if action == 'unchanged':
                     action = 'updated'
@@ -379,6 +407,18 @@ def main():
     for name, summary in sorted(per_market.items()):
         print(f'MARKET {name}: ' + ' '.join(f'{k}={summary[k]}' for k in ('added', 'updated', 'unchanged')))
     print('EXCLUSIONS ' + json.dumps(dict(Counter(r[2] for r in dropped)), sort_keys=True))
+    print('MERGES ' + str(len(merge_rows)))
+    for row in merge_rows:
+        print(f"  {row['market']} {row['address']} -> {row['canonical']} retired {', '.join(row['retired'])}")
+    overlap_problems = []
+    for name, market in markets.items():
+        report = audit(market['data'])
+        for address, ids in report['addresses']:
+            overlap_problems.append(f'{name} address {address}: {ids}')
+        for pid, ids in report['property_ids']:
+            overlap_problems.append(f'{name} property {pid}: {ids}')
+    if overlap_problems:
+        raise ValueError('pin overlap remains:\n' + '\n'.join(overlap_problems))
     print('PERMIT OVERLAPS ' + str(len(overlaps)))
     for overlap in overlaps:
         print('  ' + overlap)
