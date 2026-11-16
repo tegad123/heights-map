@@ -55,6 +55,61 @@
      "year_built": 1960
     }
    ]
+  },
+  {
+   "pulled_date": "2026-11-13",
+   "window_start": "2026-10-01",
+   "window_end": "2026-10-05",
+   "source_file": "deed_slim.csv",
+   "source": "DealMachine export",
+   "property_count": 3,
+   "properties": [
+    {
+     "id": "2130458535",
+     "a": "2418 Haverhill Dr, Houston, Tx 77008",
+     "llc": "Kmas Summerfield Llc",
+     "v": "$537,514",
+     "lot": "7480",
+     "lat": 29.799602,
+     "lng": -95.442814,
+     "f": "Recently Sold, Off Market, Cash Buyer, High Equity, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2130458535",
+     "c": null,
+     "sale_date": "2026-10-01",
+     "apn": "092-174-000-0012",
+     "year_built": 1963
+    },
+    {
+     "id": "2130573840",
+     "a": "2203 Droxford Dr, Houston, Tx 77008",
+     "llc": "Nms Homeinvestments Corp",
+     "v": "$508,159",
+     "lot": "7810",
+     "lat": 29.798554,
+     "lng": -95.438274,
+     "f": "Recently Sold, Low Equity, Senior Owner, Absentee Owner, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2130573840",
+     "c": null,
+     "sale_date": "2026-10-05",
+     "apn": "092-532-000-0017",
+     "year_built": 1961
+    },
+    {
+     "id": "2130573843",
+     "a": "2207 Droxford Dr, Houston, Tx 77008",
+     "llc": "Kmas Summerfield Llc",
+     "v": "$592,481",
+     "lot": "7590",
+     "lat": 29.798548,
+     "lng": -95.438504,
+     "f": "Recently Sold, Cash Buyer, High Equity, Tax Delinquent, Absentee Owner, Corporate Owner",
+     "u": "https://app.dealmachine.com/leads#property(id)=2130573843",
+     "c": null,
+     "sale_date": "2026-10-02",
+     "apn": "092-532-000-0018",
+     "year_built": 1961
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,45 @@
+{
+ "market": "riveroaks",
+ "pulls": [
+  {
+   "pulled_date": "2026-11-13",
+   "window_start": "2026-09-25",
+   "window_end": "2026-11-02",
+   "source_file": "deed_slim.csv",
+   "source": "DealMachine export",
+   "property_count": 2,
+   "properties": [
+    {
+     "id": "2131394758",
+     "a": "2535 Inwood Dr, Houston, Tx 77019",
+     "llc": "Randada Llc",
+     "v": "$7,541,440",
+     "lot": "23992",
+     "lat": 29.751898,
+     "lng": -95.417958,
+     "f": "Recently Sold, Off Market, Adjustable Loan, Cash Buyer, Tax Delinquent, Corporate Owner, Corner Lot",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131394758",
+     "c": null,
+     "sale_date": "2026-09-25",
+     "apn": "060-154-038-0002",
+     "year_built": 2018
+    },
+    {
+     "id": "2131395279",
+     "a": "2149 Stanmore Dr, Houston, Tx 77019",
+     "llc": "T & T Renovations Llc",
+     "v": "$2,113,943",
+     "lot": "8127",
+     "lat": 29.749496,
+     "lng": -95.412816,
+     "f": "Recently Sold, Cash Buyer, Corporate Owner, Landlocked",
+     "u": "https://app.dealmachine.com/leads#property(id)=2131395279",
+     "c": null,
+     "sale_date": "2026-11-02",
+     "apn": "060-155-042-0021",
+     "year_built": 1938
+    }
+   ]
+  }
+ ]
+}

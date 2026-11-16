@@ -160,7 +160,48 @@ def load_markets():
     return markets
 
 
-def assign(markets, address, zipcode, lng, lat):
+def load_overrides(path=None):
+    """Address → market for points that fall in more than one polygon.
+
+    Keys are normalize() of the street line. A value is used only when that
+    market is one of the geographic matches, so an override cannot place a
+    pin outside the markets that actually contain it.
+    """
+    path = ROOT / 'deed_market_overrides.json' if path is None else Path(path)
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text())
+    if not isinstance(raw, dict):
+        raise ValueError('deed_market_overrides.json must be an object')
+    cleaned = {}
+    for key, market in raw.items():
+        if str(key).startswith('_'):
+            continue
+        normalized = normalize(key)
+        if normalized != key:
+            raise ValueError(f'override key {key!r} must already be normalized ({normalized!r})')
+        if market not in MARKETS or not MARKETS[market].get('enabled'):
+            raise ValueError(f'override market {market!r} is not an enabled market')
+        cleaned[normalized] = market
+    return cleaned
+
+
+def choose_market(matches, address, overrides=None):
+    """Pick one eligible market. An override wins; otherwise ambiguity is refused."""
+    chosen = (overrides or {}).get(normalize(address))
+    if chosen:
+        if chosen not in matches:
+            eligible = ','.join(sorted(matches)) or 'none'
+            return None, 'OVERRIDE_MARKET', f'{chosen} is not eligible ({eligible})'
+        return chosen, None, None
+    if len(matches) > 1:
+        return None, 'AMBIGUOUS_MARKET', ','.join(sorted(matches))
+    if len(matches) == 1:
+        return matches[0], None, None
+    return None, None, None
+
+
+def assign(markets, address, zipcode, lng, lat, overrides=None):
     matches = []
     east = False
     excluded_street = False
@@ -178,10 +219,9 @@ def assign(markets, address, zipcode, lng, lat):
             excluded_street = True
             continue
         matches.append(name)
-    if len(matches) > 1:
-        return None, 'AMBIGUOUS_MARKET', ','.join(matches)
-    if matches:
-        return matches[0], None, None
+    chosen, reason, detail = choose_market(matches, address, overrides)
+    if chosen or reason:
+        return chosen, reason, detail
     if east:
         return None, 'OOZ_EAST', f'Heights lng {lng} > -95.370; no other tracked market'
     if excluded_street:
@@ -225,6 +265,14 @@ def main():
     if not rows:
         raise ValueError('empty input; refusing to write')
     markets = load_markets()
+    overrides = load_overrides()
+    from pin_overlap import STAGE_TAGS, audit, collapse_market, cross_market_duplicates, enforce_market_overrides
+    merge_rows = []
+    for name, market in markets.items():
+        for row in collapse_market(market):
+            row['market'] = name
+            merge_rows.append(row)
+    kept_rows = enforce_market_overrides(markets, overrides)
     by_address, by_parcel = defaultdict(set), defaultdict(set)
     for name, market in markets.items():
         for record in market['data']:
@@ -260,7 +308,7 @@ def main():
         elif row['property_type'].strip().lower() != 'single family':
             reason, detail = 'NOT_SINGLE_FAMILY', row['property_type']
         if not reason:
-            destination, reason, detail = assign(markets, address, row['property_address_zipcode'], lng, lat)
+            destination, reason, detail = assign(markets, address, row['property_address_zipcode'], lng, lat, overrides)
         # Report permit overlaps even for excluded source rows.
         permit_hits = []
         for name, market in markets.items():
@@ -312,12 +360,28 @@ def main():
                         f=row.get('property_flags', '').strip() or None,
                         u=row.get('dealmachine_url', '').strip() or None,
                         lat=lat, lng=lng, c=None)
+        prior_note = ''
         if existing:
             updated = dict(existing)
             # Existing listing fields mean list price/date, not assessment/deed.
             # Preserve them and attach the acquisition in the existing notes.
             if existing.get('kind') != 'active':
+                prior = []
+                if existing.get('sd') and existing.get('sd') != sale_date:
+                    prior.append('prior sale ' + existing['sd'])
+                if existing.get('v') and existing.get('v') != incoming['v']:
+                    prior.append('prior assessed ' + str(existing['v']))
+                if existing.get('llc') and existing.get('llc') != incoming['llc']:
+                    prior.append('prior owner ' + str(existing['llc']))
+                if prior:
+                    prior_note = ' (' + '; '.join(prior) + ')'
                 updated.update(sd=sale_date, v=incoming['v'], llc=incoming['llc'])
+                # Blank lot, flags, and DealMachine link are filled from the deed.
+                # A value already on the pin (listing copy, or the acquisition
+                # sentence) stays.
+                for field in ('lot', 'f', 'u'):
+                    if not updated.get(field) and incoming.get(field):
+                        updated[field] = incoming[field]
             action = 'updated' if updated != existing else 'unchanged'
             market['text'] = patch(market['text'], 'DATA', identifier, updated)
             market['data'][market['data'].index(existing)] = updated
@@ -340,9 +404,15 @@ def main():
             market['text'] = patch(market['text'], 'DEED_PULL', identifier, date.fromisoformat(today).strftime('%b %d, %Y'))
             if existing:
                 seed = dict(span(market['text'], 'SEED_POINTS')[2].get(identifier, {'notes': '', 'tags': []}))
-                note = f'Deed transfer {sale_date} · {incoming["llc"] or "Unknown entity"} · assessed {incoming["v"] or "unknown"}'
+                note = f'Deed transfer {sale_date} · {incoming["llc"] or "Unknown entity"} · assessed {incoming["v"] or "unknown"}' + prior_note
                 if note not in (seed.get('notes') or ''):
                     seed['notes'] = ((seed.get('notes') or '') + '\n' + note).strip()
+                # A listing or staged build keeps its color. pinColor checks
+                # `deed` before active_single, so the tag is only added when
+                # it will not repaint a pin that already has a stage.
+                if (existing.get('kind') != 'active' and 'deed' not in (seed.get('tags') or [])
+                        and not any(tag in STAGE_TAGS for tag in (seed.get('tags') or []))):
+                    seed['tags'] = list(seed.get('tags') or []) + ['deed']
                 market['text'] = patch(market['text'], 'SEED_POINTS', identifier, seed)
                 if action == 'unchanged':
                     action = 'updated'
@@ -373,12 +443,29 @@ def main():
             prior = {tuple(r[k] for k in reader.fieldnames) for r in reader}
     ledger_new = [r for r in dropped if (args.market,) + r not in prior]
     print(('DRY RUN' if args.dry_run else 'APPLY') + f' | source={args.csv_path.name} | rows read={len(rows)}')
-    print('Rule: configured polygons; Heights street guard + lng <= -95.370; route across enabled markets.')
+    print('Rule: configured polygons; Heights street guard + lng <= -95.370; route across enabled markets. deed_market_overrides.json wins when a point is inside more than one market.')
     print('\n'.join(dispositions))
     print(f"TOTAL read={len(rows)} accepted={len(rows)-counts['excluded']} added={counts['added']} updated={counts['updated']} unchanged={counts['unchanged']} excluded={counts['excluded']}")
     for name, summary in sorted(per_market.items()):
         print(f'MARKET {name}: ' + ' '.join(f'{k}={summary[k]}' for k in ('added', 'updated', 'unchanged')))
     print('EXCLUSIONS ' + json.dumps(dict(Counter(r[2] for r in dropped)), sort_keys=True))
+    print('MERGES ' + str(len(merge_rows)))
+    for row in merge_rows:
+        print(f"  {row['market']} {row['address']} -> {row['canonical']} retired {', '.join(row['retired'])}")
+    print('KEPT ON ONE MAP ' + str(len(kept_rows)))
+    for row in kept_rows:
+        print(f"  {row['address']} -> {row['market']} {row['canonical']} retired {row['retired']} from {row['removed_from']}")
+    overlap_problems = []
+    for name, market in markets.items():
+        report = audit(market['data'])
+        for address, ids in report['addresses']:
+            overlap_problems.append(f'{name} address {address}: {ids}')
+        for pid, ids in report['property_ids']:
+            overlap_problems.append(f'{name} property {pid}: {ids}')
+    for kind, key, rows in cross_market_duplicates([(name, market['data']) for name, market in markets.items()]):
+        overlap_problems.append(f'cross-market {kind} {key}: {rows}')
+    if overlap_problems:
+        raise ValueError('pin overlap remains:\n' + '\n'.join(overlap_problems))
     print('PERMIT OVERLAPS ' + str(len(overlaps)))
     for overlap in overlaps:
         print('  ' + overlap)

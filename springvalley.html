@@ -973,11 +973,32 @@ function updateInspStatusBadge(n){
 }
 const mById={}, markers=[];
 function mkStyle(id){return{radius:6,color:'#fff',weight:1.2,fillColor:pinColor(id),fillOpacity:.9};}
-// spread coincident pins (e.g. units A/B/C at one address) so each is individually clickable
-const dispLL={};{const grp={};for(const r of DATA){const k=r.lat.toFixed(6)+','+r.lng.toFixed(6);(grp[k]=grp[k]||[]).push(r);}
-  for(const k in grp){const a=grp[k];if(a.length<2){dispLL[a[0].id]=[a[0].lat,a[0].lng];continue;}
-    const rad=0.000058*(a.length>4?1.5:1),cl=Math.cos(a[0].lat*Math.PI/180)||1;
-    a.forEach((r,i)=>{const ang=2*Math.PI*i/a.length;dispLL[r.id]=[r.lat+rad*Math.cos(ang),r.lng+rad*Math.sin(ang)/cl];});}}
+// Spread pins that sit on the same point (NEAR_M=0.70m) so radius-6 markers do not coincide. SEP_M=16. Distinct addresses stay separate records.
+const dispLL={};{
+  const NEAR=0.70/111320, SEP=16/111320;
+  const pts=DATA.filter(r=>r.lat!=null&&r.lng!=null);
+  const parent=pts.map((_,i)=>i);
+  const find=i=>{while(parent[i]!==i)i=parent[i]=parent[parent[i]];return i;};
+  const gap=(a,b)=>{const dx=(a.lat-b.lat),dy=(a.lng-b.lng)*Math.cos(a.lat*Math.PI/180);return Math.hypot(dx,dy);};
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+    if(Math.abs(pts[i].lat-pts[j].lat)>0.00002||Math.abs(pts[i].lng-pts[j].lng)>0.00002)continue;
+    if(gap(pts[i],pts[j])<=NEAR)parent[find(j)]=find(i);}
+  const groups={};
+  pts.forEach((r,i)=>{(groups[find(i)]=groups[find(i)]||[]).push(r);});
+  for(const k in groups){const a=groups[k];
+    if(a.length<2){dispLL[a[0].id]=[a[0].lat,a[0].lng];continue;}
+    const lat=a.reduce((s,r)=>s+r.lat,0)/a.length, lng=a.reduce((s,r)=>s+r.lng,0)/a.length;
+    const cl=Math.cos(lat*Math.PI/180)||1, rad=SEP/(2*Math.sin(Math.PI/a.length));
+    a.forEach((r,i)=>{const ang=2*Math.PI*i/a.length;dispLL[r.id]=[lat+rad*Math.cos(ang),lng+rad*Math.sin(ang)/cl];});}
+  const ids=Object.keys(dispLL);
+  for(let n=0;n<6;n++){let moved=false;
+    for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++){
+      const A=dispLL[ids[i]], B=dispLL[ids[j]];
+      const dx=(A[0]-B[0]), dy=(A[1]-B[1])*Math.cos(A[0]*Math.PI/180), d=Math.hypot(dx,dy);
+      if(d>=NEAR)continue;
+      if(d<1e-9)B[0]+=NEAR; else {const s=(NEAR-d)/d; B[0]-=dx*s; B[1]-=(A[1]-B[1])*s;}
+      moved=true;}
+    if(!moved)break;}}
 for(const r of DATA){
   const m=L.circleMarker(dispLL[r.id]||[r.lat,r.lng],mkStyle(r.id));
   m._rec=r; m._s=((r.llc||'')+' '+(r.a||'')+(r._twin?' '+(r._twin.a||'')+' '+(r._twin.llc||''):'')).toLowerCase();
