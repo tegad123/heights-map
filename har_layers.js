@@ -111,7 +111,7 @@ function activeCardHTML(row) {
   html += '<div class="a">' + esc(row.address) + '</div><div class="sx-r2">' + esc(row.product || 'Unknown') + ' · Active</div>';
   html += '<div class="sx-r1"><span class="cp">$' + ask.toLocaleString() + '</span><span>Current asking price</span><span>' + (row.lot_sqft ? Number(row.lot_sqft).toLocaleString() + ' sqft lot' : '') + '</span></div>';
   html += '<div class="sx-r2">MLS ' + esc(row.mls) + ' · DOM ' + row.dom + ' · Year ' + row.year_built + '<br>Original list price: $' + Number(row.original_list_price).toLocaleString();
-  html += '<br>Builder: ' + esc(row.builder || 'Not supplied') + '<br>List agent: ' + esc(row.list_agent || 'Not supplied') + '</div>';
+  html += '<br>Builder: ' + esc(row.builder || 'Not supplied') + (row.list_agent ? '<br>List agent: ' + esc(row.list_agent) : '') + '</div>';
   html += '<div class="sx-r2">Asking price is the list price on ' + esc(row.as_of) + '.</div></div>';
   return html;
 }

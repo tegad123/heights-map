@@ -11,7 +11,7 @@ Heights snapshot is owned by sold_ingest.py and active_ingest.py.
 import re
 from pathlib import Path
 
-from deed_ingest import in_boundary
+from deed_ingest import choose_market, in_boundary
 from market_config import HAR_MARKETS, MARKETS
 from sold_classification import MIN_LOT_SQFT, MIN_YEAR_BUILT, classify_lot, lot_floor_reason
 from sold_ingest import money
@@ -64,13 +64,14 @@ def in_box(cfg, lat, lng):
     return bottom <= lat <= top and left <= lng <= right
 
 
-def assign_market(lat, lng, address, zones):
+def assign_market(lat, lng, address, zones, overrides=None):
     """Return (market, reason, detail). reason is None when the row is in one market.
 
+    A boundary hit wins over a coordinate-box hit. Two boundary hits use
+    deed_market_overrides when one of those markets is named there; otherwise
+    they stay unresolved so the property is not drawn on two maps.
     OUT_OF_ZONE and the Heights east cutoff are attributed to that market.
-    AMBIGUOUS_MARKET and OUT_OF_MARKET have no market. detail lists the
-    boundary names when more than one polygon contains the point. A Heights
-    hit is returned as market='heights' with HEIGHTS_SEPARATE_PIPELINE
+    A Heights hit is returned as market='heights' with HEIGHTS_SEPARATE_PIPELINE
     after the zone guards, so the caller can count it without writing.
     """
     if lat is None or lng is None or not (-90 <= lat <= 90 and -180 <= lng <= 180):
@@ -85,16 +86,14 @@ def assign_market(lat, lng, address, zones):
                 polygons.append(name)
         elif in_box(cfg, lat, lng) and (zipcode is None or zipcode in cfg['zips']):
             boxes.append(name)
-    if len(polygons) > 1:
-        return None, 'AMBIGUOUS_MARKET', ','.join(sorted(polygons))
-    if len(polygons) == 1:
-        chosen = polygons[0]
-    elif len(boxes) == 1:
-        chosen = boxes[0]
-    elif len(boxes) > 1:
-        return None, 'AMBIGUOUS_MARKET', ','.join(sorted(boxes))
-    else:
+    matches = polygons or boxes
+    if not matches:
         return None, 'OUT_OF_MARKET', None
+    chosen, reason, detail = choose_market(matches, address, overrides)
+    if reason == 'AMBIGUOUS_MARKET':
+        return None, reason, detail or ','.join(sorted(matches))
+    if reason or not chosen:
+        return None, reason or 'OUT_OF_MARKET', detail
     zone = zones[chosen]
     cfg = zone['cfg']
     if cfg['east_lng'] is not None and lng > cfg['east_lng']:

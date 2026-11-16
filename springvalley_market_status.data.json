@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-16",
   "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
   "properties": {
     "act_8919-echo-valley": {
@@ -14,7 +14,7 @@
         "dom": 194.0,
         "close_date": "2026-11-06",
         "close_price": 2450000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "8919 Echo Valley Drive"
       }
     },
@@ -30,7 +30,7 @@
         "dom": 49.0,
         "close_date": "2026-08-14",
         "close_price": 2850000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1328 Mickey Way"
       }
     },
@@ -46,7 +46,7 @@
         "dom": 7.0,
         "close_date": "2026-08-26",
         "close_price": 2890000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "8722 Lupton Lane"
       }
     },
@@ -62,7 +62,7 @@
         "dom": 35.0,
         "close_date": "2026-10-05",
         "close_price": 3285000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "8412 Lofland Drive"
       }
     }
@@ -83,7 +83,7 @@
         "dom": 194.0,
         "close_date": "2026-11-06",
         "close_price": 2450000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "8919 Echo Valley Drive"
       },
       "history": [],
@@ -113,7 +113,7 @@
         "dom": 49.0,
         "close_date": "2026-08-14",
         "close_price": 2850000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1328 Mickey Way"
       },
       "history": [],
@@ -143,7 +143,7 @@
         "dom": 7.0,
         "close_date": "2026-08-26",
         "close_price": 2890000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "8722 Lupton Lane"
       },
       "history": [],
@@ -173,7 +173,7 @@
         "dom": 35.0,
         "close_date": "2026-10-05",
         "close_price": 3285000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "8412 Lofland Drive"
       },
       "history": [],
@@ -190,9 +190,9 @@
     }
   ],
   "coverage": {
-    "active": 2,
+    "active": 1,
     "pending": 0,
-    "sold": 11,
+    "sold": 10,
     "terminated": 0,
     "linked": 4
   }

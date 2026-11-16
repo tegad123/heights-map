@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-16",
   "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
   "properties": {
     "act_959-althea-drive": {
@@ -11,27 +11,11 @@
         "product": "Single Lot",
         "current_list_price": 1699000.0,
         "original_list_price": 1799000.0,
-        "dom": 70.0,
+        "dom": 74.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "959 Althea Drive"
-      }
-    },
-    "act_1014-gardenia-drive": {
-      "status": "active",
-      "current": {
-        "mls": "93833401",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Single Lot",
-        "current_list_price": 1669999.0,
-        "original_list_price": 1694999.0,
-        "dom": 70.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "1014 Gardenia Drive"
       }
     },
     "act_955-w-42nd-street": {
@@ -43,10 +27,10 @@
         "product": "Single Lot",
         "current_list_price": 1850000.0,
         "original_list_price": 1850000.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "955 W 42nd Street"
       }
     },
@@ -59,10 +43,10 @@
         "product": "Single Lot",
         "current_list_price": 2150000.0,
         "original_list_price": 2150000.0,
-        "dom": 35.0,
+        "dom": 39.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "934 W 43rd Street"
       }
     },
@@ -75,10 +59,10 @@
         "product": "Single Lot",
         "current_list_price": 2149000.0,
         "original_list_price": 2149000.0,
-        "dom": 14.0,
+        "dom": 18.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "515 W 33rd Street"
       }
     },
@@ -91,11 +75,27 @@
         "product": "Single Lot",
         "current_list_price": 2490000.0,
         "original_list_price": 2490000.0,
-        "dom": 137.0,
+        "dom": 141.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "891 W 41st Street"
+      }
+    },
+    "act_315-w-32nd-street": {
+      "status": "active",
+      "current": {
+        "mls": "44367620",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2500000.0,
+        "original_list_price": 2500000.0,
+        "dom": 146.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-16",
+        "address": "315 W 32nd Street"
       }
     },
     "act_713-w-42nd-street": {
@@ -107,10 +107,10 @@
         "product": "Single Lot",
         "current_list_price": 2500000.0,
         "original_list_price": 2450000.0,
-        "dom": 254.0,
+        "dom": 258.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "713 W 42nd Street"
       }
     },
@@ -123,10 +123,10 @@
         "product": "Single Lot",
         "current_list_price": 2589000.0,
         "original_list_price": 2589000.0,
-        "dom": 30.0,
+        "dom": 34.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "867 W 42nd Street"
       }
     },
@@ -139,11 +139,27 @@
         "product": "Single Lot",
         "current_list_price": 2599000.0,
         "original_list_price": 2599000.0,
-        "dom": 30.0,
+        "dom": 34.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "810 W 41st Street"
+      }
+    },
+    "act_752-w-43rd-street": {
+      "status": "sold",
+      "current": {
+        "mls": "18296962",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2999000.0,
+        "dom": 178.0,
+        "close_date": "2026-11-13",
+        "close_price": 2850000.0,
+        "as_of": "2026-11-16",
+        "address": "752 W 43rd Street"
       }
     },
     "pmt_539-w-34th-st": {
@@ -155,10 +171,10 @@
         "product": "Single Lot",
         "current_list_price": 2099000.0,
         "original_list_price": 2175000.0,
-        "dom": 85.0,
+        "dom": 89.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "539 W 34th Street"
       }
     },
@@ -174,7 +190,7 @@
         "dom": 89.0,
         "close_date": "2026-02-11",
         "close_price": 2175000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "765 Sue Barnett Drive"
       }
     },
@@ -190,7 +206,7 @@
         "dom": 26.0,
         "close_date": "2026-01-12",
         "close_price": 1750000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1030 W 41st Street"
       }
     },
@@ -206,7 +222,7 @@
         "dom": 9.0,
         "close_date": "2026-04-02",
         "close_price": 1699000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1032 W 41st Street"
       }
     },
@@ -219,10 +235,10 @@
         "product": "Single Lot",
         "current_list_price": 1795000.0,
         "original_list_price": 1795000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "963 W 41st Street"
       }
     },
@@ -235,10 +251,10 @@
         "product": "Single Lot",
         "current_list_price": 2500000.0,
         "original_list_price": 2500000.0,
-        "dom": 23.0,
+        "dom": 27.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "830 Azalea Street"
       }
     },
@@ -254,7 +270,7 @@
         "dom": 123.0,
         "close_date": "2026-07-31",
         "close_price": 1852500.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "207 W 33rd Street"
       }
     },
@@ -270,7 +286,7 @@
         "dom": 189.0,
         "close_date": "2026-04-24",
         "close_price": 1650000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "938 Gardenia Drive"
       }
     },
@@ -286,7 +302,7 @@
         "dom": 105.0,
         "close_date": "2026-05-15",
         "close_price": 1530000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "910 W 41st Street"
       }
     },
@@ -302,7 +318,7 @@
         "dom": 0.0,
         "close_date": "2026-02-20",
         "close_price": 1600000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "958 Gardenia Drive"
       }
     },
@@ -318,7 +334,7 @@
         "dom": 1.0,
         "close_date": "2026-05-29",
         "close_price": 1880400.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1046 Gardenia Drive"
       }
     },
@@ -334,7 +350,7 @@
         "dom": 38.0,
         "close_date": "2026-03-31",
         "close_price": 2100000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "710 Sue Barnett Drive"
       }
     },
@@ -347,10 +363,10 @@
         "product": "Single Lot",
         "current_list_price": 999000.0,
         "original_list_price": 999000.0,
-        "dom": 15.0,
+        "dom": 19.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5109 Lido Lane"
       }
     },
@@ -363,10 +379,10 @@
         "product": "Single Lot",
         "current_list_price": 1350000.0,
         "original_list_price": 1450000.0,
-        "dom": 111.0,
+        "dom": 115.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2010 Hewitt Drive"
       }
     },
@@ -379,10 +395,10 @@
         "product": "Single Lot",
         "current_list_price": 1575000.0,
         "original_list_price": 1575000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2031 Saxon Drive"
       }
     },
@@ -395,10 +411,10 @@
         "product": "Single Lot",
         "current_list_price": 1539000.0,
         "original_list_price": 1539000.0,
-        "dom": 10.0,
+        "dom": 14.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1414 Du Barry Lane"
       }
     },
@@ -414,7 +430,7 @@
         "dom": 20.0,
         "close_date": "2026-09-08",
         "close_price": 1525000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1527 Thornton"
       }
     },
@@ -430,7 +446,7 @@
         "dom": 49.0,
         "close_date": "2026-09-02",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1431 Curtin Street"
       }
     },
@@ -446,7 +462,7 @@
         "dom": 207.0,
         "close_date": "2026-08-28",
         "close_price": 1600000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1316 Althea Drive"
       }
     },
@@ -459,10 +475,10 @@
         "product": "Single Lot",
         "current_list_price": 1875000.0,
         "original_list_price": 1875000.0,
-        "dom": 22.0,
+        "dom": 26.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1335 Gardenia Drive"
       }
     },
@@ -475,10 +491,10 @@
         "product": "Single Lot",
         "current_list_price": 1850000.0,
         "original_list_price": 1850000.0,
-        "dom": 11.0,
+        "dom": 15.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1326 Curtin Street"
       }
     },
@@ -494,7 +510,7 @@
         "dom": 61.0,
         "close_date": "2026-10-13",
         "close_price": 1979000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1411 Thornton Road"
       }
     },
@@ -507,10 +523,10 @@
         "product": "Single Lot",
         "current_list_price": 2388000.0,
         "original_list_price": 2388000.0,
-        "dom": 44.0,
+        "dom": 48.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1519 Candlelight Lane"
       }
     },
@@ -523,10 +539,10 @@
         "product": "Single Lot",
         "current_list_price": 2350000.0,
         "original_list_price": 2350000.0,
-        "dom": 156.0,
+        "dom": 160.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1402 Du Barry Lane"
       }
     },
@@ -539,10 +555,10 @@
         "product": "Single Lot",
         "current_list_price": 2395000.0,
         "original_list_price": 2475000.0,
-        "dom": 1.0,
+        "dom": 5.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1237 Althea Drive"
       }
     },
@@ -558,7 +574,7 @@
         "dom": 181.0,
         "close_date": "2026-11-04",
         "close_price": 1680000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1226 Du Barry Lane"
       }
     },
@@ -571,10 +587,10 @@
         "product": "Single Lot",
         "current_list_price": 2188000.0,
         "original_list_price": 2188000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1225 Wakefield Drive"
       }
     },
@@ -587,10 +603,10 @@
         "product": "Single Lot",
         "current_list_price": 1495000.0,
         "original_list_price": 1495000.0,
-        "dom": 435.0,
+        "dom": 439.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1725 Ebony Lane"
       }
     },
@@ -603,10 +619,10 @@
         "product": "Single Lot",
         "current_list_price": 1489900.0,
         "original_list_price": 1499900.0,
-        "dom": 74.0,
+        "dom": 78.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1721 Chantilly Lane"
       }
     },
@@ -619,10 +635,10 @@
         "product": "Single Lot",
         "current_list_price": 1969000.0,
         "original_list_price": 1969000.0,
-        "dom": 8.0,
+        "dom": 12.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1522 Thornton Road"
       }
     },
@@ -638,7 +654,7 @@
         "dom": 105.0,
         "close_date": "2026-10-12",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1819 Cheshire Lane"
       }
     },
@@ -654,7 +670,7 @@
         "dom": 12.0,
         "close_date": "2026-11-06",
         "close_price": 1880000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2014 Ebony Lane"
       }
     },
@@ -667,10 +683,10 @@
         "product": "Single Lot",
         "current_list_price": 1450000.0,
         "original_list_price": 1450000.0,
-        "dom": 195.0,
+        "dom": 199.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2019 Chantilly Lane"
       }
     },
@@ -686,7 +702,7 @@
         "dom": 5.0,
         "close_date": "2026-10-16",
         "close_price": 1025000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5313 Verdome Lane"
       }
     },
@@ -702,7 +718,7 @@
         "dom": 40.0,
         "close_date": "2025-12-12",
         "close_price": 1725000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1611 Richelieu Lane"
       }
     },
@@ -718,7 +734,7 @@
         "dom": 91.0,
         "close_date": "2026-03-02",
         "close_price": 1490000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1112 Kinley Lane"
       }
     },
@@ -734,7 +750,7 @@
         "dom": 20.0,
         "close_date": "2026-03-18",
         "close_price": 1440000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1823 Ebony Lane"
       }
     },
@@ -750,7 +766,7 @@
         "dom": 91.0,
         "close_date": "2026-03-31",
         "close_price": 1357300.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2211 Saxon Drive"
       }
     },
@@ -766,7 +782,7 @@
         "dom": 42.0,
         "close_date": "2026-01-02",
         "close_price": 2125000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1322 Candlelight Lane"
       }
     },
@@ -782,7 +798,7 @@
         "dom": 8.0,
         "close_date": "2026-06-18",
         "close_price": 1825000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1306 Curtin Street"
       }
     },
@@ -798,7 +814,7 @@
         "dom": 35.0,
         "close_date": "2026-06-12",
         "close_price": 1799000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1407 Martin Street"
       }
     },
@@ -814,7 +830,7 @@
         "dom": 41.0,
         "close_date": "2026-01-14",
         "close_price": 1535000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2019 Saxon Drive"
       }
     },
@@ -830,24 +846,8 @@
         "dom": 35.0,
         "close_date": "2026-02-06",
         "close_price": 1362500.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1822 De Milo Drive"
-      }
-    },
-    "pmt_1642-viking-dr": {
-      "status": "sold",
-      "current": {
-        "mls": "3363483",
-        "status": "sold",
-        "har_status": "Sold",
-        "product": "Single Lot",
-        "current_list_price": null,
-        "original_list_price": 2099000.0,
-        "dom": 103.0,
-        "close_date": "2025-11-13",
-        "close_price": 1950000.0,
-        "as_of": "2026-11-12",
-        "address": "1642 Viking Drive"
       }
     },
     "pmt_1741-chippendale-rd": {
@@ -862,7 +862,7 @@
         "dom": 140.0,
         "close_date": "2026-03-31",
         "close_price": 1470000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1741 Chippendale Road"
       }
     },
@@ -878,7 +878,7 @@
         "dom": 22.0,
         "close_date": "2026-05-01",
         "close_price": 2050000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1719 Candlelight Lane"
       }
     },
@@ -894,7 +894,7 @@
         "dom": 22.0,
         "close_date": "2026-01-16",
         "close_price": 1945000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1526 Wakefield Drive"
       }
     },
@@ -910,7 +910,7 @@
         "dom": 7.0,
         "close_date": "2025-12-29",
         "close_price": 1795000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1314 Richelieu Lane"
       }
     },
@@ -923,10 +923,10 @@
         "product": "Single Lot",
         "current_list_price": 1075000.0,
         "original_list_price": 1075000.0,
-        "dom": 30.0,
+        "dom": 34.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5310 De Milo Drive"
       }
     },
@@ -942,7 +942,7 @@
         "dom": 13.0,
         "close_date": "2026-10-06",
         "close_price": 1140000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5213 Lido Lane"
       }
     },
@@ -955,10 +955,10 @@
         "product": "Single Lot",
         "current_list_price": 1869000.0,
         "original_list_price": 1869000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1714 Viking Drive"
       }
     },
@@ -971,10 +971,10 @@
         "product": "Single Lot",
         "current_list_price": 1725000.0,
         "original_list_price": 1725000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1714 Lamonte Lane"
       }
     },
@@ -990,7 +990,7 @@
         "dom": 41.0,
         "close_date": "2026-07-17",
         "close_price": 1900000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4902 Oak Forest Drive"
       }
     },
@@ -1006,7 +1006,7 @@
         "dom": 33.0,
         "close_date": "2026-06-16",
         "close_price": 2099000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1423 Gardenia Drive"
       }
     },
@@ -1022,7 +1022,7 @@
         "dom": 8.0,
         "close_date": "2025-11-25",
         "close_price": 1719000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1439 Martin Street"
       }
     },
@@ -1038,7 +1038,7 @@
         "dom": 5.0,
         "close_date": "2026-04-23",
         "close_price": 1750500.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1438 Wakefield Drive"
       }
     },
@@ -1054,7 +1054,7 @@
         "dom": 15.0,
         "close_date": "2026-05-26",
         "close_price": 1975000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1702 Candlelight Lane"
       }
     },
@@ -1070,7 +1070,7 @@
         "dom": 27.0,
         "close_date": "2026-04-15",
         "close_price": 1395000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4311 Piney Woods Drive"
       }
     },
@@ -1086,7 +1086,7 @@
         "dom": 13.0,
         "close_date": "2026-04-13",
         "close_price": 1549000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1710 Chantilly Lane"
       }
     },
@@ -1102,7 +1102,7 @@
         "dom": 100.0,
         "close_date": "2026-07-16",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1411 Lamonte Lane"
       }
     },
@@ -1118,7 +1118,7 @@
         "dom": 2.0,
         "close_date": "2026-04-23",
         "close_price": 1990000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1236 Martin Street"
       }
     },
@@ -1134,7 +1134,7 @@
         "dom": 2.0,
         "close_date": "2026-06-05",
         "close_price": 1625000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1622 Candlelight"
       }
     },
@@ -1150,7 +1150,7 @@
         "dom": 0.0,
         "close_date": "2026-01-27",
         "close_price": 1699000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2103 Woodcrest Drive"
       }
     },
@@ -1166,7 +1166,7 @@
         "dom": 111.0,
         "close_date": "2026-04-23",
         "close_price": 1420000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1225 Du Barry Lane"
       }
     },
@@ -1182,7 +1182,7 @@
         "dom": 18.0,
         "close_date": "2026-05-29",
         "close_price": 1595000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1614 Woodcrest Drive"
       }
     },
@@ -1198,7 +1198,7 @@
         "dom": 170.0,
         "close_date": "2026-06-03",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1441 Chamboard Lane"
       }
     },
@@ -1214,7 +1214,7 @@
         "dom": 17.0,
         "close_date": "2026-03-30",
         "close_price": 2349990.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1111 Wakefield Drive"
       }
     },
@@ -1230,7 +1230,7 @@
         "dom": 86.0,
         "close_date": "2026-04-03",
         "close_price": 1499900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1638 Wakefield Drive"
       }
     },
@@ -1246,7 +1246,7 @@
         "dom": 29.0,
         "close_date": "2026-05-07",
         "close_price": 1475000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1614 Cheshire Lane"
       }
     },
@@ -1262,7 +1262,7 @@
         "dom": 0.0,
         "close_date": "2025-12-19",
         "close_price": 1549000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1249 Lamonte Lane"
       }
     },
@@ -1278,7 +1278,7 @@
         "dom": 38.0,
         "close_date": "2026-04-30",
         "close_price": 1175000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2311 Saxon Drive"
       }
     },
@@ -1294,7 +1294,7 @@
         "dom": 1.0,
         "close_date": "2026-04-20",
         "close_price": 1759000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1243 Candlelight Lane"
       }
     },
@@ -1310,7 +1310,7 @@
         "dom": 24.0,
         "close_date": "2025-11-21",
         "close_price": 1687000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1529 Althea Drive"
       }
     },
@@ -1326,7 +1326,7 @@
         "dom": 5.0,
         "close_date": "2026-05-29",
         "close_price": 1599900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1705 Saxon Drive"
       }
     },
@@ -1342,7 +1342,7 @@
         "dom": 112.0,
         "close_date": "2026-04-29",
         "close_price": 1475000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1310 Chantilly Lane"
       }
     },
@@ -1358,7 +1358,7 @@
         "dom": 44.0,
         "close_date": "2026-05-29",
         "close_price": 1215000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1811 Du Barry Lane"
       }
     },
@@ -1374,7 +1374,7 @@
         "dom": 26.0,
         "close_date": "2026-02-25",
         "close_price": 1500000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1807 Du Barry Lane"
       }
     },
@@ -1390,7 +1390,7 @@
         "dom": 8.0,
         "close_date": "2026-06-02",
         "close_price": 1575000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1714 Hewitt Drive"
       }
     },
@@ -1406,7 +1406,7 @@
         "dom": 70.0,
         "close_date": "2026-04-17",
         "close_price": 1549000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1341 Candlelight Lane"
       }
     },
@@ -1422,24 +1422,8 @@
         "dom": 31.0,
         "close_date": "2026-06-09",
         "close_price": 1775000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1241 Du Barry Lane"
-      }
-    },
-    "act_1842-chantilly-lane": {
-      "status": "sold",
-      "current": {
-        "mls": "92526679",
-        "status": "sold",
-        "har_status": "Sold",
-        "product": "Single Lot",
-        "current_list_price": null,
-        "original_list_price": 1329000.0,
-        "dom": 20.0,
-        "close_date": "2025-11-12",
-        "close_price": 1327733.0,
-        "as_of": "2026-11-12",
-        "address": "1842 Chantilly Lane"
       }
     },
     "act_1261-wakefield-drive": {
@@ -1454,7 +1438,7 @@
         "dom": 99.0,
         "close_date": "2026-06-05",
         "close_price": 1693000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1261 Wakefield Drive"
       }
     },
@@ -1470,7 +1454,7 @@
         "dom": 0.0,
         "close_date": "2026-07-01",
         "close_price": 1810000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1543 Hewitt Drive"
       }
     },
@@ -1486,7 +1470,7 @@
         "dom": 71.0,
         "close_date": "2026-04-20",
         "close_price": 1245000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1807 Wakefield Drive"
       }
     }
@@ -1504,34 +1488,11 @@
         "product": "Single Lot",
         "current_list_price": 1699000.0,
         "original_list_price": 1799000.0,
-        "dom": 70.0,
+        "dom": 74.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "959 Althea Drive"
-      },
-      "history": [],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null
-    },
-    {
-      "member": "act_1014-gardenia-drive",
-      "pin": "act_1014-gardenia-drive",
-      "address": "1014 Gardenia Drive",
-      "status": "active",
-      "current": {
-        "mls": "93833401",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Single Lot",
-        "current_list_price": 1669999.0,
-        "original_list_price": 1694999.0,
-        "dom": 70.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "1014 Gardenia Drive"
       },
       "history": [],
       "historical_sales": [],
@@ -1550,10 +1511,10 @@
         "product": "Single Lot",
         "current_list_price": 1850000.0,
         "original_list_price": 1850000.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "955 W 42nd Street"
       },
       "history": [],
@@ -1573,10 +1534,10 @@
         "product": "Single Lot",
         "current_list_price": 2150000.0,
         "original_list_price": 2150000.0,
-        "dom": 35.0,
+        "dom": 39.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "934 W 43rd Street"
       },
       "history": [],
@@ -1596,10 +1557,10 @@
         "product": "Single Lot",
         "current_list_price": 2149000.0,
         "original_list_price": 2149000.0,
-        "dom": 14.0,
+        "dom": 18.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "515 W 33rd Street"
       },
       "history": [],
@@ -1619,11 +1580,34 @@
         "product": "Single Lot",
         "current_list_price": 2490000.0,
         "original_list_price": 2490000.0,
-        "dom": 137.0,
+        "dom": 141.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "891 W 41st Street"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_315-w-32nd-street",
+      "pin": "act_315-w-32nd-street",
+      "address": "315 W 32nd Street",
+      "status": "active",
+      "current": {
+        "mls": "44367620",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Single Lot",
+        "current_list_price": 2500000.0,
+        "original_list_price": 2500000.0,
+        "dom": 146.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-16",
+        "address": "315 W 32nd Street"
       },
       "history": [],
       "historical_sales": [],
@@ -1642,10 +1626,10 @@
         "product": "Single Lot",
         "current_list_price": 2500000.0,
         "original_list_price": 2450000.0,
-        "dom": 254.0,
+        "dom": 258.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "713 W 42nd Street"
       },
       "history": [],
@@ -1665,10 +1649,10 @@
         "product": "Single Lot",
         "current_list_price": 2589000.0,
         "original_list_price": 2589000.0,
-        "dom": 30.0,
+        "dom": 34.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "867 W 42nd Street"
       },
       "history": [],
@@ -1688,14 +1672,44 @@
         "product": "Single Lot",
         "current_list_price": 2599000.0,
         "original_list_price": 2599000.0,
-        "dom": 30.0,
+        "dom": 34.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "810 W 41st Street"
       },
       "history": [],
       "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "act_752-w-43rd-street",
+      "pin": "act_752-w-43rd-street",
+      "address": "752 W 43rd Street",
+      "status": "sold",
+      "current": {
+        "mls": "18296962",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Single Lot",
+        "current_list_price": null,
+        "original_list_price": 2999000.0,
+        "dom": 178.0,
+        "close_date": "2026-11-13",
+        "close_price": 2850000.0,
+        "as_of": "2026-11-16",
+        "address": "752 W 43rd Street"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s18296962",
+          "cd": "2026-11-13",
+          "cp": 2850000.0,
+          "a": "752 W 43rd Street"
+        }
+      ],
       "archive_current": null,
       "ordering_issue": null
     },
@@ -1711,10 +1725,10 @@
         "product": "Single Lot",
         "current_list_price": 2099000.0,
         "original_list_price": 2175000.0,
-        "dom": 85.0,
+        "dom": 89.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "539 W 34th Street"
       },
       "history": [],
@@ -1737,7 +1751,7 @@
         "dom": 89.0,
         "close_date": "2026-02-11",
         "close_price": 2175000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "765 Sue Barnett Drive"
       },
       "history": [],
@@ -1767,7 +1781,7 @@
         "dom": 26.0,
         "close_date": "2026-01-12",
         "close_price": 1750000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1030 W 41st Street"
       },
       "history": [],
@@ -1797,7 +1811,7 @@
         "dom": 9.0,
         "close_date": "2026-04-02",
         "close_price": 1699000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1032 W 41st Street"
       },
       "history": [],
@@ -1824,10 +1838,10 @@
         "product": "Single Lot",
         "current_list_price": 1795000.0,
         "original_list_price": 1795000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "963 W 41st Street"
       },
       "history": [],
@@ -1847,10 +1861,10 @@
         "product": "Single Lot",
         "current_list_price": 2500000.0,
         "original_list_price": 2500000.0,
-        "dom": 23.0,
+        "dom": 27.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "830 Azalea Street"
       },
       "history": [],
@@ -1880,7 +1894,7 @@
         "dom": 123.0,
         "close_date": "2026-07-31",
         "close_price": 1852500.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "207 W 33rd Street"
       },
       "history": [],
@@ -1910,7 +1924,7 @@
         "dom": 189.0,
         "close_date": "2026-04-24",
         "close_price": 1650000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "938 Gardenia Drive"
       },
       "history": [],
@@ -1940,7 +1954,7 @@
         "dom": 105.0,
         "close_date": "2026-05-15",
         "close_price": 1530000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "910 W 41st Street"
       },
       "history": [],
@@ -1970,7 +1984,7 @@
         "dom": 0.0,
         "close_date": "2026-02-20",
         "close_price": 1600000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "958 Gardenia Drive"
       },
       "history": [],
@@ -2000,7 +2014,7 @@
         "dom": 1.0,
         "close_date": "2026-05-29",
         "close_price": 1880400.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1046 Gardenia Drive"
       },
       "history": [],
@@ -2030,7 +2044,7 @@
         "dom": 38.0,
         "close_date": "2026-03-31",
         "close_price": 2100000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "710 Sue Barnett Drive"
       },
       "history": [],
@@ -2057,10 +2071,10 @@
         "product": "Single Lot",
         "current_list_price": 999000.0,
         "original_list_price": 999000.0,
-        "dom": 15.0,
+        "dom": 19.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5109 Lido Lane"
       },
       "history": [],
@@ -2080,10 +2094,10 @@
         "product": "Single Lot",
         "current_list_price": 1350000.0,
         "original_list_price": 1450000.0,
-        "dom": 111.0,
+        "dom": 115.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2010 Hewitt Drive"
       },
       "history": [],
@@ -2103,10 +2117,10 @@
         "product": "Single Lot",
         "current_list_price": 1575000.0,
         "original_list_price": 1575000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2031 Saxon Drive"
       },
       "history": [],
@@ -2126,10 +2140,10 @@
         "product": "Single Lot",
         "current_list_price": 1539000.0,
         "original_list_price": 1539000.0,
-        "dom": 10.0,
+        "dom": 14.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1414 Du Barry Lane"
       },
       "history": [],
@@ -2152,7 +2166,7 @@
         "dom": 20.0,
         "close_date": "2026-09-08",
         "close_price": 1525000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1527 Thornton"
       },
       "history": [],
@@ -2182,7 +2196,7 @@
         "dom": 49.0,
         "close_date": "2026-09-02",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1431 Curtin Street"
       },
       "history": [],
@@ -2212,7 +2226,7 @@
         "dom": 207.0,
         "close_date": "2026-08-28",
         "close_price": 1600000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1316 Althea Drive"
       },
       "history": [],
@@ -2239,10 +2253,10 @@
         "product": "Single Lot",
         "current_list_price": 1875000.0,
         "original_list_price": 1875000.0,
-        "dom": 22.0,
+        "dom": 26.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1335 Gardenia Drive"
       },
       "history": [],
@@ -2262,10 +2276,10 @@
         "product": "Single Lot",
         "current_list_price": 1850000.0,
         "original_list_price": 1850000.0,
-        "dom": 11.0,
+        "dom": 15.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1326 Curtin Street"
       },
       "history": [],
@@ -2288,7 +2302,7 @@
         "dom": 61.0,
         "close_date": "2026-10-13",
         "close_price": 1979000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1411 Thornton Road"
       },
       "history": [],
@@ -2315,10 +2329,10 @@
         "product": "Single Lot",
         "current_list_price": 2388000.0,
         "original_list_price": 2388000.0,
-        "dom": 44.0,
+        "dom": 48.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1519 Candlelight Lane"
       },
       "history": [],
@@ -2338,10 +2352,10 @@
         "product": "Single Lot",
         "current_list_price": 2350000.0,
         "original_list_price": 2350000.0,
-        "dom": 156.0,
+        "dom": 160.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1402 Du Barry Lane"
       },
       "history": [],
@@ -2361,10 +2375,10 @@
         "product": "Single Lot",
         "current_list_price": 2395000.0,
         "original_list_price": 2475000.0,
-        "dom": 1.0,
+        "dom": 5.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1237 Althea Drive"
       },
       "history": [],
@@ -2387,7 +2401,7 @@
         "dom": 181.0,
         "close_date": "2026-11-04",
         "close_price": 1680000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1226 Du Barry Lane"
       },
       "history": [],
@@ -2414,10 +2428,10 @@
         "product": "Single Lot",
         "current_list_price": 2188000.0,
         "original_list_price": 2188000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1225 Wakefield Drive"
       },
       "history": [],
@@ -2437,10 +2451,10 @@
         "product": "Single Lot",
         "current_list_price": 1495000.0,
         "original_list_price": 1495000.0,
-        "dom": 435.0,
+        "dom": 439.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1725 Ebony Lane"
       },
       "history": [],
@@ -2460,10 +2474,10 @@
         "product": "Single Lot",
         "current_list_price": 1489900.0,
         "original_list_price": 1499900.0,
-        "dom": 74.0,
+        "dom": 78.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1721 Chantilly Lane"
       },
       "history": [],
@@ -2483,10 +2497,10 @@
         "product": "Single Lot",
         "current_list_price": 1969000.0,
         "original_list_price": 1969000.0,
-        "dom": 8.0,
+        "dom": 12.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1522 Thornton Road"
       },
       "history": [],
@@ -2509,7 +2523,7 @@
         "dom": 105.0,
         "close_date": "2026-10-12",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1819 Cheshire Lane"
       },
       "history": [],
@@ -2539,7 +2553,7 @@
         "dom": 12.0,
         "close_date": "2026-11-06",
         "close_price": 1880000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2014 Ebony Lane"
       },
       "history": [],
@@ -2566,10 +2580,10 @@
         "product": "Single Lot",
         "current_list_price": 1450000.0,
         "original_list_price": 1450000.0,
-        "dom": 195.0,
+        "dom": 199.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2019 Chantilly Lane"
       },
       "history": [],
@@ -2592,7 +2606,7 @@
         "dom": 5.0,
         "close_date": "2026-10-16",
         "close_price": 1025000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5313 Verdome Lane"
       },
       "history": [],
@@ -2622,7 +2636,7 @@
         "dom": 40.0,
         "close_date": "2025-12-12",
         "close_price": 1725000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1611 Richelieu Lane"
       },
       "history": [],
@@ -2652,7 +2666,7 @@
         "dom": 91.0,
         "close_date": "2026-03-02",
         "close_price": 1490000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1112 Kinley Lane"
       },
       "history": [],
@@ -2682,7 +2696,7 @@
         "dom": 20.0,
         "close_date": "2026-03-18",
         "close_price": 1440000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1823 Ebony Lane"
       },
       "history": [],
@@ -2712,7 +2726,7 @@
         "dom": 91.0,
         "close_date": "2026-03-31",
         "close_price": 1357300.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2211 Saxon Drive"
       },
       "history": [],
@@ -2742,7 +2756,7 @@
         "dom": 42.0,
         "close_date": "2026-01-02",
         "close_price": 2125000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1322 Candlelight Lane"
       },
       "history": [],
@@ -2772,7 +2786,7 @@
         "dom": 8.0,
         "close_date": "2026-06-18",
         "close_price": 1825000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1306 Curtin Street"
       },
       "history": [],
@@ -2802,7 +2816,7 @@
         "dom": 35.0,
         "close_date": "2026-06-12",
         "close_price": 1799000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1407 Martin Street"
       },
       "history": [],
@@ -2832,7 +2846,7 @@
         "dom": 41.0,
         "close_date": "2026-01-14",
         "close_price": 1535000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2019 Saxon Drive"
       },
       "history": [],
@@ -2862,7 +2876,7 @@
         "dom": 35.0,
         "close_date": "2026-02-06",
         "close_price": 1362500.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1822 De Milo Drive"
       },
       "history": [],
@@ -2872,36 +2886,6 @@
           "cd": "2026-02-06",
           "cp": 1362500.0,
           "a": "1822 De Milo Drive"
-        }
-      ],
-      "archive_current": null,
-      "ordering_issue": null
-    },
-    {
-      "member": "pmt_1642-viking-dr",
-      "pin": "pmt_1642-viking-dr",
-      "address": "1642 VIKING DR, Houston, TX 77018",
-      "status": "sold",
-      "current": {
-        "mls": "3363483",
-        "status": "sold",
-        "har_status": "Sold",
-        "product": "Single Lot",
-        "current_list_price": null,
-        "original_list_price": 2099000.0,
-        "dom": 103.0,
-        "close_date": "2025-11-13",
-        "close_price": 1950000.0,
-        "as_of": "2026-11-12",
-        "address": "1642 Viking Drive"
-      },
-      "history": [],
-      "historical_sales": [
-        {
-          "id": "s3363483",
-          "cd": "2025-11-13",
-          "cp": 1950000.0,
-          "a": "1642 Viking Drive"
         }
       ],
       "archive_current": null,
@@ -2922,7 +2906,7 @@
         "dom": 140.0,
         "close_date": "2026-03-31",
         "close_price": 1470000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1741 Chippendale Road"
       },
       "history": [],
@@ -2952,7 +2936,7 @@
         "dom": 22.0,
         "close_date": "2026-05-01",
         "close_price": 2050000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1719 Candlelight Lane"
       },
       "history": [],
@@ -2982,7 +2966,7 @@
         "dom": 22.0,
         "close_date": "2026-01-16",
         "close_price": 1945000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1526 Wakefield Drive"
       },
       "history": [],
@@ -3012,7 +2996,7 @@
         "dom": 7.0,
         "close_date": "2025-12-29",
         "close_price": 1795000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1314 Richelieu Lane"
       },
       "history": [],
@@ -3039,10 +3023,10 @@
         "product": "Single Lot",
         "current_list_price": 1075000.0,
         "original_list_price": 1075000.0,
-        "dom": 30.0,
+        "dom": 34.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5310 De Milo Drive"
       },
       "history": [],
@@ -3065,7 +3049,7 @@
         "dom": 13.0,
         "close_date": "2026-10-06",
         "close_price": 1140000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "5213 Lido Lane"
       },
       "history": [],
@@ -3092,10 +3076,10 @@
         "product": "Single Lot",
         "current_list_price": 1869000.0,
         "original_list_price": 1869000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1714 Viking Drive"
       },
       "history": [],
@@ -3115,10 +3099,10 @@
         "product": "Single Lot",
         "current_list_price": 1725000.0,
         "original_list_price": 1725000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1714 Lamonte Lane"
       },
       "history": [],
@@ -3141,7 +3125,7 @@
         "dom": 41.0,
         "close_date": "2026-07-17",
         "close_price": 1900000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4902 Oak Forest Drive"
       },
       "history": [],
@@ -3171,7 +3155,7 @@
         "dom": 33.0,
         "close_date": "2026-06-16",
         "close_price": 2099000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1423 Gardenia Drive"
       },
       "history": [],
@@ -3201,7 +3185,7 @@
         "dom": 8.0,
         "close_date": "2025-11-25",
         "close_price": 1719000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1439 Martin Street"
       },
       "history": [],
@@ -3231,7 +3215,7 @@
         "dom": 5.0,
         "close_date": "2026-04-23",
         "close_price": 1750500.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1438 Wakefield Drive"
       },
       "history": [],
@@ -3261,7 +3245,7 @@
         "dom": 15.0,
         "close_date": "2026-05-26",
         "close_price": 1975000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1702 Candlelight Lane"
       },
       "history": [],
@@ -3291,7 +3275,7 @@
         "dom": 27.0,
         "close_date": "2026-04-15",
         "close_price": 1395000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4311 Piney Woods Drive"
       },
       "history": [],
@@ -3321,7 +3305,7 @@
         "dom": 13.0,
         "close_date": "2026-04-13",
         "close_price": 1549000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1710 Chantilly Lane"
       },
       "history": [],
@@ -3351,7 +3335,7 @@
         "dom": 100.0,
         "close_date": "2026-07-16",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1411 Lamonte Lane"
       },
       "history": [],
@@ -3381,7 +3365,7 @@
         "dom": 2.0,
         "close_date": "2026-04-23",
         "close_price": 1990000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1236 Martin Street"
       },
       "history": [],
@@ -3411,7 +3395,7 @@
         "dom": 2.0,
         "close_date": "2026-06-05",
         "close_price": 1625000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1622 Candlelight"
       },
       "history": [],
@@ -3441,7 +3425,7 @@
         "dom": 0.0,
         "close_date": "2026-01-27",
         "close_price": 1699000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2103 Woodcrest Drive"
       },
       "history": [],
@@ -3471,7 +3455,7 @@
         "dom": 111.0,
         "close_date": "2026-04-23",
         "close_price": 1420000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1225 Du Barry Lane"
       },
       "history": [],
@@ -3501,7 +3485,7 @@
         "dom": 18.0,
         "close_date": "2026-05-29",
         "close_price": 1595000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1614 Woodcrest Drive"
       },
       "history": [],
@@ -3531,7 +3515,7 @@
         "dom": 170.0,
         "close_date": "2026-06-03",
         "close_price": 1550000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1441 Chamboard Lane"
       },
       "history": [],
@@ -3561,7 +3545,7 @@
         "dom": 17.0,
         "close_date": "2026-03-30",
         "close_price": 2349990.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1111 Wakefield Drive"
       },
       "history": [],
@@ -3591,7 +3575,7 @@
         "dom": 86.0,
         "close_date": "2026-04-03",
         "close_price": 1499900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1638 Wakefield Drive"
       },
       "history": [],
@@ -3621,7 +3605,7 @@
         "dom": 29.0,
         "close_date": "2026-05-07",
         "close_price": 1475000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1614 Cheshire Lane"
       },
       "history": [],
@@ -3651,7 +3635,7 @@
         "dom": 0.0,
         "close_date": "2025-12-19",
         "close_price": 1549000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1249 Lamonte Lane"
       },
       "history": [],
@@ -3681,7 +3665,7 @@
         "dom": 38.0,
         "close_date": "2026-04-30",
         "close_price": 1175000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2311 Saxon Drive"
       },
       "history": [],
@@ -3711,7 +3695,7 @@
         "dom": 1.0,
         "close_date": "2026-04-20",
         "close_price": 1759000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1243 Candlelight Lane"
       },
       "history": [],
@@ -3741,7 +3725,7 @@
         "dom": 24.0,
         "close_date": "2025-11-21",
         "close_price": 1687000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1529 Althea Drive"
       },
       "history": [],
@@ -3771,7 +3755,7 @@
         "dom": 5.0,
         "close_date": "2026-05-29",
         "close_price": 1599900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1705 Saxon Drive"
       },
       "history": [],
@@ -3801,7 +3785,7 @@
         "dom": 112.0,
         "close_date": "2026-04-29",
         "close_price": 1475000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1310 Chantilly Lane"
       },
       "history": [],
@@ -3831,7 +3815,7 @@
         "dom": 44.0,
         "close_date": "2026-05-29",
         "close_price": 1215000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1811 Du Barry Lane"
       },
       "history": [],
@@ -3861,7 +3845,7 @@
         "dom": 26.0,
         "close_date": "2026-02-25",
         "close_price": 1500000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1807 Du Barry Lane"
       },
       "history": [],
@@ -3891,7 +3875,7 @@
         "dom": 8.0,
         "close_date": "2026-06-02",
         "close_price": 1575000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1714 Hewitt Drive"
       },
       "history": [],
@@ -3921,7 +3905,7 @@
         "dom": 70.0,
         "close_date": "2026-04-17",
         "close_price": 1549000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1341 Candlelight Lane"
       },
       "history": [],
@@ -3951,7 +3935,7 @@
         "dom": 31.0,
         "close_date": "2026-06-09",
         "close_price": 1775000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1241 Du Barry Lane"
       },
       "history": [],
@@ -3961,36 +3945,6 @@
           "cd": "2026-06-09",
           "cp": 1775000.0,
           "a": "1241 Du Barry Lane"
-        }
-      ],
-      "archive_current": null,
-      "ordering_issue": null
-    },
-    {
-      "member": "act_1842-chantilly-lane",
-      "pin": "act_1842-chantilly-lane",
-      "address": "1842 Chantilly Lane",
-      "status": "sold",
-      "current": {
-        "mls": "92526679",
-        "status": "sold",
-        "har_status": "Sold",
-        "product": "Single Lot",
-        "current_list_price": null,
-        "original_list_price": 1329000.0,
-        "dom": 20.0,
-        "close_date": "2025-11-12",
-        "close_price": 1327733.0,
-        "as_of": "2026-11-12",
-        "address": "1842 Chantilly Lane"
-      },
-      "history": [],
-      "historical_sales": [
-        {
-          "id": "s92526679",
-          "cd": "2025-11-12",
-          "cp": 1327733.0,
-          "a": "1842 Chantilly Lane"
         }
       ],
       "archive_current": null,
@@ -4011,7 +3965,7 @@
         "dom": 99.0,
         "close_date": "2026-06-05",
         "close_price": 1693000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1261 Wakefield Drive"
       },
       "history": [],
@@ -4041,7 +3995,7 @@
         "dom": 0.0,
         "close_date": "2026-07-01",
         "close_price": 1810000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1543 Hewitt Drive"
       },
       "history": [],
@@ -4071,7 +4025,7 @@
         "dom": 71.0,
         "close_date": "2026-04-20",
         "close_price": 1245000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1807 Wakefield Drive"
       },
       "history": [],
@@ -4088,10 +4042,10 @@
     }
   ],
   "coverage": {
-    "active": 42,
+    "active": 43,
     "pending": 0,
-    "sold": 83,
+    "sold": 82,
     "terminated": 0,
-    "linked": 93
+    "linked": 92
   }
 }

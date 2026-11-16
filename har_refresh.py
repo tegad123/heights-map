@@ -20,13 +20,14 @@ from collections import Counter, defaultdict
 from datetime import date, timedelta
 from pathlib import Path
 
-from deed_ingest import span
+from active_ingest import market_key
+from deed_ingest import load_overrides, normalize, span
 from har_markets import (
     assign_market, listing_reason, load_zones, product_for, status_bucket, writable_markets,
 )
 from market_address import address_key
 from market_config import MARKETS
-from sold_classification import MIN_LOT_SQFT, MIN_YEAR_BUILT
+from sold_classification import MIN_LOT_SQFT, MIN_YEAR_BUILT, lot_floor_reason
 from sold_ingest import metrics_for, money, parse_close, refresh_derived
 
 ROOT = Path(__file__).resolve().parent
@@ -86,7 +87,7 @@ def active_record(row, line, filename, digest, as_of, bucket):
         lot_sqft=lot,
         product=product_for(row),
         builder=blank(row.get('Builder Name')),
-        list_agent=blank(row.get('List Agent Full Name')),
+        list_agent='',
         year_built=money(row.get('Year Built')),
         lat=money(row.get('Latitude')),
         lng=money(row.get('Longitude')),
@@ -120,8 +121,8 @@ def sold_record(row, as_of):
         har_psf=None,
         bl=blank(row.get('Builder Name')),
         sch=blank(row.get('School Elementary')),
-        la=blank(row.get('List Agent Full Name')),
-        ba=blank(row.get('Selling Agent Full Name')),
+        la='',
+        ba='',
         coh='nc',
     )
     if original:
@@ -129,6 +130,69 @@ def sold_record(row, as_of):
     if dom == 0:
         record['p'] = 1
     return record
+
+
+def scrub_sale(row):
+    """Agent names are not stored. Builder and school stay."""
+    row['la'] = ''
+    row['ba'] = ''
+    return row
+
+
+def pinned_markets():
+    """market_key -> markets whose DATA already shows that address."""
+    found = defaultdict(set)
+    pages = [(name, cfg['html']) for name, cfg in MARKETS.items()]
+    if 'springvalley' not in MARKETS:
+        pages.append(('springvalley', 'springvalley.html'))
+    for name, html_name in pages:
+        for row in span((ROOT / html_name).read_text(), 'DATA')[2]:
+            key = market_key(row.get('a'))
+            if key:
+                found[key].add(name)
+    return found
+
+
+def preferred_market(address, candidates, pinned, overrides):
+    """One map for an address. None when the candidates still disagree."""
+    owners = pinned.get(market_key(address), set()) & set(candidates)
+    if len(owners) == 1:
+        return next(iter(owners))
+    override = overrides.get(normalize(address))
+    if override in candidates:
+        return override
+    if len(candidates) == 1:
+        return next(iter(candidates))
+    return None
+
+
+def merge_sold(existing, incoming, as_of):
+    """Keep the trailing year. This week's export adds and refreshes; it does not erase older comps."""
+    today = date.fromisoformat(as_of)
+    start = today - timedelta(days=365)
+    by_id = {}
+    for row in existing:
+        by_id[row['id']] = scrub_sale(dict(row))
+    added = updated = 0
+    for row in incoming:
+        scrub_sale(row)
+        if row['id'] in by_id:
+            updated += 1
+        else:
+            added += 1
+        by_id[row['id']] = row
+    kept, aged = [], []
+    for row in by_id.values():
+        closed = date.fromisoformat(row['cd'])
+        if closed < start or closed > today:
+            aged.append(dict(id=row['id'], address=row.get('a'), reason='OUTSIDE_365_DAY_COMP_WINDOW'))
+            continue
+        floor = lot_floor_reason(row.get('lot'))
+        if floor:
+            aged.append(dict(id=row['id'], address=row.get('a'), reason=floor))
+            continue
+        kept.append(row)
+    return refresh_derived(kept, today), added, updated, aged
 
 
 def current_from_listing(listing, as_of):
@@ -229,6 +293,8 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
     if unknown:
         raise ValueError('Refusing Heights or unknown market: ' + ', '.join(unknown))
     zones = load_zones()
+    overrides = load_overrides()
+    pinned = pinned_markets()
     actives_raw, active_digest, active_name = read_csv(active_path)
     solds_raw, sold_digest, sold_name = read_csv(sold_path)
     per = {name: dict(active=[], pending=[], terminated=[], sold=[], dropped=Counter()) for name in write_markets}
@@ -247,8 +313,8 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
             unassigned['INVALID_REQUIRED_FIELD'] += 1
             ledger.append(dict(FILE=filename, SHA256=digest, ROW=line, MLS=mls, ADDRESS=address, MARKET='', REASON='INVALID_REQUIRED_FIELD'))
             return
-        market, geo_reason, detail = assign_market(lat, lng, address, zones)
-        if geo_reason in ('AMBIGUOUS_MARKET', 'OUT_OF_MARKET', 'INVALID_COORDINATES') or market is None:
+        market, geo_reason, detail = assign_market(lat, lng, address, zones, overrides)
+        if geo_reason in ('AMBIGUOUS_MARKET', 'OUT_OF_MARKET', 'INVALID_COORDINATES', 'OVERRIDE_MARKET') or market is None:
             reason = geo_reason or 'OUT_OF_MARKET'
             unassigned[reason] += 1
             if reason == 'AMBIGUOUS_MARKET':
@@ -263,6 +329,11 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
             per['heights']['dropped'][reason] += 1
             heights_rows.append(dict(address=address, mls=mls, file=filename, lot=row.get('Lot Size'), year=row.get('Year Built')))
             ledger.append(dict(FILE=filename, SHA256=digest, ROW=line, MLS=mls, ADDRESS=address, MARKET='heights', REASON=reason))
+            return
+        owners = pinned.get(market_key(address), set())
+        if owners and market not in owners:
+            per[market]['dropped']['ALREADY_ON_OTHER_MARKET'] += 1
+            ledger.append(dict(FILE=filename, SHA256=digest, ROW=line, MLS=mls, ADDRESS=address, MARKET=market, REASON='ALREADY_ON_OTHER_MARKET'))
             return
         if market not in per:
             unassigned['MARKET_NOT_IN_PASS'] += 1
@@ -290,12 +361,38 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
     for line, row in enumerate(solds_raw, 2):
         take('sold', sold_name, sold_digest, line, row)
 
+    # One address on one market, even when two coordinates disagree.
+    cross_market = []
+    grouped = defaultdict(list)
+    for name in write_markets:
+        for kind in ('active', 'pending', 'terminated', 'sold'):
+            for index, row in enumerate(per[name][kind]):
+                address = row['a'] if kind == 'sold' else row['address']
+                grouped[market_key(address)].append((name, kind, index, address))
+    drop_at = defaultdict(set)
+    for key, items in grouped.items():
+        markets = {item[0] for item in items}
+        if len(markets) < 2:
+            continue
+        keep = preferred_market(items[0][3], markets, pinned, overrides)
+        for name, kind, index, address in items:
+            if name == keep:
+                continue
+            drop_at[(name, kind)].add(index)
+            cross_market.append(dict(address=address, kept=keep, dropped=name, kind=kind))
+            per[name]['dropped']['ALREADY_ON_OTHER_MARKET'] += 1
+    for (name, kind), indexes in drop_at.items():
+        per[name][kind] = [row for index, row in enumerate(per[name][kind]) if index not in indexes]
+
     outputs = {}
     summaries = {}
     eyeballs = []
     for name in write_markets:
         bucket = per[name]
-        sales = refresh_derived(bucket['sold'], date.fromisoformat(as_of))
+        sold_path = ROOT / (name + '_sold.data.json')
+        existing_sales = json.loads(sold_path.read_text())['comps'] if sold_path.exists() else []
+        existing_sales = [row for row in existing_sales if not pinned.get(market_key(row.get('a')), set()) - {name}]
+        sales, sold_added, sold_updated, aged = merge_sold(existing_sales, bucket['sold'], as_of)
         if any(row.get('prod') not in ('Single Lot', 'Split Lot') for row in sales):
             raise ValueError(name + ': sold comp missing a lot class')
         metrics = metrics_for(sales, date.fromisoformat(as_of))
@@ -312,7 +409,7 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
             end=as_of,
             source=sold_name,
             min_lot_sqft=MIN_LOT_SQFT,
-            coverage='HAR export assigned by market boundary or coordinate box',
+            coverage='Trailing 365 days. This export adds and refreshes sales; it does not replace the prior year.',
         )
         active_doc = dict(
             as_of=as_of,
@@ -350,6 +447,10 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
             ),
             sold=dict(
                 accepted=len(sales),
+                incoming=len(bucket['sold']),
+                added=sold_added,
+                updated=sold_updated,
+                aged=len(aged),
                 single=sum(row['prod'] == 'Single Lot' for row in sales),
                 split=sum(row['prod'] == 'Split Lot' for row in sales),
             ),
@@ -377,6 +478,7 @@ def run(active_path, sold_path, as_of, apply=False, markets=None):
         markets=summaries,
         unassigned=dict(unassigned),
         ambiguous=ambiguous,
+        cross_market=cross_market,
         heights_withheld=heights_rows,
         eyeball=eyeballs,
         ledger_rows=len(ledger),

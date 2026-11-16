@@ -1,7 +1,23 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-16",
   "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
   "properties": {
+    "act_4317-roseland-street-a": {
+      "status": "sold",
+      "current": {
+        "mls": "52705553",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 699900.0,
+        "dom": 107.0,
+        "close_date": "2026-11-13",
+        "close_price": 699900.0,
+        "as_of": "2026-11-16",
+        "address": "4317 Roseland Street Unit#A"
+      }
+    },
     "act_4317-roseland-street-b": {
       "status": "active",
       "current": {
@@ -11,10 +27,10 @@
         "product": "Split Lot",
         "current_list_price": 749900.0,
         "original_list_price": 774900.0,
-        "dom": 120.0,
+        "dom": 124.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4317 Roseland Street Unit#B"
       }
     },
@@ -27,10 +43,10 @@
         "product": "Split Lot",
         "current_list_price": 854900.0,
         "original_list_price": 879900.0,
-        "dom": 49.0,
+        "dom": 53.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4207 Driscoll Street"
       }
     },
@@ -43,10 +59,10 @@
         "product": "Split Lot",
         "current_list_price": 1069900.0,
         "original_list_price": 1069900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2412 ELMEN Street"
       }
     },
@@ -62,7 +78,7 @@
         "dom": 40.0,
         "close_date": "2026-11-12",
         "close_price": 1089900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1634 CASTLE Court"
       }
     },
@@ -75,10 +91,10 @@
         "product": "Split Lot",
         "current_list_price": 1199900.0,
         "original_list_price": 1199900.0,
-        "dom": 115.0,
+        "dom": 119.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1817 BRANARD Street"
       }
     },
@@ -91,27 +107,11 @@
         "product": "Split Lot",
         "current_list_price": 1199900.0,
         "original_list_price": 1199900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1521 NEVADA Street"
-      }
-    },
-    "act_2413-brun-street-a": {
-      "status": "active",
-      "current": {
-        "mls": "73142561",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Split Lot",
-        "current_list_price": 1289900.0,
-        "original_list_price": 1289900.0,
-        "dom": 115.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "2413 BRUN Street Unit#A"
       }
     },
     "act_3909-driscoll-street": {
@@ -123,10 +123,10 @@
         "product": "Single Lot",
         "current_list_price": 1299900.0,
         "original_list_price": 1299900.0,
-        "dom": 20.0,
+        "dom": 24.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "3909 DRISCOLL Street"
       }
     },
@@ -142,7 +142,7 @@
         "dom": 110.0,
         "close_date": "2026-10-07",
         "close_price": 1265000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1601 VERMONT Street"
       }
     },
@@ -155,10 +155,10 @@
         "product": "Split Lot",
         "current_list_price": 1399900.0,
         "original_list_price": 1399900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1907 SUL ROSS Street"
       }
     },
@@ -171,10 +171,10 @@
         "product": "Single Lot",
         "current_list_price": 1549900.0,
         "original_list_price": 1549900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1822 BRANARD Street Unit#B"
       }
     },
@@ -187,10 +187,10 @@
         "product": "Single Lot",
         "current_list_price": 1699900.0,
         "original_list_price": 1699900.0,
-        "dom": 139.0,
+        "dom": 143.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "805 BOMAR Street"
       }
     },
@@ -206,7 +206,7 @@
         "dom": 99.0,
         "close_date": "2026-10-09",
         "close_price": 1750000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "508 Willard Street"
       }
     },
@@ -219,10 +219,10 @@
         "product": "Single Lot",
         "current_list_price": 1899900.0,
         "original_list_price": 1899900.0,
-        "dom": 77.0,
+        "dom": 81.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1824 MARSHALL Street"
       }
     },
@@ -238,7 +238,7 @@
         "dom": 9.0,
         "close_date": "2026-09-25",
         "close_price": 1950000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1642 Norfolk Street"
       }
     },
@@ -251,10 +251,10 @@
         "product": "Single Lot",
         "current_list_price": 1999900.0,
         "original_list_price": 1999900.0,
-        "dom": 98.0,
+        "dom": 102.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1511 KIPLING Street"
       }
     },
@@ -267,10 +267,10 @@
         "product": "Single Lot",
         "current_list_price": 2050000.0,
         "original_list_price": 2050000.0,
-        "dom": 28.0,
+        "dom": 32.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2415 Elmen Street"
       }
     },
@@ -283,10 +283,10 @@
         "product": "Single Lot",
         "current_list_price": 2250000.0,
         "original_list_price": 2350000.0,
-        "dom": 41.0,
+        "dom": 45.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1606 Hazard Street"
       }
     },
@@ -299,10 +299,10 @@
         "product": "Single Lot",
         "current_list_price": 2410000.0,
         "original_list_price": 4100000.0,
-        "dom": 20.0,
+        "dom": 24.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1523 Marshall Street"
       }
     },
@@ -318,7 +318,7 @@
         "dom": 62.0,
         "close_date": "2026-06-24",
         "close_price": 1069900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1312 CASTLE Court Unit#A"
       }
     },
@@ -334,7 +334,7 @@
         "dom": 8.0,
         "close_date": "2026-07-13",
         "close_price": 980000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1644 Bonnie Brae Street"
       }
     },
@@ -347,10 +347,10 @@
         "product": "Split Lot",
         "current_list_price": 1200000.0,
         "original_list_price": 1200000.0,
-        "dom": 50.0,
+        "dom": 54.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "720 Peden Street"
       }
     },
@@ -366,7 +366,7 @@
         "dom": 0.0,
         "close_date": "2026-06-15",
         "close_price": 1650000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1415 Harold Street"
       }
     },
@@ -379,10 +379,10 @@
         "product": "Split Lot",
         "current_list_price": 1069900.0,
         "original_list_price": 1069900.0,
-        "dom": 21.0,
+        "dom": 25.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1636 CASTLE Court"
       }
     },
@@ -395,10 +395,10 @@
         "product": "Single Lot",
         "current_list_price": 2599000.0,
         "original_list_price": 2599000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1312 Vassar Street"
       }
     },
@@ -414,7 +414,7 @@
         "dom": 17.0,
         "close_date": "2026-07-31",
         "close_price": 1650000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1501 Bonnie Brae Street"
       }
     },
@@ -430,7 +430,7 @@
         "dom": 0.0,
         "close_date": "2026-08-11",
         "close_price": 1334350.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1603 VERMONT Street"
       }
     },
@@ -443,10 +443,10 @@
         "product": "Split Lot",
         "current_list_price": 1300000.0,
         "original_list_price": 1300000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1811 Sul Ross Street"
       }
     },
@@ -462,7 +462,7 @@
         "dom": 34.0,
         "close_date": "2026-08-26",
         "close_price": 951273.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4203 Driscoll Street"
       }
     },
@@ -475,10 +475,10 @@
         "product": "Split Lot",
         "current_list_price": 1169900.0,
         "original_list_price": 1169900.0,
-        "dom": 51.0,
+        "dom": 55.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1820 BRANARD Street"
       }
     },
@@ -494,7 +494,7 @@
         "dom": 144.0,
         "close_date": "2026-05-27",
         "close_price": 1479900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1306 CROCKER Street"
       }
     },
@@ -510,8 +510,24 @@
         "dom": 31.0,
         "close_date": "2026-07-24",
         "close_price": 2150000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1606 Woodhead Street"
+      }
+    },
+    "pmt_1918-huldy-st": {
+      "status": "active",
+      "current": {
+        "mls": "30439440",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1475000.0,
+        "original_list_price": 1475000.0,
+        "dom": 3.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-16",
+        "address": "1918 Huldy Street"
       }
     },
     "pmt_1906-driscoll-st": {
@@ -526,8 +542,24 @@
         "dom": 4.0,
         "close_date": "2026-07-31",
         "close_price": 2075000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1906 Driscoll Street"
+      }
+    },
+    "pmt_2413-brun-st-b": {
+      "status": "active",
+      "current": {
+        "mls": "50111081",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1289900.0,
+        "original_list_price": 1289900.0,
+        "dom": 4.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-16",
+        "address": "2413 BRUN Street Unit#B"
       }
     },
     "pmt_2202-huldy-st": {
@@ -539,10 +571,10 @@
         "product": "Split Lot",
         "current_list_price": 1129000.0,
         "original_list_price": 1129000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2202 Huldy Street"
       }
     },
@@ -555,10 +587,10 @@
         "product": "Split Lot",
         "current_list_price": 1129000.0,
         "original_list_price": 1129000.0,
-        "dom": 20.0,
+        "dom": 24.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2204 Huldy Street"
       }
     },
@@ -574,7 +606,7 @@
         "dom": 81.0,
         "close_date": "2026-07-24",
         "close_price": 825000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1810 Hazard Street Unit#A"
       }
     },
@@ -590,7 +622,7 @@
         "dom": 178.0,
         "close_date": "2026-09-04",
         "close_price": 1240000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "409 W Saulnier Street"
       }
     },
@@ -603,43 +635,11 @@
         "product": "Single Lot",
         "current_list_price": 1699900.0,
         "original_list_price": 1699900.0,
-        "dom": 92.0,
+        "dom": 96.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1120 WELCH Street"
-      }
-    },
-    "acq_2415-elmen-st": {
-      "status": "active",
-      "current": {
-        "mls": "10315678",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Single Lot",
-        "current_list_price": 2050000.0,
-        "original_list_price": 2050000.0,
-        "dom": 28.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "2415 Elmen Street"
-      }
-    },
-    "acq_1907-sul-ross-st": {
-      "status": "active",
-      "current": {
-        "mls": "5401188",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Split Lot",
-        "current_list_price": 1399900.0,
-        "original_list_price": 1399900.0,
-        "dom": 37.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "1907 SUL ROSS Street"
       }
     },
     "pmt_1638-castle-ct-77006": {
@@ -651,15 +651,45 @@
         "product": "Split Lot",
         "current_list_price": 1139900.0,
         "original_list_price": 1139900.0,
-        "dom": 57.0,
+        "dom": 61.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1638 CASTLE Court"
       }
     }
   },
   "tracked": [
+    {
+      "member": "act_4317-roseland-street-a",
+      "pin": "act_4317-roseland-street-a",
+      "address": "4317 Roseland Street #A, Houston, TX 77006",
+      "status": "sold",
+      "current": {
+        "mls": "52705553",
+        "status": "sold",
+        "har_status": "Sold",
+        "product": "Split Lot",
+        "current_list_price": null,
+        "original_list_price": 699900.0,
+        "dom": 107.0,
+        "close_date": "2026-11-13",
+        "close_price": 699900.0,
+        "as_of": "2026-11-16",
+        "address": "4317 Roseland Street Unit#A"
+      },
+      "history": [],
+      "historical_sales": [
+        {
+          "id": "s52705553",
+          "cd": "2026-11-13",
+          "cp": 699900.0,
+          "a": "4317 Roseland Street Unit#A"
+        }
+      ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
     {
       "member": "act_4317-roseland-street-b",
       "pin": "act_4317-roseland-street-b",
@@ -672,10 +702,10 @@
         "product": "Split Lot",
         "current_list_price": 749900.0,
         "original_list_price": 774900.0,
-        "dom": 120.0,
+        "dom": 124.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4317 Roseland Street Unit#B"
       },
       "history": [],
@@ -695,10 +725,10 @@
         "product": "Split Lot",
         "current_list_price": 854900.0,
         "original_list_price": 879900.0,
-        "dom": 49.0,
+        "dom": 53.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4207 Driscoll Street"
       },
       "history": [],
@@ -718,10 +748,10 @@
         "product": "Split Lot",
         "current_list_price": 1069900.0,
         "original_list_price": 1069900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2412 ELMEN Street"
       },
       "history": [],
@@ -744,7 +774,7 @@
         "dom": 40.0,
         "close_date": "2026-11-12",
         "close_price": 1089900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1634 CASTLE Court"
       },
       "history": [],
@@ -771,10 +801,10 @@
         "product": "Split Lot",
         "current_list_price": 1199900.0,
         "original_list_price": 1199900.0,
-        "dom": 115.0,
+        "dom": 119.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1817 BRANARD Street"
       },
       "history": [],
@@ -794,34 +824,11 @@
         "product": "Split Lot",
         "current_list_price": 1199900.0,
         "original_list_price": 1199900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1521 NEVADA Street"
-      },
-      "history": [],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null
-    },
-    {
-      "member": "act_2413-brun-street-a",
-      "pin": "act_2413-brun-street-a",
-      "address": "2413 BRUN Street #A, Houston, TX 77019",
-      "status": "active",
-      "current": {
-        "mls": "73142561",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Split Lot",
-        "current_list_price": 1289900.0,
-        "original_list_price": 1289900.0,
-        "dom": 115.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "2413 BRUN Street Unit#A"
       },
       "history": [],
       "historical_sales": [],
@@ -840,10 +847,10 @@
         "product": "Single Lot",
         "current_list_price": 1299900.0,
         "original_list_price": 1299900.0,
-        "dom": 20.0,
+        "dom": 24.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "3909 DRISCOLL Street"
       },
       "history": [],
@@ -866,7 +873,7 @@
         "dom": 110.0,
         "close_date": "2026-10-07",
         "close_price": 1265000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1601 VERMONT Street"
       },
       "history": [],
@@ -893,10 +900,10 @@
         "product": "Split Lot",
         "current_list_price": 1399900.0,
         "original_list_price": 1399900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1907 SUL ROSS Street"
       },
       "history": [],
@@ -916,10 +923,10 @@
         "product": "Single Lot",
         "current_list_price": 1549900.0,
         "original_list_price": 1549900.0,
-        "dom": 37.0,
+        "dom": 41.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1822 BRANARD Street Unit#B"
       },
       "history": [],
@@ -939,10 +946,10 @@
         "product": "Single Lot",
         "current_list_price": 1699900.0,
         "original_list_price": 1699900.0,
-        "dom": 139.0,
+        "dom": 143.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "805 BOMAR Street"
       },
       "history": [],
@@ -965,7 +972,7 @@
         "dom": 99.0,
         "close_date": "2026-10-09",
         "close_price": 1750000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "508 Willard Street"
       },
       "history": [],
@@ -992,10 +999,10 @@
         "product": "Single Lot",
         "current_list_price": 1899900.0,
         "original_list_price": 1899900.0,
-        "dom": 77.0,
+        "dom": 81.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1824 MARSHALL Street"
       },
       "history": [],
@@ -1018,7 +1025,7 @@
         "dom": 9.0,
         "close_date": "2026-09-25",
         "close_price": 1950000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1642 Norfolk Street"
       },
       "history": [],
@@ -1045,10 +1052,10 @@
         "product": "Single Lot",
         "current_list_price": 1999900.0,
         "original_list_price": 1999900.0,
-        "dom": 98.0,
+        "dom": 102.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1511 KIPLING Street"
       },
       "history": [],
@@ -1068,10 +1075,10 @@
         "product": "Single Lot",
         "current_list_price": 2050000.0,
         "original_list_price": 2050000.0,
-        "dom": 28.0,
+        "dom": 32.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2415 Elmen Street"
       },
       "history": [],
@@ -1091,10 +1098,10 @@
         "product": "Single Lot",
         "current_list_price": 2250000.0,
         "original_list_price": 2350000.0,
-        "dom": 41.0,
+        "dom": 45.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1606 Hazard Street"
       },
       "history": [],
@@ -1114,10 +1121,10 @@
         "product": "Single Lot",
         "current_list_price": 2410000.0,
         "original_list_price": 4100000.0,
-        "dom": 20.0,
+        "dom": 24.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1523 Marshall Street"
       },
       "history": [],
@@ -1140,7 +1147,7 @@
         "dom": 62.0,
         "close_date": "2026-06-24",
         "close_price": 1069900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1312 CASTLE Court Unit#A"
       },
       "history": [],
@@ -1170,7 +1177,7 @@
         "dom": 8.0,
         "close_date": "2026-07-13",
         "close_price": 980000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1644 Bonnie Brae Street"
       },
       "history": [],
@@ -1197,10 +1204,10 @@
         "product": "Split Lot",
         "current_list_price": 1200000.0,
         "original_list_price": 1200000.0,
-        "dom": 50.0,
+        "dom": 54.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "720 Peden Street"
       },
       "history": [],
@@ -1223,7 +1230,7 @@
         "dom": 0.0,
         "close_date": "2026-06-15",
         "close_price": 1650000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1415 Harold Street"
       },
       "history": [],
@@ -1250,10 +1257,10 @@
         "product": "Split Lot",
         "current_list_price": 1069900.0,
         "original_list_price": 1069900.0,
-        "dom": 21.0,
+        "dom": 25.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1636 CASTLE Court"
       },
       "history": [],
@@ -1273,10 +1280,10 @@
         "product": "Single Lot",
         "current_list_price": 2599000.0,
         "original_list_price": 2599000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1312 Vassar Street"
       },
       "history": [],
@@ -1299,7 +1306,7 @@
         "dom": 17.0,
         "close_date": "2026-07-31",
         "close_price": 1650000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1501 Bonnie Brae Street"
       },
       "history": [],
@@ -1329,7 +1336,7 @@
         "dom": 0.0,
         "close_date": "2026-08-11",
         "close_price": 1334350.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1603 VERMONT Street"
       },
       "history": [],
@@ -1356,10 +1363,10 @@
         "product": "Split Lot",
         "current_list_price": 1300000.0,
         "original_list_price": 1300000.0,
-        "dom": 7.0,
+        "dom": 11.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1811 Sul Ross Street"
       },
       "history": [],
@@ -1382,7 +1389,7 @@
         "dom": 34.0,
         "close_date": "2026-08-26",
         "close_price": 951273.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "4203 Driscoll Street"
       },
       "history": [],
@@ -1409,10 +1416,10 @@
         "product": "Split Lot",
         "current_list_price": 1169900.0,
         "original_list_price": 1169900.0,
-        "dom": 51.0,
+        "dom": 55.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1820 BRANARD Street"
       },
       "history": [],
@@ -1435,7 +1442,7 @@
         "dom": 144.0,
         "close_date": "2026-05-27",
         "close_price": 1479900.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1306 CROCKER Street"
       },
       "history": [],
@@ -1465,7 +1472,7 @@
         "dom": 31.0,
         "close_date": "2026-07-24",
         "close_price": 2150000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1606 Woodhead Street"
       },
       "history": [],
@@ -1477,6 +1484,29 @@
           "a": "1606 Woodhead Street"
         }
       ],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "pmt_1918-huldy-st",
+      "pin": "pmt_1918-huldy-st",
+      "address": "1918 HULDY ST, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "30439440",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1475000.0,
+        "original_list_price": 1475000.0,
+        "dom": 3.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-16",
+        "address": "1918 Huldy Street"
+      },
+      "history": [],
+      "historical_sales": [],
       "archive_current": null,
       "ordering_issue": null
     },
@@ -1495,7 +1525,7 @@
         "dom": 4.0,
         "close_date": "2026-07-31",
         "close_price": 2075000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1906 Driscoll Street"
       },
       "history": [],
@@ -1511,6 +1541,29 @@
       "ordering_issue": null
     },
     {
+      "member": "pmt_2413-brun-st-b",
+      "pin": "pmt_2413-brun-st-b",
+      "address": "2413 BRUN ST B, Houston, TX 77019",
+      "status": "active",
+      "current": {
+        "mls": "50111081",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 1289900.0,
+        "original_list_price": 1289900.0,
+        "dom": 4.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-16",
+        "address": "2413 BRUN Street Unit#B"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
       "member": "pmt_2202-huldy-st",
       "pin": "pmt_2202-huldy-st",
       "address": "2202 HULDY ST, Houston, TX 77019",
@@ -1522,10 +1575,10 @@
         "product": "Split Lot",
         "current_list_price": 1129000.0,
         "original_list_price": 1129000.0,
-        "dom": 6.0,
+        "dom": 10.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2202 Huldy Street"
       },
       "history": [],
@@ -1545,10 +1598,10 @@
         "product": "Split Lot",
         "current_list_price": 1129000.0,
         "original_list_price": 1129000.0,
-        "dom": 20.0,
+        "dom": 24.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "2204 Huldy Street"
       },
       "history": [],
@@ -1571,7 +1624,7 @@
         "dom": 81.0,
         "close_date": "2026-07-24",
         "close_price": 825000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1810 Hazard Street Unit#A"
       },
       "history": [],
@@ -1601,7 +1654,7 @@
         "dom": 178.0,
         "close_date": "2026-09-04",
         "close_price": 1240000.0,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "409 W Saulnier Street"
       },
       "history": [],
@@ -1628,57 +1681,11 @@
         "product": "Single Lot",
         "current_list_price": 1699900.0,
         "original_list_price": 1699900.0,
-        "dom": 92.0,
+        "dom": 96.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1120 WELCH Street"
-      },
-      "history": [],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null
-    },
-    {
-      "member": "acq_2415-elmen-st",
-      "pin": "acq_2415-elmen-st",
-      "address": "2415 Elmen St",
-      "status": "active",
-      "current": {
-        "mls": "10315678",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Single Lot",
-        "current_list_price": 2050000.0,
-        "original_list_price": 2050000.0,
-        "dom": 28.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "2415 Elmen Street"
-      },
-      "history": [],
-      "historical_sales": [],
-      "archive_current": null,
-      "ordering_issue": null
-    },
-    {
-      "member": "acq_1907-sul-ross-st",
-      "pin": "acq_1907-sul-ross-st",
-      "address": "1907 Sul Ross St",
-      "status": "active",
-      "current": {
-        "mls": "5401188",
-        "status": "active",
-        "har_status": "Active",
-        "product": "Split Lot",
-        "current_list_price": 1399900.0,
-        "original_list_price": 1399900.0,
-        "dom": 37.0,
-        "close_date": null,
-        "close_price": null,
-        "as_of": "2026-11-12",
-        "address": "1907 SUL ROSS Street"
       },
       "history": [],
       "historical_sales": [],
@@ -1697,10 +1704,10 @@
         "product": "Split Lot",
         "current_list_price": 1139900.0,
         "original_list_price": 1139900.0,
-        "dom": 57.0,
+        "dom": 61.0,
         "close_date": null,
         "close_price": null,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-16",
         "address": "1638 CASTLE Court"
       },
       "history": [],
@@ -1710,9 +1717,9 @@
     }
   ],
   "coverage": {
-    "active": 30,
+    "active": 31,
     "pending": 0,
-    "sold": 45,
+    "sold": 44,
     "terminated": 0,
     "linked": 41
   }

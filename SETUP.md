@@ -179,7 +179,11 @@ python3 har_refresh.py \
 ```
 
 `--market montrose` limits the write to one market. `--market heights`
-is refused. The raw CSVs stay out of git. Dropped rows go to
+is refused. The active CSV replaces that market's active snapshot. The
+sold CSV is merged into the trailing 365 days already on the page; a
+short weekly file does not erase older comps. An address already pinned
+on another market is not drawn again. Agent and owner names are not
+stored. The raw CSVs stay out of git. Dropped rows go to
 `pulls/dropped_har_<date>.csv`, which is gitignored. Apply writes, per
 market, `<market>_active.data.json`, `<market>_sold.data.json`, and
 `<market>_market_status.data.json`. The map page reads those. It does

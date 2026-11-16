@@ -73,6 +73,12 @@ class AssignTest(unittest.TestCase):
         self.assertEqual(reason, 'AMBIGUOUS_MARKET')
         self.assertEqual(detail, 'gardenoaksoakforest,heights')
 
+    def test_override_puts_shared_polygon_on_one_market(self):
+        from deed_ingest import load_overrides
+        market, reason, _ = har_markets.assign_market(
+            29.815862, -95.402668, '315 W 32nd Street', self.zones, load_overrides())
+        self.assertEqual((market, reason), ('gardenoaksoakforest', None))
+
     def test_heights_boundary_is_reported_and_not_a_write_target(self):
         market, reason, _ = self.assign(29.8146, -95.39489, '334 E 31st Street')
         self.assertEqual((market, reason), ('heights', 'HEIGHTS_SEPARATE_PIPELINE'))
@@ -139,8 +145,8 @@ class FilterTest(unittest.TestCase):
             self.assertEqual(current, raw)
         oaks = report['markets']['riveroaks']
         self.assertEqual(oaks['active'], {'accepted': 1, 'single': 1, 'split': 0})
-        self.assertEqual(oaks['sold']['accepted'], 1)
-        self.assertEqual(oaks['sold']['single'], 1)
+        self.assertEqual(oaks['sold']['incoming'], 1)
+        self.assertGreaterEqual(oaks['sold']['accepted'], 1)
         self.assertEqual(oaks['pending'], 1)
         self.assertEqual(oaks['dropped'].get('LOT_BELOW_MIN'), 1)
         self.assertEqual(oaks['dropped'].get('YEAR_BEFORE_MIN'), 1)
