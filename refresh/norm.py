@@ -30,6 +30,10 @@ def norm(a):
     if mt:
         rest, unit = mt.group(1), mt.group(2)
     words = [DIRS.get(w, w) for w in rest.split()]
+    # HAR sometimes repeats the street suffix ("Street Street"). Collapse that
+    # before the single suffix strip so the key matches the map address.
+    while len(words) >= 2 and words[-1] == words[-2] and re.fullmatch(ST_TYPES, words[-1]):
+        words.pop()
     if words and re.fullmatch(ST_TYPES, words[-1]):
         words = words[:-1]
     return (num, unit, ' '.join(words))

@@ -40,8 +40,10 @@ def load(path, html, as_of):
         elif lng>-95.370: reason='OOZ_EAST'
         elif not in_boundary(boundary,lng,lat): reason='OOZ_POLY'
         seen.add(mls)
+        ask=money(raw.get('List Price'))
+        if ask is None: ask=money(raw.get('Current Price'))
         rec=dict(mls=mls,status=status,har_status=raw['Status'].strip(),address=address,address_key=address_key(address),
-                 original_list_price=money(raw['Original List Price']),current_list_price=None,close_price=money(raw['Close Price']),
+                 original_list_price=money(raw['Original List Price']),current_list_price=ask,close_price=money(raw['Close Price']),
                  close_date=close.isoformat() if close else None,dom=money(raw['DOM']),lot_sqft=lot,product=classify_lot(lot),
                  builder=raw['Builder Name'],year_built=money(raw['Year Built']),building_sqft=money(raw['Building SqFt']),lat=lat,lng=lng,
                  agents={k:v for k,v in raw.items() if any(s in k for s in ('Agent','Office','Team'))},as_of=as_of,
@@ -109,10 +111,38 @@ def run(args):
     incoming,ledger,profile=load_many(
         [args.input] if isinstance(args.input,(str,Path)) else args.input,
         html,args.as_of)
-    records={r['mls']:r for r in old['records']}; counts=Counter(); actions=[]
+    from sold_classification import MIN_YEAR_BUILT, lot_floor_reason
+    from active_ingest import market_key, other_market_keys
+    def blank_contact(raw):
+        return {k: ('' if any(s in k.lower() for s in ('agent','team','owner','phone','email')) else v) for k,v in raw.items()}
+    elsewhere=other_market_keys()
+    for rec in incoming:
+        if rec['exclusion']:
+            continue
+        if rec['year_built'] is None or rec['year_built']<MIN_YEAR_BUILT:
+            rec['exclusion']='YEAR_BEFORE_MIN'
+        else:
+            floor=lot_floor_reason(rec['raw'].get('Lot Size'))
+            if floor:
+                rec['exclusion']=floor
+            elif market_key(rec['address']) in elsewhere:
+                rec['exclusion']='ALREADY_ON_OTHER_MARKET'
+        rec['raw']=blank_contact(rec['raw'])
+        rec['agents']={}
+        if rec['exclusion']:
+            ledger.append(dict(FILE=rec['source_file'],SHA256=rec['source_sha256'],ROW=rec['source_row'],MLS=rec['mls'],ADDRESS=rec['address'],REASON=rec['exclusion'],RAW_JSON=json.dumps(rec['raw'],sort_keys=True)))
+    records={r['mls']:r for r in old['records']}; counts=Counter(); actions=[]; address_corrections=[]
     for rec in incoming:
         prior=records.get(rec['mls'])
-        if prior and address_key(prior['address'])!=rec['address_key']: raise ValueError('MLS address conflict '+rec['mls'])
+        if prior and address_key(prior['address'])!=rec['address_key']:
+            old_tokens=Counter(address_key(prior['address']).split())
+            new_tokens=Counter(rec['address_key'].split())
+            diff=(old_tokens-new_tokens)+(new_tokens-old_tokens)
+            extra=list(diff)
+            # Same MLS, same house number and street, one unit letter added or removed.
+            if not (sum(diff.values())==1 and len(extra)==1 and len(extra[0])==1 and extra[0] in 'abcdef'):
+                raise ValueError('MLS address conflict '+rec['mls'])
+            address_corrections.append(dict(mls=rec['mls'], before=prior['address'], after=rec['address']))
         if rec['exclusion']: action='ledgered'
         elif prior==rec: action='held'
         else:
@@ -137,6 +167,7 @@ def run(args):
     if sale_report['conflicts']: raise ValueError(sale_report['conflicts'])
     assert all(next(s for s in merged if s['id']==k)==v for k,v in retained_evidence.items())
     snap=snapshot([records[k] for k in sorted(records)],merged,source,runtime,args.as_of)
+    snap['refresh_scope']=('Active and sold exports as of '+args.as_of+'. Year built 2025 or later; lots under 2,200 sqft and blank lots are dropped. Missing records retain prior observations and are not automatically retired. Addresses already pinned on another market are not added.')
     fixture=snap['properties']['act_715-merrill']; assert fixture['status']=='active' and any(r['mls']=='50361472' for r in fixture['history'])
     candidate=html
     for name,value in ([(sale_store,merged)] if sale_store=='SOLD_EVIDENCE' else [('SOLD_DATA',merged),('SOLD_METRICS',metrics_for(merged,date.fromisoformat(args.as_of)))]):
@@ -144,13 +175,16 @@ def run(args):
         if prior!=value: candidate=candidate[:a]+encode(value)+candidate[z:]
     for name in ('DATA','RECONCILE'):
         a,z,_=span(html,name); b,y,_=span(candidate,name); assert html[a:z]==candidate[b:y]
+    for row in ledger:
+        raw=json.loads(row['RAW_JSON'])
+        row['RAW_JSON']=json.dumps({k: ('' if any(s in k.lower() for s in ('agent','team','owner','phone','email')) else v) for k,v in raw.items()}, sort_keys=True)
     outputs={ROOT/'index.html':candidate,ROOT/'heights_market_status.data.json':legacy.jsontxt(snap),
              ROOT/f'pulls/dropped_combined_market_{args.as_of}.csv':legacy.csvtxt(ledger,['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON'])}
     changed=[str(p.relative_to(ROOT)) for p,t in outputs.items() if not p.exists() or p.read_text()!=t]
     before={address_key(p['current']['address']):p['status'] for p in old['properties'].values()}
     multi={address_key(r['address']) for r in incoming if sum(address_key(s['address'])==address_key(r['address']) for s in incoming)>1}
     changes=[dict(address=p['current']['address'],before=before.get(address_key(p['current']['address'])),after=p['status']) for p in snap['properties'].values() if address_key(p['current']['address']) in multi and before.get(address_key(p['current']['address']))!=p['status']]
-    report=dict(sale_policy=policy,deferred_sales=deferred_sales,profile=profile,counts=dict(counts),exclusions=dict(Counter(r['REASON'] for r in ledger)),sold_before=len(sold),sold_after=len(merged),resale_evidence_preserved=len(retained_evidence),sales=sale_report,market_records=len(records),normalized_multilisting=len(multi),multilisting_status_changes=changes,finished=dict(Counter(r['status'] for r in snap['complete'])),changed_files=changed,actions=actions)
+    report=dict(sale_policy=policy,deferred_sales=deferred_sales,profile=profile,counts=dict(counts),exclusions=dict(Counter(r['REASON'] for r in ledger)),sold_before=len(sold),sold_after=len(merged),resale_evidence_preserved=len(retained_evidence),sales=sale_report,market_records=len(records),normalized_multilisting=len(multi),multilisting_status_changes=changes,address_corrections=address_corrections,finished=dict(Counter(r['status'] for r in snap['complete'])),changed_files=changed,actions=actions)
     if args.output:
         out=Path(args.output); out.mkdir(parents=True,exist_ok=True); (out/'report.json').write_text(legacy.jsontxt(report))
     if args.apply:

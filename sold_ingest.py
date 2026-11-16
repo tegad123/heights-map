@@ -129,7 +129,16 @@ def run(args):
     html_path = ROOT / 'index.html'
     html = html_path.read_text()
     if 'const SOLD_COMP_POLICY=' in html:
-        raise ValueError('Heights display policy requires sold_comp_refresh.py; historical sale evidence must not be restored as comps')
+        # Displayed comps stay on the trailing-365 new-construction policy.
+        # This path merges the new export by MLS and keeps older evidence.
+        from sold_comp_refresh import merge_incremental
+        if args.single_input or args.split_input:
+            if not args.single_input or not args.split_input:
+                raise ValueError('Pass both --single-input and --split-input')
+            inputs = [(args.single_input, 'Single Lot'), (args.split_input, 'Split Lot')]
+        else:
+            inputs = [(ROOT / path, expected) for path, expected in INPUTS]
+        return merge_incremental(inputs, args.as_of or date.today().isoformat(), bool(args.apply))
     existing, _, _ = constant(html, 'SOLD_DATA')
     rows = json.loads(json.dumps(existing))
     if not rows: raise ValueError('existing sold input is empty')
@@ -249,6 +258,8 @@ def main():
     parser.add_argument('--market', choices=['heights'], default='heights')
     mode = parser.add_mutually_exclusive_group(); mode.add_argument('--apply',action='store_true');mode.add_argument('--dry-run',action='store_true')
     parser.add_argument('--as-of',help='YYYY-MM-DD (defaults to local date)')
+    parser.add_argument('--single-input',help='Single Lot export. Required with --split-input when not using the built-in filenames.')
+    parser.add_argument('--split-input',help='Split Lot export, including blank and sub-4,000 lots.')
     run(parser.parse_args())
 
 
