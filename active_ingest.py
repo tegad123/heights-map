@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """HAR active snapshot, independent of hand-authored DATA. Dry run by default.
-Original List Price is not current asking price. Missing exports never imply sold.
+
+List Price is the asking price on the export date. Original List Price is
+kept separately. Missing exports never imply sold. Year built and the lot
+floor are ingest drops; they do not change Single Lot versus Split Lot.
+Agent and owner names are not stored.
 """
 import argparse
 import csv
@@ -11,10 +15,11 @@ import re
 from collections import Counter
 from pathlib import Path
 from sold_ingest import money
-from sold_classification import classify_lot
-from deed_ingest import in_boundary
+from sold_classification import MIN_LOT_SQFT, MIN_YEAR_BUILT, classify_lot, lot_floor_reason
+from deed_ingest import in_boundary, normalize, span, SUFFIXES
 
 ROOT = Path(__file__).resolve().parent
+CONTACT_MARKERS = ('agent', 'team', 'owner', 'phone', 'email')
 
 
 def address_key(address):
@@ -35,73 +40,179 @@ def address_key(address):
     return ' '.join(w)
 
 
+def market_key(address):
+    """Deed-style address key with a repeated suffix collapsed."""
+    parts = normalize(address).split()
+    suffixes = set(SUFFIXES.values())
+    while len(parts) >= 2 and parts[-1] == parts[-2] and parts[-1] in suffixes:
+        parts.pop()
+    return ' '.join(parts)
+
+
+def other_market_keys():
+    """Addresses already pinned on a market other than Heights, plus overrides."""
+    from market_config import MARKETS
+    keys = set()
+    pages = [(name, cfg['html']) for name, cfg in MARKETS.items() if name != 'heights']
+    pages.append(('springvalley', 'springvalley.html'))
+    for name, html_name in pages:
+        for row in span((ROOT / html_name).read_text(), 'DATA')[2]:
+            key = market_key(row.get('a'))
+            if key:
+                keys.add(key)
+    overrides = json.loads((ROOT / 'deed_market_overrides.json').read_text())
+    for addr, market in overrides.items():
+        if market != 'heights':
+            key = market_key(addr)
+            if key:
+                keys.add(key)
+    return keys
+
+
+def exclusion_reason(row, expected, zone, geo, elsewhere):
+    """One reason, or None when the row belongs in the Heights active snapshot.
+
+    Zone guards win over the lot floor so an out-of-Heights townhome is not
+    counted as a Heights lot drop. A blank or sub-minimum lot is not a
+    file-split failure. An address already on another market is not added here.
+    """
+    mls = (row.get('MLS Number') or '').strip()
+    address = (row.get('Address') or '').strip()
+    price = money(row.get('Original List Price'))
+    ask = money(row.get('List Price'))
+    dom = money(row.get('DOM'))
+    year = money(row.get('Year Built'))
+    lat = money(row.get('Latitude'))
+    lng = money(row.get('Longitude'))
+    floor = lot_floor_reason(row.get('Lot Size'))
+    product = classify_lot(row.get('Lot Size'))
+    if not mls or not address or price is None or price <= 0 or dom is None or dom < 0 or year is None:
+        return 'INVALID_REQUIRED_FIELD'
+    if row.get('Status', '').strip() != 'Active' or (row.get('Close Price') or '').strip() or (row.get('Close Date') or '').strip():
+        return 'NOT_ACTIVE_EXPORT'
+    if lat is None or lng is None or not (-90 <= lat <= 90 and -180 <= lng <= 180):
+        return 'INVALID_COORDINATES'
+    if zone.search(address):
+        return 'OOZ_REGEX'
+    if lng > -95.370:
+        return 'OOZ_EAST'
+    if not in_boundary(geo, lng, lat):
+        return 'OOZ_POLY'
+    if year < MIN_YEAR_BUILT:
+        return 'YEAR_BEFORE_MIN'
+    if floor:
+        return floor
+    if market_key(address) in elsewhere:
+        return 'ALREADY_ON_OTHER_MARKET'
+    if product != expected:
+        return 'CLASSIFICATION_MISMATCH'
+    if ask is None or ask <= 0:
+        return 'MISSING_CURRENT_PRICE'
+    return None
+
+
+def scrub_contact(row):
+    """Drop person, phone, and email columns. The ledger is gitignored."""
+    return {k: v for k, v in row.items() if not any(s in k.lower() for s in CONTACT_MARKERS)}
+
+
 def run(as_of, single_input, split_input, apply=False):
     from datetime import date
     date.fromisoformat(as_of)
-    inputs=[(str(single_input),'Single Lot'),
-            (str(split_input),'Split Lot')]
-    if Path(single_input).resolve()==Path(split_input).resolve():
+    inputs = [(str(single_input), 'Single Lot'),
+              (str(split_input), 'Split Lot')]
+    if Path(single_input).resolve() == Path(split_input).resolve():
         raise ValueError('Single and split inputs must be different files')
-    html=(ROOT/'index.html').read_text()
-    zone=re.compile(re.search(r'const OUT_OF_ZONE=/(.*?)/i;',html).group(1),re.I)
-    geo=json.loads((ROOT/'heights_boundary.geojson').read_text())
-    path=ROOT/'heights_active.data.json'
-    old=json.loads(path.read_text()) if path.exists() else {'listings':[]}
-    existing={r['mls']:r for r in old['listings']}
-    listings=[];ledger=[];summaries=[];seen=set();seen_addresses=set();mismatches=[]
-    for name,expected in inputs:
-        payload=(ROOT/name).read_bytes();digest=hashlib.sha256(payload).hexdigest()
-        reader=csv.DictReader(io.StringIO(payload.decode('utf-8-sig')))
-        required={'MLS Number','Address','Latitude','Longitude','Lot Size','DOM','Original List Price','Year Built','Builder Name','List Agent Full Name','Close Price','Close Date','Status'}
-        if not required.issubset(reader.fieldnames or []):raise ValueError('Missing columns: '+name)
-        rows=list(reader)
-        if not rows:raise ValueError('Empty export: '+name)
-        summary=dict(file=name,read=len(rows),added=0,updated=0,unchanged=0,excluded=Counter(),classification_matches=0)
-        for line,row in enumerate(rows,2):
-            mls=(row.get('MLS Number') or '').strip();a=(row.get('Address') or '').strip()
-            lot=money(row.get('Lot Size'));prod=classify_lot(lot)
-            if prod==expected:summary['classification_matches']+=1
-            else:mismatches.append(dict(file=name,row=line,address=a,derived=prod,expected=expected))
-            lat=money(row.get('Latitude'));lng=money(row.get('Longitude'));price=money(row.get('Original List Price'));dom=money(row.get('DOM'));yb=money(row.get('Year Built'))
-            reason=None;k=address_key(a)
-            if not mls or not a or any(v is None for v in (lot,price,dom,yb)) or lot<=0 or price<=0 or dom<0:reason='INVALID_REQUIRED_FIELD'
-            elif row.get('Status','').strip()!='Active' or row.get('Close Price') or row.get('Close Date'):reason='NOT_ACTIVE_EXPORT'
-            elif lat is None or lng is None or not (-90<=lat<=90 and -180<=lng<=180):reason='INVALID_COORDINATES'
-            elif zone.search(a):reason='OOZ_REGEX'
-            elif lng> -95.370:reason='OOZ_EAST'
-            elif not in_boundary(geo,lng,lat):reason='OOZ_POLY'
-            elif prod!=expected:reason='CLASSIFICATION_MISMATCH'
-            elif mls in seen or k in seen_addresses:reason='DUP_INPUT'
+    html = (ROOT / 'index.html').read_text()
+    zone = re.compile(re.search(r'const OUT_OF_ZONE=/(.*?)/i;', html).group(1), re.I)
+    geo = json.loads((ROOT / 'heights_boundary.geojson').read_text())
+    elsewhere = other_market_keys()
+    path = ROOT / 'heights_active.data.json'
+    old = json.loads(path.read_text()) if path.exists() else {'listings': []}
+    existing = {r['mls']: r for r in old['listings']}
+    listings = []
+    ledger = []
+    summaries = []
+    seen = set()
+    seen_addresses = set()
+    mismatches = []
+    for name, expected in inputs:
+        payload = Path(name).read_bytes()
+        digest = hashlib.sha256(payload).hexdigest()
+        reader = csv.DictReader(io.StringIO(payload.decode('utf-8-sig')))
+        required = {'MLS Number', 'Address', 'Latitude', 'Longitude', 'Lot Size', 'DOM', 'Original List Price', 'List Price', 'Year Built', 'Builder Name', 'Close Price', 'Close Date', 'Status'}
+        if not required.issubset(reader.fieldnames or []):
+            raise ValueError('Missing columns: ' + name)
+        rows = list(reader)
+        if not rows:
+            raise ValueError('Empty export: ' + name)
+        summary = dict(file=Path(name).name, read=len(rows), added=0, updated=0, unchanged=0, excluded=Counter(), classification_matches=0)
+        for line, row in enumerate(rows, 2):
+            mls = (row.get('MLS Number') or '').strip()
+            a = (row.get('Address') or '').strip()
+            floor = lot_floor_reason(row.get('Lot Size'))
+            prod = classify_lot(row.get('Lot Size'))
+            if floor or prod == expected:
+                summary['classification_matches'] += 1
+            else:
+                mismatches.append(dict(file=Path(name).name, row=line, address=a, derived=prod, expected=expected))
+            reason = exclusion_reason(row, expected, zone, geo, elsewhere)
+            lat = money(row.get('Latitude'))
+            lng = money(row.get('Longitude'))
+            price = money(row.get('Original List Price'))
+            ask = money(row.get('List Price'))
+            dom = money(row.get('DOM'))
+            yb = money(row.get('Year Built'))
+            lot = money(row.get('Lot Size'))
+            k = address_key(a)
+            if not reason and (mls in seen or k in seen_addresses):
+                reason = 'DUP_INPUT'
             if reason:
-                summary['excluded'][reason]+=1
-                ledger.append(dict(FILE=name,SHA256=digest,ROW=line,MLS=mls,ADDRESS=a,REASON=reason,RAW_JSON=json.dumps(row,sort_keys=True)))
+                summary['excluded'][reason] += 1
+                ledger.append(dict(FILE=Path(name).name, SHA256=digest, ROW=line, MLS=mls, ADDRESS=a, REASON=reason, RAW_JSON=json.dumps(scrub_contact(row), sort_keys=True)))
                 continue
-            seen.add(mls);seen_addresses.add(k)
-            r=dict(mls=mls,address=a,address_key=k,original_list_price=price,dom=dom,lot_sqft=lot,product=prod,builder=row['Builder Name'].strip(),list_agent=row['List Agent Full Name'].strip(),year_built=yb,lat=lat,lng=lng,status='active',as_of=as_of,source_file=name,source_row=line,source_sha256=digest)
-            prior=existing.get(mls)
-            summary['unchanged' if prior==r else 'updated' if prior else 'added']+=1
+            seen.add(mls)
+            seen_addresses.add(k)
+            # list_agent stays empty. The export's agent name is not stored.
+            r = dict(mls=mls, address=a, address_key=k, original_list_price=price, current_list_price=ask, dom=dom, lot_sqft=lot, product=prod, builder=row['Builder Name'].strip(), list_agent='', year_built=yb, lat=lat, lng=lng, status='active', as_of=as_of, source_file=Path(name).name, source_row=line, source_sha256=digest)
+            prior = existing.get(mls)
+            summary['unchanged' if prior == r else 'updated' if prior else 'added'] += 1
             listings.append(r)
         summaries.append(summary)
-    result=dict(as_of=as_of,scope='Two supplied HAR exports; absence is not proof of off-market status. Price is Original List Price, not verified current asking price.',listings=sorted(listings,key=lambda r:r['mls']))
-    contents=json.dumps(result,indent=2,ensure_ascii=True)+'\n'
-    buf=io.StringIO(newline='');writer=csv.DictWriter(buf,fieldnames=['FILE','SHA256','ROW','MLS','ADDRESS','REASON','RAW_JSON'],lineterminator='\n');writer.writeheader();writer.writerows(ledger)
-    ledger_path=ROOT/'pulls'/('dropped_active_'+as_of+'.csv')
-    outputs={path:contents,ledger_path:buf.getvalue()}
-    changed=[str(p.relative_to(ROOT)) for p,s in outputs.items() if not p.exists() or p.read_text()!=s]
-    report=dict(files=summaries,total=len(listings),crosscheck_mismatches=mismatches,ledger_rows=len(ledger),changed_files=changed)
-    print(json.dumps(report,indent=2))
-    if mismatches:raise ValueError('Classification mismatch; refusing apply')
+    removed = sorted(set(existing) - {r['mls'] for r in listings})
+    result = dict(as_of=as_of, scope=(
+        'Current HAR active snapshot for Heights. List Price is the asking price on the export date; '
+        'Original List Price is retained separately. Absence is not proof of off-market status. '
+        f'New construction, year built >= {MIN_YEAR_BUILT}; lot size >= {MIN_LOT_SQFT} sqft. '
+        'Addresses already pinned on another market are not included.'),
+        listings=sorted(listings, key=lambda r: r['mls']))
+    contents = json.dumps(result, indent=2, ensure_ascii=True) + '\n'
+    buf = io.StringIO(newline='')
+    writer = csv.DictWriter(buf, fieldnames=['FILE', 'SHA256', 'ROW', 'MLS', 'ADDRESS', 'REASON', 'RAW_JSON'], lineterminator='\n')
+    writer.writeheader()
+    writer.writerows(ledger)
+    ledger_path = ROOT / 'pulls' / ('dropped_active_' + as_of + '.csv')
+    outputs = {path: contents, ledger_path: buf.getvalue()}
+    changed = [str(p.relative_to(ROOT)) for p, s in outputs.items() if not p.exists() or p.read_text() != s]
+    report = dict(files=summaries, total=len(listings), products=dict(Counter(r['product'] for r in listings)),
+                  removed=len(removed),
+                  crosscheck_mismatches=mismatches, ledger_rows=len(ledger), changed_files=changed)
+    print(json.dumps(report, indent=2))
+    if mismatches:
+        raise ValueError('Classification mismatch; refusing apply')
     if apply:
-        for p,s in outputs.items():
-            if not p.exists() or p.read_text()!=s:p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s)
+        for p, s in outputs.items():
+            if not p.exists() or p.read_text() != s:
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text(s)
     return report
 
 
-if __name__=='__main__':
-    ap=argparse.ArgumentParser()
-    ap.add_argument('--single-input',required=True)
-    ap.add_argument('--split-input',required=True)
-    ap.add_argument('--as-of',required=True)
-    ap.add_argument('--apply',action='store_true')
-    args=ap.parse_args()
-    run(args.as_of,args.single_input,args.split_input,args.apply)
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--single-input', required=True)
+    ap.add_argument('--split-input', required=True)
+    ap.add_argument('--as-of', required=True)
+    ap.add_argument('--apply', action='store_true')
+    args = ap.parse_args()
+    run(args.as_of, args.single_input, args.split_input, args.apply)

@@ -68,15 +68,25 @@ class Matcher:
 
 
 def resolve(records):
-    """Current source statuses outrank undated failed history; never infer dates from DOM."""
-    rows = sorted(records, key=lambda r: (PRIORITY[r['status']], r.get('close_date') or r.get('status_date') or '', r['mls']), reverse=True)
+    """Current source statuses outrank undated failed history; never infer dates from DOM.
+
+    Two undated listings of the same status use the later export date, then MLS.
+    A newer active at the same address replaces the asking price shown in the popup.
+    """
+    rows = sorted(records, key=lambda r: (
+        PRIORITY[r['status']],
+        r.get('close_date') or r.get('status_date') or '',
+        r.get('as_of') or '',
+        r['mls']), reverse=True)
     current = rows[0]
+    stamp = current.get('close_date') or current.get('status_date') or ''
     tied = [r for r in rows if r['status'] == current['status'] and
-            (r.get('close_date') or r.get('status_date') or '') == (current.get('close_date') or current.get('status_date') or '')]
+            (r.get('close_date') or r.get('status_date') or '') == stamp and
+            (r.get('as_of') or '') == (current.get('as_of') or '')]
     return dict(status=current['status'], current=current, history=rows[1:],
                 failed_listings=[dict(mls=r['mls'], dom=r['dom']) for r in rows if r['status']=='terminated'],
                 ordering_issue='SAME_STATUS_DATES_UNAVAILABLE' if len(tied)>1 else None,
-                chronology='Status precedence; non-sold event dates absent from export')
+                chronology='Status precedence; same-status ties break on export date, then MLS')
 
 
 def run(args):

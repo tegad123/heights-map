@@ -644,13 +644,24 @@ def stage_new(chg, csv_paths, html_path):
         for rec in parse_har(path):
             rec['_prod'] = prod
             rows[key(rec['Address'])] = rec
-    new_addrs = [e['a'] for e in chg['new']]
-    geo = geocode_batch(new_addrs) if new_addrs else {}
+    def har_coord(rec):
+        try:
+            lat = float(str(rec.get('Latitude') or '').strip())
+            lng = float(str(rec.get('Longitude') or '').strip())
+        except ValueError:
+            return None
+        if -90 <= lat <= 90 and -180 <= lng <= 180 and lat and lng:
+            return round(lat, 7), round(lng, 7)
+        return None
+    missing = [e['a'] for e in chg['new'] if har_coord(rows.get(key(e['a']), {})) is None]
+    if missing:
+        raise SystemExit('FATAL: new listing has no HAR coordinates (census geocoding is not used): ' + ', '.join(missing))
     y, m, dd = map(int, chg['date'].split('-'))
     staged = []
     for e in chg['new']:
         rec = rows.get(key(e['a']), {})
-        lat, lng, q = geo.get(e['a'], (None, None, 'FAILED'))
+        lat, lng = har_coord(rec)
+        q = 'HAR'
         pid = slug_id(e['a'])
         prod = rec.get('_prod', e.get('prod', ''))
         subdiv = (rec.get('Subdivision') or '').strip()
@@ -658,19 +669,17 @@ def stage_new(chg, csv_paths, html_path):
         sd = ''
         if rec.get('DOM', '').isdigit():
             sd = str(_date(y, m, dd) - timedelta(days=int(rec['DOM'])))
-        agent = rec.get('List Agent Full Name', '')
+        # Agent and owner names are not staged. The public repo does not store them.
         builder = rec.get('Builder Name', '')
         ty = 'active_split' if prod == 'Split Lot' else 'active_single'
         drec = {'id': pid, 'a': e['a'], 'llc': builder,
-                'v': fmt_price(rec.get('Original List Price', '')),
+                'v': fmt_price(rec.get('List Price') or rec.get('Original List Price', '')),
                 'sd': sd, 'lot': rec.get('Building SqFt', ''), 'kind': 'active',
                 'bb': '', 'prod': prod, 'f': f_val, 'u': '', 'lat': lat, 'lng': lng,
-                'c': [{'n': agent, 'p': [], 'e': []}], 'ty': ty}
+                'c': [], 'ty': ty}
         note = f'Active inventory — {prod}.'
         if builder:
             note += f' Builder: {builder}.'
-        if agent:
-            note += f' Agent: {agent}.'
         if q == 'Non_Exact':
             note += ' (location approximate).'
         staged.append({'id': pid, 'a': e['a'], 'geocode': q,
@@ -881,6 +890,67 @@ def cmd_dispositions(args,html_path):
     print(json.dumps(report,indent=2))
 
 
+def _in_zone_sold_keys(sold_csv, html_path):
+    """Address keys of sold rows that sit inside the Heights guards.
+
+    Lot size does not matter: a small-lot closing still confirms the listing sold.
+    """
+    from deed_ingest import in_boundary
+    src = load_html(html_path)
+    zone = extract_out_of_zone(src)
+    with open(os.path.join(ROOT, 'heights_boundary.geojson'), encoding='utf-8') as f:
+        geo = json.load(f)
+    confirmed = set()
+    for rec in parse_har(sold_csv):
+        address = rec.get('Address') or ''
+        if zone.search(address):
+            continue
+        try:
+            lat = float(str(rec.get('Latitude') or '').strip())
+            lng = float(str(rec.get('Longitude') or '').strip())
+        except ValueError:
+            continue
+        if lng > -95.370 or not in_boundary(geo, lng, lat):
+            continue
+        confirmed.add(key(address))
+    return confirmed
+
+
+def confirm_sold_dispositions(chg, sold_csv, html_path):
+    """Absence is not a sale. A drop becomes sold only when this export says so.
+
+    Pending ids are not in `dropped`. A pending id whose address closed inside
+    Heights moves to dropped with disposition sold. A relisted id is left alone.
+    """
+    src = load_html(html_path)
+    data = {d['id']: d for d in extract_data(src)}
+    confirmed = _in_zone_sold_keys(sold_csv, html_path)
+    n = 0
+    for dropped in chg['dropped']:
+        if dropped.get('disposition') not in (None, 'unconfirmed'):
+            continue
+        pin = data.get(dropped['id'])
+        if pin and key(pin['a']) in confirmed:
+            dropped['disposition'] = 'sold'
+            n += 1
+    relisted = {row['id'] for row in chg['relisted']}
+    m = re.search(r'const RECONCILE=(\{.*?\});', src)
+    pending = json.loads(m.group(1)).get('pending', {}) if m else {}
+    moved = 0
+    for pid, rec in pending.items():
+        if pid in relisted:
+            continue
+        pin = data.get(pid)
+        if pin and key(pin['a']) in confirmed:
+            chg['dropped'].append({'id': pid, 'a': pin['a'],
+                                   'ty': rec.get('t') or 'single',
+                                   'disposition': 'sold'})
+            moved += 1
+    if moved:
+        chg['counts']['dropped'] = len(chg['dropped'])
+    return n, moved
+
+
 def main():
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument('--market', default='heights', choices=sorted(MARKETS),
@@ -898,6 +968,8 @@ def main():
     d.add_argument('single_csv')
     d.add_argument('split_csv')
     d.add_argument('--write', action='store_true', help='write the changelog (default: dry run)')
+    d.add_argument('--confirm-sold', default=None,
+                   help='sold export; a dropped or pending id is disposition sold only when this file confirms the address')
     g = sub.add_parser('generate', parents=[common],
                        help="splice RECONCILE block into the market's html from the changelog")
     g.add_argument('--skip-pull', action='store_true', help='skip git pull --ff-only (tests only)')
@@ -933,6 +1005,9 @@ def main():
     if args.cmd == 'diff':
         chg = run_diff(args.date, [('Single Lot', args.single_csv),
                                    ('Split Lot', args.split_csv)], html)
+        if args.confirm_sold:
+            n, moved = confirm_sold_dispositions(chg, args.confirm_sold, html)
+            print(f'sold export confirmed {n} drop(s) and {moved} pending id(s); other absences stay unconfirmed')
         print(json.dumps(chg['counts']))
         for sec in ('dropped', 'relisted', 'new', 'excluded'):
             for e in chg[sec]:
