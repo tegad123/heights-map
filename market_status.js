@@ -271,4 +271,5 @@ async function loadMarketStatus(){
   }catch(e){MARKET_VIEW.error='Market evidence unavailable: '+e.message;}
   renderLegend();refresh();renderSupplyCard();
 }
-loadMarketStatus();
+if(window.requestIdleCallback) requestIdleCallback(function(){loadMarketStatus();},{timeout:1500});
+else setTimeout(loadMarketStatus,1);
