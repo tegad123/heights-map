@@ -1,8 +1,8 @@
 {
   "25041469": {
     "status": "Partial",
-    "updated": "2026-11-09",
-    "scraped_at": "2026-11-09",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "2235 Brentwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -151,6 +151,22 @@
         "inspector": ""
       },
       {
+        "type": "VISIT, ETC.",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-11-18",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
+        "type": "COVER",
+        "permit_type": "DECOR APPLANCE",
+        "date": "2026-11-18",
+        "result": "Failed",
+        "raw": "Correction Necessary",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2025-08-13",
@@ -162,8 +178,8 @@
   },
   "25083752": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3030 Ella Lee Ln, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -283,8 +299,8 @@
   },
   "26001858": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "2505 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -436,8 +452,8 @@
   },
   "26038084": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "2433 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -479,6 +495,14 @@
         "date": "2026-09-28",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "SAWPOLE FINAL",
+        "permit_type": "ES-SAWPOLE PT",
+        "date": "2026-11-18",
+        "result": "Passed",
+        "raw": "Approved",
         "inspector": ""
       },
       {
@@ -1426,8 +1450,8 @@
   },
   "25058597": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "2260 Pine Valley Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1499,8 +1523,8 @@
   },
   "25088034": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3713 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1684,8 +1708,8 @@
   },
   "26014099": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3843 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3459,8 +3483,8 @@
   },
   "25077925": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "1817 Sharp Place, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3513,6 +3537,14 @@
         "inspector": ""
       },
       {
+        "type": "WINDSTORM",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-19",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-09-24",
@@ -3524,8 +3556,8 @@
   },
   "25098554": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3482 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3548,7 +3580,7 @@
       {
         "type": "STORM SEWER",
         "permit_type": "*P1*ADD-PL-PMT",
-        "date": "2026-11-05",
+        "date": "2026-11-17",
         "result": "Passed",
         "raw": "Partial Approval",
         "inspector": ""
@@ -3557,8 +3589,8 @@
   },
   "26016023": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "2121 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3638,8 +3670,8 @@
         "type": "INSULATION",
         "permit_type": "Building Pmt",
         "date": "2026-11-12",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -4764,8 +4796,8 @@
   },
   "25080058": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3438 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4821,8 +4853,8 @@
   },
   "26001641": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3729 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4875,6 +4907,14 @@
         "inspector": ""
       },
       {
+        "type": "COVER",
+        "permit_type": "HVAC Permit",
+        "date": "2026-11-19",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "SAWPOLE FINAL",
         "permit_type": "ES-SAWPOLE PT",
         "date": "2026-06-25",
@@ -4886,8 +4926,8 @@
   },
   "26040864": {
     "status": "Partial",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3024 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -6173,8 +6213,8 @@
   },
   "26076839": {
     "status": "None",
-    "updated": "2026-11-12",
-    "scraped_at": "2026-11-12",
+    "updated": "2026-11-18",
+    "scraped_at": "2026-11-18",
     "address": "3382 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": []
