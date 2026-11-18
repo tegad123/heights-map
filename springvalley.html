@@ -692,7 +692,13 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.7915,-95.5015],15);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+try{
+  if(typeof L.maplibreGL!=='function') throw new Error('MapLibre basemap script did not load');
+  L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+}catch(e){
+  console.warn('Vector basemap unavailable; pins stay on the raster tiles.', e);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+}
 const HD_POLYS=[[[29.784, -95.5135], [29.79441, -95.5135], [29.79441, -95.5128], [29.79727, -95.51279], [29.79727, -95.51193], [29.7983, -95.51193], [29.7983, -95.51013], [29.79885, -95.51013], [29.79704, -95.50608], [29.79597, -95.50559], [29.79667, -95.50179], [29.79572, -95.49759], [29.79484, -95.49724], [29.79378, -95.49539], [29.79474, -95.49539], [29.79474, -95.4905], [29.784, -95.4905], [29.784, -95.5135]]]; // no historic-district overlay for Spring Valley
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});

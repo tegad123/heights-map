@@ -1012,7 +1012,13 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.80,-95.40],13);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+try{
+  if(typeof L.maplibreGL!=='function') throw new Error('MapLibre basemap script did not load');
+  L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+}catch(e){
+  console.warn('Vector basemap unavailable; pins stay on the raster tiles.', e);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+}
 const HD_POLYS=[[[29.7904,-95.40374],[29.7999,-95.403959],[29.7999,-95.399372],[29.7904,-95.399154]],[[29.7904,-95.397738],[29.8042,-95.398055],[29.8042,-95.392479],[29.7904,-95.392162]],[[29.7777,-95.397446],[29.7904,-95.397738],[29.7904,-95.392162],[29.7777,-95.39187]],[[29.7929,-95.399211],[29.7947,-95.399253],[29.7947,-95.398553],[29.7929,-95.398511]],[[29.8009,-95.399395],[29.8016,-95.399411],[29.8016,-95.398712],[29.8009,-95.398695]]]; // Official: Heights West / East / South + Yale annex (houstontx.gov)
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});
