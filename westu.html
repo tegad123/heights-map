@@ -695,7 +695,13 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.716,-95.428],14);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+try{
+  if(typeof L.maplibreGL!=='function') throw new Error('MapLibre basemap script did not load');
+  L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+}catch(e){
+  console.warn('Vector basemap unavailable; pins stay on the raster tiles.', e);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+}
 const HD_POLYS=[[[29.72453,-95.44764],[29.7059,-95.44724],[29.70601,-95.4378],[29.71464,-95.43792],[29.71487,-95.43589],[29.71489,-95.43326],[29.70621,-95.43314],[29.70631,-95.41821],[29.72546,-95.41856],[29.72526,-95.43343],[29.72029,-95.44313],[29.7245,-95.44322]]]; // West University Place city limits (OSM administrative boundary, simplified); adjacent-77005 pins sit outside by design
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});

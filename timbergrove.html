@@ -697,7 +697,13 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.7995,-95.4360],14);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+try{
+  if(typeof L.maplibreGL!=='function') throw new Error('MapLibre basemap script did not load');
+  L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+}catch(e){
+  console.warn('Vector basemap unavailable; pins stay on the raster tiles.', e);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+}
 const HD_POLYS=[[[29.8152, -95.45929], [29.81526, -95.44372], [29.81156, -95.44235], [29.80938, -95.44079], [29.80903, -95.44115], [29.80617, -95.43583], [29.80402, -95.43349], [29.80297, -95.42731], [29.80239, -95.42677], [29.80099, -95.42629], [29.80012, -95.42483], [29.79856, -95.42464], [29.79688, -95.42344], [29.7951, -95.42291], [29.79513, -95.41406], [29.7923, -95.41404], [29.79234, -95.41154], [29.79087, -95.4118], [29.78562, -95.41172], [29.78313, -95.4112], [29.78376, -95.43575], [29.78434, -95.43671], [29.78507, -95.43677], [29.78627, -95.43819], [29.78834, -95.4421], [29.80041, -95.45861], [29.8152, -95.45929]]]; // no historic-district overlay for Timbergrove / Lazybrook
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});

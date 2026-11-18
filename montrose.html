@@ -709,7 +709,13 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.744,-95.394],14);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+try{
+  if(typeof L.maplibreGL!=='function') throw new Error('MapLibre basemap script did not load');
+  L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+}catch(e){
+  console.warn('Vector basemap unavailable; pins stay on the raster tiles.', e);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+}
 const HD_POLYS=[[[29.74055,-95.41074],[29.7286,-95.4106],[29.724,-95.387],[29.73304,-95.38683],[29.73906,-95.3823],[29.74548,-95.38163],[29.74688,-95.38176],[29.74685,-95.38394],[29.75032,-95.384],[29.75028,-95.38572],[29.76158,-95.38581],[29.76294,-95.39566],[29.76178,-95.39912],[29.76199,-95.40098],[29.76094,-95.40374],[29.76045,-95.40839],[29.75635,-95.40833],[29.7545,-95.41066]]]; // Montrose/Neartown (OSM outline, south edge extended Richmond->US-59); Fourth Ward + deed-acq spillover pins sit outside by design
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});

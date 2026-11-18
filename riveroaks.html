@@ -695,7 +695,13 @@ function isListedR(r){if(r.kind!==undefined)return r.kind==='active'&&r.v!==unde
 // ---- map ----
 const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([29.7565,-95.421],14);
 L.control.zoom({position:'bottomright'}).addTo(map);
-L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+try{
+  if(typeof L.maplibreGL!=='function') throw new Error('MapLibre basemap script did not load');
+  L.maplibreGL({style:'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+}catch(e){
+  console.warn('Vector basemap unavailable; pins stay on the raster tiles.', e);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+}
 const HD_POLYS=[[[29.7645, -95.447], [29.766, -95.434], [29.7635, -95.423], [29.761, -95.413], [29.7595, -95.4103], [29.7425, -95.4103], [29.742, -95.447]]]; // River Oaks proper boundary (bayou/Shepherd/Westheimer/Mid Ln) — approx, pending DealMachine polygon
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});
