@@ -412,8 +412,8 @@
   },
   "25083081": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2357 BOLSOVER ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -516,9 +516,9 @@
       {
         "type": "COVER",
         "permit_type": "HVAC Permit",
-        "date": "2026-11-03",
-        "result": "Failed",
-        "raw": "Correction Necessary",
+        "date": "2026-11-20",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -589,8 +589,8 @@
   },
   "25101670": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "5312 CHEROKEE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -702,8 +702,8 @@
   },
   "25053572": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3753 DRAKE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -839,8 +839,8 @@
   },
   "26042600": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2341 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1668,8 +1668,8 @@
   },
   "25052444": {
     "status": "Pending",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3746 CHILDRESS ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1957,8 +1957,8 @@
   },
   "25106029": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2334 DUNSTAN RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2094,8 +2094,8 @@
   },
   "26031875": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2337 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2215,8 +2215,8 @@
   },
   "26017678": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "5335 MANDELL ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -2296,8 +2296,8 @@
   },
   "26033243": {
     "status": "Passed",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3711 Purdue St, Houston, TX 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3140,8 +3140,8 @@
   },
   "25068930": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2325 WROXTON RD 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3493,8 +3493,8 @@
   },
   "25076059": {
     "status": "Pending",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2410 QUENBY ST 77005",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -3886,8 +3886,8 @@
   },
   "26038687": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2405 NOTTINGHAM ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3921,6 +3921,14 @@
         "date": "2026-09-30",
         "result": "Passed",
         "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "SHOWER PAN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-11-20",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -4015,8 +4023,8 @@
   },
   "26027179": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3771 PURDUE ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4024,6 +4032,14 @@
         "type": "ROUGH",
         "permit_type": "Electrical Pmt",
         "date": "2026-09-17",
+        "result": "Passed",
+        "raw": "Approved",
+        "inspector": ""
+      },
+      {
+        "type": "TCI",
+        "permit_type": "Electrical Pmt",
+        "date": "2026-11-19",
         "result": "Passed",
         "raw": "Approved",
         "inspector": ""
@@ -4055,9 +4071,9 @@
       {
         "type": "SHOWER PAN",
         "permit_type": "Plumbing Pmt",
-        "date": "2026-10-26",
-        "result": "Passed",
-        "raw": "Partial Approval",
+        "date": "2026-11-20",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
@@ -4819,8 +4835,8 @@
   },
   "25077921": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3782 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5036,8 +5052,8 @@
   },
   "25076060": {
     "status": "Pending",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2412 QUENBY ST 77005",
     "final_project_inspection_outstanding": false,
     "inspections": [
@@ -5405,8 +5421,8 @@
   },
   "26019294": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "2328 QUENBY ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5614,8 +5630,8 @@
   },
   "26030757": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3743 WESTERMAN ST 77005",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -5751,8 +5767,8 @@
   },
   "26081845": {
     "status": "None",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-19",
+    "scraped_at": "2026-11-19",
     "address": "3727 Westerman St, Houston, TX 77005",
     "final_project_inspection_outstanding": true,
     "inspections": []
