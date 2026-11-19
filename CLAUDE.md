@@ -144,8 +144,8 @@ be recreated).
   COH-side 77005; West U city-proper permits are not in the COH portal).
 - The Heights OUT_OF_ZONE street regex was leaked verbatim into
   riveroaks/springbranch/timbergrove html (fixed 2026-08-27; timbergrove
-  had been hiding 12 of its own records). springvalley.html still carries
-  the leaked regex — fix it when that market joins.
+  had been hiding 12 of its own records). springvalley.html no longer
+  carries that list; its HAR refresh uses the city-limit boundary.
 - catchup_check.sh runs hourly via launchd (com.heightsmap.catchup,
   RunAtLoad) and re-fires a missed nightly pull (no pull_log line for
   today after 05:35) or missed Sunday ingest (no ingest_log line >= that

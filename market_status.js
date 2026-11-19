@@ -1,5 +1,6 @@
 /* Market evidence is independent of construction certification and its forecast. */
 const MARKET_VIEW={ready:false,available:false,properties:{},tracked:[],byMember:new Map(),error:null};
+window.MARKET_VIEW=MARKET_VIEW;
 const MARKET_LABELS={active:'Active',pending:'Pending',sold:'Sold',terminated:'Terminated / Expired',no_record:'No Market Record'};
 const MARKET_PAGE=document.currentScript.dataset.market;
 const PANEL_RESTRUCTURED=MARKET_PAGE==='heights';
@@ -51,7 +52,7 @@ function marketFacts(r){
     if(c){
       if(c.har_status)h+='<br>HAR status: '+esc(c.har_status);
       h+='<br>MLS '+esc(c.mls)+(PANEL_RESTRUCTURED?'':' · '+esc(c.product));
-      if(c.status==='active'&&Number(c.current_list_price)>0)h+='<br>Current asking price: $'+Number(c.current_list_price).toLocaleString();
+      if((c.status==='active'||c.status==='pending')&&Number(c.current_list_price)>0)h+='<br>Current asking price: $'+Number(c.current_list_price).toLocaleString();
       h+='<br>Original list price: $'+Number(c.original_list_price).toLocaleString()+' · DOM: '+c.dom+' days';
       if(c.close_date)h+='<br>Closed '+esc(c.close_date)+' · $'+Number(c.close_price).toLocaleString();
       else h+='<br>Observed '+esc(c.as_of)+' · status-change date not supplied';
@@ -261,8 +262,8 @@ function applyClientMarketIdentities(){
 
 async function loadMarketStatus(){
   try{
-    if(MARKET_PAGE==='heights'){
-      const response=await fetch('heights_market_status.data.json',{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
+    const response=await fetch(MARKET_PAGE+'_market_status.data.json',{cache:'no-store'});
+    if(response.ok){
       const data=await response.json();if(!data.tracked||!data.properties)throw Error('Invalid market snapshot');
       Object.assign(MARKET_VIEW,{available:true,asOf:data.as_of,properties:data.properties,tracked:data.tracked,coverage:data.coverage,byMember:new Map(data.tracked.map(r=>[r.member,r]))});
     }

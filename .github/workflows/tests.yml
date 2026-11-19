@@ -23,6 +23,7 @@ jobs:
         run: |
           python -B -m unittest \
             tests.test_pin_overlap \
+            tests.test_har_markets \
             tests.test_lot_floor \
             tests.test_inspection_job \
             tests.test_permit_pull \
