@@ -1,6 +1,9 @@
 /* Sold comps and active listing pins for every market except Heights.
-   Heights keeps its inline sold layer and active_listings.js. */
+   Heights keeps its inline sold layer and active_listings.js.
+   data-panel="heights" (River Oaks) uses that same sold-comps legend and
+   does not draw a second marker for a listing that already has a pin. */
 const HAR_PAGE = document.currentScript && document.currentScript.dataset.market;
+const HAR_HEIGHTS_PANEL = !!(document.currentScript && document.currentScript.dataset.panel === 'heights');
 const HAR_CSS = `
 .sxc-row{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;align-items:center}
 .sxc-row .cl{font-family:var(--lab);font-size:9px;letter-spacing:.14em;color:var(--sub);text-transform:uppercase;width:66px;flex:0 0 auto}
@@ -190,7 +193,9 @@ function renderHarPins() {
     }
     if (!map.hasLayer(soldLayer)) soldLayer.addTo(map);
   } else if (map.hasLayer(soldLayer)) map.removeLayer(soldLayer);
-  if (ACTIVE_FILTER.on) {
+  // A Heights-style page keeps the listing on its property pin. A second
+  // marker at the HAR coordinate (often tens of meters off) is not the home.
+  if (!HAR_HEIGHTS_PANEL && ACTIVE_FILTER.on) {
     for (const row of activeFiltered()) {
       if (row.lat == null || harTooClose(row.lat, row.lng, taken)) continue;
       taken.push([row.lat, row.lng]);
@@ -234,9 +239,74 @@ function openActivePin(mls) {
   map.setView(marker.getLatLng(), 17, {animate: false});
   setTimeout(() => marker.openPopup(), 140);
 }
+function appendHeightsSoldLegend() {
+  const el = document.getElementById('legend');
+  if (!el || el.querySelector('[data-grp="soldc"]')) return;
+  const F = SOLD_FILTER;
+  F.on = activeF.has('G:sold');
+  const rows = soldFiltered();
+  const savedWin = F.win, savedMo = F.mo;
+  F.win = 'all'; F.mo = null;
+  const bucketRows = soldFiltered();
+  F.win = savedWin; F.mo = savedMo;
+  const byWin = {};
+  bucketRows.forEach(row => { byWin[row.win] = (byWin[row.win] || 0) + 1; });
+  const savedProd = F.prod;
+  F.prod = 'all';
+  const productRows = soldFiltered();
+  F.prod = savedProd;
+  const byProduct = {};
+  productRows.forEach(row => { byProduct[row.prod] = (byProduct[row.prod] || 0) + 1; });
+  const winLabel = F.mo || (F.win === 'all' ? 'ALL DATES' : F.win + ' DAYS');
+  const prodLabel = F.prod === 'all' ? 'ALL LOT TYPES' : F.prod.toUpperCase();
+  let html = '<div class="grp' + (collapsed.has('soldc') ? ' col' : '') + '" data-grp="soldc"><div class="grp-h' + (F.on ? ' on' : '') + '" data-scol="1"><span class="chev2">▼</span><span class="mbox' + (F.on ? ' on' : '') + '" data-stoggle="1"></span><span class="gn">Sold Comps</span><span class="ct2">' + rows.length + '</span></div><div class="grp-body">';
+  html += '<div class="sx-r2" style="padding:6px 12px">Filters combine: choose a recency bucket to see its lot-type split. Click a selected entry again to clear it.</div>';
+  html += '<div class="sx-r2" style="padding:6px 12px">LOT TYPE · ' + esc(winLabel) + '</div>';
+  for (const product of ['Single Lot', 'Split Lot', 'Unknown']) {
+    html += '<div class="leafrow' + (F.prod === product ? ' on' : '') + '" data-sprod="' + product + '"><span class="sw" style="background:' + SOLD_PROD_C[product] + '"></span><span class="nm">' + product + '</span><span class="ct2">' + (byProduct[product] || 0) + '</span></div>';
+  }
+  html += '<div class="sx-r2" style="padding:6px 12px">RECENCY · ' + esc(prodLabel) + '</div>';
+  for (const win of SOLD_WINS) {
+    html += '<div class="leafrow' + ((F.win === win && !F.mo) ? ' on' : '') + '" data-swin="' + win + '"><span class="sw" style="background:' + SOLD_WIN_C[win] + '"></span><span class="nm">Sold ' + win + ' days</span><span class="ct2">' + (byWin[win] || 0) + '</span></div>';
+  }
+  html += '</div></div>';
+  const wrap = document.createElement('div');
+  wrap.innerHTML = html;
+  const group = wrap.firstChild;
+  el.appendChild(group);
+  group.querySelector('[data-stoggle]').addEventListener('click', event => {
+    event.stopPropagation();
+    const turnOn = !activeF.has('G:sold');
+    if (turnOn) activeF.add('G:sold');
+    else activeF.delete('G:sold');
+    if (turnOn) { SOLD_FILTER.win = 'all'; SOLD_FILTER.mo = null; SOLD_FILTER.prod = 'all'; }
+    renderHar();
+  });
+  group.querySelector('[data-scol]').addEventListener('click', event => {
+    if (event.target.closest('.mbox')) return;
+    if (collapsed.has('soldc')) collapsed.delete('soldc');
+    else collapsed.add('soldc');
+    renderLegend();
+  });
+  group.querySelectorAll('[data-sprod]').forEach(leaf => leaf.addEventListener('click', () => {
+    const product = leaf.getAttribute('data-sprod');
+    SOLD_FILTER.prod = SOLD_FILTER.prod === product ? 'all' : product;
+    activeF.add('G:sold');
+    renderHar();
+  }));
+  group.querySelectorAll('[data-swin]').forEach(leaf => leaf.addEventListener('click', () => {
+    const win = leaf.getAttribute('data-swin');
+    SOLD_FILTER.mo = null;
+    SOLD_FILTER.win = SOLD_FILTER.win === win ? 'all' : win;
+    activeF.add('G:sold');
+    renderHar();
+  }));
+}
 function appendHarLegend() {
   const el = document.getElementById('legend');
-  if (!el || el.querySelector('[data-har-layers]')) return;
+  if (!el) return;
+  if (HAR_HEIGHTS_PANEL) { appendHeightsSoldLegend(); return; }
+  if (el.querySelector('[data-har-layers]')) return;
   const activeRows = activeFiltered();
   const byProduct = {};
   ACTIVE_LISTINGS.forEach(row => { byProduct[row.product] = (byProduct[row.product] || 0) + 1; });

@@ -7,6 +7,8 @@ from pathlib import Path
 
 import har_markets
 import har_refresh
+from active_ingest import address_key
+from deed_ingest import span
 from sold_classification import MIN_LOT_SQFT, classify_lot
 
 
@@ -153,6 +155,41 @@ class FilterTest(unittest.TestCase):
         self.assertEqual(report['unassigned'].get('OUT_OF_MARKET'), 1)
         self.assertEqual(report['markets']['heights']['dropped'].get('HEIGHTS_SEPARATE_PIPELINE'), 1)
         self.assertNotIn('off_market', json.dumps(oaks))
+
+
+class RiverOaksListingTest(unittest.TestCase):
+    """Accepted River Oaks actives are property pins, and the page uses the Heights panel."""
+
+    def test_every_active_listing_has_a_pin_and_an_active_link(self):
+        root = Path(__file__).resolve().parents[1]
+        actives = json.loads((root / 'riveroaks_active.data.json').read_text())['listings']
+        status = json.loads((root / 'riveroaks_market_status.data.json').read_text())
+        data = span((root / 'riveroaks.html').read_text(), 'DATA')[2]
+        by_key = {}
+        for row in data:
+            key = address_key(row.get('a'))
+            self.assertNotIn(key, by_key, key)
+            by_key[key] = row
+        self.assertIn('act_3058-locke-lane', {row['id'] for row in data})
+        linked = []
+        for listing in actives:
+            pin = by_key.get(listing['address_key'])
+            self.assertIsNotNone(pin, listing['address'])
+            evidence = status['properties'].get(pin['id'])
+            self.assertEqual(evidence['status'], 'active', pin['id'])
+            self.assertEqual(evidence['current']['mls'], listing['mls'])
+            linked.append(pin['id'])
+        self.assertEqual(sorted(linked), [
+            'act_2217-pelham', 'act_2247-chilton', 'act_3058-locke-lane', 'act_3717-chevy-chase'])
+        page = (root / 'riveroaks.html').read_text()
+        self.assertIn('data-panel="heights"', page)
+        self.assertIn('Overdue — missed target', page)
+        script = (root / 'market_status.js').read_text()
+        self.assertIn("MARKET_PAGE==='riveroaks'", script)
+        layers = (root / 'har_layers.js').read_text()
+        self.assertIn('HAR_HEIGHTS_PANEL', layers)
+        self.assertIn('function appendHeightsSoldLegend', layers)
+        self.assertIn("LOT TYPE", layers)
 
 
 if __name__ == '__main__':
