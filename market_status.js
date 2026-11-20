@@ -3,7 +3,10 @@ const MARKET_VIEW={ready:false,available:false,properties:{},tracked:[],byMember
 window.MARKET_VIEW=MARKET_VIEW;
 const MARKET_LABELS={active:'Active',pending:'Pending',sold:'Sold',terminated:'Terminated / Expired',no_record:'No Market Record'};
 const MARKET_PAGE=document.currentScript.dataset.market;
-const PANEL_RESTRUCTURED=MARKET_PAGE==='heights';
+// Heights is the panel template. River Oaks uses the same taxonomy: Finished
+// is complete construction or an unphased home with real market evidence,
+// Sold comps is the dated legend, and sold homes are not drawn twice.
+const PANEL_RESTRUCTURED=MARKET_PAGE==='heights'||MARKET_PAGE==='riveroaks';
 function marketMembers(r){return r._twin?[r,r._twin]:[r];}
 function marketEvidence(member){
   const evidence=MARKET_VIEW.byMember.get(member.id);
@@ -163,7 +166,8 @@ function renderFinishedSection(){
   });
   return root;
 }
-// Heights inventory placement; other markets retain their existing panel layout.
+// Restructured markets use the Heights inventory placement. Other markets keep
+// the earlier Finished / Other layout.
 const marketOriginalLegend=renderLegend;
 renderLegend=function(){
   marketOriginalLegend();
