@@ -156,13 +156,16 @@ Heights stays on its own scripts (`active_ingest.py`, `sold_ingest.py`).
 Do not point those at a multi-market export.
 
 Every other live market, including Spring Valley Village, is one command.
-The two CSVs are the address-led HAR export (no separate single/split
+The CSVs are the address-led HAR export (no separate single/split
 files). The command assigns each row by the market boundary, or by the
 coordinate box where a market has no boundary (West University). It
 keeps year built 2025 or later and lots of at least 2,200 sqft. Lots of
 4,000 sqft or more are Single Lot. Lots of 2,200 to 3,999 are Split Lot.
-Pending rows are tagged pending. They are not Off Market and they are
-not sold comps.
+Pending, Option Pending, and Pend Cont to Show rows are the Under
+Contract layer. They are not Off Market and they are not sold comps.
+An address is written to only one of active, pending, and sold. If the
+pending export contains an address that is still in the active snapshot,
+that address is removed from active and kept as under contract.
 
 Dry run, then apply:
 
@@ -170,24 +173,39 @@ Dry run, then apply:
 python3 har_refresh.py \
   --active markets_active.csv \
   --sold markets_sold.csv \
-  --as-of 2026-11-16
+  --pending exports/pending.csv \
+  --as-of 2026-11-23
 python3 har_refresh.py \
   --active markets_active.csv \
   --sold markets_sold.csv \
-  --as-of 2026-11-16 \
+  --pending exports/pending.csv \
+  --as-of 2026-11-23 \
   --apply
 ```
 
+A pending-only pass (no active or sold CSV) refreshes under-contract
+listings and removes those addresses from the current active snapshots.
+It does not rebuild sold comps or market status.
+
 `--market montrose` limits the write to one market. `--market heights`
-is refused. The active CSV replaces that market's active snapshot. The
-sold CSV is merged into the trailing 365 days already on the page; a
-short weekly file does not erase older comps. An address already pinned
-on another market is not drawn again. Agent and owner names are not
-stored. The raw CSVs stay out of git. Dropped rows go to
+is refused for active and sold. The full pass still writes
+`heights_pending.data.json`; Heights active and sold stay on
+`active_ingest.py` and `sold_ingest.py`. The active CSV replaces that
+market's active snapshot. The sold CSV is merged into the trailing 365
+days already on the page; a short weekly file does not erase older comps.
+An address already pinned on another market is not drawn again. Active
+and sold records do not store agent names. Under-contract popups do
+store the listing agent and a HAR search link, because that layer shows
+them. `exports/pending.csv` is the committed pending export (pulled
+2026-11-23). Active and sold raw CSVs stay out of git. Dropped rows go to
 `pulls/dropped_har_<date>.csv`, which is gitignored. Apply writes, per
-market, `<market>_active.data.json`, `<market>_sold.data.json`, and
-`<market>_market_status.data.json`. The map page reads those after the
-first paint. It does not rewrite DATA or RECONCILE.
+market, `<market>_active.data.json`, `<market>_pending.data.json`,
+`<market>_sold.data.json`, and `<market>_market_status.data.json` (the
+pending-only pass writes the pending file and an active file only when
+an address moved). The map page reads those after the first paint. It
+does not rewrite DATA or RECONCILE. The River Oaks ring's northeast
+corner is held at 29.761 so 11 Tiel Way, south of the bayou and west of
+Shepherd, stays inside the approximate polygon.
 
 Spring Valley's ring is the Census city limit (GEOID 4869830), not all
 of 77024. It is still excluded from the permit ingest until

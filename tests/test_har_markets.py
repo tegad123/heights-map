@@ -91,6 +91,10 @@ class AssignTest(unittest.TestCase):
         self.assertEqual(market, 'heights')
         self.assertEqual(reason, 'OOZ_REGEX')
 
+    def test_tiel_way_is_inside_river_oaks(self):
+        market, reason, _ = self.assign(29.760434, -95.410581, '11 Tiel Way')
+        self.assertEqual((market, reason), ('riveroaks', None))
+
 
 class FilterTest(unittest.TestCase):
     def test_lot_and_year_rules(self):
@@ -107,7 +111,15 @@ class FilterTest(unittest.TestCase):
     def test_pending_is_not_active_and_not_a_drop(self):
         pending = row(**{'Status': 'Pending', 'MLS Number': '9'})
         self.assertEqual(har_markets.status_bucket(pending, 'active'), 'pending')
+        self.assertEqual(har_markets.status_bucket(pending, 'pending'), 'pending')
         self.assertIsNone(har_markets.listing_reason(pending, 'active'))
+        self.assertIsNone(har_markets.listing_reason(pending, 'pending'))
+        showed = row(**{'Status': 'Pend Cont to Show', 'MLS Number': '8'})
+        self.assertEqual(har_markets.status_bucket(showed, 'pending'), 'pending')
+        self.assertIsNone(har_markets.listing_reason(showed, 'pending'))
+        option = row(**{'Status': 'Option Pending', 'MLS Number': '7'})
+        self.assertEqual(har_markets.status_bucket(option, 'pending'), 'pending')
+        self.assertEqual(har_markets.listing_reason(row(**{'Status': 'Active'}), 'pending'), 'NOT_PENDING_EXPORT')
 
     def test_refresh_keeps_pending_out_of_comps_and_does_not_write(self):
         protected = [
@@ -156,6 +168,50 @@ class FilterTest(unittest.TestCase):
         self.assertEqual(report['markets']['heights']['dropped'].get('HEIGHTS_SEPARATE_PIPELINE'), 1)
         self.assertNotIn('off_market', json.dumps(oaks))
 
+    def test_pending_export_moves_an_active_listing_and_does_not_write(self):
+        protected = [
+            har_refresh.ROOT / 'index.html',
+            har_refresh.ROOT / 'riveroaks_active.data.json',
+            har_refresh.ROOT / 'heights_active.data.json',
+            har_refresh.ROOT / 'riveroaks_pending.data.json',
+        ]
+        before = {path: path.read_bytes() if path.exists() else None for path in protected}
+        with tempfile.TemporaryDirectory() as tmp:
+            pending = Path(tmp) / 'pending.csv'
+            write_csv(pending, [
+                row(**{'MLS Number': '86261749', 'Address': '2217 Pelham Drive',
+                       'Latitude': '29.750635', 'Longitude': '-95.413696',
+                       'Status': 'Pending', 'Lot Size': '8000', 'List Price': '4750000'}),
+                row(**{'MLS Number': '64156306', 'Address': '11 Tiel Way',
+                       'Latitude': '29.760434', 'Longitude': '-95.410581',
+                       'Status': 'Pending', 'Lot Size': '15050', 'List Price': '7500000',
+                       'DOM': '4', 'Year Built': '2026', 'Builder Name': 'Brooks Construction Group & Huck Development',
+                       'List Agent Full Name': 'Mike Mahlstedt'}),
+                row(**{'MLS Number': '15', 'Address': '12 Tiel Way',
+                       'Latitude': '29.760434', 'Longitude': '-95.410581',
+                       'Status': 'Pending', 'Lot Size': '1000'}),
+            ])
+            report = har_refresh.run(None, None, '2026-11-23', apply=False, markets=['riveroaks'], pending_path=pending)
+        for path, raw in before.items():
+            current = path.read_bytes() if path.exists() else None
+            self.assertEqual(current, raw)
+        oaks = report['markets']['riveroaks']
+        self.assertEqual(oaks['pending'], 2)
+        self.assertEqual(oaks['active']['accepted'], 3)
+        self.assertEqual(oaks['dropped'].get('LOT_BELOW_MIN'), 1)
+        moved = [row for row in report['moved_from_active'] if row['market'] == 'riveroaks']
+        self.assertEqual([row['address'] for row in moved], ['2217 Pelham Drive'])
+        self.assertTrue(all(row['market'] != 'heights' or row['address'] != '11 Tiel Way' for row in report['moved_from_active']))
+
+    def test_exclusive_check_refuses_overlap(self):
+        with self.assertRaises(ValueError):
+            har_refresh.assert_pending_exclusive(
+                'riveroaks',
+                [{'address_key': '11 tiel way', 'address': '11 Tiel Way'}],
+                [{'address_key': '11 tiel way', 'address': '11 Tiel Way'}],
+                [],
+            )
+
 
 class RiverOaksListingTest(unittest.TestCase):
     """Accepted River Oaks actives are property pins, and the page uses the Heights panel."""
@@ -190,6 +246,54 @@ class RiverOaksListingTest(unittest.TestCase):
         self.assertIn('HAR_HEIGHTS_PANEL', layers)
         self.assertIn('function appendHeightsSoldLegend', layers)
         self.assertIn("LOT TYPE", layers)
+        self.assertIn('window.UC_KEYS', layers)
+        self.assertIn('ucClaimsAddress', layers)
+
+
+class UnderContractPageTest(unittest.TestCase):
+    def test_every_market_page_loads_the_layer(self):
+        root = Path(__file__).resolve().parents[1]
+        script = (root / 'under_contract.js').read_text()
+        for needle in ('Under Contract', 'har_status', 'list_agent', 'current_list_price', 'sqft', 'lot_sqft', 'builder', 'HAR listing', 'har_url'):
+            self.assertIn(needle, script)
+        pages = {
+            'index.html': 'heights',
+            'montrose.html': 'montrose',
+            'westu.html': 'westu',
+            'riveroaks.html': 'riveroaks',
+            'springbranch.html': 'springbranch',
+            'springvalley.html': 'springvalley',
+            'timbergrove.html': 'timbergrove',
+            'gardenoaksoakforest.html': 'gardenoaksoakforest',
+        }
+        for name, market in pages.items():
+            text = (root / name).read_text()
+            self.assertIn('src="under_contract.js" data-market="%s"' % market, text)
+
+    def test_committed_pending_snapshots_are_disjoint_and_include_tiel(self):
+        root = Path(__file__).resolve().parents[1]
+        markets = har_markets.writable_markets() + ['heights']
+        found = None
+        for name in markets:
+            pending_path = root / (name + '_pending.data.json')
+            self.assertTrue(pending_path.exists(), name)
+            pending = json.loads(pending_path.read_text())['listings']
+            active_path = root / (name + '_active.data.json')
+            active = json.loads(active_path.read_text())['listings'] if active_path.exists() else []
+            sold_path = root / (name + '_sold.data.json')
+            sold = json.loads(sold_path.read_text())['comps'] if sold_path.exists() else []
+            har_refresh.assert_pending_exclusive(name, active, pending, sold)
+            for row in pending:
+                self.assertEqual(row['status'], 'pending')
+                self.assertTrue(row.get('har_url'))
+                if row['mls'] == '64156306':
+                    found = (name, row)
+        self.assertIsNotNone(found)
+        self.assertEqual(found[0], 'riveroaks')
+        self.assertEqual(found[1]['address'], '11 Tiel Way')
+        self.assertEqual(found[1]['har_status'], 'Pending')
+        self.assertEqual(found[1]['list_agent'], 'Mike Mahlstedt')
+        self.assertIn('64156306', found[1]['har_url'])
 
 
 if __name__ == '__main__':

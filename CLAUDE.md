@@ -68,6 +68,15 @@ the repo, pin data included, is readable on GitHub.
   pending, never off_market_*, never counted or rendered as Off Market,
   and excluded from heights_off_market.csv until they resolve to sold
   or terminated.
+- HAR under contract is not RECONCILE.pending. `har_refresh.py` takes
+  three address-led exports: active, pending (`exports/pending.csv`),
+  and sold. Pending, Option Pending, and Pend Cont to Show use the same
+  point-in-polygon and lot/year filters as active listings and are written
+  to `<market>_pending.data.json` (Heights included). An address is in only
+  one of Active, Under Contract, and Sold; a pending address is removed
+  from the active snapshot instead of disappearing. These rows are not
+  Off Market and are not sold comps. The merge refuses if a pending
+  address is still in active or in the sold comps.
 - Heights index.html: the `RECONCILE` marker block is the authoritative
   off-market/relist/pending state — one entry per id, latest state wins,
   buckets disjoint. It is generated from changes/*.json by

@@ -74,6 +74,7 @@ function soldMedian(values) {
 }
 function soldFiltered() {
   return SOLD_DATA.filter(row => {
+    if (window.ucClaimsAddress && window.ucClaimsAddress(row.a)) return false;
     if (SOLD_FILTER.mo) { if (row.mo !== SOLD_FILTER.mo) return false; }
     else if (SOLD_FILTER.win !== 'all' && row.win !== SOLD_FILTER.win) return false;
     if (SOLD_FILTER.band !== 'all' && row.band !== SOLD_FILTER.band) return false;
@@ -83,7 +84,10 @@ function soldFiltered() {
   });
 }
 function activeFiltered() {
-  return ACTIVE_LISTINGS.filter(row => ACTIVE_FILTER.prod === 'all' || row.product === ACTIVE_FILTER.prod);
+  return ACTIVE_LISTINGS.filter(row => {
+    if (window.UC_KEYS && window.UC_KEYS.has(row.address_key)) return false;
+    return ACTIVE_FILTER.prod === 'all' || row.product === ACTIVE_FILTER.prod;
+  });
 }
 function soldSvlTxt(row) {
   const pct = row.svl * 100;

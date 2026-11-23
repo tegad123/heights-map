@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent
 
 PENDING_STATUS = {
     'pending', 'option pending', 'pending continue to show',
-    'active under contract', 'under contract',
+    'pend cont to show', 'active under contract', 'under contract',
 }
 TERMINATED_STATUS = {
     'terminated', 'expired', 'withdrawn', 'terminated-relisted',
@@ -112,7 +112,8 @@ def status_bucket(row, kind):
     """
     status = (row.get('Status') or '').strip().lower()
     if status in PENDING_STATUS:
-        return 'pending' if kind == 'active' else None
+        # Pending rows may arrive in the active export or in pending.csv.
+        return 'pending' if kind in ('active', 'pending') else None
     if status in TERMINATED_STATUS:
         return 'terminated'
     if kind == 'active' and status == 'active':
@@ -136,6 +137,8 @@ def listing_reason(row, kind):
         return floor
     bucket = status_bucket(row, kind)
     if bucket is None:
+        if kind == 'pending':
+            return 'NOT_PENDING_EXPORT'
         return 'NOT_ACTIVE_EXPORT' if kind == 'active' else 'NOT_SOLD_EXPORT'
     if bucket in ('active', 'pending'):
         ask = money(row.get('List Price'))
