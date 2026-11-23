@@ -158,7 +158,12 @@ an id lives in exactly one of `off` / `relist` / `pending` with a single
 `{t, d}` — no dated batches accumulate. The `pending` bucket (added 7/28)
 holds under-contract ids: the transform strips `off_market_*` and ensures the
 `pending` tag; they are excluded from heights_off_market.csv and from all
-Off Market counts/filters until they resolve to sold or terminated. When state changes, the generator replaces the
+Off Market counts/filters until they resolve to sold or terminated.
+HAR `pending.csv` is not an input to this generator. Those rows are the
+map's Under Contract layer (`<market>_pending.data.json` via
+`har_refresh.py`). They stay out of `RECONCILE.off` and out of the
+off-market CSV. The generator still asserts `off`, `relist`, and
+`pending` are pairwise disjoint before it splices. When state changes, the generator replaces the
 entry (relist → later drop moves it back to `off` with the new date, old
 entry gone). History lives only in the changelog.
 

@@ -713,7 +713,7 @@ try{
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
   map.invalidateSize(false);
 }
-const HD_POLYS=[[[29.7645, -95.447], [29.766, -95.434], [29.7635, -95.423], [29.761, -95.413], [29.7595, -95.4103], [29.7425, -95.4103], [29.742, -95.447]]]; // River Oaks proper boundary (bayou/Shepherd/Westheimer/Mid Ln) — approx, pending DealMachine polygon
+const HD_POLYS=[[[29.7645, -95.447], [29.766, -95.434], [29.7635, -95.423], [29.761, -95.413], [29.761, -95.4103], [29.7425, -95.4103], [29.742, -95.447]]]; // River Oaks proper boundary (bayou/Shepherd/Westheimer/Mid Ln) — approx, pending DealMachine polygon. NE corner held at 29.761 so bayou-front Tiel Way stays inside.
 const bGroup=L.layerGroup(HD_POLYS.map(p=>L.polygon(p,{color:'#cf2230',weight:2,dashArray:'5 4',fillColor:'#cf2230',fillOpacity:.08})));
 document.getElementById('bnd').addEventListener('change',e=>{e.target.checked?bGroup.addTo(map):map.removeLayer(bGroup);});
 
@@ -2036,5 +2036,6 @@ renderSupplyCard();
 <script src="inventory_classifications.js" data-market="riveroaks"></script>
 <script src="har_layers.js" data-market="riveroaks" data-panel="heights"></script>
 <script src="market_status.js" data-market="riveroaks"></script>
+<script src="under_contract.js" data-market="riveroaks"></script>
 </body>
 </html>

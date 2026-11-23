@@ -2551,6 +2551,7 @@ function soldMedian(a){if(!a.length)return null;const s=a.slice().sort((x,y)=>x-
 function soldFiltered(){
   const F=SOLD_FILTER;
   return SOLD_DATA.filter(r=>{
+    if(window.ucClaimsAddress&&window.ucClaimsAddress(r.a))return false;
     if(F.mo){if(r.mo!==F.mo)return false;}
     else if(F.win!=='all'&&r.win!==F.win)return false;
     if(F.band!=='all'&&r.band!==F.band)return false;
@@ -2758,5 +2759,6 @@ function soldAskContext(){
 
 <script src="inventory_classifications.js" data-market="heights"></script>
 <script src="market_status.js" data-market="heights"></script>
+<script src="under_contract.js" data-market="heights"></script>
 </body>
 </html>
