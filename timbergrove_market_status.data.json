@@ -1,1 +1,93 @@
-{"as_of":"2026-11-16","price_basis":"List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.","properties":{"tgp_3521-harvest-dance":{"status":"active","current":{"mls":"14361484","status":"active","har_status":"Active","product":"Split Lot","current_list_price":589970.0,"original_list_price":589970.0,"dom":24.0,"close_date":null,"close_price":null,"as_of":"2026-11-16","address":"3521 Harvest Dance Drive"}},"tgp_3516-harvest-dance":{"status":"active","current":{"mls":"20071918","status":"active","har_status":"Active","product":"Split Lot","current_list_price":589290.0,"original_list_price":589290.0,"dom":24.0,"close_date":null,"close_price":null,"as_of":"2026-11-16","address":"3516 Harvest Dance Drive"}}},"tracked":[{"member":"tgp_3521-harvest-dance","pin":"tgp_3521-harvest-dance","address":"3521 Harvest Dance Dr 77008","status":"active","current":{"mls":"14361484","status":"active","har_status":"Active","product":"Split Lot","current_list_price":589970.0,"original_list_price":589970.0,"dom":24.0,"close_date":null,"close_price":null,"as_of":"2026-11-16","address":"3521 Harvest Dance Drive"},"history":[],"historical_sales":[],"archive_current":null,"ordering_issue":null},{"member":"tgp_3516-harvest-dance","pin":"tgp_3516-harvest-dance","address":"3516 Harvest Dance Dr 77008","status":"active","current":{"mls":"20071918","status":"active","har_status":"Active","product":"Split Lot","current_list_price":589290.0,"original_list_price":589290.0,"dom":24.0,"close_date":null,"close_price":null,"as_of":"2026-11-16","address":"3516 Harvest Dance Drive"},"history":[],"historical_sales":[],"archive_current":null,"ordering_issue":null}],"coverage":{"active":6,"pending":0,"sold":0,"terminated":0,"linked":2}}
+{
+  "as_of": "2026-11-23",
+  "price_basis": "List Price is the asking price on the export date; Original List Price is retained separately. Pending listings are tagged pending and are not Off Market.",
+  "properties": {
+    "tgp_3521-harvest-dance": {
+      "status": "active",
+      "current": {
+        "mls": "14361484",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 589970.0,
+        "original_list_price": 589970.0,
+        "dom": 31.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-23",
+        "address": "3521 Harvest Dance Drive"
+      }
+    },
+    "tgp_3516-harvest-dance": {
+      "status": "active",
+      "current": {
+        "mls": "20071918",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 589290.0,
+        "original_list_price": 589290.0,
+        "dom": 31.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-23",
+        "address": "3516 Harvest Dance Drive"
+      }
+    }
+  },
+  "tracked": [
+    {
+      "member": "tgp_3521-harvest-dance",
+      "pin": "tgp_3521-harvest-dance",
+      "address": "3521 Harvest Dance Dr 77008",
+      "status": "active",
+      "current": {
+        "mls": "14361484",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 589970.0,
+        "original_list_price": 589970.0,
+        "dom": 31.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-23",
+        "address": "3521 Harvest Dance Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    },
+    {
+      "member": "tgp_3516-harvest-dance",
+      "pin": "tgp_3516-harvest-dance",
+      "address": "3516 Harvest Dance Dr 77008",
+      "status": "active",
+      "current": {
+        "mls": "20071918",
+        "status": "active",
+        "har_status": "Active",
+        "product": "Split Lot",
+        "current_list_price": 589290.0,
+        "original_list_price": 589290.0,
+        "dom": 31.0,
+        "close_date": null,
+        "close_price": null,
+        "as_of": "2026-11-23",
+        "address": "3516 Harvest Dance Drive"
+      },
+      "history": [],
+      "historical_sales": [],
+      "archive_current": null,
+      "ordering_issue": null
+    }
+  ],
+  "coverage": {
+    "active": 5,
+    "pending": 0,
+    "sold": 1,
+    "terminated": 0,
+    "linked": 2
+  }
+}

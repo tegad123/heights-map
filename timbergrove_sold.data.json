@@ -1,1 +1,125 @@
-{"as_of":"2026-11-16","policy":{"kind":"new_construction_trailing_365","as_of":"2026-11-16","start":"2025-11-16","end":"2026-11-16","source":"sold_a957.csv","min_lot_sqft":2200,"coverage":"Trailing 365 days. This export adds and refreshes sales; it does not replace the prior year."},"metrics":{"as_of":"2026-11-16","basis":"Displayed new-construction comps, trailing 365 days, lot size >= 2,200 sqft, year built >= 2025. timbergrove. Pending listings are excluded from comps.","overall":{"n":0,"absorption_per_month":0.0},"trailing_365":{"n":0,"absorption_per_month":0.0},"by_window":{},"by_band":{},"by_product":{},"by_cohort":{},"by_month":{},"by_window_product":{},"cells":{}},"comps":[]}
+{
+  "as_of": "2026-11-23",
+  "policy": {
+    "kind": "new_construction_trailing_365",
+    "as_of": "2026-11-23",
+    "start": "2025-11-23",
+    "end": "2026-11-23",
+    "source": "sold.csv",
+    "min_lot_sqft": 2200,
+    "coverage": "Trailing 365 days. This export adds and refreshes sales; it does not replace the prior year."
+  },
+  "metrics": {
+    "as_of": "2026-11-23",
+    "basis": "Displayed new-construction comps, trailing 365 days, lot size >= 2,200 sqft, year built >= 2025. timbergrove. Pending listings are excluded from comps.",
+    "overall": {
+      "n": 1,
+      "med_psf": 293.7,
+      "med_price": 590000.0,
+      "med_dom": 48.0,
+      "avg_svl_pct": 3.51,
+      "absorption_per_month": 0.1
+    },
+    "trailing_365": {
+      "n": 1,
+      "med_psf": 293.7,
+      "med_price": 590000.0,
+      "med_dom": 48.0,
+      "avg_svl_pct": 3.51,
+      "absorption_per_month": 0.1
+    },
+    "by_window": {
+      "0-30": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51
+      }
+    },
+    "by_band": {
+      "<800k": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51,
+        "absorption_per_month": 0.1
+      }
+    },
+    "by_product": {
+      "Split Lot": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51,
+        "absorption_per_month": 0.1
+      }
+    },
+    "by_cohort": {
+      "nc": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51
+      }
+    },
+    "by_month": {
+      "2026-11": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51
+      }
+    },
+    "by_window_product": {
+      "0-30|Split Lot": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51
+      }
+    },
+    "cells": {
+      "0-30|<800k|Split Lot|nc": {
+        "n": 1,
+        "med_psf": 293.7,
+        "med_price": 590000.0,
+        "med_dom": 48.0,
+        "avg_svl_pct": 3.51
+      }
+    }
+  },
+  "comps": [
+    {
+      "id": "s88180727",
+      "a": "3524 Harvest Dance Drive",
+      "lat": 29.789969,
+      "lng": -95.440085,
+      "cp": 590000.0,
+      "sq": 2009.0,
+      "cd": "2026-11-19",
+      "psf": 293.7,
+      "lp": 570000.0,
+      "lot": 2400.0,
+      "dom": 48.0,
+      "yb": 2025.0,
+      "har_psf": null,
+      "bl": "",
+      "sch": "SINCLAIR ELEMENTARY SCHOOL (HOUSTON)",
+      "la": "",
+      "ba": "",
+      "coh": "nc",
+      "svl": 0.0351,
+      "prod": "Split Lot",
+      "ak": "3524 harvest dance dr",
+      "win": "0-30",
+      "band": "<800k",
+      "mo": "2026-11"
+    }
+  ]
+}

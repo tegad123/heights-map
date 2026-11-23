@@ -1,1 +1,27 @@
-{"as_of":"2026-11-16","scope":"Current HAR active snapshot for springvalley. List Price is the asking price on the export date; Original List Price is retained separately. Year built >= 2025; lot size >= 2200 sqft. Pending rows are not in this list.","listings":[{"mls":"40117020","address":"8606 Westview Drive","address_key":"8606 westview dr","original_list_price":3000000.0,"current_list_price":3000000.0,"dom":107.0,"lot_sqft":19000.0,"product":"Single Lot","builder":"Bravado","year_built":2026.0,"lat":29.794183,"lng":-95.500994,"status":"active","har_status":"Active","as_of":"2026-11-16","source_file":"active_a344.csv","source_row":465,"source_sha256":"0ce11ab7e3f046d253f406dabd1fbd54bfd09496723b0b3686a14b76e3207468"}]}
+{
+  "as_of": "2026-11-23",
+  "scope": "Current HAR active snapshot for springvalley. List Price is the asking price on the export date; Original List Price is retained separately. Year built >= 2025; lot size >= 2200 sqft. Pending rows are not in this list.",
+  "listings": [
+    {
+      "mls": "40117020",
+      "address": "8606 Westview Drive",
+      "address_key": "8606 westview dr",
+      "original_list_price": 3000000.0,
+      "current_list_price": 3000000.0,
+      "dom": 114.0,
+      "lot_sqft": 19000.0,
+      "product": "Single Lot",
+      "builder": "Bravado",
+      "list_agent": "",
+      "year_built": 2026.0,
+      "lat": 29.794183,
+      "lng": -95.500994,
+      "status": "active",
+      "har_status": "Active",
+      "as_of": "2026-11-23",
+      "source_file": "active.csv",
+      "source_row": 470,
+      "source_sha256": "76334b5e75ffaa2caea518872f9dab8f94de9db93f9c4c2837409d512729ba14"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+ "date": "2026-11-23",
+ "sources": [
+  "heights_eligible_single.csv",
+  "heights_eligible_split.csv"
+ ],
+ "counts": {
+  "matched": 37,
+  "dropped": 1,
+  "new": 21,
+  "relisted": 1,
+  "excluded": 0
+ },
+ "matchedIds": [
+  "2131129832",
+  "2131318242",
+  "act_1012-e-26th-street",
+  "act_1122-e-27th-st-unit-a",
+  "act_1202-aurora-street",
+  "act_1218-prince-street",
+  "act_1303-cordell-street-unit-b",
+  "act_1317-waverly-street",
+  "act_1322-lawrence-street",
+  "act_1502-w-21",
+  "act_1520-w-21st-st-unit-b",
+  "act_212-e-24",
+  "act_2218-gostick-street",
+  "act_227-e-26th-street",
+  "act_2434-white-oak",
+  "act_248-w-22",
+  "act_2603-julian",
+  "act_2924-watson-street",
+  "act_312-w-9th-st",
+  "act_318-w-21st-street",
+  "act_335-harvard-street",
+  "act_603-e-23",
+  "act_611-e-25th-street-unit-b",
+  "act_614-ridge-street",
+  "act_616-ridge",
+  "act_623-e-13",
+  "act_705-walton-street",
+  "act_711-e-26th-street",
+  "act_715-merrill",
+  "act_735-e-8-12",
+  "act_830-e-27",
+  "act_830-waverly-street",
+  "act_834-waverly-street",
+  "act_835-w-25th-street",
+  "act_845-w-23",
+  "act_902-e-25",
+  "act_920-e-25"
+ ],
+ "dropped": [
+  {
+   "id": "pmt_310-w-9th-st-77007",
+   "a": "310 W 9th St, Houston, TX 77007",
+   "ty": "split",
+   "disposition": "sold"
+  }
+ ],
+ "relisted": [
+  {
+   "id": "act_231-e-26",
+   "a": "231 E 26th Street",
+   "ty": "active_single",
+   "offSince": "2026-09-28"
+  }
+ ],
+ "new": [
+  {
+   "a": "805 Walton Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "217 TEETSHORN Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1138 Fugate Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1021 Nadine Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "845 E 26th Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1109 Voight Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "618 Wendel Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "711 E 12th Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "410 Merrill Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "305 W 17th Street",
+   "prod": "Single Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "123 Amundsen Street Unit#A",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "334 E 31st Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "5226 Cornish Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1135 Adele Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1320 Alexander Street Unit#A",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "1320 Alexander Street Unit#B",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "607 W 27th Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "934 Dorothy Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "520 W 24th Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "118 E 23RD Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  },
+  {
+   "a": "409 E 27TH Street",
+   "prod": "Split Lot",
+   "staged": true,
+   "mergeCandidate": null
+  }
+ ],
+ "excluded": [],
+ "dispositionUpdates": {}
+}
