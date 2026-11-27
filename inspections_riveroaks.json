@@ -178,8 +178,8 @@
   },
   "25083752": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3030 Ella Lee Ln, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -452,8 +452,8 @@
   },
   "26038084": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "2433 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1523,8 +1523,8 @@
   },
   "25088034": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3713 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -1716,8 +1716,8 @@
   },
   "26014099": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3843 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3491,8 +3491,8 @@
   },
   "25077925": {
     "status": "Partial",
-    "updated": "2026-11-18",
-    "scraped_at": "2026-11-18",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "1817 Sharp Place, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3545,11 +3545,19 @@
         "inspector": ""
       },
       {
+        "type": "Nail Pattern",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-30",
+        "result": "Pending",
+        "raw": "Inspection Requested",
+        "inspector": ""
+      },
+      {
         "type": "WINDSTORM",
         "permit_type": "Building Pmt",
         "date": "2026-11-19",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Failed",
+        "raw": "Correction Necessary",
         "inspector": ""
       },
       {
@@ -3564,8 +3572,8 @@
   },
   "25098554": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3482 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -3597,8 +3605,8 @@
   },
   "26016023": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "2121 Inwood Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4804,8 +4812,8 @@
   },
   "25080058": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3438 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4815,6 +4823,14 @@
         "date": "2026-05-04",
         "result": "Failed",
         "raw": "Action Required",
+        "inspector": ""
+      },
+      {
+        "type": "GROUND IN",
+        "permit_type": "Plumbing Pmt",
+        "date": "2026-11-25",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -4845,8 +4861,8 @@
         "type": "1031-FDN PM",
         "permit_type": "Building Pmt",
         "date": "2026-11-24",
-        "result": "Pending",
-        "raw": "Inspection Requested",
+        "result": "Passed",
+        "raw": "Partial Approval",
         "inspector": ""
       },
       {
@@ -4861,8 +4877,8 @@
   },
   "26001641": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3729 Del Monte Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4934,8 +4950,8 @@
   },
   "26040864": {
     "status": "Partial",
-    "updated": "2026-11-23",
-    "scraped_at": "2026-11-23",
+    "updated": "2026-11-26",
+    "scraped_at": "2026-11-26",
     "address": "3024 Chevy Chase Dr, Houston, TX 77019",
     "final_project_inspection_outstanding": true,
     "inspections": [
@@ -4961,6 +4977,14 @@
         "date": "2026-11-02",
         "result": "Passed",
         "raw": "Partial Approval",
+        "inspector": ""
+      },
+      {
+        "type": "1031-FDN PM",
+        "permit_type": "Building Pmt",
+        "date": "2026-11-30",
+        "result": "Pending",
+        "raw": "Inspection Requested",
         "inspector": ""
       },
       {
